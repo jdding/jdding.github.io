@@ -17,40 +17,54 @@ Currently, I focus on building **Trustworthy & Scalable AI Systems**, with speci
 
 ## 🔥 News
 
-* **[Jan 2026]** 🎉 My paper *"Mitigating Popularity Bias in Recommendation with Global Listwise Learning"* has been accepted by **ACM TOIS (CCF-A)**!
-* **[Dec 2025]** 🚀 Two papers accepted! *"RPE4Rec"* (Efficient Retrieval) accepted by **WSDM 2026**, and *"Invariant Feature Learning"* (Causal Inference) accepted by **AAAI 2026**.
+* **[Jan 2026]** 🎉 *"Mitigating Popularity Bias in Recommendation with Global Listwise Learning"* has been accepted by **ACM TOIS**!
+* **[Nov 2025]** 🚀 *"RPE4Rec"* (Efficient Retrieval) accepted by **WSDM 2026**
+* **[Nov 2025]** 🚀 *"Invariant Feature Learning"* (Causal Inference) accepted by **AAAI 2026**.
 * **[Aug 2024]** Paper on Low-rank Compression for CTR prediction accepted by **KDD 2024**.
 
 ---
 
-## 📖 Research Highlights
+## 🎯 Research Highlights
 
-### 1. The Quest for Unbiased Recommendation
-*How can we distinguish a user's true interest from the system's popularity bias?*
+My current research bridges the gap between **theoretical robustness** and **industrial scalability**. I focus on three core challenges in modern recommender systems:
 
-* **[TOIS 2026] Mitigating Popularity Bias in Recommendation with Global Listwise Learning and Progressive Bi-Weighting**
-    <br> *[Your Name], et al.*
-    <br> We propose a global listwise learning framework to mitigate popularity bias at the system level. [[PDF]](#)
+### 1. Trustworthy & Unbiased Recommendation
+*The Problem: Recommender systems often trap users in "echo chambers" or confuse popularity with genuine interest.*
 
-* **[AAAI 2026] Invariant Feature Learning for Counterfactual Watch-time Prediction in Video Recommendation**
-    <br> *[Your Name], et al.*
-    <br> Addressing duration bias in video feeds using counterfactual inference. [[PDF]](#)
+* **[TOIS 2026] Mitigating Popularity Bias with Global Listwise Learning**
+    <br> **Jiandong Ding**, et al. *ACM Transactions on Information Systems.*
+    <br> **The Breakthrough:** Traditional debiasing methods often hurt overall performance. We proposed a **Global Listwise Learning** framework with progressive bi-weighting, effectively balancing long-tail item exposure without sacrificing user satisfaction.
+    <br> [ [PDF](#) ] [ [Code](#) ]
 
-### 2. Efficiency at Scale
-*How do we perform complex retrieval for billions of items within milliseconds?*
+* **[AAAI 2026] Causal Inference for Watch-time Prediction**
+    <br> **Jiandong Ding**, et al. *AAAI Conference on Artificial Intelligence.*
+    <br> **The Breakthrough:** In short-video feeds, "duration" biases (longer videos naturally get more watch time) mislead algorithms. We introduced **Invariant Feature Learning** based on counterfactual inference to uncover the user's *true* willingness to watch.
+    <br> [ [PDF](#) ]
 
-* **[WSDM 2026] RPE4Rec: Enhancing Dynamic Node Retrieval with Efficient Relative Position Encoding**
-    <br> *[Your Name], et al.*
-    <br> A novel relative position encoding mechanism for dynamic node retrieval. [[PDF]](#)
+### 2. Extreme Efficiency at Scale
+*The Problem: Advanced models (Transformers/GNNs) are often too slow for real-time serving with billion-scale items.*
 
-* **[KDD 2024] Unified Low-rank Compression Framework for Click-through Rate Prediction**
-    <br> *Hao Yu, Minghao Fu, [Your Name], et al.*
-    <br> [[PDF]](#)
+* **[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval**
+    <br> **Jiandong Ding**, et al. *ACM WSDM 2026.*
+    <br> **The Breakthrough:** We designed a novel **Relative Position Encoding (RPE)** mechanism specifically for dynamic node retrieval. This architecture significantly reduces inference latency while capturing complex sequential patterns.
+    <br> [ [PDF](#) ]
 
-### 3. Early Research: Bioinformatics
-*Deciphering the code of life.*
+* **[KDD 2024] Low-Rank Compression for CTR Prediction**
+    <br> Hao Yu, Minghao Fu, **Jiandong Ding**, et al. *ACM SIGKDD 2024.*
+    <br> **The Breakthrough:** A unified framework to compress massive CTR models using low-rank factorization, enabling high-performance ranking on resource-constrained devices.
+    <br> [ [PDF](#) ]
 
-* **[BMC Genomics 2012]** Automatically clustering large-scale miRNA sequences.
-* **[BMC Bioinformatics 2011]** miRFam: an effective automatic miRNA classification method.
+### 3. Large Models: Systems & Agents
+*The Problem: Bridging the gap between intelligent reasoning and efficient model serving.*
+
+* **[ICSOC 2025] NL2SQL Benchmark for Business Intelligence**
+    <br> Bora Caglayan, ..., **Jiandong Ding**, et al.
+    <br> **The Intelligence Layer:** Evaluating how Large Language Models (LLMs) act as Data Agents to translate natural language into complex SQL queries, enabling automated business decision-making.
+    <br> [ [PDF](#) ]
+
+* **[arXiv 2024] P/D-Serve: Serving Disaggregated LLMs at Scale**
+    <br> Yibo Jin, ..., **Jiandong Ding**, et al.
+    <br> **The System Layer:** Addressing the massive computational cost of LLMs. We proposed a disaggregated serving architecture that optimizes KV-cache management and scheduling, significantly improving throughput for large-scale deployment.
+    <br> [ [PDF](#) ]
 
 ---
