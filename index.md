@@ -53,7 +53,7 @@ My current research bridges the gap between **theoretical robustness** and **ind
 * **[KDD 2024] Low-Rank Compression for CTR Prediction**
     <br> Hao Yu, Minghao Fu, **Jiandong Ding**, et al. *ACM SIGKDD 2024.*
     <br> **The Breakthrough:** A unified framework to compress massive CTR models using low-rank factorization, enabling high-performance ranking on resource-constrained devices.
-    <br> [ [PDF](#https://dl.acm.org/doi/10.1145/3637528.3671520) ]
+    <br> [ [PDF](https://dl.acm.org/doi/10.1145/3637528.3671520) ]
 
 ### 3. Large Models: Systems & Agents
 *The Problem: Bridging the gap between intelligent reasoning and efficient model serving.*
