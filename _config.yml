@@ -1,19 +1,23 @@
 # _config.yml
 
-title: "[Jiandong Ding]" # 网站标题
+title: "[Jiandong Ding]"
 author:
-  name: "[Jiandong Ding]" # 显示在头像下的名字
-  avatar: "/assets/images/profile.png" # 记得把你的照片命名为 profile.png 放入对应文件夹
-  bio: "Technical expert at **Huawei Technologies**.<br>Bridging **Biological Sequences** & **User Behaviors**." # 侧边栏极简 Bio
-  location: "Shanghai, China" 
+  name: "[Jiandong Ding]"
+  avatar: "/assets/images/profile.png"
+  bio: "Technical expert at **Huawei Technologies**.<br>Bridging **Biological Sequences** & **User Behaviors**."
+  location: "Shanghai, China"
   email: "jdding@fudan.edu.cn"
   links:
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=YOUR_ID"
+      url: "https://scholar.google.com/citations?hl=zh-CN&user=5-e7wi4AAAAJ&view_op=list_works&sortby=pubdate"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/YOUR_ID"
+      url: "https://www.linkedin.com/in/jiandong-ding-60498833/"
+    - label: "Publications"
+      icon: "fas fa-fw fa-file-alt"  # 这是一个文档图标
+      url: "/publications/"          # 指向你的 publications.md
+
 
 # 描述部分 (SEO用)
 description: "Technical expert at Huawei. Focus on Trustworthy RecSys, Efficient Architecture, and LLM Agents."
