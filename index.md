@@ -4,8 +4,6 @@ title: "About Me"
 author_profile: true
 ---
 
-# 👋 Hello!
-
 I am a Technical expert at **Huawei Technologies**, bridging the gap between theoretical algorithms and industrial-scale systems.
 
 My research philosophy is summarized as **"From Biological Sequences to User Behaviors"**. I apply deep representation learning to decipher underlying patterns in data—from genomic sequences in my early career to billion-scale user behavior logs in commercial recommendation systems today.
@@ -56,8 +54,3 @@ Currently, I focus on building **Trustworthy & Scalable AI Systems**, with speci
 * **[BMC Bioinformatics 2011]** miRFam: an effective automatic miRNA classification method.
 
 ---
-
-## 🏫 Professional Experience
-
-* **Algorithm expert**, Huawei Technologies (Current)
-    * Focus: Recommendation Architecture, HarmonyOS Intelligence, LLM Agents.
