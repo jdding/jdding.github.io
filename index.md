@@ -20,6 +20,7 @@ Currently, I focus on building **Trustworthy & Scalable AI Systems**, with speci
 * **[Jan 2026]** 🎉 *"Mitigating Popularity Bias in Recommendation with Global Listwise Learning"* has been accepted by **ACM TOIS**!
 * **[Nov 2025]** 🚀 *"RPE4Rec"* (Efficient Retrieval) accepted by **WSDM 2026**
 * **[Nov 2025]** 🚀 *"Invariant Feature Learning"* (Causal Inference) accepted by **AAAI 2026**.
+* **[Nov 2024]** Paper *"BIS: NL2SQL Service Evaluation Benchmark"* accepted by **ICSOC 2024**.
 * **[Aug 2024]** Paper on Low-rank Compression for CTR prediction accepted by **KDD 2024**.
 
 ---
@@ -34,7 +35,7 @@ My current research bridges the gap between **theoretical robustness** and **ind
 * **[TOIS 2026] Mitigating Popularity Bias with Global Listwise Learning**
     <br> **Jiandong Ding**, et al. *ACM Transactions on Information Systems.*
     <br> **The Breakthrough:** Traditional debiasing methods often hurt overall performance. We proposed a **Global Listwise Learning** framework with progressive bi-weighting, effectively balancing long-tail item exposure without sacrificing user satisfaction.
-    <br> [ [PDF](#) ] [ [Code](#) ]
+    <br> [ [PDF](#) ] 
 
 * **[AAAI 2026] Causal Inference for Watch-time Prediction**
     <br> **Jiandong Ding**, et al. *AAAI Conference on Artificial Intelligence.*
@@ -52,7 +53,7 @@ My current research bridges the gap between **theoretical robustness** and **ind
 * **[KDD 2024] Low-Rank Compression for CTR Prediction**
     <br> Hao Yu, Minghao Fu, **Jiandong Ding**, et al. *ACM SIGKDD 2024.*
     <br> **The Breakthrough:** A unified framework to compress massive CTR models using low-rank factorization, enabling high-performance ranking on resource-constrained devices.
-    <br> [ [PDF](#) ]
+    <br> [ [PDF](#https://dl.acm.org/doi/10.1145/3637528.3671520) ]
 
 ### 3. Large Models: Systems & Agents
 *The Problem: Bridging the gap between intelligent reasoning and efficient model serving.*
