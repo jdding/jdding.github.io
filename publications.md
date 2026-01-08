@@ -4,8 +4,6 @@ title: "Publications"
 permalink: /publications/
 ---
 
-(把上面的 Full List 代码贴在这里)
-
 ## 📜 Full Publication List
 
 ### 2026
