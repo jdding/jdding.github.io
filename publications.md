@@ -17,31 +17,31 @@ permalink: /publications/
     <br> *Proceedings of the ACM International Conference on Web Search and Data Mining (**WSDM**), 2026.* (CCF-B)
 
 ### 2025
+* **Towards Practical Large-scale Dynamical Heterogeneous Graph Embedding: Cold-start Resilient Recommendation**
+    <br> Mabiao Long, Jiaxi Liu, Yufeng Li, Hao Xiong, Junchi Yan, Kefan Wang, Yi Cao, **[Jiandong Ding]**.
+    <br> *arXiv preprint, 2025.*
+  
 * **BIS: NL2SQL Service Evaluation Benchmark for Business Intelligence Scenarios**
     <br> Bora Caglayan, Mingxue Wang, John D. Kelleher, Shen Fei, Gui Tong, **[Jiandong Ding]**, Puchao Zhang.
     <br> *International Conference on Service-Oriented Computing (**ICSOC**), 2025.*
 
-* **Towards Practical Large-scale Dynamical Heterogeneous Graph Embedding: Cold-start Resilient Recommendation**
-    <br> Mabiao Long, Jiaxi Liu, Yufeng Li, Hao Xiong, Junchi Yan, Kefan Wang, Yi Cao, **[Jiandong Ding]**.
-    <br> *arXiv preprint, 2025.*
-
 ### 2024
+* **P/D-Serve: Serving Disaggregated Large Language Model at Scale**
+    <br> Yibo Jin, Tao Wang, ..., **[Jiandong Ding]**, et al.
+    <br> *arXiv preprint arXiv:2408.08147, 2024.*
+  
 * **Unified Low-rank Compression Framework for Click-through Rate Prediction**
     <br> Hao Yu, Minghao Fu, **[Jiandong Ding]**, Yusheng Zhou, Jianxin Wu.
     <br> *Proceedings of the ACM SIGKDD Conference on Knowledge Discovery and Data Mining (**KDD**), 2024.* (CCF-A)
 
-* **P/D-Serve: Serving Disaggregated Large Language Model at Scale**
-    <br> Yibo Jin, Tao Wang, ..., **[Jiandong Ding]**, et al.
-    <br> *arXiv preprint arXiv:2408.08147, 2024.*
-
 ### 2023
-* **Neural Topic Modeling Based on Cycle Adversarial Training and Contrastive Learning**
-    <br> Boyu Wang, Linhai Zhang, Deyu Zhou, Yi Cao, **[Jiandong Ding]**.
-    <br> *Findings of the Association for Computational Linguistics (**ACL Findings**), 2023.*
-
 * **Continual Graph Convolutional Network for Text Classification**
     <br> Tiandeng Wu, Qijiong Liu, Yi Cao, Yao Huang, Xiao-Ming Wu, **[Jiandong Ding]**.
     <br> *Proceedings of the AAAI Conference on Artificial Intelligence (**AAAI**), 2023.* (CCF-A)
+
+  * **Neural Topic Modeling Based on Cycle Adversarial Training and Contrastive Learning**
+    <br> Boyu Wang, Linhai Zhang, Deyu Zhou, Yi Cao, **[Jiandong Ding]**.
+    <br> *Findings of the Association for Computational Linguistics (**ACL Findings**), 2023.*
 
 ### 2022
 * **EPiDA: an Easy Plug-in Data Augmentation Framework for High Performance Text Classification**
