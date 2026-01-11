@@ -3,6 +3,8 @@ layout: single
 author_profile: true
 title: "Publications"
 permalink: /publications
+
+classes: wide
 ---
 
 ### 2026
