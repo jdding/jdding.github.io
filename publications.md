@@ -4,8 +4,6 @@ title: "Publications"
 permalink: /publications/
 ---
 
-## 📜 Full Publication List
-
 ### 2026
 * **Mitigating Popularity Bias in Recommendation with Global Listwise Learning and Progressive Bi-Weighting**
     <br> *ACM Transactions on Information Systems (**TOIS**), 2026.* (CCF-A)
