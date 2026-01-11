@@ -17,9 +17,6 @@ author:
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?hl=zh-CN&user=5-e7wi4AAAAJ&view_op=list_works&sortby=pubdate"
-    - label: "Publications"
-      icon: "fas fa-fw fa-file-alt"
-      url: "/publications"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/jiandong-ding-60498833/"
@@ -27,3 +24,8 @@ author:
 # 插件支持（建议加上，确保功能正常）
 plugins:
   - jekyll-include-cache
+
+
+#     - label: "Publications"
+#      icon: "fas fa-fw fa-file-alt"
+#      url: "/publications"
