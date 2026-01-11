@@ -1,8 +1,7 @@
 ---
 layout: single
-title: "Publications"
-permalink: /publications/
 author_profile: true
+title: "Publications"
 ---
 
 ### 2026
