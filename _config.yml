@@ -9,9 +9,9 @@ remote_theme: mmistakes/minimal-mistakes
 title: "Jiandong Ding"
 locale: "en-US" # 建议加上这行，防止字符编码报错
 author:
-  name: "Jiandong Ding"
+  name: "Jiandong Ding (丁 建栋)"
   avatar: "/assets/images/Profile.jpg"
-  bio: "Technical expert at **Huawei Technologies**.<br>Bridging **Biological Sequences** & **User Behaviors**."
+  bio: "Principle expert at **Huawei Technologies**.<br>Bridging **Biological Sequences** & **User Behaviors**."
   location: "Shanghai, China"
   links:
     - label: "Google Scholar"
