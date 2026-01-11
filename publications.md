@@ -79,8 +79,10 @@ title: "Publications"
 ### Early Career (Bioinformatics & Sequence Analysis)
 * **Finding MicroRNA Targets in Plants: Current Status and Perspectives**
     <br> *Genomics, Proteomics & Bioinformatics, 2012.*
+    <br> [[PDF]](https://academic.oup.com/gpb/article/10/5/264/7221796)
 * **Automatically clustering large-scale miRNA sequences: methods and experiments**
     <br> *BMC Genomics, 2012.*
+    <br> [[PDF]](https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-13-S8-S15)
 * **miRFam: an effective automatic miRNA classification method based on n-grams and a multiclass SVM**
     <br> *BMC Bioinformatics, 2011.*
 * **imiRTP: An Integrated Method to Identifying miRNA-target Interactions in Arabidopsis thaliana**
