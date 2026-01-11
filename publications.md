@@ -4,13 +4,13 @@ author_profile: true
 title: "Publications"
 permalink: /publications
 
-# 布局优化
-classes: wide        # 让内容更宽
+# 布局设置 (Wide模式)
+classes: wide
 
-# 功能填充
-toc: true            # 开启目录
-toc_label: "Jump to" # 目录标题
-toc_sticky: true     # 悬浮在右侧
+# 目录设置 (TOC)
+toc: true
+toc_label: "Jump to Year"
+toc_sticky: true
 ---
 
 ### 2026
