@@ -6,11 +6,6 @@ permalink: /publications
 
 # 布局设置 (Wide模式)
 classes: wide
-
-# 目录设置 (TOC)
-toc: true
-toc_label: "Jump to Year"
-toc_sticky: true
 ---
 
 ### 2026
