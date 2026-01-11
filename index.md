@@ -1,11 +1,60 @@
 ---
-layout: single        # 告诉主题使用单页布局
-author_profile: true  # 开启左侧边栏（头像+Bio）的开关
-title: "About Me"     # 如果不写会默认用 _config.yml 里的 title
-classes: wide         # 开启宽模式
+layout: single
+author_profile: true
+title: "About Me"
+classes: wide
 ---
 
-Jiandong is a principle algorithm expert at **Huawei Technologies**, bridging the gap between theoretical algorithms and industrial-scale systems.
+<style>
+  .paper-card {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2f3f3; /* 每篇论文加个淡淡的分割线 */
+  }
+  .paper-card:last-child { border-bottom: none; }
+  
+  /* 图片容器：默认隐藏，有图时自动显示 */
+  .paper-img {
+    flex: 0 0 32%; /* 图片占约 1/3 宽度 */
+    max-width: 300px;
+    display: none; /* ⚠️ 暂时隐藏，等你明天加了 img 标签后，把这行删掉即可显示 */
+  }
+  
+  /* 如果你想明天直接开启图片位，可以把上面 display: none 删掉 */
+  
+  .paper-img img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #eef0f1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .paper-content {
+    flex: 1; /* 文字占剩余空间 */
+  }
+
+  /* 针对 Highlights 的小标题优化 */
+  .hl-tag {
+    font-size: 0.85em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+  .tag-prob { background-color: #fcece8; color: #c0392b; } /* 红色系 */
+  .tag-sol { background-color: #e8f8f5; color: #1abc9c; } /* 绿色系 */
+  
+  /* 手机端适配 */
+  @media (max-width: 768px) {
+    .paper-card { flex-direction: column; }
+    .paper-img { flex: 0 0 100%; max-width: 100%; display: block; margin-bottom: 15px;}
+  }
+</style>
+
+I am a **Principal Algorithm Expert** at **Huawei Technologies**, bridging the gap between theoretical algorithms and industrial-scale systems.
 
 My research philosophy is summarized as **"From Biological Sequences to User Behaviors"**. I apply deep representation learning to decipher underlying patterns in data—from genomic sequences in my early career to billion-scale user behavior logs in commercial recommendation systems today.
 
@@ -18,9 +67,8 @@ Currently, I focus on building **Trustworthy & Scalable AI Systems**, with speci
 
 ## 🔥 News
 
-* **[Jan 2026]** 🎉 *"Mitigating Popularity Bias in Recommendation with Global Listwise Learning"* has been accepted by **ACM TOIS**!
-* **[Nov 2025]** 🚀 *"RPE4Rec"* (Efficient Retrieval) accepted by **WSDM 2026**.
-* **[Nov 2025]** 🚀 *"Invariant Feature Learning"* (Causal Inference) accepted by **AAAI 2026**.
+* **[Jan 2026]** 🎉 Paper *"Mitigating Popularity Bias in Recommendation"* accepted by **ACM TOIS** (CCF-A)!
+* **[Nov 2025]** 🚀 Two papers accepted! *"RPE4Rec"* by **WSDM 2026**, and *"Invariant Feature Learning"* by **AAAI 2026**.
 * **[Nov 2024]** Paper *"BIS: NL2SQL Service Evaluation Benchmark"* accepted by **ICSOC 2024**.
 * **[Aug 2024]** Paper on Low-rank Compression for CTR prediction accepted by **KDD 2024**.
 
@@ -28,33 +76,70 @@ Currently, I focus on building **Trustworthy & Scalable AI Systems**, with speci
 
 ## 🎯 Research Highlights
 
-My current research bridges the gap between **theoretical robustness** and **industrial scalability**. I focus on three core challenges in modern recommender systems:
+My current research focuses on three core challenges in modern recommender systems: **Trustworthiness**, **Efficiency**, and **LLM Integration**.
 
 ### 1. Trustworthy & Unbiased Recommendation
-*The Problem: Recommender systems often trap users in "echo chambers" or confuse popularity with genuine interest.*
 
-* **[TOIS 2026] Mitigating Popularity Bias with Global Listwise Learning**, *ACM Transactions on Information Systems.* [ [PDF](#) ] 
-    <br> **The Breakthrough:** Traditional debiasing methods often hurt overall performance. We proposed a **Global Listwise Learning** framework with progressive bi-weighting, effectively balancing long-tail item exposure without sacrificing user satisfaction.
+<div class="paper-card">
+  <div class="paper-content">
+    <strong>[TOIS 2026] Mitigating Popularity Bias with Global Listwise Learning</strong>
+    <br> <em>ACM Transactions on Information Systems.</em> [ <a href="#">PDF</a> ]
+    <br><br>
+    <span class="hl-tag tag-prob">Problem</span> Recommender systems often trap users in "echo chambers" or confuse popularity with genuine interest.
+    <br>
+    <span class="hl-tag tag-sol">Breakthrough</span> We proposed a <strong>Global Listwise Learning</strong> framework with progressive bi-weighting. Unlike pointwise methods, it optimizes the entire ranking list to balance long-tail exposure without sacrificing user satisfaction.
+  </div>
+</div>
 
-* **[AAAI 2026] Causal Inference for Watch-time Prediction**, *AAAI 2026.* [ [PDF](#) ]
-    <br> **The Breakthrough:** In short-video feeds, "duration" biases (longer videos naturally get more watch time) mislead algorithms. We introduced **Invariant Feature Learning** based on counterfactual inference to uncover the user's *true* willingness to watch.
+<div class="paper-card">
+  <div class="paper-content">
+    <strong>[AAAI 2026] Causal Inference for Watch-time Prediction</strong>
+    <br> <em>AAAI Conference on Artificial Intelligence.</em> [ <a href="#">PDF</a> ]
+    <br><br>
+    <span class="hl-tag tag-prob">Problem</span> In short-video feeds, "duration biases" (longer videos naturally get more watch time) mislead algorithms.
+    <br>
+    <span class="hl-tag tag-sol">Breakthrough</span> We introduced <strong>Invariant Feature Learning</strong> based on counterfactual inference to uncover the user's <em>true</em> willingness to watch, independent of video length.
+  </div>
+</div>
 
 ### 2. Extreme Efficiency at Scale
-*The Problem: Advanced models (Transformers/GNNs) are often too slow for real-time serving with billion-scale items.*
 
-* **[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval**, *ACM WSDM 2026.*
-    <br> **The Breakthrough:** We designed a novel **Relative Position Encoding (RPE)** mechanism specifically for dynamic node retrieval. This architecture significantly reduces inference latency while capturing complex sequential patterns.
+<div class="paper-card">
+  <div class="paper-content">
+    <strong>[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval</strong>
+    <br> <em>ACM WSDM 2026.</em> [ <a href="#">PDF</a> ]
+    <br><br>
+    <span class="hl-tag tag-prob">Problem</span> Advanced Transformers are often too slow for real-time retrieval on billion-scale items.
+    <br>
+    <span class="hl-tag tag-sol">Breakthrough</span> We designed a novel <strong>Relative Position Encoding (RPE)</strong> mechanism specifically for dynamic node retrieval. This architecture significantly reduces inference latency while capturing complex sequential patterns.
+  </div>
+</div>
 
-* **[KDD 2024] Low-Rank Compression for CTR Prediction**, *ACM SIGKDD 2024.* [ [PDF](https://dl.acm.org/doi/10.1145/3637528.3671520) ]
-    <br> **The Breakthrough:** A unified framework to compress massive CTR models using low-rank factorization, enabling high-performance ranking on resource-constrained devices.
+<div class="paper-card">
+  <div class="paper-content">
+    <strong>[KDD 2024] Low-Rank Compression for CTR Prediction</strong>
+    <br> <em>ACM SIGKDD 2024.</em> [ <a href="https://dl.acm.org/doi/10.1145/3637528.3671520">PDF</a> ]
+    <br><br>
+    <span class="hl-tag tag-sol">Breakthrough</span> A unified framework to compress massive CTR models using low-rank factorization, enabling high-performance ranking on resource-constrained devices (e.g., mobile phones).
+  </div>
+</div>
 
 ### 3. Large Models: Systems & Agents
-*The Problem: Bridging the gap between intelligent reasoning and efficient model serving.*
 
-* **[ICSOC 2025] NL2SQL Benchmark for Business Intelligence**, *Lecture Notes in Computer Science* [ [PDF](https://link.springer.com/10.1007/978-981-96-0808-9_27) ]
-    <br> **The Intelligence Layer:** Evaluating how Large Language Models (LLMs) act as Data Agents to translate natural language into complex SQL queries, enabling automated business decision-making.
+<div class="paper-card">
+  <div class="paper-content">
+    <strong>[ICSOC 2025] NL2SQL Benchmark for Business Intelligence</strong>
+    <br> <em>Lecture Notes in Computer Science.</em> [ <a href="https://link.springer.com/10.1007/978-981-96-0808-9_27">PDF</a> ]
+    <br><br>
+    <span class="hl-tag tag-sol">Intelligence Layer</span> Evaluating how Large Language Models (LLMs) act as Data Agents to translate natural language into complex SQL queries, enabling automated business decision-making.
+  </div>
+</div>
 
-* **[arXiv 2024] P/D-Serve: Serving Disaggregated LLMs at Scale** [ [PDF](https://arxiv.org/abs/2408.08147) ]
-    <br> **The System Layer:** Addressing the massive computational cost of LLMs. We proposed a disaggregated serving architecture that optimizes KV-cache management and scheduling, significantly improving throughput for large-scale deployment.
-
----
+<div class="paper-card">
+  <div class="paper-content">
+    <strong>[arXiv 2024] P/D-Serve: Serving Disaggregated LLMs at Scale</strong>
+    <br> <em>arXiv preprint.</em> [ <a href="https://arxiv.org/abs/2408.08147">PDF</a> ]
+    <br><br>
+    <span class="hl-tag tag-sol">System Layer</span> We proposed a disaggregated serving architecture that optimizes KV-cache management and scheduling, significantly improving throughput for large-scale deployment.
+  </div>
+</div>
