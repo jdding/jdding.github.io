@@ -2,7 +2,7 @@
 layout: single
 author_profile: true
 title: "Publications"
-permalink: /publications/
+permalink: /Publications/
 ---
 
 ### 2026
@@ -72,18 +72,29 @@ permalink: /publications/
 <br> [[PDF]](https://aclanthology.org/2021.emnlp-main.222)
 
 ### Early Career (Bioinformatics & Sequence Analysis)
-* **Finding MicroRNA Targets in Plants: Current Status and Perspectives**
-    <br> *Genomics, Proteomics & Bioinformatics, 2012.*
-    <br> [[PDF]](https://academic.oup.com/gpb/article/10/5/264/7221796)
-* **Automatically clustering large-scale miRNA sequences: methods and experiments**
-    <br> *BMC Genomics, 2012.*
-    <br> [[PDF]](https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-13-S8-S15)
-* **miRFam: an effective automatic miRNA classification method based on n-grams and a multiclass SVM**
-    <br> *BMC Bioinformatics, 2011.*
-    <br> [[PDF]](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-216)
-* **imiRTP: An Integrated Method to Identifying miRNA-target Interactions in Arabidopsis thaliana**
-    <br> *IEEE International Conference on Bioinformatics and Biomedicine (BIBM), 2011.*
-    <br> [[PDF]](http://ieeexplore.ieee.org/document/6120415/)
-* **MiRenSVM: towards better prediction of microRNA precursors using an ensemble SVM classifier with multi-loop features**
-    <br> *BMC Bioinformatics, 2010.*
-    <br> [[PDF]](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-11-S11-S11)
+*Focus: Deciphering the code of life with Machine Learning.*
+
+**Finding MicroRNA Targets in Plants: Current Status and Perspectives**
+<br> **Jiandong Ding**, et al.
+<br> *Genomics, Proteomics & Bioinformatics (GPB)* &nbsp; ![JCR-Q1](https://img.shields.io/badge/JCR--Q1-red)
+<br> [[PDF]](https://academic.oup.com/gpb/article/10/5/264/7221796)
+
+**Automatically clustering large-scale miRNA sequences: methods and experiments**
+<br> **Jiandong Ding**, et al.
+<br> *BMC Genomics* &nbsp; ![JCR-Q2](https://img.shields.io/badge/JCR--Q2-blue)
+<br> [[PDF]](https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-13-S8-S15)
+
+**imiRTP: An Integrated Method to Identifying miRNA-target Interactions in Arabidopsis thaliana**
+<br> **Jiandong Ding**, et al.
+<br> *IEEE International Conference on Bioinformatics and Biomedicine (**BIBM**)* &nbsp; ![CCF-B](https://img.shields.io/badge/CCF--B-blue)
+<br> [[PDF]](http://ieeexplore.ieee.org/document/6120415/)
+
+**miRFam: an effective automatic miRNA classification method based on n-grams and a multiclass SVM**
+<br> **Jiandong Ding**, et al.
+<br> *BMC Bioinformatics* &nbsp; ![JCR-Q2](https://img.shields.io/badge/JCR--Q2-blue)
+<br> [[PDF]](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-216)
+
+**MiRenSVM: towards better prediction of microRNA precursors using an ensemble SVM classifier with multi-loop features**
+<br> **Jiandong Ding**, et al.
+<br> *BMC Bioinformatics* &nbsp; ![JCR-Q2](https://img.shields.io/badge/JCR--Q2-blue)
+<br> [[PDF]](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-11-S11-S11)
