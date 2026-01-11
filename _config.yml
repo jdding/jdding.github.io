@@ -5,7 +5,7 @@ title: "Jiandong Ding"  # 去掉了方括号，否则网页上真的会显示 [ 
 name: "Jiandong Ding"
 author:
   name: "Jiandong Ding"
-  avatar: "/assets/images/profile.jpg" # 确保文件名大小写完全一致！profile.JPG 和 profile.jpg 不一样
+  avatar: "/assets/images/Profile.jpg" # 确保文件名大小写完全一致！profile.JPG 和 profile.jpg 不一样
   bio: "Technical expert at **Huawei Technologies**.<br>Bridging **Biological Sequences** & **User Behaviors**."
   location: "Shanghai, China"
   email: "jdding@fudan.edu.cn"
