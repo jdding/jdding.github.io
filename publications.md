@@ -3,9 +3,6 @@ layout: single
 author_profile: true
 title: "Publications"
 permalink: /publications
-
-# 布局设置 (Wide模式)
-classes: wide
 ---
 
 ### 2026
