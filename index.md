@@ -5,7 +5,7 @@ title: "About Me"     # 如果不写会默认用 _config.yml 里的 title
 classes: wide         # 开启宽模式
 ---
 
-I am a Technical expert at **Huawei Technologies**, bridging the gap between theoretical algorithms and industrial-scale systems.
+Jiandong is a principle algorithm expert at **Huawei Technologies**, bridging the gap between theoretical algorithms and industrial-scale systems.
 
 My research philosophy is summarized as **"From Biological Sequences to User Behaviors"**. I apply deep representation learning to decipher underlying patterns in data—from genomic sequences in my early career to billion-scale user behavior logs in commercial recommendation systems today.
 
@@ -33,9 +33,8 @@ My current research bridges the gap between **theoretical robustness** and **ind
 ### 1. Trustworthy & Unbiased Recommendation
 *The Problem: Recommender systems often trap users in "echo chambers" or confuse popularity with genuine interest.*
 
-* **[TOIS 2026] Mitigating Popularity Bias with Global Listwise Learning**, *ACM Transactions on Information Systems.*
+* **[TOIS 2026] Mitigating Popularity Bias with Global Listwise Learning**, *ACM Transactions on Information Systems.* [ [PDF](#) ] 
     <br> **The Breakthrough:** Traditional debiasing methods often hurt overall performance. We proposed a **Global Listwise Learning** framework with progressive bi-weighting, effectively balancing long-tail item exposure without sacrificing user satisfaction.
-    <br> [ [PDF](#) ] 
 
 * **[AAAI 2026] Causal Inference for Watch-time Prediction**, *AAAI 2026.*
     <br> **The Breakthrough:** In short-video feeds, "duration" biases (longer videos naturally get more watch time) mislead algorithms. We introduced **Invariant Feature Learning** based on counterfactual inference to uncover the user's *true* willingness to watch.
