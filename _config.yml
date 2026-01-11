@@ -1,9 +1,11 @@
 # _config.yml
 
-title: "[Jiandong Ding]"
+# 1. 基础设置
+title: "Jiandong Ding"  # 去掉了方括号，否则网页上真的会显示 [ ]
+name: "Jiandong Ding"
 author:
-  name: "[Jiandong Ding]"
-  avatar: "/assets/images/profile.jpg"
+  name: "Jiandong Ding"
+  avatar: "/assets/images/profile.jpg" # 确保文件名大小写完全一致！profile.JPG 和 profile.jpg 不一样
   bio: "Technical expert at **Huawei Technologies**.<br>Bridging **Biological Sequences** & **User Behaviors**."
   location: "Shanghai, China"
   email: "jdding@fudan.edu.cn"
@@ -15,9 +17,18 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/jiandong-ding-60498833/"
     - label: "Publications"
-      icon: "fas fa-fw fa-file-alt"  # 这是一个文档图标
-      url: "/publications/"          # 指向你的 publications.md
+      icon: "fas fa-fw fa-file-alt"
+      url: "/publications/"
 
-
-# 描述部分 (SEO用)
+# 2. 描述 (SEO)
 description: "Technical expert at Huawei. Focus on Trustworthy RecSys, Efficient Architecture, and LLM Agents."
+
+# 3. 主题设置 (这行非常重要！如果没有这行，Jekyll不知道怎么渲染)
+# 如果你用的是 Minimal Mistakes 主题，必须确保有下面这一行：
+remote_theme: mmistakes/minimal-mistakes
+# 或者
+theme: jekyll-theme-minimal-mistakes
+
+# 4. 插件 (通常学术主题需要这个)
+plugins:
+  - jekyll-include-cache
