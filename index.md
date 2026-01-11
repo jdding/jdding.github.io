@@ -1,7 +1,8 @@
 ---
-layout: single        # 👈 必须有！告诉主题使用单页布局
-author_profile: true  # 👈 必须有！这句才是开启左侧边栏（头像+Bio）的开关
-title: "About Me"     # 可选，如果不写会默认用 _config.yml 里的 title
+layout: single        # 告诉主题使用单页布局
+author_profile: true  # 开启左侧边栏（头像+Bio）的开关
+title: "About Me"     # 如果不写会默认用 _config.yml 里的 title
+classes: wide         # 开启宽模式
 ---
 
 I am a Technical expert at **Huawei Technologies**, bridging the gap between theoretical algorithms and industrial-scale systems.
