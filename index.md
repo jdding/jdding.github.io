@@ -143,3 +143,23 @@ My current research focuses on three core challenges in modern recommender syste
     <span class="hl-tag tag-sol">System Layer</span> We proposed a disaggregated serving architecture that optimizes KV-cache management and scheduling, significantly improving throughput for large-scale deployment.
   </div>
 </div>
+
+### 4. Data-Centric AI: Weak Supervision & Augmentation
+
+<div class="paper-card">
+  <div class="paper-content">
+    <strong>[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning via Data Programming</strong>
+    <br><br>
+    <span class="hl-tag tag-prob">Problem</span> Deep learning performance heavily relies on massive labeled data, which is expensive and slow to obtain.
+    <br>
+    <span class="hl-tag tag-sol">Breakthrough</span> We introduced a <strong>Data Programming (DP)</strong> scheme into semi-supervised learning. It automatically generates probabilistic labels for unlabeled data, achieving SOTA performance even with only <strong>40 labeled samples</strong> per class.
+  </div>
+</div>
+
+<div class="paper-card">
+  <div class="paper-content">
+    <strong>[EMNLP 2021] Weakly-supervised Text Classification via Keyword Graph</strong>
+    <br><br>
+    <span class="hl-tag tag-sol">Methodology</span> Instead of manual labeling, we utilize <strong>Keyword Graphs</strong> to propagate weak supervision signals. By modeling the correlation among keywords with GNNs, we can generate high-quality pseudo-labels for massive unlabeled corpora automatically.
+  </div>
+</div>
