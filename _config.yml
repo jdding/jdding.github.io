@@ -1,7 +1,6 @@
 # _config.yml
 
 # ---------------------------------------------------------
-# 👇 【关键步骤】必须激活这个主题，你的 bio 和 links 才会显示！
 remote_theme: mmistakes/minimal-mistakes
 # ---------------------------------------------------------
 
@@ -15,7 +14,7 @@ author:
   location: "Shanghai, China"
   links:
     - label: "Publications"
-      icon: "fas fa-fw fa-file-alt"
+      icon: "fas fa-fw fa-graduation-cap"
       url: "/publications"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
@@ -27,6 +26,6 @@ plugins:
 
 
 #    - label: "Google Scholar"
-#      icon: "fas fa-fw fa-graduation-cap"
+#      icon: "fas fa-fw fa-file-alt"
 #      url: "https://scholar.google.com/citations?hl=zh-CN&user=5-e7wi4AAAAJ&view_op=list_works&sortby=pubdate"
 
