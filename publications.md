@@ -141,7 +141,7 @@ classes: wide
 <div class="pub-row">
   <span class="pub-title">Neural Topic Modeling Based on Cycle Adversarial Training and Contrastive Learning.</span>
   <span class="pub-venue">ACL Findings</span>
-  <img src="https://img.shields.io/badge/NLP-ACL-green" class="badge-img" alt="ACL">
+  <img src="https://img.shields.io/badge/CCF--A-red" class="badge-img" alt="ACL">
   <span class="meta-sep">|</span>
   <span class="pub-authors">Boyu Wang, ..., <strong>Jiandong Ding</strong></span>
   <span class="meta-sep">|</span>
