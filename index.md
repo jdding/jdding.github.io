@@ -73,10 +73,10 @@ I am a **Principal Algorithm Expert** at **Huawei Technologies**, bridging the g
 My research philosophy is summarized as **"From Biological Sequences to User Behaviors"**. I apply deep representation learning to decipher underlying patterns in data—from genomic sequences in my early career to billion-scale user behavior logs in commercial recommendation systems today.
 
 Currently, I focus on building **Trustworthy & Scalable AI Systems**, with specific interests in:
-* **Trustworthy RecSys:** Causal Inference, Debiasing, and Fairness (TOIS '26, AAAI '26).
-* **System Efficiency:** Retrieval Architecture, Model Compression, and On-device AI (WSDM '26, KDD '24).
+* **Trustworthy RecSys:** Causal Inference, Debiasing, and Fairness.
+* **System Efficiency:** Retrieval Architecture, Model Compression, and On-device AI.
 * **LLM & Agents:** Large Language Models for BI and Data Agents.
-* **Data-Centric AI:** Weak Supervision, Data Programming, and Automated Labeling (NeurIPS '21, EMNLP '21).
+* **Data-Centric AI:** Weak Supervision, Data Programming, and Automated Labeling.
 
 ---
 
