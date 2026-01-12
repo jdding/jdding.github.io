@@ -182,6 +182,26 @@ classes: wide
   <span class="pub-link"><a href="https://aclanthology.org/2021.emnlp-main.222">[PDF]</a></span>
 </div>
 
+<div class="pub-row">
+  <span class="pub-title">Effectiveness of AI assistance in live-streaming: a randomized field experiment.</span>
+  <span class="pub-venue">ICIS</span>
+  <img src="https://img.shields.io/badge/CCF--A-red" class="badge-img" alt="CCF-A">
+  <span class="meta-sep">|</span>
+  <span class="pub-authors">Lingli Wang, ..., <strong>Jiandong Ding</strong>, et al.</span>
+  <span class="meta-sep">|</span>
+  <span class="pub-link"><a href="https://aisel.aisnet.org/icis2021/hci_robot/hci_robot/3/">[PDF]</a></span>
+</div>
+
+<div class="pub-row">
+  <span class="pub-title">The sales data sells: Effects of real-time sales analytics on live streaming selling.</span>
+  <span class="pub-venue">ICIS</span>
+  <img src="https://img.shields.io/badge/CCF--A-red" class="badge-img" alt="CCF-A">
+  <span class="meta-sep">|</span>
+  <span class="pub-authors">Yumei He, ..., <strong>Jiandong Ding</strong>, et al.</span>
+  <span class="meta-sep">|</span>
+  <span class="pub-link"><a href="https://aisel.aisnet.org/icis2021/data_analytics/data_analytics/2/">[PDF]</a></span>
+</div>
+
 ### Early Career (Bioinformatics)
 *Focus: Deciphering the code of life with Machine Learning.*
 
