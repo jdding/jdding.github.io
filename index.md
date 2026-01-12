@@ -1,7 +1,7 @@
 ---
 layout: single
 author_profile: true
-title: "About Me"
+title: "Jiandong Ding (丁建栋)"
 classes: wide
 ---
 
