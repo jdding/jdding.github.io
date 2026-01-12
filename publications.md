@@ -60,7 +60,6 @@ classes: wide
   <span class="meta-sep">|</span>
   <span class="pub-authors">Tianyu Zhu, <strong>Jiandong Ding</strong>, et al.</span>
   <span class="meta-sep">|</span>
-  <span class="pub-link"><a href="#">[PDF]</a></span>
 </div>
 
 <div class="pub-row">
@@ -70,7 +69,6 @@ classes: wide
   <span class="meta-sep">|</span>
   <span class="pub-authors">Chenghou Jin, ..., <strong>Jiandong Ding</strong>, et al.</span>
   <span class="meta-sep">|</span>
-  <span class="pub-link"><a href="#">[PDF]</a></span>
 </div>
 
 <div class="pub-row">
@@ -80,7 +78,6 @@ classes: wide
   <span class="meta-sep">|</span>
   <span class="pub-authors">Ke Cheng, ..., <strong>Jiandong Ding</strong>, et al.</span>
   <span class="meta-sep">|</span>
-  <span class="pub-link"><a href="#">[PDF]</a></span>
 </div>
 
 ### 2025
