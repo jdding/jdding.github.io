@@ -201,4 +201,5 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 I am deeply committed to bridging the gap between academia and industry. Having led numerous research initiatives at Huawei CBG and Alibaba DAMO, I am always open to:
 * **Academic Partnerships:** Collaborative research & grant applications.
 * **Professional Events:** Industry summits and tech forums.
+
 For collaboration inquiries: **jdding [at] fudan.edu.cn**
