@@ -13,7 +13,7 @@ locale: "en-US" # 建议加上这行，防止字符编码报错
 author:
   name: "Jiandong Ding (丁建栋)"
   avatar: "/assets/images/Profile.jpg"
-  bio: "Principle expert at **Huawei Technologies**."
+  bio: "Principal algorithm expert at **Huawei Technologies**."
   location: "Shanghai, China"
   links:
     - label: "Publications"
