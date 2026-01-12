@@ -1,2 +1,21 @@
 <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.jpg">
 <link rel="apple-touch-icon" href="/assets/images/favicon.jpg">
+
+<style>
+  /* 覆盖主题默认设置 */
+  .author__avatar img {
+    max-width: 100% !important;  /* 强制打破最大宽度限制 */
+    width: 100%;                 /* 宽度撑满侧边栏 */
+    border-radius: 6px !important; /* 强烈建议：由圆形改为【圆角矩形】 */
+    
+    /* 如果你还是特别想要圆形，就把上面那行删掉，换成下面这行：
+       border-radius: 50% !important; 
+       但注意：全宽的圆形会占用非常多的垂直空间，可能会显得有点愣。
+    */
+  }
+  
+  /* 微调一下头像和名字之间的间距 */
+  .author__avatar {
+    margin-bottom: 10px;
+  }
+</style>
