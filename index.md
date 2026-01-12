@@ -93,7 +93,6 @@ My current research focuses on three core challenges in modern recommender syste
 <div class="paper-card">
   <div class="paper-content">
     <strong>[AAAI 2026] Causal Inference for Watch-time Prediction</strong>
-    <br> <em>AAAI Conference on Artificial Intelligence.</em> [ <a href="#">PDF</a> ]
     <br><br>
     <span class="hl-tag tag-prob">Problem</span> In short-video feeds, "duration biases" (longer videos naturally get more watch time) mislead algorithms.
     <br>
@@ -106,7 +105,6 @@ My current research focuses on three core challenges in modern recommender syste
 <div class="paper-card">
   <div class="paper-content">
     <strong>[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval</strong>
-    <br> <em>ACM WSDM 2026.</em> [ <a href="#">PDF</a> ]
     <br><br>
     <span class="hl-tag tag-prob">Problem</span> Advanced Transformers are often too slow for real-time retrieval on billion-scale items.
     <br>
@@ -117,7 +115,6 @@ My current research focuses on three core challenges in modern recommender syste
 <div class="paper-card">
   <div class="paper-content">
     <strong>[KDD 2024] Low-Rank Compression for CTR Prediction</strong>
-    <br> <em>ACM SIGKDD 2024.</em> [ <a href="https://dl.acm.org/doi/10.1145/3637528.3671520">PDF</a> ]
     <br><br>
     <span class="hl-tag tag-sol">Breakthrough</span> A unified framework to compress massive CTR models using low-rank factorization, enabling high-performance ranking on resource-constrained devices (e.g., mobile phones).
   </div>
@@ -128,7 +125,6 @@ My current research focuses on three core challenges in modern recommender syste
 <div class="paper-card">
   <div class="paper-content">
     <strong>[ICSOC 2025] NL2SQL Benchmark for Business Intelligence</strong>
-    <br> <em>Lecture Notes in Computer Science.</em> [ <a href="https://link.springer.com/10.1007/978-981-96-0808-9_27">PDF</a> ]
     <br><br>
     <span class="hl-tag tag-sol">Intelligence Layer</span> Evaluating how Large Language Models (LLMs) act as Data Agents to translate natural language into complex SQL queries, enabling automated business decision-making.
   </div>
@@ -137,7 +133,6 @@ My current research focuses on three core challenges in modern recommender syste
 <div class="paper-card">
   <div class="paper-content">
     <strong>[arXiv 2024] P/D-Serve: Serving Disaggregated LLMs at Scale</strong>
-    <br> <em>arXiv preprint.</em> [ <a href="https://arxiv.org/abs/2408.08147">PDF</a> ]
     <br><br>
     <span class="hl-tag tag-sol">System Layer</span> We proposed a disaggregated serving architecture that optimizes KV-cache management and scheduling, significantly improving throughput for large-scale deployment.
   </div>
