@@ -192,3 +192,9 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
     <span class="hl-tag tag-method">Methodology</span> Instead of manual labeling, we utilize <strong>Keyword Graphs</strong> to propagate weak supervision signals. By modeling the correlation among keywords with GNNs, we can generate high-quality pseudo-labels for massive unlabeled corpora automatically.
   </div>
 </div>
+
+### 📫 Get in Touch
+
+I am always open to academic collaborations and industrial R&D discussions. 
+<br>
+Feel free to reach out: **jdding [at] fudan.edu.cn** *(Please replace [at] with @).
