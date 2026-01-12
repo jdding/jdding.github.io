@@ -30,6 +30,12 @@ og_image: "/assets/images/favicon.jpg" # 你头像的文件名
 plugins:
   - jekyll-include-cache
 
+# GA 分析数据
+analytics:
+  provider: "google-gtag" # 新版 GA 都是 google-gtag
+  google:
+    tracking_id: "G-Z0P3522G21"
+    anonymize_ip: false
 
 #    - label: "Google Scholar"
 #      icon: "fas fa-fw fa-file-alt"
