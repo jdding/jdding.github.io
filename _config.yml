@@ -5,7 +5,7 @@ remote_theme: mmistakes/minimal-mistakes
 # ---------------------------------------------------------
 
 # 你的个人信息设置
-title: "Jiandong Ding (丁建栋)"
+title: "Trustworthy & Scalable AI Systems"
 description: "Principal Algorithm Expert at Huawei. Focusing on RecSys, Causal Inference, and LLM Agents."
 url: "https://jdding.github.io" # 必须写对你的网址，不要带最后的斜杠
 
