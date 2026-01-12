@@ -18,7 +18,7 @@ classes: wide
   /* 图片容器：默认隐藏，有图时自动显示 */
   .paper-img {
     flex: 0 0 40%; /* 图片占约 1/3 宽度 */
-    max-width: 300px;
+    max-width: 500px;
 #    display: none; /* ⚠️ 暂时隐藏，等你明天加了 img 标签后，把这行删掉即可显示 */
   }
   
