@@ -133,7 +133,7 @@ classes: wide
   <span class="pub-venue">AAAI</span>
   <img src="https://img.shields.io/badge/CCF--A-red" class="badge-img" alt="CCF-A">
   <span class="meta-sep">|</span>
-  <span class="pub-authors">Tiandeng Wu, ..., <strong>Jiandong Ding</strong></span>
+  <span class="pub-authors">Tiandeng Wu, ..., <strong>Jiandong Ding</strong></span><sup>*</sup>
   <span class="meta-sep">|</span>
   <span class="pub-link"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/26611">[PDF]</a></span>
 </div>
