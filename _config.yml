@@ -5,12 +5,15 @@ remote_theme: mmistakes/minimal-mistakes
 # ---------------------------------------------------------
 
 # 你的个人信息设置
-title: "Jiandong Ding"
+title: "Jiandong Ding (丁建栋)"
+description: "Principal Algorithm Expert at Huawei. Focusing on RecSys, Causal Inference, and LLM Agents."
+url: "https://jdding.github.io" # 必须写对你的网址，不要带最后的斜杠
+
 locale: "en-US" # 建议加上这行，防止字符编码报错
 author:
-  name: "Jiandong Ding (丁 建栋)"
+  name: "Jiandong Ding (丁建栋)"
   avatar: "/assets/images/Profile.jpg"
-  bio: "Principle expert at **Huawei Technologies**.<br>Bridging **Biological Sequences** & **User Behaviors**."
+  bio: "Principle expert at **Huawei Technologies**."
   location: "Shanghai, China"
   links:
     - label: "Publications"
@@ -20,6 +23,9 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/jiandong-ding-60498833/"
 
+# Open Graph (社交媒体分享卡片设置)
+og_image: "/assets/images/favicon.jpg" # 你头像的文件名
+
 # 插件支持（建议加上，确保功能正常）
 plugins:
   - jekyll-include-cache
@@ -28,4 +34,6 @@ plugins:
 #    - label: "Google Scholar"
 #      icon: "fas fa-fw fa-file-alt"
 #      url: "https://scholar.google.com/citations?hl=zh-CN&user=5-e7wi4AAAAJ&view_op=list_works&sortby=pubdate"
+
+
 
