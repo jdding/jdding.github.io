@@ -29,6 +29,9 @@ og_image: "/assets/images/favicon.jpg" # 你头像的文件名
 # 插件支持（建议加上，确保功能正常）
 plugins:
   - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap   # <--- 关键是这一行，加上它！
 
 # GA 分析数据
 analytics:
