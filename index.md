@@ -6,6 +6,7 @@ classes: wide
 ---
 
 <style>
+  /* 隐藏页面内部的大标题，只保留浏览器标签页标题 */
   .page__title { display: none; }
 </style>
 
@@ -13,28 +14,28 @@ classes: wide
   /* --- 核心卡片容器 --- */
   .paper-card {
     display: flex;
-    gap: 25px; /* 增加一点图文间距 */
+    gap: 25px; /* 图文间距 */
     margin-bottom: 35px;
     padding-bottom: 25px;
-    border-bottom: 1px solid #f0f0f0; /* 颜色更淡一点，显高级 */
-    font-size: 0.95em; /* 字体稍微缩小一点，显得更精致 */
-    line-height: 1.6;  /* 增加行高，提升阅读舒适度 */
-    color: #444;       /* 字体颜色稍微柔和一点 */
+    border-bottom: 1px solid #f0f0f0; /* 淡淡的分割线 */
+    font-size: 0.95em; /* 字体微缩，显精致 */
+    line-height: 1.6;  /* 增加行高 */
+    color: #444;       /* 柔和黑 */
   }
   .paper-card:last-child { border-bottom: none; }
   
-  /* --- 图片区域优化 --- */
+  /* --- 图片区域 --- */
   .paper-img {
-    flex: 0 0 35%; /* 【优化点】建议35%，比40%更协调，留给文字更多空间 */
-    max-width: 380px; /* 限制最大宽度，防止在大屏上图太大 */
-#    display: none; /* 默认隐藏，有图时在HTML里加 style="display:block" */
+    flex: 0 0 35%; /* 固定宽度占比 */
+    max-width: 380px; 
+    /* 如果某篇论文没图，直接在 HTML div 里加 style="display:none" 即可 */
   }
   
   .paper-img img {
     width: 100%;
     border-radius: 6px;
-    border: 1px solid #e1e4e8; /* 给图片加个细微的边框，更有质感 */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03); /* 增加一点悬浮感 */
+    border: 1px solid #e1e4e8; /* 细微边框 */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03); /* 悬浮感 */
   }
   
   /* --- 文字区域 --- */
@@ -42,7 +43,7 @@ classes: wide
     flex: 1; 
   }
   
-  /* 论文标题样式 */
+  /* 论文标题 */
   .paper-title {
     font-size: 1.1em;
     font-weight: 700;
@@ -51,7 +52,7 @@ classes: wide
     margin-bottom: 8px;
   }
 
-  /* --- 标签样式 --- */
+  /* --- 标签系统 --- */
   .hl-tag {
     font-size: 0.8em;
     font-weight: bold;
@@ -100,8 +101,8 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 ### 1. Trustworthy & Unbiased Recommendation
 
 <div class="paper-card">
-  <div class="paper-img" style="display:block"> 
-    <img src="/assets/images/TOIS2026.png" alt="TOIS Framework">
+  <div class="paper-img"> 
+    <img src="/assets/images/TOIS2026.png" alt="TOIS Framework" loading="lazy">
   </div>
   <div class="paper-content">
     <span class="paper-title">[TOIS 2026] Mitigating Popularity Bias with Global Listwise Learning</span>
@@ -112,8 +113,8 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 </div>
 
 <div class="paper-card">
-  <div class="paper-img" style="display:block"> 
-    <img src="/assets/images/AAAI2026.png" alt="AAAI Framework">
+  <div class="paper-img"> 
+    <img src="/assets/images/AAAI2026.png" alt="AAAI Framework" loading="lazy">
   </div>
   <div class="paper-content">
     <span class="paper-title">[AAAI 2026] Causal Inference for Watch-time Prediction</span>
@@ -126,8 +127,8 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 ### 2. Extreme Efficiency at Scale
 
 <div class="paper-card">
-  <div class="paper-img" style="display:block"> 
-    <img src="/assets/images/WSDM2026.png" alt="WSDM Framework">
+  <div class="paper-img"> 
+    <img src="/assets/images/WSDM2026.png" alt="WSDM Framework" loading="lazy">
   </div>
   <div class="paper-content">
     <span class="paper-title">[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval</span>
@@ -138,8 +139,8 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 </div>
 
 <div class="paper-card">
-  <div class="paper-img" style="display:block"> 
-    <img src="/assets/images/KDD2024.png" alt="KDD Framework">
+  <div class="paper-img"> 
+    <img src="/assets/images/KDD2024.png" alt="KDD Framework" loading="lazy">
   </div>
   <div class="paper-content">
     <span class="paper-title">[KDD 2024] Low-Rank Compression for CTR Prediction</span>
@@ -150,8 +151,8 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 ### 3. Large Models: Systems & Agents
 
 <div class="paper-card">
-  <div class="paper-img" style="display:block"> 
-    <img src="/assets/images/ICSOC2025.png" alt="ICSOC Framework">
+  <div class="paper-img"> 
+    <img src="/assets/images/ICSOC2025.png" alt="ICSOC Framework" loading="lazy">
   </div>
   <div class="paper-content">
     <span class="paper-title">[ICSOC 2025] NL2SQL Benchmark for Business Intelligence</span>
@@ -160,8 +161,8 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 </div>
 
 <div class="paper-card">
-  <div class="paper-img" style="display:block"> 
-    <img src="/assets/images/PD2024.png" alt="PD Framework">
+  <div class="paper-img"> 
+    <img src="/assets/images/PD2024.png" alt="PD Framework" loading="lazy">
   </div>
   <div class="paper-content">
     <span class="paper-title">[arXiv 2024] P/D-Serve: Serving Disaggregated LLMs at Scale</span>
@@ -172,8 +173,8 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 ### 4. Data-Centric AI: Weak Supervision & Augmentation
 
 <div class="paper-card">
-  <div class="paper-img" style="display:block"> 
-    <img src="/assets/images/NIPS2021.png" alt="DPSSL Framework">
+  <div class="paper-img"> 
+    <img src="/assets/images/NIPS2021.png" alt="DPSSL Framework" loading="lazy">
   </div>
   <div class="paper-content">
     <span class="paper-title">[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning via Data Programming</span>
@@ -184,8 +185,8 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 </div>
 
 <div class="paper-card">
-  <div class="paper-img" style="display:block"> 
-    <img src="/assets/images/EMNLP2021.png" alt="SSP Framework">
+  <div class="paper-img"> 
+    <img src="/assets/images/EMNLP2021.png" alt="SSP Framework" loading="lazy">
   </div>
   <div class="paper-content">
     <span class="paper-title">[EMNLP 2021] Weakly-supervised Text Classification via Keyword Graph</span>
@@ -193,12 +194,11 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
   </div>
 </div>
 
+---
 
 ### 📫 Get in Touch
 
 I am deeply committed to bridging the gap between academia and industry. Having led numerous research initiatives at Huawei CBG and Alibaba DAMO, I am always open to:
-
 * **Academic Partnerships:** Collaborative research & grant applications.
 * **Professional Events:** Industry summits and tech forums.
-
 For collaboration inquiries: **jdding [at] fudan.edu.cn**
