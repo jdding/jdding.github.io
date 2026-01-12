@@ -69,7 +69,7 @@ Currently, I focus on building **Trustworthy & Scalable AI Systems**, with speci
 
 * **[Jan 2026]** 🎉 Paper *"Mitigating Popularity Bias in Recommendation"* accepted by **ACM TOIS** (CCF-A)!
 * **[Nov 2025]** 🚀 Two papers accepted! *"RPE4Rec"* by **WSDM 2026**, and *"Invariant Feature Learning"* by **AAAI 2026**.
-* **[Nov 2024]** Paper *"BIS: NL2SQL Service Evaluation Benchmark"* accepted by **ICSOC 2024**.
+* **[Dec 2024]** Paper *"BIS: NL2SQL Service Evaluation Benchmark"* accepted by **ICSOC 2024**.
 * **[Aug 2024]** Paper on Low-rank Compression for CTR prediction accepted by **KDD 2024**.
 
 ---
@@ -83,7 +83,6 @@ My current research focuses on three core challenges in modern recommender syste
 <div class="paper-card">
   <div class="paper-content">
     <strong>[TOIS 2026] Mitigating Popularity Bias with Global Listwise Learning</strong>
-    <br> <em>ACM Transactions on Information Systems.</em> [ <a href="#">PDF</a> ]
     <br><br>
     <span class="hl-tag tag-prob">Problem</span> Recommender systems often trap users in "echo chambers" or confuse popularity with genuine interest.
     <br>
