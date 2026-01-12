@@ -5,6 +5,11 @@ title: "Jiandong Ding (丁建栋)"
 classes: wide
 ---
 
+# 隐藏title
+<style>
+  .page__title { display: none; }
+</style>
+
 <style>
   /* --- 核心卡片容器 --- */
   .paper-card {
