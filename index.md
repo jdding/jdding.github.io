@@ -134,6 +134,9 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 </div>
 
 <div class="paper-card">
+  <div class="paper-img" style="display:block"> 
+    <img src="/assets/images/KDD2024.png" alt="KDD Framework">
+  </div>
   <div class="paper-content">
     <span class="paper-title">[KDD 2024] Low-Rank Compression for CTR Prediction</span>
     <span class="hl-tag tag-sol">Breakthrough</span> A unified framework to compress massive CTR models using low-rank factorization, enabling high-performance ranking on resource-constrained devices (e.g., mobile phones).
@@ -143,6 +146,9 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 ### 3. Large Models: Systems & Agents
 
 <div class="paper-card">
+  <div class="paper-img" style="display:block"> 
+    <img src="/assets/images/ICSOC2025.png" alt="ICSOC Framework">
+  </div>
   <div class="paper-content">
     <span class="paper-title">[ICSOC 2025] NL2SQL Benchmark for Business Intelligence</span>
     <span class="hl-tag tag-sol">Intelligence Layer</span> Evaluating how Large Language Models (LLMs) act as Data Agents to translate natural language into complex SQL queries, enabling automated business decision-making.
@@ -150,6 +156,9 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 </div>
 
 <div class="paper-card">
+  <div class="paper-img" style="display:block"> 
+    <img src="/assets/images/PD2024.png" alt="PD Framework">
+  </div>
   <div class="paper-content">
     <span class="paper-title">[arXiv 2024] P/D-Serve: Serving Disaggregated LLMs at Scale</span>
     <span class="hl-tag tag-sol">System Layer</span> We proposed a disaggregated serving architecture that optimizes KV-cache management and scheduling, significantly improving throughput for large-scale deployment.
@@ -159,6 +168,9 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 ### 4. Data-Centric AI: Weak Supervision & Augmentation
 
 <div class="paper-card">
+  <div class="paper-img" style="display:block"> 
+    <img src="/assets/images/NIPS021.png" alt="DPSSL Framework">
+  </div>
   <div class="paper-content">
     <span class="paper-title">[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning via Data Programming</span>
     <span class="hl-tag tag-prob">Problem</span> Deep learning performance heavily relies on massive labeled data, which is expensive and slow to obtain.
@@ -168,6 +180,9 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 </div>
 
 <div class="paper-card">
+  <div class="paper-img" style="display:block"> 
+    <img src="/assets/images/EMNLP2021.png" alt="SSP Framework">
+  </div>
   <div class="paper-content">
     <span class="paper-title">[EMNLP 2021] Weakly-supervised Text Classification via Keyword Graph</span>
     <span class="hl-tag tag-method">Methodology</span> Instead of manual labeling, we utilize <strong>Keyword Graphs</strong> to propagate weak supervision signals. By modeling the correlation among keywords with GNNs, we can generate high-quality pseudo-labels for massive unlabeled corpora automatically.
