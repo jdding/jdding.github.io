@@ -121,3 +121,116 @@ classes: wide
   <span class="pub-venue">arXiv preprint</span>
   <img src="https://img.shields.io/badge/Preprint-lightgrey" class="badge-img" alt="Preprint">
   <span class="meta-sep">|</span>
+  <span class="pub-authors">Yibo Jin, ..., <strong>Jiandong Ding</strong>, et al.</span>
+  <span class="meta-sep">|</span>
+  <span class="pub-link"><a href="https://arxiv.org/abs/2408.08147">[PDF]</a></span>
+</div>
+
+### 2023
+
+<div class="pub-row">
+  <span class="pub-title">Continual Graph Convolutional Network for Text Classification.</span>
+  <span class="pub-venue">AAAI</span>
+  <img src="https://img.shields.io/badge/CCF--A-red" class="badge-img" alt="CCF-A">
+  <span class="meta-sep">|</span>
+  <span class="pub-authors">Tiandeng Wu, ..., <strong>Jiandong Ding</strong></span>
+  <span class="meta-sep">|</span>
+  <span class="pub-link"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/26611">[PDF]</a></span>
+</div>
+
+<div class="pub-row">
+  <span class="pub-title">Neural Topic Modeling Based on Cycle Adversarial Training and Contrastive Learning.</span>
+  <span class="pub-venue">ACL Findings</span>
+  <img src="https://img.shields.io/badge/NLP-ACL-green" class="badge-img" alt="ACL">
+  <span class="meta-sep">|</span>
+  <span class="pub-authors">Boyu Wang, ..., <strong>Jiandong Ding</strong></span>
+  <span class="meta-sep">|</span>
+  <span class="pub-link"><a href="https://aclanthology.org/2023.findings-acl.616">[PDF]</a></span>
+</div>
+
+### 2022
+
+<div class="pub-row">
+  <span class="pub-title">EPiDA: an Easy Plug-in Data Augmentation Framework.</span>
+  <span class="pub-venue">NAACL</span>
+  <img src="https://img.shields.io/badge/CCF--B-blue" class="badge-img" alt="CCF-B">
+  <span class="meta-sep">|</span>
+  <span class="pub-authors">Minyi Zhao, ..., <strong>Jiandong Ding</strong>, et al.</span>
+  <span class="meta-sep">|</span>
+  <span class="pub-link"><a href="https://aclanthology.org/2022.naacl-main.349">[PDF]</a></span>
+</div>
+
+### 2021
+
+<div class="pub-row">
+  <span class="pub-title">DP-SSL: Towards Robust Semi-supervised Learning with A Few Labeled Samples.</span>
+  <span class="pub-venue">NeurIPS</span>
+  <img src="https://img.shields.io/badge/CCF--A-red" class="badge-img" alt="CCF-A">
+  <span class="meta-sep">|</span>
+  <span class="pub-authors">Yi Xu, <strong>Jiandong Ding</strong>, et al.</span>
+  <span class="meta-sep">|</span>
+  <span class="pub-link"><a href="https://arxiv.org/abs/2110.13740">[PDF]</a></span>
+</div>
+
+<div class="pub-row">
+  <span class="pub-title">Weakly-supervised Text Classification Based on Keyword Graph.</span>
+  <span class="pub-venue">EMNLP</span>
+  <img src="https://img.shields.io/badge/CCF--B-blue" class="badge-img" alt="CCF-B">
+  <span class="meta-sep">|</span>
+  <span class="pub-authors">Lu Zhang, <strong>Jiandong Ding</strong>, et al.</span>
+  <span class="meta-sep">|</span>
+  <span class="pub-link"><a href="https://aclanthology.org/2021.emnlp-main.222">[PDF]</a></span>
+</div>
+
+### Early Career (Bioinformatics)
+*Focus: Deciphering the code of life with Machine Learning.*
+
+<div class="pub-row">
+  <span class="pub-title">Finding MicroRNA Targets in Plants: Current Status and Perspectives.</span>
+  <span class="pub-venue">GPB</span>
+  <img src="https://img.shields.io/badge/JCR--Q1-red" class="badge-img" alt="JCR-Q1">
+  <span class="meta-sep">|</span>
+  <span class="pub-authors"><strong>Jiandong Ding</strong>, et al.</span>
+  <span class="meta-sep">|</span>
+  <span class="pub-link"><a href="https://academic.oup.com/gpb/article/10/5/264/7221796">[PDF]</a></span>
+</div>
+
+<div class="pub-row">
+  <span class="pub-title">Automatically clustering large-scale miRNA sequences.</span>
+  <span class="pub-venue">BMC Genomics</span>
+  <img src="https://img.shields.io/badge/JCR--Q2-blue" class="badge-img" alt="JCR-Q2">
+  <span class="meta-sep">|</span>
+  <span class="pub-authors"><strong>Jiandong Ding</strong>, et al.</span>
+  <span class="meta-sep">|</span>
+  <span class="pub-link"><a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-13-S8-S15">[PDF]</a></span>
+</div>
+
+<div class="pub-row">
+  <span class="pub-title">imiRTP: An Integrated Method to Identifying miRNA-target Interactions.</span>
+  <span class="pub-venue">IEEE BIBM</span>
+  <img src="https://img.shields.io/badge/CCF--B-blue" class="badge-img" alt="CCF-B">
+  <span class="meta-sep">|</span>
+  <span class="pub-authors"><strong>Jiandong Ding</strong>, et al.</span>
+  <span class="meta-sep">|</span>
+  <span class="pub-link"><a href="http://ieeexplore.ieee.org/document/6120415/">[PDF]</a></span>
+</div>
+
+<div class="pub-row">
+  <span class="pub-title">miRFam: an effective automatic miRNA classification method.</span>
+  <span class="pub-venue">BMC Bioinformatics</span>
+  <img src="https://img.shields.io/badge/JCR--Q2-blue" class="badge-img" alt="JCR-Q2">
+  <span class="meta-sep">|</span>
+  <span class="pub-authors"><strong>Jiandong Ding</strong>, et al.</span>
+  <span class="meta-sep">|</span>
+  <span class="pub-link"><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-216">[PDF]</a></span>
+</div>
+
+<div class="pub-row">
+  <span class="pub-title">MiRenSVM: towards better prediction of microRNA precursors.</span>
+  <span class="pub-venue">BMC Bioinformatics</span>
+  <img src="https://img.shields.io/badge/JCR--Q2-blue" class="badge-img" alt="JCR-Q2">
+  <span class="meta-sep">|</span>
+  <span class="pub-authors"><strong>Jiandong Ding</strong>, et al.</span>
+  <span class="meta-sep">|</span>
+  <span class="pub-link"><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-11-S11-S11">[PDF]</a></span>
+</div>
