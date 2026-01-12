@@ -193,8 +193,12 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
   </div>
 </div>
 
+
 ### 📫 Get in Touch
 
-I am always open to academic collaborations and industrial R&D discussions. 
-<br>
-Feel free to reach out: **jdding [at] fudan.edu.cn** *(Please replace [at] with @).
+I am deeply committed to bridging the gap between academia and industry. Having led numerous research initiatives at Huawei CBG and Alibaba DAMO, I am always open to:
+
+* **Academic Partnerships:** Collaborative research & grant applications.
+* **Professional Events:** Industry summits and tech forums.
+
+For collaboration inquiries: **jdding [at] fudan.edu.cn**
