@@ -12,7 +12,7 @@ url: "https://jdding.github.io" # 必须写对你的网址，不要带最后的�
 locale: "en-US" # 建议加上这行，防止字符编码报错
 author:
   name: "Jiandong Ding (丁建栋)"
-  avatar: "/assets/images/Profile.jpg"
+  avatar: "/assets/images/Profile.png"
   bio: "Principal algorithm expert at **Huawei Technologies**."
   location: "Shanghai, China"
   links:
