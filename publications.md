@@ -185,7 +185,7 @@ classes: wide
 <div class="pub-row">
   <span class="pub-title">Effectiveness of AI assistance in live-streaming: a randomized field experiment.</span>
   <span class="pub-venue">ICIS</span>
-  <img src="https://img.shields.io/badge/AIS--Top-purple" class="badge-img" alt="AIS Top">
+  <img src="https://img.shields.io/badge/IS--Top-purple" class="badge-img" alt="IS Top">
   <span class="meta-sep">|</span>
   <span class="pub-authors">Lingli Wang, ..., <strong>Jiandong Ding</strong>, et al.</span>
   <span class="meta-sep">|</span>
@@ -195,7 +195,7 @@ classes: wide
 <div class="pub-row">
   <span class="pub-title">The sales data sells: Effects of real-time sales analytics on live streaming selling.</span>
   <span class="pub-venue">ICIS</span>
-  <img src="https://img.shields.io/badge/AIS--Top-purple" class="badge-img" alt="AIS Top">
+  <img src="https://img.shields.io/badge/IS--Top-purple" class="badge-img" alt="IS Top">
   <span class="meta-sep">|</span>
   <span class="pub-authors">Yumei He, ..., <strong>Jiandong Ding</strong>, et al.</span>
   <span class="meta-sep">|</span>
