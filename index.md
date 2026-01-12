@@ -169,7 +169,7 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 
 <div class="paper-card">
   <div class="paper-img" style="display:block"> 
-    <img src="/assets/images/NIPS021.png" alt="DPSSL Framework">
+    <img src="/assets/images/NIPS2021.png" alt="DPSSL Framework">
   </div>
   <div class="paper-content">
     <span class="paper-title">[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning via Data Programming</span>
