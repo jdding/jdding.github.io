@@ -58,7 +58,7 @@ classes: wide
   <span class="pub-venue">ACM TOIS</span>
   <img src="https://img.shields.io/badge/CCF--A-red" class="badge-img" alt="CCF-A">
   <span class="meta-sep">|</span>
-  <span class="pub-authors"><strong>Jiandong Ding</strong>, et al.</span>
+  <span class="pub-authors">Tianyu Zhu, <strong>Jiandong Ding</strong>, et al.</span>
   <span class="meta-sep">|</span>
   <span class="pub-link"><a href="#">[PDF]</a></span>
 </div>
@@ -68,7 +68,7 @@ classes: wide
   <span class="pub-venue">AAAI</span>
   <img src="https://img.shields.io/badge/CCF--A-red" class="badge-img" alt="CCF-A">
   <span class="meta-sep">|</span>
-  <span class="pub-authors"><strong>Jiandong Ding</strong>, et al.</span>
+  <span class="pub-authors">Chenghou Jin, ..., <strong>Jiandong Ding</strong>, et al.</span>
   <span class="meta-sep">|</span>
   <span class="pub-link"><a href="#">[PDF]</a></span>
 </div>
@@ -78,7 +78,7 @@ classes: wide
   <span class="pub-venue">ACM WSDM</span>
   <img src="https://img.shields.io/badge/CCF--B-blue" class="badge-img" alt="CCF-B">
   <span class="meta-sep">|</span>
-  <span class="pub-authors"><strong>Jiandong Ding</strong>, et al.</span>
+  <span class="pub-authors">Ke Cheng, ..., <strong>Jiandong Ding</strong>, et al.</span>
   <span class="meta-sep">|</span>
   <span class="pub-link"><a href="#">[PDF]</a></span>
 </div>
