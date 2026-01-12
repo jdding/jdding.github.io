@@ -19,7 +19,7 @@ classes: wide
   .paper-img {
     flex: 0 0 32%; /* 图片占约 1/3 宽度 */
     max-width: 300px;
-    display: none; /* ⚠️ 暂时隐藏，等你明天加了 img 标签后，把这行删掉即可显示 */
+#    display: none; /* ⚠️ 暂时隐藏，等你明天加了 img 标签后，把这行删掉即可显示 */
   }
   
   /* 如果你想明天直接开启图片位，可以把上面 display: none 删掉 */
@@ -81,6 +81,8 @@ My current research focuses on three core challenges in modern recommender syste
 ### 1. Trustworthy & Unbiased Recommendation
 
 <div class="paper-card">
+  <div class="paper-img" style="display:block"> <img src="/assets/images/TOIS2026.png">
+  </div>
   <div class="paper-content">
     <strong>[TOIS 2026] Mitigating Popularity Bias with Global Listwise Learning</strong>
     <br><br>
@@ -91,6 +93,8 @@ My current research focuses on three core challenges in modern recommender syste
 </div>
 
 <div class="paper-card">
+  <div class="paper-img" style="display:block"> <img src="/assets/images/AAAI2026.png">
+  </div>
   <div class="paper-content">
     <strong>[AAAI 2026] Causal Inference for Watch-time Prediction</strong>
     <br><br>
@@ -103,6 +107,8 @@ My current research focuses on three core challenges in modern recommender syste
 ### 2. Extreme Efficiency at Scale
 
 <div class="paper-card">
+  <div class="paper-img" style="display:block"> <img src="/assets/images/WSDM2026.png">
+  </div>
   <div class="paper-content">
     <strong>[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval</strong>
     <br><br>
