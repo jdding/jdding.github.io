@@ -22,6 +22,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/jiandong-ding-60498833/"
+    - label: "Email"
+      url: "mailto:jdding@fudan.edu.cn"  # 真实邮箱
+      icon: "fas fa-fw fa-envelope-square"
 
 # Open Graph (社交媒体分享卡片设置)
 og_image: "/assets/images/favicon.jpg" # 你头像的文件名
