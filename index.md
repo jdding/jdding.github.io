@@ -86,7 +86,7 @@ Currently, I focus on building **Trustworthy & Scalable AI Systems**, with speci
 
 ## 🔥 News
 
-* **[Jan 2026]** 🎉 Paper *"Mitigating Popularity Bias in Recommendation"* accepted by **ACM TOIS** (CCF-A)!
+* **[Jan 2026]** 🎉 Paper *"Mitigating Popularity Bias in Recommendation"* accepted by **ACM TOIS**.
 * **[Nov 2025]** 🚀 Two papers accepted! *"RPE4Rec"* by **WSDM 2026**, and *"Invariant Feature Learning"* by **AAAI 2026**.
 * **[Dec 2024]** Paper *"BIS: NL2SQL Service Evaluation Benchmark"* accepted by **ICSOC 2024**.
 * **[Aug 2024]** Paper on Low-rank Compression for CTR prediction accepted by **KDD 2024**.
