@@ -19,6 +19,9 @@ author:
     - label: "Publications"
       icon: "fas fa-fw fa-graduation-cap"
       url: "/publications"
+    - title: "Patents"
+      icon: "fas fa-fw fa-file-alt"
+      url: “/patents”
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/jiandong-ding-60498833/"
