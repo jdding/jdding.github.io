@@ -19,14 +19,14 @@ author:
     - label: "Publications"
       icon: "fas fa-fw fa-graduation-cap"
       url: "/publications"
-    - title: "Patents"
+    - label: "Patents"                # 修正1：由 title 改为 label
       icon: "fas fa-fw fa-file-alt"
-      url: “/patents”
+      url: "/patents"                 # 修正2：由 “...” 改为 "..." (英文直引号)
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/jiandong-ding-60498833/"
     - label: "Email"
-      url: "mailto:jdding@fudan.edu.cn"  # 真实邮箱
+      url: "mailto:jdding@fudan.edu.cn"
       icon: "fas fa-fw fa-envelope-square"
 
 # Open Graph (社交媒体分享卡片设置)
