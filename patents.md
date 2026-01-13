@@ -5,111 +5,30 @@ title: "Patents"
 permalink: /patents
 classes: wide
 ---
+## Patents & Innovations
 
-<style>
-  /* 复用 Publications 的样式，保持全站统一 */
-  .pub-row {
-    margin-bottom: 18px;
-    line-height: 1.6;
-    font-size: 0.95em;
-    color: #444;
-  }
-  
-  .pub-title {
-    font-weight: 700;
-    color: #2c3e50;
-    margin-right: 6px;
-  }
-  
-  .pub-authors { color: #666; font-size: 0.9em; }
-  
-  .meta-sep { 
-    margin: 0 5px; 
-    color: #ddd; 
-    font-weight: 300; 
-  }
-  
-  .badge-img {
-    vertical-align: middle;
-    height: 20px;
-    margin-bottom: 2px;
-  }
+I have filed a total of **40+ patents**, with **20 granted patents** covering **Recommendation Systems**, **GenAI/NLP**, **Spatio-Temporal Mining**, and **Bioinformatics**. Notably, I am the **First Inventor** on **17** of these applications.
 
-  /* 链接样式 */
-  .pub-link a {
-    text-decoration: none;
-    color: #3b8dbd;
-    font-weight: 600;
-    font-size: 0.9em;
-  }
-  .pub-link a:hover { text-decoration: underline; }
-  
-  /* 专利号样式 */
-  .pat-id {
-    font-family: "Courier New", Courier, monospace;
-    font-weight: 600;
-    color: #555;
-    font-size: 0.9em;
-    background: #f4f6f8;
-    padding: 1px 4px;
-    border-radius: 3px;
-  }
-</style>
+### 🏆 Selected Granted Patents
+* 🇺🇸 **Method for identifying objects in a spatial region** | US 12,267,751 | `2025`. *Meng Yi, Xu Jin, **Jiandong Ding**.*
+* 🇨🇳 **ETL task processing method and device** | CN 113806427 B | `2025`. ***Jiandong Ding**, Dawei Sun, Qi Wang.*
+* 🇨🇳 **Text creation method and computer program product** | CN 113590247 B | `2024`. ***Jiandong Ding***.
+* 🇺🇸 **Method and device for managing virtual streaming** | US 11,856,243 | `2023`. *Jin Xu, **Jiandong Ding**.*
+* 🇨🇳 **Live broadcast behavior control of virtual anchor** | CN 115379265 B | `2023`. *Yan Sun, **Jiandong Ding**.*
+* 🇨🇳 **Resource allocation method and device** | CN 111353797 B | `2023`. *Huamei Sun, **Jiandong Ding**, et al.*
+* 🇺🇸 **Road network generation** | US 11,270,039 | `2022`. *Guoqiang Hu, **Jiandong Ding**, et al.*
+* 🇨🇳 **Region clustering method and system** | CN 110689362 B | `2022`. ***Jiandong Ding***.
+* 🇨🇳 **Traffic analysis and management system** | CN 111047130 B | `2021`. *Weiming Liu, **Jiandong Ding**.*
+* 🇨🇳 **Method for managing gene order** | CN 105631239 B | `2018`. ***Jiandong Ding**, Jun Zhu, et al.*
+* 🇨🇳 **Property analysis of protein sequence** | CN 104951667 B | `2018`. ***Jiandong Ding**, Yanan Zhang, et al.*
 
-I have filed **10+ patents** (with multiple granted in US and CN) bridging academic algorithms and industrial applications. Below is a selection of representative patents covering **Live Streaming Systems**, **Graph/Trajectory Mining**, and **Bioinformatics**.
+---
 
-### ✅ Granted Patents (Selected)
-
-<div class="pub-row">
-  <span class="pub-title">Method, device, and computer storage medium for managing virtual streaming.</span>
-  <img src="https://img.shields.io/badge/Status-Granted-success" class="badge-img" alt="Granted">
-  <span class="meta-sep">|</span>
-  <span class="pat-id">US11856243B2 (US)</span>
-  <span class="meta-sep">|</span>
-  <span class="pub-authors">Jin Xu, <strong>Jiandong Ding</strong></span>
-  <span class="meta-sep">|</span>
-  <span class="pub-link"><a href="https://patents.google.com/patent/US11856243B2/en">[Link]</a></span>
-  <br>
-  <span style="font-size: 0.85em; color: #888;">*Assignee: Alibaba (China) Co., Ltd.*</span>
-</div>
-
-<div class="pub-row">
-  <span class="pub-title">Method and apparatus for constructing the lack part of the target trajectory of object.</span>
-  <img src="https://img.shields.io/badge/Status-Granted-success" class="badge-img" alt="Granted">
-  <span class="meta-sep">|</span>
-  <span class="pat-id">CN105095617B (China)</span>
-  <span class="meta-sep">|</span>
-  <span class="pub-authors">Qiankun Zhao, Junchi Yan, <strong>Jiandong Ding</strong>, et al.</span>
-  <span class="meta-sep">|</span>
-  <span class="pub-link"><a href="https://patents.google.com/patent/CN105095617B/en">[Link]</a></span>
-  <br>
-  <span style="font-size: 0.85em; color: #888;">*Assignee: International Business Machines Corp (IBM)*</span>
-</div>
-
-<div class="pub-row">
-  <span class="pub-title">Method and system for identifying microRNA (miRNA) family.</span>
-  <img src="https://img.shields.io/badge/Status-Granted-success" class="badge-img" alt="Granted">
-  <span class="meta-sep">|</span>
-  <span class="pat-id">CN102542031B (China)</span>
-  <span class="meta-sep">|</span>
-  <span class="pub-authors"><strong>Jiandong Ding</strong>, Shuigeng Zhou, Jihong Guan</span>
-  <span class="meta-sep">|</span>
-  <span class="pub-link"><a href="https://patents.google.com/patent/CN102542031B/en">[Link]</a></span>
-  <br>
-  <span style="font-size: 0.85em; color: #888;">*Assignee: Fudan University*</span>
-</div>
-
-### 📝 Filed Applications
-
-<div class="pub-row">
-  <span class="pub-title">Live Broadcast Interaction Method, Apparatus, Device and Storage Medium.</span>
-  <img src="https://img.shields.io/badge/Status-Published-blue" class="badge-img" alt="Published">
-  <span class="meta-sep">|</span>
-  <span class="pat-id">US20220248066A1 (US)</span>
-  <span class="meta-sep">|</span>
-  <span class="pub-authors">Shibo Liu, <strong>Jiandong Ding</strong>, Yongji He</span>
-  <span class="meta-sep">|</span>
-  <span class="pub-link"><a href="https://patents.google.com/patent/US20220248066A1/en">[Link]</a></span>
-  <br>
-  <span style="font-size: 0.85em; color: #888;">*Assignee: Alibaba Group Holding Limited*</span>
-</div>
+### ⏳ Selected Pending Applications (7)
+* 🇺🇸 **Live Broadcast Interaction Method** | US 2022/0248066 | `Interactive Media`. *Shibo Liu, **Jiandong Ding**, Yongji He.*
+* 🇺🇸 **Sound effect processing during live streaming** | US 2022/0248107 | `Audio Processing`. *Jin Xu, **Jiandong Ding**.*
+* 🇨🇳 **Recommending playing time for video platform** | CN 115080791 | `RecSys`. *Yue Ma, Qi Wang, **Jiandong Ding**.*
+* 🇨🇳 **Emotion recognition method and device** | CN 114064844 | `Affective Computing`. *Qicheng Yang, **Jiandong Ding**.*
+* 🇨🇳 **Grade prediction model training method** | CN 111680382 | `Deep Learning`. *Xianzhi Shi, **Jiandong Ding**, Yu Yang.*
+* 🇨🇳 **Predicting whether user has vehicle** | CN 111091219 | `Mobility AI`. ***Jiandong Ding***.
+* 🇩🇪 **Genome compression and decompression** | DE 112014005580 | `Bioinformatics`. ***Jiandong Ding**, Junchi Yan, et al.*
