@@ -7,7 +7,7 @@ classes: wide
 ---
 ## Patents & Innovations
 
-I have filed a total of **40+ patents**, with **20 granted patents** covering **Recommendation Systems**, **GenAI/NLP**, **Spatio-Temporal Mining**, and **Bioinformatics**. Notably, I am the **First Inventor** on **17** of these applications.
+My IP portfolio includes **40+ patent filings**, with **20 granted** to date. These innovations span **Recommendation Systems**, **GenAI/NLP**, **Spatio-Temporal Mining**, and **Bioinformatics**, where I served as the **First Inventor** on **17** applications.
 
 ### 🏆 Selected Granted Patents
 * 🇺🇸 **Method for identifying objects in a spatial region** | US 12,267,751 | `2025`. *Meng Yi, Xu Jin, **Jiandong Ding**.*
