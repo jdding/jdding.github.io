@@ -5,7 +5,6 @@ title: "Patents"
 permalink: /patents
 classes: wide
 ---
-## Patents & Innovations
 
 My IP portfolio includes **40+ patent filings**, with **20 granted** to date. These innovations span **Recommendation Systems**, **GenAI/NLP**, **Spatio-Temporal Mining**, and **Bioinformatics**, where I served as the **First Inventor** on **17** applications.
 
