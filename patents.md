@@ -166,7 +166,7 @@ classes: wide
 </div>
 
 <p style="color: #666; font-size: 0.95em; margin-bottom: 30px; line-height: 1.6;">
-  I have <strong>40+ patent filings</strong>, including <strong>20 granted</strong> to date, spanning <strong>Recommendation Systems</strong>, <strong>GenAI/NLP</strong>, <strong>Spatio-Temporal Mining</strong>, and <strong>Bioinformatics</strong>. I am the <strong>first inventor</strong> on <strong>17</strong> of these <strong>filings</strong>.
+  I have 40+ patent filings, including 20 granted to date, spanning <strong>Recommendation Systems</strong>, <strong>GenAI/NLP</strong>, <strong>Spatio-Temporal Mining</strong>, and <strong>Bioinformatics</strong>. I am the first inventor on 17 of these filings.
 </p>
 
 <div class="section-header">
