@@ -9,13 +9,17 @@ classes: wide
 <style>
   /* --- 容器：紧凑的双行卡片 --- */
   .pub-item {
-    padding: 10px 15px; /* 减小内边距 */
-    margin-bottom: 12px; /* 减小卡片间距 */
+    padding: 10px 15px;
+    margin-bottom: 10px; /* 进一步减小间距 */
     background: #fff;
     border: 1px solid #eee;
     border-radius: 4px;
-    border-left-width: 4px; /* 左侧色条宽度 */
+    border-left-width: 4px; 
     transition: all 0.2s;
+    
+    /* [优化核心]：基准字号微缩，行高收紧 */
+    font-size: 0.95rem; 
+    line-height: 1.5;   
   }
   .pub-item:hover {
     background: #fafafa;
@@ -24,40 +28,43 @@ classes: wide
   }
 
   /* --- 左侧色条等级定义 --- */
-  .level-a { border-left-color: #e53e3e; } /* CCF-A / Top / Q1 */
-  .level-b { border-left-color: #3182ce; } /* CCF-B / Q2 */
-  .level-c { border-left-color: #a0aec0; } /* Preprint / Others */
+  .level-a { border-left-color: #e53e3e; } 
+  .level-b { border-left-color: #3182ce; } 
+  .level-c { border-left-color: #a0aec0; } 
 
   /* --- 第一行：标题 --- */
   .pub-title {
     display: block;
-    font-size: 1.05em;
+    /* [优化]：不再过度放大，靠粗体区分 */
+    font-size: 1em; 
     font-weight: 700;
     color: #2d3748;
     line-height: 1.3;
-    margin-bottom: 6px; /* 标题和下一行的间距 */
+    margin-bottom: 4px; 
   }
 
   /* --- 第二行：元数据容器 --- */
   .pub-meta {
     display: flex;
-    flex-wrap: wrap; /* 允许小屏换行 */
+    flex-wrap: wrap; 
     align-items: center;
-    font-size: 0.9em;
-    color: #555;
-    line-height: 1.5;
+    /* [优化]：辅助信息再小一号，拉开层次 */
+    font-size: 0.9em; 
+    color: #666;
   }
 
-  /* 会议标签 (Venue Tag) */
+  /* 会议标签 */
   .venue-tag {
     font-weight: 700;
-    padding: 1px 6px;
+    padding: 0px 5px; /* 稍微减小内边距 */
     border-radius: 3px;
     margin-right: 8px;
-    font-size: 0.85em;
-    letter-spacing: 0.5px;
+    font-size: 0.85em; /* 标签字体更精致 */
+    letter-spacing: 0.3px;
+    height: 18px;      /* 固定高度对齐 */
+    line-height: 16px;
+    display: inline-block;
   }
-  /* Tag 颜色 */
   .tag-red { background: #fff5f5; color: #c53030; border: 1px solid #feb2b2; }
   .tag-blue { background: #ebf8ff; color: #2b6cb0; border: 1px solid #bee3f8; }
   .tag-gray { background: #f7fafc; color: #4a5568; border: 1px solid #cbd5e0; }
@@ -65,7 +72,7 @@ classes: wide
   /* 作者文字 */
   .pub-authors {
     margin-right: 8px;
-    color: #4a5568;
+    color: #555;
   }
   .pub-authors strong { color: #1a202c; font-weight: 700; }
 
@@ -82,7 +89,7 @@ classes: wide
   .year-header {
     font-size: 1.2em;
     font-weight: 800;
-    margin: 30px 0 10px 0;
+    margin: 25px 0 10px 0;
     padding-bottom: 5px;
     border-bottom: 2px solid #edf2f7;
     color: #2d3748;
