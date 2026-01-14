@@ -18,26 +18,27 @@ classes: wide
     background: #f8f9fa;
     border: 1px solid #e9ecef;
     border-radius: 8px;
-    padding: 15px;
+    padding: 12px; /* 稍微减小内边距 */
     text-align: center;
     transition: transform 0.2s;
   }
   .stat-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+  
+  /* [优化]：看板数字字号从 1.8em 收敛到 1.6em */
   .stat-num {
     display: block;
-    font-size: 1.8em;
+    font-size: 1.6em; 
     font-weight: 800;
     color: #2c3e50;
     line-height: 1.2;
   }
   .stat-label {
-    font-size: 0.85em;
+    font-size: 0.8em;
     color: #666;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-top: 5px;
   }
-  /* 重点数字颜色 */
   .hl-blue { color: #2980b9; }
   .hl-green { color: #27ae60; }
   .hl-purple { color: #8e44ad; }
@@ -46,13 +47,13 @@ classes: wide
   .section-header {
     display: flex;
     align-items: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
     border-bottom: 2px solid #f0f0f0;
   }
   .section-title {
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: 700;
     margin: 0;
     color: #333;
@@ -71,12 +72,16 @@ classes: wide
   .pat-card {
     display: flex;
     align-items: flex-start;
-    padding: 12px 15px;
-    margin-bottom: 12px;
+    padding: 10px 15px;
+    margin-bottom: 10px; /* 间距减小 */
     background: #fff;
     border: 1px solid #eee;
     border-radius: 6px;
     transition: background 0.2s;
+
+    /* [优化核心]：基准字号微缩 */
+    font-size: 0.95rem; 
+    line-height: 1.5;
   }
   .pat-card:hover {
     background: #fafafa;
@@ -85,16 +90,14 @@ classes: wide
 
   /* 左侧：国旗图标 */
   .pat-flag {
-    flex: 0 0 35px;
-    font-size: 1.5em;
+    flex: 0 0 32px; /* 略微收窄 */
+    font-size: 1.4em; /* 略微减小图标 */
     line-height: 1.3;
     padding-top: 2px; 
   }
 
   /* 右侧：内容 */
-  .pat-content {
-    flex: 1;
-  }
+  .pat-content { flex: 1; }
 
   /* 第一行：标题 + Badge */
   .pat-header {
@@ -107,13 +110,13 @@ classes: wide
   .pat-title {
     font-weight: 700;
     color: #2c3e50;
-    font-size: 1.05em;
+    font-size: 1em; /* 标题不再额外放大 */
   }
 
   /* 统一徽章样式 (Pure CSS) */
   .css-badge {
     display: inline-block;
-    font-size: 0.75em;
+    font-size: 0.75em; /* 保持小巧 */
     font-weight: 600;
     padding: 1px 6px;
     border-radius: 4px;
@@ -125,9 +128,8 @@ classes: wide
 
   /* 第二行：元数据 */
   .pat-meta {
-    font-size: 0.9em;
+    font-size: 0.9em; /* 辅助文字缩小 */
     color: #666;
-    line-height: 1.5;
   }
   .pat-id {
     font-family: monospace;
@@ -137,10 +139,10 @@ classes: wide
     padding: 0 4px;
     border-radius: 3px;
     margin-right: 8px;
+    font-size: 0.9em;
   }
   .pat-author strong { color: #333; }
 
-  /* 移动端适配 */
   @media (max-width: 600px) {
     .stat-grid { gap: 10px; }
     .stat-num { font-size: 1.4em; }
