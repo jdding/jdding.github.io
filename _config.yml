@@ -1,15 +1,14 @@
-# _config.yml
-
-# ---------------------------------------------------------
+# Jekyll site configuration
+# - 主题：Minimal Mistakes（remote_theme）
+# - 部署：GitHub Pages
 remote_theme: mmistakes/minimal-mistakes
-# ---------------------------------------------------------
 
-# 你的个人信息设置
+# Site metadata
 title: "Trustworthy & Scalable AI Systems"
 description: "Principal Algorithm Expert at Huawei. Focusing on RecSys, Causal Inference, and LLM Agents."
-url: "https://jdding.github.io" # 必须写对你的网址，不要带最后的斜杠
+url: "https://jdding.github.io" # 站点根地址（不带末尾斜杠）
 
-locale: "en-US" # 建议加上这行，防止字符编码报错
+locale: "en-US" # 站点语言/区域（用于主题与 SEO 元数据）
 author:
   name: "Jiandong Ding (丁建栋)"
   avatar: "/assets/images/Profile.png"
@@ -19,9 +18,9 @@ author:
     - label: "Publications"
       icon: "fas fa-fw fa-graduation-cap"
       url: "/publications"
-    - label: "Patents"                # 修正1：由 title 改为 label
+    - label: "Patents"
       icon: "fas fa-fw fa-file-alt"
-      url: "/patents"                 # 修正2：由 “...” 改为 "..." (英文直引号)
+      url: "/patents"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/jiandong-ding-60498833/"
@@ -29,26 +28,19 @@ author:
       url: "mailto:jdding@fudan.edu.cn"
       icon: "fas fa-fw fa-envelope-square"
 
-# Open Graph (社交媒体分享卡片设置)
-og_image: "/assets/images/favicon.jpg" # 你头像的文件名
+# Open Graph（社交媒体分享卡片）
+og_image: "/assets/images/favicon.jpg"
 
-# 插件支持（建议加上，确保功能正常）
+# Plugins（与 `Gemfile` 保持一致）
 plugins:
   - jekyll-include-cache
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-sitemap   # <--- 关键是这一行，加上它！
+  - jekyll-sitemap
 
-# GA 分析数据
+# Analytics
 analytics:
   provider: "google-gtag" # 新版 GA 都是 google-gtag
   google:
     tracking_id: "G-Z0P3522G21"
     anonymize_ip: false
-
-#    - label: "Google Scholar"
-#      icon: "fas fa-fw fa-file-alt"
-#      url: "https://scholar.google.com/citations?hl=zh-CN&user=5-e7wi4AAAAJ&view_op=list_works&sortby=pubdate"
-
-
-

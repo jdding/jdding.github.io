@@ -7,9 +7,9 @@ classes: wide
 ---
 
 <style>
-  /* --- 极简单行样式 --- */
+  /* --- 列表样式（与 publications.md 保持一致的命名/风格） --- */
   .pub-row {
-    margin-bottom: 12px; /* 减小行间距，更紧凑 */
+    margin-bottom: 12px; /* 行间距（更紧凑） */
     line-height: 1.6;
     font-size: 0.95em;
     color: #444;
@@ -41,14 +41,14 @@ classes: wide
     font-weight: 300; 
   }
    
-  /* 徽章图片：调小一点，防止撑大行高 */
+  /* 徽章图片：限制高度，避免撑大行高 */
   .badge-img {
     vertical-align: text-bottom;
     height: 16px; 
   }
 </style>
 
-My IP portfolio includes **40+ patent filings**, with **20 granted** to date. These innovations span **Recommendation Systems**, **GenAI/NLP**, **Spatio-Temporal Mining**, and **Bioinformatics**. Notably, I am the **First Inventor** on **17** of these applications.
+I have **40+ patent filings**, including **20 granted** to date, spanning **Recommendation Systems**, **GenAI/NLP**, **Spatio-Temporal Mining**, and **Bioinformatics**. I am the **first inventor** on **17** of these **filings**.
 
 ### 🏆 Selected Granted Patents
 

@@ -36,7 +36,7 @@ classes: wide
   /* 徽章图片微调：垂直居中 */
   .badge-img {
     vertical-align: middle;
-    height: 20px; /* 限制高度，防止把行高撑大 */
+    height: 20px; /* 限制高度，避免撑大行高 */
     margin-bottom: 2px;
   }
 

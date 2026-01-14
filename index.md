@@ -6,11 +6,9 @@ classes: wide
 ---
 
 <style>
-  /* 隐藏页面内部的大标题，只保留浏览器标签页标题 */
+  /* 隐藏页面内标题（保留浏览器标签页标题） */
   .page__title { display: none; }
-</style>
-
-<style>
+  
   /* --- 核心卡片容器 --- */
   .paper-card {
     display: flex;
@@ -28,7 +26,7 @@ classes: wide
   .paper-img {
     flex: 0 0 35%; /* 固定宽度占比 */
     max-width: 380px; 
-    /* 如果某篇论文没图，直接在 HTML div 里加 style="display:none" 即可 */
+    /* 如某篇论文无图，可在对应 div 上加 style="display:none" */
   }
   
   .paper-img img {
@@ -87,10 +85,9 @@ Currently, I focus on building **Next-Generation Recommender Systems** driven by
 ## 🔥 News
 
 * **[Feb 2026]** 🎉 Paper *"Mitigating Popularity Bias in Recommendation"* accepted by **ACM TOIS**.
-* **[Jan 2026]** 🎉 Paper *"Hierarchical and Preference-Aware Generative Recommendations"* accepted by **TheWebConf (WWW) 2026**.
-* **[Nov 2025]** 🚀 Two papers accepted! *"RPE4Rec"* by **WSDM 2026**, and *"Invariant Feature Learning"* by **AAAI 2026**.
-* **[Dec 2024]** Paper *"BIS: NL2SQL Service Evaluation Benchmark"* accepted by **ICSOC 2024**.
-* **[Aug 2024]** Paper on Low-rank Compression for CTR prediction accepted by **KDD 2024**.
+* **[Jan 2026]** 🚀 Paper *"Hierarchical and Preference-Aware Generative Recommendations"* accepted by **TheWebConf (WWW) 2026**.
+* **[Nov 2025]** Two papers accepted! *"RPE4Rec"* by **WSDM 2026**, and *"Invariant Feature Learning"* by **AAAI 2026**.
+
 
 ---
 
