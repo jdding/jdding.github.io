@@ -148,8 +148,6 @@ classes: wide
   }
 </style>
 
-## Patents & Innovations
-
 <div class="stat-grid">
   <div class="stat-card">
     <span class="stat-num hl-blue">40+</span>
