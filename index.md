@@ -77,18 +77,17 @@ I am a **Principal Algorithm Expert** at **Huawei Technologies**, bridging the g
 
 My research philosophy is summarized as **"From Biological Sequences to User Behaviors"**. I apply deep representation learning to decipher underlying patterns in data—from genomic sequences in my early career to billion-scale user behavior logs in commercial recommendation systems today.
 
-Currently, I focus on building **Trustworthy & Scalable AI Systems**, with specific interests in:
-* **Trustworthy RecSys:** Causal Inference, Debiasing, and Fairness.
-* **System Efficiency:** Retrieval Architecture, Model Compression, and On-device AI.
-* **LLM & Agents:** Large Language Models for BI and Data Agents.
-* **Data-Centric AI:** Weak Supervision, Data Programming, and Automated Labeling.
+Currently, I focus on building **Next-Generation Recommender Systems** driven by Generative AI, with specific interests in:
+* **Generative RecSys:** LLM-driven Recommendation, Sequential Modeling, and User Representation.
+* **Trustworthy AI:** Causal Inference, Unbiased Learning, and Fairness in Ranking.
+* **System Efficiency:** Edge-Cloud Collaboration, Retrieval Architecture, and Model Compression.
 
 ---
 
 ## 🔥 News
 
-<!-- * **[Feb 2026]** 🎉 Paper *"Mitigating Popularity Bias in Recommendation"* accepted by **ACM TOIS**. -->
-* **[Jan 2026]** 🎉 Paper *"Hierarchical and Preference-Aware Generative Recommendations"* accepted by **TheWebConf(WWW) 2026**.
+* **[Feb 2026]** 🎉 Paper *"Mitigating Popularity Bias in Recommendation"* accepted by **ACM TOIS**.
+* **[Jan 2026]** 🎉 Paper *"Hierarchical and Preference-Aware Generative Recommendations"* accepted by **TheWebConf (WWW) 2026**.
 * **[Nov 2025]** 🚀 Two papers accepted! *"RPE4Rec"* by **WSDM 2026**, and *"Invariant Feature Learning"* by **AAAI 2026**.
 * **[Dec 2024]** Paper *"BIS: NL2SQL Service Evaluation Benchmark"* accepted by **ICSOC 2024**.
 * **[Aug 2024]** Paper on Low-rank Compression for CTR prediction accepted by **KDD 2024**.
@@ -97,19 +96,19 @@ Currently, I focus on building **Trustworthy & Scalable AI Systems**, with speci
 
 ## 🎯 Research Highlights
 
-My current research focuses on four core challenges: **Trustworthiness**, **Efficiency**, **LLM Agents**, and **Data Quality**.
+My current research focuses on three core pillars: **Generative & Trustworthy RecSys**, **Extreme Efficiency**, and **LLM Agents**.
 
-### 1. Trustworthy & Unbiased Recommendation
+### 1. Next-Gen Recommendation: Generative & Trustworthy
 
 <div class="paper-card">
   <div class="paper-img"> 
-    <img src="/assets/images/TOIS2026.png" alt="TOIS Framework" loading="lazy">
+    <img src="/assets/images/WWW2026.png" alt="WWW Framework" loading="lazy">
   </div>
   <div class="paper-content">
-    <span class="paper-title">[TOIS 2026] Mitigating Popularity Bias with Global Listwise Learning</span>
-    <span class="hl-tag tag-prob">Problem</span> Recommender systems often trap users in "echo chambers" or confuse popularity with genuine interest.
+    <span class="paper-title">[WWW 2026] Generative Recs: Hierarchical & Preference-Aware</span>
+    <span class="hl-tag tag-prob">Problem</span> Existing "flat-sequence" generative models overlook the hierarchical structure of user sessions and introduce noise in long histories.
     <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> We proposed a <strong>Global Listwise Learning</strong> framework with progressive bi-weighting. Unlike pointwise methods, it optimizes the entire ranking list to balance long-tail exposure without sacrificing user satisfaction.
+    <span class="hl-tag tag-sol">Breakthrough</span> We proposed <strong>HPGR</strong>, a two-stage generative framework. It combines structure-aware pre-training with preference-guided sparse attention to capture the true hierarchy of user interests, achieving SOTA performance.
   </div>
 </div>
 
@@ -149,7 +148,7 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
   </div>
 </div>
 
-### 3. Large Models: Systems & Agents
+### 3. LLM Agents & Data Intelligence
 
 <div class="paper-card">
   <div class="paper-img"> 
@@ -163,38 +162,15 @@ My current research focuses on four core challenges: **Trustworthiness**, **Effi
 
 <div class="paper-card">
   <div class="paper-img"> 
-    <img src="/assets/images/PD2024.png" alt="PD Framework" loading="lazy">
-  </div>
-  <div class="paper-content">
-    <span class="paper-title">[arXiv 2024] P/D-Serve: Serving Disaggregated LLMs at Scale</span>
-    <span class="hl-tag tag-sol">System Layer</span> We proposed a disaggregated serving architecture that optimizes KV-cache management and scheduling, significantly improving throughput for large-scale deployment.
-  </div>
-</div>
-
-### 4. Data-Centric AI: Weak Supervision & Augmentation
-
-<div class="paper-card">
-  <div class="paper-img"> 
     <img src="/assets/images/NIPS2021.png" alt="DPSSL Framework" loading="lazy">
   </div>
   <div class="paper-content">
-    <span class="paper-title">[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning via Data Programming</span>
-    <span class="hl-tag tag-prob">Problem</span> Deep learning performance heavily relies on massive labeled data, which is expensive and slow to obtain.
+    <span class="paper-title">[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning</span>
+    <span class="hl-tag tag-prob">Problem</span> Deep learning performance heavily relies on massive labeled data, which is expensive to obtain.
     <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> We introduced a <strong>Data Programming (DP)</strong> scheme into semi-supervised learning. It automatically generates probabilistic labels for unlabeled data, achieving SOTA performance even with only <strong>40 labeled samples</strong> per class.
+    <span class="hl-tag tag-sol">Breakthrough</span> We introduced a <strong>Data Programming (DP)</strong> scheme that automatically generates probabilistic labels for unlabeled data, achieving SOTA performance with minimal supervision (only 40 labeled samples).
   </div>
 </div>
-
-<div class="paper-card">
-  <div class="paper-img"> 
-    <img src="/assets/images/EMNLP2021.png" alt="SSP Framework" loading="lazy">
-  </div>
-  <div class="paper-content">
-    <span class="paper-title">[EMNLP 2021] Weakly-supervised Text Classification via Keyword Graph</span>
-    <span class="hl-tag tag-method">Methodology</span> Instead of manual labeling, we utilize <strong>Keyword Graphs</strong> to propagate weak supervision signals. By modeling the correlation among keywords with GNNs, we can generate high-quality pseudo-labels for massive unlabeled corpora automatically.
-  </div>
-</div>
-
 
 ### 📫 Get in Touch
 
