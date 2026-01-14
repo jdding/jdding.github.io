@@ -166,7 +166,7 @@ classes: wide
 </div>
 
 <p style="color: #666; font-size: 0.95em; margin-bottom: 30px; line-height: 1.6;">
-  My IP portfolio spans <strong>Recommendation Systems</strong>, <strong>GenAI/NLP</strong>, <strong>Spatio-Temporal Mining</strong>, and <strong>Bioinformatics</strong>. Below are selected highlights.
+  I have **40+ patent filings**, including **20 granted** to date, spanning **Recommendation Systems**, **GenAI/NLP**, **Spatio-Temporal Mining**, and **Bioinformatics**. I am the **first inventor** on **17** of these **filings**.
 </p>
 
 <div class="section-header">
