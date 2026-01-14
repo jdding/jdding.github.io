@@ -164,7 +164,7 @@ My IP portfolio includes **40+ patent filings**, with **20 granted** to date. Th
   <span class="pub-authors"><strong>Jiandong Ding</strong>, Yanan Zhang, et al.</span>
 </div>
 
-### ⏳ Selected Pending Applications (7)
+### ⏳ Selected Pending Applications
 
 <div class="pub-row">
   <span class="pub-title">Live Broadcast Interaction Method.</span>
