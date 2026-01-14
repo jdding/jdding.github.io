@@ -48,8 +48,6 @@ classes: wide
   }
 </style>
 
-## Patents & Innovations
-
 My IP portfolio includes **40+ patent filings**, with **20 granted** to date. These innovations span **Recommendation Systems**, **GenAI/NLP**, **Spatio-Temporal Mining**, and **Bioinformatics**. Notably, I am the **First Inventor** on **17** of these applications.
 
 ### 🏆 Selected Granted Patents
