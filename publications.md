@@ -3,7 +3,6 @@ layout: single
 author_profile: true
 title: "Publications"
 permalink: /publications
-
 classes: wide
 ---
 
@@ -59,6 +58,15 @@ classes: wide
   <img src="https://img.shields.io/badge/CCF--A-red" class="badge-img" alt="CCF-A">
   <span class="meta-sep">|</span>
   <span class="pub-authors">Tianyu Zhu, <strong>Jiandong Ding</strong>, et al.</span>
+  <span class="meta-sep">|</span>
+</div>
+
+<div class="pub-row">
+  <span class="pub-title">Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations.</span>
+  <span class="pub-venue">TheWebConf (WWW)</span>
+  <img src="https://img.shields.io/badge/CCF--A-red" class="badge-img" alt="CCF-A">
+  <span class="meta-sep">|</span>
+  <span class="pub-authors">Zerui Chen, ..., <strong>Jiandong Ding</strong>, et al.</span>
   <span class="meta-sep">|</span>
 </div>
 
