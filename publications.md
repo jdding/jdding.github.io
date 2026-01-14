@@ -24,8 +24,8 @@ classes: wide
   }
 
   /* --- 左侧色条等级定义 --- */
-  .level-a { border-left-color: #e53e3e; } /* CCF-A / Top */
-  .level-b { border-left-color: #3182ce; } /* CCF-B */
+  .level-a { border-left-color: #e53e3e; } /* CCF-A / Top / Q1 */
+  .level-b { border-left-color: #3182ce; } /* CCF-B / Q2 */
   .level-c { border-left-color: #a0aec0; } /* Preprint / Others */
 
   /* --- 第一行：标题 --- */
@@ -259,5 +259,23 @@ classes: wide
     <span class="venue-tag tag-blue">BIBM</span>
     <span class="pub-authors"><strong>Jiandong Ding</strong>, et al.</span>
     <a href="http://ieeexplore.ieee.org/document/6120415/" class="pub-link">[PDF]</a>
+  </div>
+</div>
+
+<div class="pub-item level-b">
+  <span class="pub-title">miRFam: an effective automatic miRNA classification method.</span>
+  <div class="pub-meta">
+    <span class="venue-tag tag-blue">BMC Bio</span>
+    <span class="pub-authors"><strong>Jiandong Ding</strong>, et al.</span>
+    <a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-216" class="pub-link">[PDF]</a>
+  </div>
+</div>
+
+<div class="pub-item level-b">
+  <span class="pub-title">MiRenSVM: towards better prediction of microRNA precursors.</span>
+  <div class="pub-meta">
+    <span class="venue-tag tag-blue">BMC Bio</span>
+    <span class="pub-authors"><strong>Jiandong Ding</strong>, et al.</span>
+    <a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-11-S11-S11" class="pub-link">[PDF]</a>
   </div>
 </div>
