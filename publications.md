@@ -299,7 +299,7 @@ classes: wide
 <div class="pub-item level-a">
   <span class="pub-title">Finding MicroRNA Targets in Plants: Current Status and Perspectives.</span>
   <div class="pub-meta">
-    <span class="venue-tag tag-red">GPB (Q1)</span>
+    <span class="venue-tag tag-red">GPB</span>
     <span class="pub-authors"><strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://academic.oup.com/gpb/article/10/5/264/7221796" class="pub-link">[PDF]</a>
   </div>
