@@ -22,6 +22,9 @@ author:
     - label: "Patents"
       icon: "fas fa-fw fa-file-alt"
       url: "/patents"
+    - label: "Collaborations"
+      icon: "fas fa-fw fa-network-wired"
+      url: "/collaborations"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/jiandong-ding-60498833/"
@@ -55,7 +58,7 @@ social:
   links:
     - https://www.linkedin.com/in/jiandong-ding-60498833/
     - https://github.com/jdding
-    - https://scholar.google.com/citations?user=jdding
+    - https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=5-e7wi4AAAAJ
     
 # 额外的Jekyll配置
 markdown: kramdown
