@@ -302,6 +302,42 @@ classes: wide
       <p><strong>Period:</strong> Ongoing collaboration</p>
     </div>
   </div>
+  
+  <!-- Hong Kong Baptist University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/hong-kong-baptist-university-logo.png" alt="Hong Kong Baptist University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Hong Kong Baptist University</h3>
+        <p class="institution-location">Hong Kong SAR</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">International</span>
+      </div>
+      <p><strong>Focus:</strong> Applied AI Research</p>
+      <p><strong>Period:</strong> Ongoing collaboration</p>
+    </div>
+  </div>
+  
+  <!-- University of Houston -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/university-of-houston-logo.png" alt="University of Houston Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">University of Houston</h3>
+        <p class="institution-location">Houston, TX, USA</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">International</span>
+      </div>
+      <p><strong>Focus:</strong> Advanced AI Research</p>
+      <p><strong>Period:</strong> Ongoing collaboration</p>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -379,6 +415,22 @@ document.addEventListener('DOMContentLoaded', function() {
             focus: "AI and Computer Science Research",
             period: "Ongoing collaboration",
             type: "Academic"
+        },
+        {
+            name: "Hong Kong Baptist University",
+            location: "Hong Kong SAR",
+            coords: [22.3361, 114.1867],
+            focus: "Applied AI Research",
+            period: "Ongoing collaboration",
+            type: "International"
+        },
+        {
+            name: "University of Houston",
+            location: "Houston, TX, USA",
+            coords: [29.7209, -95.3428],
+            focus: "Advanced AI Research",
+            period: "Ongoing collaboration",
+            type: "International"
         }
     ];
 
