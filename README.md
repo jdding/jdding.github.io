@@ -4,7 +4,7 @@
 
 ## 项目简介
 
-这是丁建栋（Jiandong Ding）的个人学术网站，展示研究成果、论文发表和专利信息。网站托管在 GitHub Pages 上，使用 Jekyll 静态网站生成器和 Minimal Mistakes 主题。
+这是丁建栋（Jiandong Ding）的个人学术网站，展示研究成果、论文发表、专利信息以及全球研究合作网络。网站托管在 GitHub Pages 上，使用 Jekyll 静态网站生成器和 Minimal Mistakes 主题，特别强化了GEO（地理/机构曝光优化）功能。
 
 ## 本地预览（推荐）
 
@@ -37,6 +37,7 @@ jdding.github.io/
 ├── index.md             # 主页内容
 ├── publications.md      # 论文发表页面
 ├── patents.md           # 专利信息页面
+├── collaborations.md    # 研究合作页面（含互动地图）
 └── SEO/                 # SEO 相关文件
 ```
 
@@ -60,11 +61,19 @@ jdding.github.io/
 - **主页**：编辑 `index.md`
 - **论文**：编辑 `publications.md`
 - **专利**：编辑 `patents.md`
+- **合作**：编辑 `collaborations.md`（包含互动地图功能）
 - **SEO 校验文件**：放在 `SEO/`（例如 Google/Bing 站点验证）
 
 ## 版权与许可
 
 除非另有说明，本仓库内容（文本、图片等）版权归作者所有。
+
+## 功能特性
+
+- **GEO优化**：通过地理和机构曝光优化提升学术影响力
+- **全球合作地图**：互动式地图展示全球研究合作伙伴
+- **合作状态追踪**：清晰标识当前合作与历史合作机构
+- **响应式设计**：适配各种设备尺寸的最佳浏览体验
 
 ## 联系方式
 
