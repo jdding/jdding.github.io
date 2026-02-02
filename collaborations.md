@@ -58,6 +58,9 @@ classes: wide
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   
   .institution-card:hover {
@@ -69,6 +72,20 @@ classes: wide
     background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
     color: white;
     padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .institution-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+  .institution-text {
+    flex: 1;
   }
   
   .institution-name {
@@ -85,6 +102,9 @@ classes: wide
   
   .institution-content {
     padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
   
   .institution-details {
@@ -178,34 +198,14 @@ classes: wide
 </div>
 
 <div class="institution-grid">
-  <!-- 机构卡片模板 -->
-  <div class="institution-card">
-    <div class="institution-header">
-      <h3 class="institution-name">{{INSTITUTION_NAME}}</h3>
-      <p class="institution-location">{{LOCATION}}</p>
-    </div>
-    <div class="institution-content">
-      <div class="institution-details">
-        <span class="publication-count">{{PAPER_COUNT}} papers</span>
-        <span class="collaboration-type">{{COLLABORATION_TYPE}}</span>
-      </div>
-      <p><strong>Focus:</strong> {{RESEARCH_FOCUS}}</p>
-      <p><strong>Period:</strong> {{COLLABORATION_PERIOD}}</p>
-      <div class="collaboration-highlights">
-        <p><strong>Key Achievements:</strong></p>
-        <ul>
-          <li>{{ACHIEVEMENT_1}}</li>
-          <li>{{ACHIEVEMENT_2}}</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
   <!-- Fudan University -->
   <div class="institution-card">
     <div class="institution-header">
-      <h3 class="institution-name">Fudan University</h3>
-      <p class="institution-location">Shanghai, China</p>
+      <img src="/assets/images/fudan-university-logo.png" alt="Fudan University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Fudan University</h3>
+        <p class="institution-location">Shanghai, China</p>
+      </div>
     </div>
     <div class="institution-content">
       <div class="institution-details">
@@ -214,13 +214,6 @@ classes: wide
       </div>
       <p><strong>Focus:</strong> AI Research and Academic Collaboration</p>
       <p><strong>Period:</strong> Ongoing collaboration</p>
-      <div class="collaboration-highlights">
-        <p><strong>Key Achievements:</strong></p>
-        <ul>
-          <li>Leading joint research in trustworthy AI systems</li>
-          <li>Publication of 10 collaborative papers</li>
-        </ul>
-      </div>
     </div>
   </div>
   
@@ -228,8 +221,11 @@ classes: wide
   <!-- Tongji University -->
   <div class="institution-card">
     <div class="institution-header">
-      <h3 class="institution-name">Tongji University</h3>
-      <p class="institution-location">Shanghai, China</p>
+      <img src="/assets/images/tongji-university-logo.png" alt="Tongji University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Tongji University</h3>
+        <p class="institution-location">Shanghai, China</p>
+      </div>
     </div>
     <div class="institution-content">
       <div class="institution-details">
@@ -238,21 +234,17 @@ classes: wide
       </div>
       <p><strong>Focus:</strong> Computer Science and AI Research</p>
       <p><strong>Period:</strong> Ongoing</p>
-      <div class="collaboration-highlights">
-        <p><strong>Key Achievements:</strong></p>
-        <ul>
-          <li>Joint research in recommendation systems</li>
-          <li>Publication of 6 collaborative papers</li>
-        </ul>
-      </div>
     </div>
   </div>
   
   <!-- Huawei -->
   <div class="institution-card">
     <div class="institution-header">
-      <h3 class="institution-name">Huawei Technologies</h3>
-      <p class="institution-location">Shenzhen, China</p>
+      <img src="/assets/images/huawei-logo.png" alt="Huawei Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Huawei Technologies</h3>
+        <p class="institution-location">Shenzhen, China</p>
+      </div>
     </div>
     <div class="institution-content">
       <div class="institution-details">
@@ -261,21 +253,17 @@ classes: wide
       </div>
       <p><strong>Focus:</strong> Industrial-scale AI Systems</p>
       <p><strong>Period:</strong> Current (Principal Algorithm Expert)</p>
-      <div class="collaboration-highlights">
-        <p><strong>Key Achievements:</strong></p>
-        <ul>
-          <li>Next-generation recommender systems</li>
-          <li>Generative AI applications</li>
-        </ul>
-      </div>
     </div>
   </div>
   
   <!-- Alibaba Group -->
   <div class="institution-card">
     <div class="institution-header">
-      <h3 class="institution-name">Alibaba Group Inc.</h3>
-      <p class="institution-location">Hangzhou, China</p>
+      <img src="/assets/images/alibaba-logo.png" alt="Alibaba Group Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Alibaba Group Inc.</h3>
+        <p class="institution-location">Hangzhou, China</p>
+      </div>
     </div>
     <div class="institution-content">
       <div class="institution-details">
@@ -284,21 +272,17 @@ classes: wide
       </div>
       <p><strong>Focus:</strong> E-commerce AI and DAMO Academy</p>
       <p><strong>Period:</strong>Past collaboration</p>
-      <div class="collaboration-highlights">
-        <p><strong>Key Achievements:</strong></p>
-        <ul>
-          <li>Large-scale recommendation systems</li>
-          <li>AI research initiatives</li>
-        </ul>
-      </div>
     </div>
   </div>
   
   <!-- Duke University -->
   <div class="institution-card">
     <div class="institution-header">
-      <h3 class="institution-name">Duke University</h3>
-      <p class="institution-location">Durham, NC, USA</p>
+      <img src="/assets/images/duke-university-logo.png" alt="Duke University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Duke University</h3>
+        <p class="institution-location">Durham, NC, USA</p>
+      </div>
     </div>
     <div class="institution-content">
       <div class="institution-details">
@@ -307,13 +291,6 @@ classes: wide
       </div>
       <p><strong>Focus:</strong> Advanced AI Research</p>
       <p><strong>Period:</strong> Past collaboration</p>
-      <div class="collaboration-highlights">
-        <p><strong>Key Achievements:</strong></p>
-        <ul>
-          <li>Cross-institutional research projects</li>
-          <li>International academic exchange</li>
-        </ul>
-      </div>
     </div>
   </div>
   
@@ -321,8 +298,11 @@ classes: wide
   <!-- Tsinghua University -->
   <div class="institution-card">
     <div class="institution-header">
-      <h3 class="institution-name">Tsinghua University</h3>
-      <p class="institution-location">Beijing, China</p>
+      <img src="/assets/images/tsinghua-university-logo.png" alt="Tsinghua University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Tsinghua University</h3>
+        <p class="institution-location">Beijing, China</p>
+      </div>
     </div>
     <div class="institution-content">
       <div class="institution-details">
@@ -331,21 +311,17 @@ classes: wide
       </div>
       <p><strong>Focus:</strong> AI Research Collaboration</p>
       <p><strong>Period:</strong> Past collaboration</p>
-      <div class="collaboration-highlights">
-        <p><strong>Key Achievements:</strong></p>
-        <ul>
-          <li>Joint publication</li>
-          <li>Research methodology sharing</li>
-        </ul>
-      </div>
     </div>
   </div>
   
   <!-- Nanjing University -->
   <div class="institution-card">
     <div class="institution-header">
-      <h3 class="institution-name">Nanjing University</h3>
-      <p class="institution-location">Nanjing, China</p>
+      <img src="/assets/images/nanjing-university-logo.png" alt="Nanjing University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Nanjing University</h3>
+        <p class="institution-location">Nanjing, China</p>
+      </div>
     </div>
     <div class="institution-content">
       <div class="institution-details">
@@ -354,44 +330,17 @@ classes: wide
       </div>
       <p><strong>Focus:</strong> Computer Science Research</p>
       <p><strong>Period:</strong> Past collaboration</p>
-      <div class="collaboration-highlights">
-        <p><strong>Key Achievements:</strong></p>
-        <ul>
-          <li>Joint publication</li>
-          <li>Research collaboration</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Hong Kong Polytechnic University -->
-  <div class="institution-card">
-    <div class="institution-header">
-      <h3 class="institution-name">Hong Kong Polytechnic University</h3>
-      <p class="institution-location">Hong Kong SAR</p>
-    </div>
-    <div class="institution-content">
-      <div class="institution-details">
-        <span class="publication-count">1 paper</span>
-        <span class="collaboration-type">International</span>
-      </div>
-      <p><strong>Focus:</strong> Applied AI Research</p>
-      <p><strong>Period:</strong> Past collaboration</p>
-      <div class="collaboration-highlights">
-        <p><strong>Key Achievements:</strong></p>
-        <ul>
-          <li>International research collaboration</li>
-          <li>Joint publication</li>
-        </ul>
-      </div>
     </div>
   </div>
   
   <!-- Trinity College Dublin -->
   <div class="institution-card">
     <div class="institution-header">
-      <h3 class="institution-name">Trinity College Dublin</h3>
-      <p class="institution-location">Dublin, Ireland</p>
+      <img src="/assets/images/trinity-college-dublin-logo.png" alt="Trinity College Dublin Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Trinity College Dublin</h3>
+        <p class="institution-location">Dublin, Ireland</p>
+      </div>
     </div>
     <div class="institution-content">
       <div class="institution-details">
@@ -400,13 +349,6 @@ classes: wide
       </div>
       <p><strong>Focus:</strong> European AI Research Collaboration</p>
       <p><strong>Period:</strong> Past collaboration</p>
-      <div class="collaboration-highlights">
-        <p><strong>Key Achievements:</strong></p>
-        <ul>
-          <li>International academic exchange</li>
-          <li>Joint research publication</li>
-        </ul>
-      </div>
     </div>
   </div>
 </div>
