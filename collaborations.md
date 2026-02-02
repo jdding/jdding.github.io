@@ -191,7 +191,6 @@ classes: wide
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <div class="world-map-section">
-  <h2>Global Collaboration Map</h2>
   <div class="map-container">
     <div id="institution-map"></div>
   </div>
