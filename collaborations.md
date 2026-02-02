@@ -243,4 +243,40 @@ classes: wide
       <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
+  
+  <!-- Southeast University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/southeast-university-logo.png" alt="Southeast University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Southeast University</h3>
+        <p class="institution-location">Nanjing, China</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Academic</span>
+      </div>
+      <p><strong>Focus:</strong> AI Research Collaboration</p>
+      <p><strong>Period:</strong> Ongoing collaboration</p>
+    </div>
+  </div>
+  
+  <!-- Shanghai Jiao Tong University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/shanghai-jiao-tong-university-logo.png" alt="Shanghai Jiao Tong University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Shanghai Jiao Tong University</h3>
+        <p class="institution-location">Shanghai, China</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Academic</span>
+      </div>
+      <p><strong>Focus:</strong> AI and Computer Science Research</p>
+      <p><strong>Period:</strong> Ongoing collaboration</p>
+    </div>
+  </div>
 </div>
