@@ -1,7 +1,7 @@
 ---
 layout: single
 author_profile: true
-title: "Research Collaborations"
+title: "Collaborations"
 permalink: /collaborations
 classes: wide
 ---
@@ -157,7 +157,7 @@ classes: wide
   <div class="map-container">
     <div id="institution-map"></div>
   </div>
-  <p class="map-title">Click on markers to learn more about our global research partnerships</p>
+  <p class="map-title">Click on markers to learn more about our global partnerships</p>
 </div>
 
 <div class="institution-grid">
