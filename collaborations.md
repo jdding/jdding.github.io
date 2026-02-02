@@ -7,43 +7,7 @@ classes: wide
 ---
 
 <style>
-  /* 合作机构地图样式 */
-  .collab-header {
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 20px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
-    border-radius: 8px;
-  }
-  
-  .collab-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin: 20px 0;
-  }
-  
-  .stat-card {
-    background: white;
-    padding: 15px;
-    border-radius: 6px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-left: 4px solid #3498db;
-  }
-  
-  .stat-number {
-    font-size: 2em;
-    font-weight: bold;
-    color: #2c3e50;
-  }
-  
-  .stat-label {
-    font-size: 0.9em;
-    color: #7f8c8d;
-  }
-  
-  /* 机构网格 */
+  /* 机构网格 - 与其他页面保持一致的样式 */
   .institution-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -52,29 +16,28 @@ classes: wide
   }
   
   .institution-card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
     border: 1px solid #eee;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    border-radius: 6px;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 15px;
   }
   
   .institution-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    background: #fafafa;
+    border-color: #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
   }
   
   .institution-header {
-    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
-    color: white;
-    padding: 15px;
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
   }
   
   .institution-logo {
@@ -90,46 +53,49 @@ classes: wide
   
   .institution-name {
     margin: 0;
-    font-size: 1.2em;
-    font-weight: 600;
+    font-size: 1em;
+    font-weight: 700;
+    color: #2d3748;
+    line-height: 1.3;
   }
   
   .institution-location {
     margin: 5px 0 0 0;
     font-size: 0.9em;
-    opacity: 0.9;
+    color: #666;
   }
   
   .institution-content {
-    padding: 20px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    padding-top: 10px;
   }
   
   .institution-details {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.9em;
+    color: #666;
   }
   
   .publication-count {
     display: inline-block;
-    background: #e1f0fa;
-    color: #2980b9;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 0.9em;
+    background: #f8f9fa;
+    color: #4a5568;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    margin-right: 8px;
   }
   
   .collaboration-type {
     display: inline-block;
-    background: #f1c40f;
-    color: #7d6608;
-    padding: 3px 8px;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 0.8em;
-    margin-left: 10px;
+    background: #ebf8ff;
+    color: #2b6cb0;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    border: 1px solid #bee3f8;
   }
   
   /* 地图可视化预留区域 */
@@ -157,36 +123,8 @@ classes: wide
     .institution-grid {
       grid-template-columns: 1fr;
     }
-    
-    .collab-stats {
-      grid-template-columns: repeat(2, 1fr);
-    }
   }
 </style>
-
-<div class="collab-header">
-  <h1>Research Collaborations</h1>
-  <p>Global academic partnerships driving innovation in AI systems</p>
-  
-  <div class="collab-stats">
-    <div class="stat-card">
-      <div class="stat-number">9</div>
-      <div class="stat-label">Partner Institutions</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">27</div>
-      <div class="stat-label">Joint Publications</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">4</div>
-      <div class="stat-label">Countries/Regions</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">10+</div>
-      <div class="stat-label">Years of Collaboration</div>
-    </div>
-  </div>
-</div>
 
 <div class="world-map-section">
   <h2>Global Collaboration Map</h2>
@@ -209,15 +147,13 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">10 papers</span>
-        <span class="collaboration-type">Academic</span>
+        <span class="publication-count">Academic</span>
       </div>
       <p><strong>Focus:</strong> AI Research and Academic Collaboration</p>
       <p><strong>Period:</strong> Ongoing collaboration</p>
     </div>
   </div>
   
-  <!-- 请在此处添加其他机构信息 -->
   <!-- Tongji University -->
   <div class="institution-card">
     <div class="institution-header">
@@ -229,49 +165,10 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">6 papers</span>
-        <span class="collaboration-type">Academic</span>
+        <span class="publication-count">Academic</span>
       </div>
       <p><strong>Focus:</strong> Computer Science and AI Research</p>
       <p><strong>Period:</strong> Ongoing</p>
-    </div>
-  </div>
-  
-  <!-- Huawei -->
-  <div class="institution-card">
-    <div class="institution-header">
-      <img src="/assets/images/huawei-logo.png" alt="Huawei Logo" class="institution-logo" onerror="this.style.display='none';">
-      <div class="institution-text">
-        <h3 class="institution-name">Huawei Technologies</h3>
-        <p class="institution-location">Shenzhen, China</p>
-      </div>
-    </div>
-    <div class="institution-content">
-      <div class="institution-details">
-        <span class="publication-count">3 papers</span>
-        <span class="collaboration-type">Industry</span>
-      </div>
-      <p><strong>Focus:</strong> Industrial-scale AI Systems</p>
-      <p><strong>Period:</strong> Current (Principal Algorithm Expert)</p>
-    </div>
-  </div>
-  
-  <!-- Alibaba Group -->
-  <div class="institution-card">
-    <div class="institution-header">
-      <img src="/assets/images/alibaba-logo.png" alt="Alibaba Group Logo" class="institution-logo" onerror="this.style.display='none';">
-      <div class="institution-text">
-        <h3 class="institution-name">Alibaba Group Inc.</h3>
-        <p class="institution-location">Hangzhou, China</p>
-      </div>
-    </div>
-    <div class="institution-content">
-      <div class="institution-details">
-        <span class="publication-count">3 papers</span>
-        <span class="collaboration-type">Industry</span>
-      </div>
-      <p><strong>Focus:</strong> E-commerce AI and DAMO Academy</p>
-      <p><strong>Period:</strong>Past collaboration</p>
     </div>
   </div>
   
@@ -286,15 +183,13 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">2 papers</span>
-        <span class="collaboration-type">International</span>
+        <span class="publication-count">International</span>
       </div>
       <p><strong>Focus:</strong> Advanced AI Research</p>
       <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
   
-  <!-- Remaining institutions -->
   <!-- Tsinghua University -->
   <div class="institution-card">
     <div class="institution-header">
@@ -306,8 +201,7 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">1 paper</span>
-        <span class="collaboration-type">Academic</span>
+        <span class="publication-count">Academic</span>
       </div>
       <p><strong>Focus:</strong> AI Research Collaboration</p>
       <p><strong>Period:</strong> Past collaboration</p>
@@ -325,8 +219,7 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">1 paper</span>
-        <span class="collaboration-type">Academic</span>
+        <span class="publication-count">Academic</span>
       </div>
       <p><strong>Focus:</strong> Computer Science Research</p>
       <p><strong>Period:</strong> Past collaboration</p>
@@ -344,32 +237,10 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">1 paper</span>
-        <span class="collaboration-type">International</span>
+        <span class="publication-count">International</span>
       </div>
       <p><strong>Focus:</strong> European AI Research Collaboration</p>
       <p><strong>Period:</strong> Past collaboration</p>
     </div>
-  </div>
-</div>
-
-<div style="margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
-  <h3>Collaboration Impact</h3>
-  <p>These partnerships have enabled breakthrough research in trustworthy and scalable AI systems, 
-  advancing the state-of-the-art in recommendation systems, causal inference, and LLM agents.</p>
-  
-  <div class="impact-stats">
-    <p><strong>Research Areas Enhanced Through Collaboration:</strong></p>
-    <ul>
-      <li>Generative RecSys: LLM-driven Recommendation, Sequential Modeling, and User Representation</li>
-      <li>Trustworthy AI: Causal Inference, Unbiased Learning, and Fairness in Ranking</li>
-      <li>System Efficiency: Edge-Cloud Collaboration, Retrieval Architecture, and Model Compression</li>
-      <li>LLM Agents and Data Intelligence for business applications</li>
-    </ul>
-  </div>
-  
-  <div style="margin-top: 20px;">
-    <p><strong>Geographic Reach:</strong> Our collaborative research spans multiple continents, 
-    connecting leading institutions in Asia, North America, and Europe to drive innovation in AI systems.</p>
   </div>
 </div>
