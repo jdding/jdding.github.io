@@ -179,21 +179,39 @@ classes: wide
     </div>
   </div>
   
-  <!-- Tongji University -->
+  <!-- Nanjing University -->
   <div class="institution-card">
     <div class="institution-header">
-      <img src="/assets/images/tongji-university-logo.png" alt="Tongji University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <img src="/assets/images/nanjing-university-logo.png" alt="Nanjing University Logo" class="institution-logo" onerror="this.style.display='none';">
       <div class="institution-text">
-        <h3 class="institution-name">Tongji University</h3>
+        <h3 class="institution-name">Nanjing University</h3>
+        <p class="institution-location">Nanjing, China</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Current</span>
+      </div>
+      <p><strong>Focus:</strong> Computer Science Research</p>
+      <p><strong>Period:</strong> Ongoing collaboration</p>
+    </div>
+  </div>
+  
+  <!-- Shanghai Jiao Tong University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/shanghai-jiao-tong-university-logo.png" alt="Shanghai Jiao Tong University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Shanghai Jiao Tong University</h3>
         <p class="institution-location">Shanghai, China</p>
       </div>
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">Past</span>
+        <span class="publication-count">Current</span>
       </div>
-      <p><strong>Focus:</strong> Computer Science and AI Research</p>
-      <p><strong>Period:</strong> Past collaboration</p>
+      <p><strong>Focus:</strong> AI and Computer Science Research</p>
+      <p><strong>Period:</strong> Ongoing collaboration</p>
     </div>
   </div>
   
@@ -215,56 +233,20 @@ classes: wide
     </div>
   </div>
   
-  <!-- Tsinghua University -->
+  <!-- Hong Kong Baptist University -->
   <div class="institution-card">
     <div class="institution-header">
-      <img src="/assets/images/tsinghua-university-logo.png" alt="Tsinghua University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <img src="/assets/images/hong-kong-baptist-university-logo.png" alt="Hong Kong Baptist University Logo" class="institution-logo" onerror="this.style.display='none';">
       <div class="institution-text">
-        <h3 class="institution-name">Tsinghua University</h3>
-        <p class="institution-location">Beijing, China</p>
+        <h3 class="institution-name">Hong Kong Baptist University</h3>
+        <p class="institution-location">Hong Kong SAR</p>
       </div>
     </div>
     <div class="institution-content">
       <div class="institution-details">
         <span class="publication-count">Past</span>
       </div>
-      <p><strong>Focus:</strong> AI Research Collaboration</p>
-      <p><strong>Period:</strong> Past collaboration</p>
-    </div>
-  </div>
-  
-  <!-- Nanjing University -->
-  <div class="institution-card">
-    <div class="institution-header">
-      <img src="/assets/images/nanjing-university-logo.png" alt="Nanjing University Logo" class="institution-logo" onerror="this.style.display='none';">
-      <div class="institution-text">
-        <h3 class="institution-name">Nanjing University</h3>
-        <p class="institution-location">Nanjing, China</p>
-      </div>
-    </div>
-    <div class="institution-content">
-      <div class="institution-details">
-        <span class="publication-count">Current</span>
-      </div>
-      <p><strong>Focus:</strong> Computer Science Research</p>
-      <p><strong>Period:</strong> Ongoing collaboration</p>
-    </div>
-  </div>
-  
-  <!-- Trinity College Dublin -->
-  <div class="institution-card">
-    <div class="institution-header">
-      <img src="/assets/images/trinity-college-dublin-logo.png" alt="Trinity College Dublin Logo" class="institution-logo" onerror="this.style.display='none';">
-      <div class="institution-text">
-        <h3 class="institution-name">Trinity College Dublin</h3>
-        <p class="institution-location">Dublin, Ireland</p>
-      </div>
-    </div>
-    <div class="institution-content">
-      <div class="institution-details">
-        <span class="publication-count">Past</span>
-      </div>
-      <p><strong>Focus:</strong> European AI Research Collaboration</p>
+      <p><strong>Focus:</strong> Applied AI Research</p>
       <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
@@ -287,38 +269,56 @@ classes: wide
     </div>
   </div>
   
-  <!-- Shanghai Jiao Tong University -->
+  <!-- Trinity College Dublin -->
   <div class="institution-card">
     <div class="institution-header">
-      <img src="/assets/images/shanghai-jiao-tong-university-logo.png" alt="Shanghai Jiao Tong University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <img src="/assets/images/trinity-college-dublin-logo.png" alt="Trinity College Dublin Logo" class="institution-logo" onerror="this.style.display='none';">
       <div class="institution-text">
-        <h3 class="institution-name">Shanghai Jiao Tong University</h3>
-        <p class="institution-location">Shanghai, China</p>
-      </div>
-    </div>
-    <div class="institution-content">
-      <div class="institution-details">
-        <span class="publication-count">Current</span>
-      </div>
-      <p><strong>Focus:</strong> AI and Computer Science Research</p>
-      <p><strong>Period:</strong> Ongoing collaboration</p>
-    </div>
-  </div>
-  
-  <!-- Hong Kong Baptist University -->
-  <div class="institution-card">
-    <div class="institution-header">
-      <img src="/assets/images/hong-kong-baptist-university-logo.png" alt="Hong Kong Baptist University Logo" class="institution-logo" onerror="this.style.display='none';">
-      <div class="institution-text">
-        <h3 class="institution-name">Hong Kong Baptist University</h3>
-        <p class="institution-location">Hong Kong SAR</p>
+        <h3 class="institution-name">Trinity College Dublin</h3>
+        <p class="institution-location">Dublin, Ireland</p>
       </div>
     </div>
     <div class="institution-content">
       <div class="institution-details">
         <span class="publication-count">Past</span>
       </div>
-      <p><strong>Focus:</strong> Applied AI Research</p>
+      <p><strong>Focus:</strong> European AI Research Collaboration</p>
+      <p><strong>Period:</strong> Past collaboration</p>
+    </div>
+  </div>
+  
+  <!-- Tongji University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/tongji-university-logo.png" alt="Tongji University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Tongji University</h3>
+        <p class="institution-location">Shanghai, China</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Past</span>
+      </div>
+      <p><strong>Focus:</strong> Computer Science and AI Research</p>
+      <p><strong>Period:</strong> Past collaboration</p>
+    </div>
+  </div>
+  
+  <!-- Tsinghua University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/tsinghua-university-logo.png" alt="Tsinghua University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Tsinghua University</h3>
+        <p class="institution-location">Beijing, China</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Past</span>
+      </div>
+      <p><strong>Focus:</strong> AI Research Collaboration</p>
       <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
@@ -363,12 +363,20 @@ document.addEventListener('DOMContentLoaded', function() {
             type: "Current"
         },
         {
-            name: "Tongji University",
+            name: "Nanjing University",
+            location: "Nanjing, China",
+            coords: [32.0432, 118.7732],
+            focus: "Computer Science Research",
+            period: "Ongoing collaboration",
+            type: "Current"
+        },
+        {
+            name: "Shanghai Jiao Tong University",
             location: "Shanghai, China",
-            coords: [31.2785, 121.4997],
-            focus: "Computer Science and AI Research",
-            period: "Past collaboration",
-            type: "Past"
+            coords: [31.0225, 121.4622],
+            focus: "AI and Computer Science Research",
+            period: "Ongoing collaboration",
+            type: "Current"
         },
         {
             name: "Duke University",
@@ -379,26 +387,10 @@ document.addEventListener('DOMContentLoaded', function() {
             type: "Past"
         },
         {
-            name: "Tsinghua University",
-            location: "Beijing, China",
-            coords: [39.9994, 116.3282],
-            focus: "AI Research Collaboration",
-            period: "Past collaboration",
-            type: "Past"
-        },
-        {
-            name: "Nanjing University",
-            location: "Nanjing, China",
-            coords: [32.0432, 118.7732],
-            focus: "Computer Science Research",
-            period: "Ongoing collaboration",
-            type: "Current"
-        },
-        {
-            name: "Trinity College Dublin",
-            location: "Dublin, Ireland",
-            coords: [53.3438, -6.2545],
-            focus: "European AI Research Collaboration",
+            name: "Hong Kong Baptist University",
+            location: "Hong Kong SAR",
+            coords: [22.3361, 114.1867],
+            focus: "Applied AI Research",
             period: "Past collaboration",
             type: "Past"
         },
@@ -411,18 +403,26 @@ document.addEventListener('DOMContentLoaded', function() {
             type: "Past"
         },
         {
-            name: "Shanghai Jiao Tong University",
-            location: "Shanghai, China",
-            coords: [31.0225, 121.4622],
-            focus: "AI and Computer Science Research",
-            period: "Ongoing collaboration",
-            type: "Current"
+            name: "Trinity College Dublin",
+            location: "Dublin, Ireland",
+            coords: [53.3438, -6.2545],
+            focus: "European AI Research Collaboration",
+            period: "Past collaboration",
+            type: "Past"
         },
         {
-            name: "Hong Kong Baptist University",
-            location: "Hong Kong SAR",
-            coords: [22.3361, 114.1867],
-            focus: "Applied AI Research",
+            name: "Tongji University",
+            location: "Shanghai, China",
+            coords: [31.2785, 121.4997],
+            focus: "Computer Science and AI Research",
+            period: "Past collaboration",
+            type: "Past"
+        },
+        {
+            name: "Tsinghua University",
+            location: "Beijing, China",
+            coords: [39.9994, 116.3282],
+            focus: "AI Research Collaboration",
             period: "Past collaboration",
             type: "Past"
         },
