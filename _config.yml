@@ -17,6 +17,9 @@ author:
   bio: "Principal algorithm expert at **Huawei Technologies**."
   location: "Shanghai, China"
   links:
+    - label: "Home"
+      icon: "fas fa-fw fa-home"
+      url: "/"
     - label: "Publications"
       icon: "fas fa-fw fa-graduation-cap"
       url: "/publications"
