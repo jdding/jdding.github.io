@@ -44,7 +44,7 @@ My current research focuses on three core pillars: **Generative & Trustworthy Re
 
 <div class="paper-card">
   <div class="paper-img"> 
-    <img src="/assets/images/WWW2026.png" alt="WWW Framework" loading="lazy">
+    <img src="/assets/images/WWW2026.png" alt="[WWW 2026] Generative Recs: Hierarchical & Preference-Aware" loading="lazy">
   </div>
   <div class="paper-content">
     <span class="paper-title">[WWW 2026] Generative Recs: Hierarchical & Preference-Aware</span>
@@ -56,7 +56,7 @@ My current research focuses on three core pillars: **Generative & Trustworthy Re
 
 <div class="paper-card">
   <div class="paper-img"> 
-    <img src="/assets/images/AAAI2026.png" alt="AAAI Framework" loading="lazy">
+    <img src="/assets/images/AAAI2026.png" alt="[AAAI 2026] Causal Inference for Watch-time Prediction" loading="lazy">
   </div>
   <div class="paper-content">
     <span class="paper-title">[AAAI 2026] Causal Inference for Watch-time Prediction</span>
@@ -70,7 +70,7 @@ My current research focuses on three core pillars: **Generative & Trustworthy Re
 
 <div class="paper-card">
   <div class="paper-img"> 
-    <img src="/assets/images/WSDM2026.png" alt="WSDM Framework" loading="lazy">
+    <img src="/assets/images/WSDM2026.png" alt="[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval" loading="lazy">
   </div>
   <div class="paper-content">
     <span class="paper-title">[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval</span>
@@ -82,7 +82,7 @@ My current research focuses on three core pillars: **Generative & Trustworthy Re
 
 <div class="paper-card">
   <div class="paper-img"> 
-    <img src="/assets/images/KDD2024.png" alt="KDD Framework" loading="lazy">
+    <img src="/assets/images/KDD2024.png" alt="[KDD 2024] Low-Rank Compression for CTR Prediction" loading="lazy">
   </div>
   <div class="paper-content">
     <span class="paper-title">[KDD 2024] Low-Rank Compression for CTR Prediction</span>
@@ -94,7 +94,7 @@ My current research focuses on three core pillars: **Generative & Trustworthy Re
 
 <div class="paper-card">
   <div class="paper-img"> 
-    <img src="/assets/images/ICSOC2025.png" alt="ICSOC Framework" loading="lazy">
+    <img src="/assets/images/ICSOC2025.png" alt="[ICSOC 2025] NL2SQL Benchmark for Business Intelligence" loading="lazy">
   </div>
   <div class="paper-content">
     <span class="paper-title">[ICSOC 2025] NL2SQL Benchmark for Business Intelligence</span>
@@ -104,7 +104,7 @@ My current research focuses on three core pillars: **Generative & Trustworthy Re
 
 <div class="paper-card">
   <div class="paper-img"> 
-    <img src="/assets/images/NIPS2021.png" alt="DPSSL Framework" loading="lazy">
+    <img src="/assets/images/NIPS2021.png" alt="[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning" loading="lazy">
   </div>
   <div class="paper-content">
     <span class="paper-title">[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning</span>

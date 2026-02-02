@@ -6,26 +6,6 @@
 
 这是丁建栋（Jiandong Ding）的个人学术网站，展示研究成果、论文发表、专利信息以及全球研究合作网络。网站托管在 GitHub Pages 上，使用 Jekyll 静态网站生成器和 Minimal Mistakes 主题，特别强化了GEO（地理/机构曝光优化）功能。
 
-## 本地预览（推荐）
-
-本仓库使用 `remote_theme`，为了让本地预览尽量与 GitHub Pages 的构建环境一致，建议使用 Bundler。
-
-### 前置要求
-
-- Ruby（建议 2.7+）
-- Bundler
-
-### 安装与启动
-
-```bash
-bundle install
-bundle exec jekyll serve --livereload
-```
-
-浏览器访问 `http://localhost:4000`。
-
-> 说明：仓库已提供 `Gemfile`（使用 `github-pages` gem）以对齐 GitHub Pages 的依赖版本；如你使用的是系统 Ruby，可能需要先安装 Bundler：`gem install bundler`。
-
 ## 项目结构
 
 ```
@@ -67,13 +47,6 @@ jdding.github.io/
 ## 版权与许可
 
 除非另有说明，本仓库内容（文本、图片等）版权归作者所有。
-
-## 功能特性
-
-- **GEO优化**：通过地理和机构曝光优化提升学术影响力
-- **全球合作地图**：互动式地图展示全球研究合作伙伴
-- **合作状态追踪**：清晰标识当前合作与历史合作机构
-- **响应式设计**：适配各种设备尺寸的最佳浏览体验
 
 ## 联系方式
 

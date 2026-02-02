@@ -8,6 +8,7 @@ title: "Jiandong Ding (丁建栋) - Principal Algorithm Expert"
 description: "Principal Algorithm Expert at Huawei. Focusing on RecSys, Causal Inference, and LLM Agents."
 url: "https://jdding.github.io" # 站点根地址（不带末尾斜杠）
 github_username: jdding
+repository: "jdding/jdding.github.io" # 用于jekyll-seo-tag插件
 
 locale: "en-US" # 站点语言/区域（用于主题与 SEO 元数据）
 author:
