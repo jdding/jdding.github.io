@@ -1,7 +1,7 @@
 ---
 layout: single
 author_profile: true
-title: "Research Collaborations"
+title: "Collaborations"
 permalink: /collaborations
 classes: wide
 ---
