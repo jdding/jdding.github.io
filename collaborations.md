@@ -194,7 +194,6 @@ classes: wide
   <div class="map-container">
     <div id="institution-map"></div>
   </div>
-  <p class="map-title">Click on markers to learn more about our global partnerships</p>
 </div>
 
 <div class="institution-grid">
