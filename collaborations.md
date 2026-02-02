@@ -98,19 +98,25 @@ classes: wide
     border: 1px solid #bee3f8;
   }
   
-  /* 地图可视化预留区域 */
+  /* 地图可视化区域 */
   .world-map-section {
     margin: 40px 0;
     text-align: center;
   }
   
-  .map-placeholder {
-    background: #f8f9fa;
-    border: 2px dashed #dee2e6;
+  .map-container {
+    height: 500px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 20px;
     border-radius: 8px;
-    padding: 40px;
-    margin: 20px auto;
-    max-width: 800px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  #institution-map {
+    height: 100%;
+    width: 100%;
   }
   
   .map-title {
@@ -123,16 +129,33 @@ classes: wide
     .institution-grid {
       grid-template-columns: 1fr;
     }
+    
+    .map-container {
+      height: 400px;
+    }
+  }
+  
+  /* 弹窗样式 */
+  .institution-popup h3 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+  
+  .institution-popup p {
+    margin: 5px 0;
   }
 </style>
 
+<!-- 引入Leaflet CSS和JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 <div class="world-map-section">
   <h2>Global Collaboration Map</h2>
-  <div class="map-placeholder">
-    <p class="map-title">Interactive map showing collaboration locations</p>
-    <p>This section will display an interactive world map highlighting our global research partnerships</p>
-    <p><em>(Map visualization to be implemented)</em></p>
+  <div class="map-container">
+    <div id="institution-map"></div>
   </div>
+  <p class="map-title">Click on markers to learn more about our global research partnerships</p>
 </div>
 
 <div class="institution-grid">
@@ -280,3 +303,104 @@ classes: wide
     </div>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 初始化地图，以中国为中心
+    var map = L.map('institution-map').setView([30, 105], 3);
+
+    // 添加OpenStreetMap瓦片层
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // 定义机构数据和坐标
+    var institutions = [
+        {
+            name: "Fudan University",
+            location: "Shanghai, China",
+            coords: [31.2989, 121.5087],
+            focus: "AI Research and Academic Collaboration",
+            period: "Ongoing collaboration",
+            type: "Academic"
+        },
+        {
+            name: "Tongji University",
+            location: "Shanghai, China",
+            coords: [31.2785, 121.4997],
+            focus: "Computer Science and AI Research",
+            period: "Ongoing",
+            type: "Academic"
+        },
+        {
+            name: "Duke University",
+            location: "Durham, NC, USA",
+            coords: [35.9974, -78.9452],
+            focus: "Advanced AI Research",
+            period: "Past collaboration",
+            type: "International"
+        },
+        {
+            name: "Tsinghua University",
+            location: "Beijing, China",
+            coords: [39.9994, 116.3282],
+            focus: "AI Research Collaboration",
+            period: "Past collaboration",
+            type: "Academic"
+        },
+        {
+            name: "Nanjing University",
+            location: "Nanjing, China",
+            coords: [32.0432, 118.7732],
+            focus: "Computer Science Research",
+            period: "Past collaboration",
+            type: "Academic"
+        },
+        {
+            name: "Trinity College Dublin",
+            location: "Dublin, Ireland",
+            coords: [53.3438, -6.2545],
+            focus: "European AI Research Collaboration",
+            period: "Past collaboration",
+            type: "International"
+        },
+        {
+            name: "Southeast University",
+            location: "Nanjing, China",
+            coords: [32.0392, 118.8013],
+            focus: "AI Research Collaboration",
+            period: "Ongoing collaboration",
+            type: "Academic"
+        },
+        {
+            name: "Shanghai Jiao Tong University",
+            location: "Shanghai, China",
+            coords: [31.0225, 121.4622],
+            focus: "AI and Computer Science Research",
+            period: "Ongoing collaboration",
+            type: "Academic"
+        }
+    ];
+
+    // 为每个机构添加标记
+    institutions.forEach(function(inst) {
+        var marker = L.marker(inst.coords).addTo(map);
+        
+        // 创建弹出窗口内容
+        var popupContent = `
+            <div class="institution-popup">
+                <h3>${inst.name}</h3>
+                <p><strong>Location:</strong> ${inst.location}</p>
+                <p><strong>Focus:</strong> ${inst.focus}</p>
+                <p><strong>Period:</strong> ${inst.period}</p>
+                <p><strong>Type:</strong> ${inst.type}</p>
+            </div>
+        `;
+        
+        marker.bindPopup(popupContent);
+    });
+
+    // 添加地图控制
+    map.zoomControl.setPosition('topright');
+});
+</script>
