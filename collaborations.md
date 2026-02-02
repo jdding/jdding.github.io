@@ -88,14 +88,16 @@ classes: wide
     margin-right: 8px;
   }
   
-  .collaboration-type {
-    display: inline-block;
-    background: #ebf8ff;
-    color: #2b6cb0;
-    padding: 2px 8px;
-    border-radius: 3px;
-    font-size: 0.85em;
-    border: 1px solid #bee3f8;
+  .publication-count.Current {
+    background: #e6fffa;
+    color: #276749;
+    border: 1px solid #b2f5ea;
+  }
+  
+  .publication-count.Past {
+    background: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #d1d5db;
   }
   
   /* 地图可视化区域 */
@@ -170,7 +172,7 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">Academic</span>
+        <span class="publication-count">Current</span>
       </div>
       <p><strong>Focus:</strong> AI Research and Academic Collaboration</p>
       <p><strong>Period:</strong> Ongoing collaboration</p>
@@ -188,10 +190,10 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">Academic</span>
+        <span class="publication-count">Past</span>
       </div>
       <p><strong>Focus:</strong> Computer Science and AI Research</p>
-      <p><strong>Period:</strong> Ongoing</p>
+      <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
   
@@ -206,7 +208,7 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">International</span>
+        <span class="publication-count">Past</span>
       </div>
       <p><strong>Focus:</strong> Advanced AI Research</p>
       <p><strong>Period:</strong> Past collaboration</p>
@@ -224,7 +226,7 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">Academic</span>
+        <span class="publication-count">Past</span>
       </div>
       <p><strong>Focus:</strong> AI Research Collaboration</p>
       <p><strong>Period:</strong> Past collaboration</p>
@@ -242,10 +244,10 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">Academic</span>
+        <span class="publication-count">Current</span>
       </div>
       <p><strong>Focus:</strong> Computer Science Research</p>
-      <p><strong>Period:</strong> Past collaboration</p>
+      <p><strong>Period:</strong> Ongoing collaboration</p>
     </div>
   </div>
   
@@ -260,7 +262,7 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">International</span>
+        <span class="publication-count">Past</span>
       </div>
       <p><strong>Focus:</strong> European AI Research Collaboration</p>
       <p><strong>Period:</strong> Past collaboration</p>
@@ -278,10 +280,10 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">Academic</span>
+        <span class="publication-count">Past</span>
       </div>
       <p><strong>Focus:</strong> AI Research Collaboration</p>
-      <p><strong>Period:</strong> Ongoing collaboration</p>
+      <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
   
@@ -296,7 +298,7 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">Academic</span>
+        <span class="publication-count">Current</span>
       </div>
       <p><strong>Focus:</strong> AI and Computer Science Research</p>
       <p><strong>Period:</strong> Ongoing collaboration</p>
@@ -314,10 +316,10 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">International</span>
+        <span class="publication-count">Past</span>
       </div>
       <p><strong>Focus:</strong> Applied AI Research</p>
-      <p><strong>Period:</strong> Ongoing collaboration</p>
+      <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
   
@@ -332,10 +334,10 @@ classes: wide
     </div>
     <div class="institution-content">
       <div class="institution-details">
-        <span class="publication-count">International</span>
+        <span class="publication-count">Past</span>
       </div>
       <p><strong>Focus:</strong> Advanced AI Research</p>
-      <p><strong>Period:</strong> Ongoing collaboration</p>
+      <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
 </div>
@@ -358,15 +360,15 @@ document.addEventListener('DOMContentLoaded', function() {
             coords: [31.2989, 121.5087],
             focus: "AI Research and Academic Collaboration",
             period: "Ongoing collaboration",
-            type: "Academic"
+            type: "Current"
         },
         {
             name: "Tongji University",
             location: "Shanghai, China",
             coords: [31.2785, 121.4997],
             focus: "Computer Science and AI Research",
-            period: "Ongoing",
-            type: "Academic"
+            period: "Past collaboration",
+            type: "Past"
         },
         {
             name: "Duke University",
@@ -374,7 +376,7 @@ document.addEventListener('DOMContentLoaded', function() {
             coords: [35.9974, -78.9452],
             focus: "Advanced AI Research",
             period: "Past collaboration",
-            type: "International"
+            type: "Past"
         },
         {
             name: "Tsinghua University",
@@ -382,15 +384,15 @@ document.addEventListener('DOMContentLoaded', function() {
             coords: [39.9994, 116.3282],
             focus: "AI Research Collaboration",
             period: "Past collaboration",
-            type: "Academic"
+            type: "Past"
         },
         {
             name: "Nanjing University",
             location: "Nanjing, China",
             coords: [32.0432, 118.7732],
             focus: "Computer Science Research",
-            period: "Past collaboration",
-            type: "Academic"
+            period: "Ongoing collaboration",
+            type: "Current"
         },
         {
             name: "Trinity College Dublin",
@@ -398,15 +400,15 @@ document.addEventListener('DOMContentLoaded', function() {
             coords: [53.3438, -6.2545],
             focus: "European AI Research Collaboration",
             period: "Past collaboration",
-            type: "International"
+            type: "Past"
         },
         {
             name: "Southeast University",
             location: "Nanjing, China",
             coords: [32.0392, 118.8013],
             focus: "AI Research Collaboration",
-            period: "Ongoing collaboration",
-            type: "Academic"
+            period: "Past collaboration",
+            type: "Past"
         },
         {
             name: "Shanghai Jiao Tong University",
@@ -414,23 +416,23 @@ document.addEventListener('DOMContentLoaded', function() {
             coords: [31.0225, 121.4622],
             focus: "AI and Computer Science Research",
             period: "Ongoing collaboration",
-            type: "Academic"
+            type: "Current"
         },
         {
             name: "Hong Kong Baptist University",
             location: "Hong Kong SAR",
             coords: [22.3361, 114.1867],
             focus: "Applied AI Research",
-            period: "Ongoing collaboration",
-            type: "International"
+            period: "Past collaboration",
+            type: "Past"
         },
         {
             name: "University of Houston",
             location: "Houston, TX, USA",
             coords: [29.7209, -95.3428],
             focus: "Advanced AI Research",
-            period: "Ongoing collaboration",
-            type: "International"
+            period: "Past collaboration",
+            type: "Past"
         }
     ];
 

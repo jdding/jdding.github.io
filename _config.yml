@@ -23,7 +23,7 @@ author:
       icon: "fas fa-fw fa-file-alt"
       url: "/patents"
     - label: "Collaborations"
-      icon: "fas fa-fw fa-network-wired"
+      icon: "fas fa-fw fa-handshake"
       url: "/collaborations"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
