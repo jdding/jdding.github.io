@@ -133,6 +133,44 @@ classes: wide
     .stat-grid { gap: 10px; }
     .stat-num { font-size: 1.4em; }
   }
+  
+  /* 使用通用卡片样式 */
+  .paper-card {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: #444;
+  }
+  
+  .paper-card:last-child { border-bottom: none; }
+  
+  .paper-img {
+    flex: 0 0 35%;
+    max-width: 350px;
+  }
+  
+  .paper-img img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #e1e4e8;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  }
+  
+  .paper-content {
+    flex: 1;
+  }
+  
+  .paper-title {
+    font-size: 1em;
+    font-weight: 700;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 6px;
+  }
 </style>
 
 <div class="stat-grid">

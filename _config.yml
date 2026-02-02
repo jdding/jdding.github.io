@@ -4,9 +4,10 @@
 remote_theme: mmistakes/minimal-mistakes
 
 # Site metadata
-title: "Trustworthy & Scalable AI Systems"
+title: "Jiandong Ding (丁建栋) - Principal Algorithm Expert"
 description: "Principal Algorithm Expert at Huawei. Focusing on RecSys, Causal Inference, and LLM Agents."
 url: "https://jdding.github.io" # 站点根地址（不带末尾斜杠）
+github_username: jdding
 
 locale: "en-US" # 站点语言/区域（用于主题与 SEO 元数据）
 author:
@@ -29,7 +30,7 @@ author:
       icon: "fas fa-fw fa-envelope-square"
 
 # Open Graph（社交媒体分享卡片）
-og_image: "/assets/images/favicon.jpg"
+og_image: "/assets/images/favicon.png"
 
 # Plugins（与 `Gemfile` 保持一致）
 plugins:
@@ -44,3 +45,21 @@ analytics:
   google:
     tracking_id: "G-Z0P3522G21"
     anonymize_ip: false
+
+# SEO优化
+twitter:
+  username: jdding
+  
+social:
+  name: Jiandong Ding
+  links:
+    - https://www.linkedin.com/in/jiandong-ding-60498833/
+    - https://github.com/jdding
+    - https://scholar.google.com/citations?user=jdding
+    
+# 额外的Jekyll配置
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

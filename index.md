@@ -8,76 +8,11 @@ classes: wide
 <style>
   /* 隐藏页面内标题（保留浏览器标签页标题） */
   .page__title { display: none; }
-
-  /* [新增]：全局文字微缩，确保简介和News部分在电脑端不显大 */
-  p, li {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #444;
-  }
-  
-  /* --- 核心卡片容器 (与 pub-item 风格对齐) --- */
-  .paper-card {
-    display: flex;
-    gap: 20px; /* 间距稍微收紧 */
-    margin-bottom: 25px; /* 减小底部间距 */
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f0f0f0; 
-    
-    /* [优化核心]：基准字号与 publications 保持一致 */
-    font-size: 0.95rem; 
-    line-height: 1.55;  
-    color: #444;       
-  }
-  .paper-card:last-child { border-bottom: none; }
-  
-  /* --- 图片区域 --- */
-  .paper-img {
-    flex: 0 0 35%; 
-    max-width: 350px; /* 稍微限制最大宽度 */
-  }
-  
-  .paper-img img {
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid #e1e4e8;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03); 
-  }
-  
-  /* --- 文字区域 --- */
-  .paper-content {
-    flex: 1; 
-  }
-  
-  /* 论文标题 */
-  .paper-title {
-    /* [优化]：标题不再过度放大，靠粗体区分 */
-    font-size: 1em; 
-    font-weight: 700;
-    color: #2c3e50;
-    display: block;
-    margin-bottom: 6px;
-  }
-
-  /* --- 标签系统 --- */
-  .hl-tag {
-    font-size: 0.8em; /* 标签字体更小一点 */
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 1px 6px;
-    border-radius: 4px;
-    margin-right: 6px;
-    vertical-align: middle;
-    letter-spacing: 0.3px;
-  }
-  .tag-prob { background-color: #fff0ed; color: #c0392b; border: 1px solid #fadbd8; } 
-  .tag-sol { background-color: #e8f8f5; color: #16a085; border: 1px solid #d1f2eb; } 
-  .tag-method { background-color: #ebf5fb; color: #2980b9; border: 1px solid #d4e6f1; }
   
   /* --- 手机端适配 --- */
   @media (max-width: 768px) {
-    .paper-card { flex-direction: column; gap: 15px; }
-    .paper-img { flex: 0 0 100%; max-width: 100%; margin-bottom: 10px; }
+    .card-container { flex-direction: column; gap: 15px; }
+    .card-image { flex: 0 0 100%; max-width: 100%; margin-bottom: 10px; }
   }
 </style>
 
