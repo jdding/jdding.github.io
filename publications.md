@@ -224,15 +224,6 @@ classes: wide
 
 <h3 class="year-header">2025</h3>
 
-<div class="pub-item level-c">
-  <span class="pub-title">Towards Practical Large-scale Dynamical Heterogeneous Graph Embedding.</span>
-  <div class="pub-meta">
-    <span class="venue-tag tag-gray">arXiv</span>
-    <span class="pub-authors">Mabiao Long, ..., <strong>Jiandong Ding</strong></span>
-    <a href="https://arxiv.org/abs/2512.13120" class="pub-link">[PDF]</a>
-  </div>
-</div>
-
 <div class="pub-item level-b">
   <span class="pub-title">BIS: NL2SQL Service Evaluation Benchmark for Business Intelligence Scenarios.</span>
   <div class="pub-meta">
