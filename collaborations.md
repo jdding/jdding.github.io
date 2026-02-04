@@ -264,7 +264,7 @@ classes: wide
       <div class="institution-details">
         <span class="publication-count">Past</span>
       </div>
-      <p><strong>Focus:</strong> Advanced AI Research</p>
+      <p><strong>Focus:</strong> Bioinformatics</p>
       <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
@@ -399,6 +399,14 @@ document.addEventListener('DOMContentLoaded', function() {
             type: "Current"
         },
         {
+            name: "Tongji University",
+            location: "Shanghai, China",
+            coords: [31.2785, 121.4997],
+            focus: "Trustworthy AI and Generative RecSys",
+            period: "Past collaboration",
+            type: "Past"
+        },
+        {
             name: "Nanjing University",
             location: "Nanjing, China",
             coords: [32.0432, 118.7732],
@@ -415,17 +423,9 @@ document.addEventListener('DOMContentLoaded', function() {
             type: "Current"
         },
         {
-            name: "Duke University",
-            location: "Durham, NC, USA",
-            coords: [35.9974, -78.9452],
-            focus: "Bioinformatics",
-            period: "Past collaboration",
-            type: "Past"
-        },
-        {
-            name: "Hong Kong Baptist University",
-            location: "Hong Kong SAR",
-            coords: [22.3361, 114.1867],
+            name: "Tsinghua University",
+            location: "Beijing, China",
+            coords: [39.9994, 116.3282],
             focus: "Trustworthy AI",
             period: "Past collaboration",
             type: "Past"
@@ -439,6 +439,14 @@ document.addEventListener('DOMContentLoaded', function() {
             type: "Past"
         },
         {
+            name: "Duke University",
+            location: "Durham, NC, USA",
+            coords: [35.9974, -78.9452],
+            focus: "Bioinformatics",
+            period: "Past collaboration",
+            type: "Past"
+        },
+        {
             name: "Trinity College Dublin",
             location: "Dublin, Ireland",
             coords: [53.3438, -6.2545],
@@ -447,17 +455,9 @@ document.addEventListener('DOMContentLoaded', function() {
             type: "Past"
         },
         {
-            name: "Tongji University",
-            location: "Shanghai, China",
-            coords: [31.2785, 121.4997],
-            focus: "Trustworthy AI and Generative RecSys",
-            period: "Past collaboration",
-            type: "Past"
-        },
-        {
-            name: "Tsinghua University",
-            location: "Beijing, China",
-            coords: [39.9994, 116.3282],
+            name: "Hong Kong Baptist University",
+            location: "Hong Kong SAR",
+            coords: [22.3361, 114.1867],
             focus: "Trustworthy AI",
             period: "Past collaboration",
             type: "Past"
