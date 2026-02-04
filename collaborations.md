@@ -218,7 +218,7 @@ classes: wide
   <!-- Nanjing University -->
   <div class="institution-card">
     <div class="institution-header">
-      <img src="/assets/images/nanjing-university-logo.png" alt="Nanjing University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <img src="assets/images/nanjing-univeristy-logo.png" alt="Nanjing University Logo" class="institution-logo" onerror="this.style.display='none';">
       <div class="institution-text">
         <h3 class="institution-name">Nanjing University</h3>
         <p class="institution-location">Nanjing, China</p>
