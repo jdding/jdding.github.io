@@ -210,7 +210,7 @@ classes: wide
       <div class="institution-details">
         <span class="publication-count">Current</span>
       </div>
-      <p><strong>Focus:</strong> AI Research and Academic Collaboration</p>
+      <p><strong>Focus:</strong> Trustworthy AI and Generative RecSys </p>
       <p><strong>Period:</strong> Ongoing collaboration</p>
     </div>
   </div>
@@ -228,7 +228,7 @@ classes: wide
       <div class="institution-details">
         <span class="publication-count">Current</span>
       </div>
-      <p><strong>Focus:</strong> Computer Science Research</p>
+      <p><strong>Focus:</strong> System Efficiency</p>
       <p><strong>Period:</strong> Ongoing collaboration</p>
     </div>
   </div>
@@ -246,7 +246,7 @@ classes: wide
       <div class="institution-details">
         <span class="publication-count">Current</span>
       </div>
-      <p><strong>Focus:</strong> AI and Computer Science Research</p>
+      <p><strong>Focus:</strong> Generative RecSys</p>
       <p><strong>Period:</strong> Ongoing collaboration</p>
     </div>
   </div>
@@ -282,7 +282,7 @@ classes: wide
       <div class="institution-details">
         <span class="publication-count">Past</span>
       </div>
-      <p><strong>Focus:</strong> Applied AI Research</p>
+      <p><strong>Focus:</strong> Trustworthy AI</p>
       <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
@@ -300,7 +300,7 @@ classes: wide
       <div class="institution-details">
         <span class="publication-count">Past</span>
       </div>
-      <p><strong>Focus:</strong> AI Research Collaboration</p>
+      <p><strong>Focus:</strong> Trustworthy AI</p>
       <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
@@ -318,7 +318,7 @@ classes: wide
       <div class="institution-details">
         <span class="publication-count">Past</span>
       </div>
-      <p><strong>Focus:</strong> European AI Research Collaboration</p>
+      <p><strong>Focus:</strong> Trustworthy AI and Generative RecSys</p>
       <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
@@ -336,7 +336,7 @@ classes: wide
       <div class="institution-details">
         <span class="publication-count">Past</span>
       </div>
-      <p><strong>Focus:</strong> Computer Science and AI Research</p>
+      <p><strong>Focus:</strong> Trustworthy AI and Generative RecSys</p>
       <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
@@ -354,7 +354,7 @@ classes: wide
       <div class="institution-details">
         <span class="publication-count">Past</span>
       </div>
-      <p><strong>Focus:</strong> AI Research Collaboration</p>
+      <p><strong>Focus:</strong> Trustworthy AI</p>
       <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
@@ -372,7 +372,7 @@ classes: wide
       <div class="institution-details">
         <span class="publication-count">Past</span>
       </div>
-      <p><strong>Focus:</strong> Advanced AI Research</p>
+      <p><strong>Focus:</strong> Trustworthy AI</p>
       <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
