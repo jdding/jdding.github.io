@@ -17,15 +17,9 @@ Provides comprehensive academic data in JSON format, including:
 
 - Personal profile information
 - Latest news and announcements
-- Research projects and publications (with PDF links)
+- Research projects and publications
 - Academic collaborations
 - Research areas and expertise
-
-### `/papers/`
-Browse research papers organized by topic and publication date.
-
-### `/papers/preview/`
-Online PDF viewer for research papers.
 
 #### Example Request:
 ```

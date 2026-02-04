@@ -55,14 +55,6 @@ schema:
         "@type": "Answer",
         "text": "Currently, Jiandong Ding focuses on building Next-Generation Recommender Systems driven by Generative AI, with specific interests in Generative RecSys, Trustworthy AI, and System Efficiency, bridging the gap between theoretical algorithms and industrial-scale systems."
       }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I access your published papers?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Due to copyright restrictions, papers are not publicly available for download. However, I provide a paper preview feature on my website at /papers/ for academic purposes. For full access to papers, please contact me at jdding@fudan.edu.cn."
-      }
     }
   ]
 ---
@@ -112,7 +104,3 @@ Recent achievements include papers accepted by top-tier venues such as ACM TOIS,
 ## What is the focus of Jiandong Ding's current research?
 
 Currently, Jiandong Ding focuses on building Next-Generation Recommender Systems driven by Generative AI, with specific interests in Generative RecSys, Trustworthy AI, and System Efficiency, bridging the gap between theoretical algorithms and industrial-scale systems.
-
-## How can I access your published papers?
-
-Due to copyright restrictions, papers are not publicly available for download. However, I provide a paper preview feature on my website at [/papers/](/papers/) for academic purposes. For full access to papers, please contact me at jdding@fudan.edu.cn.

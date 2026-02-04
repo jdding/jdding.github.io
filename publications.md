@@ -205,7 +205,6 @@ schema:
   <div class="pub-meta">
     <span class="venue-tag tag-red" itemprop="isPartOf">TOIS</span>
     <span class="pub-authors" itemprop="author">Tianyu Zhu, <strong property="name">Jiandong Ding</strong>, et al.</span>
-    <a href="/assets/papers/mitigating-popularity-bias.pdf" class="pub-link" itemprop="url">[PDF]</a>
     <meta itemprop="datePublished" content="2026">
     <meta itemprop="publisher" content="ACM">
   </div>

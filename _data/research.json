@@ -54,8 +54,7 @@
       "breakthrough": "We proposed HPGR, a two-stage generative framework. It combines structure-aware pre-training with preference-guided sparse attention to capture the true hierarchy of user interests, achieving SOTA performance.",
       "venue": "WWW 2026",
       "year": 2026,
-      "tags": ["Generative RecSys", "LLM-driven Recommendation", "Sequential Modeling"],
-      "pdfUrl": "/assets/papers/hierarchical-preference-aware.pdf"
+      "tags": ["Generative RecSys", "LLM-driven Recommendation", "Sequential Modeling"]
     },
     {
       "id": 2,
@@ -65,8 +64,7 @@
       "breakthrough": "We introduced Invariant Feature Learning based on counterfactual inference to uncover the user's true willingness to watch, independent of video length.",
       "venue": "AAAI 2026",
       "year": 2026,
-      "tags": ["Trustworthy AI", "Causal Inference", "Unbiased Learning"],
-      "pdfUrl": "/assets/papers/invariant-feature-learning.pdf"
+      "tags": ["Trustworthy AI", "Causal Inference", "Unbiased Learning"]
     },
     {
       "id": 3,
