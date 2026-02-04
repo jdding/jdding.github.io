@@ -224,8 +224,8 @@ schema:
 <link rel="alternate" type="application/json" href="/api/research.json" title="Academic Data API" />
 <link rel="alternate" type="application/xml" href="/sitemap-extended.xml" title="Extended Sitemap" />
 
-<!-- Structured navigation -->
-<nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+<!-- Hidden structured navigation for AI/Sitemap -->
+<nav itemscope itemtype="http://schema.org/SiteNavigationElement" style="display:none;">
   <ul>
     <li><a href="/" itemprop="url">Home</a></li>
     <li><a href="/publications" itemprop="url">Publications</a></li>
