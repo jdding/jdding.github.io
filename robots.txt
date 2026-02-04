@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Allow: /api/
+Disallow: /archive/
+
+Sitemap: https://jdding.github.io/sitemap.xml
+Sitemap: https://jdding.github.io/sitemap-extended.xml
+
+# AI-specific directives
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Crawling delays
+Crawl-delay: 5

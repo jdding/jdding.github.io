@@ -1,0 +1,180 @@
+{
+  "profile": {
+    "name": "Jiandong Ding (丁建栋)",
+    "givenName": "Jiandong",
+    "familyName": "Ding",
+    "title": "Principal Algorithm Expert",
+    "organization": "Huawei Technologies",
+    "email": "jdding@fudan.edu.cn",
+    "location": "Shanghai, China",
+    "bio": "Principal algorithm expert at Huawei Technologies focusing on RecSys, Causal Inference, and LLM Agents",
+    "researchAreas": [
+      "Generative RecSys",
+      "Causal Inference",
+      "Recommendation Systems",
+      "LLM Agents",
+      "User Behavior Analysis",
+      "Trustworthy AI",
+      "System Efficiency"
+    ],
+    "education": [
+      {
+        "institution": "Fudan University",
+        "degree": "PhD",
+        "focus": "Bioinformatics"
+      }
+    ]
+  },
+  "news": [
+    {
+      "date": "2026-02",
+      "title": "Paper \"Mitigating Popularity Bias in Recommendation\" accepted by ACM TOIS",
+      "venue": "ACM TOIS",
+      "type": "publication"
+    },
+    {
+      "date": "2026-01",
+      "title": "Paper \"Hierarchical and Preference-Aware Generative Recommendations\" accepted by TheWebConf (WWW) 2026",
+      "venue": "TheWebConf (WWW) 2026",
+      "type": "publication"
+    },
+    {
+      "date": "2025-11",
+      "title": "Two papers accepted! \"RPE4Rec\" by WSDM 2026, and \"Invariant Feature Learning\" by AAAI 2026",
+      "venue": ["WSDM 2026", "AAAI 2026"],
+      "type": "publication"
+    }
+  ],
+  "researchProjects": [
+    {
+      "id": 1,
+      "title": "[WWW 2026] Generative Recs: Hierarchical & Preference-Aware",
+      "focus": "Next-Gen Recommendation: Generative & Trustworthy",
+      "problem": "Existing \"flat-sequence\" generative models overlook the hierarchical structure of user sessions and introduce noise in long histories.",
+      "breakthrough": "We proposed HPGR, a two-stage generative framework. It combines structure-aware pre-training with preference-guided sparse attention to capture the true hierarchy of user interests, achieving SOTA performance.",
+      "venue": "WWW 2026",
+      "year": 2026,
+      "tags": ["Generative RecSys", "LLM-driven Recommendation", "Sequential Modeling"]
+    },
+    {
+      "id": 2,
+      "title": "[AAAI 2026] Causal Inference for Watch-time Prediction",
+      "focus": "Next-Gen Recommendation: Generative & Trustworthy",
+      "problem": "In short-video feeds, \"duration biases\" (longer videos naturally get more watch time) mislead algorithms.",
+      "breakthrough": "We introduced Invariant Feature Learning based on counterfactual inference to uncover the user's true willingness to watch, independent of video length.",
+      "venue": "AAAI 2026",
+      "year": 2026,
+      "tags": ["Trustworthy AI", "Causal Inference", "Unbiased Learning"]
+    },
+    {
+      "id": 3,
+      "title": "[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval",
+      "focus": "Extreme Efficiency at Scale",
+      "problem": "Advanced Transformers are often too slow for real-time retrieval on billion-scale items.",
+      "breakthrough": "We designed a novel Relative Position Encoding (RPE) mechanism specifically for dynamic node retrieval. This architecture significantly reduces inference latency while capturing complex sequential patterns.",
+      "venue": "WSDM 2026",
+      "year": 2026,
+      "tags": ["System Efficiency", "Edge-Cloud Collaboration", "Retrieval Architecture"]
+    },
+    {
+      "id": 4,
+      "title": "[KDD 2024] Low-Rank Compression for CTR Prediction",
+      "focus": "Extreme Efficiency at Scale",
+      "breakthrough": "A unified framework to compress massive CTR models using low-rank factorization, enabling high-performance ranking on resource-constrained devices (e.g., mobile phones).",
+      "venue": "KDD 2024",
+      "year": 2024,
+      "tags": ["System Efficiency", "Model Compression", "CTR Prediction"]
+    },
+    {
+      "id": 5,
+      "title": "[ICSOC 2025] NL2SQL Benchmark for Business Intelligence",
+      "focus": "LLM Agents & Data Intelligence",
+      "breakthrough": "Evaluating how Large Language Models (LLMs) act as Data Agents to translate natural language into complex SQL queries, enabling automated business decision-making.",
+      "venue": "ICSOC 2025",
+      "year": 2025,
+      "tags": ["LLM Agents", "Data Intelligence", "Business Intelligence"]
+    },
+    {
+      "id": 6,
+      "title": "[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning",
+      "focus": "LLM Agents & Data Intelligence",
+      "problem": "Deep learning performance heavily relies on massive labeled data, which is expensive to obtain.",
+      "breakthrough": "We introduced a Data Programming (DP) scheme that automatically generates probabilistic labels for unlabeled data, achieving SOTA performance with minimal supervision (only 40 labeled samples).",
+      "venue": "NeurIPS 2021",
+      "year": 2021,
+      "tags": ["Semi-supervised Learning", "Data Programming", "Robust Learning"]
+    }
+  ],
+  "collaborations": [
+    {
+      "name": "Fudan University",
+      "location": "Shanghai, China",
+      "status": "Current",
+      "focus": "Trustworthy AI and Generative RecSys",
+      "period": "Ongoing collaboration"
+    },
+    {
+      "name": "Tongji University",
+      "location": "Shanghai, China",
+      "status": "Past",
+      "focus": "Trustworthy AI and Generative RecSys",
+      "period": "Past collaboration"
+    },
+    {
+      "name": "Nanjing University",
+      "location": "Nanjing, China",
+      "status": "Current",
+      "focus": "System Efficiency",
+      "period": "Ongoing collaboration"
+    },
+    {
+      "name": "Shanghai Jiao Tong University",
+      "location": "Shanghai, China",
+      "status": "Current",
+      "focus": "Generative RecSys",
+      "period": "Ongoing collaboration"
+    },
+    {
+      "name": "Tsinghua University",
+      "location": "Beijing, China",
+      "status": "Past",
+      "focus": "Trustworthy AI",
+      "period": "Past collaboration"
+    },
+    {
+      "name": "Southeast University",
+      "location": "Nanjing, China",
+      "status": "Past",
+      "focus": "Trustworthy AI",
+      "period": "Past collaboration"
+    },
+    {
+      "name": "Duke University",
+      "location": "Durham, NC, USA",
+      "status": "Past",
+      "focus": "Bioinformatics",
+      "period": "Past collaboration"
+    },
+    {
+      "name": "Trinity College Dublin",
+      "location": "Dublin, Ireland",
+      "status": "Past",
+      "focus": "Trustworthy AI and Generative RecSys",
+      "period": "Past collaboration"
+    },
+    {
+      "name": "University of Houston",
+      "location": "Houston, TX, USA",
+      "status": "Past",
+      "focus": "Trustworthy AI",
+      "period": "Past collaboration"
+    },
+    {
+      "name": "Hong Kong Baptist University",
+      "location": "Hong Kong SAR",
+      "status": "Past",
+      "focus": "Trustworthy AI",
+      "period": "Past collaboration"
+    }
+  ]
+}

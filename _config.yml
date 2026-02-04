@@ -63,6 +63,16 @@ social:
     - https://www.linkedin.com/in/jiandong-ding-60498833/
     - https://github.com/jdding
     - https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=5-e7wi4AAAAJ
+
+# GEO优化设置
+logo: "/assets/images/favicon.png"
+social_media:
+  - name: "LinkedIn"
+    url: "https://www.linkedin.com/in/jiandong-ding-60498833/"
+  - name: "GitHub"
+    url: "https://github.com/jdding"
+  - name: "Google Scholar"
+    url: "https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=5-e7wi4AAAAJ"
     
 # 额外的Jekyll配置
 markdown: kramdown

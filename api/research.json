@@ -1,0 +1,6 @@
+---
+layout: null  # 使用null布局，这样只会输出纯JSON
+permalink: /api/research.json
+---
+
+{{ site.data.research | jsonify }}

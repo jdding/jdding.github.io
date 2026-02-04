@@ -4,6 +4,16 @@ author_profile: true
 title: "Publications"
 permalink: /publications
 classes: wide
+schema:
+  "@context": "https://schema.org"
+  "@type": "CollectionPage"
+  "headline": "Academic Publications"
+  "author":
+    "@type": "Person"
+    "name": "Jiandong Ding (丁建栋)"
+    "url": "https://jdding.github.io"
+  "dateModified": "2026-02-04"
+  "description": "A comprehensive list of academic publications by Jiandong Ding"
 ---
 
 <style>
@@ -190,27 +200,33 @@ classes: wide
 
 <h3 class="year-header">2026</h3>
 
-<div class="pub-item level-a">
-  <span class="pub-title">Mitigating Popularity Bias in Recommendation with Global Listwise Learning.</span>
+<div class="pub-item level-a" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <span class="pub-title" itemprop="headline">Mitigating Popularity Bias in Recommendation with Global Listwise Learning.</span>
   <div class="pub-meta">
-    <span class="venue-tag tag-red">TOIS</span>
-    <span class="pub-authors">Tianyu Zhu, <strong>Jiandong Ding</strong>, et al.</span>
+    <span class="venue-tag tag-red" itemprop="isPartOf">TOIS</span>
+    <span class="pub-authors" itemprop="author">Tianyu Zhu, <strong property="name">Jiandong Ding</strong>, et al.</span>
+    <meta itemprop="datePublished" content="2026">
+    <meta itemprop="publisher" content="ACM">
   </div>
 </div>
 
-<div class="pub-item level-a">
-  <span class="pub-title">Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations.</span>
+<div class="pub-item level-a" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <span class="pub-title" itemprop="headline">Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations.</span>
   <div class="pub-meta">
-    <span class="venue-tag tag-red">WWW</span>
-    <span class="pub-authors">Zerui Chen, ..., <strong>Jiandong Ding</strong>, et al.</span>
+    <span class="venue-tag tag-red" itemprop="isPartOf">WWW</span>
+    <span class="pub-authors" itemprop="author">Zerui Chen, ..., <strong property="name">Jiandong Ding</strong>, et al.</span>
+    <meta itemprop="datePublished" content="2026">
+    <meta itemprop="publisher" content="ACM">
   </div>
 </div>
 
-<div class="pub-item level-a">
-  <span class="pub-title">Invariant Feature Learning for Counterfactual Watch-time Prediction in Video Recommendation.</span>
+<div class="pub-item level-a" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <span class="pub-title" itemprop="headline">Invariant Feature Learning for Counterfactual Watch-time Prediction in Video Recommendation.</span>
   <div class="pub-meta">
-    <span class="venue-tag tag-red">AAAI</span>
-    <span class="pub-authors">Chenghou Jin, ..., <strong>Jiandong Ding</strong>, et al.</span>
+    <span class="venue-tag tag-red" itemprop="isPartOf">AAAI</span>
+    <span class="pub-authors" itemprop="author">Chenghou Jin, ..., <strong property="name">Jiandong Ding</strong>, et al.</span>
+    <meta itemprop="datePublished" content="2026">
+    <meta itemprop="publisher" content="AAAI">
   </div>
 </div>
 
@@ -286,12 +302,14 @@ classes: wide
 
 <h3 class="year-header">2021</h3>
 
-<div class="pub-item level-a">
-  <span class="pub-title">DP-SSL: Towards Robust Semi-supervised Learning with A Few Labeled Samples.</span>
+<div class="pub-item level-a" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <span class="pub-title" itemprop="headline">DP-SSL: Towards Robust Semi-supervised Learning with A Few Labeled Samples.</span>
   <div class="pub-meta">
-    <span class="venue-tag tag-red">NeurIPS</span>
-    <span class="pub-authors">Yi Xu, <strong>Jiandong Ding</strong>, et al.</span>
-    <a href="https://arxiv.org/abs/2110.13740" class="pub-link">[PDF]</a>
+    <span class="venue-tag tag-red" itemprop="isPartOf">NeurIPS</span>
+    <span class="pub-authors" itemprop="author">Yi Xu, <strong property="name">Jiandong Ding</strong>, et al.</span>
+    <a href="https://arxiv.org/abs/2110.13740" class="pub-link" itemprop="url">[PDF]</a>
+    <meta itemprop="datePublished" content="2021">
+    <meta itemprop="publisher" content="NeurIPS">
   </div>
 </div>
 

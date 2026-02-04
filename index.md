@@ -3,6 +3,34 @@ layout: single
 author_profile: true
 title: "Jiandong Ding (丁建栋)"
 classes: wide
+schema:
+  "@context": "https://schema.org"
+  "@type": "Person"
+  "name": "Jiandong Ding (丁建栋)"
+  "alternateName": "Jiandong Ding"
+  "givenName": "Jiandong"
+  "familyName": "Ding"
+  "jobTitle": "Principal Algorithm Expert"
+  "affiliation":
+    "@type": "Organization"
+    "name": "Huawei Technologies"
+  "alumniOf":
+    "@type": "EducationalOrganization"
+    "name": "Fudan University"
+  "knowsAbout": ["Generative RecSys", "Causal Inference", "Recommendation Systems", "LLM Agents", "User Behavior Analysis"]
+  "description": "Principal Algorithm Expert at Huawei Technologies focusing on RecSys, Causal Inference, and LLM Agents"
+  "url": "https://jdding.github.io"
+  "sameAs":
+    - "https://www.linkedin.com/in/jiandong-ding-60498833/"
+    - "https://github.com/jdding"
+    - "https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=5-e7wi4AAAAJ"
+  "address":
+    "@type": "PostalAddress"
+    "addressLocality": "Shanghai"
+    "addressCountry": "China"
+  "worksFor":
+    "@type": "Organization"
+    "name": "Huawei Technologies"
 ---
 
 <style>
@@ -61,103 +89,152 @@ classes: wide
   }
 </style>
 
-I am a **Principal Algorithm Expert** at **Huawei Technologies**, bridging the gap between theoretical algorithms and industrial-scale systems.
+<section itemscope itemtype="http://schema.org/Bio">
+  <h2 itemprop="name">Research Focus</h2>
+  <p>I am a <span itemprop="jobTitle">Principal Algorithm Expert</span> at <span itemprop="affiliation">Huawei Technologies</span>, bridging the gap between theoretical algorithms and industrial-scale systems.</p>
 
-My research philosophy is summarized as **"From Biological Sequences to User Behaviors"**. I apply deep representation learning to decipher underlying patterns in data—from genomic sequences in my early career to billion-scale user behavior logs in commercial recommendation systems today.
+  <p>My research philosophy is summarized as <strong>"From Biological Sequences to User Behaviors"</strong>. I apply deep representation learning to decipher underlying patterns in data—from genomic sequences in my early career to billion-scale user behavior logs in commercial recommendation systems today.</p>
 
-Currently, I focus on building **Next-Generation Recommender Systems** driven by Generative AI, with specific interests in:
-* **Generative RecSys:** LLM-driven Recommendation, Sequential Modeling, and User Representation.
-* **Trustworthy AI:** Causal Inference, Unbiased Learning, and Fairness in Ranking.
-* **System Efficiency:** Edge-Cloud Collaboration, Retrieval Architecture, and Model Compression.
-
----
-
-## 🔥 News
-
-* **[Feb 2026]** 🎉 Paper *"Mitigating Popularity Bias in Recommendation"* accepted by **ACM TOIS**.
-* **[Jan 2026]** 🚀 Paper *"Hierarchical and Preference-Aware Generative Recommendations"* accepted by **TheWebConf (WWW) 2026**.
-* **[Nov 2025]** Two papers accepted! *"RPE4Rec"* by **WSDM 2026**, and *"Invariant Feature Learning"* by **AAAI 2026**.
-
+  <p>Currently, I focus on building <strong>Next-Generation Recommender Systems</strong> driven by Generative AI, with specific interests in:</p>
+  <ul>
+    <li><span itemprop="knowsAbout">Generative RecSys:</span> LLM-driven Recommendation, Sequential Modeling, and User Representation.</li>
+    <li><span itemprop="knowsAbout">Trustworthy AI:</span> Causal Inference, Unbiased Learning, and Fairness in Ranking.</li>
+    <li><span itemprop="knowsAbout">System Efficiency:</span> Edge-Cloud Collaboration, Retrieval Architecture, and Model Compression.</li>
+  </ul>
+</section>
 
 ---
 
-## 🎯 Research Highlights
+<section itemscope itemtype="http://schema.org/CreativeWork">
+<h2>🔥 News</h2>
 
-My current research focuses on three core pillars: **Generative & Trustworthy RecSys**, **Extreme Efficiency**, and **LLM Agents**.
+<ul>
+  <li itemprop="mentions"><strong>[Feb 2026]</strong> 🎉 Paper <em>"Mitigating Popularity Bias in Recommendation"</em> accepted by <strong>ACM TOIS</strong>.</li>
+  <li itemprop="mentions"><strong>[Jan 2026]</strong> 🚀 Paper <em>"Hierarchical and Preference-Aware Generative Recommendations"</em> accepted by <strong>TheWebConf (WWW) 2026</strong>.</li>
+  <li itemprop="mentions"><strong>[Nov 2025]</strong> Two papers accepted! <em>"RPE4Rec"</em> by <strong>WSDM 2026</strong>, and <em>"Invariant Feature Learning"</em> by <strong>AAAI 2026</strong>.</li>
+</ul>
+</section>
 
-### 1. Next-Gen Recommendation: Generative & Trustworthy
+---
 
-<div class="paper-card">
+<section itemscope itemtype="http://schema.org/ResearchProject">
+<h2>🎯 Research Highlights</h2>
+
+<p>My current research focuses on three core pillars: <strong>Generative & Trustworthy RecSys</strong>, <strong>Extreme Efficiency</strong>, and <strong>LLM Agents</strong>.</p>
+
+<h3 itemprop="about">1. Next-Gen Recommendation: Generative & Trustworthy</h3>
+
+<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/WWW2026.png" alt="[WWW 2026] Generative Recs: Hierarchical & Preference-Aware" loading="lazy">
+    <img src="/assets/images/WWW2026.png" alt="[WWW 2026] Generative Recs: Hierarchical & Preference-Aware" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
-    <span class="paper-title">[WWW 2026] Generative Recs: Hierarchical & Preference-Aware</span>
-    <span class="hl-tag tag-prob">Problem</span> Existing "flat-sequence" generative models overlook the hierarchical structure of user sessions and introduce noise in long histories.
+    <span class="paper-title" itemprop="headline">[WWW 2026] Generative Recs: Hierarchical & Preference-Aware</span>
+    <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">Existing "flat-sequence" generative models overlook the hierarchical structure of user sessions and introduce noise in long histories.</span>
     <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> We proposed <strong>HPGR</strong>, a two-stage generative framework. It combines structure-aware pre-training with preference-guided sparse attention to capture the true hierarchy of user interests, achieving SOTA performance.
+    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">We proposed <strong>HPGR</strong>, a two-stage generative framework. It combines structure-aware pre-training with preference-guided sparse attention to capture the true hierarchy of user interests, achieving SOTA performance.</span>
+    <meta itemprop="isPartOf" content="Research Highlights">
+    <meta itemprop="publisher" content="ACM">
+    <meta itemprop="datePublished" content="2026">
   </div>
-</div>
+</article>
+</section>
 
-<div class="paper-card">
+<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/AAAI2026.png" alt="[AAAI 2026] Causal Inference for Watch-time Prediction" loading="lazy">
+    <img src="/assets/images/AAAI2026.png" alt="[AAAI 2026] Causal Inference for Watch-time Prediction" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
-    <span class="paper-title">[AAAI 2026] Causal Inference for Watch-time Prediction</span>
-    <span class="hl-tag tag-prob">Problem</span> In short-video feeds, "duration biases" (longer videos naturally get more watch time) mislead algorithms.
+    <span class="paper-title" itemprop="headline">[AAAI 2026] Causal Inference for Watch-time Prediction</span>
+    <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">In short-video feeds, "duration biases" (longer videos naturally get more watch time) mislead algorithms.</span>
     <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> We introduced <strong>Invariant Feature Learning</strong> based on counterfactual inference to uncover the user's <em>true</em> willingness to watch, independent of video length.
+    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">We introduced <strong>Invariant Feature Learning</strong> based on counterfactual inference to uncover the user's <em>true</em> willingness to watch, independent of video length.</span>
+    <meta itemprop="isPartOf" content="Research Highlights">
+    <meta itemprop="publisher" content="AAAI">
+    <meta itemprop="datePublished" content="2026">
   </div>
-</div>
+</article>
 
-### 2. Extreme Efficiency at Scale
+<section itemscope itemtype="http://schema.org/ResearchProject">
+<h3 itemprop="about">2. Extreme Efficiency at Scale</h3>
 
-<div class="paper-card">
+<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/WSDM2026.png" alt="[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval" loading="lazy">
+    <img src="/assets/images/WSDM2026.png" alt="[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
-    <span class="paper-title">[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval</span>
-    <span class="hl-tag tag-prob">Problem</span> Advanced Transformers are often too slow for real-time retrieval on billion-scale items.
+    <span class="paper-title" itemprop="headline">[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval</span>
+    <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">Advanced Transformers are often too slow for real-time retrieval on billion-scale items.</span>
     <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> We designed a novel <strong>Relative Position Encoding (RPE)</strong> mechanism specifically for dynamic node retrieval. This architecture significantly reduces inference latency while capturing complex sequential patterns.
+    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">We designed a novel <strong>Relative Position Encoding (RPE)</strong> mechanism specifically for dynamic node retrieval. This architecture significantly reduces inference latency while capturing complex sequential patterns.</span>
+    <meta itemprop="isPartOf" content="Research Highlights">
+    <meta itemprop="publisher" content="ACM">
+    <meta itemprop="datePublished" content="2026">
   </div>
-</div>
+</article>
+</section>
 
-<div class="paper-card">
+<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/KDD2024.png" alt="[KDD 2024] Low-Rank Compression for CTR Prediction" loading="lazy">
+    <img src="/assets/images/KDD2024.png" alt="[KDD 2024] Low-Rank Compression for CTR Prediction" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
-    <span class="paper-title">[KDD 2024] Low-Rank Compression for CTR Prediction</span>
-    <span class="hl-tag tag-sol">Breakthrough</span> A unified framework to compress massive CTR models using low-rank factorization, enabling high-performance ranking on resource-constrained devices (e.g., mobile phones).
+    <span class="paper-title" itemprop="headline">[KDD 2024] Low-Rank Compression for CTR Prediction</span>
+    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">A unified framework to compress massive CTR models using low-rank factorization, enabling high-performance ranking on resource-constrained devices (e.g., mobile phones).</span>
+    <meta itemprop="isPartOf" content="Research Highlights">
+    <meta itemprop="publisher" content="ACM">
+    <meta itemprop="datePublished" content="2024">
   </div>
-</div>
+</article>
 
-### 3. LLM Agents & Data Intelligence
+<section itemscope itemtype="http://schema.org/ResearchProject">
+<h3 itemprop="about">3. LLM Agents & Data Intelligence</h3>
 
-<div class="paper-card">
+<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/ICSOC2025.png" alt="[ICSOC 2025] NL2SQL Benchmark for Business Intelligence" loading="lazy">
+    <img src="/assets/images/ICSOC2025.png" alt="[ICSOC 2025] NL2SQL Benchmark for Business Intelligence" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
-    <span class="paper-title">[ICSOC 2025] NL2SQL Benchmark for Business Intelligence</span>
-    <span class="hl-tag tag-sol">Intelligence Layer</span> Evaluating how Large Language Models (LLMs) act as Data Agents to translate natural language into complex SQL queries, enabling automated business decision-making.
+    <span class="paper-title" itemprop="headline">[ICSOC 2025] NL2SQL Benchmark for Business Intelligence</span>
+    <span class="hl-tag tag-sol">Intelligence Layer</span> <span itemprop="description">Evaluating how Large Language Models (LLMs) act as Data Agents to translate natural language into complex SQL queries, enabling automated business decision-making.</span>
+    <meta itemprop="isPartOf" content="Research Highlights">
+    <meta itemprop="publisher" content="Springer">
+    <meta itemprop="datePublished" content="2025">
   </div>
-</div>
+</article>
 
-<div class="paper-card">
+<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/NIPS2021.png" alt="[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning" loading="lazy">
+    <img src="/assets/images/NIPS2021.png" alt="[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
-    <span class="paper-title">[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning</span>
-    <span class="hl-tag tag-prob">Problem</span> Deep learning performance heavily relies on massive labeled data, which is expensive to obtain.
+    <span class="paper-title" itemprop="headline">[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning</span>
+    <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">Deep learning performance heavily relies on massive labeled data, which is expensive to obtain.</span>
     <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> We introduced a <strong>Data Programming (DP)</strong> scheme that automatically generates probabilistic labels for unlabeled data, achieving SOTA performance with minimal supervision (only 40 labeled samples).
+    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">We introduced a <strong>Data Programming (DP)</strong> scheme that automatically generates probabilistic labels for unlabeled data, achieving SOTA performance with minimal supervision (only 40 labeled samples).</span>
+    <meta itemprop="isPartOf" content="Research Highlights">
+    <meta itemprop="publisher" content="NeurIPS">
+    <meta itemprop="datePublished" content="2021">
   </div>
-</div>
+</article>
+</section>
+
+<!-- Link relations for AI understanding -->
+<link rel="canonical" href="https://jdding.github.io/" />
+<link rel="alternate" type="application/json" href="/api/research.json" title="Academic Data API" />
+<link rel="alternate" type="application/xml" href="/sitemap-extended.xml" title="Extended Sitemap" />
+
+<!-- Structured navigation -->
+<nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+  <ul>
+    <li><a href="/" itemprop="url">Home</a></li>
+    <li><a href="/publications" itemprop="url">Publications</a></li>
+    <li><a href="/patents" itemprop="url">Patents</a></li>
+    <li><a href="/collaborations" itemprop="url">Collaborations</a></li>
+    <li><a href="/faq/" itemprop="url">FAQ</a></li>
+    <li><a href="/api/" itemprop="url">API</a></li>
+  </ul>
+</nav>
 
 ### 📫 Get in Touch
 
