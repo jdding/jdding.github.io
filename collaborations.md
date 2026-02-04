@@ -214,6 +214,24 @@ classes: wide
       <p><strong>Period:</strong> Ongoing collaboration</p>
     </div>
   </div>
+
+  <!-- Tongji University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/tongji-university-logo.png" alt="Tongji University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Tongji University</h3>
+        <p class="institution-location">Shanghai, China</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Past</span>
+      </div>
+      <p><strong>Focus:</strong> Trustworthy AI and Generative RecSys</p>
+      <p><strong>Period:</strong> Past collaboration</p>
+    </div>
+  </div>
   
   <!-- Nanjing University -->
   <div class="institution-card">
@@ -250,32 +268,14 @@ classes: wide
       <p><strong>Period:</strong> Ongoing collaboration</p>
     </div>
   </div>
-  
-  <!-- Duke University -->
+
+  <!-- Tsinghua University -->
   <div class="institution-card">
     <div class="institution-header">
-      <img src="/assets/images/duke-university-logo.png" alt="Duke University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <img src="/assets/images/tsinghua-university-logo.png" alt="Tsinghua University Logo" class="institution-logo" onerror="this.style.display='none';">
       <div class="institution-text">
-        <h3 class="institution-name">Duke University</h3>
-        <p class="institution-location">Durham, NC, USA</p>
-      </div>
-    </div>
-    <div class="institution-content">
-      <div class="institution-details">
-        <span class="publication-count">Past</span>
-      </div>
-      <p><strong>Focus:</strong> Bioinformatics</p>
-      <p><strong>Period:</strong> Past collaboration</p>
-    </div>
-  </div>
-  
-  <!-- Hong Kong Baptist University -->
-  <div class="institution-card">
-    <div class="institution-header">
-      <img src="/assets/images/hong-kong-baptist-university-logo.png" alt="Hong Kong Baptist University Logo" class="institution-logo" onerror="this.style.display='none';">
-      <div class="institution-text">
-        <h3 class="institution-name">Hong Kong Baptist University</h3>
-        <p class="institution-location">Hong Kong SAR</p>
+        <h3 class="institution-name">Tsinghua University</h3>
+        <p class="institution-location">Beijing, China</p>
       </div>
     </div>
     <div class="institution-content">
@@ -304,6 +304,24 @@ classes: wide
       <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
+
+  <!-- Duke University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/duke-university-logo.png" alt="Duke University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Duke University</h3>
+        <p class="institution-location">Durham, NC, USA</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Past</span>
+      </div>
+      <p><strong>Focus:</strong> Bioinformatics</p>
+      <p><strong>Period:</strong> Past collaboration</p>
+    </div>
+  </div>
   
   <!-- Trinity College Dublin -->
   <div class="institution-card">
@@ -319,42 +337,6 @@ classes: wide
         <span class="publication-count">Past</span>
       </div>
       <p><strong>Focus:</strong> Trustworthy AI and Generative RecSys</p>
-      <p><strong>Period:</strong> Past collaboration</p>
-    </div>
-  </div>
-  
-  <!-- Tongji University -->
-  <div class="institution-card">
-    <div class="institution-header">
-      <img src="/assets/images/tongji-university-logo.png" alt="Tongji University Logo" class="institution-logo" onerror="this.style.display='none';">
-      <div class="institution-text">
-        <h3 class="institution-name">Tongji University</h3>
-        <p class="institution-location">Shanghai, China</p>
-      </div>
-    </div>
-    <div class="institution-content">
-      <div class="institution-details">
-        <span class="publication-count">Past</span>
-      </div>
-      <p><strong>Focus:</strong> Trustworthy AI and Generative RecSys</p>
-      <p><strong>Period:</strong> Past collaboration</p>
-    </div>
-  </div>
-  
-  <!-- Tsinghua University -->
-  <div class="institution-card">
-    <div class="institution-header">
-      <img src="/assets/images/tsinghua-university-logo.png" alt="Tsinghua University Logo" class="institution-logo" onerror="this.style.display='none';">
-      <div class="institution-text">
-        <h3 class="institution-name">Tsinghua University</h3>
-        <p class="institution-location">Beijing, China</p>
-      </div>
-    </div>
-    <div class="institution-content">
-      <div class="institution-details">
-        <span class="publication-count">Past</span>
-      </div>
-      <p><strong>Focus:</strong> Trustworthy AI</p>
       <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
@@ -376,8 +358,25 @@ classes: wide
       <p><strong>Period:</strong> Past collaboration</p>
     </div>
   </div>
-</div>
-
+  
+  <!-- Hong Kong Baptist University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/hong-kong-baptist-university-logo.png" alt="Hong Kong Baptist University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Hong Kong Baptist University</h3>
+        <p class="institution-location">Hong Kong SAR</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Past</span>
+      </div>
+      <p><strong>Focus:</strong> Trustworthy AI</p>
+      <p><strong>Period:</strong> Past collaboration</p>
+    </div>
+  </div>
+  
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // 初始化地图，以中国为中心
