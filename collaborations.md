@@ -394,7 +394,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Fudan University",
             location: "Shanghai, China",
             coords: [31.2989, 121.5087],
-            focus: "AI Research and Academic Collaboration",
+            focus: "Trustworthy AI and Generative RecSys",
             period: "Ongoing collaboration",
             type: "Current"
         },
@@ -402,7 +402,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Nanjing University",
             location: "Nanjing, China",
             coords: [32.0432, 118.7732],
-            focus: "Computer Science Research",
+            focus: "System Efficiency",
             period: "Ongoing collaboration",
             type: "Current"
         },
@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Shanghai Jiao Tong University",
             location: "Shanghai, China",
             coords: [31.0225, 121.4622],
-            focus: "AI and Computer Science Research",
+            focus: "Generative RecSys",
             period: "Ongoing collaboration",
             type: "Current"
         },
@@ -418,7 +418,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Duke University",
             location: "Durham, NC, USA",
             coords: [35.9974, -78.9452],
-            focus: "Advanced AI Research",
+            focus: "Bioinformatics",
             period: "Past collaboration",
             type: "Past"
         },
@@ -426,7 +426,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Hong Kong Baptist University",
             location: "Hong Kong SAR",
             coords: [22.3361, 114.1867],
-            focus: "Applied AI Research",
+            focus: "Trustworthy AI",
             period: "Past collaboration",
             type: "Past"
         },
@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Southeast University",
             location: "Nanjing, China",
             coords: [32.0392, 118.8013],
-            focus: "AI Research Collaboration",
+            focus: "Trustworthy AI",
             period: "Past collaboration",
             type: "Past"
         },
@@ -442,7 +442,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Trinity College Dublin",
             location: "Dublin, Ireland",
             coords: [53.3438, -6.2545],
-            focus: "European AI Research Collaboration",
+            focus: "Trustworthy AI and Generative RecSys",
             period: "Past collaboration",
             type: "Past"
         },
@@ -450,7 +450,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Tongji University",
             location: "Shanghai, China",
             coords: [31.2785, 121.4997],
-            focus: "Computer Science and AI Research",
+            focus: "Trustworthy AI and Generative RecSys",
             period: "Past collaboration",
             type: "Past"
         },
@@ -458,7 +458,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Tsinghua University",
             location: "Beijing, China",
             coords: [39.9994, 116.3282],
-            focus: "AI Research Collaboration",
+            focus: "Trustworthy AI",
             period: "Past collaboration",
             type: "Past"
         },
@@ -466,17 +466,14 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "University of Houston",
             location: "Houston, TX, USA",
             coords: [29.7209, -95.3428],
-            focus: "Advanced AI Research",
+            focus: "Trustworthy AI",
             period: "Past collaboration",
             type: "Past"
         }
     ];
 
-    // 为每个机构添加标记
     institutions.forEach(function(inst) {
         var marker = L.marker(inst.coords).addTo(map);
-        
-        // 创建弹出窗口内容
         var popupContent = `
             <div class="institution-popup">
                 <h3>${inst.name}</h3>
@@ -489,8 +486,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         marker.bindPopup(popupContent);
     });
-
-    // 添加地图控制
     map.zoomControl.setPosition('topright');
 });
 </script>
