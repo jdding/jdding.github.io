@@ -257,7 +257,7 @@ schema:
   <div class="pub-meta">
     <span class="venue-tag tag-red">KDD</span>
     <span class="pub-authors">Hao Yu, Minghao Fu, <strong>Jiandong Ding</strong>, et al.</span>
-    <a href="https://dl.acm.org/doi/10.1145/3637528.3671520" class="pub-link">[PDF]</a>
+    <a href="https://dl.acm.org/doi/epdf/10.1145/3637528.3671520" class="pub-link">[PDF]</a>
   </div>
 </div>
 
@@ -266,7 +266,7 @@ schema:
   <div class="pub-meta">
     <span class="venue-tag tag-gray">arXiv</span>
     <span class="pub-authors">Yibo Jin, ..., <strong>Jiandong Ding</strong>, et al.</span>
-    <a href="https://arxiv.org/abs/2408.08147" class="pub-link">[PDF]</a>
+    <a href="https://arxiv.org/pdf/2408.08147" class="pub-link">[PDF]</a>
   </div>
 </div>
 
@@ -277,7 +277,7 @@ schema:
   <div class="pub-meta">
     <span class="venue-tag tag-red">AAAI</span>
     <span class="pub-authors">Tiandeng Wu, ..., <strong>Jiandong Ding</strong><sup>*</sup></span>
-    <a href="https://ojs.aaai.org/index.php/AAAI/article/view/26611" class="pub-link">[PDF]</a>
+    <a href="https://ojs.aaai.org/index.php/AAAI/article/view/26611/26383" class="pub-link">[PDF]</a>
   </div>
 </div>
 
@@ -286,7 +286,7 @@ schema:
   <div class="pub-meta">
     <span class="venue-tag tag-red">ACL Findings</span>
     <span class="pub-authors">Boyu Wang, ..., <strong>Jiandong Ding</strong></span>
-    <a href="https://aclanthology.org/2023.findings-acl.616" class="pub-link">[PDF]</a>
+    <a href="https://aclanthology.org/2023.findings-acl.616.pdf" class="pub-link">[PDF]</a>
   </div>
 </div>
 
@@ -308,7 +308,7 @@ schema:
   <div class="pub-meta">
     <span class="venue-tag tag-red" itemprop="isPartOf">NeurIPS</span>
     <span class="pub-authors" itemprop="author">Yi Xu, <strong property="name">Jiandong Ding</strong>, et al.</span>
-    <a href="https://arxiv.org/abs/2110.13740" class="pub-link" itemprop="url">[PDF]</a>
+    <a href="https://arxiv.org/pdf/2110.13740" class="pub-link" itemprop="url">[PDF]</a>
     <meta itemprop="datePublished" content="2021">
     <meta itemprop="publisher" content="NeurIPS">
   </div>
@@ -319,7 +319,7 @@ schema:
   <div class="pub-meta">
     <span class="venue-tag tag-blue">EMNLP</span>
     <span class="pub-authors">Lu Zhang, <strong>Jiandong Ding</strong>, et al.</span>
-    <a href="https://aclanthology.org/2021.emnlp-main.222" class="pub-link">[PDF]</a>
+    <a href="https://aclanthology.org/2021.emnlp-main.222.pdf" class="pub-link">[PDF]</a>
   </div>
 </div>
 
