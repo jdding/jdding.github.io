@@ -7,6 +7,9 @@ classes: wide
 ---
 
 <style>
+  /* 隐藏页面内标题 */
+  .page__title { display: none; }
+  
   /* --- 1. 顶部数据看板 (Dashboard) --- */
   .stat-grid {
     display: grid;

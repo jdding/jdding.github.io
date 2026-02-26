@@ -17,6 +17,9 @@ schema:
 ---
 
 <style>
+  /* 隐藏页面内标题 */
+  .page__title { display: none; }
+  
   /* --- 1. 顶部数据看板 (复用 Patents 风格) --- */
   .stat-grid {
     display: grid;

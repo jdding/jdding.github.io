@@ -17,6 +17,9 @@ schema:
 ---
 
 <style>
+  /* 隐藏页面内标题 */
+  .page__title { display: none; }
+  
   /* 机构网格 - 与其他页面保持一致的样式 */
   .institution-grid {
     display: grid;
