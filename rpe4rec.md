@@ -7,9 +7,10 @@ classes: wide
 ---
 
 <style>
+  .page__title { display: none !important; }
   /* --- 基础排版 --- */
   .digest-container {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.6;
     color: #333;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -99,6 +100,13 @@ classes: wide
     margin-top: 10px;
     font-weight: 500;
   }
+
+  @media (max-width: 768px) {
+    .digest-hero { padding: 15px; margin-bottom: 25px; }
+    .hero-title { font-size: 1.15em; }
+    .section-title { font-size: 1.05em; }
+    .callout { padding: 12px 15px; }
+  }
 </style>
 
 <div class="digest-container">
@@ -110,7 +118,7 @@ classes: wide
     <strong>Authors:</strong> Ke Cheng, Heng Chang, Pengyang Wang, Liang Gu, <strong>Jiandong Ding</strong>, Yi Cao, Junchen Ye, Bowen Du
   </div>
   <div class="hero-tldr">
-    💡 <strong>TL;DR:</strong> 提出了一种专为动态节点检索设计的相对位置编码（RPE）架构。在保持 SOTA 推荐精度的同时，彻底摆脱了重度 Transformer 带来的延迟瓶颈，实现了十亿级图谱上的亚毫秒级实时检索。
+    💡 提出了一种专为动态节点检索设计的相对位置编码（RPE）架构。在保持 SOTA 推荐精度的同时，彻底摆脱了重度 Transformer 带来的延迟瓶颈，实现了十亿级图谱上的亚毫秒级实时检索。
   </div>
 </div>
 

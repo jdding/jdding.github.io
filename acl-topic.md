@@ -7,7 +7,8 @@ classes: wide
 ---
 
 <style>
-  .digest-container { font-size: 0.95rem; line-height: 1.6; color: #333; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  .page__title { display: none !important; }
+  .digest-container { font-size: 0.9rem; line-height: 1.6; color: #333; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   .digest-hero { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px 25px; margin-bottom: 35px; border-left: 5px solid #d53f8c; }
   .hero-title { font-size: 1.3em; font-weight: 800; color: #1a202c; margin-bottom: 12px; display: block; line-height: 1.4; }
   .hero-meta { font-size: 0.9em; color: #4a5568; margin-bottom: 15px; }
@@ -19,6 +20,13 @@ classes: wide
   .callout-green { background: #f0fff4; border: 1px solid #c6f6d5; }
   .tag { font-size: 0.75em; font-weight: bold; padding: 2px 8px; border-radius: 12px; color: #fff; text-transform: uppercase; }
   .tag-acl { background: #d53f8c; }
+
+  @media (max-width: 768px) {
+    .digest-hero { padding: 15px; margin-bottom: 25px; }
+    .hero-title { font-size: 1.15em; }
+    .section-title { font-size: 1.05em; }
+    .callout { padding: 12px 15px; }
+  }
 </style>
 
 <div class="digest-container">
@@ -30,7 +38,7 @@ classes: wide
     <strong>Authors:</strong> B. Wang, ..., <strong>Jiandong Ding</strong>, et al.
   </div>
   <div class="hero-tldr">
-    💡 <strong>TL;DR:</strong> 结合循环对抗训练与对比学习，攻克了神经主题模型中常见的主题坍缩与语义重叠难题，提取出高内聚、低耦合的高质量工业级文本主题。
+    💡 结合循环对抗训练与对比学习，攻克了神经主题模型中常见的主题坍缩与语义重叠难题，提取出高内聚、低耦合的高质量工业级文本主题。
   </div>
 </div>
 

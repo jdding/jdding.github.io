@@ -7,7 +7,8 @@ classes: wide
 ---
 
 <style>
-  .digest-container { font-size: 0.95rem; line-height: 1.6; color: #333; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  .page__title { display: none !important; }
+  .digest-container { font-size: 0.9rem; line-height: 1.6; color: #333; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   .digest-hero { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px 25px; margin-bottom: 35px; border-left: 5px solid #e53e3e; }
   .hero-title { font-size: 1.3em; font-weight: 800; color: #1a202c; margin-bottom: 12px; display: block; line-height: 1.4; }
   .hero-meta { font-size: 0.9em; color: #4a5568; margin-bottom: 15px; }
@@ -22,6 +23,13 @@ classes: wide
   .img-container { text-align: center; margin: 25px 0; }
   .img-container img { max-width: 100%; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
   .img-caption { font-size: 0.85em; color: #718096; margin-top: 10px; font-weight: 500; }
+
+  @media (max-width: 768px) {
+    .digest-hero { padding: 15px; margin-bottom: 25px; }
+    .hero-title { font-size: 1.15em; }
+    .section-title { font-size: 1.05em; }
+    .callout { padding: 12px 15px; }
+  }
 </style>
 
 <div class="digest-container">
@@ -33,7 +41,7 @@ classes: wide
     <strong>Authors:</strong> Zerui Chen, ..., <strong>Jiandong Ding</strong>, et al.
   </div>
   <div class="hero-tldr">
-    💡 <strong>TL;DR:</strong> 针对大模型在推荐系统中的“注意力失焦”问题，提出了 HPGR 两阶段生成框架。通过引入“层次化结构”与“偏好引导的稀疏注意力”，让 LLM 在超长用户历史中精准捕捉核心意图。
+    💡 针对大模型在推荐系统中的“注意力失焦”问题，提出了 HPGR 两阶段生成框架。通过引入“层次化结构”与“偏好引导的稀疏注意力”，让 LLM 在超长用户历史中精准捕捉核心意图。
   </div>
 </div>
 

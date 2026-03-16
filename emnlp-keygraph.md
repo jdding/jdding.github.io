@@ -7,7 +7,8 @@ classes: wide
 ---
 
 <style>
-  .digest-container { font-size: 0.95rem; line-height: 1.6; color: #333; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  .page__title { display: none !important; }
+  .digest-container { font-size: 0.9rem; line-height: 1.6; color: #333; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   .digest-hero { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px 25px; margin-bottom: 35px; border-left: 5px solid #dd6b20; }
   .hero-title { font-size: 1.3em; font-weight: 800; color: #1a202c; margin-bottom: 12px; display: block; line-height: 1.4; }
   .hero-meta { font-size: 0.9em; color: #4a5568; margin-bottom: 15px; }
@@ -19,6 +20,13 @@ classes: wide
   .callout-green { background: #f0fff4; border: 1px solid #c6f6d5; }
   .tag { font-size: 0.75em; font-weight: bold; padding: 2px 8px; border-radius: 12px; color: #fff; text-transform: uppercase; }
   .tag-emnlp { background: #dd6b20; }
+
+  @media (max-width: 768px) {
+    .digest-hero { padding: 15px; margin-bottom: 25px; }
+    .hero-title { font-size: 1.15em; }
+    .section-title { font-size: 1.05em; }
+    .callout { padding: 12px 15px; }
+  }
 </style>
 
 <div class="digest-container">
@@ -30,7 +38,7 @@ classes: wide
     <strong>Authors:</strong> L. Zhang, <strong>Jiandong Ding</strong>, et al.
   </div>
   <div class="hero-tldr">
-    💡 <strong>TL;DR:</strong> 仅需用户提供极少量领域关键词，即可利用图神经网络自动繁衍出高精度的文本分类器，彻底摆脱工业冷启动时人工逐条标注数据的梦魇。
+    💡 仅需用户提供极少量领域关键词，即可利用图神经网络自动繁衍出高精度的文本分类器，彻底摆脱工业冷启动时人工逐条标注数据的梦魇。
   </div>
 </div>
 
