@@ -220,6 +220,7 @@ schema:
     <span class="pub-authors" itemprop="author">Zerui Chen, ..., <strong property="name">Jiandong Ding</strong>, et al.</span>
     <meta itemprop="datePublished" content="2026">
     <meta itemprop="publisher" content="ACM">
+    <a href="https://cdn.aminer.cn/html/86/F1/EE/86F1EE09E1B73ADC7D839E324443.html" class="pub-link">[Interpretation]</a>
   </div>
 </div>
 
@@ -239,6 +240,7 @@ schema:
     <span class="venue-tag tag-blue">WSDM</span>
     <span class="pub-authors">Ke Cheng, ..., <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://dl.acm.org/doi/epdf/10.1145/3773966.3778006" class="pub-link">[PDF]</a>
+    <a href="https://cdn.aminer.cn/html/47/74/82/4774820bbe089e5fbe1f48bf82f8.html" class="pub-link">[Interpretation]</a>
   </div>
 </div>
 
@@ -250,7 +252,7 @@ schema:
     <span class="venue-tag tag-blue">ICSOC</span>
     <span class="pub-authors">Bora Caglayan, ..., <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://link.springer.com/10.1007/978-981-96-0808-9_27" class="pub-link">[PDF]</a>
-    <a href="https://cdn.aminer.cn/html/91/50/0E/91500E052EEB703C502E2339581E.html" class="pub-link">[Ppaer interpretation]</a>
+    <a href="https://cdn.aminer.cn/html/91/50/0E/91500E052EEB703C502E2339581E.html" class="pub-link">[Interpretation]</a>
   </div>
 </div>
 
@@ -262,6 +264,7 @@ schema:
     <span class="venue-tag tag-red">KDD</span>
     <span class="pub-authors">Hao Yu, Minghao Fu, <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://dl.acm.org/doi/epdf/10.1145/3637528.3671520" class="pub-link">[PDF]</a>
+    <a href="https://cdn.aminer.cn/html/C0/D0/DB/C0D0DB5E8ED8DBA5DC537494A31E.html" class="pub-link">[Interpretation]</a>
   </div>
 </div>
 
