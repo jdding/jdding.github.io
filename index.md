@@ -126,13 +126,13 @@ schema:
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/Beyond-the-Flat-Sequence.png" alt="[WWW 2026] Generative Recs: Hierarchical & Preference-Aware" loading="lazy" itemprop="image">
+    <img src="/assets/images/Beyond-the-Flat-Sequence.webp" alt="[WWW 2026] Generative Recs: Hierarchical & Preference-Aware" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
     <span class="paper-title" itemprop="headline">[WWW 2026] Generative Recs: Hierarchical & Preference-Aware</span>
     <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">Existing "flat-sequence" generative models overlook the hierarchical structure of user sessions and introduce noise in long histories.</span>
     <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">We proposed <strong>HPGR</strong>, a two-stage generative framework. It combines structure-aware pre-training with preference-guided sparse attention to capture the true hierarchy of user interests, achieving SOTA performance.</span>
+    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">Proposes a two-stage generative framework that shatters the traditional "flat sequence" assumption, accurately capturing long- and short-term structured interests through hierarchical preference awareness and sparse attention.</span>
     <meta itemprop="isPartOf" content="Research Highlights">
     <meta itemprop="publisher" content="ACM">
     <meta itemprop="datePublished" content="2026">
@@ -142,7 +142,7 @@ schema:
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/Invariant-Feature-Learning.png" alt="[AAAI 2026] Causal Inference for Watch-time Prediction" loading="lazy" itemprop="image">
+    <img src="/assets/images/Invariant-Feature-Learning.webp" alt="[AAAI 2026] Causal Inference for Watch-time Prediction" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
     <span class="paper-title" itemprop="headline">[AAAI 2026] Causal Inference for Watch-time Prediction</span>
@@ -160,13 +160,13 @@ schema:
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/RPE4Rec.png" alt="[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval" loading="lazy" itemprop="image">
+    <img src="/assets/images/RPE4Rec.webp" alt="[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
     <span class="paper-title" itemprop="headline">[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval</span>
     <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">Advanced Transformers are often too slow for real-time retrieval on billion-scale items.</span>
     <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">We designed a novel <strong>Relative Position Encoding (RPE)</strong> mechanism specifically for dynamic node retrieval. This architecture significantly reduces inference latency while capturing complex sequential patterns.</span>
+    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">Introduces an Efficient Relative Position Encoding (RPE) architecture that eliminates the latency bottlenecks of heavy Transformers, achieving sub-millisecond real-time retrieval on billion-scale dynamic graphs.</span>
     <meta itemprop="isPartOf" content="Research Highlights">
     <meta itemprop="publisher" content="ACM">
     <meta itemprop="datePublished" content="2026">
@@ -176,11 +176,11 @@ schema:
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/Unified-Low-rank-Compression.png" alt="[KDD 2024] Low-Rank Compression for CTR Prediction" loading="lazy" itemprop="image">
+    <img src="/assets/images/Unified-Low-rank-Compression.webp" alt="[KDD 2024] Low-Rank Compression for CTR Prediction" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
     <span class="paper-title" itemprop="headline">[KDD 2024] Low-Rank Compression for CTR Prediction</span>
-    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">A unified framework to compress massive CTR models using low-rank factorization, enabling high-performance ranking on resource-constrained devices (e.g., mobile phones).</span>
+    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">Presents a unified low-rank compression framework that reduces massive Embedding memory consumption by over 80%, unlocking high-performance recommendation in resource-constrained environments like on-device deployment.</span>
     <meta itemprop="isPartOf" content="Research Highlights">
     <meta itemprop="publisher" content="ACM">
     <meta itemprop="datePublished" content="2024">
@@ -192,11 +192,11 @@ schema:
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/BIS-NL2SQL.png" alt="[ICSOC 2025] NL2SQL Benchmark for Business Intelligence" loading="lazy" itemprop="image">
+    <img src="/assets/images/BIS-NL2SQL.webp" alt="[ICSOC 2025] NL2SQL Benchmark for Business Intelligence" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
     <span class="paper-title" itemprop="headline">[ICSOC 2025] NL2SQL Benchmark for Business Intelligence</span>
-    <span class="hl-tag tag-sol">Intelligence Layer</span> <span itemprop="description">Evaluating how Large Language Models (LLMs) act as Data Agents to translate natural language into complex SQL queries, enabling automated business decision-making.</span>
+    <span class="hl-tag tag-sol">Intelligence Layer</span> <span itemprop="description">Bridges the gap between academia and industry by introducing the first natural language to SQL (NL2SQL) service evaluation benchmark specifically designed for real-world, enterprise-level Business Intelligence (BI) scenarios.</span>
     <meta itemprop="isPartOf" content="Research Highlights">
     <meta itemprop="publisher" content="Springer">
     <meta itemprop="datePublished" content="2025">
@@ -205,13 +205,13 @@ schema:
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/DP-SSL.png" alt="[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning" loading="lazy" itemprop="image">
+    <img src="/assets/images/DP-SSL.webp" alt="[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
     <span class="paper-title" itemprop="headline">[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning</span>
     <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">Deep learning performance heavily relies on massive labeled data, which is expensive to obtain.</span>
     <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">We introduced a <strong>Data Programming (DP)</strong> scheme that automatically generates probabilistic labels for unlabeled data, achieving SOTA performance with minimal supervision (only 40 labeled samples).</span>
+    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">Ingeniously fuses Data Programming with Semi-Supervised Learning to overcome model collapse in extremely low-resource settings, achieving highly robust classification performance with only single-digit labeled samples.</span>
     <meta itemprop="isPartOf" content="Research Highlights">
     <meta itemprop="publisher" content="NeurIPS">
     <meta itemprop="datePublished" content="2021">
