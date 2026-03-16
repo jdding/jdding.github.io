@@ -240,7 +240,7 @@ schema:
     <span class="venue-tag tag-blue">WSDM</span>
     <span class="pub-authors">Ke Cheng, ..., <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://dl.acm.org/doi/epdf/10.1145/3773966.3778006" class="pub-link">[PDF]</a>
-    <a href="https://cdn.aminer.cn/html/47/74/82/4774820bbe089e5fbe1f48bf82f8.html" class="pub-link">[Interpretation]</a>
+    <a href="/rpe4rec" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
   </div>
 </div>
 
@@ -274,6 +274,7 @@ schema:
     <span class="venue-tag tag-gray">arXiv</span>
     <span class="pub-authors">Yibo Jin, ..., <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://arxiv.org/pdf/2408.08147" class="pub-link">[PDF]</a>
+    <a href="https://cdn.aminer.cn/html/FF/4A/38/FF4A380242BCAD68202A6BB25C23.html" class="pub-link">[Interpretation]</a>
   </div>
 </div>
 
