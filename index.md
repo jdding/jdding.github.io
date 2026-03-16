@@ -109,7 +109,7 @@ schema:
 <h2>🔥 News</h2>
 
 <ul>
-  <li itemprop="mentions"><strong>[Feb 2026]</strong> 🎉 Paper <em>"Mitigating Popularity Bias in Recommendation"</em> accepted by <strong>ACM TOIS</strong>.</li>
+  <li itemprop="mentions"><strong>[Mar 2026]</strong> 🎉 Paper <em>"Mitigating Popularity Bias in Recommendation"</em> accepted by <strong>ACM TOIS</strong>.</li>
   <li itemprop="mentions"><strong>[Jan 2026]</strong> 🚀 Paper <em>"Hierarchical and Preference-Aware Generative Recommendations"</em> accepted by <strong>TheWebConf (WWW) 2026</strong>.</li>
   <li itemprop="mentions"><strong>[Nov 2025]</strong> Two papers accepted! <em>"RPE4Rec"</em> by <strong>WSDM 2026</strong>, and <em>"Invariant Feature Learning"</em> by <strong>AAAI 2026</strong>.</li>
 </ul>
@@ -148,7 +148,7 @@ schema:
     <span class="paper-title" itemprop="headline">[AAAI 2026] Causal Inference for Watch-time Prediction</span>
     <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">In short-video feeds, "duration biases" (longer videos naturally get more watch time) mislead algorithms.</span>
     <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">We introduced <strong>Invariant Feature Learning</strong> based on counterfactual inference to uncover the user's <em>true</em> willingness to watch, independent of video length.</span>
+    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">Proposes a Duration-Invariant Feature Learning (DIFL) framework based on causal inference to eliminate duration bias in video recommendation, utilizing kernel-based regularization to isolate genuine user interests for highly accurate counterfactual watch-time prediction.</span>
     <meta itemprop="isPartOf" content="Research Highlights">
     <meta itemprop="publisher" content="AAAI">
     <meta itemprop="datePublished" content="2026">
