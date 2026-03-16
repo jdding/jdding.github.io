@@ -218,9 +218,9 @@ schema:
   <div class="pub-meta">
     <span class="venue-tag tag-red" itemprop="isPartOf">WWW</span>
     <span class="pub-authors" itemprop="author">Zerui Chen, ..., <strong property="name">Jiandong Ding</strong>, et al.</span>
+    <a href="/hpgr" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
     <meta itemprop="datePublished" content="2026">
     <meta itemprop="publisher" content="ACM">
-    <a href="https://cdn.aminer.cn/html/86/F1/EE/86F1EE09E1B73ADC7D839E324443.html" class="pub-link">[Interpretation]</a>
   </div>
 </div>
 
@@ -240,7 +240,7 @@ schema:
     <span class="venue-tag tag-blue">WSDM</span>
     <span class="pub-authors">Ke Cheng, ..., <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://dl.acm.org/doi/epdf/10.1145/3773966.3778006" class="pub-link">[PDF]</a>
-    <a href="/RPE4Rec" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
+    <a href="/rpe4rec" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
   </div>
 </div>
 
@@ -252,7 +252,17 @@ schema:
     <span class="venue-tag tag-blue">ICSOC</span>
     <span class="pub-authors">Bora Caglayan, ..., <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://link.springer.com/10.1007/978-981-96-0808-9_27" class="pub-link">[PDF]</a>
-    <a href="https://cdn.aminer.cn/html/91/50/0E/91500E052EEB703C502E2339581E.html" class="pub-link">[Interpretation]</a>
+    <a href="/bis-nl2sql" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
+  </div>
+</div>
+
+<div class="pub-item level-c">
+  <span class="pub-title">Towards Practical Large-scale Dynamical Heterogeneous Graph Embedding: Cold-start Resilient Recommendation.</span>
+  <div class="pub-meta">
+    <span class="venue-tag tag-gray">arXiv</span>
+    <span class="pub-authors">Mabiao Long, ..., <strong>Jiandong Ding</strong>, et al.</span>
+    <a href="https://arxiv.org/abs/2512.13120" target="_blank" class="pub-link">[PDF]</a>
+    <a href="/dygraph" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
   </div>
 </div>
 
@@ -264,7 +274,7 @@ schema:
     <span class="venue-tag tag-red">KDD</span>
     <span class="pub-authors">Hao Yu, Minghao Fu, <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://dl.acm.org/doi/epdf/10.1145/3637528.3671520" class="pub-link">[PDF]</a>
-    <a href="https://cdn.aminer.cn/html/C0/D0/DB/C0D0DB5E8ED8DBA5DC537494A31E.html" class="pub-link">[Interpretation]</a>
+    <a href="/kdd-ctr" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
   </div>
 </div>
 
@@ -274,7 +284,7 @@ schema:
     <span class="venue-tag tag-gray">arXiv</span>
     <span class="pub-authors">Yibo Jin, ..., <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://arxiv.org/pdf/2408.08147" class="pub-link">[PDF]</a>
-    <a href="https://cdn.aminer.cn/html/FF/4A/38/FF4A380242BCAD68202A6BB25C23.html" class="pub-link">[Interpretation]</a>
+    <a href="/pd-serve" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
   </div>
 </div>
 
@@ -286,6 +296,7 @@ schema:
     <span class="venue-tag tag-red">AAAI</span>
     <span class="pub-authors">Tiandeng Wu, ..., <strong>Jiandong Ding</strong><sup>*</sup></span>
     <a href="https://ojs.aaai.org/index.php/AAAI/article/view/26611/26383" class="pub-link">[PDF]</a>
+    <a href="/continual-gcn" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
   </div>
 </div>
 
@@ -295,6 +306,7 @@ schema:
     <span class="venue-tag tag-red">ACL Findings</span>
     <span class="pub-authors">Boyu Wang, ..., <strong>Jiandong Ding</strong></span>
     <a href="https://aclanthology.org/2023.findings-acl.616.pdf" class="pub-link">[PDF]</a>
+    <a href="/acl-topic" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
   </div>
 </div>
 
@@ -306,6 +318,7 @@ schema:
     <span class="venue-tag tag-blue">NAACL</span>
     <span class="pub-authors">Minyi Zhao, ..., <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://aclanthology.org/2022.naacl-main.349" class="pub-link">[PDF]</a>
+    <a href="/naacl-epida" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
   </div>
 </div>
 
@@ -317,6 +330,7 @@ schema:
     <span class="venue-tag tag-red" itemprop="isPartOf">NeurIPS</span>
     <span class="pub-authors" itemprop="author">Yi Xu, <strong property="name">Jiandong Ding</strong>, et al.</span>
     <a href="https://arxiv.org/pdf/2110.13740" class="pub-link" itemprop="url">[PDF]</a>
+    <a href="/neurips-dpssl" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
     <meta itemprop="datePublished" content="2021">
     <meta itemprop="publisher" content="NeurIPS">
   </div>
@@ -328,6 +342,7 @@ schema:
     <span class="venue-tag tag-blue">EMNLP</span>
     <span class="pub-authors">Lu Zhang, <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://aclanthology.org/2021.emnlp-main.222.pdf" class="pub-link">[PDF]</a>
+    <a href="/emnlp-keygraph" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
   </div>
 </div>
 
