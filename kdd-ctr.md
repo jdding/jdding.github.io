@@ -4,6 +4,8 @@ author_profile: true
 title: "Paper Digest: Unified Low-rank Compression for CTR"
 permalink: /kdd-ctr
 classes: wide
+description: "针对工业级推荐系统庞大的 Embedding 内存瓶颈，提出了一种统一的低秩压缩框架。在不损失特征交叉表达能力的前提下，将 CTR 模型的体积压缩至极小，成功解锁了资源受限环境（如端侧手机）下的高性能排序能力。"
+keywords: "Jiandong Ding, Recommender Systems, Huawei, Low-rank Compression, Click-through Rate Prediction, Model Compression"
 ---
 
 <style>
@@ -77,3 +79,26 @@ classes: wide
 </div>
 
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Unified Low-rank Compression Framework for Click-through Rate Prediction",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiandong Ding",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Huawei Technologies / Fudan University"
+      }
+    }
+  ],
+  "description": "针对工业级推荐系统庞大的 Embedding 内存瓶颈，提出了一种统一的低秩压缩框架。在不损失特征交叉表达能力的前提下，将 CTR 模型的体积压缩至极小，成功解锁了资源受限环境（如端侧手机）下的高性能排序能力。",
+  "about": {
+    "@type": "Thing",
+    "name": "Model Compression and Click-through Rate Prediction"
+  }
+}
+</script>

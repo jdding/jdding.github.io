@@ -4,6 +4,8 @@ author_profile: true
 title: "Paper Digest: RPE4Rec"
 permalink: /rpe4rec
 classes: wide
+description: "提出了一种专为动态节点检索设计的相对位置编码（RPE）架构。在保持 SOTA 推荐精度的同时，彻底摆脱了重度 Transformer 带来的延迟瓶颈，实现了十亿级图谱上的亚毫秒级实时检索。"
+keywords: "Jiandong Ding, Recommender Systems, Huawei, Relative Position Encoding, Dynamic Graph Retrieval, Sequential Recommendation"
 ---
 
 <style>
@@ -164,3 +166,26 @@ classes: wide
 </div>
 
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "RPE4Rec: Enhancing Dynamic Node Retrieval with Efficient Relative Position Encoding",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiandong Ding",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Huawei Technologies / Fudan University"
+      }
+    }
+  ],
+  "description": "提出了一种专为动态节点检索设计的相对位置编码（RPE）架构。在保持 SOTA 推荐精度的同时，彻底摆脱了重度 Transformer 带来的延迟瓶颈，实现了十亿级图谱上的亚毫秒级实时检索。",
+  "about": {
+    "@type": "Thing",
+    "name": "Recommender Systems and Graph Neural Networks"
+  }
+}
+</script>

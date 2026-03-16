@@ -4,6 +4,8 @@ author_profile: true
 title: "Paper Digest: Dynamic Heterogeneous Graph"
 permalink: /dygraph
 classes: wide
+description: "针对工业界棘手的极度冷启动难题，提出了一种支持十亿级规模、增量更新的动态异构图演化框架，实现了新节点表示的“即插即用”与高精度推荐。"
+keywords: "Jiandong Ding, Recommender Systems, Huawei, Dynamic Heterogeneous Graph, Cold-start Recommendation, Graph Embedding"
 ---
 
 <style>
@@ -81,3 +83,26 @@ classes: wide
 </div>
 
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Towards Practical Large-scale Dynamical Heterogeneous Graph Embedding: Cold-start Resilient Recommendation",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiandong Ding",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Huawei Technologies / Fudan University"
+      }
+    }
+  ],
+  "description": "针对工业界棘手的极度冷启动难题，提出了一种支持十亿级规模、增量更新的动态异构图演化框架，实现了新节点表示的“即插即用”与高精度推荐。",
+  "about": {
+    "@type": "Thing",
+    "name": "Graph Neural Networks and Cold-start Recommendation"
+  }
+}
+</script>

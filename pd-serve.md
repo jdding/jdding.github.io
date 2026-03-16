@@ -4,6 +4,8 @@ author_profile: true
 title: "Paper Digest: P/D-Serve"
 permalink: /pd-serve
 classes: wide
+description: "针对万亿级 LLM 服务中的算力与显存资源错配问题，设计了 P/D-Serve 分离式推理架构。通过将 Prefill（预填充）和 Decode（解码）阶段解耦部署，实现了集群级吞吐量的大幅跃升。"
+keywords: "Jiandong Ding, Huawei, LLM Serving, Disaggregated Inference, Prefill-Decode Separation, Large Language Models"
 ---
 
 <style>
@@ -70,3 +72,26 @@ classes: wide
 </div>
 
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "P/D-Serve: Serving Disaggregated Large Language Model at Scale",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiandong Ding",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Huawei Technologies / Fudan University"
+      }
+    }
+  ],
+  "description": "针对万亿级 LLM 服务中的算力与显存资源错配问题，设计了 P/D-Serve 分离式推理架构。通过将 Prefill（预填充）和 Decode（解码）阶段解耦部署，实现了集群级吞吐量的大幅跃升。",
+  "about": {
+    "@type": "Thing",
+    "name": "Large Language Model Serving and Distributed Systems"
+  }
+}
+</script>

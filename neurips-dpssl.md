@@ -4,6 +4,8 @@ author_profile: true
 title: "Paper Digest: DP-SSL"
 permalink: /neurips-dpssl
 classes: wide
+description: "巧妙融合数据编程（Data Programming）与半监督学习，攻克了极低资源下模型崩溃的难题，仅凭个位数标注样本即可实现极具鲁棒性的 SOTA 分类性能。"
+keywords: "Jiandong Ding, Huawei, Semi-supervised Learning, Data Programming, Few-shot Learning, Robust Classification"
 ---
 
 <style>
@@ -70,3 +72,26 @@ classes: wide
 </div>
 
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "DP-SSL: Towards Robust Semi-supervised Learning with A Few Labeled Samples",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiandong Ding",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Huawei Technologies / Fudan University"
+      }
+    }
+  ],
+  "description": "巧妙融合数据编程（Data Programming）与半监督学习，攻克了极低资源下模型崩溃的难题，仅凭个位数标注样本即可实现极具鲁棒性的 SOTA 分类性能。",
+  "about": {
+    "@type": "Thing",
+    "name": "Semi-supervised Learning and Data Programming"
+  }
+}
+</script>

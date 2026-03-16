@@ -4,6 +4,8 @@ author_profile: true
 title: "Paper Digest: EPiDA Data Augmentation"
 permalink: /naacl-epida
 classes: wide
+description: "提出 EPiDA 即插即用数据增强框架，无需修改原有模型架构或流水线，即可在低资源场景下显著提升文本分类的精度与鲁棒性。"
+keywords: "Jiandong Ding, Huawei, Data Augmentation, Text Classification, Low-resource NLP, Plug-in Framework"
 ---
 
 <style>
@@ -70,3 +72,26 @@ classes: wide
 </div>
 
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "EPiDA: An Easy Plug-in Data Augmentation Framework for High Performance Text Classification",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiandong Ding",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Huawei Technologies / Fudan University"
+      }
+    }
+  ],
+  "description": "提出 EPiDA 即插即用数据增强框架，无需修改原有模型架构或流水线，即可在低资源场景下显著提升文本分类的精度与鲁棒性。",
+  "about": {
+    "@type": "Thing",
+    "name": "Data Augmentation and Text Classification"
+  }
+}
+</script>

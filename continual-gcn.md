@@ -4,6 +4,8 @@ author_profile: true
 title: "Paper Digest: Continual GCN"
 permalink: /continual-gcn
 classes: wide
+description: "针对流式文本数据，提出了一种具备“终身学习”能力的图卷积网络（Continual GCN）。在持续吸纳新领域知识的同时，完美克服了神经网络的灾难性遗忘现象。"
+keywords: "Jiandong Ding, Huawei, Continual Learning, Graph Convolutional Network, Text Classification, Catastrophic Forgetting"
 ---
 
 <style>
@@ -70,3 +72,26 @@ classes: wide
 </div>
 
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Continual Graph Convolutional Network for Text Classification",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiandong Ding",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Huawei Technologies / Fudan University"
+      }
+    }
+  ],
+  "description": "针对流式文本数据，提出了一种具备“终身学习”能力的图卷积网络（Continual GCN）。在持续吸纳新领域知识的同时，完美克服了神经网络的灾难性遗忘现象。",
+  "about": {
+    "@type": "Thing",
+    "name": "Continual Learning and Graph Neural Networks"
+  }
+}
+</script>

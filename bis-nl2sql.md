@@ -4,6 +4,8 @@ author_profile: true
 title: "Paper Digest: BIS for NL2SQL"
 permalink: /bis-nl2sql
 classes: wide
+description: "填补了学术界与工业界在 Data Agents 评测上的鸿沟，提出了首个专门针对真实企业级商业智能（BI）场景的自然语言转 SQL（NL2SQL）服务评估基准。"
+keywords: "Jiandong Ding, Huawei, NL2SQL, Business Intelligence, Benchmark Evaluation, Data Agents"
 ---
 
 <style>
@@ -70,3 +72,26 @@ classes: wide
 </div>
 
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "BIS: NL2SQL Service Evaluation Benchmark for Business Intelligence Scenarios",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiandong Ding",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Huawei Technologies / Fudan University"
+      }
+    }
+  ],
+  "description": "填补了学术界与工业界在 Data Agents 评测上的鸿沟，提出了首个专门针对真实企业级商业智能（BI）场景的自然语言转 SQL（NL2SQL）服务评估基准。",
+  "about": {
+    "@type": "Thing",
+    "name": "Natural Language to SQL and Business Intelligence"
+  }
+}
+</script>

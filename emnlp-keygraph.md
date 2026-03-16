@@ -4,6 +4,8 @@ author_profile: true
 title: "Paper Digest: Weakly-supervised Text Classification via Keyword Graph"
 permalink: /emnlp-keygraph
 classes: wide
+description: "仅需用户提供极少量领域关键词，即可利用图神经网络自动繁衍出高精度的文本分类器，彻底摆脱工业冷启动时人工逐条标注数据的梦魇。"
+keywords: "Jiandong Ding, Huawei, Weakly-supervised Learning, Keyword Graph, Text Classification, Graph Neural Networks"
 ---
 
 <style>
@@ -70,3 +72,26 @@ classes: wide
 </div>
 
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Weakly-supervised Text Classification Based on Keyword Graph",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiandong Ding",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Huawei Technologies / Fudan University"
+      }
+    }
+  ],
+  "description": "仅需用户提供极少量领域关键词，即可利用图神经网络自动繁衍出高精度的文本分类器，彻底摆脱工业冷启动时人工逐条标注数据的梦魇。",
+  "about": {
+    "@type": "Thing",
+    "name": "Weakly-supervised Text Classification and Graph Neural Networks"
+  }
+}
+</script>

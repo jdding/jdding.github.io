@@ -4,6 +4,8 @@ author_profile: true
 title: "Paper Digest: Neural Topic Modeling via CycleGAN & Contrastive Learning"
 permalink: /acl-topic
 classes: wide
+description: "结合循环对抗训练与对比学习，攻克了神经主题模型中常见的主题坍缩与语义重叠难题，提取出高内聚、低耦合的高质量工业级文本主题。"
+keywords: "Jiandong Ding, Huawei, Neural Topic Modeling, Adversarial Training, Contrastive Learning, Text Mining"
 ---
 
 <style>
@@ -70,3 +72,26 @@ classes: wide
 </div>
 
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Neural Topic Modeling based on Cycle Adversarial Training and Contrastive Learning",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiandong Ding",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Huawei Technologies / Fudan University"
+      }
+    }
+  ],
+  "description": "结合循环对抗训练与对比学习，攻克了神经主题模型中常见的主题坍缩与语义重叠难题，提取出高内聚、低耦合的高质量工业级文本主题。",
+  "about": {
+    "@type": "Thing",
+    "name": "Neural Topic Modeling and Natural Language Processing"
+  }
+}
+</script>

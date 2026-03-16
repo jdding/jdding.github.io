@@ -4,6 +4,8 @@ author_profile: true
 title: "Paper Digest: HPGR"
 permalink: /hpgr
 classes: wide
+description: "针对大模型在推荐系统中的“注意力失焦”问题，提出了 HPGR 两阶段生成框架。通过引入“层次化结构”与“偏好引导的稀疏注意力”，让 LLM 在超长用户历史中精准捕捉核心意图。"
+keywords: "Jiandong Ding, Recommender Systems, Huawei, Generative Recommendation, Large Language Models, Hierarchical Attention"
 ---
 
 <style>
@@ -87,3 +89,26 @@ classes: wide
 </div>
 
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Jiandong Ding",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Huawei Technologies / Fudan University"
+      }
+    }
+  ],
+  "description": "针对大模型在推荐系统中的“注意力失焦”问题，提出了 HPGR 两阶段生成框架。通过引入“层次化结构”与“偏好引导的稀疏注意力”，让 LLM 在超长用户历史中精准捕捉核心意图。",
+  "about": {
+    "@type": "Thing",
+    "name": "Generative AI and Recommender Systems"
+  }
+}
+</script>
