@@ -126,7 +126,7 @@ schema:
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/WWW2026.png" alt="[WWW 2026] Generative Recs: Hierarchical & Preference-Aware" loading="lazy" itemprop="image">
+    <img src="/assets/images/Beyond-the-Flat-Sequence.png" alt="[WWW 2026] Generative Recs: Hierarchical & Preference-Aware" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
     <span class="paper-title" itemprop="headline">[WWW 2026] Generative Recs: Hierarchical & Preference-Aware</span>
@@ -142,7 +142,7 @@ schema:
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/AAAI2026.png" alt="[AAAI 2026] Causal Inference for Watch-time Prediction" loading="lazy" itemprop="image">
+    <img src="/assets/images/Invariant-Feature-Learning.png" alt="[AAAI 2026] Causal Inference for Watch-time Prediction" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
     <span class="paper-title" itemprop="headline">[AAAI 2026] Causal Inference for Watch-time Prediction</span>
@@ -160,7 +160,7 @@ schema:
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/WSDM2026.png" alt="[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval" loading="lazy" itemprop="image">
+    <img src="/assets/images/RPE4Rec.png" alt="[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
     <span class="paper-title" itemprop="headline">[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval</span>
@@ -176,7 +176,7 @@ schema:
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/KDD2024.png" alt="[KDD 2024] Low-Rank Compression for CTR Prediction" loading="lazy" itemprop="image">
+    <img src="/assets/images/Unified-Low-rank-Compression.png" alt="[KDD 2024] Low-Rank Compression for CTR Prediction" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
     <span class="paper-title" itemprop="headline">[KDD 2024] Low-Rank Compression for CTR Prediction</span>
@@ -192,7 +192,7 @@ schema:
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/ICSOC2025.png" alt="[ICSOC 2025] NL2SQL Benchmark for Business Intelligence" loading="lazy" itemprop="image">
+    <img src="/assets/images/BIS-NL2SQL.png" alt="[ICSOC 2025] NL2SQL Benchmark for Business Intelligence" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
     <span class="paper-title" itemprop="headline">[ICSOC 2025] NL2SQL Benchmark for Business Intelligence</span>
@@ -205,7 +205,7 @@ schema:
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/NIPS2021.png" alt="[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning" loading="lazy" itemprop="image">
+    <img src="/assets/images/DP-SSL.png" alt="[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
     <span class="paper-title" itemprop="headline">[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning</span>
