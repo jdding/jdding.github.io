@@ -250,6 +250,7 @@ schema:
     <span class="venue-tag tag-blue">ICSOC</span>
     <span class="pub-authors">Bora Caglayan, ..., <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://link.springer.com/10.1007/978-981-96-0808-9_27" class="pub-link">[PDF]</a>
+    <a href="https://cdn.aminer.cn/html/91/50/0E/91500E052EEB703C502E2339581E.html" class="pub-link">[Ppaer interpretation]</a>
   </div>
 </div>
 
