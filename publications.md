@@ -229,6 +229,7 @@ schema:
   <div class="pub-meta">
     <span class="venue-tag tag-red" itemprop="isPartOf">AAAI</span>
     <span class="pub-authors" itemprop="author">Chenghou Jin, ..., <strong property="name">Jiandong Ding</strong>, et al.</span>
+    <a href="/aaai-difl" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
     <meta itemprop="datePublished" content="2026">
     <meta itemprop="publisher" content="AAAI">
   </div>
