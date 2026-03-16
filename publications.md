@@ -240,7 +240,7 @@ schema:
     <span class="venue-tag tag-blue">WSDM</span>
     <span class="pub-authors">Ke Cheng, ..., <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://dl.acm.org/doi/epdf/10.1145/3773966.3778006" class="pub-link">[PDF]</a>
-    <a href="/rpe4rec" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
+    <a href="_pages/_posts/rpe4rec.md" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
   </div>
 </div>
 
