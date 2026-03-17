@@ -10,7 +10,7 @@ schema:
   "alternateName": "Jiandong Ding"
   "givenName": "Jiandong"
   "familyName": "Ding"
-  "jobTitle": "Principal Algorithm Expert"
+  "jobTitle": "AI Architecture Expert & Senior Algorithm Expert"
   "affiliation":
     "@type": "Organization"
     "name": "Huawei Technologies"
@@ -18,7 +18,7 @@ schema:
     "@type": "EducationalOrganization"
     "name": "Fudan University"
   "knowsAbout": ["Generative RecSys", "Causal Inference", "Recommendation Systems", "LLM Agents", "User Behavior Analysis"]
-  "description": "Principal Algorithm Expert at Huawei Technologies focusing on RecSys, Causal Inference, and LLM Agents"
+  "description": "AI Architecture Expert & Senior Algorithm Expert at Huawei Technologies focusing on Billion-scale Recommender Systems, LLM Serving Architecture, and Edge-Cloud Collaborative AI"
   "url": "https://jdding.github.io"
   "sameAs":
     - "https://www.linkedin.com/in/jiandong-ding-60498833/"
@@ -91,7 +91,7 @@ schema:
 
 <section itemscope itemtype="http://schema.org/Bio">
   <h2 itemprop="name">Research Focus</h2>
-  <p>I am a <span itemprop="jobTitle">Principal Algorithm Expert</span> at <span itemprop="affiliation">Huawei Technologies</span>, bridging the gap between theoretical algorithms and industrial-scale systems.</p>
+  <p>I am an <span itemprop="jobTitle">AI Architecture Expert & Senior Algorithm Expert</span> at <span itemprop="affiliation">Huawei Technologies</span>, bridging the gap between theoretical algorithms and industrial-scale systems.</p>
 
   <p>My research philosophy is summarized as <strong>"From Biological Sequences to User Behaviors"</strong>. I apply deep representation learning to decipher underlying patterns in data—from genomic sequences in my early career to billion-scale user behavior logs in commercial recommendation systems today.</p>
 
@@ -109,6 +109,7 @@ schema:
 <h2>🔥 News</h2>
 
 <ul>
+  <li itemprop="mentions"><strong>[Mar 2026]</strong> ✈️ Attending <strong>ECIR 2026</strong> in the Netherlands. Looking forward to deep academic exchanges!</li>
   <li itemprop="mentions"><strong>[Mar 2026]</strong> 🎉 Paper <em>"Mitigating Popularity Bias in Recommendation"</em> accepted by <strong>ACM TOIS</strong>.</li>
   <li itemprop="mentions"><strong>[Jan 2026]</strong> 🚀 Paper <em>"Hierarchical and Preference-Aware Generative Recommendations"</em> accepted by <strong>TheWebConf (WWW) 2026</strong>.</li>
   <li itemprop="mentions"><strong>[Nov 2025]</strong> Two papers accepted! <em>"RPE4Rec"</em> by <strong>WSDM 2026</strong>, and <em>"Invariant Feature Learning"</em> by <strong>AAAI 2026</strong>.</li>

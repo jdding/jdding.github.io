@@ -4,8 +4,8 @@
 remote_theme: mmistakes/minimal-mistakes
 
 # Site metadata
-title: "Jiandong Ding (丁建栋) - Principal Algorithm Expert"
-description: "Principal Algorithm Expert at Huawei. Focusing on RecSys, Causal Inference, and LLM Agents."
+title: "Jiandong Ding (丁建栋) - AI Architecture Expert & Senior Algorithm Expert"
+description: "Focusing on Billion-scale Recommender Systems, LLM Serving Architecture, and Edge-Cloud Collaborative AI at Huawei Terminal Cloud Services. Senior Reviewer for SIGIR."
 url: "https://jdding.github.io" # 站点根地址（不带末尾斜杠）
 github_username: jdding
 repository: "jdding/jdding.github.io" # 用于jekyll-seo-tag插件
@@ -14,7 +14,7 @@ locale: "en-US" # 站点语言/区域（用于主题与 SEO 元数据）
 author:
   name: "Jiandong Ding (丁建栋)"
   avatar: "/assets/images/Profile.png"
-  bio: "Principal algorithm expert at **Huawei Technologies**."
+  bio: "**AI Architecture Expert & Senior Algorithm Expert** at **Huawei Technologies** / **Fudan University**. Focusing on Billion-scale Recommender Systems, LLM Serving Architecture, and Edge-Cloud Collaborative AI. Senior Reviewer for SIGIR."
   location: "Shanghai, China"
   links:
     - label: "Home"
