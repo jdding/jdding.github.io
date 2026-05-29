@@ -33,61 +33,31 @@ schema:
     "name": "Huawei Technologies"
 ---
 
-<style>
-  /* 隐藏页面内标题（保留浏览器标签页标题） */
-  .page__title { display: none; }
-  
-  /* 重申研究亮点卡片样式，确保图片在左文字在右 */
-  .paper-card {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 0.95rem;
-    line-height: 1.55;
-    color: #444;
-  }
-  
-  .paper-card:last-child { border-bottom: none; }
-  
-  .paper-img {
-    flex: 0 0 35%;
-    max-width: 350px;
-  }
-  
-  .paper-img img {
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid #e1e4e8;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-  }
-  
-  .paper-content {
-    flex: 1;
-  }
-  
-  .paper-title {
-    font-size: 1em;
-    font-weight: 700;
-    color: #2c3e50;
-    display: block;
-    margin-bottom: 6px;
-  }
-  
-  /* --- 手机端适配 --- */
-  @media (max-width: 768px) {
-    .card-container { flex-direction: column; gap: 15px; }
-    .card-image { flex: 0 0 100%; max-width: 100%; margin-bottom: 10px; }
-    .paper-card {
-      flex-direction: column;
-    }
-    .paper-img {
-      flex: 0 0 auto;
-      max-width: 100%;
-    }
-  }
-</style>
+<section class="profile-hero" itemscope itemtype="http://schema.org/Person">
+  <p class="profile-kicker">Recommendation Systems · LLM Serving · Trustworthy AI</p>
+  <h1 itemprop="name">Jiandong Ding (丁建栋)</h1>
+  <p class="profile-lede" itemprop="description">AI architecture expert and senior algorithm expert bridging industrial-scale recommender systems, efficient LLM serving, and trustworthy learning. My work turns large-scale user behavior, retrieval, and model-efficiency problems into publishable systems research.</p>
+  <div class="hero-actions" aria-label="Primary links">
+    <a class="primary" href="/publications">Publications</a>
+    <a href="/patents">Patents</a>
+    <a href="/collaborations">Collaborations</a>
+    <a href="https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=5-e7wi4AAAAJ">Google Scholar</a>
+  </div>
+  <div class="hero-meta-strip">
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Current Focus</span>
+      <span class="hero-meta-value">Generative RecSys</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Systems Angle</span>
+      <span class="hero-meta-value">Billion-scale retrieval</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Location</span>
+      <span class="hero-meta-value">Shanghai, China</span>
+    </div>
+  </div>
+</section>
 
 <section itemscope itemtype="http://schema.org/Bio">
   <h2 itemprop="name">Research Focus</h2>
@@ -103,23 +73,23 @@ schema:
   </ul>
 </section>
 
----
+<hr class="section-break">
 
 <section itemscope itemtype="http://schema.org/CreativeWork">
-<h2>🔥 News</h2>
+<h2>News</h2>
 
 <ul>
-  <li itemprop="mentions"><strong>[Mar 2026]</strong> ✈️ Attending <strong>ECIR 2026</strong> in the Netherlands. Looking forward to deep academic exchanges!</li>
-  <li itemprop="mentions"><strong>[Mar 2026]</strong> 🎉 Paper <em>"Mitigating Popularity Bias in Recommendation"</em> accepted by <strong>ACM TOIS</strong>.</li>
-  <li itemprop="mentions"><strong>[Jan 2026]</strong> 🚀 Paper <em>"Hierarchical and Preference-Aware Generative Recommendations"</em> accepted by <strong>TheWebConf (WWW) 2026</strong>.</li>
+  <li itemprop="mentions"><strong>[Mar 2026]</strong> Attending <strong>ECIR 2026</strong> in the Netherlands. Looking forward to deep academic exchanges.</li>
+  <li itemprop="mentions"><strong>[Mar 2026]</strong> Paper <em>"Mitigating Popularity Bias in Recommendation"</em> accepted by <strong>ACM TOIS</strong>.</li>
+  <li itemprop="mentions"><strong>[Jan 2026]</strong> Paper <em>"Hierarchical and Preference-Aware Generative Recommendations"</em> accepted by <strong>TheWebConf (WWW) 2026</strong>.</li>
   <li itemprop="mentions"><strong>[Nov 2025]</strong> Two papers accepted! <em>"RPE4Rec"</em> by <strong>WSDM 2026</strong>, and <em>"Invariant Feature Learning"</em> by <strong>AAAI 2026</strong>.</li>
 </ul>
 </section>
 
----
+<hr class="section-break">
 
 <section itemscope itemtype="http://schema.org/ResearchProject">
-<h2>🎯 Research Highlights</h2>
+<h2>Research Highlights</h2>
 
 <p>My current research focuses on three core pillars: <strong>Generative & Trustworthy RecSys</strong>, <strong>Extreme Efficiency</strong>, and <strong>LLM Agents</strong>.</p>
 
@@ -139,7 +109,6 @@ schema:
     <meta itemprop="datePublished" content="2026">
   </div>
 </article>
-</section>
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
@@ -156,7 +125,6 @@ schema:
   </div>
 </article>
 
-<section itemscope itemtype="http://schema.org/ResearchProject">
 <h3 itemprop="about">2. Extreme Efficiency at Scale</h3>
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -173,7 +141,6 @@ schema:
     <meta itemprop="datePublished" content="2026">
   </div>
 </article>
-</section>
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
@@ -188,7 +155,6 @@ schema:
   </div>
 </article>
 
-<section itemscope itemtype="http://schema.org/ResearchProject">
 <h3 itemprop="about">3. LLM Agents & Data Intelligence</h3>
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
@@ -237,7 +203,7 @@ schema:
   </ul>
 </nav>
 
-### 📫 Get in Touch
+### Get in Touch
 
 I am deeply committed to bridging the gap between academia and industry. Having led numerous research initiatives at Huawei CBG and Alibaba DAMO, I am always open to:
 * **Academic Partnerships:** Collaborative research & grant applications.

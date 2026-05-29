@@ -16,176 +16,6 @@ schema:
   "description": "A comprehensive list of academic publications by Jiandong Ding"
 ---
 
-<style>
-  /* 隐藏页面内标题 */
-  .page__title { display: none; }
-  
-  /* --- 1. 顶部数据看板 (复用 Patents 风格) --- */
-  .stat-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-bottom: 30px;
-  }
-  .stat-card {
-    background: #f8f9fa;
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
-    padding: 12px;
-    text-align: center;
-    transition: transform 0.2s;
-  }
-  .stat-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-  
-  .stat-num {
-    display: block;
-    font-size: 1.6em; /* 与 Patents 保持一致 */
-    font-weight: 800;
-    color: #2c3e50;
-    line-height: 1.2;
-  }
-  .stat-label {
-    font-size: 0.8em;
-    color: #666;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-top: 5px;
-  }
-  /* 重点数字颜色 */
-  .hl-blue { color: #2980b9; }
-  .hl-red  { color: #c0392b; } /* 论文 Top-tier 用红色 */
-  .hl-orange { color: #d35400; } /* 引用数用橙色 */
-
-  /* --- 2. 论文列表容器 --- */
-  .pub-item {
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    background: #fff;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    border-left-width: 4px; 
-    transition: all 0.2s;
-    
-    /* 基准字号 */
-    font-size: 0.95rem; 
-    line-height: 1.5;   
-  }
-  .pub-item:hover {
-    background: #fafafa;
-    border-color: #ddd;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-  }
-
-  /* 左侧色条等级定义 */
-  .level-a { border-left-color: #e53e3e; } /* CCF-A / Top */
-  .level-b { border-left-color: #3182ce; } /* CCF-B */
-  .level-c { border-left-color: #a0aec0; } /* Preprint */
-
-  /* 第一行：标题 */
-  .pub-title {
-    display: block;
-    font-size: 1em; 
-    font-weight: 700;
-    color: #2d3748;
-    line-height: 1.3;
-    margin-bottom: 4px; 
-  }
-
-  /* 第二行：元数据容器 */
-  .pub-meta {
-    display: flex;
-    flex-wrap: wrap; 
-    align-items: center;
-    font-size: 0.9em; 
-    color: #666;
-  }
-
-  /* 会议标签 */
-  .venue-tag {
-    font-weight: 700;
-    padding: 0px 5px;
-    border-radius: 3px;
-    margin-right: 8px;
-    font-size: 0.85em;
-    letter-spacing: 0.3px;
-    height: 18px;
-    line-height: 16px;
-    display: inline-block;
-  }
-  .tag-red { background: #fff5f5; color: #c53030; border: 1px solid #feb2b2; }
-  .tag-blue { background: #ebf8ff; color: #2b6cb0; border: 1px solid #bee3f8; }
-  .tag-gray { background: #f7fafc; color: #4a5568; border: 1px solid #cbd5e0; }
-
-  /* 作者文字 */
-  .pub-authors {
-    margin-right: 8px;
-    color: #555;
-  }
-  .pub-authors strong { color: #1a202c; font-weight: 700; }
-
-  /* PDF 链接 */
-  .pub-link {
-    font-size: 0.85em;
-    color: #3182ce;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  .pub-link:hover { text-decoration: underline; }
-
-  /* 年份标题 */
-  .year-header {
-    font-size: 1.2em;
-    font-weight: 800;
-    margin: 25px 0 10px 0;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #edf2f7;
-    color: #2d3748;
-  }
-
-  @media (max-width: 600px) {
-    .stat-grid { gap: 10px; }
-    .stat-num { font-size: 1.4em; }
-  }
-  
-  /* 使用通用卡片样式 */
-  .paper-card {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 0.95rem;
-    line-height: 1.55;
-    color: #444;
-  }
-  
-  .paper-card:last-child { border-bottom: none; }
-  
-  .paper-img {
-    flex: 0 0 35%;
-    max-width: 350px;
-  }
-  
-  .paper-img img {
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid #e1e4e8;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-  }
-  
-  .paper-content {
-    flex: 1;
-  }
-  
-  .paper-title {
-    font-size: 1em;
-    font-weight: 700;
-    color: #2c3e50;
-    display: block;
-    margin-bottom: 6px;
-  }
-</style>
-
 <div class="stat-grid">
   <div class="stat-card">
     <span class="stat-num hl-red">10+</span>
@@ -218,7 +48,7 @@ schema:
   <div class="pub-meta">
     <span class="venue-tag tag-red" itemprop="isPartOf">WWW</span>
     <span class="pub-authors" itemprop="author">Zerui Chen, ..., <strong property="name">Jiandong Ding</strong>, et al.</span>
-    <a href="/hpgr" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest (ZH)]</a>
+    <a href="/hpgr" class="pub-link digest-link">[Digest (ZH)]</a>
     <meta itemprop="datePublished" content="2026">
     <meta itemprop="publisher" content="ACM">
   </div>
@@ -229,7 +59,7 @@ schema:
   <div class="pub-meta">
     <span class="venue-tag tag-red" itemprop="isPartOf">AAAI</span>
     <span class="pub-authors" itemprop="author">Chenghou Jin, ..., <strong property="name">Jiandong Ding</strong>, et al.</span>
-    <a href="/aaai-difl" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest (ZH)]</a>
+    <a href="/aaai-difl" class="pub-link digest-link">[Digest (ZH)]</a>
     <meta itemprop="datePublished" content="2026">
     <meta itemprop="publisher" content="AAAI">
   </div>
@@ -241,7 +71,7 @@ schema:
     <span class="venue-tag tag-blue">WSDM</span>
     <span class="pub-authors">Ke Cheng, ..., <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://dl.acm.org/doi/epdf/10.1145/3773966.3778006" class="pub-link">[PDF]</a>
-    <a href="/rpe4rec" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest (ZH)]</a>
+    <a href="/rpe4rec" class="pub-link digest-link">[Digest (ZH)]</a>
   </div>
 </div>
 
@@ -253,7 +83,7 @@ schema:
     <span class="venue-tag tag-blue">ICSOC</span>
     <span class="pub-authors">Bora Caglayan, ..., <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://link.springer.com/10.1007/978-981-96-0808-9_27" class="pub-link">[PDF]</a>
-    <a href="/bis-nl2sql" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest (ZH)]</a>
+    <a href="/bis-nl2sql" class="pub-link digest-link">[Digest (ZH)]</a>
   </div>
 </div>
 
@@ -263,7 +93,7 @@ schema:
     <span class="venue-tag tag-gray">arXiv</span>
     <span class="pub-authors">Mabiao Long, ..., <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://arxiv.org/abs/2512.13120" target="_blank" class="pub-link">[PDF]</a>
-    <a href="/dygraph" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest (ZH)]</a>
+    <a href="/dygraph" class="pub-link digest-link">[Digest (ZH)]</a>
   </div>
 </div>
 
@@ -275,7 +105,7 @@ schema:
     <span class="venue-tag tag-red">KDD</span>
     <span class="pub-authors">Hao Yu, Minghao Fu, <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://dl.acm.org/doi/epdf/10.1145/3637528.3671520" class="pub-link">[PDF]</a>
-    <a href="/kdd-ctr" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest (ZH)]</a>
+    <a href="/kdd-ctr" class="pub-link digest-link">[Digest (ZH)]</a>
   </div>
 </div>
 
@@ -285,7 +115,7 @@ schema:
     <span class="venue-tag tag-gray">arXiv</span>
     <span class="pub-authors">Yibo Jin, ..., <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://arxiv.org/pdf/2408.08147" class="pub-link">[PDF]</a>
-    <a href="/pd-serve" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest (ZH)]</a>
+    <a href="/pd-serve" class="pub-link digest-link">[Digest (ZH)]</a>
   </div>
 </div>
 
@@ -297,7 +127,7 @@ schema:
     <span class="venue-tag tag-red">AAAI</span>
     <span class="pub-authors">Tiandeng Wu, ..., <strong>Jiandong Ding</strong><sup>*</sup></span>
     <a href="https://ojs.aaai.org/index.php/AAAI/article/view/26611/26383" class="pub-link">[PDF]</a>
-    <a href="/continual-gcn" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest (ZH)]</a>
+    <a href="/continual-gcn" class="pub-link digest-link">[Digest (ZH)]</a>
   </div>
 </div>
 
@@ -307,7 +137,7 @@ schema:
     <span class="venue-tag tag-red">ACL Findings</span>
     <span class="pub-authors">Boyu Wang, ..., <strong>Jiandong Ding</strong></span>
     <a href="https://aclanthology.org/2023.findings-acl.616.pdf" class="pub-link">[PDF]</a>
-    <a href="/acl-topic" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest (ZH)]</a>
+    <a href="/acl-topic" class="pub-link digest-link">[Digest (ZH)]</a>
   </div>
 </div>
 
@@ -319,7 +149,7 @@ schema:
     <span class="venue-tag tag-blue">NAACL</span>
     <span class="pub-authors">Minyi Zhao, ..., <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://aclanthology.org/2022.naacl-main.349" class="pub-link">[PDF]</a>
-    <a href="/naacl-epida" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest (ZH)]</a>
+    <a href="/naacl-epida" class="pub-link digest-link">[Digest (ZH)]</a>
   </div>
 </div>
 
@@ -331,7 +161,7 @@ schema:
     <span class="venue-tag tag-red" itemprop="isPartOf">NeurIPS</span>
     <span class="pub-authors" itemprop="author">Yi Xu, <strong property="name">Jiandong Ding</strong>, et al.</span>
     <a href="https://arxiv.org/pdf/2110.13740" class="pub-link" itemprop="url">[PDF]</a>
-    <a href="/neurips-dpssl" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest (ZH)]</a>
+    <a href="/neurips-dpssl" class="pub-link digest-link">[Digest (ZH)]</a>
     <meta itemprop="datePublished" content="2021">
     <meta itemprop="publisher" content="NeurIPS">
   </div>
@@ -343,7 +173,7 @@ schema:
     <span class="venue-tag tag-blue">EMNLP</span>
     <span class="pub-authors">Lu Zhang, <strong>Jiandong Ding</strong>, et al.</span>
     <a href="https://aclanthology.org/2021.emnlp-main.222.pdf" class="pub-link">[PDF]</a>
-    <a href="/emnlp-keygraph" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest (ZH)]</a>
+    <a href="/emnlp-keygraph" class="pub-link digest-link">[Digest (ZH)]</a>
   </div>
 </div>
 
@@ -366,7 +196,7 @@ schema:
 </div>
 
 <h3 class="year-header">Early Career (Bioinformatics)</h3>
-<p style="color:#666; font-size:0.95rem; margin-bottom:20px;">Focus: Deciphering the code of life with Machine Learning.</p>
+<p class="career-note">Focus: Deciphering the code of life with Machine Learning.</p>
 
 <div class="pub-item level-a">
   <span class="pub-title">Finding MicroRNA Targets in Plants: Current Status and Perspectives.</span>

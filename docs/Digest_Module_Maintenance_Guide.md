@@ -31,16 +31,16 @@ Replaced traditional bare PDF links with **rich, four-section deep-dive pages** 
 
 ### b) Highlights Infographic Upgrade
 
-The `index.md` Research Highlights section's paper thumbnails have been fully replaced with **AI-generated high-resolution infographics** (produced via NotebookLM). These are stored as descriptive-name PNGs under `assets/images/`.
+The `index.md` Research Highlights section's paper thumbnails have been fully replaced with **AI-generated infographics** (produced via NotebookLM). These are stored as descriptive-name WebP files under `assets/images/` for faster loading.
 
 | Paper | Image File |
 |---|---|
-| WWW 2026 HPGR | `Beyond-the-Flat-Sequence.png` |
-| AAAI 2026 DIFL | `Invariant-Feature-Learning.png` |
-| WSDM 2026 RPE4Rec | `RPE4Rec.png` |
-| KDD 2024 CTR | `Unified-Low-rank-Compression.png` |
-| ICSOC 2025 BIS | `BIS-NL2SQL.png` |
-| NeurIPS 2021 DP-SSL | `DP-SSL.png` |
+| WWW 2026 HPGR | `Beyond-the-Flat-Sequence.webp` |
+| AAAI 2026 DIFL | `Invariant-Feature-Learning.webp` |
+| WSDM 2026 RPE4Rec | `RPE4Rec.webp` |
+| KDD 2024 CTR | `Unified-Low-rank-Compression.webp` |
+| ICSOC 2025 BIS | `BIS-NL2SQL.webp` |
+| NeurIPS 2021 DP-SSL | `DP-SSL.webp` |
 
 ---
 
@@ -154,13 +154,13 @@ Append the `<script type="application/ld+json">` block after the closing `</div>
 Insert the gold Digest button in the corresponding paper's `<div class="pub-meta">`:
 
 ```html
-<a href="/[slug]" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
+<a href="/[slug]" class="pub-link digest-link">[Digest]</a>
 ```
 
 ### Step 5 - (If Highlight paper) Update index.md infographic
 
 1. Generate a NotebookLM infographic for the paper.
-2. Save it as a descriptive-name PNG (e.g., `Paper-Short-Name.png`).
+2. Save it as a descriptive-name WebP (e.g., `Paper-Short-Name.webp`).
 3. Copy to `assets/images/`.
 4. Update the `<img src="...">` path in the corresponding `<article class="paper-card">` block in `index.md`.
 
@@ -178,6 +178,6 @@ The current `<style>` block is **duplicated across all 12 Digest files**. During
 
 ### Other Considerations
 
-- **Image optimization**: The 6 Highlight PNGs average ~5.5 MB each. Consider converting to WebP or adding responsive `srcset` attributes for faster page loads.
+- **Image optimization**: Highlight images now use WebP. The next upgrade is adding responsive `srcset` attributes for sharper desktop rendering and smaller mobile payloads.
 - **Automated testing**: Consider a CI script that validates all Digest permalinks resolve correctly and all JSON-LD blocks pass schema.org validation.
 - **Template extraction**: If the number of Digest pages grows beyond 20, consider creating a Jekyll `_layouts/digest.html` layout to further reduce per-file boilerplate.
