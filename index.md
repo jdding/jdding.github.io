@@ -80,7 +80,6 @@ schema:
 
 <ul>
   <li itemprop="mentions"><strong>[Mar 2026]</strong> Attending <strong>ECIR 2026</strong> in the Netherlands. Looking forward to deep academic exchanges.</li>
-  <li itemprop="mentions"><strong>[Mar 2026]</strong> Paper <em>"Mitigating Popularity Bias in Recommendation"</em> accepted by <strong>ACM TOIS</strong>.</li>
   <li itemprop="mentions"><strong>[Jan 2026]</strong> Paper <em>"Hierarchical and Preference-Aware Generative Recommendations"</em> accepted by <strong>TheWebConf (WWW) 2026</strong>.</li>
   <li itemprop="mentions"><strong>[Nov 2025]</strong> Two papers accepted! <em>"RPE4Rec"</em> by <strong>WSDM 2026</strong>, and <em>"Invariant Feature Learning"</em> by <strong>AAAI 2026</strong>.</li>
 </ul>

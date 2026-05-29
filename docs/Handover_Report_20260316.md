@@ -39,7 +39,7 @@ Replaced all 6 homepage Highlight paper abstracts with professional, Tech-Lead-s
 | DP-SSL | NeurIPS 2021 | "...robust classification with only single-digit labeled samples" |
 
 Additional copy fixes:
-- Corrected the publication month of *"Mitigating Popularity Bias"* to **March**.
+- Hid one publication entry pending public-facing update.
 - Added AAAI 2026 DIFL framework description.
 
 ### 1.5 System-Level Cleanup

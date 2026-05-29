@@ -34,16 +34,6 @@ schema:
 <h3 class="year-header">2026</h3>
 
 <div class="pub-item level-a" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <span class="pub-title" itemprop="headline">Mitigating Popularity Bias in Recommendation with Global Listwise Learning.</span>
-  <div class="pub-meta">
-    <span class="venue-tag tag-red" itemprop="isPartOf">TOIS</span>
-    <span class="pub-authors" itemprop="author">Tianyu Zhu, <strong property="name">Jiandong Ding</strong>, et al.</span>
-    <meta itemprop="datePublished" content="2026">
-    <meta itemprop="publisher" content="ACM">
-  </div>
-</div>
-
-<div class="pub-item level-a" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <span class="pub-title" itemprop="headline">Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations.</span>
   <div class="pub-meta">
     <span class="venue-tag tag-red" itemprop="isPartOf">WWW</span>

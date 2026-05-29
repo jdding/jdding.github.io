@@ -27,12 +27,6 @@
   },
   "news": [
     {
-      "date": "2026-02",
-      "title": "Paper \"Mitigating Popularity Bias in Recommendation\" accepted by ACM TOIS",
-      "venue": "ACM TOIS",
-      "type": "publication"
-    },
-    {
       "date": "2026-01",
       "title": "Paper \"Hierarchical and Preference-Aware Generative Recommendations\" accepted by TheWebConf (WWW) 2026",
       "venue": "TheWebConf (WWW) 2026",

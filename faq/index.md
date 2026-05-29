@@ -45,7 +45,7 @@ schema:
       "name": "What are some recent achievements of Jiandong Ding?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Recent achievements include papers accepted by top-tier venues such as ACM TOIS, TheWebConf (WWW) 2026, WSDM 2026, and AAAI 2026. Notable works include HPGR framework for hierarchical generative recommendations and invariant feature learning for causal inference in recommendation systems."
+        "text": "Recent achievements include papers accepted by top-tier venues such as TheWebConf (WWW) 2026, WSDM 2026, and AAAI 2026. Notable works include HPGR framework for hierarchical generative recommendations and invariant feature learning for causal inference in recommendation systems."
       }
     },
     {
@@ -94,7 +94,7 @@ Jiandong Ding collaborates with several institutions globally, including:
 
 ## What are some recent achievements of Jiandong Ding?
 
-Recent achievements include papers accepted by top-tier venues such as ACM TOIS, TheWebConf (WWW) 2026, WSDM 2026, and AAAI 2026. Notable works include:
+Recent achievements include papers accepted by top-tier venues such as TheWebConf (WWW) 2026, WSDM 2026, and AAAI 2026. Notable works include:
 
 - HPGR framework for hierarchical generative recommendations
 - Invariant feature learning for causal inference in recommendation systems
