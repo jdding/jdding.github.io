@@ -27,12 +27,6 @@
   },
   "news": [
     {
-      "date": "2026-02",
-      "title": "Paper \"Mitigating Popularity Bias in Recommendation\" accepted by ACM TOIS",
-      "venue": "ACM TOIS",
-      "type": "publication"
-    },
-    {
       "date": "2026-01",
       "title": "Paper \"Hierarchical and Preference-Aware Generative Recommendations\" accepted by TheWebConf (WWW) 2026",
       "venue": "TheWebConf (WWW) 2026",
@@ -87,11 +81,11 @@
     },
     {
       "id": 5,
-      "title": "[ICSOC 2025] NL2SQL Benchmark for Business Intelligence",
+      "title": "[ICSOC 2024] NL2SQL Benchmark for Business Intelligence",
       "focus": "LLM Agents & Data Intelligence",
       "breakthrough": "Evaluating how Large Language Models (LLMs) act as Data Agents to translate natural language into complex SQL queries, enabling automated business decision-making.",
-      "venue": "ICSOC 2025",
-      "year": 2025,
+      "venue": "ICSOC 2024",
+      "year": 2024,
       "tags": ["LLM Agents", "Data Intelligence", "Business Intelligence"]
     },
     {

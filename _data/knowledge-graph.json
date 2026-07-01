@@ -18,7 +18,8 @@
       "foaf:title": "Principal Algorithm Expert",
       "rdfs:label": "Jiandong Ding",
       "biro:is-author-of": [
-        "https://jdding.github.io/publication/mitigating-popularity-bias",
+        "https://jdding.github.io/publication/skillresolve-bench",
+        "https://jdding.github.io/publication/sidinspector",
         "https://jdding.github.io/publication/hierarchical-preference-aware",
         "https://jdding.github.io/publication/invariant-feature-learning",
         "https://jdding.github.io/publication/rpe4rec",
@@ -68,11 +69,19 @@
       "rdfs:comment": "Unbiased Learning, Fairness in Ranking"
     },
     {
-      "@id": "https://jdding.github.io/publication/mitigating-popularity-bias",
-      "@type": "fabio:JournalArticle",
-      "rdfs:label": "Mitigating Popularity Bias in Recommendation with Global Listwise Learning",
+      "@id": "https://jdding.github.io/publication/skillresolve-bench",
+      "@type": "fabio:Preprint",
+      "rdfs:label": "SkillResolve-Bench: Measuring and Resolving Same-Capability Ambiguity in Agent Skill Retrieval",
       "fabio:hasPublicationYear": "2026",
-      "cito:relatesToDataset": "https://example.com/dataset-recommender-systems",
+      "cito:relatesToDataset": "https://example.com/dataset-agent-skill-retrieval",
+      "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
+    },
+    {
+      "@id": "https://jdding.github.io/publication/sidinspector",
+      "@type": "fabio:Preprint",
+      "rdfs:label": "SIDInspector: A Mapping-First Diagnostic Resource for Semantic-ID Tokenizers",
+      "fabio:hasPublicationYear": "2026",
+      "cito:relatesToDataset": "https://example.com/dataset-semantic-id-tokenizers",
       "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
     },
     {
