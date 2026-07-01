@@ -1,0 +1,162 @@
+[
+  {
+    "id": "skillresolve-bench",
+    "tagline": "A benchmark for diagnosing same-capability ambiguity in agent skill retrieval.",
+    "area": "LLM Agents",
+    "problem": "Agent systems often retrieve from many skills that appear to provide the same capability. Standard retrieval metrics can hide whether the router selected the skill that actually fits the user's intent and execution context.",
+    "contribution": "SkillResolve-Bench turns same-capability ambiguity into an explicit evaluation target, separating coarse skill recall from fine-grained disambiguation among near-duplicate or overlapping tools.",
+    "impact": "The benchmark gives agent builders a sharper failure surface for tool routing, permission-sensitive skill selection, and enterprise skill libraries where small retrieval mistakes can become execution failures."
+  },
+  {
+    "id": "sidinspector",
+    "tagline": "A mapping-first diagnostic resource for Semantic-ID tokenizers.",
+    "area": "Semantic-ID Recommendation",
+    "problem": "Semantic-ID tokenizers are often judged through downstream recommendation scores, while the actual item-to-token mapping, collision patterns, and cluster structures remain hard to inspect.",
+    "contribution": "SIDInspector focuses on the mapping layer itself, providing a diagnostic resource for comparing tokenization behavior before it is hidden inside a generative recommender.",
+    "impact": "Better tokenizer diagnostics make Semantic-ID recommendation research more transparent and help explain when ID tokens support or damage retrieval, generation, and interpretability."
+  },
+  {
+    "id": "hierarchical-preference-aware-generative-recommendations",
+    "tagline": "A hierarchical and preference-aware generative recommender for long user histories.",
+    "area": "Generative RecSys",
+    "problem": "Flattening a user's historical behavior into a single long sequence ignores session structure and introduces distracting noise for generative recommendation models.",
+    "contribution": "The work introduces hierarchical structure modeling and preference-guided attention so the model can preserve meaningful session-level signals while suppressing irrelevant history.",
+    "impact": "It strengthens the narrative that generative recommendation should model behavioral structure, not just feed more tokens into a sequence model."
+  },
+  {
+    "id": "invariant-feature-learning-watch-time",
+    "tagline": "Counterfactual and invariant feature learning for duration-biased watch-time prediction.",
+    "area": "Causal Recommendation",
+    "problem": "Watch-time prediction is confounded by video duration: longer videos can look more valuable even when they do not reflect stronger user preference.",
+    "contribution": "The paper uses counterfactual reasoning and invariant feature learning to separate stable preference signals from duration-driven artifacts.",
+    "impact": "It supports more trustworthy ranking objectives for short-video recommendation, where optimizing raw watch time can otherwise amplify exposure and duration bias."
+  },
+  {
+    "id": "rpe4rec",
+    "tagline": "Efficient relative position encoding for dynamic retrieval in recommendation systems.",
+    "area": "Retrieval Efficiency",
+    "problem": "Dynamic recommendation graphs need sequential context, but heavyweight sequence encoders are costly for real-time retrieval at industrial scale.",
+    "contribution": "RPE4Rec uses efficient relative position encoding to retain ordering information without relying on expensive online transformer-style retrieval paths.",
+    "impact": "The method connects model design directly to serving constraints, making sequential retrieval more practical for high-throughput recommender systems."
+  },
+  {
+    "id": "cold-start-resilient-dynamic-heterogeneous-graph-embedding",
+    "tagline": "A practical dynamic heterogeneous graph embedding direction for cold-start recommendation.",
+    "area": "Graph Recommendation",
+    "problem": "Large heterogeneous graphs change continuously, and new nodes need useful representations before sufficient interaction history is available.",
+    "contribution": "The work frames cold-start resilient dynamic graph embedding as a practical large-scale recommendation problem, emphasizing incremental adaptation and heterogeneous relations.",
+    "impact": "It fits the broader production need for recommender systems that react quickly to new users, new items, and evolving graph structure."
+  },
+  {
+    "id": "bis-nl2sql",
+    "tagline": "An NL2SQL service evaluation benchmark for business intelligence scenarios.",
+    "area": "LLM Agents and BI",
+    "problem": "Academic NL2SQL benchmarks often simplify schemas and questions, missing the messy business logic, metric definitions, and reliability constraints of enterprise BI.",
+    "contribution": "BIS evaluates NL2SQL as a service capability in realistic business intelligence settings, where domain reasoning and schema grounding matter as much as SQL syntax.",
+    "impact": "It helps move data agents from demo-style SQL generation toward measurable enterprise analytical workflows."
+  },
+  {
+    "id": "unified-low-rank-compression",
+    "tagline": "A unified low-rank compression framework for click-through rate prediction.",
+    "area": "Model Compression",
+    "problem": "CTR models rely on large embedding tables that dominate memory and make deployment difficult in constrained serving environments.",
+    "contribution": "The paper proposes a unified low-rank compression framework for reducing embedding memory while preserving feature interaction capacity.",
+    "impact": "It addresses a central production bottleneck in recommender systems: making ranking models smaller without treating compression as an afterthought."
+  },
+  {
+    "id": "pd-serve",
+    "tagline": "Disaggregated LLM serving that separates prefill and decode stages.",
+    "area": "LLM Serving",
+    "problem": "Large language model inference has different resource profiles across prefill and decode, so a monolithic serving path can waste compute and memory.",
+    "contribution": "P/D-Serve separates prefill and decode execution so cluster resources can be scheduled around the actual bottlenecks of each stage.",
+    "impact": "The work is relevant to large-scale LLM platform engineering, where throughput, latency, and resource utilization determine service viability."
+  },
+  {
+    "id": "neural-topic-modeling-cycle-adversarial",
+    "tagline": "Cycle adversarial training and contrastive learning for neural topic modeling.",
+    "area": "Text Mining",
+    "problem": "Neural topic models can produce collapsed, overlapping, or hard-to-interpret topics when semantic separation is weak.",
+    "contribution": "The paper combines cycle adversarial training and contrastive learning to improve topic coherence and separation.",
+    "impact": "It strengthens text representation quality for downstream understanding, monitoring, and content intelligence workflows."
+  },
+  {
+    "id": "continual-gcn-text-classification",
+    "tagline": "A continual graph convolutional network for text classification.",
+    "area": "Continual Learning",
+    "problem": "Text classification systems face evolving domains and new data distributions, while neural models are vulnerable to catastrophic forgetting.",
+    "contribution": "The work introduces a continual GCN approach that keeps graph-structured textual knowledge useful as new information arrives.",
+    "impact": "It connects graph learning with long-lived text systems that must adapt over time without retraining from scratch."
+  },
+  {
+    "id": "epida",
+    "tagline": "An easy plug-in data augmentation framework for high-performance text classification.",
+    "area": "Data Augmentation",
+    "problem": "Low-resource text classification often lacks enough labeled examples, but many augmentation strategies require intrusive pipeline changes.",
+    "contribution": "EPiDA is designed as a plug-in augmentation framework that can improve text classification without rewriting the base model architecture.",
+    "impact": "The work is useful for practical NLP systems where annotation budgets are limited and teams need low-friction performance gains."
+  },
+  {
+    "id": "dp-ssl",
+    "tagline": "Robust semi-supervised learning with only a few labeled samples.",
+    "area": "Semi-supervised Learning",
+    "problem": "Semi-supervised learning can collapse under extremely scarce labels because early pseudo-label mistakes reinforce themselves.",
+    "contribution": "DP-SSL combines data programming signals with semi-supervised learning so weak supervision can stabilize training when labeled data is minimal.",
+    "impact": "It shows how expert rules and weak labels can make low-resource learning more robust than relying on self-training alone."
+  },
+  {
+    "id": "weakly-supervised-text-classification-keyword-graph",
+    "tagline": "Weakly supervised text classification from keyword graph signals.",
+    "area": "Weak Supervision",
+    "problem": "Industrial text classification often starts with a few domain keywords rather than a clean labeled dataset.",
+    "contribution": "The paper uses keyword graph structure to expand weak supervision and support text classifier construction with limited manual labeling.",
+    "impact": "It gives a practical path from domain knowledge to deployable classification models in cold-start NLP settings."
+  },
+  {
+    "id": "ai-assistance-live-streaming",
+    "tagline": "A randomized field experiment on AI assistance in live streaming.",
+    "area": "Digital Platforms",
+    "problem": "AI assistance in live streaming can change user, seller, and platform behavior, but offline metrics alone cannot establish real business effects.",
+    "contribution": "The study evaluates AI assistance with a randomized field experiment in a real live-streaming context.",
+    "impact": "It demonstrates how causal field experiments can evaluate AI features in digital commerce rather than treating AI assistance as a purely technical module."
+  },
+  {
+    "id": "sales-data-live-streaming",
+    "tagline": "A study of real-time sales analytics in live-streaming selling.",
+    "area": "Digital Commerce",
+    "problem": "Real-time sales data is both operational information and a social signal, so showing it can change behavior in live-selling environments.",
+    "contribution": "The work studies how real-time sales analytics affects live-streaming selling and platform-mediated commercial interaction.",
+    "impact": "It highlights that analytics interfaces are behavioral interventions, not just passive dashboards."
+  },
+  {
+    "id": "large-scale-mirna-clustering",
+    "tagline": "Methods and experiments for clustering large-scale miRNA sequences.",
+    "area": "Bioinformatics",
+    "problem": "Large miRNA sequence collections are difficult to organize manually, making automated grouping necessary for family discovery and downstream analysis.",
+    "contribution": "The paper studies automatic clustering methods and experiments for large-scale miRNA sequence data.",
+    "impact": "It represents an early thread in the research trajectory: extracting structure from large discrete sequence collections."
+  },
+  {
+    "id": "finding-microrna-targets-plants",
+    "tagline": "A review of plant microRNA target identification methods and perspectives.",
+    "area": "Bioinformatics",
+    "problem": "Finding plant microRNA targets requires combining sequence rules, biological constraints, and validation evidence.",
+    "contribution": "The review organizes the status and open challenges of plant microRNA target identification.",
+    "impact": "It provides a domain-grounded foundation for later work on computational pattern discovery and interpretable biological sequence analysis."
+  },
+  {
+    "id": "genome-wide-mirna-target-interactions",
+    "tagline": "An integrated genome-wide search for miRNA-target interactions in Arabidopsis thaliana.",
+    "area": "Bioinformatics",
+    "problem": "Genome-wide miRNA-target discovery requires filtering a large candidate space while preserving real regulatory relationships.",
+    "contribution": "The work combines multiple evidence sources in an integrated search for Arabidopsis thaliana miRNA-target interactions.",
+    "impact": "The method reflects a long-running theme of integrating weak signals to diagnose structure in large candidate spaces."
+  },
+  {
+    "id": "imirtp",
+    "tagline": "An integrated method for identifying miRNA-target interactions.",
+    "area": "Bioinformatics",
+    "problem": "Early miRNA target prediction needed scalable ways to combine heterogeneous signals without relying on a single brittle rule.",
+    "contribution": "imiRTP integrates multiple signals to identify miRNA-target interactions in Arabidopsis thaliana.",
+    "impact": "It is an early example of the same methodological pattern used later in recommendation: combine structured signals to rank plausible candidates."
+  }
+]

@@ -1,0 +1,103 @@
+---
+layout: single
+---
+
+{% assign pub = site.data.research.publications | where: "id", page.digest_id | first %}
+{% assign digest = site.data.digests | where: "id", page.digest_id | first %}
+{% assign canonical = pub.url | default: pub.digestUrl %}
+{% if canonical contains "://" %}
+  {% assign canonical_url = canonical %}
+{% else %}
+  {% assign canonical_url = canonical | absolute_url %}
+{% endif %}
+
+{% if pub and digest %}
+<section class="page-hero digest-hero-unified">
+  <p class="page-hero__eyebrow">Paper digest</p>
+  <h1>{{ pub.title }}</h1>
+  <p class="page-hero__lead">{{ digest.tagline }}</p>
+  <nav class="page-actions" aria-label="Digest links">
+    <a class="action-link action-link--primary" href="/publications">Publications</a>
+    {% if pub.url %}
+      {% if pub.url contains "://" %}
+    <a class="action-link" href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.linkLabel | default: "Paper" }}</a>
+      {% else %}
+    <a class="action-link" href="{{ pub.url | relative_url }}">{{ pub.linkLabel | default: "Paper" }}</a>
+      {% endif %}
+    {% endif %}
+    <a class="action-link" href="/api/publications.json">Publication API</a>
+  </nav>
+</section>
+
+<main class="digest-lite" itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <dl class="digest-facts">
+    <div>
+      <dt>Venue</dt>
+      <dd itemprop="isPartOf">{{ pub.venueTag }} {{ pub.year }}</dd>
+    </div>
+    <div>
+      <dt>Authors</dt>
+      <dd itemprop="author">{{ pub.authors }}</dd>
+    </div>
+    <div>
+      <dt>Area</dt>
+      <dd itemprop="about">{{ digest.area }}</dd>
+    </div>
+    {% if pub.citations %}
+    <div>
+      <dt>Citations</dt>
+      <dd>{{ pub.citations }}</dd>
+    </div>
+    {% endif %}
+  </dl>
+
+  <section class="digest-panel">
+    <h2>Core Problem</h2>
+    <p>{{ digest.problem }}</p>
+  </section>
+
+  <section class="digest-panel">
+    <h2>Key Contribution</h2>
+    <p>{{ digest.contribution }}</p>
+  </section>
+
+  <section class="digest-panel">
+    <h2>Why It Matters</h2>
+    <p>{{ digest.impact }}</p>
+  </section>
+
+  <section class="digest-panel">
+    <h2>Structured Access</h2>
+    <ul>
+      <li><a href="/api/publications.json">Publication API</a></li>
+      <li><a href="/api/knowledge-graph.json">Knowledge graph API</a></li>
+      <li><a href="/publications">Full publication list</a></li>
+    </ul>
+  </section>
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "{{ '/publication/' | append: pub.id | absolute_url }}",
+  "headline": {{ pub.title | jsonify }},
+  "name": {{ pub.title | jsonify }},
+  "author": {{ pub.authors | jsonify }},
+  "isPartOf": {{ pub.venue | jsonify }},
+  "datePublished": "{{ pub.year }}",
+  "description": {{ digest.tagline | jsonify }},
+  "about": {{ digest.area | jsonify }},
+  "url": {{ canonical_url | jsonify }},
+  "mainEntityOfPage": {{ page.url | absolute_url | jsonify }}
+}
+</script>
+{% else %}
+<section class="page-hero">
+  <p class="page-hero__eyebrow">Paper digest</p>
+  <h1>Digest data missing</h1>
+  <p class="page-hero__lead">
+    This digest page needs a matching publication entry and digest entry.
+  </p>
+</section>
+{% endif %}

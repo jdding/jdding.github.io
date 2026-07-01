@@ -10,7 +10,7 @@
 
 ### 1.1 Content Architecture Upgrade
 
-Completed the construction of 12 in-depth Paper Digest pages for core publications. All pages adopt a unified **"Pain Point - Breakthrough - Benefit"** four-section structure and are fully injected with JSON-LD GEO structured data (`ScholarlyArticle` schema) to maximize visibility in AI-powered search engines.
+Completed the construction of 12 in-depth Paper Digest pages for core publications. As of 2026-07-02, Digest coverage has been extended to all 20 Google Scholar aligned publication records and migrated to `_layouts/digest.html` plus `_data/digests.json`, retaining `ScholarlyArticle` JSON-LD.
 
 ### 1.2 Visual & Performance Optimization
 
@@ -35,11 +35,11 @@ Replaced all 6 homepage Highlight paper abstracts with professional, Tech-Lead-s
 | Beyond the Flat Sequence (HPGR) | WWW 2026 | "...shatters the traditional flat sequence assumption..." |
 | RPE4Rec | WSDM 2026 | "...sub-millisecond real-time retrieval on billion-scale dynamic graphs" |
 | Unified Low-rank Compression | KDD 2024 | "...reduces Embedding memory consumption by over 80%" |
-| BIS NL2SQL | ICSOC 2025 | "...first NL2SQL benchmark for enterprise-level BI scenarios" |
+| BIS NL2SQL | ICSOC 2024 | "...first NL2SQL benchmark for enterprise-level BI scenarios" |
 | DP-SSL | NeurIPS 2021 | "...robust classification with only single-digit labeled samples" |
 
 Additional copy fixes:
-- Corrected the publication month of *"Mitigating Popularity Bias"* to **March**.
+- Reconciled publication claims against the Google Scholar profile and removed the outdated TOIS entry from public surfaces.
 - Added AAAI 2026 DIFL framework description.
 
 ### 1.5 System-Level Cleanup

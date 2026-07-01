@@ -3,7 +3,7 @@ layout: single
 author_profile: true
 title: "Content Summary"
 permalink: /summary/
-classes: wide
+classes: wide site-page summary-page
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -16,47 +16,61 @@ schema:
   "description": "A brief summary of the academic website content for AI crawlers"
 ---
 
-# Academic Profile Summary
+<section class="page-hero">
+  <p class="page-hero__eyebrow">Crawler summary</p>
+  <h1>Academic Profile Summary</h1>
+  <p class="page-hero__lead">
+    This site presents Jiandong Ding's research profile, selected publications,
+    patent portfolio, collaboration network, and machine-readable academic data.
+  </p>
+  <nav class="page-actions" aria-label="Summary shortcuts">
+    <a class="action-link action-link--primary" href="/api/research.json">Research JSON</a>
+    <a class="action-link" href="/api/knowledge-graph.json">Knowledge graph</a>
+    <a class="action-link" href="/llms.txt">LLM summary</a>
+  </nav>
+</section>
 
-This website contains academic information about **Jiandong Ding (丁建栋)**, a Principal Algorithm Expert at Huawei Technologies. The site presents his research focus, publications, patents, and collaborations.
+<section aria-labelledby="main-content-areas">
+  <div class="section-header">
+    <h2 id="main-content-areas" class="section-title">Main content areas</h2>
+    <span class="section-badge">Overview</span>
+  </div>
 
-## Main Content Areas
+  <div class="focus-grid">
+    <article class="focus-card">
+      <h3>Research Focus</h3>
+      <p>Generative recommendation, trustworthy AI, causal inference, LLM agents, system efficiency, and edge-cloud collaborative AI.</p>
+    </article>
+    <article class="focus-card">
+      <h3>Publications</h3>
+      <p>Research outputs spanning recommendation systems, LLM infrastructure, data intelligence, text classification, and bioinformatics.</p>
+    </article>
+    <article class="focus-card">
+      <h3>Collaborations</h3>
+      <p>Institutional collaborations across China, the United States, Europe, and Hong Kong SAR.</p>
+    </article>
+  </div>
+</section>
 
-### 1. Research Focus
-- **Generative & Trustworthy RecSys**: LLM-driven Recommendation, Sequential Modeling, and User Representation
-- **Trustworthy AI**: Causal Inference, Unbiased Learning, and Fairness in Ranking
-- **System Efficiency**: Edge-Cloud Collaboration, Retrieval Architecture, and Model Compression
+<section aria-labelledby="machine-readable-files">
+  <div class="section-header">
+    <h2 id="machine-readable-files" class="section-title">Machine-readable files</h2>
+    <span class="section-badge">GEO</span>
+  </div>
 
-### 2. Publications
-Comprehensive list of academic publications spanning from early bioinformatics work to current research in recommendation systems and AI.
+  <ul class="resource-list">
+    <li><a href="/api/research.json">Research JSON</a></li>
+    <li><a href="/api/publications.json">Publications JSON</a></li>
+    <li><a href="/api/knowledge-graph.json">Knowledge graph</a></li>
+    <li><a href="/sitemap-extended.xml">Extended sitemap</a></li>
+    <li><a href="/faq/">FAQ page</a></li>
+  </ul>
+</section>
 
-### 3. Collaborations
-Global network of academic collaborations with institutions worldwide, including universities in China, USA, Europe and Asia.
-
-### 4. Recent News
-Latest achievements and paper acceptances at top-tier conferences and journals.
-
-### 5. Patents
-Intellectual property related to algorithm innovations and technological developments.
-
-## Technical Implementation
-
-This site implements advanced SEO and GEO (Generative Engine Optimization) techniques including:
-
-- Structured data markup (JSON-LD and schema.org)
-- Semantic HTML elements with proper attributes
-- Comprehensive API endpoints for academic data
-- Knowledge graph representation of research entities
-- FAQ section for common queries
-- Detailed sitemap and robots.txt for crawlers
-
-## API Access
-
-Structured academic data is available via API at `/api/research.json`.
-
-## Contact Information
-
-For collaboration inquiries: **jdding [at] fudan.edu.cn**
-
----
-*This summary is designed to help AI systems understand the content and structure of this academic profile.*
+<section aria-labelledby="contact-summary">
+  <div class="section-header">
+    <h2 id="contact-summary" class="section-title">Contact</h2>
+    <span class="section-badge">Collaboration</span>
+  </div>
+  <p>For collaboration inquiries: <strong>jdding [at] fudan.edu.cn</strong></p>
+</section>

@@ -1,0 +1,84 @@
+---
+layout: null
+permalink: /api/knowledge-graph.json
+---
+
+{
+  "@context": {
+    "biro": "http://purl.org/spar/biro/",
+    "fabio": "http://purl.org/spar/fabio/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "{{ site.url }}/person/jiandong_ding",
+      "@type": "foaf:Person",
+      "foaf:name": {{ site.data.research.profile.name | jsonify }},
+      "foaf:title": {{ site.data.research.profile.title | jsonify }},
+      "rdfs:label": "Jiandong Ding",
+      "vcard:hasEmail": "mailto:{{ site.data.research.profile.email }}",
+      "foaf:homepage": {{ site.data.research.profile.website | jsonify }},
+      "foaf:based_near": {{ site.data.research.profile.location | jsonify }},
+      "foaf:knowsAbout": {{ site.data.research.profile.researchAreas | jsonify }},
+      "foaf:sameAs": {{ site.data.research.profile.sameAs | jsonify }},
+      "biro:is-author-of": [
+        {% for pub in site.data.research.publications %}
+        "{{ site.url }}/publication/{{ pub.id }}"{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    {% for area in site.data.research.profile.researchAreas %},
+    {
+      "@id": "{{ site.url }}/research-area/{{ area | slugify }}",
+      "@type": "rdfs:Class",
+      "rdfs:label": {{ area | jsonify }}
+    }
+    {% endfor %}
+    {% for pub in site.data.research.publications %},
+    {
+      "@id": "{{ site.url }}/publication/{{ pub.id }}",
+      {% case pub.type %}
+      {% when "Preprint" %}
+      "@type": "fabio:Preprint",
+      {% when "Journal article" %}
+      "@type": "fabio:JournalArticle",
+      {% else %}
+      "@type": "fabio:ConferenceProceeding",
+      {% endcase %}
+      "rdfs:label": {{ pub.title | jsonify }},
+      "fabio:hasPublicationYear": "{{ pub.year }}",
+      "fabio:hasSequenceIdentifier": {{ pub.id | jsonify }},
+      "fabio:hasManifestation": {{ pub.venue | jsonify }},
+      "rdfs:seeAlso": {% assign see_also = pub.url | default: pub.digestUrl %}{% if see_also contains "://" %}{{ see_also | jsonify }}{% else %}{{ see_also | absolute_url | jsonify }}{% endif %},
+      "biro:is-authored-by": "{{ site.url }}/person/jiandong_ding",
+      "rdfs:comment": {{ pub.type | jsonify }}
+    }
+    {% endfor %}
+    {% for inst in site.data.research.collaborations %},
+    {
+      "@id": "{{ site.url }}/organization/{{ inst.name | slugify }}",
+      "@type": "foaf:Organization",
+      "foaf:name": {{ inst.name | jsonify }},
+      "rdfs:label": {{ inst.name | jsonify }},
+      "vcard:locality": {{ inst.location | jsonify }}
+    },
+    {
+      "@id": "{{ site.url }}/collaboration/{{ inst.name | slugify }}",
+      "@type": "biro:Relationship",
+      "rdfs:label": {{ "Collaboration with " | append: inst.name | jsonify }},
+      "biro:relates": [
+        "{{ site.url }}/person/jiandong_ding",
+        "{{ site.url }}/organization/{{ inst.name | slugify }}"
+      ],
+      "rdfs:comment": {{ "Focus: " | append: inst.focus | append: ", " | append: inst.period | jsonify }},
+      "vcard:category": {{ inst.status | jsonify }}{% if inst.coords %},
+      "wgs:lat": {{ inst.coords[0] | jsonify }},
+      "wgs:long": {{ inst.coords[1] | jsonify }}{% endif %}
+    }
+    {% endfor %}
+  ]
+}

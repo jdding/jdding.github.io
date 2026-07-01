@@ -7,6 +7,9 @@ Sitemap: https://jdding.github.io/sitemap.xml
 Sitemap: https://jdding.github.io/sitemap-extended.xml
 
 # AI-specific directives
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 

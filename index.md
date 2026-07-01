@@ -1,246 +1,149 @@
 ---
 layout: single
 author_profile: true
-title: "Jiandong Ding (丁建栋)"
-classes: wide
-schema:
-  "@context": "https://schema.org"
-  "@type": "Person"
-  "name": "Jiandong Ding (丁建栋)"
-  "alternateName": "Jiandong Ding"
-  "givenName": "Jiandong"
-  "familyName": "Ding"
-  "jobTitle": "AI Architecture Expert & Senior Algorithm Expert"
-  "affiliation":
-    "@type": "Organization"
-    "name": "Huawei Technologies"
-  "alumniOf":
-    "@type": "EducationalOrganization"
-    "name": "Fudan University"
-  "knowsAbout": ["Generative RecSys", "Causal Inference", "Recommendation Systems", "LLM Agents", "User Behavior Analysis"]
-  "description": "AI Architecture Expert & Senior Algorithm Expert at Huawei Technologies focusing on Billion-scale Recommender Systems, LLM Serving Architecture, and Edge-Cloud Collaborative AI"
-  "url": "https://jdding.github.io"
-  "sameAs":
-    - "https://www.linkedin.com/in/jiandong-ding-60498833/"
-    - "https://github.com/jdding"
-    - "https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=5-e7wi4AAAAJ"
-  "address":
-    "@type": "PostalAddress"
-    "addressLocality": "Shanghai"
-    "addressCountry": "China"
-  "worksFor":
-    "@type": "Organization"
-    "name": "Huawei Technologies"
+title: "AI Architecture Expert & Senior Algorithm Expert"
+description: "Jiandong Ding's academic profile on recommender systems, LLM serving architecture, trustworthy AI, and edge-cloud collaborative AI."
+classes: wide home-page
 ---
 
-<style>
-  /* 隐藏页面内标题（保留浏览器标签页标题） */
-  .page__title { display: none; }
-  
-  /* 重申研究亮点卡片样式，确保图片在左文字在右 */
-  .paper-card {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 0.95rem;
-    line-height: 1.55;
-    color: #444;
-  }
-  
-  .paper-card:last-child { border-bottom: none; }
-  
-  .paper-img {
-    flex: 0 0 35%;
-    max-width: 350px;
-  }
-  
-  .paper-img img {
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid #e1e4e8;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-  }
-  
-  .paper-content {
-    flex: 1;
-  }
-  
-  .paper-title {
-    font-size: 1em;
-    font-weight: 700;
-    color: #2c3e50;
-    display: block;
-    margin-bottom: 6px;
-  }
-  
-  /* --- 手机端适配 --- */
-  @media (max-width: 768px) {
-    .card-container { flex-direction: column; gap: 15px; }
-    .card-image { flex: 0 0 100%; max-width: 100%; margin-bottom: 10px; }
-    .paper-card {
-      flex-direction: column;
-    }
-    .paper-img {
-      flex: 0 0 auto;
-      max-width: 100%;
-    }
-  }
-</style>
+{% assign profile = site.data.research.profile %}
+{% assign metrics = site.data.research.publicationMetrics %}
+{% assign grouped_projects = site.data.research.researchProjects | group_by: "focus" %}
 
-<section itemscope itemtype="http://schema.org/Bio">
-  <h2 itemprop="name">Research Focus</h2>
-  <p>I am an <span itemprop="jobTitle">AI Architecture Expert & Senior Algorithm Expert</span> at <span itemprop="affiliation">Huawei Technologies</span>, bridging the gap between theoretical algorithms and industrial-scale systems.</p>
+<section class="home-hero" itemscope itemtype="https://schema.org/Person">
+  <p class="home-hero__eyebrow">Academic and industrial AI research profile</p>
+  <h1 itemprop="name">{{ profile.name }}</h1>
+  <p class="home-hero__lead">
+    <span itemprop="jobTitle">{{ profile.title }}</span> at
+    <span itemprop="worksFor">{{ profile.organization }}</span>, working on
+    billion-scale recommender systems, LLM serving architecture, trustworthy ranking,
+    and edge-cloud collaborative AI.
+  </p>
 
-  <p>My research philosophy is summarized as <strong>"From Biological Sequences to User Behaviors"</strong>. I apply deep representation learning to decipher underlying patterns in data—from genomic sequences in my early career to billion-scale user behavior logs in commercial recommendation systems today.</p>
+  <nav class="home-actions" aria-label="Primary profile links">
+    <a class="home-button home-button--primary" href="{{ '/publications' | relative_url }}">Publications</a>
+    <a class="home-button" href="{{ '/collaborations' | relative_url }}">Collaborations</a>
+    <a class="home-button" href="{{ '/api/research.json' | relative_url }}">Research JSON</a>
+    <a class="home-button" href="{{ '/llms.txt' | relative_url }}">LLM Summary</a>
+  </nav>
 
-  <p>Currently, I focus on building <strong>Next-Generation Recommender Systems</strong> driven by Generative AI, with specific interests in:</p>
-  <ul>
-    <li><span itemprop="knowsAbout">Generative RecSys:</span> LLM-driven Recommendation, Sequential Modeling, and User Representation.</li>
-    <li><span itemprop="knowsAbout">Trustworthy AI:</span> Causal Inference, Unbiased Learning, and Fairness in Ranking.</li>
-    <li><span itemprop="knowsAbout">System Efficiency:</span> Edge-Cloud Collaboration, Retrieval Architecture, and Model Compression.</li>
+  <div class="home-metrics" aria-label="Research profile metrics">
+    <div class="metric">
+      <span class="metric__value">{{ metrics.totalCitations }}</span>
+      <span class="metric__label">Citations</span>
+    </div>
+    <div class="metric">
+      <span class="metric__value">{{ metrics.totalPublications }}</span>
+      <span class="metric__label">Publications</span>
+    </div>
+    <div class="metric">
+      <span class="metric__value">{{ metrics.hIndex }}</span>
+      <span class="metric__label">h-index</span>
+    </div>
+    <div class="metric">
+      <span class="metric__value">{{ metrics.i10Index }}</span>
+      <span class="metric__label">i10-index</span>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="research-focus">
+  <p class="section-kicker">Research Focus</p>
+  <h2 id="research-focus">From biological sequences to user behaviors</h2>
+  <p>
+    My work connects representation learning, causal reasoning, and production-scale
+    systems. The current focus is next-generation recommendation driven by generative AI,
+    with a practical emphasis on serving efficiency and trustworthy user modeling.
+  </p>
+
+  <div class="focus-grid">
+    <article class="focus-card">
+      <h3>Generative & Trustworthy RecSys</h3>
+      <p>LLM-driven recommendation, sequential modeling, causal inference, and unbiased learning for ranking systems.</p>
+    </article>
+    <article class="focus-card">
+      <h3>Extreme Efficiency at Scale</h3>
+      <p>Retrieval architecture, model compression, embedding efficiency, and edge-cloud collaboration for production workloads.</p>
+    </article>
+    <article class="focus-card">
+      <h3>LLM Agents & Data Intelligence</h3>
+      <p>Evaluation benchmarks and agentic data interfaces that turn business questions into reliable analytical workflows.</p>
+    </article>
+  </div>
+</section>
+
+<section aria-labelledby="news">
+  <p class="section-kicker">Updates</p>
+  <h2 id="news">News</h2>
+  <ul class="news-list">
+    {% for item in site.data.research.news %}
+    <li>
+      <span class="news-date">{{ item.date }}</span>
+      {{ item.title }}
+    </li>
+    {% endfor %}
   </ul>
 </section>
 
----
+<section aria-labelledby="featured-research">
+  <p class="section-kicker">Selected Work</p>
+  <h2 id="featured-research">Research highlights</h2>
+  <p>
+    These projects summarize the current arc of my research: better recommendation
+    objectives, faster serving paths, and AI systems that are easier to evaluate.
+  </p>
 
-<section itemscope itemtype="http://schema.org/CreativeWork">
-<h2>🔥 News</h2>
-
-<ul>
-  <li itemprop="mentions"><strong>[Mar 2026]</strong> ✈️ Attending <strong>ECIR 2026</strong> in the Netherlands. Looking forward to deep academic exchanges!</li>
-  <li itemprop="mentions"><strong>[Mar 2026]</strong> 🎉 Paper <em>"Mitigating Popularity Bias in Recommendation"</em> accepted by <strong>ACM TOIS</strong>.</li>
-  <li itemprop="mentions"><strong>[Jan 2026]</strong> 🚀 Paper <em>"Hierarchical and Preference-Aware Generative Recommendations"</em> accepted by <strong>TheWebConf (WWW) 2026</strong>.</li>
-  <li itemprop="mentions"><strong>[Nov 2025]</strong> Two papers accepted! <em>"RPE4Rec"</em> by <strong>WSDM 2026</strong>, and <em>"Invariant Feature Learning"</em> by <strong>AAAI 2026</strong>.</li>
-</ul>
+  {% for group in grouped_projects %}
+  <section class="research-cluster" aria-labelledby="cluster-{{ forloop.index }}">
+    <h3 id="cluster-{{ forloop.index }}">{{ group.name }}</h3>
+    <div class="research-grid">
+      {% for project in group.items %}
+      <article class="research-card" itemscope itemtype="https://schema.org/ScholarlyArticle">
+        <a href="{{ project.url | relative_url }}" aria-label="{{ project.shortTitle }}">
+          <img src="{{ project.image | relative_url }}" alt="{{ project.shortTitle }}" loading="lazy" itemprop="image">
+        </a>
+        <div class="research-card__body">
+          <div class="research-card__meta">{{ project.venue }} · {{ project.year }}</div>
+          <h4 itemprop="headline">{{ project.shortTitle }}</h4>
+          <p><span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">{{ project.problem }}</span></p>
+          <p><span class="hl-tag tag-sol">Contribution</span> <span itemprop="description">{{ project.breakthrough }}</span></p>
+          <meta itemprop="publisher" content="{{ project.publisher }}">
+          <meta itemprop="datePublished" content="{{ project.year }}">
+          <link itemprop="url" href="{{ project.url | absolute_url }}">
+          <ul class="tag-row" aria-label="Research tags">
+            {% for tag in project.tags %}
+            <li itemprop="about">{{ tag }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
 </section>
 
----
-
-<section itemscope itemtype="http://schema.org/ResearchProject">
-<h2>🎯 Research Highlights</h2>
-
-<p>My current research focuses on three core pillars: <strong>Generative & Trustworthy RecSys</strong>, <strong>Extreme Efficiency</strong>, and <strong>LLM Agents</strong>.</p>
-
-<h3 itemprop="about">1. Next-Gen Recommendation: Generative & Trustworthy</h3>
-
-<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <div class="paper-img"> 
-    <img src="/assets/images/Beyond-the-Flat-Sequence.webp" alt="[WWW 2026] Generative Recs: Hierarchical & Preference-Aware" loading="lazy" itemprop="image">
-  </div>
-  <div class="paper-content">
-    <span class="paper-title" itemprop="headline">[WWW 2026] Generative Recs: Hierarchical & Preference-Aware</span>
-    <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">Existing "flat-sequence" generative models overlook the hierarchical structure of user sessions and introduce noise in long histories.</span>
-    <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">Proposes a two-stage generative framework that shatters the traditional "flat sequence" assumption, accurately capturing long- and short-term structured interests through hierarchical preference awareness and sparse attention.</span>
-    <meta itemprop="isPartOf" content="Research Highlights">
-    <meta itemprop="publisher" content="ACM">
-    <meta itemprop="datePublished" content="2026">
-  </div>
-</article>
-</section>
-
-<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <div class="paper-img"> 
-    <img src="/assets/images/Invariant-Feature-Learning.webp" alt="[AAAI 2026] Causal Inference for Watch-time Prediction" loading="lazy" itemprop="image">
-  </div>
-  <div class="paper-content">
-    <span class="paper-title" itemprop="headline">[AAAI 2026] Causal Inference for Watch-time Prediction</span>
-    <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">In short-video feeds, "duration biases" (longer videos naturally get more watch time) mislead algorithms.</span>
-    <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">Proposes a Duration-Invariant Feature Learning (DIFL) framework based on causal inference to eliminate duration bias in video recommendation, utilizing kernel-based regularization to isolate genuine user interests for highly accurate counterfactual watch-time prediction.</span>
-    <meta itemprop="isPartOf" content="Research Highlights">
-    <meta itemprop="publisher" content="AAAI">
-    <meta itemprop="datePublished" content="2026">
-  </div>
-</article>
-
-<section itemscope itemtype="http://schema.org/ResearchProject">
-<h3 itemprop="about">2. Extreme Efficiency at Scale</h3>
-
-<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <div class="paper-img"> 
-    <img src="/assets/images/RPE4Rec.webp" alt="[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval" loading="lazy" itemprop="image">
-  </div>
-  <div class="paper-content">
-    <span class="paper-title" itemprop="headline">[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval</span>
-    <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">Advanced Transformers are often too slow for real-time retrieval on billion-scale items.</span>
-    <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">Introduces an Efficient Relative Position Encoding (RPE) architecture that eliminates the latency bottlenecks of heavy Transformers, achieving sub-millisecond real-time retrieval on billion-scale dynamic graphs.</span>
-    <meta itemprop="isPartOf" content="Research Highlights">
-    <meta itemprop="publisher" content="ACM">
-    <meta itemprop="datePublished" content="2026">
-  </div>
-</article>
-</section>
-
-<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <div class="paper-img"> 
-    <img src="/assets/images/Unified-Low-rank-Compression.webp" alt="[KDD 2024] Low-Rank Compression for CTR Prediction" loading="lazy" itemprop="image">
-  </div>
-  <div class="paper-content">
-    <span class="paper-title" itemprop="headline">[KDD 2024] Low-Rank Compression for CTR Prediction</span>
-    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">Presents a unified low-rank compression framework that reduces massive Embedding memory consumption by over 80%, unlocking high-performance recommendation in resource-constrained environments like on-device deployment.</span>
-    <meta itemprop="isPartOf" content="Research Highlights">
-    <meta itemprop="publisher" content="ACM">
-    <meta itemprop="datePublished" content="2024">
-  </div>
-</article>
-
-<section itemscope itemtype="http://schema.org/ResearchProject">
-<h3 itemprop="about">3. LLM Agents & Data Intelligence</h3>
-
-<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <div class="paper-img"> 
-    <img src="/assets/images/BIS-NL2SQL.webp" alt="[ICSOC 2025] NL2SQL Benchmark for Business Intelligence" loading="lazy" itemprop="image">
-  </div>
-  <div class="paper-content">
-    <span class="paper-title" itemprop="headline">[ICSOC 2025] NL2SQL Benchmark for Business Intelligence</span>
-    <span class="hl-tag tag-sol">Intelligence Layer</span> <span itemprop="description">Bridges the gap between academia and industry by introducing the first natural language to SQL (NL2SQL) service evaluation benchmark specifically designed for real-world, enterprise-level Business Intelligence (BI) scenarios.</span>
-    <meta itemprop="isPartOf" content="Research Highlights">
-    <meta itemprop="publisher" content="Springer">
-    <meta itemprop="datePublished" content="2025">
-  </div>
-</article>
-
-<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <div class="paper-img"> 
-    <img src="/assets/images/DP-SSL.webp" alt="[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning" loading="lazy" itemprop="image">
-  </div>
-  <div class="paper-content">
-    <span class="paper-title" itemprop="headline">[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning</span>
-    <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">Deep learning performance heavily relies on massive labeled data, which is expensive to obtain.</span>
-    <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">Ingeniously fuses Data Programming with Semi-Supervised Learning to overcome model collapse in extremely low-resource settings, achieving highly robust classification performance with only single-digit labeled samples.</span>
-    <meta itemprop="isPartOf" content="Research Highlights">
-    <meta itemprop="publisher" content="NeurIPS">
-    <meta itemprop="datePublished" content="2021">
-  </div>
-</article>
-</section>
-
-<!-- Link relations for AI understanding -->
-<link rel="canonical" href="https://jdding.github.io/" />
-<link rel="alternate" type="application/json" href="/api/research.json" title="Academic Data API" />
-<link rel="alternate" type="application/xml" href="/sitemap-extended.xml" title="Extended Sitemap" />
-
-<!-- Hidden structured navigation for AI/Sitemap -->
-<nav itemscope itemtype="http://schema.org/SiteNavigationElement" style="display:none;">
-  <ul>
-    <li><a href="/" itemprop="url">Home</a></li>
-    <li><a href="/publications" itemprop="url">Publications</a></li>
-    <li><a href="/patents" itemprop="url">Patents</a></li>
-    <li><a href="/collaborations" itemprop="url">Collaborations</a></li>
-    <li><a href="/faq/" itemprop="url">FAQ</a></li>
-    <li><a href="/api/" itemprop="url">API</a></li>
+<section class="geo-panel" aria-labelledby="machine-readable-profile">
+  <p class="section-kicker">GEO</p>
+  <h2 id="machine-readable-profile">Machine-readable research profile</h2>
+  <p>
+    Search engines, scholarly indexers, and AI assistants can use the structured
+    endpoints below to resolve this profile, publications, collaborations, and research areas.
+  </p>
+  <ul class="resource-list">
+    <li><a href="{{ '/api/research.json' | relative_url }}">Research JSON</a></li>
+    <li><a href="{{ '/api/knowledge-graph.json' | relative_url }}">Knowledge graph</a></li>
+    <li><a href="{{ '/sitemap-extended.xml' | relative_url }}">Extended sitemap</a></li>
+    <li><a href="{{ '/faq/' | relative_url }}">FAQ page</a></li>
   </ul>
-</nav>
+</section>
 
-### 📫 Get in Touch
-
-I am deeply committed to bridging the gap between academia and industry. Having led numerous research initiatives at Huawei CBG and Alibaba DAMO, I am always open to:
-* **Academic Partnerships:** Collaborative research & grant applications.
-* **Professional Events:** Industry summits and tech forums.
-
-For collaboration inquiries: **jdding [at] fudan.edu.cn**
+<section class="contact-panel" aria-labelledby="contact">
+  <p class="section-kicker">Contact</p>
+  <h2 id="contact">Get in touch</h2>
+  <p>
+    I am open to academic partnerships, collaborative research, grant applications,
+    industry summits, and technical forums around recommender systems and AI infrastructure.
+  </p>
+  <p>For collaboration inquiries: <strong>jdding [at] fudan.edu.cn</strong></p>
+</section>

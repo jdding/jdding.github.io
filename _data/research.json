@@ -3,11 +3,12 @@
     "name": "Jiandong Ding (丁建栋)",
     "givenName": "Jiandong",
     "familyName": "Ding",
-    "title": "Principal Algorithm Expert",
+    "title": "AI Architecture Expert & Senior Algorithm Expert",
     "organization": "Huawei Technologies",
     "email": "jdding@fudan.edu.cn",
     "location": "Shanghai, China",
-    "bio": "Principal algorithm expert at Huawei Technologies focusing on RecSys, Causal Inference, and LLM Agents",
+    "website": "https://jdding.github.io",
+    "bio": "AI Architecture Expert and Senior Algorithm Expert at Huawei Technologies, focusing on billion-scale recommender systems, LLM serving architecture, edge-cloud collaborative AI, causal inference, and trustworthy ranking.",
     "researchAreas": [
       "Generative RecSys",
       "Causal Inference",
@@ -15,7 +16,14 @@
       "LLM Agents",
       "User Behavior Analysis",
       "Trustworthy AI",
-      "System Efficiency"
+      "System Efficiency",
+      "Edge-Cloud Collaborative AI",
+      "LLM Serving Architecture"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/jiandong-ding-60498833/",
+      "https://github.com/jdding",
+      "https://scholar.google.com/citations?user=5-e7wi4AAAAJ&hl=en"
     ],
     "education": [
       {
@@ -27,10 +35,10 @@
   },
   "news": [
     {
-      "date": "2026-02",
-      "title": "Paper \"Mitigating Popularity Bias in Recommendation\" accepted by ACM TOIS",
-      "venue": "ACM TOIS",
-      "type": "publication"
+      "date": "2026-03",
+      "title": "Attending ECIR 2026 in the Netherlands for academic exchanges",
+      "venue": "ECIR 2026",
+      "type": "event"
     },
     {
       "date": "2026-01",
@@ -40,69 +48,411 @@
     },
     {
       "date": "2025-11",
-      "title": "Two papers accepted! \"RPE4Rec\" by WSDM 2026, and \"Invariant Feature Learning\" by AAAI 2026",
-      "venue": ["WSDM 2026", "AAAI 2026"],
+      "title": "Two papers accepted: \"RPE4Rec\" by WSDM 2026 and \"Invariant Feature Learning\" by AAAI 2026",
+      "venue": [
+        "WSDM 2026",
+        "AAAI 2026"
+      ],
       "type": "publication"
+    }
+  ],
+  "publicationMetrics": {
+    "snapshotDate": "2026-07-01",
+    "totalPublications": 20,
+    "totalCitations": 493,
+    "citationsSince2021": 255,
+    "hIndex": 10,
+    "hIndexSince2021": 8,
+    "i10Index": 11,
+    "i10IndexSince2021": 8
+  },
+  "publications": [
+    {
+      "id": "skillresolve-bench",
+      "title": "SkillResolve-Bench: Measuring and Resolving Same-Capability Ambiguity in Agent Skill Retrieval",
+      "authors": "J Ding",
+      "venue": "arXiv preprint arXiv:2606.10388",
+      "venueTag": "arXiv",
+      "venueClass": "tag-gray",
+      "year": 2026,
+      "level": "level-c",
+      "type": "Preprint",
+      "url": "https://arxiv.org/abs/2606.10388",
+      "linkLabel": "arXiv",
+      "digestUrl": "/skillresolve-bench"
+    },
+    {
+      "id": "sidinspector",
+      "title": "SIDInspector: A Mapping-First Diagnostic Resource for Semantic-ID Tokenizers",
+      "authors": "J Ding, H Chang, H Qin, T Liu",
+      "venue": "arXiv preprint arXiv:2606.10375",
+      "venueTag": "arXiv",
+      "venueClass": "tag-gray",
+      "year": 2026,
+      "level": "level-c",
+      "type": "Preprint",
+      "url": "https://arxiv.org/abs/2606.10375",
+      "linkLabel": "arXiv",
+      "digestUrl": "/sidinspector"
+    },
+    {
+      "id": "hierarchical-preference-aware-generative-recommendations",
+      "title": "Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations",
+      "authors": "Z Chen, H Chang, T Liu, C Zhou, Y Cao, J Ding, M Liu, B Qin",
+      "venue": "Proceedings of the ACM Web Conference 2026, 7999-8007",
+      "venueTag": "WWW",
+      "venueClass": "tag-red",
+      "year": 2026,
+      "citations": 1,
+      "level": "level-a",
+      "type": "Conference paper",
+      "digestUrl": "/hpgr"
+    },
+    {
+      "id": "invariant-feature-learning-watch-time",
+      "title": "Invariant feature learning for counterfactual watch-time prediction in video recommendation",
+      "authors": "C Jin, Y Ren, H Ma, Y Xia, Y Guan, H Zhang, J Ding, J Guan, S Zhou",
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence 40 (17), 14964-14972",
+      "venueTag": "AAAI",
+      "venueClass": "tag-red",
+      "year": 2026,
+      "citations": 2,
+      "level": "level-a",
+      "type": "Conference paper",
+      "digestUrl": "/aaai-difl"
+    },
+    {
+      "id": "rpe4rec",
+      "title": "RPE4Rec: Enhancing Dynamic Node Retrieval with Efficient Relative Position Encoding for Recommendation Systems",
+      "authors": "K Cheng, H Chang, P Wang, L Gu, J Ding, Y Cao, J Ye, B Du",
+      "venue": "Proceedings of the Nineteenth ACM International Conference on Web Search and Data Mining",
+      "venueTag": "WSDM",
+      "venueClass": "tag-blue",
+      "year": 2026,
+      "level": "level-b",
+      "type": "Conference paper",
+      "digestUrl": "/rpe4rec"
+    },
+    {
+      "id": "cold-start-resilient-dynamic-heterogeneous-graph-embedding",
+      "title": "Towards Practical Large-scale Dynamical Heterogeneous Graph Embedding: Cold-start Resilient Recommendation",
+      "authors": "M Long, J Liu, Y Li, H Xiong, J Yan, K Wang, Y Cao, J Ding",
+      "venue": "arXiv preprint arXiv:2512.13120",
+      "venueTag": "arXiv",
+      "venueClass": "tag-gray",
+      "year": 2025,
+      "citations": 2,
+      "level": "level-c",
+      "type": "Preprint",
+      "url": "https://arxiv.org/abs/2512.13120",
+      "linkLabel": "arXiv",
+      "digestUrl": "/dygraph"
+    },
+    {
+      "id": "bis-nl2sql",
+      "title": "BIS: NL2SQL service evaluation benchmark for business intelligence scenarios",
+      "authors": "B Caglayan, M Wang, JD Kelleher, S Fei, G Tong, J Ding, P Zhang",
+      "venue": "International Conference on Service-Oriented Computing, 357-372",
+      "venueTag": "ICSOC",
+      "venueClass": "tag-blue",
+      "year": 2024,
+      "citations": 5,
+      "level": "level-b",
+      "type": "Conference paper",
+      "digestUrl": "/bis-nl2sql"
+    },
+    {
+      "id": "unified-low-rank-compression",
+      "title": "Unified low-rank compression framework for click-through rate prediction",
+      "authors": "H Yu, M Fu, J Ding, Y Zhou, J Wu",
+      "venue": "Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+      "venueTag": "KDD",
+      "venueClass": "tag-red",
+      "year": 2024,
+      "citations": 2,
+      "level": "level-a",
+      "type": "Conference paper",
+      "digestUrl": "/kdd-ctr"
+    },
+    {
+      "id": "pd-serve",
+      "title": "P/D-Serve: Serving disaggregated large language model at scale",
+      "authors": "Y Jin, T Wang, H Lin, M Song, P Li, Y Ma, Y Shan, Z Yuan, C Li, Y Sun, et al.",
+      "venue": "arXiv preprint arXiv:2408.08147",
+      "venueTag": "arXiv",
+      "venueClass": "tag-gray",
+      "year": 2024,
+      "citations": 33,
+      "level": "level-c",
+      "type": "Preprint",
+      "url": "https://arxiv.org/abs/2408.08147",
+      "linkLabel": "arXiv",
+      "digestUrl": "/pd-serve"
+    },
+    {
+      "id": "neural-topic-modeling-cycle-adversarial",
+      "title": "Neural topic modeling based on cycle adversarial training and contrastive learning",
+      "authors": "B Wang, L Zhang, D Zhou, Y Cao, J Ding",
+      "venue": "Findings of the Association for Computational Linguistics: ACL 2023, 9720-9731",
+      "venueTag": "ACL Findings",
+      "venueClass": "tag-red",
+      "year": 2023,
+      "citations": 4,
+      "level": "level-a",
+      "type": "Conference paper",
+      "digestUrl": "/acl-topic"
+    },
+    {
+      "id": "continual-gcn-text-classification",
+      "title": "Continual Graph Convolutional Network for Text Classification",
+      "authors": "T Wu, Q Liu, Y Cao, Y Huang, XM Wu, J Ding",
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence 37 (11), 13754-13762",
+      "venueTag": "AAAI",
+      "venueClass": "tag-red",
+      "year": 2023,
+      "citations": 13,
+      "level": "level-a",
+      "type": "Conference paper",
+      "digestUrl": "/continual-gcn"
+    },
+    {
+      "id": "epida",
+      "title": "EPiDA: An Easy Plug-in Data Augmentation Framework for High Performance Text Classification",
+      "authors": "M Zhao, L Zhang, Y Xu, J Ding, J Guan, S Zhou",
+      "venue": "Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics",
+      "venueTag": "NAACL",
+      "venueClass": "tag-blue",
+      "year": 2022,
+      "citations": 15,
+      "level": "level-b",
+      "type": "Conference paper",
+      "digestUrl": "/naacl-epida"
+    },
+    {
+      "id": "dp-ssl",
+      "title": "DP-SSL: Towards robust semi-supervised learning with a few labeled samples",
+      "authors": "Y Xu, J Ding, L Zhang, S Zhou",
+      "venue": "Advances in Neural Information Processing Systems 34, 15895-15907",
+      "venueTag": "NeurIPS",
+      "venueClass": "tag-red",
+      "year": 2021,
+      "citations": 37,
+      "level": "level-a",
+      "type": "Conference paper",
+      "digestUrl": "/neurips-dpssl"
+    },
+    {
+      "id": "weakly-supervised-text-classification-keyword-graph",
+      "title": "Weakly-supervised Text Classification Based on Keyword Graph",
+      "authors": "L Zhang, J Ding, Y Xu, Y Liu, S Zhou",
+      "venue": "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+      "venueTag": "EMNLP",
+      "venueClass": "tag-blue",
+      "year": 2021,
+      "citations": 73,
+      "level": "level-b",
+      "type": "Conference paper",
+      "digestUrl": "/emnlp-keygraph"
+    },
+    {
+      "id": "ai-assistance-live-streaming",
+      "title": "Effectiveness of AI Assistance in Live Streaming: A Randomized Field Experiment",
+      "authors": "L Wang, Y He, J Ding, N Huang, Y Hong, X Guo, D Liu, G Chen",
+      "venue": "ICIS 2021 Proceedings",
+      "venueTag": "ICIS",
+      "venueClass": "tag-red",
+      "year": 2021,
+      "citations": 5,
+      "level": "level-a",
+      "type": "Conference paper",
+      "url": "https://aisel.aisnet.org/icis2021/hci_robot/hci_robot/3/",
+      "linkLabel": "PDF",
+      "digestUrl": "/ai-assistance-live-streaming"
+    },
+    {
+      "id": "sales-data-live-streaming",
+      "title": "The Sales Data Sells: Effects of Real-Time Sales Analytics on Live Streaming Selling",
+      "authors": "Y He, L Wang, N Huang, Y Hong, J Ding, Y Sun, Y Liu",
+      "venue": "ICIS 2021 Proceedings",
+      "venueTag": "ICIS",
+      "venueClass": "tag-red",
+      "year": 2021,
+      "citations": 10,
+      "level": "level-a",
+      "type": "Conference paper",
+      "url": "https://aisel.aisnet.org/icis2021/data_analytics/data_analytics/2/",
+      "linkLabel": "PDF",
+      "digestUrl": "/sales-data-live-streaming"
+    },
+    {
+      "id": "large-scale-mirna-clustering",
+      "title": "Automatically clustering large-scale miRNA sequences: methods and experiments",
+      "authors": "L Wan, J Ding, T Jin, J Guan, S Zhou",
+      "venue": "BMC Genomics 13 (Suppl 8), S15",
+      "venueTag": "BMC Genomics",
+      "venueClass": "tag-blue",
+      "year": 2012,
+      "citations": 8,
+      "level": "level-b",
+      "type": "Journal article",
+      "url": "https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-13-S8-S15",
+      "linkLabel": "PDF",
+      "digestUrl": "/large-scale-mirna-clustering"
+    },
+    {
+      "id": "finding-microrna-targets-plants",
+      "title": "Finding MicroRNA Targets in Plants: Current Status and Perspectives",
+      "authors": "J Ding, S Zhou, J Guan",
+      "venue": "Genomics, Proteomics & Bioinformatics",
+      "venueTag": "GPB",
+      "venueClass": "tag-red",
+      "year": 2012,
+      "citations": 76,
+      "level": "level-a",
+      "type": "Journal article",
+      "url": "https://academic.oup.com/gpb/article/10/5/264/7221796",
+      "linkLabel": "PDF",
+      "digestUrl": "/finding-microrna-targets-plants"
+    },
+    {
+      "id": "genome-wide-mirna-target-interactions",
+      "title": "Genome-wide search for miRNA-target interactions in Arabidopsis thaliana with an integrated approach",
+      "authors": "J Ding, D Li, U Ohler, J Guan, S Zhou",
+      "venue": "BMC Genomics 13 (Suppl 3), S3",
+      "venueTag": "BMC Genomics",
+      "venueClass": "tag-blue",
+      "year": 2012,
+      "citations": 34,
+      "level": "level-b",
+      "type": "Journal article",
+      "url": "https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-13-S3",
+      "linkLabel": "PDF",
+      "digestUrl": "/genome-wide-mirna-target-interactions"
+    },
+    {
+      "id": "imirtp",
+      "title": "imiRTP: an integrated method to identifying miRNA-target interactions in Arabidopsis thaliana",
+      "authors": "J Ding, S Yu, U Ohler, J Guan, S Zhou",
+      "venue": "2011 IEEE International Conference on Bioinformatics and Biomedicine, 100-104",
+      "venueTag": "BIBM",
+      "venueClass": "tag-blue",
+      "year": 2011,
+      "citations": 10,
+      "level": "level-b",
+      "type": "Conference paper",
+      "url": "http://ieeexplore.ieee.org/document/6120415/",
+      "linkLabel": "PDF",
+      "digestUrl": "/imirtp"
     }
   ],
   "researchProjects": [
     {
       "id": 1,
       "title": "[WWW 2026] Generative Recs: Hierarchical & Preference-Aware",
+      "shortTitle": "Hierarchical & Preference-Aware Generative Recommendations",
       "focus": "Next-Gen Recommendation: Generative & Trustworthy",
-      "problem": "Existing \"flat-sequence\" generative models overlook the hierarchical structure of user sessions and introduce noise in long histories.",
-      "breakthrough": "We proposed HPGR, a two-stage generative framework. It combines structure-aware pre-training with preference-guided sparse attention to capture the true hierarchy of user interests, achieving SOTA performance.",
+      "problem": "Flat-sequence generative recommenders overlook the hierarchy of user sessions and introduce noise in long histories.",
+      "breakthrough": "HPGR uses structure-aware pre-training and preference-guided sparse attention to capture long- and short-term user interests more faithfully.",
       "venue": "WWW 2026",
+      "publisher": "ACM",
       "year": 2026,
-      "tags": ["Generative RecSys", "LLM-driven Recommendation", "Sequential Modeling"]
+      "url": "/hpgr",
+      "image": "/assets/images/Beyond-the-Flat-Sequence.webp",
+      "tags": [
+        "Generative RecSys",
+        "LLM-driven Recommendation",
+        "Sequential Modeling"
+      ]
     },
     {
       "id": 2,
       "title": "[AAAI 2026] Causal Inference for Watch-time Prediction",
+      "shortTitle": "Invariant Feature Learning for Watch-time Prediction",
       "focus": "Next-Gen Recommendation: Generative & Trustworthy",
-      "problem": "In short-video feeds, \"duration biases\" (longer videos naturally get more watch time) mislead algorithms.",
-      "breakthrough": "We introduced Invariant Feature Learning based on counterfactual inference to uncover the user's true willingness to watch, independent of video length.",
+      "problem": "Short-video watch time is confounded by duration bias, so longer videos can look better even when user preference is weak.",
+      "breakthrough": "DIFL uses counterfactual and invariant feature learning to separate genuine user interest from video-duration effects.",
       "venue": "AAAI 2026",
+      "publisher": "AAAI",
       "year": 2026,
-      "tags": ["Trustworthy AI", "Causal Inference", "Unbiased Learning"]
+      "url": "/aaai-difl",
+      "image": "/assets/images/Invariant-Feature-Learning.webp",
+      "tags": [
+        "Trustworthy AI",
+        "Causal Inference",
+        "Unbiased Learning"
+      ]
     },
     {
       "id": 3,
       "title": "[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval",
+      "shortTitle": "RPE4Rec for Dynamic Retrieval",
       "focus": "Extreme Efficiency at Scale",
-      "problem": "Advanced Transformers are often too slow for real-time retrieval on billion-scale items.",
-      "breakthrough": "We designed a novel Relative Position Encoding (RPE) mechanism specifically for dynamic node retrieval. This architecture significantly reduces inference latency while capturing complex sequential patterns.",
+      "problem": "Heavy sequential models are difficult to serve within real-time retrieval budgets over billion-scale dynamic graphs.",
+      "breakthrough": "RPE4Rec introduces efficient relative position encoding to retain sequential signal while reducing online retrieval latency.",
       "venue": "WSDM 2026",
+      "publisher": "ACM",
       "year": 2026,
-      "tags": ["System Efficiency", "Edge-Cloud Collaboration", "Retrieval Architecture"]
+      "url": "/rpe4rec",
+      "image": "/assets/images/RPE4Rec.webp",
+      "tags": [
+        "System Efficiency",
+        "Edge-Cloud Collaboration",
+        "Retrieval Architecture"
+      ]
     },
     {
       "id": 4,
       "title": "[KDD 2024] Low-Rank Compression for CTR Prediction",
+      "shortTitle": "Unified Low-Rank Compression for CTR",
       "focus": "Extreme Efficiency at Scale",
-      "breakthrough": "A unified framework to compress massive CTR models using low-rank factorization, enabling high-performance ranking on resource-constrained devices (e.g., mobile phones).",
+      "problem": "Large embedding tables dominate CTR model memory and make edge or resource-constrained deployment difficult.",
+      "breakthrough": "A unified low-rank framework compresses massive embedding modules while preserving ranking performance for production recommendation workloads.",
       "venue": "KDD 2024",
+      "publisher": "ACM",
       "year": 2024,
-      "tags": ["System Efficiency", "Model Compression", "CTR Prediction"]
+      "url": "/kdd-ctr",
+      "image": "/assets/images/Unified-Low-rank-Compression.webp",
+      "tags": [
+        "System Efficiency",
+        "Model Compression",
+        "CTR Prediction"
+      ]
     },
     {
       "id": 5,
-      "title": "[ICSOC 2025] NL2SQL Benchmark for Business Intelligence",
+      "title": "[ICSOC 2024] NL2SQL Benchmark for Business Intelligence",
+      "shortTitle": "BIS for NL2SQL Evaluation",
       "focus": "LLM Agents & Data Intelligence",
-      "breakthrough": "Evaluating how Large Language Models (LLMs) act as Data Agents to translate natural language into complex SQL queries, enabling automated business decision-making.",
-      "venue": "ICSOC 2025",
-      "year": 2025,
-      "tags": ["LLM Agents", "Data Intelligence", "Business Intelligence"]
+      "problem": "Academic NL2SQL benchmarks often miss real enterprise BI constraints such as complex schemas, metrics, and service reliability.",
+      "breakthrough": "BIS evaluates LLM agents as data intelligence interfaces for translating business questions into production-grade SQL workflows.",
+      "venue": "ICSOC 2024",
+      "publisher": "Springer",
+      "year": 2024,
+      "url": "/bis-nl2sql",
+      "image": "/assets/images/BIS-NL2SQL.webp",
+      "tags": [
+        "LLM Agents",
+        "Data Intelligence",
+        "Business Intelligence"
+      ]
     },
     {
       "id": 6,
       "title": "[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning",
+      "shortTitle": "DP-SSL for Low-Resource Learning",
       "focus": "LLM Agents & Data Intelligence",
-      "problem": "Deep learning performance heavily relies on massive labeled data, which is expensive to obtain.",
-      "breakthrough": "We introduced a Data Programming (DP) scheme that automatically generates probabilistic labels for unlabeled data, achieving SOTA performance with minimal supervision (only 40 labeled samples).",
+      "problem": "Deep models often require large labeled datasets, which are expensive or impractical in specialized domains.",
+      "breakthrough": "DP-SSL combines data programming and semi-supervised learning to produce robust models with very limited labeled data.",
       "venue": "NeurIPS 2021",
+      "publisher": "NeurIPS",
       "year": 2021,
-      "tags": ["Semi-supervised Learning", "Data Programming", "Robust Learning"]
+      "url": "/neurips-dpssl",
+      "image": "/assets/images/DP-SSL.webp",
+      "tags": [
+        "Semi-supervised Learning",
+        "Data Programming",
+        "Robust Learning"
+      ]
     }
   ],
   "collaborations": [
@@ -111,70 +461,90 @@
       "location": "Shanghai, China",
       "status": "Current",
       "focus": "Trustworthy AI and Generative RecSys",
-      "period": "Ongoing collaboration"
+      "period": "Ongoing collaboration",
+      "logo": "/assets/images/fudan-university-logo.png",
+      "coords": [31.2989, 121.5087]
     },
     {
       "name": "Tongji University",
       "location": "Shanghai, China",
       "status": "Past",
       "focus": "Trustworthy AI and Generative RecSys",
-      "period": "Past collaboration"
+      "period": "Past collaboration",
+      "logo": "/assets/images/tongji-university-logo.png",
+      "coords": [31.2785, 121.4997]
     },
     {
       "name": "Nanjing University",
       "location": "Nanjing, China",
       "status": "Current",
       "focus": "System Efficiency",
-      "period": "Ongoing collaboration"
+      "period": "Ongoing collaboration",
+      "logo": "/assets/images/nanjing-university-logo.png",
+      "coords": [32.0432, 118.7732]
     },
     {
       "name": "Shanghai Jiao Tong University",
       "location": "Shanghai, China",
       "status": "Current",
       "focus": "Generative RecSys",
-      "period": "Ongoing collaboration"
+      "period": "Ongoing collaboration",
+      "logo": "/assets/images/shanghai-jiao-tong-university-logo.png",
+      "coords": [31.0225, 121.4622]
     },
     {
       "name": "Tsinghua University",
       "location": "Beijing, China",
       "status": "Past",
       "focus": "Trustworthy AI",
-      "period": "Past collaboration"
+      "period": "Past collaboration",
+      "logo": "/assets/images/tsinghua-university-logo.png",
+      "coords": [39.9994, 116.3282]
     },
     {
       "name": "Southeast University",
       "location": "Nanjing, China",
       "status": "Past",
       "focus": "Trustworthy AI",
-      "period": "Past collaboration"
+      "period": "Past collaboration",
+      "logo": "/assets/images/southeast-university-logo.png",
+      "coords": [32.0392, 118.8013]
     },
     {
       "name": "Duke University",
       "location": "Durham, NC, USA",
       "status": "Past",
       "focus": "Bioinformatics",
-      "period": "Past collaboration"
+      "period": "Past collaboration",
+      "logo": "/assets/images/duke-university-logo.png",
+      "coords": [35.9974, -78.9452]
     },
     {
       "name": "Trinity College Dublin",
       "location": "Dublin, Ireland",
       "status": "Past",
       "focus": "Trustworthy AI and Generative RecSys",
-      "period": "Past collaboration"
+      "period": "Past collaboration",
+      "logo": "/assets/images/trinity-college-dublin-logo.png",
+      "coords": [53.3438, -6.2545]
     },
     {
       "name": "University of Houston",
       "location": "Houston, TX, USA",
       "status": "Past",
       "focus": "Trustworthy AI",
-      "period": "Past collaboration"
+      "period": "Past collaboration",
+      "logo": "/assets/images/university-of-houston-logo.png",
+      "coords": [29.7209, -95.3428]
     },
     {
       "name": "Hong Kong Baptist University",
       "location": "Hong Kong SAR",
       "status": "Past",
       "focus": "Trustworthy AI",
-      "period": "Past collaboration"
+      "period": "Past collaboration",
+      "logo": "/assets/images/hong-kong-baptist-university-logo.png",
+      "coords": [22.3361, 114.1867]
     }
   ]
 }

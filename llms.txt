@@ -1,0 +1,40 @@
+# Jiandong Ding (丁建栋)
+
+Jiandong Ding is an AI Architecture Expert and Senior Algorithm Expert at Huawei Technologies in Shanghai, China.
+
+## Research Focus
+
+- Generative recommender systems and LLM-driven recommendation
+- Trustworthy AI, causal inference, unbiased learning, and fairness in ranking
+- System efficiency for retrieval architecture, model compression, and edge-cloud collaborative AI
+- LLM agents and data intelligence for business analytics workflows
+
+## Core Pages
+
+- Home: https://jdding.github.io/
+- Publications: https://jdding.github.io/publications
+- Patents: https://jdding.github.io/patents
+- Collaborations: https://jdding.github.io/collaborations
+- FAQ: https://jdding.github.io/faq/
+
+## Structured Data
+
+- Research JSON: https://jdding.github.io/api/research.json
+- Publications JSON: https://jdding.github.io/api/publications.json
+- Knowledge graph JSON: https://jdding.github.io/api/knowledge-graph.json
+- Extended sitemap: https://jdding.github.io/sitemap-extended.xml
+
+## Selected Work
+
+- arXiv 2026: SkillResolve-Bench for same-capability ambiguity in agent skill retrieval
+- arXiv 2026: SIDInspector diagnostic resource for semantic-ID tokenizers
+- WWW 2026: Hierarchical and Preference-Aware Generative Recommendations
+- AAAI 2026: Invariant Feature Learning for Counterfactual Watch-time Prediction in Video Recommendation
+- WSDM 2026: RPE4Rec for high-efficiency dynamic retrieval
+- KDD 2024: Unified low-rank compression for CTR prediction
+- ICSOC 2024: BIS NL2SQL benchmark for business intelligence
+- NeurIPS 2021: DP-SSL for robust semi-supervised learning
+
+## Contact
+
+For collaboration inquiries, use jdding [at] fudan.edu.cn.
