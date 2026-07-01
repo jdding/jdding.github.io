@@ -39,17 +39,10 @@ jdding.github.io/
 ## 内容更新
 
 - **主页**：编辑 `index.md`
-- **论文**：编辑 `_data/research.json` 中的 `publications` 和 `publicationMetrics`；Digest 文案编辑 `_data/digests.json`
+- **论文**：编辑 `publications.md`
 - **专利**：编辑 `patents.md`
 - **合作**：编辑 `collaborations.md`（包含互动地图功能）
 - **SEO 校验文件**：放在 `SEO/`（例如 Google/Bing 站点验证）
-
-## 本地校验
-
-```bash
-bundle exec jekyll build
-python3 scripts/validate_site.py
-```
 
 ## 版权与许可
 

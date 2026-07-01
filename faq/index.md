@@ -3,7 +3,7 @@ layout: single
 author_profile: true
 title: "Frequently Asked Questions"
 permalink: /faq/
-classes: wide site-page faq-page
+classes: wide
 schema:
   "@context": "https://schema.org"
   "@type": "FAQPage"
@@ -13,7 +13,7 @@ schema:
       "name": "Who is Jiandong Ding?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Jiandong Ding is an AI Architecture Expert and Senior Algorithm Expert at Huawei Technologies, focusing on RecSys, Causal Inference, LLM Serving Architecture, Edge-Cloud Collaborative AI, and LLM Agents. His research philosophy is 'From Biological Sequences to User Behaviors', applying deep representation learning to decipher underlying patterns in data."
+        "text": "Jiandong Ding is a Principal Algorithm Expert at Huawei Technologies, focusing on RecSys, Causal Inference, and LLM Agents. His research philosophy is 'From Biological Sequences to User Behaviors', applying deep representation learning to decipher underlying patterns in data."
       }
     },
     {
@@ -45,7 +45,7 @@ schema:
       "name": "What are some recent achievements of Jiandong Ding?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Recent achievements include SkillResolve-Bench and SIDInspector arXiv resources, plus papers accepted by TheWebConf (WWW) 2026, WSDM 2026, and AAAI 2026. Notable works include HPGR framework for hierarchical generative recommendations and invariant feature learning for causal inference in recommendation systems."
+        "text": "Recent achievements include papers accepted by top-tier venues such as ACM TOIS, TheWebConf (WWW) 2026, WSDM 2026, and AAAI 2026. Notable works include HPGR framework for hierarchical generative recommendations and invariant feature learning for causal inference in recommendation systems."
       }
     },
     {
@@ -59,70 +59,48 @@ schema:
   ]
 ---
 
-<section class="page-hero">
-  <p class="page-hero__eyebrow">Quick answers</p>
-  <h1>Frequently Asked Questions</h1>
-  <p class="page-hero__lead">
-    Short answers for academic visitors, collaborators, search engines, and AI assistants
-    trying to resolve profile, research focus, institutions, and recent work.
-  </p>
-  <nav class="page-actions" aria-label="FAQ shortcuts">
-    <a class="action-link action-link--primary" href="/publications">Publications</a>
-    <a class="action-link" href="/collaborations">Collaborations</a>
-    <a class="action-link" href="/api/research.json">Research JSON</a>
-  </nav>
-</section>
+# Frequently Asked Questions
 
-<section class="qa-list" aria-label="Frequently asked questions">
-  <details class="qa-item" open>
-    <summary>Who is Jiandong Ding?</summary>
-    <p>
-      Jiandong Ding is an AI Architecture Expert and Senior Algorithm Expert at Huawei Technologies,
-      focusing on RecSys, causal inference, LLM serving architecture, edge-cloud collaborative AI,
-      and LLM agents. His research philosophy is "From Biological Sequences to User Behaviors".
-    </p>
-  </details>
+## Who is Jiandong Ding?
 
-  <details class="qa-item">
-    <summary>What are Jiandong Ding's main research areas?</summary>
-    <ul>
-      <li><strong>Generative & Trustworthy RecSys:</strong> LLM-driven recommendation, sequential modeling, and user representation.</li>
-      <li><strong>Trustworthy AI:</strong> causal inference, unbiased learning, and fairness in ranking.</li>
-      <li><strong>System Efficiency:</strong> edge-cloud collaboration, retrieval architecture, and model compression.</li>
-    </ul>
-  </details>
+Jiandong Ding is a Principal Algorithm Expert at Huawei Technologies, focusing on RecSys, Causal Inference, and LLM Agents. His research philosophy is "From Biological Sequences to User Behaviors", applying deep representation learning to decipher underlying patterns in data—from genomic sequences in his early career to billion-scale user behavior logs in commercial recommendation systems today.
 
-  <details class="qa-item">
-    <summary>Where did Jiandong Ding study?</summary>
-    <p>
-      Jiandong Ding studied at Fudan University. His early research focused on bioinformatics
-      before moving into user behavior analysis and industrial-scale recommendation systems.
-    </p>
-  </details>
+## What are Jiandong Ding's main research areas?
 
-  <details class="qa-item">
-    <summary>What institutions does Jiandong Ding collaborate with?</summary>
-    <p>
-      Collaborating institutions include Fudan University, Tongji University, Nanjing University,
-      Shanghai Jiao Tong University, Tsinghua University, Southeast University, Duke University,
-      Trinity College Dublin, University of Houston, and Hong Kong Baptist University.
-    </p>
-  </details>
+Jiandong Ding's research focuses on three core pillars:
 
-  <details class="qa-item">
-    <summary>What are some recent achievements?</summary>
-    <p>
-      Recent work includes SkillResolve-Bench and SIDInspector arXiv resources, plus papers
-      accepted by TheWebConf (WWW) 2026, WSDM 2026, and AAAI 2026, including HPGR,
-      RPE4Rec, and invariant feature learning for watch-time prediction.
-    </p>
-  </details>
+1. **Generative & Trustworthy RecSys**: Including LLM-driven Recommendation, Sequential Modeling, and User Representation.
+2. **Trustworthy AI**: Including Causal Inference, Unbiased Learning, and Fairness in Ranking.
+3. **System Efficiency**: Including Edge-Cloud Collaboration, Retrieval Architecture, and Model Compression.
 
-  <details class="qa-item">
-    <summary>What is the current research focus?</summary>
-    <p>
-      The current focus is next-generation recommender systems driven by generative AI,
-      with emphasis on trustworthy objectives, efficient serving, and production-scale user modeling.
-    </p>
-  </details>
-</section>
+## Where did Jiandong Ding study?
+
+Jiandong Ding studied at Fudan University. His early career focused on bioinformatics, specifically deciphering biological sequences, before transitioning to user behavior analysis in commercial recommendation systems.
+
+## What institutions does Jiandong Ding collaborate with?
+
+Jiandong Ding collaborates with several institutions globally, including:
+
+- Fudan University (Ongoing collaboration)
+- Tongji University (Past collaboration)
+- Nanjing University (Ongoing collaboration)
+- Shanghai Jiao Tong University (Ongoing collaboration)
+- Tsinghua University (Past collaboration)
+- Southeast University (Past collaboration)
+- Duke University (Past collaboration)
+- Trinity College Dublin (Past collaboration)
+- University of Houston (Past collaboration)
+- Hong Kong Baptist University (Past collaboration)
+
+## What are some recent achievements of Jiandong Ding?
+
+Recent achievements include papers accepted by top-tier venues such as ACM TOIS, TheWebConf (WWW) 2026, WSDM 2026, and AAAI 2026. Notable works include:
+
+- HPGR framework for hierarchical generative recommendations
+- Invariant feature learning for causal inference in recommendation systems
+- RPE4Rec for high-efficiency dynamic retrieval
+- Unified low-rank compression for CTR prediction
+
+## What is the focus of Jiandong Ding's current research?
+
+Currently, Jiandong Ding focuses on building Next-Generation Recommender Systems driven by Generative AI, with specific interests in Generative RecSys, Trustworthy AI, and System Efficiency, bridging the gap between theoretical algorithms and industrial-scale systems.

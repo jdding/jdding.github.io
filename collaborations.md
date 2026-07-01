@@ -3,7 +3,7 @@ layout: single
 author_profile: true
 title: "Collaborations"
 permalink: /collaborations
-classes: wide site-page collaborations-page
+classes: wide
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
@@ -16,134 +16,488 @@ schema:
   "description": "An overview of academic collaborations with universities and research institutions worldwide"
 ---
 
-{% assign current_collabs = site.data.research.collaborations | where: "status", "Current" %}
-{% assign past_collabs = site.data.research.collaborations | where: "status", "Past" %}
+<style>
+  /* 隐藏页面内标题 */
+  .page__title { display: none; }
+  
+  /* 机构网格 - 与其他页面保持一致的样式 */
+  .institution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .institution-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 15px;
+  }
+  
+  .institution-card:hover {
+    background: #fafafa;
+    border-color: #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  }
+  
+  .institution-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .institution-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+  .institution-text {
+    flex: 1;
+  }
+  
+  .institution-name {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 700;
+    color: #2d3748;
+    line-height: 1.3;
+  }
+  
+  .institution-location {
+    margin: 5px 0 0 0;
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .institution-content {
+    padding-top: 10px;
+  }
+  
+  .institution-details {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .publication-count {
+    display: inline-block;
+    background: #f8f9fa;
+    color: #4a5568;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    margin-right: 8px;
+  }
+  
+  .publication-count.Current {
+    background: #e6fffa;
+    color: #276749;
+    border: 1px solid #b2f5ea;
+  }
+  
+  .publication-count.Past {
+    background: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #d1d5db;
+  }
+  
+  /* 地图可视化区域 */
+  .world-map-section {
+    margin: 40px 0;
+    text-align: center;
+  }
+  
+  .map-container {
+    height: 500px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  #institution-map {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .map-title {
+    color: #495057;
+    margin-bottom: 15px;
+  }
+  
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .institution-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .map-container {
+      height: 400px;
+    }
+  }
+  
+  /* 弹窗样式 */
+  .institution-popup h3 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+  
+  .institution-popup p {
+    margin: 5px 0;
+  }
+  
+  /* 使用通用卡片样式 */
+  .paper-card {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: #444;
+  }
+  
+  .paper-card:last-child { border-bottom: none; }
+  
+  .paper-img {
+    flex: 0 0 35%;
+    max-width: 350px;
+  }
+  
+  .paper-img img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #e1e4e8;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  }
+  
+  .paper-content {
+    flex: 1;
+  }
+  
+  .paper-title {
+    font-size: 1em;
+    font-weight: 700;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 6px;
+  }
+</style>
 
-<section class="page-hero">
-  <p class="page-hero__eyebrow">Research network</p>
-  <h1>Collaborations</h1>
-  <p class="page-hero__lead">
-    Academic collaboration network across China, the United States, Europe, and Hong Kong SAR,
-    covering trustworthy AI, generative recommendation, system efficiency, and bioinformatics.
-  </p>
-  <nav class="page-actions" aria-label="Collaboration shortcuts">
-    <a class="action-link action-link--primary" href="#institution-map">Map</a>
-    <a class="action-link" href="#current-collaborations">Current</a>
-    <a class="action-link" href="#all-institutions">All institutions</a>
-  </nav>
-</section>
+<!-- 引入Leaflet CSS和JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<div class="stat-grid">
-  <div class="stat-card">
-    <span class="stat-num hl-blue">{{ site.data.research.collaborations | size }}</span>
-    <span class="stat-label">Institutions</span>
-  </div>
-  <div class="stat-card">
-    <span class="stat-num hl-green">{{ current_collabs | size }}</span>
-    <span class="stat-label">Current</span>
-  </div>
-  <div class="stat-card">
-    <span class="stat-num hl-purple">4</span>
-    <span class="stat-label">Regions</span>
+<div class="world-map-section">
+  <div class="map-container">
+    <div id="institution-map"></div>
   </div>
 </div>
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<section aria-labelledby="collaboration-map-title">
-  <div class="section-header">
-    <h2 id="collaboration-map-title" class="section-title">Collaboration map</h2>
-    <span class="section-badge">Interactive</span>
-  </div>
-  <div class="map-container">
-    <div id="institution-map" aria-label="Map of collaboration institutions"></div>
-  </div>
-  <p id="map-fallback" class="map-fallback">
-    If the interactive map is unavailable, the institution list below contains the same collaboration data.
-  </p>
-</section>
-
-<section id="current-collaborations" aria-labelledby="current-collaborations-title">
-  <div class="section-header">
-    <h2 id="current-collaborations-title" class="section-title">Current collaborations</h2>
-    <span class="section-badge">{{ current_collabs | size }} active</span>
-  </div>
-  <div class="institution-grid">
-    {% for inst in current_collabs %}
-    <article class="institution-card">
-      <div class="institution-header">
-        <img src="{{ inst.logo | relative_url }}" alt="{{ inst.name }} logo" class="institution-logo" loading="lazy">
-        <div>
-          <h3 class="institution-name">{{ inst.name }}</h3>
-          <p class="institution-location">{{ inst.location }}</p>
-        </div>
+<div class="institution-grid">
+  <!-- Fudan University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/fudan-university-logo.png" alt="Fudan University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Fudan University</h3>
+        <p class="institution-location">Shanghai, China</p>
       </div>
-      <span class="publication-count {{ inst.status }}">{{ inst.status }}</span>
-      <p><strong>Focus:</strong> {{ inst.focus }}</p>
-      <p><strong>Period:</strong> {{ inst.period }}</p>
-    </article>
-    {% endfor %}
-  </div>
-</section>
-
-<section id="all-institutions" aria-labelledby="all-institutions-title">
-  <div class="section-header">
-    <h2 id="all-institutions-title" class="section-title">All institutions</h2>
-    <span class="section-badge">{{ site.data.research.collaborations | size }} total</span>
-  </div>
-  <div class="institution-grid">
-    {% for inst in site.data.research.collaborations %}
-    <article class="institution-card">
-      <div class="institution-header">
-        <img src="{{ inst.logo | relative_url }}" alt="{{ inst.name }} logo" class="institution-logo" loading="lazy">
-        <div>
-          <h3 class="institution-name">{{ inst.name }}</h3>
-          <p class="institution-location">{{ inst.location }}</p>
-        </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Current</span>
       </div>
-      <span class="publication-count {{ inst.status }}">{{ inst.status }}</span>
-      <p><strong>Focus:</strong> {{ inst.focus }}</p>
-      <p><strong>Period:</strong> {{ inst.period }}</p>
-    </article>
-    {% endfor %}
+      <p><strong>Focus:</strong> Trustworthy AI and Generative RecSys </p>
+      <p><strong>Period:</strong> Ongoing collaboration</p>
+    </div>
   </div>
-</section>
 
+  <!-- Tongji University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/tongji-university-logo.png" alt="Tongji University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Tongji University</h3>
+        <p class="institution-location">Shanghai, China</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Past</span>
+      </div>
+      <p><strong>Focus:</strong> Trustworthy AI and Generative RecSys</p>
+      <p><strong>Period:</strong> Past collaboration</p>
+    </div>
+  </div>
+  
+  <!-- Nanjing University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="assets/images/nanjing-university-logo.png" alt="Nanjing University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Nanjing University</h3>
+        <p class="institution-location">Nanjing, China</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Current</span>
+      </div>
+      <p><strong>Focus:</strong> System Efficiency</p>
+      <p><strong>Period:</strong> Ongoing collaboration</p>
+    </div>
+  </div>
+  
+  <!-- Shanghai Jiao Tong University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/shanghai-jiao-tong-university-logo.png" alt="Shanghai Jiao Tong University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Shanghai Jiao Tong University</h3>
+        <p class="institution-location">Shanghai, China</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Current</span>
+      </div>
+      <p><strong>Focus:</strong> Generative RecSys</p>
+      <p><strong>Period:</strong> Ongoing collaboration</p>
+    </div>
+  </div>
+
+  <!-- Tsinghua University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/tsinghua-university-logo.png" alt="Tsinghua University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Tsinghua University</h3>
+        <p class="institution-location">Beijing, China</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Past</span>
+      </div>
+      <p><strong>Focus:</strong> Trustworthy AI</p>
+      <p><strong>Period:</strong> Past collaboration</p>
+    </div>
+  </div>
+  
+  <!-- Southeast University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/southeast-university-logo.png" alt="Southeast University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Southeast University</h3>
+        <p class="institution-location">Nanjing, China</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Past</span>
+      </div>
+      <p><strong>Focus:</strong> Trustworthy AI</p>
+      <p><strong>Period:</strong> Past collaboration</p>
+    </div>
+  </div>
+
+  <!-- Duke University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/duke-university-logo.png" alt="Duke University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Duke University</h3>
+        <p class="institution-location">Durham, NC, USA</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Past</span>
+      </div>
+      <p><strong>Focus:</strong> Bioinformatics</p>
+      <p><strong>Period:</strong> Past collaboration</p>
+    </div>
+  </div>
+  
+  <!-- Trinity College Dublin -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/trinity-college-dublin-logo.png" alt="Trinity College Dublin Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Trinity College Dublin</h3>
+        <p class="institution-location">Dublin, Ireland</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Past</span>
+      </div>
+      <p><strong>Focus:</strong> Trustworthy AI and Generative RecSys</p>
+      <p><strong>Period:</strong> Past collaboration</p>
+    </div>
+  </div>
+  
+  <!-- University of Houston -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/university-of-houston-logo.png" alt="University of Houston Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">University of Houston</h3>
+        <p class="institution-location">Houston, TX, USA</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Past</span>
+      </div>
+      <p><strong>Focus:</strong> Trustworthy AI</p>
+      <p><strong>Period:</strong> Past collaboration</p>
+    </div>
+  </div>
+  
+  <!-- Hong Kong Baptist University -->
+  <div class="institution-card">
+    <div class="institution-header">
+      <img src="/assets/images/hong-kong-baptist-university-logo.png" alt="Hong Kong Baptist University Logo" class="institution-logo" onerror="this.style.display='none';">
+      <div class="institution-text">
+        <h3 class="institution-name">Hong Kong Baptist University</h3>
+        <p class="institution-location">Hong Kong SAR</p>
+      </div>
+    </div>
+    <div class="institution-content">
+      <div class="institution-details">
+        <span class="publication-count">Past</span>
+      </div>
+      <p><strong>Focus:</strong> Trustworthy AI</p>
+      <p><strong>Period:</strong> Past collaboration</p>
+    </div>
+  </div>
+  
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  var mapElement = document.getElementById('institution-map');
-  var fallback = document.getElementById('map-fallback');
-  var institutions = {{ site.data.research.collaborations | jsonify }};
+    // 初始化地图，以中国为中心
+    var map = L.map('institution-map').setView([30, 105], 3);
 
-  if (!mapElement || !window.L) {
-    if (fallback) fallback.textContent = 'The map library did not load; use the institution cards below.';
-    return;
-  }
-
-  var map = L.map('institution-map').setView([30, 105], 3);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
-
-  institutions.forEach(function(inst) {
-    if (!inst.coords) return;
-    var marker = L.circleMarker(inst.coords, {
-      radius: 7,
-      color: inst.status === 'Current' ? '#0f766e' : '#6b7280',
-      fillColor: inst.status === 'Current' ? '#0f766e' : '#6b7280',
-      fillOpacity: 0.85,
-      weight: 2
+    // 添加OpenStreetMap瓦片层
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    marker.bindPopup(
-      '<strong>' + inst.name + '</strong><br>' +
-      inst.location + '<br>' +
-      '<strong>Focus:</strong> ' + inst.focus + '<br>' +
-      '<strong>Status:</strong> ' + inst.status
-    );
-  });
+    // 定义机构数据和坐标
+    var institutions = [
+        {
+            name: "Fudan University",
+            location: "Shanghai, China",
+            coords: [31.2989, 121.5087],
+            focus: "Trustworthy AI and Generative RecSys",
+            period: "Ongoing collaboration",
+            type: "Current"
+        },
+        {
+            name: "Tongji University",
+            location: "Shanghai, China",
+            coords: [31.2785, 121.4997],
+            focus: "Trustworthy AI and Generative RecSys",
+            period: "Past collaboration",
+            type: "Past"
+        },
+        {
+            name: "Nanjing University",
+            location: "Nanjing, China",
+            coords: [32.0432, 118.7732],
+            focus: "System Efficiency",
+            period: "Ongoing collaboration",
+            type: "Current"
+        },
+        {
+            name: "Shanghai Jiao Tong University",
+            location: "Shanghai, China",
+            coords: [31.0225, 121.4622],
+            focus: "Generative RecSys",
+            period: "Ongoing collaboration",
+            type: "Current"
+        },
+        {
+            name: "Tsinghua University",
+            location: "Beijing, China",
+            coords: [39.9994, 116.3282],
+            focus: "Trustworthy AI",
+            period: "Past collaboration",
+            type: "Past"
+        },
+        {
+            name: "Southeast University",
+            location: "Nanjing, China",
+            coords: [32.0392, 118.8013],
+            focus: "Trustworthy AI",
+            period: "Past collaboration",
+            type: "Past"
+        },
+        {
+            name: "Duke University",
+            location: "Durham, NC, USA",
+            coords: [35.9974, -78.9452],
+            focus: "Bioinformatics",
+            period: "Past collaboration",
+            type: "Past"
+        },
+        {
+            name: "Trinity College Dublin",
+            location: "Dublin, Ireland",
+            coords: [53.3438, -6.2545],
+            focus: "Trustworthy AI and Generative RecSys",
+            period: "Past collaboration",
+            type: "Past"
+        },
+        {
+            name: "Hong Kong Baptist University",
+            location: "Hong Kong SAR",
+            coords: [22.3361, 114.1867],
+            focus: "Trustworthy AI",
+            period: "Past collaboration",
+            type: "Past"
+        },
+        {
+            name: "University of Houston",
+            location: "Houston, TX, USA",
+            coords: [29.7209, -95.3428],
+            focus: "Trustworthy AI",
+            period: "Past collaboration",
+            type: "Past"
+        }
+    ];
 
-  map.zoomControl.setPosition('topright');
+    institutions.forEach(function(inst) {
+        var marker = L.marker(inst.coords).addTo(map);
+        var popupContent = `
+            <div class="institution-popup">
+                <h3>${inst.name}</h3>
+                <p><strong>Location:</strong> ${inst.location}</p>
+                <p><strong>Focus:</strong> ${inst.focus}</p>
+                <p><strong>Period:</strong> ${inst.period}</p>
+                <p><strong>Type:</strong> ${inst.type}</p>
+            </div>
+        `;
+        
+        marker.bindPopup(popupContent);
+    });
+    map.zoomControl.setPosition('topright');
 });
 </script>

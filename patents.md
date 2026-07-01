@@ -3,22 +3,193 @@ layout: single
 author_profile: true
 title: "Patents"
 permalink: /patents
-classes: wide site-page patents-page
+classes: wide
 ---
 
-<section class="page-hero">
-  <p class="page-hero__eyebrow">Innovation portfolio</p>
-  <h1>Patents</h1>
-  <p class="page-hero__lead">
-    Selected granted patents and pending applications across recommender systems,
-    interactive media, data intelligence, mobility AI, and earlier bioinformatics inventions.
-  </p>
-  <nav class="page-actions" aria-label="Patent shortcuts">
-    <a class="action-link action-link--primary" href="#granted-patents">Granted patents</a>
-    <a class="action-link" href="#pending-applications">Pending applications</a>
-    <a class="action-link" href="/publications">Related publications</a>
-  </nav>
-</section>
+<style>
+  /* 隐藏页面内标题 */
+  .page__title { display: none; }
+  
+  /* --- 1. 顶部数据看板 (Dashboard) --- */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  .stat-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px; /* 稍微减小内边距 */
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  .stat-card:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+  
+  /* [优化]：看板数字字号从 1.8em 收敛到 1.6em */
+  .stat-num {
+    display: block;
+    font-size: 1.6em; 
+    font-weight: 800;
+    color: #2c3e50;
+    line-height: 1.2;
+  }
+  .stat-label {
+    font-size: 0.8em;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 5px;
+  }
+  .hl-blue { color: #2980b9; }
+  .hl-green { color: #27ae60; }
+  .hl-purple { color: #8e44ad; }
+
+  /* --- 2. 分区标题样式 --- */
+  .section-header {
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  .section-title {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin: 0;
+    color: #333;
+  }
+  .section-badge {
+    margin-left: 12px;
+    font-size: 0.75em;
+    background: #eee;
+    padding: 2px 8px;
+    border-radius: 12px;
+    color: #555;
+    vertical-align: middle;
+  }
+
+  /* --- 3. 专利条目卡片 (Item Card) --- */
+  .pat-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 15px;
+    margin-bottom: 10px; /* 间距减小 */
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    transition: background 0.2s;
+
+    /* [优化核心]：基准字号微缩 */
+    font-size: 0.95rem; 
+    line-height: 1.5;
+  }
+  .pat-card:hover {
+    background: #fafafa;
+    border-color: #ddd;
+  }
+
+  /* 左侧：国旗图标 */
+  .pat-flag {
+    flex: 0 0 32px; /* 略微收窄 */
+    font-size: 1.4em; /* 略微减小图标 */
+    line-height: 1.3;
+    padding-top: 2px; 
+  }
+
+  /* 右侧：内容 */
+  .pat-content { flex: 1; }
+
+  /* 第一行：标题 + Badge */
+  .pat-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  .pat-title {
+    font-weight: 700;
+    color: #2c3e50;
+    font-size: 1em; /* 标题不再额外放大 */
+  }
+
+  /* 统一徽章样式 (Pure CSS) */
+  .css-badge {
+    display: inline-block;
+    font-size: 0.75em; /* 保持小巧 */
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 4px;
+    line-height: 1.4;
+    border: 1px solid transparent;
+  }
+  .badge-granted { background-color: #e6fffa; color: #276749; border-color: #b2f5ea; }
+  .badge-pending { background-color: #ebf8ff; color: #2c5282; border-color: #bee3f8; }
+
+  /* 第二行：元数据 */
+  .pat-meta {
+    font-size: 0.9em; /* 辅助文字缩小 */
+    color: #666;
+  }
+  .pat-id {
+    font-family: monospace;
+    font-weight: 600;
+    color: #555;
+    background: #f5f5f5;
+    padding: 0 4px;
+    border-radius: 3px;
+    margin-right: 8px;
+    font-size: 0.9em;
+  }
+  .pat-author strong { color: #333; }
+
+  @media (max-width: 600px) {
+    .stat-grid { gap: 10px; }
+    .stat-num { font-size: 1.4em; }
+    .pat-card { padding: 10px; }
+  }
+  
+  /* 使用通用卡片样式 */
+  .paper-card {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: #444;
+  }
+  
+  .paper-card:last-child { border-bottom: none; }
+  
+  .paper-img {
+    flex: 0 0 35%;
+    max-width: 350px;
+  }
+  
+  .paper-img img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #e1e4e8;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  }
+  
+  .paper-content {
+    flex: 1;
+  }
+  
+  .paper-title {
+    font-size: 1em;
+    font-weight: 700;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 6px;
+  }
+</style>
 
 <div class="stat-grid">
   <div class="stat-card">
@@ -35,7 +206,7 @@ classes: wide site-page patents-page
   </div>
 </div>
 
-<div id="granted-patents" class="section-header">
+<div class="section-header">
   <h3 class="section-title">🏆 Selected Granted Patents</h3>
   <span class="section-badge">11 Items</span>
 </div>
@@ -195,7 +366,7 @@ classes: wide site-page patents-page
 </div>
 
 
-<div id="pending-applications" class="section-header">
+<div class="section-header">
   <h3 class="section-title">⏳ Selected Pending Applications</h3>
   <span class="section-badge">7 Items</span>
 </div>

@@ -3,113 +3,58 @@ layout: single
 author_profile: true
 title: "Academic Data API"
 permalink: /api/
-classes: wide site-page api-page
+classes: wide
 ---
 
-<section class="page-hero">
-  <p class="page-hero__eyebrow">Machine-readable profile</p>
-  <h1>Academic Data API</h1>
-  <p class="page-hero__lead">
-    Static JSON and text endpoints for academic search engines, AI assistants,
-    collaboration platforms, and automated research-profile integration.
-  </p>
-  <nav class="page-actions" aria-label="API shortcuts">
-    <a class="action-link action-link--primary" href="/api/research.json">Research JSON</a>
-    <a class="action-link" href="/api/publications.json">Publications JSON</a>
-    <a class="action-link" href="/api/knowledge-graph.json">Knowledge graph</a>
-    <a class="action-link" href="/llms.txt">LLM summary</a>
-  </nav>
-</section>
+# Academic Data API
 
-<section aria-labelledby="endpoints">
-  <div class="section-header">
-    <h2 id="endpoints" class="section-title">Endpoints</h2>
-    <span class="section-badge">Static files</span>
-  </div>
+This API provides structured access to academic information about Jiandong Ding's research, publications, and collaborations. Designed to facilitate AI indexing and academic data integration.
 
-  <div class="endpoint-grid">
-    <article class="endpoint-card">
-      <h3>Research profile</h3>
-      <p><code>/api/research.json</code></p>
-      <p>Profile, Scholar metrics, publications, news, selected projects, research areas, education, and collaborations.</p>
-    </article>
+## Endpoints
 
-    <article class="endpoint-card">
-      <h3>Publications</h3>
-      <p><code>/api/publications.json</code></p>
-      <p>Scholar-aligned publication metrics and 20 publication records with Digest permalinks.</p>
-    </article>
+### `/api/research.json`
+Provides comprehensive academic data in JSON format, including:
 
-    <article class="endpoint-card">
-      <h3>Knowledge graph</h3>
-      <p><code>/api/knowledge-graph.json</code></p>
-      <p>Data-driven person, organization, research-area, publication, and collaboration graph.</p>
-    </article>
+- Personal profile information
+- Latest news and announcements
+- Research projects and publications
+- Academic collaborations
+- Research areas and expertise
 
-    <article class="endpoint-card">
-      <h3>LLM summary</h3>
-      <p><code>/llms.txt</code></p>
-      <p>Concise text overview and curated links for text-first AI retrieval workflows.</p>
-    </article>
-  </div>
-</section>
-
-<section aria-labelledby="example-request">
-  <div class="section-header">
-    <h2 id="example-request" class="section-title">Example request</h2>
-    <span class="section-badge">No auth</span>
-  </div>
-
-```text
+#### Example Request:
+```
 GET https://jdding.github.io/api/research.json
 ```
 
+#### Response Format:
 ```json
 {
   "profile": {
     "name": "Jiandong Ding (丁建栋)",
-    "title": "AI Architecture Expert & Senior Algorithm Expert",
-    "organization": "Huawei Technologies"
+    "title": "Principal Algorithm Expert",
+    "organization": "Huawei Technologies",
+    // ... more profile data
   },
-  "publicationMetrics": {
-    "totalPublications": 20,
-    "totalCitations": 493,
-    "hIndex": 10,
-    "i10Index": 11
-  },
-  "publications": [],
-  "news": [],
-  "researchProjects": [],
-  "collaborations": []
+  "news": [...],
+  "researchProjects": [...],
+  "collaborations": [...]
 }
 ```
 
-```text
-GET https://jdding.github.io/api/publications.json
-```
-</section>
+## Use Cases
 
-<section aria-labelledby="use-cases">
-  <div class="section-header">
-    <h2 id="use-cases" class="section-title">Use cases</h2>
-    <span class="section-badge">GEO</span>
-  </div>
+This API is designed for:
 
-  <ul>
-    <li>Academic search engines and scholarly indexers.</li>
-    <li>AI assistants resolving research focus, selected work, and collaborations.</li>
-    <li>Academic collaboration platforms and bibliometric tools.</li>
-    <li>Structured profile previews in external knowledge systems.</li>
-  </ul>
-</section>
+- Academic search engines and indexers
+- AI models seeking to understand research contributions
+- Academic collaboration platforms
+- Automated research profiling systems
+- Bibliometric analysis tools
 
-<section aria-labelledby="access-notes">
-  <div class="section-header">
-    <h2 id="access-notes" class="section-title">Access notes</h2>
-    <span class="section-badge">Public</span>
-  </div>
-  <p>
-    These are static GitHub Pages resources with no authentication or custom rate limiting.
-    Please avoid excessive automated requests. For questions, contact jdding@fudan.edu.cn.
-  </p>
-</section>
+## Rate Limiting
+
+This is a static site API with no rate limiting. However, please be respectful of resources and avoid excessive requests.
+
+## Feedback
+
+For API-related questions or suggestions, please contact jdding@fudan.edu.cn.

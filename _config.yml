@@ -4,7 +4,7 @@
 remote_theme: mmistakes/minimal-mistakes
 
 # Site metadata
-title: "Jiandong Ding (丁建栋)"
+title: "Jiandong Ding (丁建栋) - AI Architecture Expert & Senior Algorithm Expert"
 description: "Focusing on Billion-scale Recommender Systems, LLM Serving Architecture, and Edge-Cloud Collaborative AI at Huawei Terminal Cloud Services. Senior Reviewer for SIGIR."
 url: "https://jdding.github.io" # 站点根地址（不带末尾斜杠）
 github_username: jdding
@@ -62,7 +62,7 @@ social:
   links:
     - https://www.linkedin.com/in/jiandong-ding-60498833/
     - https://github.com/jdding
-    - https://scholar.google.com/citations?user=5-e7wi4AAAAJ&hl=en
+    - https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=5-e7wi4AAAAJ
 
 # GEO优化设置
 logo: "/assets/images/favicon.png"
@@ -72,7 +72,7 @@ social_media:
   - name: "GitHub"
     url: "https://github.com/jdding"
   - name: "Google Scholar"
-    url: "https://scholar.google.com/citations?user=5-e7wi4AAAAJ&hl=en"
+    url: "https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=5-e7wi4AAAAJ"
     
 # 额外的Jekyll配置
 markdown: kramdown
@@ -80,23 +80,3 @@ highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-
-defaults:
-  - scope:
-      path: "SEO"
-    values:
-      sitemap: false
-
-exclude:
-  - README.md
-  - archive/
-  - docs/
-  - scripts/
-  - .github/
-  - convert_new_logos.py
-  - create_better_logos.py
-  - Gemfile
-  - Gemfile.lock
-  - vendor/
-  - .bundle/
-  - .codegraph/
