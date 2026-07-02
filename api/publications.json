@@ -1,5 +1,0 @@
----
-layout: null
-permalink: /api/publications.json
----
-{{ site.data.publications | jsonify }}

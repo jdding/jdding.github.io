@@ -41,33 +41,6 @@ GET https://jdding.github.io/api/research.json
 }
 ```
 
-### `/api/publications.json`
-Provides the canonical publication list used by the website, including:
-
-- Title, authors, venue, year, and publication type
-- Research line: Recommender Systems, LLM Agents, or Data Mining
-- Paper and digest links
-- Citation counts when available
-- Homepage selection metadata
-
-#### Example Request:
-```
-GET https://jdding.github.io/api/publications.json
-```
-
-#### Response Format:
-```json
-[
-  {
-    "id": "skillresolve-bench",
-    "title": "SkillResolve-Bench: Measuring and Resolving Same-Capability Ambiguity in Agent Skill Retrieval",
-    "pillar": "LLM Agents",
-    "year": 2026,
-    "digest_url": "/skillresolve-bench"
-  }
-]
-```
-
 ## Use Cases
 
 This API is designed for:
