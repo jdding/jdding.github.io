@@ -20,7 +20,7 @@ Replaced traditional bare PDF links with **rich, four-section deep-dive pages** 
 | `aaai-difl.md` | AAAI 2026 | `/aaai-difl` |
 | `rpe4rec.md` | WSDM 2026 | `/rpe4rec` |
 | `kdd-ctr.md` | KDD 2024 | `/kdd-ctr` |
-| `bis-nl2sql.md` | ICSOC 2025 | `/bis-nl2sql` |
+| `bis-nl2sql.md` | ICSOC 2024 | `/bis-nl2sql` |
 | `dygraph.md` | arXiv 2025 | `/dygraph` |
 | `pd-serve.md` | arXiv 2024 | `/pd-serve` |
 | `continual-gcn.md` | AAAI 2023 | `/continual-gcn` |
@@ -39,7 +39,7 @@ The `index.md` Research Highlights section's paper thumbnails have been fully re
 | AAAI 2026 DIFL | `Invariant-Feature-Learning.png` |
 | WSDM 2026 RPE4Rec | `RPE4Rec.png` |
 | KDD 2024 CTR | `Unified-Low-rank-Compression.png` |
-| ICSOC 2025 BIS | `BIS-NL2SQL.png` |
+| ICSOC 2024 BIS | `BIS-NL2SQL.png` |
 | NeurIPS 2021 DP-SSL | `DP-SSL.png` |
 
 ---

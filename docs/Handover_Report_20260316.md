@@ -35,7 +35,7 @@ Replaced all 6 homepage Highlight paper abstracts with professional, Tech-Lead-s
 | Beyond the Flat Sequence (HPGR) | WWW 2026 | "...shatters the traditional flat sequence assumption..." |
 | RPE4Rec | WSDM 2026 | "...sub-millisecond real-time retrieval on billion-scale dynamic graphs" |
 | Unified Low-rank Compression | KDD 2024 | "...reduces Embedding memory consumption by over 80%" |
-| BIS NL2SQL | ICSOC 2025 | "...first NL2SQL benchmark for enterprise-level BI scenarios" |
+| BIS NL2SQL | ICSOC 2024 | "...first NL2SQL benchmark for enterprise-level BI scenarios" |
 | DP-SSL | NeurIPS 2021 | "...robust classification with only single-digit labeled samples" |
 
 Additional copy fixes:

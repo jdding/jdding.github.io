@@ -36,7 +36,7 @@ keywords: "Jiandong Ding, Huawei, NL2SQL, Business Intelligence, Benchmark Evalu
 <div class="digest-hero">
   <span class="hero-title">BIS: NL2SQL Service Evaluation Benchmark for Business Intelligence Scenarios</span>
   <div class="hero-meta">
-    <span class="tag tag-icsoc">ICSOC 2025</span> <br><br>
+    <span class="tag tag-icsoc">ICSOC 2024</span> <br><br>
     <strong>Authors:</strong> B. Caglayan, ..., <strong>Jiandong Ding</strong>, et al.
   </div>
   <div class="hero-tldr">
@@ -78,6 +78,7 @@ keywords: "Jiandong Ding, Huawei, NL2SQL, Business Intelligence, Benchmark Evalu
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
   "headline": "BIS: NL2SQL Service Evaluation Benchmark for Business Intelligence Scenarios",
+  "datePublished": "2024",
   "author": [
     {
       "@type": "Person",

@@ -192,14 +192,14 @@ schema:
 
 <article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
   <div class="paper-img"> 
-    <img src="/assets/images/BIS-NL2SQL.webp" alt="[ICSOC 2025] NL2SQL Benchmark for Business Intelligence" loading="lazy" itemprop="image">
+    <img src="/assets/images/BIS-NL2SQL.webp" alt="[ICSOC 2024] NL2SQL Benchmark for Business Intelligence" loading="lazy" itemprop="image">
   </div>
   <div class="paper-content">
-    <span class="paper-title" itemprop="headline">[ICSOC 2025] NL2SQL Benchmark for Business Intelligence</span>
+    <span class="paper-title" itemprop="headline">[ICSOC 2024] NL2SQL Benchmark for Business Intelligence</span>
     <span class="hl-tag tag-sol">Intelligence Layer</span> <span itemprop="description">Bridges the gap between academia and industry by introducing the first natural language to SQL (NL2SQL) service evaluation benchmark specifically designed for real-world, enterprise-level Business Intelligence (BI) scenarios.</span>
     <meta itemprop="isPartOf" content="Research Highlights">
     <meta itemprop="publisher" content="Springer">
-    <meta itemprop="datePublished" content="2025">
+    <meta itemprop="datePublished" content="2024">
   </div>
 </article>
 
