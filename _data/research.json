@@ -7,15 +7,14 @@
     "organization": "Huawei Technologies",
     "email": "jdding@fudan.edu.cn",
     "location": "Shanghai, China",
-    "bio": "Principal algorithm expert at Huawei Technologies focusing on RecSys, Causal Inference, and LLM Agents",
+    "bio": "Principal algorithm expert at Huawei Technologies focusing on Recommender Systems, LLM Agents, and Data Mining",
     "researchAreas": [
-      "Generative RecSys",
-      "Causal Inference",
-      "Recommendation Systems",
+      "Recommender Systems",
       "LLM Agents",
-      "User Behavior Analysis",
-      "Trustworthy AI",
-      "System Efficiency"
+      "Data Mining",
+      "Causal Inference",
+      "System Efficiency",
+      "User Behavior Analysis"
     ],
     "education": [
       {
