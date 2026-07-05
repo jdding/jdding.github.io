@@ -43,7 +43,7 @@ schema:
         </article>
         <article class="topic-card">
           <h3>Topic pages</h3>
-          <p>LLM Agents, Recommender Systems, and Data Mining each connect related papers, active project directions, and relevant patents.</p>
+          <p>LLM Agents, Recommender Systems, and Data Mining each summarize a public research area and connect it to mature outputs.</p>
         </article>
         <article class="topic-card">
           <h3>Patents</h3>

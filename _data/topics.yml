@@ -11,8 +11,6 @@
   stats:
     - value: "4"
       label: related publications
-    - value: "2"
-      label: active project directions
     - value: "2026"
       label: recent work on skill retrieval and semantic-ID diagnostics
   cards:
@@ -36,8 +34,6 @@
   stats:
     - value: "5"
       label: related publications
-    - value: "3"
-      label: active project directions
     - value: "2026"
       label: recent work on generative recommendation and dynamic retrieval
   cards:

@@ -130,16 +130,14 @@ schema:
     <div class="research-shell">
       <div class="section-head">
         <h2>Active projects</h2>
-        <p>Current project directions are described through public research questions and linked to related outputs when available.</p>
+        <p>Current research directions are intentionally described at a high level; mature public outputs remain in Full publications and Patents.</p>
       </div>
       <div class="project-grid">
         {% for project in projects %}
-        {% assign topic = topics | where: "slug", project.topic | first %}
         <article class="project-card">
           <span>{{ project.label }}</span>
           <h3>{{ project.title }}</h3>
           <p>{{ project.summary }}</p>
-          <a class="text-link" href="/topics/{{ topic.slug }}/">{{ topic.title }}</a>
         </article>
         {% endfor %}
       </div>

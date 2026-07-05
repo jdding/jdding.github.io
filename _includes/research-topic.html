@@ -3,7 +3,6 @@
 
 {% assign topic = site.data.topics | where: "slug", page.topic_slug | first %}
 {% assign topic_publications = site.data.publications | where: "topic", page.topic_slug %}
-{% assign topic_projects = site.data.projects | where: "topic", page.topic_slug %}
 {% assign topic_patents = site.data.patents | where: "topic", page.topic_slug %}
 
 <div class="research-site">
@@ -44,26 +43,6 @@
       </div>
     </div>
   </section>
-
-  {% if topic_projects.size > 0 %}
-  <section class="research-section">
-    <div class="research-shell">
-      <div class="section-head">
-        <h2>Active projects</h2>
-      </div>
-      <div class="project-grid">
-        {% for project in topic_projects %}
-        <article class="project-card">
-          <span>{{ project.label }}</span>
-          <h3>{{ project.title }}</h3>
-          <p>{{ project.summary }}</p>
-          <a class="text-link" href="/#projects">All active projects</a>
-        </article>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-  {% endif %}
 
   <section id="papers" class="research-section">
     <div class="research-shell">
