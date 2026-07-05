@@ -22,7 +22,7 @@ schema:
     - "https://github.com/jdding"
 ---
 
-<link rel="stylesheet" href="/assets/css/research-system.css?v=content-qa-20260705">
+<link rel="stylesheet" href="/assets/css/research-system.css?v=typography-20260705">
 {% include research-nav.html %}
 
 {% assign topics = site.data.topics | sort: "order" %}

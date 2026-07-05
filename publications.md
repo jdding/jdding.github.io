@@ -16,7 +16,7 @@ schema:
   "description": "Full publications by Jiandong Ding, ordered by year."
 ---
 
-<link rel="stylesheet" href="/assets/css/research-system.css?v=content-qa-20260705">
+<link rel="stylesheet" href="/assets/css/research-system.css?v=typography-20260705">
 {% include research-nav.html %}
 
 {% assign publications = site.data.publications %}
