@@ -1,0 +1,5 @@
+---
+layout: null
+permalink: /api/patents.json
+---
+{{ site.data.patents | jsonify }}

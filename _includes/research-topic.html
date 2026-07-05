@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="/assets/css/research-system.css?v=content-qa-20260705">
+{% include research-nav.html %}
+
+{% assign topic = site.data.topics | where: "slug", page.topic_slug | first %}
+{% assign topic_publications = site.data.publications | where: "topic", page.topic_slug %}
+{% assign topic_projects = site.data.projects | where: "topic", page.topic_slug %}
+{% assign topic_patents = site.data.patents | where: "topic", page.topic_slug %}
+
+<div class="research-site">
+  <section class="research-hero">
+    <div class="research-shell hero-layout">
+      <div>
+        <h1>{{ topic.title }}</h1>
+        <p class="lede">{{ topic.summary }}</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#papers">Papers</a>
+        </div>
+      </div>
+      <aside class="summary-board" aria-label="Topic summary">
+        {% for stat in topic.stats %}
+        <div class="summary-row"><strong>{{ stat.value }}</strong><span>{{ stat.label }}</span></div>
+        {% endfor %}
+      </aside>
+    </div>
+  </section>
+
+  <section class="research-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>{{ topic.scope_headline }}</h2>
+        <p>{{ topic.question }}</p>
+      </div>
+      <div class="topic-page-grid">
+        <article class="topic-brief">
+          <h3>Scope</h3>
+          <p>{{ topic.scope_text }}</p>
+        </article>
+        {% for card in topic.cards %}
+        <article class="topic-card">
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.text }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {% if topic_projects.size > 0 %}
+  <section class="research-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>Active projects</h2>
+        <p>Current project directions connected to this research topic.</p>
+      </div>
+      <div class="project-grid">
+        {% for project in topic_projects %}
+        <article class="project-card">
+          <span>{{ project.label }}</span>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.summary }}</p>
+          <a class="text-link" href="/#projects">All active projects</a>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <section id="papers" class="research-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>Papers in this area</h2>
+        <p>Publications connected to this research direction.</p>
+      </div>
+      <div class="record-list">
+        <section class="year-block">
+          <div class="year-label">{{ topic.title }}</div>
+          <div class="record-stack">
+            {% for paper in topic_publications %}
+            {% if paper.topic_page != false %}
+            <article class="record-item">
+              <div>
+                <h3>{{ paper.title }}</h3>
+                <div class="record-meta">{{ paper.authors }}<br>{{ paper.venue_short }} {{ paper.year }}</div>
+              </div>
+              <div class="record-actions">
+                <a class="pill link" href="/publications/#{{ paper.year }}">Publication</a>
+                {% if paper.digest_url %}<a class="pill digest" href="{{ paper.digest_url }}">Digest</a>{% endif %}
+              </div>
+            </article>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  {% if topic_patents.size > 0 %}
+  <section class="research-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>Related patents</h2>
+        <p>Selected patent records that connect this direction to applied systems.</p>
+      </div>
+      <div class="record-list">
+        <section class="patent-group">
+          <div class="group-label">Patents</div>
+          <div class="record-stack">
+            {% for patent in topic_patents limit: 6 %}
+            {% if patent.topic_page != false %}
+            <article class="patent-card">
+              <div>
+                <h3>{{ patent.title }}</h3>
+                <div class="patent-meta"><a href="{{ patent.source_url }}">{{ patent.number }}</a><br>{{ patent.year }} / {{ patent.area }}</div>
+              </div>
+              <div class="patent-tags">
+                <span class="pill">{{ patent.jurisdiction }}</span>
+                <span class="pill link">{{ patent.status }}</span>
+              </div>
+            </article>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </section>
+      </div>
+      {% if topic_patents.size > 6 %}
+      <p style="margin-top: 22px;"><a class="text-link" href="/patents/">All patents</a></p>
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+</div>

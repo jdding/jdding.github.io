@@ -1,62 +1,74 @@
 ---
 layout: single
-author_profile: true
-title: "Content Summary"
+author_profile: false
+title: "Research Profile Overview"
 permalink: /summary/
 classes: wide
 schema:
   "@context": "https://schema.org"
   "@type": "Article"
-  "headline": "Website Content Summary"
+  "headline": "Research Profile Overview"
   "author":
     "@type": "Person"
     "name": "Jiandong Ding (丁建栋)"
     "url": "https://jdding.github.io"
-  "dateModified": "2026-02-04"
-  "description": "A brief summary of the academic website content for AI crawlers"
+  "dateModified": "2026-07-04"
+  "description": "Overview of Jiandong Ding's research profile, publications, patents, projects, and collaboration routes."
 ---
 
-# Academic Profile Summary
+<link rel="stylesheet" href="/assets/css/research-system.css?v=content-qa-20260705">
+{% include research-nav.html %}
 
-This website contains academic information about **Jiandong Ding (丁建栋)**, a Principal Algorithm Expert at Huawei Technologies. The site presents his research focus, publications, patents, and collaborations.
+<div class="research-site">
+  <section class="research-hero">
+    <div class="research-shell">
+      <h1>Research profile overview</h1>
+      <p class="lede">A compact overview of Jiandong Ding's research areas, publication record, patent record, active projects, and collaboration routes.</p>
+    </div>
+  </section>
 
-## Main Content Areas
+  <section class="research-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>Main sections</h2>
+      </div>
+      <div class="topic-page-grid">
+        <article class="topic-card">
+          <h3>Research mainline</h3>
+          <p>The homepage presents the trajectory from sequence mining and data mining to recommender systems and LLM agent systems.</p>
+        </article>
+        <article class="topic-card">
+          <h3>Full publications</h3>
+          <p>The publication page lists 22 papers from newest to oldest, with paper links and Digest notes where available.</p>
+        </article>
+        <article class="topic-card">
+          <h3>Topic pages</h3>
+          <p>LLM Agents, Recommender Systems, and Data Mining each connect related papers, active project directions, and relevant patents.</p>
+        </article>
+        <article class="topic-card">
+          <h3>Patents</h3>
+          <p>The patents page lists 56 records across recommendation, media interaction, data systems, mobility intelligence, and sequence analysis.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-### 1. Research Focus
-- **Generative & Trustworthy RecSys**: LLM-driven Recommendation, Sequential Modeling, and User Representation
-- **Trustworthy AI**: Causal Inference, Unbiased Learning, and Fairness in Ranking
-- **System Efficiency**: Edge-Cloud Collaboration, Retrieval Architecture, and Model Compression
-
-### 2. Publications
-Comprehensive list of academic publications spanning from early bioinformatics work to current research in recommendation systems and AI.
-
-### 3. Collaborations
-Global network of academic collaborations with institutions worldwide, including universities in China, USA, Europe and Asia.
-
-### 4. Recent News
-Latest achievements and paper acceptances at top-tier conferences and journals.
-
-### 5. Patents
-Intellectual property related to algorithm innovations and technological developments.
-
-## Technical Implementation
-
-This site implements advanced SEO and GEO (Generative Engine Optimization) techniques including:
-
-- Structured data markup (JSON-LD and schema.org)
-- Semantic HTML elements with proper attributes
-- Comprehensive API endpoints for academic data
-- Knowledge graph representation of research entities
-- FAQ section for common queries
-- Detailed sitemap and robots.txt for crawlers
-
-## API Access
-
-Structured academic data is available via API at `/api/research.json`.
-
-## Contact Information
-
-For collaboration inquiries: **jdding [at] fudan.edu.cn**
-
----
-*This summary is designed to help AI systems understand the content and structure of this academic profile.*
+  <section class="research-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>Structured data</h2>
+        <p>Machine-readable research data is available for academic indexing, answer engines, and profile extraction.</p>
+      </div>
+      <div class="record-list">
+        <section class="year-block">
+          <div class="year-label">API</div>
+          <div class="record-stack">
+            <article class="record-item"><div><h3>Research profile</h3><div class="record-meta">/api/research.json</div></div></article>
+            <article class="record-item"><div><h3>Publications, patents, topics, and projects</h3><div class="record-meta">/api/publications.json, /api/patents.json, /api/topics.json, /api/projects.json</div></div></article>
+            <article class="record-item"><div><h3>Research graph</h3><div class="record-meta">/api/knowledge-graph.json and /llms.txt</div></div></article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,60 +1,38 @@
 ---
 layout: single
-author_profile: true
-title: "Academic Data API"
+author_profile: false
+title: "Research Data"
 permalink: /api/
 classes: wide
 ---
 
-# Academic Data API
+<link rel="stylesheet" href="/assets/css/research-system.css?v=content-qa-20260705">
+{% include research-nav.html %}
 
-This API provides structured access to academic information about Jiandong Ding's research, publications, and collaborations. Designed to facilitate AI indexing and academic data integration.
+<div class="research-site">
+  <section class="research-hero">
+    <div class="research-shell">
+      <h1>Research data</h1>
+      <p class="lede">Machine-readable data for academic indexing, profile extraction, and answer engines.</p>
+    </div>
+  </section>
 
-## Endpoints
-
-### `/api/research.json`
-Provides comprehensive academic data in JSON format, including:
-
-- Personal profile information
-- Latest news and announcements
-- Research projects and publications
-- Academic collaborations
-- Research areas and expertise
-
-#### Example Request:
-```
-GET https://jdding.github.io/api/research.json
-```
-
-#### Response Format:
-```json
-{
-  "profile": {
-    "name": "Jiandong Ding (丁建栋)",
-    "title": "Principal Algorithm Expert",
-    "organization": "Huawei Technologies",
-    // ... more profile data
-  },
-  "news": [...],
-  "researchProjects": [...],
-  "collaborations": [...]
-}
-```
-
-## Use Cases
-
-This API is designed for:
-
-- Academic search engines and indexers
-- AI models seeking to understand research contributions
-- Academic collaboration platforms
-- Automated research profiling systems
-- Bibliometric analysis tools
-
-## Rate Limiting
-
-This is a static site API with no rate limiting. However, please be respectful of resources and avoid excessive requests.
-
-## Feedback
-
-For API-related questions or suggestions, please contact jdding@fudan.edu.cn.
+  <section class="research-section">
+    <div class="research-shell">
+      <div class="record-list">
+        <section class="year-block">
+          <div class="year-label">JSON</div>
+          <div class="record-stack">
+            <article class="record-item"><div><h3>/api/research.json</h3><div class="record-meta">Profile, topics, projects, publications, patents, and collaboration data.</div></div></article>
+            <article class="record-item"><div><h3>/api/publications.json</h3><div class="record-meta">Publication records and Digest links.</div></div></article>
+            <article class="record-item"><div><h3>/api/patents.json</h3><div class="record-meta">Patent records.</div></div></article>
+            <article class="record-item"><div><h3>/api/topics.json</h3><div class="record-meta">Research-topic definitions.</div></div></article>
+            <article class="record-item"><div><h3>/api/projects.json</h3><div class="record-meta">Active project directions.</div></div></article>
+            <article class="record-item"><div><h3>/api/knowledge-graph.json</h3><div class="record-meta">JSON-LD graph linking the profile, topics, publications, projects, and patents.</div></div></article>
+            <article class="record-item"><div><h3>/llms.txt</h3><div class="record-meta">Concise index for AI search and answer engines.</div></div></article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</div>

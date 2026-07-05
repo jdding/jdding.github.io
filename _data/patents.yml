@@ -1,0 +1,952 @@
+- id: us11856243b2
+  title: Method, device, and computer storage medium for managing virtual streaming
+  number: US-11856243-B2
+  jurisdiction: US
+  status: Granted
+  year: 2023
+  priority_date: '2021-03-15'
+  filing_date: '2022-02-28'
+  publication_date: '2023-12-26'
+  grant_date: '2023-12-26'
+  assignee: Alibaba (China) Co., Ltd.
+  inventors: Jin Xu, Ding JIANDONG
+  role: Co-inventor
+  area: Interactive media and content generation
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/US11856243B2/en
+- id: us12267751b2
+  title: Method and apparatus for identifying objects in a spatial region
+  number: US-12267751-B2
+  jurisdiction: US
+  status: Granted
+  year: 2025
+  priority_date: '2020-12-09'
+  filing_date: '2021-12-03'
+  publication_date: '2025-04-01'
+  grant_date: '2025-04-01'
+  assignee: Alibaba Group Holding Limited
+  inventors: Meng Yi, Xu Jin, Ding JIANDONG
+  role: Co-inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/US12267751B2/en
+- id: cn113923504b
+  title: Video preview animation generation method and device
+  number: CN-113923504-B
+  jurisdiction: CN
+  status: Granted
+  year: 2022
+  priority_date: '2021-12-02'
+  filing_date: '2021-12-02'
+  publication_date: '2022-03-08'
+  grant_date: '2022-03-08'
+  assignee: 阿里巴巴达摩院(杭州)科技有限公司
+  inventors: 何永继, 丁建栋
+  role: Co-inventor
+  area: Interactive media and content generation
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/CN113923504B/en
+- id: cn113590247b
+  title: Text creation method and computer program product
+  number: CN-113590247-B
+  jurisdiction: CN
+  status: Granted
+  year: 2024
+  priority_date: '2021-07-21'
+  filing_date: '2021-07-21'
+  publication_date: '2024-04-05'
+  grant_date: '2024-04-05'
+  assignee: 杭州阿里云飞天信息技术有限公司
+  inventors: 丁建栋
+  role: First Inventor
+  area: Interactive media and content generation
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/CN113590247B/en
+- id: cn115379265b
+  title: Live broadcast behavior control method and device of virtual anchor
+  number: CN-115379265-B
+  jurisdiction: CN
+  status: Granted
+  year: 2023
+  priority_date: '2021-05-18'
+  filing_date: '2021-05-18'
+  publication_date: '2023-12-01'
+  grant_date: '2023-12-01'
+  assignee: 阿里巴巴新加坡控股有限公司
+  inventors: 孙艳, 丁建栋
+  role: Co-inventor
+  area: Interactive media and content generation
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/CN115379265B/en
+- id: cn114064766b
+  title: Service registration method and device
+  number: CN-114064766-B
+  jurisdiction: CN
+  status: Granted
+  year: 2026
+  priority_date: '2020-07-29'
+  filing_date: '2020-07-29'
+  publication_date: '2026-03-17'
+  grant_date: '2026-03-17'
+  assignee: 阿里巴巴集团控股有限公司
+  inventors: 刘士博, 何永继, 丁建栋
+  role: Co-inventor
+  area: Data and platform systems
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN114064766B/en
+- id: cn113810726b
+  title: Control method, control device, and control equipment
+  number: CN-113810726-B
+  jurisdiction: CN
+  status: Granted
+  year: 2023
+  priority_date: '2020-06-12'
+  filing_date: '2020-06-12'
+  publication_date: '2023-07-18'
+  grant_date: '2023-07-18'
+  assignee: 阿里巴巴集团控股有限公司
+  inventors: 何永继, 刘士博, 丁建栋
+  role: Co-inventor
+  area: Applied data systems
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN113810726B/en
+- id: cn113806427b
+  title: ETL task processing method and device
+  number: CN-113806427-B
+  jurisdiction: CN
+  status: Granted
+  year: 2025
+  priority_date: '2020-06-11'
+  filing_date: '2020-06-11'
+  publication_date: '2025-03-07'
+  grant_date: '2025-03-07'
+  assignee: 阿里巴巴集团控股有限公司
+  inventors: 丁建栋, 孙大为, 王琦
+  role: First Inventor
+  area: Data and platform systems
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN113806427B/en
+- id: us11270039b2
+  title: Road network generation
+  number: US-11270039-B2
+  jurisdiction: US
+  status: Granted
+  year: 2022
+  priority_date: '2014-09-30'
+  filing_date: '2019-09-19'
+  publication_date: '2022-03-08'
+  grant_date: '2022-03-08'
+  assignee: International Business Machines Corporation
+  inventors: Guoqiang Hu, Jiandong Ding, Peng Ji, Ning Duan, Jun Zhu
+  role: Co-inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/US11270039B2/en
+- id: cn111047130b
+  title: Method and system for traffic analysis and management
+  number: CN-111047130-B
+  jurisdiction: CN
+  status: Granted
+  year: 2021
+  priority_date: '2019-06-11'
+  filing_date: '2019-06-11'
+  publication_date: '2021-03-02'
+  grant_date: '2021-03-02'
+  assignee: 北京嘀嘀无限科技发展有限公司
+  inventors: 刘未名, 丁建栋
+  role: Co-inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN111047130B/en
+- id: cn111353797b
+  title: Resource allocation method, device and electronic equipment
+  number: CN-111353797-B
+  jurisdiction: CN
+  status: Granted
+  year: 2023
+  priority_date: '2018-12-20'
+  filing_date: '2018-12-20'
+  publication_date: '2023-12-26'
+  grant_date: '2023-12-26'
+  assignee: 北京嘀嘀无限科技发展有限公司
+  inventors: 孙华美, 丁建栋, 李子玉, 刘未名
+  role: Co-inventor
+  area: Data and platform systems
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN111353797B/en
+- id: cn111275229b
+  title: Resource model training method, resource gap prediction method, device and electronic equipment
+  number: CN-111275229-B
+  jurisdiction: CN
+  status: Granted
+  year: 2022
+  priority_date: '2018-12-04'
+  filing_date: '2018-12-04'
+  publication_date: '2022-07-05'
+  grant_date: '2022-07-05'
+  assignee: 北京嘀嘀无限科技发展有限公司
+  inventors: 石贤芝, 丁建栋
+  role: Co-inventor
+  area: User modeling and prediction
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/CN111275229B/en
+- id: cn110689362b
+  title: Region clustering method and system
+  number: CN-110689362-B
+  jurisdiction: CN
+  status: Granted
+  year: 2022
+  priority_date: '2018-07-04'
+  filing_date: '2018-07-04'
+  publication_date: '2022-04-12'
+  grant_date: '2022-04-12'
+  assignee: 北京嘀嘀无限科技发展有限公司
+  inventors: 丁建栋
+  role: First Inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN110689362B/en
+- id: cn110688435b
+  title: Similar track searching method and system
+  number: CN-110688435-B
+  jurisdiction: CN
+  status: Granted
+  year: 2022
+  priority_date: '2018-07-04'
+  filing_date: '2018-07-04'
+  publication_date: '2022-04-05'
+  grant_date: '2022-04-05'
+  assignee: 北京嘀嘀无限科技发展有限公司
+  inventors: 丁建栋
+  role: First Inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN110688435B/en
+- id: cn105631239b
+  title: Method and apparatus for managing gene order
+  number: CN-105631239-B
+  jurisdiction: CN
+  status: Granted
+  year: 2018
+  priority_date: '2014-10-30'
+  filing_date: '2014-10-30'
+  publication_date: '2018-08-17'
+  grant_date: '2018-08-17'
+  assignee: 国际商业机器公司
+  inventors: 丁建栋, 朱俊, 黄胜, 张亚楠, 严骏驰
+  role: First Inventor
+  area: Bioinformatics
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN105631239B/en
+- id: cn105205196b
+  title: Method and system for generating road network
+  number: CN-105205196-B
+  jurisdiction: CN
+  status: Granted
+  year: 2018
+  priority_date: '2014-06-27'
+  filing_date: '2014-06-27'
+  publication_date: '2018-08-03'
+  grant_date: '2018-08-03'
+  assignee: 国际商业机器公司
+  inventors: 赵乾坤, 段宁, 高鹏, 丁建栋, 张欣, 嵇鹏
+  role: Co-inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN105205196B/en
+- id: cn105095617b
+  title: Method and apparatus for reconstructing missing parts of an object's target trajectory
+  number: CN-105095617-B
+  jurisdiction: CN
+  status: Granted
+  year: 2019
+  priority_date: '2014-04-29'
+  filing_date: '2014-04-29'
+  publication_date: '2019-03-19'
+  grant_date: '2019-03-19'
+  assignee: 国际商业机器公司
+  inventors: 赵乾坤, 严骏驰, 丁建栋, 张超, 王瑜, 张亚楠
+  role: Co-inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN105095617B/en
+- id: cn105091890b
+  title: Method and apparatus for recommended candidate path
+  number: CN-105091890-B
+  jurisdiction: CN
+  status: Granted
+  year: 2018
+  priority_date: '2014-04-25'
+  filing_date: '2014-04-25'
+  publication_date: '2018-01-12'
+  grant_date: '2018-01-12'
+  assignee: 国际商业机器公司
+  inventors: 丁建栋, 朱俊, 段宁, 嵇鹏, 赵乾坤
+  role: First Inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN105091890B/en
+- id: cn104951667b
+  title: Method and apparatus for analyzing protein-sequence properties
+  number: CN-104951667-B
+  jurisdiction: CN
+  status: Granted
+  year: 2018
+  priority_date: '2014-03-28'
+  filing_date: '2014-03-28'
+  publication_date: '2018-04-17'
+  grant_date: '2018-04-17'
+  assignee: 国际商业机器公司
+  inventors: 丁建栋, 张亚楠, 严骏驰, 黄振, 张超
+  role: First Inventor
+  area: Bioinformatics
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN104951667B/en
+- id: cn104598660b
+  title: Method and system for detecting islanding effects in power-network topology
+  number: CN-104598660-B
+  jurisdiction: CN
+  status: Granted
+  year: 2017
+  priority_date: '2013-10-31'
+  filing_date: '2013-10-31'
+  publication_date: '2017-11-17'
+  grant_date: '2017-11-17'
+  assignee: 国际商业机器公司
+  inventors: 张亚楠, 金锋, 田启明, 刘宇航, 曲俊媚, 丁建栋
+  role: Co-inventor
+  area: Data and platform systems
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN104598660B/en
+- id: cn104346366b
+  title: Test-data expansion method and apparatus
+  number: CN-104346366-B
+  jurisdiction: CN
+  status: Granted
+  year: 2017
+  priority_date: '2013-07-30'
+  filing_date: '2013-07-30'
+  publication_date: '2017-11-24'
+  grant_date: '2017-11-24'
+  assignee: 国际商业机器公司
+  inventors: 胡国强, 朱俊, 段宁, 丁建栋, 黄胜
+  role: Co-inventor
+  area: Data and platform systems
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN104346366B/en
+- id: us2022294837a1
+  title: Method, device, and computer storage medium for managing virtual streaming
+  number: US-2022294837-A1
+  jurisdiction: US
+  status: Application
+  year: 2022
+  priority_date: '2021-03-15'
+  filing_date: '2022-02-28'
+  publication_date: '2022-09-15'
+  grant_date: ''
+  assignee: Alibaba (China) Co., Ltd.
+  inventors: Jin Zheng, Ding JIANDONG
+  role: Co-inventor
+  area: Interactive media and content generation
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/US20220294837A1/en
+- id: us2022248066a1
+  title: Live Broadcast Interaction Method, Apparatus, Device and Storage Medium
+  number: US-2022248066-A1
+  jurisdiction: US
+  status: Application
+  year: 2022
+  priority_date: '2021-02-02'
+  filing_date: '2022-01-26'
+  publication_date: '2022-08-04'
+  grant_date: ''
+  assignee: Alibaba Group Holding Limited
+  inventors: Shibo LIU, Jiandong Ding, Yongji HE
+  role: Co-inventor
+  area: Interactive media and content generation
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/US20220248066A1/en
+- id: us2022217500a1
+  title: Method and apparatus for identifying objects in a spatial region
+  number: US-2022217500-A1
+  jurisdiction: US
+  status: Application
+  year: 2022
+  priority_date: '2020-12-09'
+  filing_date: '2021-12-03'
+  publication_date: '2022-07-07'
+  grant_date: ''
+  assignee: Alibaba Group Holding Limited
+  inventors: Meng Yi, Xu Jin, Ding JIANDONG
+  role: Co-inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/US20220217500A1/en
+- id: us2022248107a1
+  title: Method, apparatus, electronic device, and storage medium for sound effect processing during live streaming
+  number: US-2022248107-A1
+  jurisdiction: US
+  status: Application
+  year: 2022
+  priority_date: '2020-12-29'
+  filing_date: '2021-12-03'
+  publication_date: '2022-08-04'
+  grant_date: ''
+  assignee: Alibaba Group Holding Limited
+  inventors: Xu Jin, Ding JIANDONG
+  role: Co-inventor
+  area: Interactive media and content generation
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/US20220248107A1/en
+- id: cn113923504a
+  title: Video preview moving picture generation method and device
+  number: CN-113923504-A
+  jurisdiction: CN
+  status: Application
+  year: 2022
+  priority_date: '2021-12-02'
+  filing_date: '2021-12-02'
+  publication_date: '2022-01-11'
+  grant_date: ''
+  assignee: 阿里巴巴达摩院(杭州)科技有限公司
+  inventors: 何永继, 丁建栋
+  role: Co-inventor
+  area: Interactive media and content generation
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/CN113923504A/en
+- id: cn113590247a
+  title: Text creation method and computer program product
+  number: CN-113590247-A
+  jurisdiction: CN
+  status: Application
+  year: 2021
+  priority_date: '2021-07-21'
+  filing_date: '2021-07-21'
+  publication_date: '2021-11-02'
+  grant_date: ''
+  assignee: 阿里巴巴达摩院(杭州)科技有限公司
+  inventors: 丁建栋
+  role: First Inventor
+  area: Interactive media and content generation
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/CN113590247A/en
+- id: cn115379265a
+  title: Live broadcast behavior control method and device of virtual anchor
+  number: CN-115379265-A
+  jurisdiction: CN
+  status: Application
+  year: 2022
+  priority_date: '2021-05-18'
+  filing_date: '2021-05-18'
+  publication_date: '2022-11-22'
+  grant_date: ''
+  assignee: 阿里巴巴新加坡控股有限公司
+  inventors: 孙艳, 丁建栋
+  role: Co-inventor
+  area: Interactive media and content generation
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/CN115379265A/en
+- id: cn115080791a
+  title: Method and device for recommending playing time of video playing platform and electronic equipment
+  number: CN-115080791-A
+  jurisdiction: CN
+  status: Application
+  year: 2022
+  priority_date: '2021-03-15'
+  filing_date: '2021-03-15'
+  publication_date: '2022-09-20'
+  grant_date: ''
+  assignee: 阿里巴巴新加坡控股有限公司
+  inventors: 马玥, 王琦, 丁建栋
+  role: Co-inventor
+  area: Recommendation and user modeling
+  topic: recommender-systems
+  topic_page: true
+  source_url: https://patents.google.com/patent/CN115080791A/en
+- id: cn114912932a
+  title: Method and device for improving user state and electronic equipment
+  number: CN-114912932-A
+  jurisdiction: CN
+  status: Application
+  year: 2022
+  priority_date: '2021-02-08'
+  filing_date: '2021-02-08'
+  publication_date: '2022-08-16'
+  grant_date: ''
+  assignee: 阿里巴巴集团控股有限公司
+  inventors: 丁建栋, 刘士博, 曹雅婷
+  role: First Inventor
+  area: User modeling and prediction
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/CN114912932A/en
+- id: cn114064844a
+  title: Emotion recognition method and device and electronic equipment
+  number: CN-114064844-A
+  jurisdiction: CN
+  status: Application
+  year: 2022
+  priority_date: '2020-07-30'
+  filing_date: '2020-07-30'
+  publication_date: '2022-02-18'
+  grant_date: ''
+  assignee: 阿里巴巴集团控股有限公司
+  inventors: 杨其成, 丁建栋
+  role: Co-inventor
+  area: Applied data systems
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN114064844A/en
+- id: cn114064766a
+  title: Service registration method and device
+  number: CN-114064766-A
+  jurisdiction: CN
+  status: Application
+  year: 2022
+  priority_date: '2020-07-29'
+  filing_date: '2020-07-29'
+  publication_date: '2022-02-18'
+  grant_date: ''
+  assignee: 阿里巴巴集团控股有限公司
+  inventors: 刘士博, 何永继, 丁建栋
+  role: Co-inventor
+  area: Data and platform systems
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN114064766A/en
+- id: cn113935509a
+  title: Prediction method and device
+  number: CN-113935509-A
+  jurisdiction: CN
+  status: Application
+  year: 2022
+  priority_date: '2020-07-09'
+  filing_date: '2020-07-09'
+  publication_date: '2022-01-14'
+  grant_date: ''
+  assignee: 阿里巴巴集团控股有限公司
+  inventors: 丁建栋, 王琦
+  role: First Inventor
+  area: User modeling and prediction
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/CN113935509A/en
+- id: cn113810726a
+  title: Control method and control device
+  number: CN-113810726-A
+  jurisdiction: CN
+  status: Application
+  year: 2021
+  priority_date: '2020-06-12'
+  filing_date: '2020-06-12'
+  publication_date: '2021-12-17'
+  grant_date: ''
+  assignee: 阿里巴巴集团控股有限公司
+  inventors: 何永继, 刘士博, 丁建栋
+  role: Co-inventor
+  area: Applied data systems
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN113810726A/en
+- id: cn113806427a
+  title: ETL task processing method and device
+  number: CN-113806427-A
+  jurisdiction: CN
+  status: Application
+  year: 2021
+  priority_date: '2020-06-11'
+  filing_date: '2020-06-11'
+  publication_date: '2021-12-17'
+  grant_date: ''
+  assignee: 阿里巴巴集团控股有限公司
+  inventors: 丁建栋, 孙大为, 王琦
+  role: First Inventor
+  area: Data and platform systems
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN113806427A/en
+- id: us2020012755a1
+  title: Road network generation
+  number: US-2020012755-A1
+  jurisdiction: US
+  status: Application
+  year: 2020
+  priority_date: '2014-09-30'
+  filing_date: '2019-09-19'
+  publication_date: '2020-01-09'
+  grant_date: ''
+  assignee: International Business Machines Corporation
+  inventors: Guoqiang Hu, Jiandong Ding, Peng Ji, Ning Duan, Jun Zhu
+  role: Co-inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/US20200012755A1/en
+- id: cn112445950a
+  title: Data visualization processing method and device and electronic equipment
+  number: CN-112445950-A
+  jurisdiction: CN
+  status: Application
+  year: 2021
+  priority_date: '2019-09-02'
+  filing_date: '2019-09-02'
+  publication_date: '2021-03-05'
+  grant_date: ''
+  assignee: 阿里巴巴集团控股有限公司
+  inventors: 丁建栋, 邹业盛
+  role: First Inventor
+  area: Data and platform systems
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN112445950A/en
+- id: cn111047130a
+  title: Method and system for traffic analysis and management
+  number: CN-111047130-A
+  jurisdiction: CN
+  status: Application
+  year: 2020
+  priority_date: '2019-06-11'
+  filing_date: '2019-06-11'
+  publication_date: '2020-04-21'
+  grant_date: ''
+  assignee: 北京嘀嘀无限科技发展有限公司
+  inventors: 刘未名, 丁建栋
+  role: Co-inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN111047130A/en
+- id: cn112054949a
+  title: User information processing method, information push method, device and electronic device
+  number: CN-112054949-A
+  jurisdiction: CN
+  status: Application
+  year: 2020
+  priority_date: '2019-06-06'
+  filing_date: '2019-06-06'
+  publication_date: '2020-12-08'
+  grant_date: ''
+  assignee: 阿里巴巴集团控股有限公司
+  inventors: 丁建栋
+  role: First Inventor
+  area: User modeling and prediction
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/CN112054949A/en
+- id: cn111680382a
+  title: Grade prediction model training method, grade prediction device and electronic equipment
+  number: CN-111680382-A
+  jurisdiction: CN
+  status: Application
+  year: 2020
+  priority_date: '2019-02-25'
+  filing_date: '2019-02-25'
+  publication_date: '2020-09-18'
+  grant_date: ''
+  assignee: 北京嘀嘀无限科技发展有限公司
+  inventors: 石贤芝, 丁建栋, 杨育
+  role: Co-inventor
+  area: User modeling and prediction
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/CN111680382A/en
+- id: cn111353094a
+  title: Information pushing method and device
+  number: CN-111353094-A
+  jurisdiction: CN
+  status: Application
+  year: 2020
+  priority_date: '2018-12-20'
+  filing_date: '2018-12-20'
+  publication_date: '2020-06-30'
+  grant_date: ''
+  assignee: 北京嘀嘀无限科技发展有限公司
+  inventors: 贺永正, 丁建栋, 杨育, 石贤芝
+  role: Co-inventor
+  area: User modeling and prediction
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/CN111353094A/en
+- id: cn111353797a
+  title: Resource allocation method and device and electronic equipment
+  number: CN-111353797-A
+  jurisdiction: CN
+  status: Application
+  year: 2020
+  priority_date: '2018-12-20'
+  filing_date: '2018-12-20'
+  publication_date: '2020-06-30'
+  grant_date: ''
+  assignee: 北京嘀嘀无限科技发展有限公司
+  inventors: 孙华美, 丁建栋, 李子玉, 刘未名
+  role: Co-inventor
+  area: Data and platform systems
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN111353797A/en
+- id: cn111275229a
+  title: Resource model training method, resource gap prediction method, device and electronic equipment
+  number: CN-111275229-A
+  jurisdiction: CN
+  status: Application
+  year: 2020
+  priority_date: '2018-12-04'
+  filing_date: '2018-12-04'
+  publication_date: '2020-06-12'
+  grant_date: ''
+  assignee: 北京嘀嘀无限科技发展有限公司
+  inventors: 石贤芝, 丁建栋
+  role: Co-inventor
+  area: User modeling and prediction
+  topic: data-mining
+  topic_page: true
+  source_url: https://patents.google.com/patent/CN111275229A/en
+- id: cn111091219a
+  title: Method and system for predicting whether user has vehicle
+  number: CN-111091219-A
+  jurisdiction: CN
+  status: Application
+  year: 2020
+  priority_date: '2018-10-23'
+  filing_date: '2018-10-23'
+  publication_date: '2020-05-01'
+  grant_date: ''
+  assignee: 北京嘀嘀无限科技发展有限公司
+  inventors: 丁建栋
+  role: First Inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN111091219A/en
+- id: cn110688435a
+  title: Similar track searching method and system
+  number: CN-110688435-A
+  jurisdiction: CN
+  status: Application
+  year: 2020
+  priority_date: '2018-07-04'
+  filing_date: '2018-07-04'
+  publication_date: '2020-01-14'
+  grant_date: ''
+  assignee: 北京嘀嘀无限科技发展有限公司
+  inventors: 丁建栋
+  role: First Inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN110688435A/en
+- id: cn110689362a
+  title: Region clustering method and system
+  number: CN-110689362-A
+  jurisdiction: CN
+  status: Application
+  year: 2020
+  priority_date: '2018-07-04'
+  filing_date: '2018-07-04'
+  publication_date: '2020-01-14'
+  grant_date: ''
+  assignee: 北京嘀嘀无限科技发展有限公司
+  inventors: 丁建栋
+  role: First Inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN110689362A/en
+- id: cn110390415a
+  title: Trip-mode recommendation method and system based on user travel data
+  number: CN-110390415-A
+  jurisdiction: CN
+  status: Application
+  year: 2019
+  priority_date: '2018-04-18'
+  filing_date: '2018-04-18'
+  publication_date: '2019-10-29'
+  grant_date: ''
+  assignee: 北京嘀嘀无限科技发展有限公司
+  inventors: 丁建栋, 周晓飞
+  role: First Inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN110390415A/en
+- id: cn105630801a
+  title: Method and apparatus for detecting deviated user
+  number: CN-105630801-A
+  jurisdiction: CN
+  status: Application
+  year: 2016
+  priority_date: '2014-10-30'
+  filing_date: '2014-10-30'
+  publication_date: '2016-06-01'
+  grant_date: ''
+  assignee: 国际商业机器公司
+  inventors: 张超, 严骏驰, 丁建栋, 龚旻, 张亚楠, 王瑜
+  role: Co-inventor
+  area: Applied data systems
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN105630801A/en
+- id: cn105631239a
+  title: Methods and apparatuses for managing gene sequences
+  number: CN-105631239-A
+  jurisdiction: CN
+  status: Application
+  year: 2016
+  priority_date: '2014-10-30'
+  filing_date: '2014-10-30'
+  publication_date: '2016-06-01'
+  grant_date: ''
+  assignee: 国际商业机器公司
+  inventors: 丁建栋, 朱俊, 黄胜, 张亚楠, 严骏驰
+  role: First Inventor
+  area: Bioinformatics
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN105631239A/en
+- id: de112014005580t5
+  title: Genome compression and decompression
+  number: DE-112014005580-T5
+  jurisdiction: DE
+  status: Application
+  year: 2016
+  priority_date: '2013-12-06'
+  filing_date: '2014-10-11'
+  publication_date: '2016-08-11'
+  grant_date: ''
+  assignee: International Business Machines Corporation
+  inventors: Jiandong Ding, Junchi Yan, Yanan Zhang, Yunjie Qiu, Min Gong
+  role: First Inventor
+  area: Bioinformatics
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/DE112014005580T5/en
+- id: cn105205196a
+  title: Method and system for generating road network
+  number: CN-105205196-A
+  jurisdiction: CN
+  status: Application
+  year: 2015
+  priority_date: '2014-06-27'
+  filing_date: '2014-06-27'
+  publication_date: '2015-12-30'
+  grant_date: ''
+  assignee: 国际商业机器公司
+  inventors: 赵乾坤, 段宁, 高鹏, 丁建栋, 张欣, 嵇鹏
+  role: Co-inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN105205196A/en
+- id: cn105095617a
+  title: Method and device for constructing missing part of target movement track of object
+  number: CN-105095617-A
+  jurisdiction: CN
+  status: Application
+  year: 2015
+  priority_date: '2014-04-29'
+  filing_date: '2014-04-29'
+  publication_date: '2015-11-25'
+  grant_date: ''
+  assignee: 国际商业机器公司
+  inventors: 赵乾坤, 严骏驰, 丁建栋, 张超, 王瑜, 张亚楠
+  role: Co-inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN105095617A/en
+- id: cn105091890a
+  title: Method and apparatus used for recommending candidate path
+  number: CN-105091890-A
+  jurisdiction: CN
+  status: Application
+  year: 2015
+  priority_date: '2014-04-25'
+  filing_date: '2014-04-25'
+  publication_date: '2015-11-25'
+  grant_date: ''
+  assignee: 国际商业机器公司
+  inventors: 丁建栋, 朱俊, 段宁, 嵇鹏, 赵乾坤
+  role: First Inventor
+  area: Mobility and spatial intelligence
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN105091890A/en
+- id: cn104951667a
+  title: Method and device for analyzing protein-sequence properties
+  number: CN-104951667-A
+  jurisdiction: CN
+  status: Application
+  year: 2015
+  priority_date: '2014-03-28'
+  filing_date: '2014-03-28'
+  publication_date: '2015-09-30'
+  grant_date: ''
+  assignee: 国际商业机器公司
+  inventors: 丁建栋, 张亚楠, 严骏驰, 黄振, 张超
+  role: First Inventor
+  area: Bioinformatics
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN104951667A/en
+- id: cn104598660a
+  title: Method and system for detecting island effect in power network topology
+  number: CN-104598660-A
+  jurisdiction: CN
+  status: Application
+  year: 2015
+  priority_date: '2013-10-31'
+  filing_date: '2013-10-31'
+  publication_date: '2015-05-06'
+  grant_date: ''
+  assignee: 国际商业机器公司
+  inventors: 张亚楠, 金锋, 田启明, 刘宇航, 曲俊媚, 丁建栋
+  role: Co-inventor
+  area: Data and platform systems
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN104598660A/en
+- id: cn104346366a
+  title: Test data expansion method and device
+  number: CN-104346366-A
+  jurisdiction: CN
+  status: Application
+  year: 2015
+  priority_date: '2013-07-30'
+  filing_date: '2013-07-30'
+  publication_date: '2015-02-11'
+  grant_date: ''
+  assignee: 国际商业机器公司
+  inventors: 胡国强, 朱俊, 段宁, 丁建栋, 黄胜
+  role: Co-inventor
+  area: Data and platform systems
+  topic: data-mining
+  topic_page: false
+  source_url: https://patents.google.com/patent/CN104346366A/en

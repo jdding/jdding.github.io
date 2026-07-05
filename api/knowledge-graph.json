@@ -1,0 +1,105 @@
+---
+layout: null
+permalink: /api/knowledge-graph.json
+---
+{% assign profile = site.data.research.profile %}
+{% assign topics = site.data.topics | sort: "order" %}
+{% assign projects = site.data.projects | sort: "order" %}
+{% assign publications = site.data.publications %}
+{% assign patents = site.data.patents %}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "{{ site.url }}/#person",
+      "@type": "Person",
+      "name": {{ profile.name | jsonify }},
+      "alternateName": "Jiandong Ding",
+      "givenName": {{ profile.givenName | jsonify }},
+      "familyName": {{ profile.familyName | jsonify }},
+      "jobTitle": {{ profile.title | jsonify }},
+      "url": "{{ site.url }}/",
+      "email": {{ profile.email | jsonify }},
+      "affiliation": {
+        "@type": "Organization",
+        "name": {{ profile.organization | jsonify }}
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Fudan University"
+      },
+      "knowsAbout": {{ profile.researchAreas | jsonify }},
+      "sameAs": [
+        "https://www.linkedin.com/in/jiandong-ding-60498833/",
+        "https://github.com/jdding",
+        "https://scholar.google.com/citations?user=5-e7wi4AAAAJ"
+      ]
+    },
+    {
+      "@id": "{{ site.url }}/#website",
+      "@type": "WebSite",
+      "name": {{ site.title | jsonify }},
+      "url": "{{ site.url }}/",
+      "description": {{ site.description | jsonify }},
+      "about": { "@id": "{{ site.url }}/#person" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@id": "{{ site.url }}/publications/#collection",
+      "@type": "CollectionPage",
+      "name": "Full Publications",
+      "url": "{{ site.url }}/publications/",
+      "about": { "@id": "{{ site.url }}/#person" },
+      "numberOfItems": {{ publications | size }}
+    },
+    {
+      "@id": "{{ site.url }}/patents/#collection",
+      "@type": "CollectionPage",
+      "name": "Patents",
+      "url": "{{ site.url }}/patents/",
+      "about": { "@id": "{{ site.url }}/#person" },
+      "numberOfItems": {{ patents | size }}
+    }{% for topic in topics %},
+    {
+      "@id": "{{ site.url }}/topics/{{ topic.slug }}/#topic",
+      "@type": "DefinedTerm",
+      "name": {{ topic.title | jsonify }},
+      "url": "{{ site.url }}/topics/{{ topic.slug }}/",
+      "description": {{ topic.summary | jsonify }},
+      "inDefinedTermSet": "Jiandong Ding research topics"
+    }{% endfor %}{% for project in projects %},
+    {
+      "@id": "{{ site.url }}/projects/{{ project.id }}",
+      "@type": "ResearchProject",
+      "name": {{ project.title | jsonify }},
+      "description": {{ project.summary | jsonify }},
+      "about": { "@id": "{{ site.url }}/topics/{{ project.topic }}/#topic" },
+      "member": { "@id": "{{ site.url }}/#person" }
+    }{% endfor %}{% for paper in publications %},
+    {
+      "@id": "{{ site.url }}/publication/{{ paper.id }}",
+      "@type": "ScholarlyArticle",
+      "headline": {{ paper.title | jsonify }},
+      "name": {{ paper.title | jsonify }},
+      "author": {{ paper.authors | jsonify }},
+      "datePublished": {{ paper.year | jsonify }},
+      "isPartOf": {{ paper.venue | jsonify }},
+      "about": { "@id": "{{ site.url }}/topics/{{ paper.topic }}/#topic" }{% if paper.paper_url %},
+      "url": {{ paper.paper_url | jsonify }}{% endif %}{% if paper.digest_url %},
+      "mainEntityOfPage": "{{ site.url }}{{ paper.digest_url }}"{% endif %}{% if paper.doi_url %},
+      "sameAs": {{ paper.doi_url | jsonify }}{% endif %}
+    }{% endfor %}{% for patent in patents %},
+    {
+      "@id": "{{ site.url }}/patent/{{ patent.id }}",
+      "@type": "CreativeWork",
+      "additionalType": "Patent",
+      "name": {{ patent.title | jsonify }},
+      "identifier": {{ patent.number | jsonify }},
+      "datePublished": {{ patent.year | jsonify }},
+      "creator": {{ patent.inventors | jsonify }},
+      "publisher": {{ patent.assignee | jsonify }},
+      "about": { "@id": "{{ site.url }}/topics/{{ patent.topic }}/#topic" },
+      "url": {{ patent.source_url | jsonify }}
+    }{% endfor %}
+  ]
+}

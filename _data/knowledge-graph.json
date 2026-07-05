@@ -1,28 +1,24 @@
 {
   "@context": {
     "biro": "http://purl.org/spar/biro/",
-    "cito": "http://purl.org/spar/cito/",
     "fabio": "http://purl.org/spar/fabio/",
     "foaf": "http://xmlns.com/foaf/0.1/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "vcard": "http://www.w3.org/2006/vcard/ns#",
-    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
   },
   "@graph": [
     {
       "@id": "https://jdding.github.io/person/jiandong_ding",
       "@type": "foaf:Person",
       "foaf:name": "Jiandong Ding (丁建栋)",
-      "foaf:title": "Principal Algorithm Expert",
+      "foaf:title": "Senior Technical Expert",
       "rdfs:label": "Jiandong Ding",
       "biro:is-author-of": [
         "https://jdding.github.io/publication/skillresolve-bench",
         "https://jdding.github.io/publication/sidinspector",
-        "https://jdding.github.io/publication/hierarchical-preference-aware",
+        "https://jdding.github.io/publication/hpgr",
         "https://jdding.github.io/publication/invariant-feature-learning",
         "https://jdding.github.io/publication/rpe4rec",
+        "https://jdding.github.io/publication/bis-nl2sql",
         "https://jdding.github.io/publication/unified-low-rank-compression"
       ]
     },
@@ -39,41 +35,28 @@
       "rdfs:label": "Fudan University"
     },
     {
-      "@id": "https://jdding.github.io/research-area/generative-recsys",
-      "@type": "rdfs:Class",
-      "rdfs:label": "Generative RecSys",
-      "rdfs:comment": "LLM-driven Recommendation, Sequential Modeling, and User Representation"
-    },
-    {
-      "@id": "https://jdding.github.io/research-area/causal-inference",
-      "@type": "rdfs:Class",
-      "rdfs:label": "Causal Inference",
-      "rdfs:comment": "Counterfactual inference for unbiased learning"
-    },
-    {
-      "@id": "https://jdding.github.io/research-area/system-efficiency",
-      "@type": "rdfs:Class",
-      "rdfs:label": "System Efficiency",
-      "rdfs:comment": "Edge-Cloud Collaboration, Retrieval Architecture, and Model Compression"
-    },
-    {
-      "@id": "https://jdding.github.io/research-area/llm-agents",
+      "@id": "https://jdding.github.io/topic/llm-agents",
       "@type": "rdfs:Class",
       "rdfs:label": "LLM Agents",
-      "rdfs:comment": "Large Language Model based agents for intelligent systems"
+      "rdfs:comment": "Skill retrieval, semantic-ID diagnostics, NL2SQL evaluation, and LLM serving systems."
     },
     {
-      "@id": "https://jdding.github.io/research-area/trustworthy-ai",
+      "@id": "https://jdding.github.io/topic/recommender-systems",
       "@type": "rdfs:Class",
-      "rdfs:label": "Trustworthy AI",
-      "rdfs:comment": "Unbiased Learning, Fairness in Ranking"
+      "rdfs:label": "Recommender Systems",
+      "rdfs:comment": "Generative recommendation, dynamic retrieval, behavior modeling, and trustworthy prediction."
+    },
+    {
+      "@id": "https://jdding.github.io/topic/data-mining",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Data Mining",
+      "rdfs:comment": "Weak supervision, robust learning, text mining, analytics, and field experiments."
     },
     {
       "@id": "https://jdding.github.io/publication/skillresolve-bench",
       "@type": "fabio:Preprint",
       "rdfs:label": "SkillResolve-Bench: Measuring and Resolving Same-Capability Ambiguity in Agent Skill Retrieval",
       "fabio:hasPublicationYear": "2026",
-      "cito:relatesToDataset": "https://example.com/dataset-agent-skill-retrieval",
       "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
     },
     {
@@ -81,44 +64,42 @@
       "@type": "fabio:Preprint",
       "rdfs:label": "SIDInspector: A Mapping-First Diagnostic Resource for Semantic-ID Tokenizers",
       "fabio:hasPublicationYear": "2026",
-      "cito:relatesToDataset": "https://example.com/dataset-semantic-id-tokenizers",
       "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
     },
     {
-      "@id": "https://jdding.github.io/publication/hierarchical-preference-aware",
+      "@id": "https://jdding.github.io/publication/hpgr",
       "@type": "fabio:ConferenceProceeding",
       "rdfs:label": "Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations",
       "fabio:hasPublicationYear": "2026",
-      "cito:relatesToDataset": "https://example.com/dataset-user-behavior",
       "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
     },
     {
       "@id": "https://jdding.github.io/publication/invariant-feature-learning",
       "@type": "fabio:ConferenceProceeding",
-      "rdfs:label": "Invariant Feature Learning for Counterfactual Watch-time Prediction in Video Recommendation",
+      "rdfs:label": "Invariant feature learning for counterfactual watch-time prediction in video recommendation",
       "fabio:hasPublicationYear": "2026",
-      "cito:relatesToDataset": "https://example.com/dataset-video-recommendation",
       "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
     },
     {
-      "@id": "https://jdding.github.io/collaboration/fudan-university",
-      "@type": "biro:Relationship",
-      "rdfs:label": "Collaboration with Fudan University",
-      "biro:relates": [
-        "https://jdding.github.io/person/jiandong_ding",
-        "https://jdding.github.io/organization/fudan-university"
-      ],
-      "rdfs:comment": "Focus: Trustworthy AI and Generative RecSys, Ongoing collaboration"
+      "@id": "https://jdding.github.io/publication/rpe4rec",
+      "@type": "fabio:ConferenceProceeding",
+      "rdfs:label": "RPE4Rec: Enhancing Dynamic Node Retrieval with Efficient Relative Position Encoding for Recommendation Systems",
+      "fabio:hasPublicationYear": "2026",
+      "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
     },
     {
-      "@id": "https://jdding.github.io/collaboration/nanjing-university",
-      "@type": "biro:Relationship",
-      "rdfs:label": "Collaboration with Nanjing University",
-      "biro:relates": [
-        "https://jdding.github.io/person/jiandong_ding",
-        "https://jdding.github.io/organization/nanjing-university"
-      ],
-      "rdfs:comment": "Focus: System Efficiency, Ongoing collaboration"
+      "@id": "https://jdding.github.io/publication/bis-nl2sql",
+      "@type": "fabio:ConferenceProceeding",
+      "rdfs:label": "BIS: NL2SQL Service Evaluation Benchmark for Business Intelligence Scenarios",
+      "fabio:hasPublicationYear": "2025",
+      "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
+    },
+    {
+      "@id": "https://jdding.github.io/publication/unified-low-rank-compression",
+      "@type": "fabio:ConferenceProceeding",
+      "rdfs:label": "Unified Low-rank Compression Framework for Click-through Rate Prediction",
+      "fabio:hasPublicationYear": "2024",
+      "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
     }
   ]
 }

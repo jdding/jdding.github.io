@@ -1,0 +1,5 @@
+---
+layout: null
+permalink: /api/topics.json
+---
+{{ site.data.topics | jsonify }}

@@ -1,6 +1,37 @@
 ---
-layout: null  # 使用null布局，这样只会输出纯JSON
+layout: null
 permalink: /api/research.json
 ---
-
-{{ site.data.research | jsonify }}
+{% assign topics = site.data.topics | sort: "order" %}
+{% assign projects = site.data.projects | sort: "order" %}
+{% assign publications = site.data.publications %}
+{% assign patents = site.data.patents %}
+{% assign collaborations = site.data.research.collaborations %}
+{
+  "site": {
+    "name": {{ site.title | jsonify }},
+    "url": {{ site.url | jsonify }},
+    "description": {{ site.description | jsonify }},
+    "lastModified": {{ site.time | date_to_xmlschema | jsonify }},
+    "entryPoints": {
+      "home": "{{ site.url }}/",
+      "publications": "{{ site.url }}/publications/",
+      "patents": "{{ site.url }}/patents/",
+      "llms": "{{ site.url }}/llms.txt",
+      "knowledgeGraph": "{{ site.url }}/api/knowledge-graph.json"
+    }
+  },
+  "counts": {
+    "topics": {{ topics | size }},
+    "projects": {{ projects | size }},
+    "publications": {{ publications | size }},
+    "patents": {{ patents | size }},
+    "collaborations": {{ collaborations | size }}
+  },
+  "profile": {{ site.data.research.profile | jsonify }},
+  "topics": {{ topics | jsonify }},
+  "projects": {{ projects | jsonify }},
+  "publications": {{ publications | jsonify }},
+  "patents": {{ patents | jsonify }},
+  "collaborations": {{ collaborations | jsonify }}
+}

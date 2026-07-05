@@ -1,0 +1,74 @@
+- slug: llm-agents
+  order: 1
+  title: LLM Agents
+  nav_title: LLM Agents
+  short: Skill retrieval, semantic-ID diagnostics, NL2SQL evaluation, and LLM serving systems.
+  headline: Agent capabilities as reusable system assets
+  summary: I study how LLM-based systems expose, retrieve, evaluate, and govern capabilities when they become reusable infrastructure.
+  question: How can agent capabilities be selected, inspected, and evaluated before they become production dependencies?
+  scope_headline: Evaluation before dependency
+  scope_text: Skill retrieval, semantic identifiers, NL2SQL benchmarks, and LLM serving systems are treated as capability surfaces that should be inspected before they are trusted.
+  stats:
+    - value: "4"
+      label: related publications
+    - value: "2"
+      label: active project directions
+    - value: "2026"
+      label: recent work on skill retrieval and semantic-ID diagnostics
+  cards:
+    - title: Skill retrieval
+      text: Evaluating ambiguity when multiple skills expose similar capabilities and must be selected reliably.
+    - title: Semantic-ID diagnostics
+      text: Inspecting semantic identifier mappings before downstream recommendation training.
+    - title: NL2SQL and serving
+      text: Benchmarking business intelligence services and scaling LLM inference systems.
+
+- slug: recommender-systems
+  order: 2
+  title: Recommender Systems
+  nav_title: Recommender Systems
+  short: Generative recommendation, dynamic retrieval, behavior modeling, and trustworthy prediction.
+  headline: Recommendation under changing behavior and scale
+  summary: I work on recommendation problems where user behavior, retrieval spaces, and deployment constraints change over time.
+  question: How can recommendation systems model behavior, retrieve efficiently, and remain reliable under industrial-scale constraints?
+  scope_headline: Signals, retrieval, and prediction
+  scope_text: Generative recommendation, dynamic retrieval, graph embedding, counterfactual watch-time prediction, and efficient CTR modeling form the main technical line.
+  stats:
+    - value: "5"
+      label: related publications
+    - value: "3"
+      label: active project directions
+    - value: "2026"
+      label: recent work on generative recommendation and dynamic retrieval
+  cards:
+    - title: Generative recommendation
+      text: Representing long histories, structured intent, and preference-aware generation.
+    - title: Dynamic retrieval
+      text: Efficient item retrieval and graph embedding under changing user and item behavior.
+    - title: Trustworthy prediction
+      text: Counterfactual watch-time prediction and efficient CTR modeling for deployment.
+
+- slug: data-mining
+  order: 3
+  title: Data Mining
+  nav_title: Data Mining
+  short: Weak supervision, robust learning, text mining, analytics, and field experiments.
+  headline: Reliable learning from limited and noisy evidence
+  summary: I use data mining methods to learn from weak labels, sparse evidence, operational logs, and field experiment settings.
+  question: How can learning systems extract reliable signals when labels, behavior, and operational data are incomplete or noisy?
+  scope_headline: Learning from imperfect evidence
+  scope_text: Weak supervision, robust learning, topic modeling, continual graph learning, and digital business experiments form the modern method line.
+  stats:
+    - value: "13"
+      label: related publications
+    - value: "2"
+      label: digital business field-experiment papers
+    - value: "2010s"
+      label: early sequence-analysis work
+  cards:
+    - title: Weak and robust learning
+      text: Methods for learning when labels are scarce, noisy, or created through weak supervision.
+    - title: Text and graph mining
+      text: Topic modeling, continual graph convolution, keyword graph learning, and data augmentation.
+    - title: Digital business experiments
+      text: Live-streaming analytics and AI assistance studied through field experiment settings.

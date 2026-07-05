@@ -4,8 +4,8 @@
 remote_theme: mmistakes/minimal-mistakes
 
 # Site metadata
-title: "Jiandong Ding (丁建栋) - AI Architecture Expert & Senior Algorithm Expert"
-description: "Focusing on Billion-scale Recommender Systems, LLM Serving Architecture, and Edge-Cloud Collaborative AI at Huawei Terminal Cloud Services. Senior Reviewer for SIGIR."
+title: "Jiandong Ding (丁建栋) - Senior Technical Expert"
+description: "Personal research site for Jiandong Ding, Senior Technical Expert working on recommender systems, LLM agents, and data mining."
 url: "https://jdding.github.io" # 站点根地址（不带末尾斜杠）
 github_username: jdding
 repository: "jdding/jdding.github.io" # 用于jekyll-seo-tag插件
@@ -14,21 +14,18 @@ locale: "en-US" # 站点语言/区域（用于主题与 SEO 元数据）
 author:
   name: "Jiandong Ding (丁建栋)"
   avatar: "/assets/images/Profile.png"
-  bio: "**AI Architecture Expert & Senior Algorithm Expert** at **Huawei Technologies** / **Fudan University**. Focusing on Billion-scale Recommender Systems, LLM Serving Architecture, and Edge-Cloud Collaborative AI. Senior Reviewer for SIGIR."
+  bio: "**Senior Technical Expert** at **Huawei Technologies**. Research interests include recommender systems, LLM agents, and data mining."
   location: "Shanghai, China"
   links:
     - label: "Home"
       icon: "fas fa-fw fa-home"
       url: "/"
-    - label: "Publications"
+    - label: "Full Publications"
       icon: "fas fa-fw fa-graduation-cap"
       url: "/publications"
     - label: "Patents"
       icon: "fas fa-fw fa-file-alt"
       url: "/patents"
-    - label: "Collaborations"
-      icon: "fas fa-fw fa-handshake"
-      url: "/collaborations"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/jiandong-ding-60498833/"
@@ -80,3 +77,16 @@ highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+exclude:
+  - README.md
+  - docs/
+  - archive/
+  - _pages/
+  - convert_new_logos.py
+  - create_better_logos.py
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+  - .bundle/
+  - .codegraph/

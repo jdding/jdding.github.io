@@ -1,6 +1,6 @@
 ---
 layout: single
-author_profile: true
+author_profile: false
 title: "Jiandong Ding (丁建栋)"
 classes: wide
 schema:
@@ -10,236 +10,188 @@ schema:
   "alternateName": "Jiandong Ding"
   "givenName": "Jiandong"
   "familyName": "Ding"
-  "jobTitle": "AI Architecture Expert & Senior Algorithm Expert"
+  "jobTitle": "Senior Technical Expert"
   "affiliation":
     "@type": "Organization"
     "name": "Huawei Technologies"
-  "alumniOf":
-    "@type": "EducationalOrganization"
-    "name": "Fudan University"
-  "knowsAbout": ["Generative RecSys", "Causal Inference", "Recommendation Systems", "LLM Agents", "User Behavior Analysis"]
-  "description": "AI Architecture Expert & Senior Algorithm Expert at Huawei Technologies focusing on Billion-scale Recommender Systems, LLM Serving Architecture, and Edge-Cloud Collaborative AI"
+  "knowsAbout": ["Recommender Systems", "LLM Agents", "Data Mining"]
+  "description": "Senior Technical Expert working on recommender systems, LLM agents, and data mining."
   "url": "https://jdding.github.io"
   "sameAs":
     - "https://www.linkedin.com/in/jiandong-ding-60498833/"
     - "https://github.com/jdding"
-    - "https://scholar.google.com/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=5-e7wi4AAAAJ"
-  "address":
-    "@type": "PostalAddress"
-    "addressLocality": "Shanghai"
-    "addressCountry": "China"
-  "worksFor":
-    "@type": "Organization"
-    "name": "Huawei Technologies"
 ---
 
-<style>
-  /* 隐藏页面内标题（保留浏览器标签页标题） */
-  .page__title { display: none; }
-  
-  /* 重申研究亮点卡片样式，确保图片在左文字在右 */
-  .paper-card {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 0.95rem;
-    line-height: 1.55;
-    color: #444;
-  }
-  
-  .paper-card:last-child { border-bottom: none; }
-  
-  .paper-img {
-    flex: 0 0 35%;
-    max-width: 350px;
-  }
-  
-  .paper-img img {
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid #e1e4e8;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-  }
-  
-  .paper-content {
-    flex: 1;
-  }
-  
-  .paper-title {
-    font-size: 1em;
-    font-weight: 700;
-    color: #2c3e50;
-    display: block;
-    margin-bottom: 6px;
-  }
-  
-  /* --- 手机端适配 --- */
-  @media (max-width: 768px) {
-    .card-container { flex-direction: column; gap: 15px; }
-    .card-image { flex: 0 0 100%; max-width: 100%; margin-bottom: 10px; }
-    .paper-card {
-      flex-direction: column;
-    }
-    .paper-img {
-      flex: 0 0 auto;
-      max-width: 100%;
-    }
-  }
-</style>
+<link rel="stylesheet" href="/assets/css/research-system.css?v=content-qa-20260705">
+{% include research-nav.html %}
 
-<section itemscope itemtype="http://schema.org/Bio">
-  <h2 itemprop="name">Research Focus</h2>
-  <p>I am an <span itemprop="jobTitle">AI Architecture Expert & Senior Algorithm Expert</span> at <span itemprop="affiliation">Huawei Technologies</span>, bridging the gap between theoretical algorithms and industrial-scale systems.</p>
+{% assign topics = site.data.topics | sort: "order" %}
+{% assign projects = site.data.projects | sort: "order" %}
+{% assign selected_papers = site.data.publications | where: "selected", true %}
 
-  <p>My research philosophy is summarized as <strong>"From Biological Sequences to User Behaviors"</strong>. I apply deep representation learning to decipher underlying patterns in data—from genomic sequences in my early career to billion-scale user behavior logs in commercial recommendation systems today.</p>
+<div class="research-site">
+  <section class="research-hero">
+    <div class="research-shell hero-layout">
+      <div class="hero-copy">
+        <h1>Jiandong Ding</h1>
+        <p class="lede">I work on recommender systems, LLM agents, and data mining, with a focus on turning research ideas into reliable AI systems at production scale.</p>
+        <div class="hero-focus" aria-label="Research areas">
+          {% for topic in topics %}
+          <a class="hero-focus-item" href="/topics/{{ topic.slug }}/">
+            <span>0{{ forloop.index }}</span>
+            <strong>{{ topic.title }}</strong>
+            <em>{{ topic.short }}</em>
+          </a>
+          {% endfor %}
+        </div>
+        <div class="hero-actions" aria-label="Primary actions">
+          <a class="button primary" href="#connect">Contact</a>
+          <a class="button secondary" href="/publications/">Full publications</a>
+        </div>
+      </div>
 
-  <p>Currently, I focus on building <strong>Next-Generation Recommender Systems</strong> driven by Generative AI, with specific interests in:</p>
-  <ul>
-    <li><span itemprop="knowsAbout">Generative RecSys:</span> LLM-driven Recommendation, Sequential Modeling, and User Representation.</li>
-    <li><span itemprop="knowsAbout">Trustworthy AI:</span> Causal Inference, Unbiased Learning, and Fairness in Ranking.</li>
-    <li><span itemprop="knowsAbout">System Efficiency:</span> Edge-Cloud Collaboration, Retrieval Architecture, and Model Compression.</li>
-  </ul>
-</section>
+      <aside class="identity-card" aria-label="Profile summary">
+        <div class="identity-portrait">
+          <img src="/assets/images/Profile.png" alt="Jiandong Ding portrait">
+        </div>
+        <div class="identity-body">
+          <div>
+            <div class="section-label">Senior Technical Expert</div>
+            <strong>Researcher and engineer working between academic research and industrial AI systems.</strong>
+          </div>
+          <ul class="identity-facts">
+            <li>Huawei Technologies, Shanghai, China</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
 
----
+  <section id="research" class="research-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>Research mainline</h2>
+        <p>My work has moved from structured biological data, through robust learning and analytics, to recommendation and agent systems used at industrial scale.</p>
+      </div>
+      <div class="timeline" aria-label="Research trajectory">
+        <div class="timeline-row">
+          <time>2026</time>
+          <p>Generative recommendation, dynamic retrieval, semantic-ID diagnostics, and agent skill retrieval.</p>
+        </div>
+        <div class="timeline-row">
+          <time>2025-2024</time>
+          <p>BI/NL2SQL evaluation, LLM serving, CTR model efficiency, and large-scale recommendation infrastructure.</p>
+        </div>
+        <div class="timeline-row">
+          <time>2023-2021</time>
+          <p>Continual graph learning, neural topic modeling, weak supervision, robust learning, and live-streaming field experiments.</p>
+        </div>
+        <div class="timeline-row">
+          <time>2012-2010</time>
+          <p>miRNA target prediction, genome-scale sequence signals, and early structured data mining.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section itemscope itemtype="http://schema.org/CreativeWork">
-<h2>🔥 News</h2>
+  <section id="selected" class="research-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>Selected papers</h2>
+        <p>Representative papers that mark the main research line across recommendation, LLM agents, and data mining.</p>
+      </div>
+      <div class="paper-grid">
+        {% for paper in selected_papers %}
+        {% assign topic = topics | where: "slug", paper.topic | first %}
+        <article class="paper-card {% if forloop.first %}featured{% endif %}">
+          {% if paper.image %}
+          <div class="paper-image">
+            <img src="{{ paper.image }}" alt="{{ paper.title }}" loading="lazy">
+          </div>
+          {% endif %}
+          <div class="paper-body">
+            <div class="paper-meta">
+              <span>{{ paper.selected_label | default: paper.venue_short }}</span>
+              <span>{{ topic.title }}</span>
+            </div>
+            <h3>{{ paper.title }}</h3>
+            <p>{{ paper.selected_summary }}</p>
+            <div class="record-actions">
+              {% if paper.digest_url %}<a class="pill digest" href="{{ paper.digest_url }}">Digest</a>{% endif %}
+            </div>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 
-<ul>
-  <li itemprop="mentions"><strong>[Mar 2026]</strong> ✈️ Attending <strong>ECIR 2026</strong> in the Netherlands. Looking forward to deep academic exchanges!</li>
-  <li itemprop="mentions"><strong>[Jan 2026]</strong> 🚀 Paper <em>"Hierarchical and Preference-Aware Generative Recommendations"</em> accepted by <strong>TheWebConf (WWW) 2026</strong>.</li>
-  <li itemprop="mentions"><strong>[Nov 2025]</strong> Two papers accepted! <em>"RPE4Rec"</em> by <strong>WSDM 2026</strong>, and <em>"Invariant Feature Learning"</em> by <strong>AAAI 2026</strong>.</li>
-</ul>
-</section>
+  <section id="projects" class="research-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>Active projects</h2>
+        <p>Current project directions are described through public research questions and linked to related outputs when available.</p>
+      </div>
+      <div class="project-grid">
+        {% for project in projects %}
+        {% assign topic = topics | where: "slug", project.topic | first %}
+        <article class="project-card">
+          <span>{{ project.label }}</span>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.summary }}</p>
+          <a class="text-link" href="/topics/{{ topic.slug }}/">{{ topic.title }}</a>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 
----
+  <section id="connect" class="research-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>Collaboration and exchange</h2>
+        <p>Open to university collaboration, research exchange, invited talks, and focused discussions around recommendation, agent systems, and data intelligence.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-list">
+          <article class="contact-card">
+            <div class="contact-stat">Research</div>
+            <div>
+              <h3>Academic collaboration</h3>
+              <p>University collaboration, joint research, resource building, benchmark design, and student or lab exchange.</p>
+            </div>
+          </article>
+          <article class="contact-card">
+            <div class="contact-stat">Industry</div>
+            <div>
+              <h3>Industrial research</h3>
+              <p>Recommendation architecture, agent evaluation, retrieval systems, and data-intelligence problems at production scale.</p>
+            </div>
+          </article>
+          <article class="contact-card">
+            <div class="contact-stat">Talks</div>
+            <div>
+              <h3>Invited talks</h3>
+              <p>Research talks and professional events on recommender systems, LLM agents, and data mining.</p>
+            </div>
+          </article>
+        </div>
 
-<section itemscope itemtype="http://schema.org/ResearchProject">
-<h2>🎯 Research Highlights</h2>
+        <aside class="contact-panel">
+          <div>
+            <h3>Contact</h3>
+            <p>For university collaboration, use my Huawei email. For other research exchange, invited talks, or focused technical contact, use my Fudan email.</p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:dingjiandong2@huawei.com">dingjiandong2@huawei.com <span>University collaboration</span></a>
+            <a href="mailto:jdding@fudan.edu.cn">jdding@fudan.edu.cn <span>General contact</span></a>
+            <a href="https://github.com/jdding">GitHub <span>Code</span></a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</div>
 
-<p>My current research focuses on three core pillars: <strong>Generative & Trustworthy RecSys</strong>, <strong>Extreme Efficiency</strong>, and <strong>LLM Agents</strong>.</p>
-
-<h3 itemprop="about">1. Next-Gen Recommendation: Generative & Trustworthy</h3>
-
-<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <div class="paper-img"> 
-    <img src="/assets/images/Beyond-the-Flat-Sequence.webp" alt="[WWW 2026] Generative Recs: Hierarchical & Preference-Aware" loading="lazy" itemprop="image">
-  </div>
-  <div class="paper-content">
-    <span class="paper-title" itemprop="headline">[WWW 2026] Generative Recs: Hierarchical & Preference-Aware</span>
-    <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">Existing "flat-sequence" generative models overlook the hierarchical structure of user sessions and introduce noise in long histories.</span>
-    <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">Proposes a two-stage generative framework that shatters the traditional "flat sequence" assumption, accurately capturing long- and short-term structured interests through hierarchical preference awareness and sparse attention.</span>
-    <meta itemprop="isPartOf" content="Research Highlights">
-    <meta itemprop="publisher" content="ACM">
-    <meta itemprop="datePublished" content="2026">
-  </div>
-</article>
-</section>
-
-<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <div class="paper-img"> 
-    <img src="/assets/images/Invariant-Feature-Learning.webp" alt="[AAAI 2026] Causal Inference for Watch-time Prediction" loading="lazy" itemprop="image">
-  </div>
-  <div class="paper-content">
-    <span class="paper-title" itemprop="headline">[AAAI 2026] Causal Inference for Watch-time Prediction</span>
-    <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">In short-video feeds, "duration biases" (longer videos naturally get more watch time) mislead algorithms.</span>
-    <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">Proposes a Duration-Invariant Feature Learning (DIFL) framework based on causal inference to eliminate duration bias in video recommendation, utilizing kernel-based regularization to isolate genuine user interests for highly accurate counterfactual watch-time prediction.</span>
-    <meta itemprop="isPartOf" content="Research Highlights">
-    <meta itemprop="publisher" content="AAAI">
-    <meta itemprop="datePublished" content="2026">
-  </div>
-</article>
-
-<section itemscope itemtype="http://schema.org/ResearchProject">
-<h3 itemprop="about">2. Extreme Efficiency at Scale</h3>
-
-<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <div class="paper-img"> 
-    <img src="/assets/images/RPE4Rec.webp" alt="[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval" loading="lazy" itemprop="image">
-  </div>
-  <div class="paper-content">
-    <span class="paper-title" itemprop="headline">[WSDM 2026] RPE4Rec: High-Efficiency Dynamic Retrieval</span>
-    <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">Advanced Transformers are often too slow for real-time retrieval on billion-scale items.</span>
-    <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">Introduces an Efficient Relative Position Encoding (RPE) architecture that eliminates the latency bottlenecks of heavy Transformers, achieving sub-millisecond real-time retrieval on billion-scale dynamic graphs.</span>
-    <meta itemprop="isPartOf" content="Research Highlights">
-    <meta itemprop="publisher" content="ACM">
-    <meta itemprop="datePublished" content="2026">
-  </div>
-</article>
-</section>
-
-<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <div class="paper-img"> 
-    <img src="/assets/images/Unified-Low-rank-Compression.webp" alt="[KDD 2024] Low-Rank Compression for CTR Prediction" loading="lazy" itemprop="image">
-  </div>
-  <div class="paper-content">
-    <span class="paper-title" itemprop="headline">[KDD 2024] Low-Rank Compression for CTR Prediction</span>
-    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">Presents a unified low-rank compression framework that reduces massive Embedding memory consumption by over 80%, unlocking high-performance recommendation in resource-constrained environments like on-device deployment.</span>
-    <meta itemprop="isPartOf" content="Research Highlights">
-    <meta itemprop="publisher" content="ACM">
-    <meta itemprop="datePublished" content="2024">
-  </div>
-</article>
-
-<section itemscope itemtype="http://schema.org/ResearchProject">
-<h3 itemprop="about">3. LLM Agents & Data Intelligence</h3>
-
-<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <div class="paper-img"> 
-    <img src="/assets/images/BIS-NL2SQL.webp" alt="[ICSOC 2024] NL2SQL Benchmark for Business Intelligence" loading="lazy" itemprop="image">
-  </div>
-  <div class="paper-content">
-    <span class="paper-title" itemprop="headline">[ICSOC 2024] NL2SQL Benchmark for Business Intelligence</span>
-    <span class="hl-tag tag-sol">Intelligence Layer</span> <span itemprop="description">Bridges the gap between academia and industry by introducing the first natural language to SQL (NL2SQL) service evaluation benchmark specifically designed for real-world, enterprise-level Business Intelligence (BI) scenarios.</span>
-    <meta itemprop="isPartOf" content="Research Highlights">
-    <meta itemprop="publisher" content="Springer">
-    <meta itemprop="datePublished" content="2024">
-  </div>
-</article>
-
-<article class="paper-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
-  <div class="paper-img"> 
-    <img src="/assets/images/DP-SSL.webp" alt="[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning" loading="lazy" itemprop="image">
-  </div>
-  <div class="paper-content">
-    <span class="paper-title" itemprop="headline">[NeurIPS 2021] DP-SSL: Robust Semi-supervised Learning</span>
-    <span class="hl-tag tag-prob">Problem</span> <span itemprop="abstract">Deep learning performance heavily relies on massive labeled data, which is expensive to obtain.</span>
-    <br><br>
-    <span class="hl-tag tag-sol">Breakthrough</span> <span itemprop="description">Ingeniously fuses Data Programming with Semi-Supervised Learning to overcome model collapse in extremely low-resource settings, achieving highly robust classification performance with only single-digit labeled samples.</span>
-    <meta itemprop="isPartOf" content="Research Highlights">
-    <meta itemprop="publisher" content="NeurIPS">
-    <meta itemprop="datePublished" content="2021">
-  </div>
-</article>
-</section>
-
-<!-- Link relations for AI understanding -->
 <link rel="canonical" href="https://jdding.github.io/" />
-<link rel="alternate" type="application/json" href="/api/research.json" title="Academic Data API" />
-<link rel="alternate" type="application/xml" href="/sitemap-extended.xml" title="Extended Sitemap" />
-
-<!-- Hidden structured navigation for AI/Sitemap -->
-<nav itemscope itemtype="http://schema.org/SiteNavigationElement" style="display:none;">
-  <ul>
-    <li><a href="/" itemprop="url">Home</a></li>
-    <li><a href="/publications" itemprop="url">Publications</a></li>
-    <li><a href="/patents" itemprop="url">Patents</a></li>
-    <li><a href="/collaborations" itemprop="url">Collaborations</a></li>
-    <li><a href="/faq/" itemprop="url">FAQ</a></li>
-    <li><a href="/api/" itemprop="url">API</a></li>
-  </ul>
-</nav>
-
-### 📫 Get in Touch
-
-I am deeply committed to bridging the gap between academia and industry. Having led numerous research initiatives at Huawei CBG and Alibaba DAMO, I am always open to:
-* **Academic Partnerships:** Collaborative research & grant applications.
-* **Professional Events:** Industry summits and tech forums.
-
-For collaboration inquiries: **jdding [at] fudan.edu.cn**
+<link rel="alternate" type="application/json" href="/api/research.json" title="Research data" />

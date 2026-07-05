@@ -1,5 +1,7 @@
 <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
 <link rel="apple-touch-icon" href="/assets/images/favicon.png">
+<meta name="google-site-verification" content="google6eff937026b402e5.html">
+<meta name="msvalidate.01" content="9F874B0703B3BF0CC5AADD16B0A91959">
 
 <style>
   /* 覆盖主题默认作者区样式（头像显示与间距） */
@@ -85,5 +87,28 @@
   /* 隐藏表头后，给主体内容增加适度的顶部呼吸空间 */
   .initial-content, .page, .layout--single {
     padding-top: 30px !important;
+  }
+
+  /* 新版研究主页自带导航和版心，wide 页面不再使用主题默认窄正文栏 */
+  .layout--single.wide .initial-content,
+  .layout--single.wide .page,
+  .layout--single.wide .page__inner-wrap,
+  .layout--single.wide .page__content {
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  .layout--single.wide .page {
+    float: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .layout--single.wide .page__inner-wrap {
+    float: none !important;
+  }
+
+  .layout--single.wide .page__content {
+    margin: 0 !important;
   }
 </style>

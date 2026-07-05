@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="/assets/css/research-system.css?v=content-qa-20260705">
+{% include research-nav.html %}
+
+{% assign paper = site.data.publications | where: "id", page.publication_id | first %}
+{% assign topic = site.data.topics | where: "slug", paper.topic | first %}
+
+<div class="research-site digest-page">
+  <section class="research-hero">
+    <div class="research-shell">
+      <div class="digest-kicker">
+        {% if paper.venue_short %}{{ paper.venue_short }}{% else %}{{ paper.venue }}{% endif %} {{ paper.year }}{% if topic %} / {{ topic.title }}{% endif %}
+      </div>
+      <h1>{{ paper.title }}</h1>
+      <p class="lede">{{ paper.digest_note | default: paper.selected_summary }}</p>
+      <div class="hero-actions" aria-label="Digest actions">
+        {% if paper.paper_url %}<a class="button primary" href="{{ paper.paper_url }}">{{ paper.paper_label | default: "Paper" }}</a>{% endif %}
+        {% if paper.doi_url %}<a class="button secondary" href="{{ paper.doi_url }}">DOI</a>{% endif %}
+        <a class="button secondary" href="/publications/">Full publications</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="research-section">
+    <div class="research-shell digest-layout">
+      <article class="digest-main">
+        <section class="digest-block">
+          <h2>Reading note</h2>
+          <p>{{ paper.digest_note | default: paper.selected_summary }}</p>
+        </section>
+
+        {% if topic %}
+        <section class="digest-block">
+          <h2>Research connection</h2>
+          <p>{{ topic.summary }}</p>
+        </section>
+        {% endif %}
+
+        <section class="digest-block">
+          <h2>Publication record</h2>
+          <p>{{ paper.authors }}<br>{{ paper.venue }}</p>
+        </section>
+      </article>
+
+      <aside class="digest-side">
+        <div class="summary-board" aria-label="Digest metadata">
+          <div class="summary-row"><strong>{{ paper.year }}</strong><span>publication year</span></div>
+          {% if paper.venue_short %}<div class="summary-row"><strong>{{ paper.venue_short }}</strong><span>venue</span></div>{% endif %}
+          {% if topic %}<div class="summary-row"><strong>{{ topic.nav_title | default: topic.title }}</strong><span>research direction</span></div>{% endif %}
+        </div>
+        {% if topic %}
+        <a class="text-link" href="/topics/{{ topic.slug }}/">Topic page</a>
+        {% endif %}
+      </aside>
+    </div>
+  </section>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": {{ paper.title | jsonify }},
+  "author": {{ paper.authors | jsonify }},
+  "datePublished": {{ paper.year | jsonify }},
+  "isPartOf": {{ paper.venue | jsonify }},
+  "url": "{{ site.url }}{{ paper.digest_url }}"{% if paper.paper_url %},
+  "sameAs": {{ paper.paper_url | jsonify }}{% endif %}{% if paper.doi_url %},
+  "identifier": {{ paper.doi_url | jsonify }}{% endif %}
+}
+</script>

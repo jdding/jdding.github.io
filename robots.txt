@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Allow: /api/
+Allow: /llms.txt
 Disallow: /archive/
 
 Sitemap: https://jdding.github.io/sitemap.xml
@@ -10,10 +11,22 @@ Sitemap: https://jdding.github.io/sitemap-extended.xml
 User-agent: GPTBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
 User-agent: CCBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
 Allow: /
 
 # Crawling delays

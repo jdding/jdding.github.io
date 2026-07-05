@@ -1,0 +1,32 @@
+# Jiandong Ding Research Site
+
+This is the personal research site of Jiandong Ding, Senior Technical Expert at Huawei Technologies.
+
+The site presents research work across three current directions:
+
+- LLM Agents: skill retrieval, semantic-ID diagnostics, NL2SQL evaluation, and LLM serving systems.
+- Recommender Systems: generative recommendation, dynamic retrieval, behavior modeling, and trustworthy prediction.
+- Data Mining: weak supervision, robust learning, text mining, analytics, field experiments, and earlier sequence-analysis work.
+
+Primary human-readable pages:
+
+- Home: https://jdding.github.io/
+- Full publications: https://jdding.github.io/publications/
+- Patents: https://jdding.github.io/patents/
+- LLM Agents topic: https://jdding.github.io/topics/llm-agents/
+- Recommender Systems topic: https://jdding.github.io/topics/recommender-systems/
+- Data Mining topic: https://jdding.github.io/topics/data-mining/
+
+Machine-readable resources:
+
+- Research data: https://jdding.github.io/api/research.json
+- Publications: https://jdding.github.io/api/publications.json
+- Patents: https://jdding.github.io/api/patents.json
+- Topics: https://jdding.github.io/api/topics.json
+- Projects: https://jdding.github.io/api/projects.json
+- Knowledge graph: https://jdding.github.io/api/knowledge-graph.json
+- Extended sitemap: https://jdding.github.io/sitemap-extended.xml
+
+Publication records are ordered from newest to oldest. Digest pages provide short reading notes for individual papers. Patent records include patent number, status, year, applied area, source link, and inventor role.
+
+For university collaboration, contact dingjiandong2@huawei.com. For general research exchange, contact jdding@fudan.edu.cn.

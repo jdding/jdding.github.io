@@ -1,6 +1,6 @@
 ---
 layout: single
-author_profile: true
+author_profile: false
 title: "Frequently Asked Questions"
 permalink: /faq/
 classes: wide
@@ -13,7 +13,7 @@ schema:
       "name": "Who is Jiandong Ding?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Jiandong Ding is a Principal Algorithm Expert at Huawei Technologies, focusing on RecSys, Causal Inference, and LLM Agents. His research philosophy is 'From Biological Sequences to User Behaviors', applying deep representation learning to decipher underlying patterns in data."
+        "text": "Jiandong Ding is a Senior Technical Expert at Huawei Technologies. His work focuses on recommender systems, LLM agents, and data mining."
       }
     },
     {
@@ -21,88 +21,71 @@ schema:
       "name": "What are Jiandong Ding's main research areas?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Jiandong Ding's research focuses on three core pillars: 1) Generative & Trustworthy RecSys, including LLM-driven Recommendation, Sequential Modeling, and User Representation; 2) Trustworthy AI, including Causal Inference, Unbiased Learning, and Fairness in Ranking; 3) System Efficiency, including Edge-Cloud Collaboration, Retrieval Architecture, and Model Compression."
+        "text": "His current research areas are LLM Agents, Recommender Systems, and Data Mining."
       }
     },
     {
       "@type": "Question",
-      "name": "Where did Jiandong Ding study?",
+      "name": "Where can I find Jiandong Ding's publications?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Jiandong Ding studied at Fudan University. His early career focused on bioinformatics, specifically deciphering biological sequences, before transitioning to user behavior analysis in commercial recommendation systems."
+        "text": "Full Publications lists 22 papers from newest to oldest, with paper links and Digest notes."
       }
     },
     {
       "@type": "Question",
-      "name": "What institutions does Jiandong Ding collaborate with?",
+      "name": "Where can I find Jiandong Ding's patents?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Jiandong Ding collaborates with several institutions globally, including Fudan University, Tongji University, Nanjing University, Shanghai Jiao Tong University, Tsinghua University, Southeast University, Duke University, Trinity College Dublin, University of Houston, and Hong Kong Baptist University."
+        "text": "Patents lists 56 patent records, including 21 granted patents and 35 published applications."
       }
     },
     {
       "@type": "Question",
-      "name": "What are some recent achievements of Jiandong Ding?",
+      "name": "What collaborations is Jiandong Ding open to?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Recent achievements include SkillResolve-Bench and SIDInspector on arXiv in 2026, plus papers at TheWebConf (WWW) 2026, WSDM 2026, AAAI 2026, KDD 2024, and NeurIPS 2021. Notable works include HPGR framework for hierarchical generative recommendations and invariant feature learning for causal inference in recommendation systems."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the focus of Jiandong Ding's current research?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Currently, Jiandong Ding focuses on building Next-Generation Recommender Systems driven by Generative AI, with specific interests in Generative RecSys, Trustworthy AI, and System Efficiency, bridging the gap between theoretical algorithms and industrial-scale systems."
+        "text": "He welcomes focused academic partnerships, industrial research problems, invited talks, and exchanges around recommendation, agent systems, and data intelligence."
       }
     }
   ]
 ---
 
-# Frequently Asked Questions
+<link rel="stylesheet" href="/assets/css/research-system.css?v=content-qa-20260705">
+{% include research-nav.html %}
 
-## Who is Jiandong Ding?
+<div class="research-site">
+  <section class="research-hero">
+    <div class="research-shell">
+      <h1>Frequently asked questions</h1>
+      <p class="lede">Short answers about Jiandong Ding's research profile, publication record, patents, and collaboration routes.</p>
+    </div>
+  </section>
 
-Jiandong Ding is a Principal Algorithm Expert at Huawei Technologies, focusing on RecSys, Causal Inference, and LLM Agents. His research philosophy is "From Biological Sequences to User Behaviors", applying deep representation learning to decipher underlying patterns in data—from genomic sequences in his early career to billion-scale user behavior logs in commercial recommendation systems today.
-
-## What are Jiandong Ding's main research areas?
-
-Jiandong Ding's research focuses on three core pillars:
-
-1. **Generative & Trustworthy RecSys**: Including LLM-driven Recommendation, Sequential Modeling, and User Representation.
-2. **Trustworthy AI**: Including Causal Inference, Unbiased Learning, and Fairness in Ranking.
-3. **System Efficiency**: Including Edge-Cloud Collaboration, Retrieval Architecture, and Model Compression.
-
-## Where did Jiandong Ding study?
-
-Jiandong Ding studied at Fudan University. His early career focused on bioinformatics, specifically deciphering biological sequences, before transitioning to user behavior analysis in commercial recommendation systems.
-
-## What institutions does Jiandong Ding collaborate with?
-
-Jiandong Ding collaborates with several institutions globally, including:
-
-- Fudan University (Ongoing collaboration)
-- Tongji University (Past collaboration)
-- Nanjing University (Ongoing collaboration)
-- Shanghai Jiao Tong University (Ongoing collaboration)
-- Tsinghua University (Past collaboration)
-- Southeast University (Past collaboration)
-- Duke University (Past collaboration)
-- Trinity College Dublin (Past collaboration)
-- University of Houston (Past collaboration)
-- Hong Kong Baptist University (Past collaboration)
-
-## What are some recent achievements of Jiandong Ding?
-
-Recent achievements include SkillResolve-Bench and SIDInspector on arXiv in 2026, plus papers at TheWebConf (WWW) 2026, WSDM 2026, AAAI 2026, KDD 2024, and NeurIPS 2021. Notable works include:
-
-- SkillResolve-Bench for agent skill retrieval ambiguity
-- SIDInspector for semantic-ID tokenizer diagnostics
-- HPGR framework for hierarchical generative recommendations
-- Invariant feature learning for causal inference in recommendation systems
-- RPE4Rec for high-efficiency dynamic retrieval
-- Unified low-rank compression for CTR prediction
-
-## What is the focus of Jiandong Ding's current research?
-
-Currently, Jiandong Ding focuses on building Next-Generation Recommender Systems driven by Generative AI, with specific interests in Generative RecSys, Trustworthy AI, and System Efficiency, bridging the gap between theoretical algorithms and industrial-scale systems.
+  <section class="research-section">
+    <div class="research-shell">
+      <div class="record-list">
+        <section class="year-block">
+          <div class="year-label">Profile</div>
+          <div class="record-stack">
+            <article class="record-item">
+              <div><h3>Who is Jiandong Ding?</h3><div class="record-meta">Jiandong Ding is a Senior Technical Expert at Huawei Technologies. His work focuses on recommender systems, LLM agents, and data mining.</div></div>
+            </article>
+            <article class="record-item">
+              <div><h3>What are the main research areas?</h3><div class="record-meta">The current research areas are LLM Agents, Recommender Systems, and Data Mining.</div></div>
+            </article>
+            <article class="record-item">
+              <div><h3>Where are the publications?</h3><div class="record-meta">The <a href="/publications/">Full publications</a> page lists 22 papers from newest to oldest, with paper links and Digest notes.</div></div>
+            </article>
+            <article class="record-item">
+              <div><h3>Where are the patents?</h3><div class="record-meta">The <a href="/patents/">Patents</a> page lists 56 patent records, including 21 granted patents and 35 published applications.</div></div>
+            </article>
+            <article class="record-item">
+              <div><h3>What collaborations are welcome?</h3><div class="record-meta">Focused academic partnerships, industrial research problems, invited talks, and exchanges around recommendation, agent systems, and data intelligence.</div></div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</div>

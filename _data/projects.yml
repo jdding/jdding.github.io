@@ -1,0 +1,36 @@
+- id: dormant-user-recommendation
+  order: 1
+  title: Dormant-user recommendation
+  label: Recommendation
+  topic: recommender-systems
+  summary: Modeling long-interval users whose recent behavior is sparse, with emphasis on robust reactivation and reliable recommendation quality.
+  evidence:
+    - dygraph
+    - invariant-feature-learning
+
+- id: search-recommendation-interaction
+  order: 2
+  title: Search-recommendation interaction
+  label: Search and recommendation
+  topic: recommender-systems
+  summary: Studying how search behavior and recommendation exposure influence each other, with attention to reliable attribution and evaluation boundaries.
+  evidence:
+    - rpe4rec
+
+- id: semantic-id-auditing
+  order: 3
+  title: Semantic-ID auditing
+  label: Semantic IDs
+  topic: llm-agents
+  summary: Building diagnostic views for semantic identifiers used by generative recommendation systems, focused on reliability before expensive training.
+  evidence:
+    - sidinspector
+
+- id: agent-skill-retrieval
+  order: 4
+  title: Agent skill retrieval
+  label: Agent skill retrieval
+  topic: llm-agents
+  summary: Evaluating retrieval and governance problems when agent skills become reusable software assets in larger enterprise skill libraries.
+  evidence:
+    - skillresolve-bench

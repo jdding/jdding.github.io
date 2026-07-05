@@ -1,0 +1,344 @@
+---
+- id: skillresolve-bench
+  title: 'SkillResolve-Bench: Measuring and Resolving Same-Capability Ambiguity in Agent Skill Retrieval'
+  year: 2026
+  venue: arXiv preprint arXiv:2606.10388
+  venue_short: arXiv
+  authors: J Ding
+  topic: llm-agents
+  level: c
+  selected: false
+  paper_url: https://arxiv.org/abs/2606.10388
+  paper_label: arXiv
+  digest_url: "/skillresolve-bench/"
+  digest_label: Digest
+  digest_note: A benchmark-focused study of same-capability ambiguity in agent skill retrieval, where similar-looking skills must be distinguished by execution constraints and task fit.
+- id: sidinspector
+  title: 'SIDInspector: A Mapping-First Diagnostic Resource for Semantic-ID Tokenizers'
+  year: 2026
+  venue: arXiv preprint arXiv:2606.10375
+  venue_short: arXiv
+  authors: J Ding, H Chang, H Qin, T Liu
+  topic: llm-agents
+  level: c
+  selected: false
+  paper_url: https://arxiv.org/abs/2606.10375
+  paper_label: arXiv
+  digest_url: "/sidinspector/"
+  digest_label: Digest
+  digest_note: A diagnostic resource for inspecting Semantic-ID tokenizers through their mapping behavior before downstream recommendation training.
+- id: hpgr
+  title: 'Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations'
+  year: 2026
+  venue: Proceedings of the ACM Web Conference 2026
+  venue_short: WWW
+  authors: Z Chen, H Chang, T Liu, C Zhou, Y Cao, J Ding, M Liu, B Qin
+  topic: recommender-systems
+  level: a
+  selected: true
+  image: "/assets/images/Beyond-the-Flat-Sequence.webp"
+  selected_label: WWW 2026
+  selected_summary: Hierarchical and preference-aware generative recommendations move beyond flat user histories and expose structured intent over time.
+  digest_url: "/hpgr/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.1145/3774904.3792790
+  digest_note: A generative recommendation paper that studies hierarchical structure and preference-aware modeling beyond flat user-history sequences.
+- id: invariant-feature-learning
+  title: Invariant feature learning for counterfactual watch-time prediction in video recommendation
+  year: 2026
+  venue: Proceedings of the AAAI Conference on Artificial Intelligence
+  venue_short: AAAI
+  authors: C Jin, Y Ren, H Ma, Y Xia, Y Guan, H Zhang, J Ding, J Guan, S Zhou
+  topic: recommender-systems
+  level: a
+  selected: true
+  image: "/assets/images/Invariant-Feature-Learning.webp"
+  selected_label: AAAI 2026
+  selected_summary: Invariant feature learning separates duration effects from true user preference in short-video recommendation.
+  digest_url: "/aaai-difl/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.1609/aaai.v40i17.38518
+  digest_note: A video recommendation paper on counterfactual watch-time prediction and feature learning under duration-related bias.
+- id: rpe4rec
+  title: 'RPE4Rec: Enhancing Dynamic Node Retrieval with Efficient Relative Position Encoding for Recommendation Systems'
+  year: 2026
+  venue: Proceedings of the Nineteenth ACM International Conference on Web Search and Data Mining
+  venue_short: WSDM
+  authors: K Cheng, H Chang, P Wang, L Gu, J Ding, Y Cao, J Ye, B Du
+  topic: recommender-systems
+  level: b
+  selected: true
+  image: "/assets/images/RPE4Rec.webp"
+  selected_label: WSDM 2026
+  selected_summary: Efficient relative position encoding for dynamic node retrieval in recommendation systems.
+  paper_url: https://dl.acm.org/doi/epdf/10.1145/3773966.3778006
+  paper_label: PDF
+  digest_url: "/rpe4rec/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.1145/3773966.3778006
+  digest_note: A recommendation retrieval paper on relative position encoding for dynamic node retrieval under changing user and item behavior.
+- id: dygraph
+  title: 'Towards Practical Large-scale Dynamical Heterogeneous Graph Embedding: Cold-start Resilient Recommendation'
+  year: 2025
+  venue: arXiv preprint arXiv:2512.13120
+  venue_short: arXiv
+  authors: M Long, J Liu, Y Li, H Xiong, J Yan, K Wang, Y Cao, J Ding
+  topic: recommender-systems
+  level: c
+  selected: false
+  paper_url: https://arxiv.org/abs/2512.13120
+  paper_label: arXiv
+  digest_url: "/dygraph/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.48550/arxiv.2512.13120
+  digest_note: A dynamic heterogeneous graph embedding study focused on recommendation settings where new users, items, and relations appear over time.
+- id: bis-nl2sql
+  title: 'BIS: NL2SQL Service Evaluation Benchmark for Business Intelligence Scenarios'
+  year: 2025
+  venue: Lecture Notes in Computer Science, 15405, 357-372
+  venue_short: LNCS
+  authors: B Caglayan, M Wang, JD Kelleher, S Fei, G Tong, J Ding, P Zhang
+  topic: llm-agents
+  level: b
+  selected: true
+  image: "/assets/images/BIS-NL2SQL.webp"
+  selected_label: LNCS 2025
+  selected_summary: A benchmark for evaluating service-oriented NL2SQL systems in business intelligence scenarios.
+  paper_url: https://doi.org/10.1007/978-981-96-0808-9_27
+  paper_label: DOI
+  digest_url: "/bis-nl2sql/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.1007/978-981-96-0808-9_27
+  digest_note: A benchmark and evaluation study for NL2SQL services in business intelligence scenarios, connecting language interfaces with service-oriented data systems.
+- id: unified-low-rank-compression
+  title: Unified Low-rank Compression Framework for Click-through Rate Prediction
+  year: 2024
+  venue: Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+  venue_short: KDD
+  authors: H Yu, M Fu, J Ding, Y Zhou, J Wu
+  topic: recommender-systems
+  level: a
+  selected: true
+  image: "/assets/images/Unified-Low-rank-Compression.webp"
+  selected_label: KDD 2024
+  selected_summary: A unified compression framework for large CTR models and resource-constrained deployment.
+  paper_url: https://dl.acm.org/doi/epdf/10.1145/3637528.3671520
+  paper_label: PDF
+  digest_url: "/kdd-ctr/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.1145/3637528.3671520
+  digest_note: A CTR prediction paper on low-rank compression for reducing model cost while preserving practical ranking behavior.
+- id: pd-serve
+  title: 'P/D-Serve: Serving Disaggregated Large Language Model at Scale'
+  year: 2024
+  venue: arXiv preprint arXiv:2408.08147
+  venue_short: arXiv
+  authors: Y Jin, T Wang, H Lin, M Song, P Li, Y Ma, Y Shan, Z Yuan, C Li, Y Sun, et al.
+  topic: llm-agents
+  level: c
+  selected: false
+  paper_url: https://arxiv.org/pdf/2408.08147
+  paper_label: PDF
+  digest_url: "/pd-serve/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.48550/arxiv.2408.08147
+  digest_note: A systems paper on disaggregated large language model serving, separating serving stages to support large-scale inference.
+- id: acl-topic
+  title: Neural Topic Modeling Based on Cycle Adversarial Training and Contrastive Learning
+  year: 2023
+  venue: 'Findings of the Association for Computational Linguistics: ACL 2023'
+  venue_short: ACL Findings
+  authors: B Wang, L Zhang, D Zhou, Y Cao, J Ding
+  topic: data-mining
+  level: a
+  selected: false
+  paper_url: https://aclanthology.org/2023.findings-acl.616.pdf
+  paper_label: PDF
+  digest_url: "/acl-topic/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.18653/v1/2023.findings-acl.616
+  digest_note: A neural topic modeling paper that combines cycle adversarial training and contrastive learning to improve topic representations.
+- id: continual-gcn
+  title: Continual Graph Convolutional Network for Text Classification
+  year: 2023
+  venue: Proceedings of the AAAI Conference on Artificial Intelligence
+  venue_short: AAAI
+  authors: T Wu, Q Liu, Y Cao, Y Huang, XM Wu, J Ding
+  topic: data-mining
+  level: a
+  selected: false
+  paper_url: https://ojs.aaai.org/index.php/AAAI/article/view/26611/26383
+  paper_label: PDF
+  digest_url: "/continual-gcn/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.1609/aaai.v37i11.26611
+  digest_note: A graph-learning paper for continual text classification, studying how graph convolutional models adapt as text data evolves.
+- id: naacl-epida
+  title: 'EPiDA: An Easy Plug-in Data Augmentation Framework for High Performance Text Classification'
+  year: 2022
+  venue: Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics
+  venue_short: NAACL
+  authors: M Zhao, L Zhang, Y Xu, J Ding, J Guan, S Zhou
+  topic: data-mining
+  level: b
+  selected: false
+  paper_url: https://aclanthology.org/2022.naacl-main.349
+  paper_label: PDF
+  digest_url: "/naacl-epida/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.18653/v1/2022.naacl-main.349
+  digest_note: A text-classification paper introducing an easy plug-in data augmentation framework for low-resource and high-performance settings.
+- id: neurips-dpssl
+  title: 'DP-SSL: Towards Robust Semi-Supervised Learning with a Few Labeled Samples'
+  year: 2021
+  venue: Advances in Neural Information Processing Systems
+  venue_short: NeurIPS
+  authors: Y Xu, J Ding, L Zhang, S Zhou
+  topic: data-mining
+  level: a
+  selected: false
+  paper_url: https://arxiv.org/pdf/2110.13740
+  paper_label: PDF
+  digest_url: "/neurips-dpssl/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.5555/3540261.3541477
+  digest_note: A robust semi-supervised learning paper that combines data programming signals with learning from few labeled examples.
+- id: emnlp-keygraph
+  title: Weakly-Supervised Text Classification Based on Keyword Graph
+  year: 2021
+  venue: Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing
+  venue_short: EMNLP
+  authors: L Zhang, J Ding, Y Xu, Y Liu, S Zhou
+  topic: data-mining
+  level: b
+  selected: false
+  paper_url: https://aclanthology.org/2021.emnlp-main.222.pdf
+  paper_label: PDF
+  digest_url: "/emnlp-keygraph/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.18653/v1/2021.emnlp-main.222
+  digest_note: A weakly supervised text classification paper that uses keyword graphs to propagate limited supervision into useful classification signals.
+- id: ai-assistance-live-streaming
+  title: 'Effectiveness of AI Assistance in Live-Streaming: A Randomized Field Experiment'
+  year: 2021
+  venue: ICIS 2021 Proceedings
+  venue_short: ICIS
+  authors: L Wang, Y He, J Ding, N Huang, Y Hong, X Guo, D Liu, G Chen
+  topic: data-mining
+  level: a
+  selected: false
+  paper_url: https://aisel.aisnet.org/icis2021/hci_robot/hci_robot/3/
+  paper_label: PDF
+  digest_url: "/ai-assistance-live-streaming/"
+  digest_label: Digest
+  digest_note: A field-experiment study of AI assistance in live streaming, focusing on how algorithmic support changes creator behavior and platform outcomes.
+- id: sales-data-live-streaming
+  title: 'The Sales Data Sells: Effects of Real-Time Sales Analytics on Live Streaming Selling'
+  year: 2021
+  venue: ICIS 2021 Proceedings
+  venue_short: ICIS
+  authors: Y He, L Wang, N Huang, Y Hong, J Ding, Y Sun, Y Liu
+  topic: data-mining
+  level: a
+  selected: false
+  paper_url: https://aisel.aisnet.org/icis2021/data_analytics/data_analytics/2/
+  paper_label: PDF
+  digest_url: "/sales-data-live-streaming/"
+  digest_label: Digest
+  digest_note: A live-streaming field study on how real-time sales analytics affects seller behavior and selling performance.
+- id: large-scale-mirna-clustering
+  title: 'Automatically Clustering Large-Scale miRNA Sequences: Methods and Experiments'
+  year: 2012
+  venue: BMC Genomics
+  venue_short: BMC Genomics
+  authors: L Wan, J Ding, T Jin, J Guan, S Zhou
+  topic: data-mining
+  topic_page: false
+  level: b
+  selected: false
+  paper_url: https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-13-S8-S15
+  paper_label: PDF
+  digest_url: "/large-scale-mirna-clustering/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.1186/1471-2164-13-s8-s15
+  digest_note: An early data-mining paper on clustering large-scale miRNA sequences while balancing scale, similarity, and biological interpretation.
+- id: finding-microrna-targets-plants
+  title: 'Finding MicroRNA Targets in Plants: Current Status and Perspectives'
+  year: 2012
+  venue: Genomics, Proteomics and Bioinformatics
+  venue_short: GPB
+  authors: J Ding, S Zhou, J Guan
+  topic: data-mining
+  topic_page: false
+  level: a
+  selected: false
+  paper_url: https://academic.oup.com/gpb/article/10/5/264/7221796
+  paper_label: PDF
+  digest_url: "/finding-microrna-targets-plants/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.1016/j.gpb.2012.09.003
+  digest_note: A review paper on computational and experimental approaches for finding microRNA targets in plants.
+- id: genome-wide-mirna-target-interactions
+  title: Genome-Wide Search for miRNA-target Interactions in Arabidopsis Thaliana with an Integrated Approach
+  year: 2012
+  venue: BMC Genomics
+  venue_short: BMC Genomics
+  authors: J Ding, D Li, U Ohler, J Guan, S Zhou
+  topic: data-mining
+  topic_page: false
+  level: b
+  selected: false
+  paper_url: https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-13-S3
+  paper_label: PDF
+  digest_url: "/genome-wide-mirna-target-interactions/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.1186/1471-2164-13-s3-s3
+  digest_note: A genome-scale bioinformatics paper on identifying miRNA-target interactions in Arabidopsis thaliana through integrated computational evidence.
+- id: mirfam
+  title: 'miRFam: An Effective Automatic miRNA Classification Method Based on n-Grams and a Multiclass SVM'
+  year: 2011
+  venue: BMC Bioinformatics
+  venue_short: BMC Bioinformatics
+  authors: J Ding, S Zhou, J Guan
+  topic: data-mining
+  topic_page: false
+  level: a
+  selected: false
+  paper_url: https://doi.org/10.1186/1471-2105-12-216
+  paper_label: DOI
+  digest_url: "/mirfam/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.1186/1471-2105-12-216
+  digest_note: An early sequence-mining paper that represents miRNA sequences with n-gram features for family classification.
+- id: imirtp
+  title: 'imiRTP: An Integrated Method to Identifying miRNA-target Interactions in Arabidopsis Thaliana'
+  year: 2011
+  venue: 2011 IEEE International Conference on Bioinformatics and Biomedicine
+  venue_short: BIBM
+  authors: J Ding, S Yu, U Ohler, J Guan, S Zhou
+  topic: data-mining
+  topic_page: false
+  level: b
+  selected: false
+  paper_url: https://ieeexplore.ieee.org/document/6120415/
+  paper_label: PDF
+  digest_url: "/imirtp/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.1109/bibm.2011.13
+  digest_note: An integrated method for identifying miRNA-target interactions in Arabidopsis thaliana by combining multiple computational signals.
+- id: mirensvm
+  title: 'MiRenSVM: Towards Better Prediction of microRNA Precursors Using an Ensemble SVM Classifier with Multi-Loop Features'
+  year: 2010
+  venue: BMC Bioinformatics
+  venue_short: BMC Bioinformatics
+  authors: J Ding, S Zhou, J Guan
+  topic: data-mining
+  topic_page: false
+  level: a
+  selected: false
+  paper_url: https://doi.org/10.1186/1471-2105-11-S11-S11
+  paper_label: DOI
+  digest_url: "/mirensvm/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.1186/1471-2105-11-s11-s11
+  digest_note: An early machine-learning paper for microRNA precursor prediction using ensemble SVM models and multi-loop structural features.
