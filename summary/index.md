@@ -39,7 +39,7 @@ schema:
         </article>
         <article class="topic-card">
           <h3>Full publications</h3>
-          <p>The publication page lists 22 papers from newest to oldest, with paper links and Digest notes where available.</p>
+          <p>The publication page lists 22 papers from newest to oldest, with paper links and Digest notes connected to each entry.</p>
         </article>
         <article class="topic-card">
           <h3>Topic pages</h3>

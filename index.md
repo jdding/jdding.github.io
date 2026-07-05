@@ -192,6 +192,3 @@ schema:
     </div>
   </section>
 </div>
-
-<link rel="canonical" href="https://jdding.github.io/" />
-<link rel="alternate" type="application/json" href="/api/research.json" title="Research data" />
