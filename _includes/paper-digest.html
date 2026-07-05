@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/assets/css/research-system.css?v=typography-20260705">
+<link rel="stylesheet" href="/assets/css/research-system.css?v=phase2-20260705">
 {% include research-nav.html %}
 
 {% assign paper = site.data.publications | where: "id", page.publication_id | first %}
@@ -23,21 +23,35 @@
   <section class="research-section">
     <div class="research-shell digest-layout">
       <article class="digest-main">
-        <section class="digest-block">
-          <h2>Reading note</h2>
-          <p>{{ paper.digest_note | default: paper.selected_summary }}</p>
-        </section>
-
         {% if topic %}
         <section class="digest-block">
-          <h2>Research connection</h2>
-          <p>{{ topic.summary }}</p>
+          <h2>Research area</h2>
+          <p>{{ topic.scope_text | default: topic.summary }}</p>
         </section>
         {% endif %}
 
         <section class="digest-block">
           <h2>Publication record</h2>
-          <p>{{ paper.authors }}<br>{{ paper.venue }}</p>
+          <dl class="digest-record">
+            <div>
+              <dt>Authors</dt>
+              <dd>{{ paper.authors }}</dd>
+            </div>
+            <div>
+              <dt>Venue</dt>
+              <dd>{{ paper.venue }}</dd>
+            </div>
+            <div>
+              <dt>Year</dt>
+              <dd>{{ paper.year }}</dd>
+            </div>
+            {% if topic %}
+            <div>
+              <dt>Area</dt>
+              <dd>{{ topic.title }}</dd>
+            </div>
+            {% endif %}
+          </dl>
         </section>
       </article>
 

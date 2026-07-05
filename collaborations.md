@@ -16,7 +16,7 @@ schema:
   "description": "Research collaboration routes and institutional collaboration history."
 ---
 
-<link rel="stylesheet" href="/assets/css/research-system.css?v=typography-20260705">
+<link rel="stylesheet" href="/assets/css/research-system.css?v=phase2-20260705">
 {% include research-nav.html %}
 
 {% assign collaborations = site.data.research.collaborations %}
@@ -86,7 +86,10 @@ schema:
             <article class="record-item">
               <div>
                 <h3>{{ item.name }}</h3>
-                <div class="record-meta">{{ item.location }}<br>{{ item.focus }}</div>
+                <div class="record-meta meta-lines">
+                  <span>{{ item.location }}</span>
+                  <span>{{ item.focus }}</span>
+                </div>
               </div>
               <div class="record-actions">
                 <span class="pill link">{{ item.status }}</span>

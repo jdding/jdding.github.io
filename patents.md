@@ -6,7 +6,7 @@ permalink: /patents/
 classes: wide
 ---
 
-<link rel="stylesheet" href="/assets/css/research-system.css?v=typography-20260705">
+<link rel="stylesheet" href="/assets/css/research-system.css?v=phase2-20260705">
 {% include research-nav.html %}
 
 {% assign patents = site.data.patents %}
@@ -60,10 +60,10 @@ classes: wide
             <article class="patent-card">
               <div>
                 <h3>{{ patent.title }}</h3>
-                <div class="patent-meta">
-                  <a href="{{ patent.source_url }}">{{ patent.number }}</a><br>
-                  {{ patent.inventors }}<br>
-                  {{ patent.year }} / {{ patent.area }}
+                <div class="patent-meta meta-lines">
+                  <span><a href="{{ patent.source_url }}">{{ patent.number }}</a></span>
+                  <span>{{ patent.inventors }}</span>
+                  <span>{{ patent.year }} / {{ patent.area }}</span>
                 </div>
               </div>
               <div class="patent-tags">
@@ -83,10 +83,10 @@ classes: wide
             <article class="patent-card">
               <div>
                 <h3>{{ patent.title }}</h3>
-                <div class="patent-meta">
-                  <a href="{{ patent.source_url }}">{{ patent.number }}</a><br>
-                  {{ patent.inventors }}<br>
-                  {{ patent.year }} / {{ patent.area }}
+                <div class="patent-meta meta-lines">
+                  <span><a href="{{ patent.source_url }}">{{ patent.number }}</a></span>
+                  <span>{{ patent.inventors }}</span>
+                  <span>{{ patent.year }} / {{ patent.area }}</span>
                 </div>
               </div>
               <div class="patent-tags">

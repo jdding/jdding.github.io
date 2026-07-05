@@ -4,7 +4,7 @@
 remote_theme: mmistakes/minimal-mistakes
 
 # Site metadata
-title: "Jiandong Ding (丁建栋) - Senior Technical Expert"
+title: "Jiandong Ding"
 description: "Personal research site for Jiandong Ding, Senior Technical Expert working on recommender systems, LLM agents, and data mining."
 url: "https://jdding.github.io" # 站点根地址（不带末尾斜杠）
 github_username: jdding

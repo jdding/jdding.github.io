@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/assets/css/research-system.css?v=typography-20260705">
+<link rel="stylesheet" href="/assets/css/research-system.css?v=phase2-20260705">
 {% include research-nav.html %}
 
 {% assign topic = site.data.topics | where: "slug", page.topic_slug | first %}
@@ -50,7 +50,6 @@
     <div class="research-shell">
       <div class="section-head">
         <h2>Active projects</h2>
-        <p>Current project directions connected to this research topic.</p>
       </div>
       <div class="project-grid">
         {% for project in topic_projects %}
@@ -70,7 +69,6 @@
     <div class="research-shell">
       <div class="section-head">
         <h2>Papers in this area</h2>
-        <p>Publications connected to this research direction.</p>
       </div>
       <div class="record-list">
         <section class="year-block">
@@ -81,7 +79,10 @@
             <article class="record-item">
               <div>
                 <h3>{{ paper.title }}</h3>
-                <div class="record-meta">{{ paper.authors }}<br>{{ paper.venue_short }} {{ paper.year }}</div>
+                <div class="record-meta meta-lines">
+                  <span>{{ paper.authors }}</span>
+                  <span>{{ paper.venue_short }} {{ paper.year }}</span>
+                </div>
               </div>
               <div class="record-actions">
                 <a class="pill link" href="/publications/#{{ paper.year }}">Publication</a>
@@ -101,7 +102,6 @@
     <div class="research-shell">
       <div class="section-head">
         <h2>Related patents</h2>
-        <p>Selected patent records that connect this direction to applied systems.</p>
       </div>
       <div class="record-list">
         <section class="patent-group">
@@ -112,7 +112,10 @@
             <article class="patent-card">
               <div>
                 <h3>{{ patent.title }}</h3>
-                <div class="patent-meta"><a href="{{ patent.source_url }}">{{ patent.number }}</a><br>{{ patent.year }} / {{ patent.area }}</div>
+                <div class="patent-meta meta-lines">
+                  <span><a href="{{ patent.source_url }}">{{ patent.number }}</a></span>
+                  <span>{{ patent.year }} / {{ patent.area }}</span>
+                </div>
               </div>
               <div class="patent-tags">
                 <span class="pill">{{ patent.jurisdiction }}</span>

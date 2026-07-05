@@ -1,7 +1,7 @@
 ---
 layout: single
 author_profile: false
-title: "Jiandong Ding (丁建栋)"
+title: "Senior Technical Expert"
 classes: wide
 schema:
   "@context": "https://schema.org"
@@ -22,7 +22,7 @@ schema:
     - "https://github.com/jdding"
 ---
 
-<link rel="stylesheet" href="/assets/css/research-system.css?v=typography-20260705">
+<link rel="stylesheet" href="/assets/css/research-system.css?v=phase2-20260705">
 {% include research-nav.html %}
 
 {% assign topics = site.data.topics | sort: "order" %}

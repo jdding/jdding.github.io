@@ -16,7 +16,7 @@ schema:
   "description": "Full publications by Jiandong Ding, ordered by year."
 ---
 
-<link rel="stylesheet" href="/assets/css/research-system.css?v=typography-20260705">
+<link rel="stylesheet" href="/assets/css/research-system.css?v=phase2-20260705">
 {% include research-nav.html %}
 
 {% assign publications = site.data.publications %}
@@ -44,8 +44,8 @@ schema:
             <article class="record-item" itemscope itemtype="http://schema.org/ScholarlyArticle">
               <div>
                 <h3 itemprop="headline">{{ paper.title }}</h3>
-                <div class="record-meta">
-                  <span itemprop="author">{{ paper.authors }}</span><br>
+                <div class="record-meta meta-lines">
+                  <span itemprop="author">{{ paper.authors }}</span>
                   <span itemprop="isPartOf">{{ paper.venue }}</span>
                   <meta itemprop="datePublished" content="{{ paper.year }}">
                 </div>

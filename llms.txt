@@ -27,6 +27,6 @@ Machine-readable resources:
 - Knowledge graph: https://jdding.github.io/api/knowledge-graph.json
 - Extended sitemap: https://jdding.github.io/sitemap-extended.xml
 
-Publication records are ordered from newest to oldest. Digest pages provide short reading notes for individual papers. Patent records include patent number, status, year, applied area, source link, and inventor role.
+Publication records are ordered from newest to oldest. Digest pages summarize individual papers and connect them to the site's research directions. Patent records include patent number, status, year, applied area, source link, and inventor role.
 
 For university collaboration, contact dingjiandong2@huawei.com. For general research exchange, contact jdding@fudan.edu.cn.
