@@ -3,7 +3,7 @@
   title: Dormant-user recommendation
   label: Recommendation
   topic: recommender-systems
-  summary: Studying recommendation for returning users whose recent behavior is sparse and whose historical signals may no longer match the current catalog.
+  summary: Studying recommendation for returning users after long inactivity gaps, where pre-gap history exists but its current reliability must be recalibrated.
 
 - id: search-recommendation-interaction
   order: 2

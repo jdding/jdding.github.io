@@ -12,7 +12,7 @@ schema:
     "@type": "Person"
     "name": "Jiandong Ding (丁建栋)"
     "url": "https://jdding.github.io"
-  "dateModified": "2026-07-04"
+  "dateModified": "2026-07-14"
   "description": "Overview of Jiandong Ding's research profile, publications, patents, projects, and collaboration routes."
 ---
 
@@ -39,7 +39,7 @@ schema:
         </article>
         <article class="topic-card">
           <h3>Full publications</h3>
-          <p>The publication page lists 22 papers from newest to oldest, with paper links and Digest notes connected to each entry.</p>
+          <p>The publication page lists 23 papers from newest to oldest, with paper links and Digest notes connected to each entry.</p>
         </article>
         <article class="topic-card">
           <h3>Topic pages</h3>

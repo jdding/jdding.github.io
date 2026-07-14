@@ -1,4 +1,29 @@
 ---
+- id: deltagate
+  title: Zero-Observation User Reactivation with Gap-Driven Dimensional Gating
+  year: 2026
+  venue: Proceedings of the 20th ACM Conference on Recommender Systems (RecSys '26)
+  venue_short: RecSys
+  authors: J Ding, T Liu, F Liu, H Qin, T Wu
+  topic: recommender-systems
+  level: a
+  selected: false
+  selected_label: RecSys 2026
+  selected_summary: DeltaGate recalibrates frozen sequential recommendation representations for long-gap returning users.
+  code_url: https://github.com/jdding/DeltaGate
+  code_label: Code
+  digest_url: "/deltagate/"
+  digest_label: Digest
+  digest_note: A RecSys 2026 paper defining zero-observation user reactivation and introducing DeltaGate, a frozen-backbone dimensional gating plugin for long-gap returning users.
+  digest_blocks:
+    - title: Problem
+      text: Returning users may have months or years without observed behavior, so a model's last user representation can become unreliable even when pre-gap history exists.
+    - title: Method
+      text: DeltaGate keeps the sequential recommendation backbone frozen and learns a dimension-wise gate that routes each representation dimension between personalized history and a learned global prior.
+    - title: Findings
+      text: Under the Gap-Synthesize Protocol on Amazon datasets, standard sequential recommenders decline as inactivity gaps widen; in the >365d Video Games bucket, DG-BERT4Rec reaches 0.046 Hit@10 versus 0.025 for BERT4Rec.
+    - title: Deployment boundary
+      text: End-to-end retraining can reach higher absolute accuracy, while the frozen DeltaGate plugin preserves zero backbone drift, uses 66K trainable parameters, and keeps the adaptation behavior inspectable.
 - id: skillresolve-bench
   title: 'SkillResolve-Bench: Measuring and Resolving Same-Capability Ambiguity in Agent Skill Retrieval'
   year: 2026
