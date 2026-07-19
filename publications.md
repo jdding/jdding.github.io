@@ -12,7 +12,7 @@ schema:
     "@type": "Person"
     "name": "Jiandong Ding (丁建栋)"
     "url": "https://jdding.github.io"
-  "dateModified": "2026-07-14"
+  "dateModified": "2026-07-19"
   "description": "Full publications by Jiandong Ding, ordered by year."
 ---
 
@@ -54,7 +54,6 @@ schema:
                 {% if topic %}<span class="pill topic">{{ topic.title }}</span>{% endif %}
                 {% if paper.paper_url %}<a class="pill link" href="{{ paper.paper_url }}">{{ paper.paper_label | default: "Paper" }}</a>{% endif %}
                 {% if paper.digest_url %}<a class="pill digest" href="{{ paper.digest_url }}">{{ paper.digest_label | default: "Digest" }}</a>{% endif %}
-                {% if paper.code_url %}<a class="pill link" href="{{ paper.code_url }}">{{ paper.code_label | default: "Code" }}</a>{% endif %}
               </div>
             </article>
             {% endfor %}

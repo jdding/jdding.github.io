@@ -1,7 +1,7 @@
 ---
 layout: single
 author_profile: false
-title: "Senior Technical Expert"
+title: "Principal Algorithm Expert"
 classes: wide
 schema:
   "@context": "https://schema.org"
@@ -10,12 +10,12 @@ schema:
   "alternateName": "Jiandong Ding"
   "givenName": "Jiandong"
   "familyName": "Ding"
-  "jobTitle": "Senior Technical Expert"
+  "jobTitle": "Principal Algorithm Expert"
   "affiliation":
     "@type": "Organization"
     "name": "Huawei Technologies"
   "knowsAbout": ["Recommender Systems", "LLM Agents", "Data Mining"]
-  "description": "Senior Technical Expert working on recommender systems, LLM agents, and data mining."
+  "description": "Principal Algorithm Expert working on recommender systems, LLM agents, and data mining."
   "url": "https://jdding.github.io"
   "sameAs":
     - "https://www.linkedin.com/in/jiandong-ding-60498833/"
@@ -56,7 +56,7 @@ schema:
         </div>
         <div class="identity-body">
           <div>
-            <div class="section-label">Senior Technical Expert</div>
+            <div class="section-label">Principal Algorithm Expert</div>
             <strong>Researcher and engineer working between academic research and industrial AI systems.</strong>
           </div>
           <ul class="identity-facts">
@@ -76,7 +76,7 @@ schema:
       <div class="timeline" aria-label="Research trajectory">
         <div class="timeline-row">
           <time>2026</time>
-          <p>Zero-observation user reactivation, generative recommendation, dynamic retrieval, semantic-ID diagnostics, and agent skill retrieval.</p>
+          <p>Generative recommendation, dynamic retrieval, semantic-ID diagnostics, and agent skill retrieval.</p>
         </div>
         <div class="timeline-row">
           <time>2025-2024</time>

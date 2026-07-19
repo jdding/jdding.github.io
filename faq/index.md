@@ -13,7 +13,7 @@ schema:
       "name": "Who is Jiandong Ding?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Jiandong Ding is a Senior Technical Expert at Huawei Technologies. His work focuses on recommender systems, LLM agents, and data mining."
+        "text": "Jiandong Ding is a Principal Algorithm Expert at Huawei Technologies. His work focuses on recommender systems, LLM agents, and data mining."
       }
     },
     {
@@ -29,7 +29,7 @@ schema:
       "name": "Where can I find Jiandong Ding's publications?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Full Publications lists 23 papers from newest to oldest, with paper links and Digest notes."
+        "text": "Full Publications lists 22 papers from newest to oldest, with paper links and Digest notes."
       }
     },
     {
@@ -69,13 +69,13 @@ schema:
           <div class="year-label">Profile</div>
           <div class="record-stack">
             <article class="record-item">
-              <div><h3>Who is Jiandong Ding?</h3><div class="record-meta">Jiandong Ding is a Senior Technical Expert at Huawei Technologies. His work focuses on recommender systems, LLM agents, and data mining.</div></div>
+              <div><h3>Who is Jiandong Ding?</h3><div class="record-meta">Jiandong Ding is a Principal Algorithm Expert at Huawei Technologies. His work focuses on recommender systems, LLM agents, and data mining.</div></div>
             </article>
             <article class="record-item">
               <div><h3>What are the main research areas?</h3><div class="record-meta">The current research areas are LLM Agents, Recommender Systems, and Data Mining.</div></div>
             </article>
             <article class="record-item">
-              <div><h3>Where are the publications?</h3><div class="record-meta">The <a href="/publications/">Full publications</a> page lists 23 papers from newest to oldest, with paper links and Digest notes.</div></div>
+              <div><h3>Where are the publications?</h3><div class="record-meta">The <a href="/publications/">Full publications</a> page lists 22 papers from newest to oldest, with paper links and Digest notes.</div></div>
             </article>
             <article class="record-item">
               <div><h3>Where are the patents?</h3><div class="record-meta">The <a href="/patents/">Patents</a> page lists 56 patent records, including 21 granted patents and 35 published applications.</div></div>

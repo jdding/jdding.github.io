@@ -16,7 +16,6 @@
         {% if paper.paper_url %}<a class="button primary" href="{{ paper.paper_url }}">{{ paper.paper_label | default: "Paper" }}</a>{% endif %}
         {% if paper.doi_url %}<a class="button secondary" href="{{ paper.doi_url }}">DOI</a>{% endif %}
         <a class="button secondary" href="/publications/">Full publications</a>
-        {% if paper.code_url %}<a class="button secondary" href="{{ paper.code_url }}">{{ paper.code_label | default: "Code" }}</a>{% endif %}
       </div>
     </div>
   </section>
@@ -55,14 +54,6 @@
           </dl>
         </section>
 
-        {% if paper.digest_blocks %}
-        {% for block in paper.digest_blocks %}
-        <section class="digest-block">
-          <h2>{{ block.title }}</h2>
-          <p>{{ block.text }}</p>
-        </section>
-        {% endfor %}
-        {% endif %}
       </article>
 
       <aside class="digest-side">
@@ -89,7 +80,6 @@
   "isPartOf": {{ paper.venue | jsonify }},
   "url": "{{ site.url }}{{ paper.digest_url }}"{% if paper.paper_url %},
   "sameAs": {{ paper.paper_url | jsonify }}{% endif %}{% if paper.doi_url %},
-  "identifier": {{ paper.doi_url | jsonify }}{% endif %}{% if paper.code_url %},
-  "codeRepository": {{ paper.code_url | jsonify }}{% endif %}
+  "identifier": {{ paper.doi_url | jsonify }}{% endif %}
 }
 </script>

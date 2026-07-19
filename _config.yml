@@ -5,7 +5,7 @@ remote_theme: mmistakes/minimal-mistakes
 
 # Site metadata
 title: "Jiandong Ding"
-description: "Personal research site for Jiandong Ding, Senior Technical Expert working on recommender systems, LLM agents, and data mining."
+description: "Personal research site for Jiandong Ding, Principal Algorithm Expert working on recommender systems, LLM agents, and data mining."
 url: "https://jdding.github.io" # 站点根地址（不带末尾斜杠）
 github_username: jdding
 repository: "jdding/jdding.github.io" # 用于jekyll-seo-tag插件
@@ -14,7 +14,7 @@ locale: "en-US" # 站点语言/区域（用于主题与 SEO 元数据）
 author:
   name: "Jiandong Ding (丁建栋)"
   avatar: "/assets/images/Profile.png"
-  bio: "**Senior Technical Expert** at **Huawei Technologies**. Research interests include recommender systems, LLM agents, and data mining."
+  bio: "**Principal Algorithm Expert** at **Huawei Technologies**. Research interests include recommender systems, LLM agents, and data mining."
   location: "Shanghai, China"
   links:
     - label: "Home"

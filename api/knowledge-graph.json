@@ -87,8 +87,7 @@ permalink: /api/knowledge-graph.json
       "about": { "@id": "{{ site.url }}/topics/{{ paper.topic }}/#topic" }{% if paper.paper_url %},
       "url": {{ paper.paper_url | jsonify }}{% endif %}{% if paper.digest_url %},
       "mainEntityOfPage": "{{ site.url }}{{ paper.digest_url }}"{% endif %}{% if paper.doi_url %},
-      "sameAs": {{ paper.doi_url | jsonify }}{% endif %}{% if paper.code_url %},
-      "codeRepository": {{ paper.code_url | jsonify }}{% endif %}
+      "sameAs": {{ paper.doi_url | jsonify }}{% endif %}
     }{% endfor %}{% for patent in patents %},
     {
       "@id": "{{ site.url }}/patent/{{ patent.id }}",
