@@ -7,7 +7,8 @@
   authors: J Ding, T Liu, F Liu, H Qin, T Wu
   topic: recommender-systems
   level: a
-  selected: false
+  selected: true
+  image: "/assets/images/DeltaGate-Resurrecting-Ghost-Users.jpg"
   selected_label: RecSys 2026
   selected_summary: DeltaGate recalibrates frozen sequential recommendation representations for long-gap returning users.
   code_url: https://github.com/jdding/DeltaGate

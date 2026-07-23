@@ -486,7 +486,7 @@
 
 .paper-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -496,7 +496,7 @@
 }
 
 .paper-card.featured {
-  grid-row: span 2;
+  grid-row: auto;
 }
 
 .paper-image {
@@ -530,7 +530,7 @@
 }
 
 .paper-card.featured .paper-body h3 {
-  font-size: var(--type-feature-title);
+  font-size: var(--type-card-title);
 }
 
 .paper-meta,
