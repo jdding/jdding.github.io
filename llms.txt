@@ -5,7 +5,7 @@ This is the personal research site of Jiandong Ding, Principal Algorithm Expert 
 The site presents research work across three current directions:
 
 - LLM Agents: skill retrieval, semantic-ID diagnostics, NL2SQL evaluation, and LLM serving systems.
-- Recommender Systems: generative recommendation, dynamic retrieval, behavior modeling, and trustworthy prediction.
+- Recommender Systems: user reactivation, generative recommendation, dynamic retrieval, behavior modeling, and trustworthy prediction.
 - Data Mining: weak supervision, robust learning, text mining, analytics, field experiments, and earlier sequence-analysis work.
 
 Primary human-readable pages:
@@ -27,6 +27,6 @@ Machine-readable resources:
 - Knowledge graph: https://jdding.github.io/api/knowledge-graph.json
 - Extended sitemap: https://jdding.github.io/sitemap-extended.xml
 
-Publication records are ordered from newest to oldest. Digest pages summarize individual papers and connect them to the site's research directions. Patent records include patent number, status, year, applied area, source link, and inventor role.
+Publication records are ordered from newest to oldest. Recent recommender-systems work includes the RecSys 2026 accepted paper "Zero-Observation User Reactivation with Gap-Driven Dimensional Gating." Digest pages summarize individual papers and connect them to the site's research directions. Patent records include patent number, status, year, applied area, source link, and inventor role.
 
 For university collaboration, contact dingjiandong2@huawei.com. For general research exchange, contact jdding@fudan.edu.cn.

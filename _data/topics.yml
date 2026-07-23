@@ -25,23 +25,25 @@
   order: 2
   title: Recommender Systems
   nav_title: Recommender Systems
-  short: Generative recommendation, dynamic retrieval, behavior modeling, and trustworthy prediction.
+  short: User reactivation, generative recommendation, dynamic retrieval, behavior modeling, and trustworthy prediction.
   headline: Recommendation under changing behavior and scale
   summary: I work on recommendation problems where user behavior, retrieval spaces, and deployment constraints change over time.
-  question: How can recommendation systems model behavior, retrieve efficiently, and remain reliable under industrial-scale constraints?
+  question: How can recommendation systems model returning users, retrieve efficiently, and remain reliable under industrial-scale constraints?
   scope_headline: Signals, retrieval, and prediction
-  scope_text: Generative recommendation, dynamic retrieval, graph embedding, counterfactual watch-time prediction, and efficient CTR modeling form the main technical line.
+  scope_text: User reactivation, generative recommendation, dynamic retrieval, graph embedding, counterfactual watch-time prediction, and efficient CTR modeling form the main technical line.
   stats:
-    - value: "5"
+    - value: "6"
       label: related publications
     - value: "2026"
-      label: recent work on generative recommendation and dynamic retrieval
+      label: recent work on user reactivation, generative recommendation, and dynamic retrieval
   cards:
+    - title: User reactivation
+      text: Recalibrating recommendation when returning users have pre-gap history but no observed behavior during long inactivity gaps.
     - title: Generative recommendation
       text: Representing long histories, structured intent, and preference-aware generation.
     - title: Dynamic retrieval
       text: Efficient item retrieval and graph embedding under changing user and item behavior.
-    - title: Trustworthy prediction
+    - title: Trustworthy prediction and efficiency
       text: Counterfactual watch-time prediction and efficient CTR modeling for deployment.
 
 - slug: data-mining

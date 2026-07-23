@@ -13,6 +13,7 @@
       "foaf:title": "Principal Algorithm Expert",
       "rdfs:label": "Jiandong Ding",
       "biro:is-author-of": [
+        "https://jdding.github.io/publication/deltagate",
         "https://jdding.github.io/publication/skillresolve-bench",
         "https://jdding.github.io/publication/sidinspector",
         "https://jdding.github.io/publication/hpgr",
@@ -44,13 +45,20 @@
       "@id": "https://jdding.github.io/topic/recommender-systems",
       "@type": "rdfs:Class",
       "rdfs:label": "Recommender Systems",
-      "rdfs:comment": "Generative recommendation, dynamic retrieval, behavior modeling, and trustworthy prediction."
+      "rdfs:comment": "User reactivation, generative recommendation, dynamic retrieval, behavior modeling, and trustworthy prediction."
     },
     {
       "@id": "https://jdding.github.io/topic/data-mining",
       "@type": "rdfs:Class",
       "rdfs:label": "Data Mining",
       "rdfs:comment": "Weak supervision, robust learning, text mining, analytics, and field experiments."
+    },
+    {
+      "@id": "https://jdding.github.io/publication/deltagate",
+      "@type": "fabio:ConferenceProceeding",
+      "rdfs:label": "Zero-Observation User Reactivation with Gap-Driven Dimensional Gating",
+      "fabio:hasPublicationYear": "2026",
+      "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
     },
     {
       "@id": "https://jdding.github.io/publication/skillresolve-bench",

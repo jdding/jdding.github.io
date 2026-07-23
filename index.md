@@ -76,7 +76,7 @@ schema:
       <div class="timeline" aria-label="Research trajectory">
         <div class="timeline-row">
           <time>2026</time>
-          <p>Generative recommendation, dynamic retrieval, semantic-ID diagnostics, and agent skill retrieval.</p>
+          <p>Zero-observation user reactivation, generative recommendation, dynamic retrieval, semantic-ID diagnostics, and agent skill retrieval.</p>
         </div>
         <div class="timeline-row">
           <time>2025-2024</time>
