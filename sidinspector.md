@@ -5,7 +5,7 @@ title: "Digest: SIDInspector: A Mapping-First Diagnostic Resource for Semantic-I
 permalink: /sidinspector/
 classes: wide
 publication_id: sidinspector
-description: "A diagnostic resource for inspecting Semantic-ID tokenizers through their mapping behavior before downstream recommendation training."
+description: "A CIKM 2026 accepted resource paper for inspecting Semantic-ID tokenizers through their mapping behavior before downstream recommendation training."
 ---
 
 {% include paper-digest.html %}

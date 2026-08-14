@@ -16,9 +16,11 @@
         "https://jdding.github.io/publication/deltagate",
         "https://jdding.github.io/publication/skillresolve-bench",
         "https://jdding.github.io/publication/sidinspector",
+        "https://jdding.github.io/publication/task-dependency-graphs",
         "https://jdding.github.io/publication/hpgr",
         "https://jdding.github.io/publication/invariant-feature-learning",
         "https://jdding.github.io/publication/rpe4rec",
+        "https://jdding.github.io/publication/dygraph",
         "https://jdding.github.io/publication/bis-nl2sql",
         "https://jdding.github.io/publication/unified-low-rank-compression"
       ]
@@ -26,8 +28,8 @@
     {
       "@id": "https://jdding.github.io/organization/huawei-tech",
       "@type": "foaf:Organization",
-      "foaf:name": "Huawei Technologies",
-      "rdfs:label": "Huawei Technologies"
+      "foaf:name": "Huawei Technologies Co. Ltd.",
+      "rdfs:label": "Huawei Technologies Co. Ltd., Shanghai, China"
     },
     {
       "@id": "https://jdding.github.io/organization/fudan-university",
@@ -69,8 +71,15 @@
     },
     {
       "@id": "https://jdding.github.io/publication/sidinspector",
-      "@type": "fabio:Preprint",
+      "@type": "fabio:ConferenceProceeding",
       "rdfs:label": "SIDInspector: A Mapping-First Diagnostic Resource for Semantic-ID Tokenizers",
+      "fabio:hasPublicationYear": "2026",
+      "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
+    },
+    {
+      "@id": "https://jdding.github.io/publication/task-dependency-graphs",
+      "@type": "fabio:ConferenceProceeding",
+      "rdfs:label": "Personalized Task Dependency Graphs for Mitigating Signal Erosion in Multi-Task Recommendation",
       "fabio:hasPublicationYear": "2026",
       "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
     },
@@ -92,6 +101,13 @@
       "@id": "https://jdding.github.io/publication/rpe4rec",
       "@type": "fabio:ConferenceProceeding",
       "rdfs:label": "RPE4Rec: Enhancing Dynamic Node Retrieval with Efficient Relative Position Encoding for Recommendation Systems",
+      "fabio:hasPublicationYear": "2026",
+      "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
+    },
+    {
+      "@id": "https://jdding.github.io/publication/dygraph",
+      "@type": "fabio:JournalArticle",
+      "rdfs:label": "Towards Practical Large-scale Dynamic Heterogeneous Graph Embedding: Cold-start Resilient Recommendation",
       "fabio:hasPublicationYear": "2026",
       "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
     },

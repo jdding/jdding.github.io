@@ -12,7 +12,7 @@ schema:
     "@type": "Person"
     "name": "Jiandong Ding (丁建栋)"
     "url": "https://jdding.github.io"
-  "dateModified": "2026-07-23"
+  "dateModified": "2026-08-14"
   "description": "Full publications by Jiandong Ding, ordered by year."
 ---
 
@@ -41,6 +41,7 @@ schema:
           <div class="record-stack">
             {% for paper in year_papers %}
             {% assign topic = topics | where: "slug", paper.topic | first %}
+            {% assign topic_label = paper.topic_label | default: topic.title %}
             <article class="record-item" itemscope itemtype="http://schema.org/ScholarlyArticle">
               <div>
                 <h3 itemprop="headline">{{ paper.title }}</h3>
@@ -51,7 +52,7 @@ schema:
                 </div>
               </div>
               <div class="record-actions">
-                {% if topic %}<span class="pill topic">{{ topic.title }}</span>{% endif %}
+                {% if topic_label %}<span class="pill topic">{{ topic_label }}</span>{% endif %}
                 {% if paper.paper_url %}<a class="pill link" href="{{ paper.paper_url }}">{{ paper.paper_label | default: "Paper" }}</a>{% endif %}
                 {% if paper.digest_url %}<a class="pill digest" href="{{ paper.digest_url }}">{{ paper.digest_label | default: "Digest" }}</a>{% endif %}
                 {% if paper.code_url %}<a class="pill link" href="{{ paper.code_url }}">{{ paper.code_label | default: "Code" }}</a>{% endif %}

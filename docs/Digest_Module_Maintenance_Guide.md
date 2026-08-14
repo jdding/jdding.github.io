@@ -10,18 +10,19 @@ This module encompasses two core upgrades to the personal academic homepage (jdd
 
 ### a) Paper Digest Pages
 
-Replaced traditional bare PDF links with **rich, four-section deep-dive pages** ("Pain Point - Breakthrough - Impact - Reflection") for 12 core publications. Each page is a standalone `.md` file in the project root with a dedicated permalink (e.g., `/hpgr`, `/rpe4rec`).
+Replaced traditional bare PDF links with **rich, four-section deep-dive pages** ("Pain Point - Breakthrough - Impact - Reflection") for 13 core publications. Each page is a standalone `.md` file in the project root with a dedicated permalink (e.g., `/hpgr`, `/rpe4rec`).
 
-**Current coverage (12 papers):**
+**Current coverage (13 papers):**
 
 | File | Venue | Permalink |
 |---|---|---|
 | `hpgr.md` | WWW 2026 | `/hpgr` |
+| `task-dependency-graphs.md` | CIKM 2026 | `/task-dependency-graphs` |
 | `aaai-difl.md` | AAAI 2026 | `/aaai-difl` |
 | `rpe4rec.md` | WSDM 2026 | `/rpe4rec` |
 | `kdd-ctr.md` | KDD 2024 | `/kdd-ctr` |
 | `bis-nl2sql.md` | ICSOC 2024 | `/bis-nl2sql` |
-| `dygraph.md` | arXiv 2025 | `/dygraph` |
+| `dygraph.md` | TKDE 2026 | `/dygraph` |
 | `pd-serve.md` | arXiv 2024 | `/pd-serve` |
 | `continual-gcn.md` | AAAI 2023 | `/continual-gcn` |
 | `acl-topic.md` | ACL 2023 | `/acl-topic` |
@@ -109,7 +110,7 @@ keywords: "Jiandong Ding, Recommender Systems, Huawei, [2-3 core technical keywo
     "name": "Jiandong Ding",
     "affiliation": {
       "@type": "Organization",
-      "name": "Huawei Technologies / Fudan University"
+      "name": "Huawei Technologies Co. Ltd. / Fudan University"
     }
   }],
   "description": "[TL;DR plain text]",

@@ -3,12 +3,13 @@
 
 {% assign paper = site.data.publications | where: "id", page.publication_id | first %}
 {% assign topic = site.data.topics | where: "slug", paper.topic | first %}
+{% assign topic_label = paper.topic_label | default: topic.title %}
 
 <div class="research-site digest-page">
   <section class="research-hero">
     <div class="research-shell">
       <div class="digest-kicker">
-        {% if paper.venue_short %}{{ paper.venue_short }}{% else %}{{ paper.venue }}{% endif %} {{ paper.year }}{% if topic %} / {{ topic.title }}{% endif %}
+        {% if paper.venue_short %}{{ paper.venue_short }}{% else %}{{ paper.venue }}{% endif %} {{ paper.year }}{% if topic_label %} / {{ topic_label }}{% endif %}
       </div>
       <h1>{{ paper.title }}</h1>
       <p class="lede">{{ paper.digest_note | default: paper.selected_summary }}</p>
@@ -69,7 +70,7 @@
         <div class="summary-board" aria-label="Digest metadata">
           <div class="summary-row"><strong>{{ paper.year }}</strong><span>publication year</span></div>
           {% if paper.venue_short %}<div class="summary-row"><strong>{{ paper.venue_short }}</strong><span>venue</span></div>{% endif %}
-          {% if topic %}<div class="summary-row"><strong>{{ topic.nav_title | default: topic.title }}</strong><span>research direction</span></div>{% endif %}
+          {% if topic_label %}<div class="summary-row"><strong>{{ topic_label }}</strong><span>research direction</span></div>{% endif %}
         </div>
         {% if topic %}
         <a class="text-link" href="/topics/{{ topic.slug }}/">Topic page</a>

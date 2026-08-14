@@ -1,7 +1,7 @@
 ---
 layout: single
 author_profile: false
-title: "Principal Algorithm Expert"
+title: "AI Research & Systems"
 classes: wide
 schema:
   "@context": "https://schema.org"
@@ -13,9 +13,9 @@ schema:
   "jobTitle": "Principal Algorithm Expert"
   "affiliation":
     "@type": "Organization"
-    "name": "Huawei Technologies"
+    "name": "Huawei Technologies Co. Ltd."
   "knowsAbout": ["Recommender Systems", "LLM Agents", "Data Mining"]
-  "description": "Principal Algorithm Expert working on recommender systems, LLM agents, and data mining."
+  "description": "Researcher and engineer working on recommender systems, LLM agents, data mining, and reliable AI systems."
   "url": "https://jdding.github.io"
   "sameAs":
     - "https://www.linkedin.com/in/jiandong-ding-60498833/"
@@ -56,11 +56,12 @@ schema:
         </div>
         <div class="identity-body">
           <div>
-            <div class="section-label">Principal Algorithm Expert</div>
+            <div class="section-label">AI Research &amp; Systems</div>
             <strong>Researcher and engineer working between academic research and industrial AI systems.</strong>
           </div>
           <ul class="identity-facts">
-            <li>Huawei Technologies, Shanghai, China</li>
+            <li>Recommendation systems · LLM agents · data mining</li>
+            <li>Huawei Technologies Co. Ltd., Shanghai, China</li>
           </ul>
         </div>
       </aside>

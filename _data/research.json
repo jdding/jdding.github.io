@@ -4,11 +4,11 @@
     "givenName": "Jiandong",
     "familyName": "Ding",
     "title": "Principal Algorithm Expert",
-    "organization": "Huawei Technologies",
+    "organization": "Huawei Technologies Co. Ltd.",
     "email": "jdding@fudan.edu.cn",
     "academicCollaborationEmail": "dingjiandong2@huawei.com",
     "location": "Shanghai, China",
-    "bio": "Principal Algorithm Expert at Huawei Technologies working on recommender systems, LLM agents, and data mining",
+    "bio": "Principal Algorithm Expert at Huawei Technologies Co. Ltd., Shanghai, China, working on recommender systems, LLM agents, and data mining",
     "researchAreas": [
       "LLM Agents",
       "Recommender Systems",

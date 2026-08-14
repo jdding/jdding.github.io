@@ -2,22 +2,22 @@
   order: 1
   title: LLM Agents
   nav_title: LLM Agents
-  short: Skill retrieval, semantic-ID diagnostics, NL2SQL evaluation, and LLM serving systems.
+  short: Skill retrieval, NL2SQL evaluation, LLM serving systems, and capability governance.
   headline: Agent capabilities as reusable system assets
   summary: I study how LLM-based systems expose, retrieve, evaluate, and govern capabilities when they become reusable infrastructure.
   question: How can agent capabilities be selected, inspected, and evaluated before they become production dependencies?
   scope_headline: Evaluation before dependency
-  scope_text: Skill retrieval, semantic identifiers, NL2SQL benchmarks, and LLM serving systems are treated as capability surfaces that should be inspected before they are trusted.
+  scope_text: Skill retrieval, NL2SQL benchmarks, LLM serving systems, and capability governance are treated as system surfaces that should be inspected before they are trusted.
   stats:
-    - value: "4"
+    - value: "3"
       label: related publications
     - value: "2026"
-      label: recent work on skill retrieval and semantic-ID diagnostics
+      label: recent work on skill retrieval and capability governance
   cards:
     - title: Skill retrieval
       text: Evaluating ambiguity when multiple skills expose similar capabilities and must be selected reliably.
-    - title: Semantic-ID diagnostics
-      text: Inspecting semantic identifier mappings before downstream recommendation training.
+    - title: Capability governance
+      text: Studying how reusable agent capabilities are represented, selected, exposed, and evaluated.
     - title: NL2SQL and serving
       text: Benchmarking business intelligence services and scaling LLM inference systems.
 
@@ -25,14 +25,14 @@
   order: 2
   title: Recommender Systems
   nav_title: Recommender Systems
-  short: User reactivation, generative recommendation, dynamic retrieval, behavior modeling, and trustworthy prediction.
+  short: User reactivation, generative recommendation, Semantic-ID diagnostics, dynamic retrieval, behavior modeling, and trustworthy prediction.
   headline: Recommendation under changing behavior and scale
   summary: I work on recommendation problems where user behavior, retrieval spaces, and deployment constraints change over time.
   question: How can recommendation systems model returning users, retrieve efficiently, and remain reliable under industrial-scale constraints?
   scope_headline: Signals, retrieval, and prediction
-  scope_text: User reactivation, generative recommendation, dynamic retrieval, graph embedding, counterfactual watch-time prediction, and efficient CTR modeling form the main technical line.
+  scope_text: User reactivation, generative recommendation, Semantic-ID tokenizer diagnostics, dynamic retrieval, graph embedding, counterfactual watch-time prediction, and efficient CTR modeling form the main technical line.
   stats:
-    - value: "6"
+    - value: "8"
       label: related publications
     - value: "2026"
       label: recent work on user reactivation, generative recommendation, and dynamic retrieval
@@ -43,6 +43,8 @@
       text: Representing long histories, structured intent, and preference-aware generation.
     - title: Dynamic retrieval
       text: Efficient item retrieval and graph embedding under changing user and item behavior.
+    - title: Code and artifact diagnostics
+      text: Inspecting recommendation artifacts such as Semantic-ID tokenizers before downstream training and deployment.
     - title: Trustworthy prediction and efficiency
       text: Counterfactual watch-time prediction and efficient CTR modeling for deployment.
 
