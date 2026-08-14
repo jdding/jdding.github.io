@@ -53,7 +53,14 @@ schema:
               </div>
               <div class="record-actions">
                 {% if topic_label %}<span class="pill topic">{{ topic_label }}</span>{% endif %}
+                {% if paper.list_links %}
+                {% for link in paper.list_links %}
+                <a class="pill topic" href="{{ link.url }}">{{ link.label }}</a>
+                {% endfor %}
+                {% endif %}
+                {% unless paper.hide_paper_action %}
                 {% if paper.paper_url %}<a class="pill link" href="{{ paper.paper_url }}">{{ paper.paper_label | default: "Paper" }}</a>{% endif %}
+                {% endunless %}
                 {% if paper.digest_url %}<a class="pill digest" href="{{ paper.digest_url }}">{{ paper.digest_label | default: "Digest" }}</a>{% endif %}
                 {% if paper.code_url %}<a class="pill link" href="{{ paper.code_url }}">{{ paper.code_label | default: "Code" }}</a>{% endif %}
               </div>

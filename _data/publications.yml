@@ -17,7 +17,7 @@
 - id: task-dependency-graphs
   title: Personalized Task Dependency Graphs for Mitigating Signal Erosion in Multi-Task Recommendation
   year: 2026
-  venue: Proceedings of the ACM International Conference on Information and Knowledge Management 2026
+  venue: Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM '26)
   venue_short: CIKM
   authors: F Liu, T Wu, Y Fang, W Zhou, Z Zhou, W Chen, Q Mei, J Zhou, H Chang, Y Cao, J Ding
   topic: recommender-systems
@@ -38,11 +38,15 @@
 - id: sidinspector
   title: 'SIDInspector: A Mapping-First Diagnostic Resource for Semantic-ID Tokenizers'
   year: 2026
-  venue: Proceedings of the ACM International Conference on Information and Knowledge Management 2026
+  venue: Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM '26)
   venue_short: CIKM
   authors: J Ding, H Chang, H Qin, T Liu
   topic: recommender-systems
   topic_label: Code
+  list_links:
+    - label: Recommender System
+      url: "/topics/recommender-systems/"
+  hide_paper_action: true
   level: b
   selected: false
   paper_url: https://arxiv.org/abs/2606.10375
@@ -53,7 +57,7 @@
 - id: deltagate
   title: Zero-Observation User Reactivation with Gap-Driven Dimensional Gating
   year: 2026
-  venue: Proceedings of the 20th ACM Conference on Recommender Systems
+  venue: Proceedings of the 20th ACM Conference on Recommender Systems (RecSys '26)
   venue_short: RecSys
   authors: J Ding, T Liu, F Liu, H Qin, T Wu
   topic: recommender-systems
@@ -93,7 +97,7 @@
 - id: hpgr
   title: 'Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations'
   year: 2026
-  venue: Proceedings of the ACM Web Conference 2026
+  venue: Proceedings of the ACM Web Conference (WWW '26)
   venue_short: WWW
   authors: Z Chen, H Chang, T Liu, C Zhou, Y Cao, J Ding, M Liu, B Qin
   topic: recommender-systems
@@ -109,7 +113,7 @@
 - id: invariant-feature-learning
   title: Invariant feature learning for counterfactual watch-time prediction in video recommendation
   year: 2026
-  venue: Proceedings of the AAAI Conference on Artificial Intelligence
+  venue: Proceedings of the AAAI Conference on Artificial Intelligence (AAAI '26)
   venue_short: AAAI
   authors: C Jin, Y Ren, H Ma, Y Xia, Y Guan, H Zhang, J Ding, J Guan, S Zhou
   topic: recommender-systems
@@ -125,7 +129,7 @@
 - id: rpe4rec
   title: 'RPE4Rec: Enhancing Dynamic Node Retrieval with Efficient Relative Position Encoding for Recommendation Systems'
   year: 2026
-  venue: Proceedings of the Nineteenth ACM International Conference on Web Search and Data Mining
+  venue: Proceedings of the Nineteenth ACM International Conference on Web Search and Data Mining (WSDM '26)
   venue_short: WSDM
   authors: K Cheng, H Chang, P Wang, L Gu, J Ding, Y Cao, J Ye, B Du
   topic: recommender-systems
@@ -143,14 +147,14 @@
 - id: bis-nl2sql
   title: 'BIS: NL2SQL Service Evaluation Benchmark for Business Intelligence Scenarios'
   year: 2025
-  venue: Lecture Notes in Computer Science, 15405, 357-372
-  venue_short: LNCS
+  venue: International Conference on Service-Oriented Computing (ICSOC '24), Lecture Notes in Computer Science 15405, 357-372
+  venue_short: ICSOC
   authors: B Caglayan, M Wang, JD Kelleher, S Fei, G Tong, J Ding, P Zhang
   topic: llm-agents
   level: b
   selected: true
   image: "/assets/images/BIS-NL2SQL.webp"
-  selected_label: LNCS 2025
+  selected_label: ICSOC 2024
   selected_summary: A benchmark for evaluating service-oriented NL2SQL systems in business intelligence scenarios.
   paper_url: https://doi.org/10.1007/978-981-96-0808-9_27
   paper_label: DOI
@@ -161,7 +165,7 @@
 - id: unified-low-rank-compression
   title: Unified Low-rank Compression Framework for Click-through Rate Prediction
   year: 2024
-  venue: Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+  venue: Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)
   venue_short: KDD
   authors: H Yu, M Fu, J Ding, Y Zhou, J Wu
   topic: recommender-systems
@@ -194,7 +198,7 @@
 - id: acl-topic
   title: Neural Topic Modeling Based on Cycle Adversarial Training and Contrastive Learning
   year: 2023
-  venue: 'Findings of the Association for Computational Linguistics: ACL 2023'
+  venue: "Findings of the Association for Computational Linguistics (ACL Findings '23)"
   venue_short: ACL Findings
   authors: B Wang, L Zhang, D Zhou, Y Cao, J Ding
   topic: data-mining
@@ -209,7 +213,7 @@
 - id: continual-gcn
   title: Continual Graph Convolutional Network for Text Classification
   year: 2023
-  venue: Proceedings of the AAAI Conference on Artificial Intelligence
+  venue: Proceedings of the AAAI Conference on Artificial Intelligence (AAAI '23)
   venue_short: AAAI
   authors: T Wu, Q Liu, Y Cao, Y Huang, XM Wu, J Ding
   topic: data-mining
@@ -224,7 +228,7 @@
 - id: naacl-epida
   title: 'EPiDA: An Easy Plug-in Data Augmentation Framework for High Performance Text Classification'
   year: 2022
-  venue: Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics
+  venue: Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL '22)
   venue_short: NAACL
   authors: M Zhao, L Zhang, Y Xu, J Ding, J Guan, S Zhou
   topic: data-mining
@@ -239,7 +243,7 @@
 - id: neurips-dpssl
   title: 'DP-SSL: Towards Robust Semi-Supervised Learning with a Few Labeled Samples'
   year: 2021
-  venue: Advances in Neural Information Processing Systems
+  venue: Advances in Neural Information Processing Systems (NeurIPS '21)
   venue_short: NeurIPS
   authors: Y Xu, J Ding, L Zhang, S Zhou
   topic: data-mining
@@ -254,7 +258,7 @@
 - id: emnlp-keygraph
   title: Weakly-Supervised Text Classification Based on Keyword Graph
   year: 2021
-  venue: Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing
+  venue: Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP '21)
   venue_short: EMNLP
   authors: L Zhang, J Ding, Y Xu, Y Liu, S Zhou
   topic: data-mining
@@ -269,7 +273,7 @@
 - id: ai-assistance-live-streaming
   title: 'Effectiveness of AI Assistance in Live-Streaming: A Randomized Field Experiment'
   year: 2021
-  venue: ICIS 2021 Proceedings
+  venue: ICIS 2021 Proceedings (ICIS '21)
   venue_short: ICIS
   authors: L Wang, Y He, J Ding, N Huang, Y Hong, X Guo, D Liu, G Chen
   topic: data-mining
@@ -283,7 +287,7 @@
 - id: sales-data-live-streaming
   title: 'The Sales Data Sells: Effects of Real-Time Sales Analytics on Live Streaming Selling'
   year: 2021
-  venue: ICIS 2021 Proceedings
+  venue: ICIS 2021 Proceedings (ICIS '21)
   venue_short: ICIS
   authors: Y He, L Wang, N Huang, Y Hong, J Ding, Y Sun, Y Liu
   topic: data-mining
@@ -361,7 +365,7 @@
 - id: imirtp
   title: 'imiRTP: An Integrated Method to Identifying miRNA-target Interactions in Arabidopsis Thaliana'
   year: 2011
-  venue: 2011 IEEE International Conference on Bioinformatics and Biomedicine
+  venue: IEEE International Conference on Bioinformatics and Biomedicine (BIBM '11)
   venue_short: BIBM
   authors: J Ding, S Yu, U Ohler, J Guan, S Zhou
   topic: data-mining
