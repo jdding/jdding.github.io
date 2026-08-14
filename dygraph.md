@@ -5,7 +5,7 @@ title: "Digest: Towards Practical Large-scale Dynamic Heterogeneous Graph Embedd
 permalink: /dygraph/
 classes: wide
 publication_id: dygraph
-description: "A TKDE accepted paper on practical large-scale dynamic heterogeneous graph embedding for cold-start resilient recommendation."
+description: "A TKDE paper on practical large-scale dynamic heterogeneous graph embedding for cold-start resilient recommendation."
 ---
 
 {% include paper-digest.html %}

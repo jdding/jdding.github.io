@@ -2,7 +2,7 @@
 - id: dygraph
   title: 'Towards Practical Large-scale Dynamic Heterogeneous Graph Embedding: Cold-start Resilient Recommendation'
   year: 2026
-  venue: Accepted to IEEE Transactions on Knowledge and Data Engineering
+  venue: IEEE Transactions on Knowledge and Data Engineering
   venue_short: TKDE
   authors: M Long, J Liu, Y Li, H Xiong, J Yan, K Wang, Y Cao, J Ding
   topic: recommender-systems
@@ -13,11 +13,11 @@
   digest_url: "/dygraph/"
   digest_label: Digest
   doi_url: https://doi.org/10.48550/arxiv.2512.13120
-  digest_note: A TKDE accepted paper on practical large-scale dynamic heterogeneous graph embedding for cold-start resilient recommendation.
+  digest_note: A TKDE paper on practical large-scale dynamic heterogeneous graph embedding for cold-start resilient recommendation.
 - id: task-dependency-graphs
   title: Personalized Task Dependency Graphs for Mitigating Signal Erosion in Multi-Task Recommendation
   year: 2026
-  venue: Accepted to the ACM International Conference on Information and Knowledge Management (CIKM '26)
+  venue: Proceedings of the ACM International Conference on Information and Knowledge Management 2026
   venue_short: CIKM
   authors: F Liu, T Wu, Y Fang, W Zhou, Z Zhou, W Chen, Q Mei, J Zhou, H Chang, Y Cao, J Ding
   topic: recommender-systems
@@ -25,20 +25,20 @@
   selected: false
   digest_url: "/task-dependency-graphs/"
   digest_label: Digest
-  digest_note: A CIKM 2026 accepted paper on personalized task dependency graphs for mitigating signal erosion in multi-task recommendation.
+  digest_note: A CIKM 2026 paper on personalized task dependency graphs for mitigating signal erosion in multi-task recommendation.
   digest_blocks:
     - title: Problem
       text: Multi-task recommendation can suffer when learning signals from one task erode or distort the signal needed by another task.
     - title: Approach
       text: The paper studies personalized task dependency graphs as a way to model task relationships at a finer granularity than a single global dependency structure.
     - title: Scope
-      text: The public record should be read as an accepted CIKM 2026 publication; implementation details and non-public evaluation material are not repeated on the homepage.
+      text: The public record should be read as a CIKM 2026 publication; implementation details and non-public evaluation material are not repeated on the homepage.
     - title: Takeaway
       text: The work belongs to the recommendation line on reliable multi-objective modeling under changing user, item, and task signals.
 - id: sidinspector
   title: 'SIDInspector: A Mapping-First Diagnostic Resource for Semantic-ID Tokenizers'
   year: 2026
-  venue: Accepted to the ACM International Conference on Information and Knowledge Management (CIKM '26)
+  venue: Proceedings of the ACM International Conference on Information and Knowledge Management 2026
   venue_short: CIKM
   authors: J Ding, H Chang, H Qin, T Liu
   topic: recommender-systems
@@ -49,11 +49,11 @@
   paper_label: arXiv
   digest_url: "/sidinspector/"
   digest_label: Digest
-  digest_note: A CIKM 2026 accepted resource paper for inspecting Semantic-ID tokenizers through their mapping behavior before downstream recommendation training.
+  digest_note: A CIKM 2026 resource paper for inspecting Semantic-ID tokenizers through their mapping behavior before downstream recommendation training.
 - id: deltagate
   title: Zero-Observation User Reactivation with Gap-Driven Dimensional Gating
   year: 2026
-  venue: Accepted to the 20th ACM Conference on Recommender Systems (RecSys '26)
+  venue: Proceedings of the 20th ACM Conference on Recommender Systems
   venue_short: RecSys
   authors: J Ding, T Liu, F Liu, H Qin, T Wu
   topic: recommender-systems
@@ -66,7 +66,7 @@
   code_label: Code
   digest_url: "/deltagate/"
   digest_label: Digest
-  digest_note: A RecSys 2026 accepted paper defining zero-observation user reactivation and introducing DeltaGate, a frozen-backbone dimensional gating plugin for long-gap returning users.
+  digest_note: A RecSys 2026 paper defining zero-observation user reactivation and introducing DeltaGate, a frozen-backbone dimensional gating plugin for long-gap returning users.
   digest_blocks:
     - title: Problem
       text: Returning users may have months or years without observed behavior, so a model's last user representation can become unreliable even when pre-gap history exists.
