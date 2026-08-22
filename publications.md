@@ -27,7 +27,6 @@ schema:
   <section class="research-hero">
     <div class="research-shell">
       <h1>Full publications</h1>
-      <p class="lede">{{ publications | size }} papers across recommender systems, LLM agents, data mining, and earlier sequence-analysis work, ordered from newest to oldest.</p>
     </div>
   </section>
 
