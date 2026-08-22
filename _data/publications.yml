@@ -4,7 +4,7 @@
   year: 2026
   venue: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing: Industry Track (EMNLP '26)"
   venue_short: EMNLP
-  authors: J Ding et al.
+  authors: W Zhou, T Wu, J Ding, Z Fan, Y Cao
   topic: llm-agents
   level: b
   selected: false

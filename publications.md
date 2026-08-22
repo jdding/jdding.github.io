@@ -41,12 +41,22 @@ schema:
             {% for paper in year_papers %}
             {% assign topic = topics | where: "slug", paper.topic | first %}
             {% assign topic_label = paper.topic_label | default: topic.title %}
+            {% assign venue_markup = paper.venue %}
+            {% assign venue_segments = paper.venue | split: "(" %}
+            {% if venue_segments.size > 1 and paper.venue_short %}
+              {% assign venue_candidate = venue_segments | last | split: ")" | first %}
+              {% if venue_candidate contains paper.venue_short %}
+                {% assign plain_venue = "(" | append: venue_candidate | append: ")" %}
+                {% capture bold_venue %}(<strong class="venue-abbr">{{ venue_candidate }}</strong>){% endcapture %}
+                {% assign venue_markup = paper.venue | replace_first: plain_venue, bold_venue %}
+              {% endif %}
+            {% endif %}
             <article class="record-item" itemscope itemtype="http://schema.org/ScholarlyArticle">
               <div>
                 <h3 itemprop="headline">{{ paper.title }}</h3>
                 <div class="record-meta meta-lines">
                   <span itemprop="author">{{ paper.authors }}</span>
-                  <span itemprop="isPartOf">{{ paper.venue }}</span>
+                  <span itemprop="isPartOf">{{ venue_markup }}</span>
                   <meta itemprop="datePublished" content="{{ paper.year }}">
                 </div>
               </div>
