@@ -2,18 +2,20 @@
   order: 1
   title: LLM Agents
   nav_title: LLM Agents
-  short: Skill retrieval, NL2SQL evaluation, LLM serving systems, and capability governance.
+  short: AI search, skill retrieval, NL2SQL evaluation, LLM serving systems, and capability governance.
   headline: Agent capabilities as reusable system assets
-  summary: I study how LLM-based systems expose, retrieve, evaluate, and govern capabilities when they become reusable infrastructure.
-  question: How can agent capabilities be selected, inspected, and evaluated before they become production dependencies?
+  summary: I study how LLM-based systems search, expose, retrieve, evaluate, and govern capabilities when they become reusable infrastructure.
+  question: How can agent capabilities and search policies be selected, inspected, and evaluated before they become production dependencies?
   scope_headline: Evaluation before dependency
-  scope_text: Skill retrieval, NL2SQL benchmarks, LLM serving systems, and capability governance are treated as system surfaces that should be inspected before they are trusted.
+  scope_text: AI search, skill retrieval, NL2SQL benchmarks, LLM serving systems, and capability governance are treated as system surfaces that should be inspected before they are trusted.
   stats:
-    - value: "3"
+    - value: "4"
       label: related publications
     - value: "2026"
-      label: recent work on skill retrieval and capability governance
+      label: recent work on AI search, skill retrieval, and capability governance
   cards:
+    - title: AI search
+      text: Keeping search policies aligned with changing inventory and evidence conditions.
     - title: Skill retrieval
       text: Evaluating ambiguity when multiple skills expose similar capabilities and must be selected reliably.
     - title: Capability governance

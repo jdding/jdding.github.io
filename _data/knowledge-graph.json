@@ -13,6 +13,7 @@
       "foaf:title": "Principal Algorithm Expert",
       "rdfs:label": "Jiandong Ding",
       "biro:is-author-of": [
+        "https://jdding.github.io/publication/igpo-ai-search",
         "https://jdding.github.io/publication/deltagate",
         "https://jdding.github.io/publication/skillresolve-bench",
         "https://jdding.github.io/publication/sidinspector",
@@ -41,7 +42,7 @@
       "@id": "https://jdding.github.io/topic/llm-agents",
       "@type": "rdfs:Class",
       "rdfs:label": "LLM Agents",
-      "rdfs:comment": "Skill retrieval, semantic-ID diagnostics, NL2SQL evaluation, and LLM serving systems."
+      "rdfs:comment": "AI search, skill retrieval, NL2SQL evaluation, LLM serving systems, and capability governance."
     },
     {
       "@id": "https://jdding.github.io/topic/recommender-systems",
@@ -54,6 +55,13 @@
       "@type": "rdfs:Class",
       "rdfs:label": "Data Mining",
       "rdfs:comment": "Weak supervision, robust learning, text mining, analytics, and field experiments."
+    },
+    {
+      "@id": "https://jdding.github.io/publication/igpo-ai-search",
+      "@type": "fabio:ConferenceProceeding",
+      "rdfs:label": "Inventory-Grounded Policy-Level Optimization for Training-Free AI Search",
+      "fabio:hasPublicationYear": "2026",
+      "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
     },
     {
       "@id": "https://jdding.github.io/publication/deltagate",

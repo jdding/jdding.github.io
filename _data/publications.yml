@@ -1,4 +1,27 @@
 ---
+- id: igpo-ai-search
+  title: Inventory-Grounded Policy-Level Optimization for Training-Free AI Search
+  year: 2026
+  venue: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing: Industry Track (EMNLP '26)"
+  venue_short: EMNLP
+  authors: J Ding et al.
+  topic: llm-agents
+  level: b
+  selected: false
+  paper_url: https://openreview.net/forum?id=1mhzso28A8
+  paper_label: OpenReview
+  digest_url: "/igpo-ai-search/"
+  digest_label: Digest
+  digest_note: An EMNLP 2026 Industry Track paper on training-free AI search, using inventory-grounded policy-level optimization to keep search behavior aligned with changing catalog and inventory conditions.
+  digest_blocks:
+    - title: Problem
+      text: AI search systems must reason over changing inventories, where a static prompt or fixed search policy can become stale as available items, attributes, and user intent patterns shift.
+    - title: Approach
+      text: The work frames search behavior as a policy-level optimization problem grounded in inventory evidence, improving the search procedure without retraining the underlying foundation model.
+    - title: Scope
+      text: The homepage records the paper as an EMNLP 2026 Industry Track publication; private deployment details and non-public evaluation material are intentionally not repeated here.
+    - title: Takeaway
+      text: The paper extends the LLM agents line from skill retrieval and service evaluation into AI search systems where policy, evidence, and inventory state must stay aligned.
 - id: dygraph
   title: 'Towards Practical Large-scale Dynamic Heterogeneous Graph Embedding: Cold-start Resilient Recommendation'
   year: 2026
