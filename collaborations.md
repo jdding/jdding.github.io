@@ -16,7 +16,7 @@ schema:
   "description": "Research collaboration routes and institutional collaboration history."
 ---
 
-<link rel="stylesheet" href="/assets/css/research-system.css?v=phase2-20260705">
+<link rel="stylesheet" href="/assets/css/research-system.css?v=homepage-20260823">
 {% include research-nav.html %}
 
 {% assign collaborations = site.data.research.collaborations %}

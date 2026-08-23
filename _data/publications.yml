@@ -110,6 +110,7 @@
   venue_short: RecSys
   authors: J Ding, T Liu, F Liu, H Qin, T Wu
   topic: recommender-systems
+  program: adaptive-recommendation
   level: a
   selected: true
   image: "/assets/images/DeltaGate-Resurrecting-Ghost-Users.jpg"
@@ -150,6 +151,7 @@
   venue_short: WWW
   authors: Z Chen, H Chang, T Liu, C Zhou, Y Cao, J Ding, M Liu, B Qin
   topic: recommender-systems
+  program: adaptive-recommendation
   level: a
   selected: true
   image: "/assets/images/Beyond-the-Flat-Sequence.webp"
@@ -166,6 +168,7 @@
   venue_short: AAAI
   authors: C Jin, Y Ren, H Ma, Y Xia, Y Guan, H Zhang, J Ding, J Guan, S Zhou
   topic: recommender-systems
+  program: adaptive-recommendation
   level: a
   selected: true
   image: "/assets/images/Invariant-Feature-Learning.webp"
@@ -182,6 +185,7 @@
   venue_short: WSDM
   authors: K Cheng, H Chang, P Wang, L Gu, J Ding, Y Cao, J Ye, B Du
   topic: recommender-systems
+  program: adaptive-recommendation
   level: b
   selected: true
   image: "/assets/images/RPE4Rec.webp"
@@ -200,6 +204,7 @@
   venue_short: ICSOC
   authors: B Caglayan, M Wang, JD Kelleher, S Fei, G Tong, J Ding, P Zhang
   topic: llm-agents
+  program: auditable-retrieval
   level: b
   selected: true
   image: "/assets/images/BIS-NL2SQL.webp"
@@ -218,6 +223,7 @@
   venue_short: KDD
   authors: H Yu, M Fu, J Ding, Y Zhou, J Wu
   topic: recommender-systems
+  program: adaptive-recommendation
   level: a
   selected: true
   image: "/assets/images/Unified-Low-rank-Compression.webp"

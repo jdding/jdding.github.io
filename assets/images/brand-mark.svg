@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Jiandong Ding brand mark</title>
+  <desc id="desc">An open observation frame surrounding an abstract Ding character and a blue evidence point.</desc>
+  <rect width="1024" height="1024" fill="#f6f4ee"/>
+  <g fill="none" stroke="#172126" stroke-width="64" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M336 176H176V336"/>
+    <path d="M688 176H848V336"/>
+    <path d="M176 688V848H336"/>
+    <path d="M688 848H848V688"/>
+  </g>
+  <g fill="none" stroke="#172126" stroke-width="72" stroke-linecap="square" stroke-linejoin="round">
+    <path d="M344 378H680"/>
+    <path d="M548 378V662Q548 714 496 714H472"/>
+  </g>
+  <circle cx="682" cy="696" r="44" fill="#174ea6"/>
+</svg>

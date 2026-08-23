@@ -4,6 +4,7 @@ permalink: /api/knowledge-graph.json
 ---
 {% assign profile = site.data.research.profile %}
 {% assign topics = site.data.topics | sort: "order" %}
+{% assign programs = site.data.research_programs | sort: "order" %}
 {% assign projects = site.data.projects | sort: "order" %}
 {% assign publications = site.data.publications %}
 {% assign patents = site.data.patents %}
@@ -67,13 +68,23 @@ permalink: /api/knowledge-graph.json
       "url": "{{ site.url }}/topics/{{ topic.slug }}/",
       "description": {{ topic.summary | jsonify }},
       "inDefinedTermSet": "Jiandong Ding research topics"
+    }{% endfor %}{% for program in programs %},
+    {
+      "@id": "{{ site.url }}/#program-{{ program.id }}",
+      "@type": "ResearchProject",
+      "name": {{ program.title | jsonify }},
+      "url": "{{ site.url }}/#program-{{ program.id }}",
+      "description": {{ program.summary | jsonify }},
+      "member": { "@id": "{{ site.url }}/#person" }
     }{% endfor %}{% for project in projects %},
     {
-      "@id": "{{ site.url }}/projects/{{ project.id }}",
+      "@id": "{{ site.url }}/#project-{{ project.id }}",
       "@type": "ResearchProject",
       "name": {{ project.title | jsonify }},
+      "url": "{{ site.url }}/#project-{{ project.id }}",
       "description": {{ project.summary | jsonify }},
       "about": { "@id": "{{ site.url }}/topics/{{ project.topic }}/#topic" },
+      "isPartOf": { "@id": "{{ site.url }}/#program-{{ project.program }}" },
       "member": { "@id": "{{ site.url }}/#person" }
     }{% endfor %}{% for paper in publications %},
     {
@@ -83,8 +94,14 @@ permalink: /api/knowledge-graph.json
       "name": {{ paper.title | jsonify }},
       "author": {{ paper.authors | jsonify }},
       "datePublished": {{ paper.year | jsonify }},
-      "isPartOf": {{ paper.venue | jsonify }},
-      "about": { "@id": "{{ site.url }}/topics/{{ paper.topic }}/#topic" }{% if paper.paper_url %},
+      "isPartOf": {
+        "@type": "CreativeWorkSeries",
+        "name": {{ paper.venue | jsonify }}
+      },
+      "about": [
+        { "@id": "{{ site.url }}/topics/{{ paper.topic }}/#topic" }{% if paper.program %},
+        { "@id": "{{ site.url }}/#program-{{ paper.program }}" }{% endif %}
+      ]{% if paper.paper_url %},
       "url": {{ paper.paper_url | jsonify }}{% endif %}{% if paper.digest_url %},
       "mainEntityOfPage": "{{ site.url }}{{ paper.digest_url }}"{% endif %}{% if paper.doi_url %},
       "sameAs": {{ paper.doi_url | jsonify }}{% endif %}{% if paper.code_url %},

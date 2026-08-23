@@ -3,6 +3,7 @@ layout: null
 permalink: /api/research.json
 ---
 {% assign topics = site.data.topics | sort: "order" %}
+{% assign programs = site.data.research_programs | sort: "order" %}
 {% assign projects = site.data.projects | sort: "order" %}
 {% assign publications = site.data.publications %}
 {% assign patents = site.data.patents %}
@@ -22,6 +23,7 @@ permalink: /api/research.json
     }
   },
   "counts": {
+    "researchPrograms": {{ programs | size }},
     "topics": {{ topics | size }},
     "projects": {{ projects | size }},
     "publications": {{ publications | size }},
@@ -29,6 +31,7 @@ permalink: /api/research.json
     "collaborations": {{ collaborations | size }}
   },
   "profile": {{ site.data.research.profile | jsonify }},
+  "researchPrograms": {{ programs | jsonify }},
   "topics": {{ topics | jsonify }},
   "projects": {{ projects | jsonify }},
   "publications": {{ publications | jsonify }},

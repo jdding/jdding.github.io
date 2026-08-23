@@ -6,7 +6,7 @@ permalink: /api/
 classes: wide
 ---
 
-<link rel="stylesheet" href="/assets/css/research-system.css?v=phase2-20260705">
+<link rel="stylesheet" href="/assets/css/research-system.css?v=homepage-20260823">
 {% include research-nav.html %}
 
 <div class="research-site">

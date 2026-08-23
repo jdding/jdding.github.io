@@ -5,7 +5,7 @@ remote_theme: mmistakes/minimal-mistakes
 
 # Site metadata
 title: "Jiandong Ding"
-description: "Personal research site for Jiandong Ding, Principal Algorithm Expert working on recommender systems, LLM agents, and data mining."
+description: "Personal research site for Jiandong Ding, studying reliable recommendation and AI retrieval systems under changing users, catalogs, tasks, and interfaces."
 url: "https://jdding.github.io" # 站点根地址（不带末尾斜杠）
 github_username: jdding
 repository: "jdding/jdding.github.io" # 用于jekyll-seo-tag插件
@@ -14,7 +14,7 @@ locale: "en-US" # 站点语言/区域（用于主题与 SEO 元数据）
 author:
   name: "Jiandong Ding (丁建栋)"
   avatar: "/assets/images/Profile.png"
-  bio: "**Principal Algorithm Expert** at **Huawei Technologies**. Research interests include recommender systems, LLM agents, and data mining."
+  bio: "Principal Algorithm Expert at Huawei Technologies Co. Ltd., studying reliable recommendation and AI retrieval systems."
   location: "Shanghai, China"
   links:
     - label: "Home"
@@ -34,7 +34,7 @@ author:
       icon: "fas fa-fw fa-envelope-square"
 
 # Open Graph（社交媒体分享卡片）
-og_image: "/assets/images/favicon.png"
+og_image: "/assets/images/brand-social-card.png"
 
 # Plugins（与 `Gemfile` 保持一致）
 plugins:
@@ -62,7 +62,7 @@ social:
     - https://scholar.google.com/citations?user=5-e7wi4AAAAJ
 
 # GEO优化设置
-logo: "/assets/images/favicon.png"
+logo: "/assets/images/brand-mark-512.png"
 social_media:
   - name: "LinkedIn"
     url: "https://www.linkedin.com/in/jiandong-ding-60498833/"

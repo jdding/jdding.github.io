@@ -1,5 +1,6 @@
 - id: dormant-user-recommendation
   order: 1
+  program: adaptive-recommendation
   title: Dormant-user recommendation
   label: Recommendation
   topic: recommender-systems
@@ -7,6 +8,7 @@
 
 - id: search-recommendation-interaction
   order: 2
+  program: auditable-retrieval
   title: Search and recommendation interaction
   label: Search/recommendation
   topic: recommender-systems
@@ -14,6 +16,7 @@
 
 - id: semantic-id-auditing
   order: 3
+  program: auditable-retrieval
   title: Semantic-ID auditing
   label: Semantic IDs
   topic: llm-agents
@@ -21,6 +24,7 @@
 
 - id: agent-skill-retrieval
   order: 4
+  program: auditable-retrieval
   title: Agent skill retrieval and governance
   label: Agent skills
   topic: llm-agents

@@ -1,0 +1,33 @@
+- id: adaptive-recommendation
+  order: 1
+  number: "01"
+  title: Adaptive Recommendation under Change
+  hero_title: Adaptive recommendation
+  hero_short: Recommendation for changing users, catalogs, and operating conditions.
+  summary: I study how recommendation systems should adapt when user evidence becomes stale, catalogs evolve, and production constraints limit what can safely change.
+  themes:
+    - Zero-observation user reactivation after long inactivity
+    - Generative and sequential recommendation under changing intent
+    - Dynamic retrieval, graph learning, and efficient ranking models
+  topics:
+    - slug: recommender-systems
+      label: Recommender Systems
+    - slug: data-mining
+      label: Data Mining
+
+- id: auditable-retrieval
+  order: 2
+  number: "02"
+  title: Auditable AI Retrieval and Interfaces
+  hero_title: Auditable AI retrieval
+  hero_short: Evidence, interfaces, and risk in AI search and capability retrieval.
+  summary: I study whether AI retrieval systems use the right evidence, expose dependable interfaces, and control misleading or unsafe retrieval behavior before deployment.
+  themes:
+    - Search and recommendation interaction and attribution
+    - Semantic-ID interface diagnostics for generative recommendation
+    - AI search, agent skill retrieval, and capability governance
+  topics:
+    - slug: llm-agents
+      label: LLM Agents
+    - slug: recommender-systems
+      label: Recommender Systems
