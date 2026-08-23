@@ -1,4 +1,30 @@
 ---
+- id: sidscope
+  title: 'SIDScope: A Diagnostic Resource for Semantic-ID Interfaces in Generative Recommendation'
+  year: 2026
+  venue: arXiv preprint arXiv:2608.18779
+  venue_short: arXiv
+  authors: J Ding, H Qin, T Wu, Y Cao
+  topic: recommender-systems
+  level: c
+  selected: false
+  paper_url: https://arxiv.org/abs/2608.18779
+  paper_label: arXiv
+  code_url: https://github.com/jdding/sidscope
+  code_label: Code
+  digest_url: "/sidscope/"
+  digest_label: Digest
+  doi_url: https://doi.org/10.48550/arXiv.2608.18779
+  digest_note: A 2026 arXiv resource paper for auditing Semantic-ID interfaces in generative recommendation before downstream training, refresh, or model reuse.
+  digest_blocks:
+    - title: Problem
+      text: Semantic-ID mappings are reusable interfaces between item tokenizers and generative recommenders, but released mappings often omit whether they are coherent, traceable, or safe to reuse after refresh.
+    - title: Approach
+      text: SIDScope normalizes item-to-code artifacts, verifies provenance and joins, profiles mapping structure, compares paired revisions, and accounts for generated path-to-item outcomes.
+    - title: Findings
+      text: The resource shows that interface health is multi-signal rather than scalar; prefix alignment matters when retrieval consumes prefixes, and mapping repair does not automatically validate reuse of an inherited generator.
+    - title: Takeaway
+      text: The work turns Semantic-ID artifacts into auditable interfaces, supporting decisions about readiness, interface risk, and revalidation before model reuse.
 - id: igpo-ai-search
   title: Inventory-Grounded Policy-Level Optimization for Training-Free AI Search
   year: 2026

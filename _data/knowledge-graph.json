@@ -13,6 +13,7 @@
       "foaf:title": "Principal Algorithm Expert",
       "rdfs:label": "Jiandong Ding",
       "biro:is-author-of": [
+        "https://jdding.github.io/publication/sidscope",
         "https://jdding.github.io/publication/igpo-ai-search",
         "https://jdding.github.io/publication/deltagate",
         "https://jdding.github.io/publication/skillresolve-bench",
@@ -48,13 +49,20 @@
       "@id": "https://jdding.github.io/topic/recommender-systems",
       "@type": "rdfs:Class",
       "rdfs:label": "Recommender Systems",
-      "rdfs:comment": "User reactivation, generative recommendation, dynamic retrieval, behavior modeling, and trustworthy prediction."
+      "rdfs:comment": "User reactivation, generative recommendation, Semantic-ID interface diagnostics, dynamic retrieval, behavior modeling, and trustworthy prediction."
     },
     {
       "@id": "https://jdding.github.io/topic/data-mining",
       "@type": "rdfs:Class",
       "rdfs:label": "Data Mining",
       "rdfs:comment": "Weak supervision, robust learning, text mining, analytics, and field experiments."
+    },
+    {
+      "@id": "https://jdding.github.io/publication/sidscope",
+      "@type": "fabio:Preprint",
+      "rdfs:label": "SIDScope: A Diagnostic Resource for Semantic-ID Interfaces in Generative Recommendation",
+      "fabio:hasPublicationYear": "2026",
+      "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
     },
     {
       "@id": "https://jdding.github.io/publication/igpo-ai-search",

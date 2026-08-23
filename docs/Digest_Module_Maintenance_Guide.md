@@ -10,12 +10,13 @@ This module encompasses two core upgrades to the personal academic homepage (jdd
 
 ### a) Paper Digest Pages
 
-Replaced traditional bare PDF links with **rich, four-section deep-dive pages** ("Pain Point - Breakthrough - Impact - Reflection") for 25 publication records. Each page is a standalone `.md` file in the project root with a dedicated permalink (e.g., `/hpgr`, `/rpe4rec`).
+Replaced traditional bare PDF links with **rich, four-section deep-dive pages** ("Pain Point - Breakthrough - Impact - Reflection") for 26 publication records. Each page is a standalone `.md` file in the project root with a dedicated permalink (e.g., `/hpgr`, `/rpe4rec`).
 
-**Current coverage (25 papers):**
+**Current coverage (26 papers):**
 
 | File | Venue | Permalink |
 |---|---|---|
+| `sidscope.md` | arXiv 2026 | `/sidscope` |
 | `igpo-ai-search.md` | EMNLP 2026 Industry Track | `/igpo-ai-search` |
 | `deltagate.md` | RecSys 2026 | `/deltagate` |
 | `skillresolve-bench.md` | arXiv 2026 | `/skillresolve-bench` |
