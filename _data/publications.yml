@@ -100,6 +100,8 @@
   selected: false
   paper_url: https://arxiv.org/abs/2606.10375
   paper_label: arXiv
+  code_url: https://github.com/jdding/sidinspector
+  code_label: Code
   digest_url: "/sidinspector/"
   digest_label: Digest
   digest_note: A CIKM 2026 resource paper for inspecting Semantic-ID tokenizers through their mapping behavior before downstream recommendation training.

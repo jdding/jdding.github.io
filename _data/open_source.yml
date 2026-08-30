@@ -1,0 +1,32 @@
+- id: deltagate
+  order: 1
+  program: adaptive-recommendation
+  title: DeltaGate
+  kind: Code artifact
+  record: RecSys 2026
+  summary: A reproducible implementation of gap-conditioned dimensional gating for zero-observation user reactivation, with frozen sequential backbones, audited experiment runners, and full-ranking evaluation.
+  stack: Python · PyTorch · MIT License
+  repository_url: https://github.com/jdding/DeltaGate
+  publication_id: deltagate
+
+- id: sidinspector
+  order: 2
+  program: auditable-retrieval
+  title: SIDInspector
+  kind: Diagnostic resource
+  record: CIKM 2026
+  summary: A CPU-ready toolkit for inspecting exported Semantic-ID mappings through utilization, aliasing, neighborhood alignment, popularity allocation, structural cost, and refresh stability.
+  stack: Python · CPU-ready · MIT License
+  repository_url: https://github.com/jdding/sidinspector
+  publication_id: sidinspector
+
+- id: sidscope
+  order: 3
+  program: auditable-retrieval
+  title: SIDScope
+  kind: Resource package
+  record: arXiv 2026
+  summary: An artifact-level resource for auditing Semantic-ID interfaces before downstream generative recommendation, including mapping diagnostics, candidate-exposure probes, and bounded trace accounting.
+  stack: Python · Reproducibility package · MIT License
+  repository_url: https://github.com/jdding/SIDscope
+  publication_id: sidscope

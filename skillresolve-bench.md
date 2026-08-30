@@ -6,6 +6,9 @@ permalink: /skillresolve-bench/
 classes: wide
 publication_id: skillresolve-bench
 description: "A benchmark-focused study of same-capability ambiguity in agent skill retrieval, where similar-looking skills must be distinguished by execution constraints and task fit."
+image: "/assets/images/social/skillresolve-bench-og.png"
+header:
+  og_image: "/assets/images/social/skillresolve-bench-og.png"
 ---
 
 {% include paper-digest.html %}

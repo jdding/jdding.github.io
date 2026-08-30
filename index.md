@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 author_profile: false
 title: "Jiandong Ding | Principal Algorithm Expert"
 classes: wide
@@ -15,42 +15,45 @@ schema:
     "@type": "Organization"
     "name": "Huawei Technologies Co. Ltd."
   "knowsAbout": ["Recommender Systems", "LLM Agents", "Data Mining", "Zero-Observation User Reactivation", "AI Retrieval", "Semantic-ID Diagnostics", "Agent Skill Retrieval"]
-  "description": "Researcher and engineer studying reliable recommendation and AI retrieval systems under changing users, catalogs, tasks, and interfaces."
+  "description": "Principal Algorithm Expert at Huawei Technologies Co. Ltd., working on reliable recommendation and AI retrieval systems."
   "url": "https://jdding.github.io"
   "sameAs":
     - "https://www.linkedin.com/in/jiandong-ding-60498833/"
     - "https://github.com/jdding"
 ---
 
-<link rel="stylesheet" href="/assets/css/research-system.css?v=homepage-20260823">
+<link rel="stylesheet" href="/assets/css/research-system.css?v=homepage-20260830">
 {% include research-nav.html %}
 
 {% assign topics = site.data.topics | sort: "order" %}
 {% assign programs = site.data.research_programs | sort: "order" %}
-{% assign projects = site.data.projects | sort: "order" %}
+{% assign public_artifacts = site.data.open_source | sort: "order" %}
 {% assign selected_papers = site.data.publications | where: "selected", true %}
 
-<div class="research-site">
+<main id="main" class="research-site">
   <section class="research-hero">
     <div class="research-shell hero-layout">
       <div class="hero-copy">
         <h1>Jiandong Ding</h1>
         <p class="hero-role">Principal Algorithm Expert · Huawei Technologies Co. Ltd.</p>
-        <p class="lede">I study reliable recommendation and AI retrieval systems under changing users, catalogs, tasks, and interfaces. My work focuses on adaptive recommendation, evidence validity, and deployment-safe optimization.</p>
-        <div class="hero-programs" aria-label="Research programs">
-          {% for program in programs %}
-          <a class="hero-program-link" href="#program-{{ program.id }}">
-            <span>{{ program.number }}</span>
-            <span>
-              <strong>{{ program.hero_title }}</strong>
-              <em>{{ program.hero_short }}</em>
-            </span>
-          </a>
-          {% endfor %}
+        <p class="lede">Since 2012, I have worked on applied AI and data systems across IBM, Bosch, Alibaba DAMO Academy, and Huawei. My current research asks how recommendation and AI retrieval systems can remain reliable as users, catalogs, tasks, and interfaces change.</p>
+        <div class="identity-facts" aria-label="Professional profile">
+          <div>
+            <span>Research fields</span>
+            <p>
+              <a href="/topics/recommender-systems/">Recommender Systems</a>
+              <a href="/topics/llm-agents/">LLM Agents</a>
+              <a href="/topics/data-mining/">Data Mining</a>
+            </p>
+          </div>
+          <div>
+            <span>Current focus</span>
+            <p>Adaptive recommendation · Auditable AI retrieval</p>
+          </div>
         </div>
         <div class="hero-actions" aria-label="Primary actions">
-          <a class="button primary" href="/publications/">Publications</a>
-          <a class="text-link" href="#connect">Contact</a>
+          <a class="button primary" href="#research">Explore research</a>
+          <a class="text-link" href="#connect">Get in touch</a>
         </div>
       </div>
 
@@ -66,23 +69,51 @@ schema:
     <div class="research-shell">
       <div class="section-head">
         <span class="section-label">Research</span>
-        <h2>Research programs</h2>
+        <h2>What I study</h2>
+        <p>I study how learning and retrieval systems remain dependable when the evidence they rely on changes.</p>
       </div>
-      <div class="program-list">
+      <div class="research-program-stack">
         {% for program in programs %}
-        <article id="program-{{ program.id }}" class="program-row">
-          <div class="program-index">{{ program.number }}</div>
-          <div class="program-intro">
-            <h3>{{ program.title }}</h3>
-            <p>{{ program.summary }}</p>
+        {% assign program_artifacts = public_artifacts | where: "program", program.id %}
+        <article id="program-{{ program.id }}" class="research-program-block">
+          <div class="research-program-head">
+            <div class="program-index">{{ program.number }}</div>
+            <div class="program-intro">
+              <h3>{{ program.title }}</h3>
+              <p>{{ program.summary }}</p>
+            </div>
+            <div class="program-detail">
+              <ul>
+                {% for theme in program.themes %}<li>{{ theme }}</li>{% endfor %}
+              </ul>
+              <div class="program-topics" aria-label="Related topics">
+                {% for topic in program.topics %}
+                <a href="/topics/{{ topic.slug }}/">{{ topic.label }}</a>
+                {% endfor %}
+              </div>
+            </div>
           </div>
-          <div class="program-detail">
-            <ul>
-              {% for theme in program.themes %}<li>{{ theme }}</li>{% endfor %}
-            </ul>
-            <div class="program-topics" aria-label="Related topics">
-              {% for topic in program.topics %}
-              <a href="/topics/{{ topic.slug }}/">{{ topic.label }}</a>
+
+          <div class="artifact-group">
+            <div class="artifact-group-label">Public code and resources</div>
+            <div class="artifact-list">
+              {% for artifact in program_artifacts %}
+              {% assign related_paper = site.data.publications | where: "id", artifact.publication_id | first %}
+              <article class="artifact-row">
+                <div class="artifact-kind">
+                  <span>{{ artifact.kind }}</span>
+                  <strong>{{ artifact.record }}</strong>
+                </div>
+                <div class="artifact-copy">
+                  <h4>{{ artifact.title }}</h4>
+                  <p>{{ artifact.summary }}</p>
+                  <span class="artifact-stack">{{ artifact.stack }}</span>
+                </div>
+                <div class="artifact-actions">
+                  <a href="{{ artifact.repository_url }}">Repository</a>
+                  {% if related_paper.digest_url %}<a href="{{ related_paper.digest_url }}">Digest</a>{% endif %}
+                </div>
+              </article>
               {% endfor %}
             </div>
           </div>
@@ -96,7 +127,7 @@ schema:
     <div class="research-shell">
       <div class="section-head section-head-row">
         <div>
-          <span class="section-label">Public record</span>
+          <span class="section-label">Research record</span>
           <h2>Selected papers</h2>
         </div>
         <a class="text-link" href="/publications/">All publications</a>
@@ -128,106 +159,26 @@ schema:
     </div>
   </section>
 
-  <section id="current-work" class="research-section">
-    <div class="research-shell">
-      <div class="section-head">
-        <span class="section-label">In progress</span>
-        <h2>Current work</h2>
-      </div>
-      <div class="project-program-grid">
-        {% for program in programs %}
-        {% assign program_projects = projects | where: "program", program.id %}
-        <section class="project-program" aria-label="{{ program.hero_title }} current work">
-          <div class="project-program-head">
-            <span>{{ program.number }}</span>
-            <h3>{{ program.hero_title }}</h3>
-          </div>
-          <div class="project-stack">
-            {% for project in program_projects %}
-            <article id="project-{{ project.id }}" class="project-card">
-              <span>{{ project.label }}</span>
-              <h3>{{ project.title }}</h3>
-              <p>{{ project.summary }}</p>
-            </article>
-            {% endfor %}
-          </div>
-        </section>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <section id="trajectory" class="research-section">
-    <div class="research-shell">
-      <div class="section-head">
-        <span class="section-label">Background</span>
-        <h2>Research trajectory</h2>
-      </div>
-      <div class="timeline" aria-label="Research trajectory">
-        <div class="timeline-row">
-          <time>2026</time>
-          <p>Zero-observation user reactivation, generative recommendation, AI retrieval, Semantic-ID diagnostics, and agent skill retrieval.</p>
-        </div>
-        <div class="timeline-row">
-          <time>2025-2024</time>
-          <p>Dynamic graph recommendation, NL2SQL evaluation, LLM serving, and efficient recommendation models.</p>
-        </div>
-        <div class="timeline-row">
-          <time>2023-2021</time>
-          <p>Continual graph learning, neural topic modeling, weak supervision, robust learning, and live-streaming field experiments.</p>
-        </div>
-        <div class="timeline-row">
-          <time>2012-2010</time>
-          <p>miRNA target prediction, genome-scale sequence analysis, and structured data mining.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="connect" class="research-section">
     <div class="research-shell">
-      <div class="section-head">
-        <span class="section-label">Contact</span>
-        <h2>Collaboration and exchange</h2>
-        <p>Open to university collaboration, research exchange, invited talks, and focused discussions around recommendation, agent systems, and data intelligence.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-list">
-          <article class="contact-card">
-            <div class="contact-stat">Research</div>
-            <div>
-              <h3>Academic collaboration</h3>
-              <p>University collaboration, joint research, resource building, benchmark design, and student or lab exchange.</p>
-            </div>
-          </article>
-          <article class="contact-card">
-            <div class="contact-stat">Industry</div>
-            <div>
-              <h3>Industrial research</h3>
-              <p>Recommendation architecture, agent evaluation, retrieval systems, and data-intelligence problems at production scale.</p>
-            </div>
-          </article>
-          <article class="contact-card">
-            <div class="contact-stat">Talks</div>
-            <div>
-              <h3>Invited talks</h3>
-              <p>Research talks and professional events on recommender systems, LLM agents, and data mining.</p>
-            </div>
-          </article>
+      <div class="contact-closing">
+        <div class="contact-intro">
+          <span class="section-label">Contact</span>
+          <h2>Collaboration and exchange</h2>
+          <p>I welcome focused conversations around recommender systems, LLM agents, data mining, shared benchmarks, and applied research problems.</p>
+          <a class="text-link" href="/collaborations/">Collaboration record</a>
         </div>
-
-        <aside class="contact-panel">
-          <div>
-            <h3>Contact</h3>
-            <p>For university collaboration, use my Huawei email. For other research exchange, invited talks, or focused technical contact, use my Fudan email.</p>
-          </div>
-          <div class="contact-links">
-            <a href="mailto:dingjiandong2@huawei.com">dingjiandong2@huawei.com <span>University collaboration</span></a>
-            <a href="mailto:jdding@fudan.edu.cn">jdding@fudan.edu.cn <span>General contact</span></a>
-            <a href="https://github.com/jdding">GitHub <span>Code</span></a>
-          </div>
-        </aside>
+        <div class="contact-links contact-links-primary">
+          <a href="mailto:dingjiandong2@huawei.com">
+            <span>University collaboration</span>
+            <strong>dingjiandong2@huawei.com</strong>
+          </a>
+          <a href="mailto:jdding@fudan.edu.cn">
+            <span>Research exchange and invited talks</span>
+            <strong>jdding@fudan.edu.cn</strong>
+          </a>
+        </div>
       </div>
     </div>
   </section>
-</div>
+</main>
