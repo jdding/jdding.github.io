@@ -165,7 +165,7 @@ schema:
         <div class="contact-intro">
           <span class="section-label">Contact</span>
           <h2>Collaboration and exchange</h2>
-          <p>I welcome focused conversations around recommender systems, LLM agents, data mining, shared benchmarks, and applied research problems.</p>
+          <p>I welcome focused conversations around recommender systems, LLM agents, data mining, shared benchmarks, and applied research problems. I am also recruiting student research interns; please get in touch if your interests align with these areas.</p>
           <a class="text-link" href="/collaborations/">Collaboration record</a>
         </div>
         <div class="contact-links contact-links-primary">

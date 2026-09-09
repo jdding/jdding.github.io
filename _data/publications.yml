@@ -34,8 +34,8 @@
   topic: llm-agents
   level: b
   selected: false
-  paper_url: https://openreview.net/forum?id=1mhzso28A8
-  paper_label: OpenReview
+  paper_url: https://arxiv.org/abs/2609.04813
+  paper_label: arXiv
   digest_url: "/igpo-ai-search/"
   digest_label: Digest
   digest_note: An EMNLP 2026 Industry Track paper on training-free AI search, using inventory-grounded policy-level optimization to keep search behavior aligned with changing catalog and inventory conditions.
@@ -72,6 +72,8 @@
   topic: recommender-systems
   level: b
   selected: false
+  paper_url: https://arxiv.org/abs/2609.04862
+  paper_label: arXiv
   digest_url: "/task-dependency-graphs/"
   digest_label: Digest
   digest_note: A CIKM 2026 paper on personalized task dependency graphs for mitigating signal erosion in multi-task recommendation.
