@@ -90,4 +90,3 @@ exclude:
   - Gemfile.lock
   - .bundle/
   - .codegraph/
-  - assets/images/fudan-university-logo.png
