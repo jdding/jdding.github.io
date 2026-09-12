@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: imiRTP: An Integrated Method to Identifying miRNA-target Interactions in Arabidopsis Thaliana"
+title: "imiRTP: An Integrated Method to Identifying miRNA-target Interactions in Arabidopsis Thaliana"
 permalink: /imirtp/
 classes: wide
 publication_id: imirtp

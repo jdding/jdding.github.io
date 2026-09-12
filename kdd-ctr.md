@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: Unified Low-rank Compression Framework for Click-through Rate Prediction"
+title: "Unified Low-rank Compression Framework for Click-through Rate Prediction"
 permalink: /kdd-ctr/
 classes: wide
 publication_id: unified-low-rank-compression

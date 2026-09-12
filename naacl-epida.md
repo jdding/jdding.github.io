@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: EPiDA: An Easy Plug-in Data Augmentation Framework for High Performance Text Classification"
+title: "EPiDA: An Easy Plug-in Data Augmentation Framework for High Performance Text Classification"
 permalink: /naacl-epida/
 classes: wide
 publication_id: naacl-epida

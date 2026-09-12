@@ -12,6 +12,7 @@
       "foaf:name": "Jiandong Ding (丁建栋)",
       "foaf:title": "Principal Algorithm Expert",
       "rdfs:label": "Jiandong Ding",
+      "foaf:workplaceHomepage": "https://www.huawei.com/",
       "biro:is-author-of": [
         "https://jdding.github.io/publication/sidscope",
         "https://jdding.github.io/publication/igpo-ai-search",
@@ -32,12 +33,6 @@
       "@type": "foaf:Organization",
       "foaf:name": "Huawei Technologies Co. Ltd.",
       "rdfs:label": "Huawei Technologies Co. Ltd., Shanghai, China"
-    },
-    {
-      "@id": "https://jdding.github.io/organization/fudan-university",
-      "@type": "foaf:Organization",
-      "foaf:name": "Fudan University",
-      "rdfs:label": "Fudan University"
     },
     {
       "@id": "https://jdding.github.io/topic/llm-agents",
@@ -123,7 +118,7 @@
     {
       "@id": "https://jdding.github.io/publication/dygraph",
       "@type": "fabio:JournalArticle",
-      "rdfs:label": "Towards Practical Large-scale Dynamic Heterogeneous Graph Embedding: Cold-start Resilient Recommendation",
+      "rdfs:label": "Towards Practical Large-scale Dynamical Heterogeneous Graph Embedding: Cold-start Resilient Recommendation",
       "fabio:hasPublicationYear": "2026",
       "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
     },

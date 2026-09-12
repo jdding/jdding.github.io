@@ -1,23 +1,13 @@
 ---
-layout: single
+layout: research
 author_profile: false
 title: "Research Profile Overview"
 permalink: /summary/
 classes: wide
-schema:
-  "@context": "https://schema.org"
-  "@type": "Article"
-  "headline": "Research Profile Overview"
-  "author":
-    "@type": "Person"
-    "name": "Jiandong Ding (丁建栋)"
-    "url": "https://jdding.github.io"
-  "dateModified": "2026-08-14"
-  "description": "Overview of Jiandong Ding's research profile, publications, patents, projects, and collaboration routes."
+description: "Overview of Jiandong Ding's research at Huawei, including publications, patents, research topics, open-source artifacts, and collaboration routes."
+robots: "noindex, follow"
+sitemap: false
 ---
-
-<link rel="stylesheet" href="/assets/css/research-system.css?v=homepage-20260823">
-{% include research-nav.html %}
 
 <div class="research-site">
   <section class="research-hero">
@@ -39,15 +29,15 @@ schema:
         </article>
         <article class="topic-card">
           <h3>Full publications</h3>
-          <p>The publication page lists 26 papers from newest to oldest, with paper links and Digest notes connected to each entry.</p>
+          <p>The <a href="/publications/">publication page</a> groups 26 papers by year, with recent work first, paper links, and research notes connected to each entry.</p>
         </article>
         <article class="topic-card">
           <h3>Topic pages</h3>
-          <p>LLM Agents, Recommender Systems, and Data Mining each summarize a public research area and connect it to mature outputs.</p>
+          <p><a href="/topics/llm-agents/">LLM Agents</a>, <a href="/topics/recommender-systems/">Recommender Systems</a>, and <a href="/topics/data-mining/">Data Mining</a> each summarize a public research area and connect it to mature outputs.</p>
         </article>
         <article class="topic-card">
           <h3>Patents</h3>
-          <p>The patents page lists 56 records across recommendation, media interaction, data systems, mobility intelligence, and sequence analysis.</p>
+          <p>The <a href="/patents/">patents page</a> lists 56 records across recommendation, media interaction, data systems, mobility intelligence, and sequence analysis.</p>
         </article>
       </div>
     </div>
@@ -63,9 +53,9 @@ schema:
         <section class="year-block">
           <div class="year-label">API</div>
           <div class="record-stack">
-            <article class="record-item"><div><h3>Research profile</h3><div class="record-meta">/api/research.json</div></div></article>
-            <article class="record-item"><div><h3>Publications, patents, topics, and projects</h3><div class="record-meta">/api/publications.json, /api/patents.json, /api/topics.json, /api/projects.json</div></div></article>
-            <article class="record-item"><div><h3>Research graph</h3><div class="record-meta">/api/knowledge-graph.json and /llms.txt</div></div></article>
+            <article class="record-item"><div><h3><a class="record-title-link" href="/api/research.json">Research profile</a></h3><div class="record-meta">Machine-readable profile and research data.</div></div></article>
+            <article class="record-item"><div><h3><a class="record-title-link" href="/api/">Publications, patents, topics, and projects</a></h3><div class="record-meta">JSON endpoints for the site's public research records.</div></div></article>
+            <article class="record-item"><div><h3><a class="record-title-link" href="/api/knowledge-graph.json">Research graph</a></h3><div class="record-meta">JSON-LD graph and <a href="/llms.txt">LLM-readable index</a>.</div></div></article>
           </div>
         </section>
       </div>

@@ -21,13 +21,9 @@ permalink: /api/knowledge-graph.json
       "jobTitle": {{ profile.title | jsonify }},
       "url": "{{ site.url }}/",
       "email": {{ profile.email | jsonify }},
-      "affiliation": {
+      "worksFor": {
         "@type": "Organization",
         "name": {{ profile.organization | jsonify }}
-      },
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Fudan University"
       },
       "knowsAbout": {{ profile.researchAreas | jsonify }},
       "sameAs": [
@@ -86,14 +82,16 @@ permalink: /api/knowledge-graph.json
       "about": { "@id": "{{ site.url }}/topics/{{ project.topic }}/#topic" },
       "isPartOf": { "@id": "{{ site.url }}/#program-{{ project.program }}" },
       "member": { "@id": "{{ site.url }}/#person" }
-    }{% endfor %}{% for paper in publications %},
+    }{% endfor %}{% for paper in publications %}{% assign published_date = paper.publication_date | default: paper.year | append: "" %},
     {
       "@id": "{{ site.url }}/publication/{{ paper.id }}",
       "@type": "ScholarlyArticle",
       "headline": {{ paper.title | jsonify }},
       "name": {{ paper.title | jsonify }},
-      "author": {{ paper.authors | jsonify }},
-      "datePublished": {{ paper.year | jsonify }},
+      "description": {{ paper.digest_note | default: paper.selected_summary | jsonify }},
+      "author": { "@id": "{{ site.url }}/#person" },
+      "creditText": {{ paper.authors | jsonify }},
+      "datePublished": {{ published_date | jsonify }},
       "isPartOf": {
         "@type": "CreativeWorkSeries",
         "name": {{ paper.venue | jsonify }}
@@ -101,19 +99,21 @@ permalink: /api/knowledge-graph.json
       "about": [
         { "@id": "{{ site.url }}/topics/{{ paper.topic }}/#topic" }{% if paper.program %},
         { "@id": "{{ site.url }}/#program-{{ paper.program }}" }{% endif %}
-      ]{% if paper.paper_url %},
-      "url": {{ paper.paper_url | jsonify }}{% endif %}{% if paper.digest_url %},
-      "mainEntityOfPage": "{{ site.url }}{{ paper.digest_url }}"{% endif %}{% if paper.doi_url %},
-      "sameAs": {{ paper.doi_url | jsonify }}{% endif %}{% if paper.code_url %},
+      ]{% if paper.digest_url %},
+      "url": "{{ site.url }}{{ paper.digest_url }}",
+      "mainEntityOfPage": "{{ site.url }}{{ paper.digest_url }}"{% elsif paper.paper_url %},
+      "url": {{ paper.paper_url | jsonify }}{% endif %}{% if paper.paper_url %},
+      "sameAs": {{ paper.paper_url | jsonify }}{% endif %}{% if paper.doi_url %},
+      "identifier": {{ paper.doi_url | jsonify }}{% endif %}{% if paper.code_url %},
       "codeRepository": {{ paper.code_url | jsonify }}{% endif %}
-    }{% endfor %}{% for patent in patents %},
+    }{% endfor %}{% for patent in patents %}{% assign patent_year = patent.year | append: "" %},
     {
       "@id": "{{ site.url }}/patent/{{ patent.id }}",
       "@type": "CreativeWork",
       "additionalType": "Patent",
       "name": {{ patent.title | jsonify }},
       "identifier": {{ patent.number | jsonify }},
-      "datePublished": {{ patent.year | jsonify }},
+      "datePublished": {{ patent_year | jsonify }},
       "creator": {{ patent.inventors | jsonify }},
       "publisher": {{ patent.assignee | jsonify }},
       "about": { "@id": "{{ site.url }}/topics/{{ patent.topic }}/#topic" },

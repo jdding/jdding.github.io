@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: Zero-Observation User Reactivation with Gap-Driven Dimensional Gating"
+title: "Zero-Observation User Reactivation with Gap-Driven Dimensional Gating"
 permalink: /deltagate/
 classes: wide
 publication_id: deltagate

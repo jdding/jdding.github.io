@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: DP-SSL: Towards Robust Semi-Supervised Learning with a Few Labeled Samples"
+title: "DP-SSL: Towards Robust Semi-Supervised Learning with a Few Labeled Samples"
 permalink: /neurips-dpssl/
 classes: wide
 publication_id: neurips-dpssl

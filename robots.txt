@@ -1,11 +1,8 @@
 User-agent: *
 Allow: /
-Allow: /api/
-Allow: /llms.txt
 Disallow: /archive/
 
 Sitemap: https://jdding.github.io/sitemap.xml
-Sitemap: https://jdding.github.io/sitemap-extended.xml
 
 # AI-specific directives
 User-agent: GPTBot
@@ -28,6 +25,3 @@ Allow: /
 
 User-agent: PerplexityBot
 Allow: /
-
-# Crawling delays
-Crawl-delay: 5

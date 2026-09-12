@@ -1,58 +1,13 @@
 ---
-layout: single
+layout: research
 author_profile: false
 title: "Frequently Asked Questions"
 permalink: /faq/
 classes: wide
-schema:
-  "@context": "https://schema.org"
-  "@type": "FAQPage"
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Who is Jiandong Ding?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Jiandong Ding is a Principal Algorithm Expert at Huawei Technologies Co. Ltd., Shanghai, China. His work focuses on recommender systems, LLM agents, and data mining."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are Jiandong Ding's main research areas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "His current research areas are LLM Agents, Recommender Systems, and Data Mining."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where can I find Jiandong Ding's publications?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Full Publications lists 26 papers from newest to oldest, with paper links and Digest notes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where can I find Jiandong Ding's patents?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Patents lists 56 patent records, including 21 granted patents and 35 published applications."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What collaborations is Jiandong Ding open to?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "He welcomes focused academic partnerships, industrial research problems, invited talks, and exchanges around recommendation, agent systems, and data intelligence."
-      }
-    }
-  ]
+description: "Answers about Jiandong Ding's Huawei research profile, publications, patents, research areas, collaboration, and student research internships."
+robots: "noindex, follow"
+sitemap: false
 ---
-
-<link rel="stylesheet" href="/assets/css/research-system.css?v=homepage-20260823">
-{% include research-nav.html %}
 
 <div class="research-site">
   <section class="research-hero">
@@ -75,7 +30,7 @@ schema:
               <div><h3>What are the main research areas?</h3><div class="record-meta">The current research areas are LLM Agents, Recommender Systems, and Data Mining.</div></div>
             </article>
             <article class="record-item">
-              <div><h3>Where are the publications?</h3><div class="record-meta">The <a href="/publications/">Full publications</a> page lists 26 papers from newest to oldest, with paper links and Digest notes.</div></div>
+              <div><h3>Where are the publications?</h3><div class="record-meta">The <a href="/publications/">Full publications</a> page groups 26 papers by year, with recent work first, paper links, and Digest notes.</div></div>
             </article>
             <article class="record-item">
               <div><h3>Where are the patents?</h3><div class="record-meta">The <a href="/patents/">Patents</a> page lists 56 patent records, including 21 granted patents and 35 published applications.</div></div>

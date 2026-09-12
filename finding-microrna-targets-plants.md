@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: Finding MicroRNA Targets in Plants: Current Status and Perspectives"
+title: "Finding MicroRNA Targets in Plants: Current Status and Perspectives"
 permalink: /finding-microrna-targets-plants/
 classes: wide
 publication_id: finding-microrna-targets-plants

@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: Automatically Clustering Large-Scale miRNA Sequences: Methods and Experiments"
+title: "Automatically Clustering Large-Scale miRNA Sequences: Methods and Experiments"
 permalink: /large-scale-mirna-clustering/
 classes: wide
 publication_id: large-scale-mirna-clustering

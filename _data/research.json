@@ -5,8 +5,7 @@
     "familyName": "Ding",
     "title": "Principal Algorithm Expert",
     "organization": "Huawei Technologies Co. Ltd.",
-    "email": "jdding@fudan.edu.cn",
-    "academicCollaborationEmail": "dingjiandong2@huawei.com",
+    "email": "dingjiandong2@huawei.com",
     "location": "Shanghai, China",
     "bio": "Principal Algorithm Expert at Huawei Technologies Co. Ltd., studying reliable recommendation and AI retrieval systems under changing users, catalogs, tasks, and interfaces",
     "researchAreas": [
@@ -17,23 +16,9 @@
       "AI Retrieval",
       "Semantic-ID Diagnostics",
       "Agent Skill Retrieval"
-    ],
-    "education": [
-      {
-        "institution": "Fudan University",
-        "degree": "PhD",
-        "focus": "Bioinformatics"
-      }
     ]
   },
   "collaborations": [
-    {
-      "name": "Fudan University",
-      "location": "Shanghai, China",
-      "status": "Current",
-      "focus": "Bioinformatics and data mining",
-      "period": "Ongoing collaboration"
-    },
     {
       "name": "Nanjing University",
       "location": "Nanjing, China",

@@ -1,13 +1,13 @@
 ---
-layout: single
+layout: research
 author_profile: false
 title: "Research Data"
 permalink: /api/
 classes: wide
+description: "Machine-readable publication, patent, topic, project, and research-profile data for Jiandong Ding's public research site."
+robots: "noindex, follow"
+sitemap: false
 ---
-
-<link rel="stylesheet" href="/assets/css/research-system.css?v=homepage-20260823">
-{% include research-nav.html %}
 
 <div class="research-site">
   <section class="research-hero">
@@ -23,13 +23,13 @@ classes: wide
         <section class="year-block">
           <div class="year-label">JSON</div>
           <div class="record-stack">
-            <article class="record-item"><div><h3>/api/research.json</h3><div class="record-meta">Profile, topics, projects, publications, patents, and collaboration data.</div></div></article>
-            <article class="record-item"><div><h3>/api/publications.json</h3><div class="record-meta">Publication records and Digest links.</div></div></article>
-            <article class="record-item"><div><h3>/api/patents.json</h3><div class="record-meta">Patent records.</div></div></article>
-            <article class="record-item"><div><h3>/api/topics.json</h3><div class="record-meta">Research-topic definitions.</div></div></article>
-            <article class="record-item"><div><h3>/api/projects.json</h3><div class="record-meta">Active project directions.</div></div></article>
-            <article class="record-item"><div><h3>/api/knowledge-graph.json</h3><div class="record-meta">JSON-LD graph linking the profile, topics, publications, projects, and patents.</div></div></article>
-            <article class="record-item"><div><h3>/llms.txt</h3><div class="record-meta">Concise index for AI search and answer engines.</div></div></article>
+            <article class="record-item"><div><h3><a class="record-title-link" href="/api/research.json">Research profile JSON</a></h3><div class="record-meta">Profile, topics, projects, publications, patents, and collaboration data.</div></div></article>
+            <article class="record-item"><div><h3><a class="record-title-link" href="/api/publications.json">Publication records JSON</a></h3><div class="record-meta">Publication records and research-note links.</div></div></article>
+            <article class="record-item"><div><h3><a class="record-title-link" href="/api/patents.json">Patent records JSON</a></h3><div class="record-meta">Patent records.</div></div></article>
+            <article class="record-item"><div><h3><a class="record-title-link" href="/api/topics.json">Research topics JSON</a></h3><div class="record-meta">Research-topic definitions.</div></div></article>
+            <article class="record-item"><div><h3><a class="record-title-link" href="/api/projects.json">Research projects JSON</a></h3><div class="record-meta">Active project directions.</div></div></article>
+            <article class="record-item"><div><h3><a class="record-title-link" href="/api/knowledge-graph.json">Knowledge graph JSON-LD</a></h3><div class="record-meta">Graph linking the profile, topics, publications, projects, and patents.</div></div></article>
+            <article class="record-item"><div><h3><a class="record-title-link" href="/llms.txt">LLM-readable site index</a></h3><div class="record-meta">Concise index for AI search and answer engines.</div></div></article>
           </div>
         </section>
       </div>

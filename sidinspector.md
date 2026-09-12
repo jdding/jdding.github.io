@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: SIDInspector: A Mapping-First Diagnostic Resource for Semantic-ID Tokenizers"
+title: "SIDInspector: A Mapping-First Diagnostic Resource for Semantic-ID Tokenizers"
 permalink: /sidinspector/
 classes: wide
 publication_id: sidinspector

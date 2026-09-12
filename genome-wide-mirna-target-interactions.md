@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: Genome-Wide Search for miRNA-target Interactions in Arabidopsis Thaliana with an Integrated Approach"
+title: "Genome-Wide Search for miRNA-target Interactions in Arabidopsis Thaliana with an Integrated Approach"
 permalink: /genome-wide-mirna-target-interactions/
 classes: wide
 publication_id: genome-wide-mirna-target-interactions

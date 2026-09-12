@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: Weakly-Supervised Text Classification Based on Keyword Graph"
+title: "Weakly-Supervised Text Classification Based on Keyword Graph"
 permalink: /emnlp-keygraph/
 classes: wide
 publication_id: emnlp-keygraph

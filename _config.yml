@@ -5,7 +5,7 @@ remote_theme: mmistakes/minimal-mistakes
 
 # Site metadata
 title: "Jiandong Ding"
-description: "Personal research site for Jiandong Ding, studying reliable recommendation and AI retrieval systems under changing users, catalogs, tasks, and interfaces."
+description: "Personal research site for Jiandong Ding (丁建栋), Principal Algorithm Expert at Huawei, studying reliable recommendation and AI retrieval systems."
 url: "https://jdding.github.io" # 站点根地址（不带末尾斜杠）
 github_username: jdding
 repository: "jdding/jdding.github.io" # 用于jekyll-seo-tag插件
@@ -29,8 +29,8 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/jiandong-ding-60498833/"
-    - label: "Email"
-      url: "mailto:jdding@fudan.edu.cn"
+    - label: "Huawei Email"
+      url: "mailto:dingjiandong2@huawei.com"
       icon: "fas fa-fw fa-envelope-square"
 
 # Open Graph（社交媒体分享卡片）
@@ -55,7 +55,7 @@ twitter:
   username: jdding
   
 social:
-  name: Jiandong Ding
+  name: "Jiandong Ding (丁建栋)"
   links:
     - https://www.linkedin.com/in/jiandong-ding-60498833/
     - https://github.com/jdding
@@ -90,3 +90,4 @@ exclude:
   - Gemfile.lock
   - .bundle/
   - .codegraph/
+  - assets/images/fudan-university-logo.png

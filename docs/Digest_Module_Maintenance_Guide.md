@@ -123,7 +123,7 @@ keywords: "Jiandong Ding, Recommender Systems, Huawei, [2-3 core technical keywo
     "name": "Jiandong Ding",
     "affiliation": {
       "@type": "Organization",
-      "name": "Huawei Technologies Co. Ltd. / Fudan University"
+      "name": "Huawei Technologies Co. Ltd."
     }
   }],
   "description": "[TL;DR plain text]",

@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: SIDScope: A Diagnostic Resource for Semantic-ID Interfaces in Generative Recommendation"
+title: "SIDScope: A Diagnostic Resource for Semantic-ID Interfaces in Generative Recommendation"
 permalink: /sidscope/
 classes: wide
 publication_id: sidscope

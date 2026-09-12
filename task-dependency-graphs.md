@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: Personalized Task Dependency Graphs for Mitigating Signal Erosion in Multi-Task Recommendation"
+title: "Personalized Task Dependency Graphs for Mitigating Signal Erosion in Multi-Task Recommendation"
 permalink: /task-dependency-graphs/
 classes: wide
 publication_id: task-dependency-graphs

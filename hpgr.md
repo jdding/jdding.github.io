@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations"
+title: "Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations"
 permalink: /hpgr/
 classes: wide
 publication_id: hpgr

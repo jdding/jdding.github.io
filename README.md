@@ -52,7 +52,7 @@ jdding.github.io/
 
 如有问题或建议，欢迎通过以下方式联系：
 
-- Email: jdding [AT] fudan.edu.cn
+- Huawei Email: dingjiandong2 [AT] huawei.com
 - LinkedIn: [Jiandong Ding](https://www.linkedin.com/in/jiandong-ding-60498833/)
 
 ## 致谢

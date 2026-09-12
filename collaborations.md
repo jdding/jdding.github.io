@@ -1,23 +1,11 @@
 ---
-layout: single
+layout: research
 author_profile: false
 title: "Collaborations"
 permalink: /collaborations/
 classes: wide
-schema:
-  "@context": "https://schema.org"
-  "@type": "Article"
-  "headline": "Research Collaborations"
-  "author":
-    "@type": "Person"
-    "name": "Jiandong Ding (丁建栋)"
-    "url": "https://jdding.github.io"
-  "dateModified": "2026-07-04"
-  "description": "Research collaboration routes and institutional collaboration history."
+description: "Research collaboration, student research internship, invited talk, and applied AI exchange opportunities with Jiandong Ding at Huawei."
 ---
-
-<link rel="stylesheet" href="/assets/css/research-system.css?v=homepage-20260823">
-{% include research-nav.html %}
 
 {% assign collaborations = site.data.research.collaborations %}
 

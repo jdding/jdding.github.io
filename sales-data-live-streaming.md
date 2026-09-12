@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: The Sales Data Sells: Effects of Real-Time Sales Analytics on Live Streaming Selling"
+title: "The Sales Data Sells: Effects of Real-Time Sales Analytics on Live Streaming Selling"
 permalink: /sales-data-live-streaming/
 classes: wide
 publication_id: sales-data-live-streaming

@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: SkillResolve-Bench: Measuring and Resolving Same-Capability Ambiguity in Agent Skill Retrieval"
+title: "SkillResolve-Bench: Measuring and Resolving Same-Capability Ambiguity in Agent Skill Retrieval"
 permalink: /skillresolve-bench/
 classes: wide
 publication_id: skillresolve-bench

@@ -1,23 +1,11 @@
 ---
-layout: single
+layout: research
 author_profile: false
 title: "Full Publications"
 permalink: /publications/
 classes: wide
-schema:
-  "@context": "https://schema.org"
-  "@type": "CollectionPage"
-  "headline": "Full Publications"
-  "author":
-    "@type": "Person"
-    "name": "Jiandong Ding (丁建栋)"
-    "url": "https://jdding.github.io"
-  "dateModified": "2026-08-14"
-  "description": "Full publications by Jiandong Ding, ordered by year."
+description: "Publications by Jiandong Ding (丁建栋) across recommender systems, LLM agents, data mining, AI retrieval, and applied machine learning."
 ---
-
-<link rel="stylesheet" href="/assets/css/research-system.css?v=homepage-20260823">
-{% include research-nav.html %}
 
 {% assign publications = site.data.publications %}
 {% assign topics = site.data.topics | sort: "order" %}
@@ -51,17 +39,22 @@ schema:
                 {% assign venue_markup = paper.venue | replace_first: plain_venue, bold_venue %}
               {% endif %}
             {% endif %}
-            <article class="record-item" itemscope itemtype="http://schema.org/ScholarlyArticle">
+            <article id="publication-{{ paper.id }}" class="record-item" itemscope itemtype="https://schema.org/ScholarlyArticle">
               <div>
-                <h3 itemprop="headline">{{ paper.title }}</h3>
+                <h3 itemprop="headline">
+                  {% if paper.digest_url %}<a class="record-title-link" href="{{ paper.digest_url }}" itemprop="url">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}
+                </h3>
                 <div class="record-meta meta-lines">
-                  <span itemprop="author">{{ paper.authors }}</span>
+                  <span itemprop="creditText">{{ paper.authors }}</span>
+                  <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="{{ site.url }}/#person">
+                    <meta itemprop="name" content="Jiandong Ding (丁建栋)">
+                  </span>
                   <span itemprop="isPartOf">{{ venue_markup }}</span>
                   <meta itemprop="datePublished" content="{{ paper.year }}">
                 </div>
               </div>
               <div class="record-actions">
-                {% if topic_label %}<span class="pill topic">{{ topic_label }}</span>{% endif %}
+                {% if topic_label and topic %}<a class="pill topic" href="/topics/{{ topic.slug }}/">{{ topic_label }}</a>{% elsif topic_label %}<span class="pill topic">{{ topic_label }}</span>{% endif %}
                 {% if paper.list_links %}
                 {% for link in paper.list_links %}
                 <a class="pill topic" href="{{ link.url }}">{{ link.label }}</a>
@@ -82,3 +75,28 @@ schema:
     </div>
   </section>
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "{{ site.url }}/publications/#collection",
+  "url": "{{ site.url }}/publications/",
+  "name": "Full Publications",
+  "description": {{ page.description | jsonify }},
+  "about": { "@id": "{{ site.url }}/#person" },
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": {{ publications | size }},
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "itemListElement": [
+      {% for paper in publications %}{
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "name": {{ paper.title | jsonify }},
+        "url": "{{ site.url }}{{ paper.digest_url }}"
+      }{% unless forloop.last %},{% endunless %}{% endfor %}
+    ]
+  }
+}
+</script>

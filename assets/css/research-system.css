@@ -1,3 +1,10 @@
+/*
+  Genre: editorial academic profile
+  Tone: precise and understated
+  Palette anchor: research blue
+  Structural fingerprint: sticky navigation, bounded content shells, evidence-led cards
+*/
+
 .research-site,
 .research-nav {
   --bg: #f3f4f1;
@@ -266,6 +273,11 @@
   max-width: 760px;
   font-size: var(--type-home-title);
   line-height: 1.02;
+}
+
+.identity-native-name {
+  color: var(--muted);
+  font-weight: 560;
 }
 
 .hero-role {
@@ -749,6 +761,24 @@
   font-size: var(--type-card-title);
 }
 
+.paper-title-link,
+.record-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.paper-title-link:hover,
+.record-title-link:hover {
+  color: var(--accent);
+}
+
+.research-site a:focus-visible,
+.research-nav a:focus-visible,
+.research-menu summary:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .paper-meta,
 .record-actions,
 .patent-tags {
@@ -1037,6 +1067,10 @@
   border-bottom: 0;
 }
 
+.record-item[id] {
+  scroll-margin-top: 84px;
+}
+
 .record-item h3,
 .patent-card h3 {
   font-size: var(--type-record-title);
@@ -1069,6 +1103,25 @@
   font-family: var(--font-mono);
   font-size: var(--type-small);
   font-weight: 760;
+}
+
+.digest-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 9px;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: var(--type-small);
+}
+
+.digest-breadcrumb a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.digest-breadcrumb [aria-current="page"] {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .research-site.digest-page h1 {
@@ -1148,6 +1201,25 @@
 .digest-side {
   display: grid;
   gap: 18px;
+}
+
+.related-publications {
+  display: grid;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-strong);
+}
+
+.related-publications h2 {
+  font-size: var(--type-card-title);
+}
+
+.related-publications a {
+  color: var(--accent);
+  font-size: var(--type-small);
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
 }
 
 .digest-side .summary-row {

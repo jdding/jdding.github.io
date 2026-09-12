@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: Neural Topic Modeling Based on Cycle Adversarial Training and Contrastive Learning"
+title: "Neural Topic Modeling Based on Cycle Adversarial Training and Contrastive Learning"
 permalink: /acl-topic/
 classes: wide
 publication_id: acl-topic

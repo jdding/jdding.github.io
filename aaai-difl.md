@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: Invariant feature learning for counterfactual watch-time prediction in video recommendation"
+title: "Invariant feature learning for counterfactual watch-time prediction in video recommendation"
 permalink: /aaai-difl/
 classes: wide
 publication_id: invariant-feature-learning

@@ -3,37 +3,40 @@
 <link rel="apple-touch-icon" href="/assets/images/brand-mark-512.png">
 <meta name="msvalidate.01" content="9F874B0703B3BF0CC5AADD16B0A91959">
 
+{% if page.robots %}<meta name="robots" content="{{ page.robots | escape }}">{% endif %}
+
+{% if page.publication_id %}
+  {% assign citation_paper = site.data.publications | where: "id", page.publication_id | first %}
+  {% if citation_paper.citation_metadata and citation_paper.citation_authors and citation_paper.publication_date %}
+<meta name="citation_title" content="{{ citation_paper.title | escape }}">
+    {% for citation_author in citation_paper.citation_authors %}
+<meta name="citation_author" content="{{ citation_author | escape }}">
+    {% endfor %}
+<meta name="citation_publication_date" content="{{ citation_paper.publication_date | escape }}">
+    {% unless citation_paper.venue_short == "arXiv" %}
+      {% if citation_paper.venue contains "Proceedings" or citation_paper.venue contains "Conference" %}
+<meta name="citation_conference_title" content="{{ citation_paper.venue | escape }}">
+      {% else %}
+<meta name="citation_journal_title" content="{{ citation_paper.venue | escape }}">
+      {% endif %}
+    {% endunless %}
+    {% if citation_paper.doi_url %}
+<meta name="citation_doi" content="{{ citation_paper.doi_url | remove: 'https://doi.org/' | escape }}">
+    {% endif %}
+    {% if citation_paper.paper_url contains "arxiv.org/abs/" %}
+<meta name="citation_arxiv_id" content="{{ citation_paper.paper_url | split: 'arxiv.org/abs/' | last | escape }}">
+    {% endif %}
+  {% endif %}
+{% endif %}
+
 <style>
+  html,
+  body {
+    overflow-x: clip;
+  }
+
   /* Research pages carry their own navigation. */
   .masthead {
     display: none !important;
-  }
-
-  /* Wide research pages provide their own content width. */
-  .layout--single.wide .initial-content,
-  .layout--single.wide .page,
-  .layout--single.wide .page__inner-wrap,
-  .layout--single.wide .page__content {
-    max-width: none !important;
-    width: 100% !important;
-  }
-
-  .layout--single.wide .page {
-    float: none !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  .layout--single.wide .page__title {
-    display: none !important;
-  }
-
-  .layout--single.wide .page__inner-wrap {
-    float: none !important;
-    margin-top: 0 !important;
-  }
-
-  .layout--single.wide .page__content {
-    margin: 0 !important;
   }
 </style>

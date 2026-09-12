@@ -4,7 +4,14 @@
   year: 2026
   venue: arXiv preprint arXiv:2608.18779
   venue_short: arXiv
-  authors: J Ding, H Qin, T Wu, Y Cao
+  authors: Jiandong Ding, Huijie Qin, Tiandeng Wu, Yi Cao
+  citation_authors:
+    - Jiandong Ding
+    - Huijie Qin
+    - Tiandeng Wu
+    - Yi Cao
+  publication_date: "2026-08-19"
+  citation_metadata: true
   topic: recommender-systems
   level: c
   selected: false
@@ -30,7 +37,15 @@
   year: 2026
   venue: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing: Industry Track (EMNLP '26)"
   venue_short: EMNLP
-  authors: W Zhou, T Wu, J Ding, Z Fan, Y Cao
+  authors: Wei Zhou, Tiandeng Wu, Jiandong Ding, Zhufeng Fan, Yi Cao
+  citation_authors:
+    - Wei Zhou
+    - Tiandeng Wu
+    - Jiandong Ding
+    - Zhufeng Fan
+    - Yi Cao
+  publication_date: "2026-09-04"
+  citation_metadata: true
   topic: llm-agents
   level: b
   selected: false
@@ -44,16 +59,16 @@
       text: AI search systems must reason over changing inventories, where a static prompt or fixed search policy can become stale as available items, attributes, and user intent patterns shift.
     - title: Approach
       text: The work frames search behavior as a policy-level optimization problem grounded in inventory evidence, improving the search procedure without retraining the underlying foundation model.
-    - title: Scope
-      text: The homepage records the paper as an EMNLP 2026 Industry Track publication; private deployment details and non-public evaluation material are intentionally not repeated here.
+    - title: Public evidence
+      text: The public paper reports deployment in a commercial smart-assistant search system since May 2026. In a 14-day online A/B test, the complete IGPO treatment produced a 3.17% relative CTR lift and reduced audited bad cases by 38.9%.
     - title: Takeaway
       text: The paper extends the LLM agents line from skill retrieval and service evaluation into AI search systems where policy, evidence, and inventory state must stay aligned.
 - id: dygraph
-  title: 'Towards Practical Large-scale Dynamic Heterogeneous Graph Embedding: Cold-start Resilient Recommendation'
+  title: 'Towards Practical Large-scale Dynamical Heterogeneous Graph Embedding: Cold-start Resilient Recommendation'
   year: 2026
   venue: IEEE Transactions on Knowledge and Data Engineering
   venue_short: TKDE
-  authors: M Long, J Liu, Y Li, H Xiong, J Yan, K Wang, Y Cao, J Ding
+  authors: Mabiao Long, Jiaxi Liu, Yufeng Li, Hao Xiong, Junchi Yan, Kefan Wang, Yi Cao, Jiandong Ding
   topic: recommender-systems
   level: a
   selected: false
@@ -62,18 +77,42 @@
   digest_url: "/dygraph/"
   digest_label: Digest
   doi_url: https://doi.org/10.48550/arxiv.2512.13120
-  digest_note: A TKDE paper on practical large-scale dynamic heterogeneous graph embedding for cold-start resilient recommendation.
+  digest_note: A TKDE paper on practical large-scale dynamical heterogeneous graph embedding for cold-start resilient recommendation.
+  digest_blocks:
+    - title: Problem
+      text: Production graph embeddings must balance billion-scale training, data freshness, and cold-start behavior without repeatedly rebuilding the entire representation system.
+    - title: Approach
+      text: The paper combines HetSGFormer for scalable global graph learning with Incremental Locally Linear Embedding for lightweight CPU-based updates when new graph data arrives.
+    - title: Public evidence
+      text: The public abstract reports an advertiser-value lift of up to 6.11% for HetSGFormer, a further 3.22% lift from the incremental module, and an 83.2% improvement in embedding refresh timeliness.
+    - title: Takeaway
+      text: The two-stage design separates expensive global representation learning from targeted incremental refresh, supporting practical cold-start resilience under changing graph data.
 - id: task-dependency-graphs
   title: Personalized Task Dependency Graphs for Mitigating Signal Erosion in Multi-Task Recommendation
   year: 2026
   venue: Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM '26)
   venue_short: CIKM
-  authors: F Liu, T Wu, Y Fang, W Zhou, Z Zhou, W Chen, Q Mei, J Zhou, H Chang, Y Cao, J Ding
+  authors: Fuyuan Liu, Tiandeng Wu, Yaqun Fang, Wei Zhou, Zehao Zhou, Wenping Chen, Qishun Mei, Jiaxin Zhou, Heng Chang, Yi Cao, Jiandong Ding
+  citation_authors:
+    - Fuyuan Liu
+    - Tiandeng Wu
+    - Yaqun Fang
+    - Wei Zhou
+    - Zehao Zhou
+    - Wenping Chen
+    - Qishun Mei
+    - Jiaxin Zhou
+    - Heng Chang
+    - Yi Cao
+    - Jiandong Ding
+  publication_date: "2026-09-04"
+  citation_metadata: true
   topic: recommender-systems
   level: b
   selected: false
   paper_url: https://arxiv.org/abs/2609.04862
   paper_label: arXiv
+  doi_url: https://doi.org/10.1145/3799682.3839876
   digest_url: "/task-dependency-graphs/"
   digest_label: Digest
   digest_note: A CIKM 2026 paper on personalized task dependency graphs for mitigating signal erosion in multi-task recommendation.
@@ -82,8 +121,8 @@
       text: Multi-task recommendation can suffer when learning signals from one task erode or distort the signal needed by another task.
     - title: Approach
       text: The paper studies personalized task dependency graphs as a way to model task relationships at a finer granularity than a single global dependency structure.
-    - title: Scope
-      text: The public record should be read as a CIKM 2026 publication; implementation details and non-public evaluation material are not repeated on the homepage.
+    - title: Public evidence
+      text: The public paper reports AUC gains of up to 1.45% on sparse conversion tasks, together with online improvements of 1.2% in conversion rate and 1.9% in effective cost per mille relative to the production baseline.
     - title: Takeaway
       text: The work belongs to the recommendation line on reliable multi-objective modeling under changing user, item, and task signals.
 - id: sidinspector
@@ -91,13 +130,8 @@
   year: 2026
   venue: Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM '26)
   venue_short: CIKM
-  authors: J Ding, H Chang, H Qin, T Liu
+  authors: Jiandong Ding, H Chang, H Qin, T Liu
   topic: recommender-systems
-  topic_label: Code
-  list_links:
-    - label: Recommender System
-      url: "/topics/recommender-systems/"
-  hide_paper_action: true
   level: b
   selected: false
   paper_url: https://arxiv.org/abs/2606.10375
@@ -112,7 +146,7 @@
   year: 2026
   venue: Proceedings of the 20th ACM Conference on Recommender Systems (RecSys '26)
   venue_short: RecSys
-  authors: J Ding, T Liu, F Liu, H Qin, T Wu
+  authors: Jiandong Ding, T Liu, F Liu, H Qin, T Wu
   topic: recommender-systems
   program: adaptive-recommendation
   level: a
@@ -139,7 +173,7 @@
   year: 2026
   venue: arXiv preprint arXiv:2606.10388
   venue_short: arXiv
-  authors: J Ding
+  authors: Jiandong Ding
   topic: llm-agents
   level: c
   selected: false
@@ -153,7 +187,7 @@
   year: 2026
   venue: Proceedings of the ACM Web Conference (WWW '26)
   venue_short: WWW
-  authors: Z Chen, H Chang, T Liu, C Zhou, Y Cao, J Ding, M Liu, B Qin
+  authors: Z Chen, H Chang, T Liu, C Zhou, Y Cao, Jiandong Ding, M Liu, B Qin
   topic: recommender-systems
   program: adaptive-recommendation
   level: a
@@ -170,7 +204,7 @@
   year: 2026
   venue: Proceedings of the AAAI Conference on Artificial Intelligence (AAAI '26)
   venue_short: AAAI
-  authors: C Jin, Y Ren, H Ma, Y Xia, Y Guan, H Zhang, J Ding, J Guan, S Zhou
+  authors: C Jin, Y Ren, H Ma, Y Xia, Y Guan, H Zhang, Jiandong Ding, J Guan, S Zhou
   topic: recommender-systems
   program: adaptive-recommendation
   level: a
@@ -187,7 +221,7 @@
   year: 2026
   venue: Proceedings of the Nineteenth ACM International Conference on Web Search and Data Mining (WSDM '26)
   venue_short: WSDM
-  authors: K Cheng, H Chang, P Wang, L Gu, J Ding, Y Cao, J Ye, B Du
+  authors: K Cheng, H Chang, P Wang, L Gu, Jiandong Ding, Y Cao, J Ye, B Du
   topic: recommender-systems
   program: adaptive-recommendation
   level: b
@@ -206,7 +240,7 @@
   year: 2025
   venue: International Conference on Service-Oriented Computing (ICSOC '24), Lecture Notes in Computer Science 15405, 357-372
   venue_short: ICSOC
-  authors: B Caglayan, M Wang, JD Kelleher, S Fei, G Tong, J Ding, P Zhang
+  authors: B Caglayan, M Wang, JD Kelleher, S Fei, G Tong, Jiandong Ding, P Zhang
   topic: llm-agents
   program: auditable-retrieval
   level: b
@@ -225,7 +259,7 @@
   year: 2024
   venue: Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)
   venue_short: KDD
-  authors: H Yu, M Fu, J Ding, Y Zhou, J Wu
+  authors: H Yu, M Fu, Jiandong Ding, Y Zhou, J Wu
   topic: recommender-systems
   program: adaptive-recommendation
   level: a
@@ -244,7 +278,7 @@
   year: 2024
   venue: arXiv preprint arXiv:2408.08147
   venue_short: arXiv
-  authors: Y Jin, T Wang, H Lin, M Song, P Li, Y Ma, Y Shan, Z Yuan, C Li, Y Sun, et al.
+  authors: Yibo Jin, Tao Wang, Huimin Lin, Mingyang Song, Peiyang Li, Yipeng Ma, Yicheng Shan, Zhengfan Yuan, Cailong Li, Yajing Sun, Tiandeng Wu, Xing Chu, Ruizhi Huan, Li Ma, Xiao You, Wenting Zhou, Yunpeng Ye, Wen Liu, Xiangkun Xu, Yongsheng Zhang, Tiantian Dong, Jiawei Zhu, Zhe Wang, Xijian Ju, Jianxun Song, Haoliang Cheng, Xiaojing Li, Jiandong Ding, Hefei Guo, Zhengyong Zhang
   topic: llm-agents
   level: c
   selected: false
@@ -259,7 +293,7 @@
   year: 2023
   venue: "Findings of the Association for Computational Linguistics (ACL Findings '23)"
   venue_short: ACL Findings
-  authors: B Wang, L Zhang, D Zhou, Y Cao, J Ding
+  authors: B Wang, L Zhang, D Zhou, Y Cao, Jiandong Ding
   topic: data-mining
   level: a
   selected: false
@@ -274,7 +308,7 @@
   year: 2023
   venue: Proceedings of the AAAI Conference on Artificial Intelligence (AAAI '23)
   venue_short: AAAI
-  authors: T Wu, Q Liu, Y Cao, Y Huang, XM Wu, J Ding
+  authors: T Wu, Q Liu, Y Cao, Y Huang, XM Wu, Jiandong Ding
   topic: data-mining
   level: a
   selected: false
@@ -289,7 +323,7 @@
   year: 2022
   venue: Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL '22)
   venue_short: NAACL
-  authors: M Zhao, L Zhang, Y Xu, J Ding, J Guan, S Zhou
+  authors: M Zhao, L Zhang, Y Xu, Jiandong Ding, J Guan, S Zhou
   topic: data-mining
   level: b
   selected: false
@@ -304,7 +338,7 @@
   year: 2021
   venue: Advances in Neural Information Processing Systems (NeurIPS '21)
   venue_short: NeurIPS
-  authors: Y Xu, J Ding, L Zhang, S Zhou
+  authors: Y Xu, Jiandong Ding, L Zhang, S Zhou
   topic: data-mining
   level: a
   selected: false
@@ -319,7 +353,7 @@
   year: 2021
   venue: Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP '21)
   venue_short: EMNLP
-  authors: L Zhang, J Ding, Y Xu, Y Liu, S Zhou
+  authors: L Zhang, Jiandong Ding, Y Xu, Y Liu, S Zhou
   topic: data-mining
   level: b
   selected: false
@@ -334,7 +368,7 @@
   year: 2021
   venue: ICIS 2021 Proceedings (ICIS '21)
   venue_short: ICIS
-  authors: L Wang, Y He, J Ding, N Huang, Y Hong, X Guo, D Liu, G Chen
+  authors: L Wang, Y He, Jiandong Ding, N Huang, Y Hong, X Guo, D Liu, G Chen
   topic: data-mining
   level: a
   selected: false
@@ -348,7 +382,7 @@
   year: 2021
   venue: ICIS 2021 Proceedings (ICIS '21)
   venue_short: ICIS
-  authors: Y He, L Wang, N Huang, Y Hong, J Ding, Y Sun, Y Liu
+  authors: Y He, L Wang, N Huang, Y Hong, Jiandong Ding, Y Sun, Y Liu
   topic: data-mining
   level: a
   selected: false
@@ -362,7 +396,7 @@
   year: 2012
   venue: BMC Genomics
   venue_short: BMC Genomics
-  authors: L Wan, J Ding, T Jin, J Guan, S Zhou
+  authors: L Wan, Jiandong Ding, T Jin, J Guan, S Zhou
   topic: data-mining
   topic_page: false
   level: b
@@ -378,7 +412,7 @@
   year: 2012
   venue: Genomics, Proteomics and Bioinformatics
   venue_short: GPB
-  authors: J Ding, S Zhou, J Guan
+  authors: Jiandong Ding, S Zhou, J Guan
   topic: data-mining
   topic_page: false
   level: a
@@ -394,7 +428,7 @@
   year: 2012
   venue: BMC Genomics
   venue_short: BMC Genomics
-  authors: J Ding, D Li, U Ohler, J Guan, S Zhou
+  authors: Jiandong Ding, D Li, U Ohler, J Guan, S Zhou
   topic: data-mining
   topic_page: false
   level: b
@@ -410,7 +444,7 @@
   year: 2011
   venue: BMC Bioinformatics
   venue_short: BMC Bioinformatics
-  authors: J Ding, S Zhou, J Guan
+  authors: Jiandong Ding, S Zhou, J Guan
   topic: data-mining
   topic_page: false
   level: a
@@ -426,7 +460,7 @@
   year: 2011
   venue: IEEE International Conference on Bioinformatics and Biomedicine (BIBM '11)
   venue_short: BIBM
-  authors: J Ding, S Yu, U Ohler, J Guan, S Zhou
+  authors: Jiandong Ding, S Yu, U Ohler, J Guan, S Zhou
   topic: data-mining
   topic_page: false
   level: b
@@ -442,7 +476,7 @@
   year: 2010
   venue: BMC Bioinformatics
   venue_short: BMC Bioinformatics
-  authors: J Ding, S Zhou, J Guan
+  authors: Jiandong Ding, S Zhou, J Guan
   topic: data-mining
   topic_page: false
   level: a

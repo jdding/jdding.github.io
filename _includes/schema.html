@@ -1,0 +1,39 @@
+{% assign profile = site.data.research.profile %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": {{ "/#profile-page" | absolute_url | jsonify }},
+      "url": {{ "/" | absolute_url | jsonify }},
+      "name": {{ page.title | jsonify }},
+      "description": {{ page.description | default: site.description | jsonify }},
+      "inLanguage": {{ site.locale | jsonify }},
+      "mainEntity": { "@id": {{ "/#person" | absolute_url | jsonify }} }
+    },
+    {
+      "@type": "Person",
+      "@id": {{ "/#person" | absolute_url | jsonify }},
+      "name": {{ profile.name | jsonify }},
+      "alternateName": "丁建栋",
+      "givenName": {{ profile.givenName | jsonify }},
+      "familyName": {{ profile.familyName | jsonify }},
+      "jobTitle": {{ profile.title | jsonify }},
+      "description": {{ profile.bio | jsonify }},
+      "url": {{ "/" | absolute_url | jsonify }},
+      "image": {{ site.author.avatar | absolute_url | jsonify }},
+      "email": {{ profile.email | jsonify }},
+      "worksFor": { "@id": {{ "/#huawei" | absolute_url | jsonify }} },
+      "knowsAbout": {{ profile.researchAreas | jsonify }},
+      "sameAs": {{ site.social.links | jsonify }}
+    },
+    {
+      "@type": "Organization",
+      "@id": {{ "/#huawei" | absolute_url | jsonify }},
+      "name": {{ profile.organization | jsonify }},
+      "url": "https://www.huawei.com/"
+    }
+  ]
+}
+</script>

@@ -1,41 +1,26 @@
 ---
 layout: default
 author_profile: false
-title: "Jiandong Ding | Principal Algorithm Expert"
+title: "Jiandong Ding (丁建栋) | Principal Algorithm Expert at Huawei"
+description: "Jiandong Ding (丁建栋) is a Principal Algorithm Expert at Huawei working on recommender systems, LLM agents, data mining, and reliable AI retrieval."
 classes: wide
-schema:
-  "@context": "https://schema.org"
-  "@type": "Person"
-  "name": "Jiandong Ding (丁建栋)"
-  "alternateName": "Jiandong Ding"
-  "givenName": "Jiandong"
-  "familyName": "Ding"
-  "jobTitle": "Principal Algorithm Expert"
-  "affiliation":
-    "@type": "Organization"
-    "name": "Huawei Technologies Co. Ltd."
-  "knowsAbout": ["Recommender Systems", "LLM Agents", "Data Mining", "Zero-Observation User Reactivation", "AI Retrieval", "Semantic-ID Diagnostics", "Agent Skill Retrieval"]
-  "description": "Principal Algorithm Expert at Huawei Technologies Co. Ltd., working on reliable recommendation and AI retrieval systems."
-  "url": "https://jdding.github.io"
-  "sameAs":
-    - "https://www.linkedin.com/in/jiandong-ding-60498833/"
-    - "https://github.com/jdding"
 ---
 
-<link rel="stylesheet" href="/assets/css/research-system.css?v=homepage-20260830">
+<link rel="stylesheet" href="/assets/css/research-system.css?v=seo-20260912">
 {% include research-nav.html %}
 
 {% assign topics = site.data.topics | sort: "order" %}
 {% assign programs = site.data.research_programs | sort: "order" %}
 {% assign public_artifacts = site.data.open_source | sort: "order" %}
 {% assign selected_papers = site.data.publications | where: "selected", true %}
+{% assign recent_papers = site.data.publications | slice: 0, 6 %}
 
 <main id="main" class="research-site">
   <section class="research-hero">
     <div class="research-shell hero-layout">
       <div class="hero-copy">
-        <h1>Jiandong Ding</h1>
-        <p class="hero-role">Principal Algorithm Expert · Huawei Technologies Co. Ltd.</p>
+        <h1>Jiandong Ding <span class="identity-native-name">(丁建栋)</span></h1>
+        <p class="hero-role">Principal Algorithm Expert · Huawei</p>
         <p class="lede">Since 2012, I have worked on applied AI and data systems across IBM, Bosch, Alibaba DAMO Academy, and Huawei. My current research asks how recommendation and AI retrieval systems can remain reliable as users, catalogs, tasks, and interfaces change.</p>
         <div class="identity-facts" aria-label="Professional profile">
           <div>
@@ -123,6 +108,41 @@ schema:
     </div>
   </section>
 
+  <section id="recent-publications" class="research-section">
+    <div class="research-shell">
+      <div class="section-head section-head-row">
+        <div>
+          <span class="section-label">Recent work</span>
+          <h2>Recent publications</h2>
+        </div>
+        <a class="text-link" href="/publications/">Full publication record</a>
+      </div>
+      <div class="record-list">
+        <section class="year-block">
+          <div class="year-label">Recent</div>
+          <div class="record-stack">
+            {% for paper in recent_papers %}
+            {% assign topic = topics | where: "slug", paper.topic | first %}
+            <article id="recent-{{ paper.id }}" class="record-item">
+              <div>
+                <h3><a class="record-title-link" href="{{ paper.digest_url }}">{{ paper.title }}</a></h3>
+                <div class="record-meta meta-lines">
+                  <span>{{ paper.authors }}</span>
+                  <span>{{ paper.venue_short }} {{ paper.year }}</span>
+                </div>
+              </div>
+              <div class="record-actions">
+                {% if topic %}<a class="pill topic" href="/topics/{{ topic.slug }}/">{{ topic.title }}</a>{% endif %}
+                {% if paper.paper_url %}<a class="pill link" href="{{ paper.paper_url }}">{{ paper.paper_label | default: "Paper" }}</a>{% endif %}
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
   <section id="selected" class="research-section">
     <div class="research-shell">
       <div class="section-head section-head-row">
@@ -147,7 +167,7 @@ schema:
               <span>{{ paper.selected_label | default: paper.venue_short }}</span>
               <span>{{ program.hero_title | default: topic.title }}</span>
             </div>
-            <h3>{{ paper.title }}</h3>
+            <h3><a class="paper-title-link" href="{{ paper.digest_url }}">{{ paper.title }}</a></h3>
             <p>{{ paper.selected_summary }}</p>
             <div class="record-actions">
               {% if paper.digest_url %}<a class="pill digest" href="{{ paper.digest_url }}">Digest</a>{% endif %}
@@ -169,13 +189,21 @@ schema:
           <a class="text-link" href="/collaborations/">Collaboration record</a>
         </div>
         <div class="contact-links contact-links-primary">
-          <a href="mailto:dingjiandong2@huawei.com">
-            <span>University collaboration</span>
+          <a href="mailto:dingjiandong2@huawei.com?subject=Research%20collaboration%20or%20internship">
+            <span>Research collaboration, internships, and invited talks</span>
             <strong>dingjiandong2@huawei.com</strong>
           </a>
-          <a href="mailto:jdding@fudan.edu.cn">
-            <span>Research exchange and invited talks</span>
-            <strong>jdding@fudan.edu.cn</strong>
+          <a rel="me" href="https://scholar.google.com/citations?user=5-e7wi4AAAAJ">
+            <span>Publication and citation profile</span>
+            <strong>Google Scholar</strong>
+          </a>
+          <a rel="me" href="https://github.com/jdding">
+            <span>Open-source research artifacts</span>
+            <strong>GitHub</strong>
+          </a>
+          <a rel="me" href="https://www.linkedin.com/in/jiandong-ding-60498833/">
+            <span>Professional profile</span>
+            <strong>LinkedIn</strong>
           </a>
         </div>
       </div>

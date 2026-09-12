@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: Effectiveness of AI Assistance in Live-Streaming: A Randomized Field Experiment"
+title: "Effectiveness of AI Assistance in Live-Streaming: A Randomized Field Experiment"
 permalink: /ai-assistance-live-streaming/
 classes: wide
 publication_id: ai-assistance-live-streaming

@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: P/D-Serve: Serving Disaggregated Large Language Model at Scale"
+title: "P/D-Serve: Serving Disaggregated Large Language Model at Scale"
 permalink: /pd-serve/
 classes: wide
 publication_id: pd-serve

@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: MiRenSVM: Towards Better Prediction of microRNA Precursors Using an Ensemble SVM Classifier with Multi-Loop Features"
+title: "MiRenSVM: Towards Better Prediction of microRNA Precursors Using an Ensemble SVM Classifier with Multi-Loop Features"
 permalink: /mirensvm/
 classes: wide
 publication_id: mirensvm

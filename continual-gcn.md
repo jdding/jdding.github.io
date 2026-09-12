@@ -1,7 +1,7 @@
 ---
-layout: single
+layout: research
 author_profile: false
-title: "Digest: Continual Graph Convolutional Network for Text Classification"
+title: "Continual Graph Convolutional Network for Text Classification"
 permalink: /continual-gcn/
 classes: wide
 publication_id: continual-gcn

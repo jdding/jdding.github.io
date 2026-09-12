@@ -1,13 +1,11 @@
 ---
-layout: single
+layout: research
 author_profile: false
 title: "Patents"
 permalink: /patents/
 classes: wide
+description: "Patents by Jiandong Ding spanning recommendation, interactive media, mobility intelligence, data platforms, and sequence analysis."
 ---
-
-<link rel="stylesheet" href="/assets/css/research-system.css?v=homepage-20260823">
-{% include research-nav.html %}
 
 {% assign patents = site.data.patents %}
 {% assign granted = patents | where: "status", "Granted" %}
