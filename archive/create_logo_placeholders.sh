@@ -8,7 +8,6 @@ cd "$IMAGES_DIR"
 
 # Create placeholder logos if they don't exist
 PLACEHOLDER_LOGOS=(
-  "fudan-university-logo.png"
   "tongji-university-logo.png"
   "duke-university-logo.png"
   "tsinghua-university-logo.png"

@@ -6,19 +6,6 @@ cd "$IMAGES_DIR"
 
 echo "Converting non-PNG logos to PNG format..."
 
-# Convert JPEG to PNG
-if [ -f "fudan-university-logo.jpeg" ]; then
-  if command -v sips &> /dev/null; then
-    sips -s format png "fudan-university-logo.jpeg" --out "fudan-university-logo.png"
-    echo "Converted fudan-university-logo.jpeg to PNG"
-  elif command -v convert &> /dev/null; then
-    convert "fudan-university-logo.jpeg" "fudan-university-logo.png"
-    echo "Converted fudan-university-logo.jpeg to PNG"
-  else
-    echo "Warning: No image conversion tool found (sips or convert). Skipping fudan-university-logo.jpeg conversion."
-  fi
-fi
-
 # Convert SVG to PNG (if ImageMagick is available)
 for svg_file in *.svg; do
   if [ -f "$svg_file" ]; then
@@ -46,11 +33,6 @@ if [ -f "trinity-college-dublin-logo.jpg" ]; then
 fi
 
 # Remove old format files after conversion
-if [ -f "fudan-university-logo.png" ] && [ -f "fudan-university-logo.jpeg" ]; then
-  rm "fudan-university-logo.jpeg"
-  echo "Removed original fudan-university-logo.jpeg"
-fi
-
 if [ -f "trinity-college-dublin-logo.png" ] && [ -f "trinity-college-dublin-logo.jpg" ]; then
   rm "trinity-college-dublin-logo.jpg"
   echo "Removed original trinity-college-dublin-logo.jpg"

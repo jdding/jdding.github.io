@@ -4,16 +4,6 @@
 IMAGES_DIR="/Users/timber/Documents/jdding.github.io/assets/images"
 cd "$IMAGES_DIR"
 
-# Convert JPEG to PNG
-if [ -f "fudan-university-logo.jpeg" ]; then
-  if command -v convert &> /dev/null; then
-    convert "fudan-university-logo.jpeg" "fudan-university-logo.png"
-    echo "Converted fudan-university-logo.jpeg to PNG"
-  else
-    echo "ImageMagick not available, keeping original file"
-  fi
-fi
-
 # Convert SVG to PNG (if ImageMagick is available)
 for svg_file in *.svg; do
   if [ -f "$svg_file" ]; then
