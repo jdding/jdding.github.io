@@ -48,7 +48,10 @@
   citation_metadata: true
   topic: llm-agents
   level: b
-  selected: false
+  selected: true
+  image: "/assets/images/AI-Search-Optimization-Infographic.png"
+  selected_label: EMNLP 2026
+  selected_summary: Training-free, inventory-grounded policy optimization for reliable AI search under changing catalog conditions.
   paper_url: https://arxiv.org/abs/2609.04813
   paper_label: arXiv
   digest_url: "/igpo-ai-search/"
@@ -244,7 +247,7 @@
   topic: llm-agents
   program: auditable-retrieval
   level: b
-  selected: true
+  selected: false
   image: "/assets/images/BIS-NL2SQL.webp"
   selected_label: ICSOC 2024
   selected_summary: A benchmark for evaluating service-oriented NL2SQL systems in business intelligence scenarios.
@@ -263,7 +266,7 @@
   topic: recommender-systems
   program: adaptive-recommendation
   level: a
-  selected: true
+  selected: false
   image: "/assets/images/Unified-Low-rank-Compression.webp"
   selected_label: KDD 2024
   selected_summary: A unified compression framework for large CTR models and resource-constrained deployment.
@@ -281,7 +284,10 @@
   authors: Yibo Jin, Tao Wang, Huimin Lin, Mingyang Song, Peiyang Li, Yipeng Ma, Yicheng Shan, Zhengfan Yuan, Cailong Li, Yajing Sun, Tiandeng Wu, Xing Chu, Ruizhi Huan, Li Ma, Xiao You, Wenting Zhou, Yunpeng Ye, Wen Liu, Xiangkun Xu, Yongsheng Zhang, Tiantian Dong, Jiawei Zhu, Zhe Wang, Xijian Ju, Jianxun Song, Haoliang Cheng, Xiaojing Li, Jiandong Ding, Hefei Guo, Zhengyong Zhang
   topic: llm-agents
   level: c
-  selected: false
+  selected: true
+  image: "/assets/images/Scaling-LLM-Serving-P-D-Serve.png"
+  selected_label: arXiv 2024
+  selected_summary: Disaggregated LLM serving that scales prefill and decoding across large clusters.
   paper_url: https://arxiv.org/pdf/2408.08147
   paper_label: PDF
   digest_url: "/pd-serve/"
