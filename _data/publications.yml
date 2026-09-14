@@ -50,6 +50,7 @@
   level: b
   selected: true
   image: "/assets/images/AI-Search-Optimization-Infographic.png"
+  digest_image: true
   selected_label: EMNLP 2026
   selected_summary: Training-free, inventory-grounded policy optimization for reliable AI search under changing catalog conditions.
   paper_url: https://arxiv.org/abs/2609.04813
@@ -286,6 +287,7 @@
   level: c
   selected: true
   image: "/assets/images/Scaling-LLM-Serving-P-D-Serve.png"
+  digest_image: true
   selected_label: arXiv 2024
   selected_summary: Disaggregated LLM serving that scales prefill and decoding across large clusters.
   paper_url: https://arxiv.org/pdf/2408.08147

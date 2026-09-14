@@ -33,6 +33,11 @@
   <section class="research-section">
     <div class="research-shell digest-layout">
       <article class="digest-main">
+        {% if paper.digest_image and paper.image %}
+        <figure class="digest-visual">
+          <img src="{{ paper.image }}" alt="Infographic for {{ paper.title }}" loading="eager" decoding="async">
+        </figure>
+        {% endif %}
         {% if topic %}
         <section class="digest-block">
           <h2>Research area</h2>
