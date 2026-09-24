@@ -30,13 +30,19 @@ description: "Publications by Jiandong Ding (丁建栋) across recommender syste
             {% assign topic = topics | where: "slug", paper.topic | first %}
             {% assign topic_label = paper.topic_label | default: topic.title %}
             {% assign venue_markup = paper.venue %}
-            {% assign venue_segments = paper.venue | split: "(" %}
-            {% if venue_segments.size > 1 and paper.venue_short %}
-              {% assign venue_candidate = venue_segments | last | split: ")" | first %}
-              {% if venue_candidate contains paper.venue_short %}
-                {% assign plain_venue = "(" | append: venue_candidate | append: ")" %}
-                {% capture bold_venue %}(<strong class="venue-abbr">{{ venue_candidate }}</strong>){% endcapture %}
-                {% assign venue_markup = paper.venue | replace_first: plain_venue, bold_venue %}
+            {% if paper.venue_type != "journal" %}
+              {% assign venue_markup = paper.venue_short | append: " " | append: paper.year %}
+            {% else %}
+              {% assign venue_segments = paper.venue | split: "(" %}
+              {% if venue_segments.size > 1 and paper.venue_short %}
+                {% assign venue_candidate = venue_segments | last | split: ")" | first %}
+                {% if venue_candidate contains paper.venue_short %}
+                  {% assign plain_venue = "(" | append: venue_candidate | append: ")" %}
+                  {% capture bold_venue %}(<strong class="venue-abbr">{{ venue_candidate }}</strong>){% endcapture %}
+                  {% assign venue_markup = paper.venue | replace_first: plain_venue, bold_venue %}
+                {% elsif paper.venue_short != paper.venue %}
+                  {% capture venue_markup %}{{ paper.venue }} (<strong class="venue-abbr">{{ paper.venue_short }}</strong>){% endcapture %}
+                {% endif %}
               {% endif %}
             {% endif %}
             <article id="publication-{{ paper.id }}" class="record-item" itemscope itemtype="https://schema.org/ScholarlyArticle">

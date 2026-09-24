@@ -17,7 +17,7 @@
         <span aria-current="page">{{ paper.title }}</span>
       </nav>
       <div class="digest-kicker">
-        {% if paper.venue_short %}{{ paper.venue_short }}{% else %}{{ paper.venue }}{% endif %} {{ paper.year }}{% if topic_label %} / {{ topic_label }}{% endif %}
+        {% if paper.venue_type == "journal" %}{{ paper.venue }}{% else %}{% if paper.venue_short %}{{ paper.venue_short }}{% else %}{{ paper.venue }}{% endif %} {{ paper.year }}{% endif %}{% if topic_label %} / {{ topic_label }}{% endif %}
       </div>
       <h1>{{ paper.title }}</h1>
       <p class="lede">{{ paper.digest_note | default: paper.selected_summary }}</p>
@@ -56,10 +56,10 @@
               <dt>Venue</dt>
               <dd>{{ paper.venue }}</dd>
             </div>
-            <div>
+            {% unless paper.venue_type == "journal" %}<div>
               <dt>Year</dt>
               <dd>{{ paper.year }}</dd>
-            </div>
+            </div>{% endunless %}
             {% if topic %}
             <div>
               <dt>Area</dt>
@@ -81,8 +81,8 @@
 
       <aside class="digest-side">
         <div class="summary-board" aria-label="Digest metadata">
-          <div class="summary-row"><strong>{{ paper.year }}</strong><span>publication year</span></div>
-          {% if paper.venue_short %}<div class="summary-row"><strong>{{ paper.venue_short }}</strong><span>venue</span></div>{% endif %}
+          {% unless paper.venue_type == "journal" %}<div class="summary-row"><strong>{{ paper.year }}</strong><span>publication year</span></div>{% endunless %}
+          {% if paper.venue_type == "journal" %}<div class="summary-row"><strong>{{ paper.venue }}</strong><span>venue</span></div>{% elsif paper.venue_short %}<div class="summary-row"><strong>{{ paper.venue_short }}</strong><span>venue</span></div>{% endif %}
           {% if topic_label %}<div class="summary-row"><strong>{{ topic_label }}</strong><span>research direction</span></div>{% endif %}
         </div>
         {% if topic %}

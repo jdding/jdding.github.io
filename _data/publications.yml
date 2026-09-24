@@ -1,4 +1,35 @@
 ---
+- id: tois-popularity-bias
+  title: Mitigating Popularity Bias in Recommendation with Global Listwise Learning and Progressive Bi-Weighting
+  year: 2026
+  venue: ACM Transactions on Information Systems (TOIS)
+  venue_short: TOIS
+  venue_type: journal
+  authors: Tianyu Zhu, Jiandong Ding, Yansong Shi, Guoqing Chen, Jian-Yun Nie
+  citation_authors:
+    - Tianyu Zhu
+    - Jiandong Ding
+    - Yansong Shi
+    - Guoqing Chen
+    - Jian-Yun Nie
+  topic: recommender-systems
+  program: adaptive-recommendation
+  level: a
+  selected: false
+  image: "/assets/images/TOIS2026.png"
+  digest_image: true
+  selected_label: TOIS 2026 (Accepted)
+  selected_summary: Global listwise learning with progressive bi-weighting to mitigate popularity bias in recommendation.
+  digest_url: "/tois-popularity-bias/"
+  digest_label: Digest
+  digest_note: An accepted ACM Transactions on Information Systems paper studying popularity-bias mitigation through global listwise learning and progressive bi-weighting.
+  digest_blocks:
+    - title: Problem
+      text: Listwise recommendation objectives can be sensitive to misspecified propensities, while aggressive rebalancing can adversely affect representation learning.
+    - title: Approach
+      text: The paper studies global listwise learning under inverse propensity scoring and introduces bi-weighting that smooths propensity estimates with a collection model. Progressive Bi-Weighting is designed to reduce the adverse effects of aggressive rebalancing on learned representations.
+    - title: Analysis and evaluation
+      text: The work analyzes the collection model used for weighting and evaluates the proposed methods against established and recent debiasing baselines.
 - id: sidscope
   title: 'SIDScope: A Diagnostic Resource for Semantic-ID Interfaces in Generative Recommendation'
   year: 2026
@@ -70,8 +101,9 @@
 - id: dygraph
   title: 'Towards Practical Large-scale Dynamical Heterogeneous Graph Embedding: Cold-start Resilient Recommendation'
   year: 2026
-  venue: IEEE Transactions on Knowledge and Data Engineering
+  venue: IEEE Transactions on Knowledge and Data Engineering (TKDE)
   venue_short: TKDE
+  venue_type: journal
   authors: Mabiao Long, Jiaxi Liu, Yufeng Li, Hao Xiong, Junchi Yan, Kefan Wang, Yi Cao, Jiandong Ding
   topic: recommender-systems
   level: a
@@ -173,7 +205,7 @@
     - title: Deployment boundary
       text: End-to-end retraining can reach higher absolute accuracy, while the frozen DeltaGate plugin preserves zero backbone drift, uses 66K trainable parameters, and keeps the adaptation behavior inspectable.
 - id: skillresolve-bench
-  title: 'SkillResolve-Bench: Measuring and Resolving Same-Capability Ambiguity in Agent Skill Retrieval'
+  title: 'Right Family, Wrong Skill: Evaluating Risk Exposure in Agent Skill Retrieval'
   year: 2026
   venue: arXiv preprint arXiv:2606.10388
   venue_short: arXiv
@@ -185,7 +217,7 @@
   paper_label: arXiv
   digest_url: "/skillresolve-bench/"
   digest_label: Digest
-  digest_note: A benchmark-focused study of same-capability ambiguity in agent skill retrieval, where similar-looking skills must be distinguished by execution constraints and task fit.
+  digest_note: A study of same-capability risk exposure in agent skill retrieval, measuring when systems surface a risky sibling despite finding the right capability family.
 - id: hpgr
   title: 'Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations'
   year: 2026
@@ -404,6 +436,7 @@
   year: 2012
   venue: BMC Genomics
   venue_short: BMC Genomics
+  venue_type: journal
   authors: L Wan, Jiandong Ding, T Jin, J Guan, S Zhou
   topic: data-mining
   topic_page: false
@@ -418,8 +451,9 @@
 - id: finding-microrna-targets-plants
   title: 'Finding MicroRNA Targets in Plants: Current Status and Perspectives'
   year: 2012
-  venue: Genomics, Proteomics and Bioinformatics
+  venue: Genomics, Proteomics and Bioinformatics (GPB)
   venue_short: GPB
+  venue_type: journal
   authors: Jiandong Ding, S Zhou, J Guan
   topic: data-mining
   topic_page: false
@@ -436,6 +470,7 @@
   year: 2012
   venue: BMC Genomics
   venue_short: BMC Genomics
+  venue_type: journal
   authors: Jiandong Ding, D Li, U Ohler, J Guan, S Zhou
   topic: data-mining
   topic_page: false
@@ -452,6 +487,7 @@
   year: 2011
   venue: BMC Bioinformatics
   venue_short: BMC Bioinformatics
+  venue_type: journal
   authors: Jiandong Ding, S Zhou, J Guan
   topic: data-mining
   topic_page: false
@@ -484,6 +520,7 @@
   year: 2010
   venue: BMC Bioinformatics
   venue_short: BMC Bioinformatics
+  venue_type: journal
   authors: Jiandong Ding, S Zhou, J Guan
   topic: data-mining
   topic_page: false

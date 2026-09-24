@@ -128,7 +128,7 @@ classes: wide
                 <h3><a class="record-title-link" href="{{ paper.digest_url }}">{{ paper.title }}</a></h3>
                 <div class="record-meta meta-lines">
                   <span>{{ paper.authors }}</span>
-                  <span>{{ paper.venue_short }} {{ paper.year }}</span>
+                  <span>{% if paper.venue_type == "journal" %}{{ paper.venue }}{% else %}{{ paper.venue_short }} {{ paper.year }}{% endif %}</span>
                 </div>
               </div>
               <div class="record-actions">
@@ -164,7 +164,7 @@ classes: wide
           {% endif %}
           <div class="paper-body">
             <div class="paper-meta">
-              <span>{{ paper.selected_label | default: paper.venue_short }}</span>
+              <span>{% if paper.venue_type == "journal" %}{{ paper.venue }}{% else %}{{ paper.selected_label | default: paper.venue_short }}{% endif %}</span>
               <span>{{ program.hero_title | default: topic.title }}</span>
             </div>
             <h3><a class="paper-title-link" href="{{ paper.digest_url }}">{{ paper.title }}</a></h3>

@@ -57,7 +57,7 @@
                 <h3>{% if paper.digest_url %}<a class="record-title-link" href="{{ paper.digest_url }}">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}</h3>
                 <div class="record-meta meta-lines">
                   <span>{{ paper.authors }}</span>
-                  <span>{{ paper.venue_short }} {{ paper.year }}</span>
+                  <span>{% if paper.venue_type == "journal" %}{{ paper.venue }}{% else %}{{ paper.venue_short }} {{ paper.year }}{% endif %}</span>
                 </div>
               </div>
               <div class="record-actions">

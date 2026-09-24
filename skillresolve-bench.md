@@ -1,11 +1,11 @@
 ---
 layout: research
 author_profile: false
-title: "SkillResolve-Bench: Measuring and Resolving Same-Capability Ambiguity in Agent Skill Retrieval"
+title: "Right Family, Wrong Skill: Evaluating Risk Exposure in Agent Skill Retrieval"
 permalink: /skillresolve-bench/
 classes: wide
 publication_id: skillresolve-bench
-description: "A benchmark-focused study of same-capability ambiguity in agent skill retrieval, where similar-looking skills must be distinguished by execution constraints and task fit."
+description: "A study of same-capability risk exposure in agent skill retrieval, measuring when systems surface a risky sibling despite finding the right capability family."
 image: "/assets/images/social/skillresolve-bench-og.png"
 header:
   og_image: "/assets/images/social/skillresolve-bench-og.png"

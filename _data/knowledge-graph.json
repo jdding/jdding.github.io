@@ -76,7 +76,7 @@
     {
       "@id": "https://jdding.github.io/publication/skillresolve-bench",
       "@type": "fabio:Preprint",
-      "rdfs:label": "SkillResolve-Bench: Measuring and Resolving Same-Capability Ambiguity in Agent Skill Retrieval",
+      "rdfs:label": "Right Family, Wrong Skill: Evaluating Risk Exposure in Agent Skill Retrieval",
       "fabio:hasPublicationYear": "2026",
       "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
     },
