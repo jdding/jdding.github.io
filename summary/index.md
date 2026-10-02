@@ -29,7 +29,7 @@ sitemap: false
         </article>
         <article class="topic-card">
           <h3>Full publications</h3>
-          <p>The <a href="/publications/">publication page</a> groups 26 papers by year, with recent work first, paper links, and research notes connected to each entry.</p>
+          <p>The <a href="/publications/">publication page</a> groups {{ site.data.publications | size }} papers by year, with recent work first, paper links, and research notes connected to each entry.</p>
         </article>
         <article class="topic-card">
           <h3>Topic pages</h3>

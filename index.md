@@ -155,7 +155,7 @@ classes: wide
       <div class="paper-grid">
         {% for paper in selected_papers %}
         {% assign topic = topics | where: "slug", paper.topic | first %}
-        {% assign program = programs | where: "id", paper.program | first %}
+        {% if paper.program %}{% assign program = programs | where: "id", paper.program | first %}{% else %}{% assign program = nil %}{% endif %}
         <article class="paper-card {% if forloop.first %}featured{% endif %}">
           {% if paper.image %}
           <div class="paper-image">

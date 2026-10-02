@@ -78,6 +78,7 @@
   publication_date: "2026-09-04"
   citation_metadata: true
   topic: llm-agents
+  program: auditable-retrieval
   level: b
   selected: true
   image: "/assets/images/AI-Search-Optimization-Infographic.png"
@@ -166,7 +167,12 @@
   year: 2026
   venue: Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM '26)
   venue_short: CIKM
-  authors: Jiandong Ding, H Chang, H Qin, T Liu
+  authors: Jiandong Ding, Heng Chang, Huijie Qin, Tianying Liu
+  citation_authors:
+    - Jiandong Ding
+    - Heng Chang
+    - Huijie Qin
+    - Tianying Liu
   topic: recommender-systems
   level: b
   selected: false
@@ -209,7 +215,12 @@
   year: 2026
   venue: arXiv preprint arXiv:2606.10388
   venue_short: arXiv
-  authors: Jiandong Ding
+  authors: Jiandong Ding, Honglei Ji, Ming Liu, Tao Duan
+  citation_authors:
+    - Jiandong Ding
+    - Honglei Ji
+    - Ming Liu
+    - Tao Duan
   topic: llm-agents
   level: c
   selected: false

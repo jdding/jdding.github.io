@@ -30,7 +30,7 @@ sitemap: false
               <div><h3>What are the main research areas?</h3><div class="record-meta">The current research areas are LLM Agents, Recommender Systems, and Data Mining.</div></div>
             </article>
             <article class="record-item">
-              <div><h3>Where are the publications?</h3><div class="record-meta">The <a href="/publications/">Full publications</a> page groups 26 papers by year, with recent work first, paper links, and Digest notes.</div></div>
+              <div><h3>Where are the publications?</h3><div class="record-meta">The <a href="/publications/">Full publications</a> page groups {{ site.data.publications | size }} papers by year, with recent work first, paper links, and Digest notes.</div></div>
             </article>
             <article class="record-item">
               <div><h3>Where are the patents?</h3><div class="record-meta">The <a href="/patents/">Patents</a> page lists 56 patent records, including 21 granted patents and 35 published applications.</div></div>
