@@ -10,7 +10,8 @@ One entry drives every surface:
 
 | Surface | Rendered from |
 |---|---|
-| Homepage news, recent list, selected cards | `index.md` (reads `publications.yml`) |
+| Homepage recent list + selected cards | `index.md` (reads `publications.yml`) |
+| Homepage news items | `index.md`, hand-written dated entries — update manually; they are not derived from `publications.yml` |
 | Full publications list | `publications.md` |
 | Digest page body | `_includes/paper-digest.html` via the shell page |
 | Topic pages | `_includes/research-topic.html` |
