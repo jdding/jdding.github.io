@@ -31,7 +31,8 @@ description: "Publications by Jiandong Ding (丁建栋) across recommender syste
             {% assign topic_label = paper.topic_label | default: topic.title %}
             {% assign venue_markup = paper.venue %}
             {% if paper.venue_type != "journal" %}
-              {% assign venue_markup = paper.venue_short | append: " " | append: paper.year %}
+              {% assign display_year = paper.venue_year | default: paper.year %}
+              {% assign venue_markup = paper.venue_short | append: " " | append: display_year %}
             {% else %}
               {% assign venue_segments = paper.venue | split: "(" %}
               {% if venue_segments.size > 1 and paper.venue_short %}

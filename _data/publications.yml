@@ -6,12 +6,6 @@
   venue_short: TOIS
   venue_type: journal
   authors: Tianyu Zhu, Jiandong Ding, Yansong Shi, Guoqing Chen, Jian-Yun Nie
-  citation_authors:
-    - Tianyu Zhu
-    - Jiandong Ding
-    - Yansong Shi
-    - Guoqing Chen
-    - Jian-Yun Nie
   topic: recommender-systems
   program: adaptive-recommendation
   level: a
@@ -36,13 +30,7 @@
   venue: arXiv preprint arXiv:2608.18779
   venue_short: arXiv
   authors: Jiandong Ding, Huijie Qin, Tiandeng Wu, Yi Cao
-  citation_authors:
-    - Jiandong Ding
-    - Huijie Qin
-    - Tiandeng Wu
-    - Yi Cao
   publication_date: "2026-08-19"
-  citation_metadata: true
   topic: recommender-systems
   level: c
   selected: false
@@ -69,14 +57,6 @@
   venue: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing: Industry Track (EMNLP '26)"
   venue_short: EMNLP
   authors: Wei Zhou, Tiandeng Wu, Jiandong Ding, Zhufeng Fan, Yi Cao
-  citation_authors:
-    - Wei Zhou
-    - Tiandeng Wu
-    - Jiandong Ding
-    - Zhufeng Fan
-    - Yi Cao
-  publication_date: "2026-09-04"
-  citation_metadata: true
   topic: llm-agents
   program: auditable-retrieval
   level: b
@@ -130,20 +110,6 @@
   venue: Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM '26)
   venue_short: CIKM
   authors: Fuyuan Liu, Tiandeng Wu, Yaqun Fang, Wei Zhou, Zehao Zhou, Wenping Chen, Qishun Mei, Jiaxin Zhou, Heng Chang, Yi Cao, Jiandong Ding
-  citation_authors:
-    - Fuyuan Liu
-    - Tiandeng Wu
-    - Yaqun Fang
-    - Wei Zhou
-    - Zehao Zhou
-    - Wenping Chen
-    - Qishun Mei
-    - Jiaxin Zhou
-    - Heng Chang
-    - Yi Cao
-    - Jiandong Ding
-  publication_date: "2026-09-04"
-  citation_metadata: true
   topic: recommender-systems
   level: b
   selected: false
@@ -168,11 +134,6 @@
   venue: Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM '26)
   venue_short: CIKM
   authors: Jiandong Ding, Heng Chang, Huijie Qin, Tianying Liu
-  citation_authors:
-    - Jiandong Ding
-    - Heng Chang
-    - Huijie Qin
-    - Tianying Liu
   topic: recommender-systems
   level: b
   selected: false
@@ -188,7 +149,8 @@
   year: 2026
   venue: Proceedings of the 20th ACM Conference on Recommender Systems (RecSys '26)
   venue_short: RecSys
-  authors: Jiandong Ding, T Liu, F Liu, H Qin, T Wu
+  authors: Jiandong Ding, Tianying Liu, Fuyuan Liu, Huijie Qin, Tiandeng Wu
+  publication_date: "2026-09-27"
   topic: recommender-systems
   program: adaptive-recommendation
   level: a
@@ -198,6 +160,7 @@
   selected_summary: DeltaGate recalibrates frozen sequential recommendation representations for long-gap returning users.
   code_url: https://github.com/jdding/DeltaGate
   code_label: Code
+  doi_url: https://doi.org/10.1145/3773078.3831771
   digest_url: "/deltagate/"
   digest_label: Digest
   digest_note: A RecSys 2026 paper defining zero-observation user reactivation and introducing DeltaGate, a frozen-backbone dimensional gating plugin for long-gap returning users.
@@ -216,11 +179,6 @@
   venue: arXiv preprint arXiv:2606.10388
   venue_short: arXiv
   authors: Jiandong Ding, Honglei Ji, Ming Liu, Tao Duan
-  citation_authors:
-    - Jiandong Ding
-    - Honglei Ji
-    - Ming Liu
-    - Tao Duan
   topic: llm-agents
   level: c
   selected: false
@@ -234,7 +192,7 @@
   year: 2026
   venue: Proceedings of the ACM Web Conference (WWW '26)
   venue_short: WWW
-  authors: Z Chen, H Chang, T Liu, C Zhou, Y Cao, Jiandong Ding, M Liu, B Qin
+  authors: Zerui Chen, Heng Chang, Tianying Liu, Chuantian Zhou, Yi Cao, Jiandong Ding, Ming Liu, Bing Qin
   topic: recommender-systems
   program: adaptive-recommendation
   level: a
@@ -251,7 +209,7 @@
   year: 2026
   venue: Proceedings of the AAAI Conference on Artificial Intelligence (AAAI '26)
   venue_short: AAAI
-  authors: C Jin, Y Ren, H Ma, Y Xia, Y Guan, H Zhang, Jiandong Ding, J Guan, S Zhou
+  authors: Chenghou Jin, Yixin Ren, Hongxu Ma, Yewei Xia, Yi Guan, Hao Zhang, Jiandong Ding, Jihong Guan, Shuigeng Zhou
   topic: recommender-systems
   program: adaptive-recommendation
   level: a
@@ -268,7 +226,7 @@
   year: 2026
   venue: Proceedings of the Nineteenth ACM International Conference on Web Search and Data Mining (WSDM '26)
   venue_short: WSDM
-  authors: K Cheng, H Chang, P Wang, L Gu, Jiandong Ding, Y Cao, J Ye, B Du
+  authors: Ke Cheng, Heng Chang, Pengyang Wang, Liang Gu, Jiandong Ding, Yi Cao, Junchen Ye, Bowen Du
   topic: recommender-systems
   program: adaptive-recommendation
   level: b
@@ -287,7 +245,8 @@
   year: 2025
   venue: International Conference on Service-Oriented Computing (ICSOC '24), Lecture Notes in Computer Science 15405, 357-372
   venue_short: ICSOC
-  authors: B Caglayan, M Wang, JD Kelleher, S Fei, G Tong, Jiandong Ding, P Zhang
+  venue_year: "2024"
+  authors: Bora Caglayan, Mingxue Wang, John D. Kelleher, Shen Fei, Gui Tong, Jiandong Ding, Puchao Zhang
   topic: llm-agents
   program: auditable-retrieval
   level: b
@@ -306,7 +265,7 @@
   year: 2024
   venue: Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)
   venue_short: KDD
-  authors: H Yu, M Fu, Jiandong Ding, Y Zhou, J Wu
+  authors: Hao Yu, Minghao Fu, Jiandong Ding, Yusheng Zhou, Jianxin Wu
   topic: recommender-systems
   program: adaptive-recommendation
   level: a
@@ -344,7 +303,7 @@
   year: 2023
   venue: "Findings of the Association for Computational Linguistics (ACL Findings '23)"
   venue_short: ACL Findings
-  authors: B Wang, L Zhang, D Zhou, Y Cao, Jiandong Ding
+  authors: Boyu Wang, Linhai Zhang, Deyu Zhou, Yi Cao, Jiandong Ding
   topic: data-mining
   level: a
   selected: false
@@ -359,7 +318,7 @@
   year: 2023
   venue: Proceedings of the AAAI Conference on Artificial Intelligence (AAAI '23)
   venue_short: AAAI
-  authors: T Wu, Q Liu, Y Cao, Y Huang, XM Wu, Jiandong Ding
+  authors: Tiandeng Wu, Qijiong Liu, Yi Cao, Yao Huang, Xiao-Ming Wu, Jiandong Ding
   topic: data-mining
   level: a
   selected: false
@@ -374,7 +333,7 @@
   year: 2022
   venue: Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL '22)
   venue_short: NAACL
-  authors: M Zhao, L Zhang, Y Xu, Jiandong Ding, J Guan, S Zhou
+  authors: Minyi Zhao, Lu Zhang, Yi Xu, Jiandong Ding, Jihong Guan, Shuigeng Zhou
   topic: data-mining
   level: b
   selected: false
@@ -389,7 +348,8 @@
   year: 2021
   venue: Advances in Neural Information Processing Systems (NeurIPS '21)
   venue_short: NeurIPS
-  authors: Y Xu, Jiandong Ding, L Zhang, S Zhou
+  venue_type: conference
+  authors: Yi Xu, Jiandong Ding, Lu Zhang, Shuigeng Zhou
   topic: data-mining
   level: a
   selected: false
@@ -404,7 +364,7 @@
   year: 2021
   venue: Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP '21)
   venue_short: EMNLP
-  authors: L Zhang, Jiandong Ding, Y Xu, Y Liu, S Zhou
+  authors: Lu Zhang, Jiandong Ding, Yi Xu, Yingyao Liu, Shuigeng Zhou
   topic: data-mining
   level: b
   selected: false
@@ -419,7 +379,7 @@
   year: 2021
   venue: ICIS 2021 Proceedings (ICIS '21)
   venue_short: ICIS
-  authors: L Wang, Y He, Jiandong Ding, N Huang, Y Hong, X Guo, D Liu, G Chen
+  authors: Lingli Wang, Yumei He, Jiandong Ding, Nina Huang, Yili Hong, Xunhua Guo, De Liu, Guoqing Chen
   topic: data-mining
   level: a
   selected: false
@@ -433,7 +393,7 @@
   year: 2021
   venue: ICIS 2021 Proceedings (ICIS '21)
   venue_short: ICIS
-  authors: Y He, L Wang, N Huang, Y Hong, Jiandong Ding, Y Sun, Y Liu
+  authors: Yumei He, Lingli Wang, Nina Huang, Yili Hong, Jiandong Ding, Yan Sun, Yingyao Liu
   topic: data-mining
   level: a
   selected: false
@@ -448,7 +408,7 @@
   venue: BMC Genomics
   venue_short: BMC Genomics
   venue_type: journal
-  authors: L Wan, Jiandong Ding, T Jin, J Guan, S Zhou
+  authors: Linxia Wan, Jiandong Ding, Ting Jin, Jihong Guan, Shuigeng Zhou
   topic: data-mining
   topic_page: false
   level: b
@@ -465,7 +425,7 @@
   venue: Genomics, Proteomics and Bioinformatics (GPB)
   venue_short: GPB
   venue_type: journal
-  authors: Jiandong Ding, S Zhou, J Guan
+  authors: Jiandong Ding, Shuigeng Zhou, Jihong Guan
   topic: data-mining
   topic_page: false
   level: a
@@ -482,7 +442,7 @@
   venue: BMC Genomics
   venue_short: BMC Genomics
   venue_type: journal
-  authors: Jiandong Ding, D Li, U Ohler, J Guan, S Zhou
+  authors: Jiandong Ding, Danqing Li, Uwe Ohler, Jihong Guan, Shuigeng Zhou
   topic: data-mining
   topic_page: false
   level: b
@@ -499,7 +459,7 @@
   venue: BMC Bioinformatics
   venue_short: BMC Bioinformatics
   venue_type: journal
-  authors: Jiandong Ding, S Zhou, J Guan
+  authors: Jiandong Ding, Shuigeng Zhou, Jihong Guan
   topic: data-mining
   topic_page: false
   level: a
@@ -515,7 +475,7 @@
   year: 2011
   venue: IEEE International Conference on Bioinformatics and Biomedicine (BIBM '11)
   venue_short: BIBM
-  authors: Jiandong Ding, S Yu, U Ohler, J Guan, S Zhou
+  authors: Jiandong Ding, Shusi Yu, Uwe Ohler, Jihong Guan, Shuigeng Zhou
   topic: data-mining
   topic_page: false
   level: b
@@ -532,7 +492,7 @@
   venue: BMC Bioinformatics
   venue_short: BMC Bioinformatics
   venue_type: journal
-  authors: Jiandong Ding, S Zhou, J Guan
+  authors: Jiandong Ding, Shuigeng Zhou, Jihong Guan
   topic: data-mining
   topic_page: false
   level: a

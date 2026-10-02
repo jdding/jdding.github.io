@@ -17,7 +17,7 @@
         <span aria-current="page">{{ paper.title }}</span>
       </nav>
       <div class="digest-kicker">
-        {% if paper.venue_type == "journal" %}{{ paper.venue }}{% else %}{% if paper.venue_short %}{{ paper.venue_short }}{% else %}{{ paper.venue }}{% endif %} {{ paper.year }}{% endif %}{% if topic_label %} / {{ topic_label }}{% endif %}
+        {% if paper.venue_type == "journal" %}{{ paper.venue }}{% else %}{% if paper.venue_short %}{{ paper.venue_short }}{% else %}{{ paper.venue }}{% endif %} {{ paper.venue_year | default: paper.year }}{% endif %}{% if topic_label %} / {{ topic_label }}{% endif %}
       </div>
       <h1>{{ paper.title }}</h1>
       <p class="lede">{{ paper.digest_note | default: paper.selected_summary }}</p>
@@ -58,7 +58,7 @@
             </div>
             {% unless paper.venue_type == "journal" %}<div>
               <dt>Year</dt>
-              <dd>{{ paper.year }}</dd>
+              <dd>{{ paper.venue_year | default: paper.year }}</dd>
             </div>{% endunless %}
             {% if topic %}
             <div>
@@ -81,7 +81,7 @@
 
       <aside class="digest-side">
         <div class="summary-board" aria-label="Digest metadata">
-          {% unless paper.venue_type == "journal" %}<div class="summary-row"><strong>{{ paper.year }}</strong><span>publication year</span></div>{% endunless %}
+          {% unless paper.venue_type == "journal" %}<div class="summary-row"><strong>{{ paper.venue_year | default: paper.year }}</strong><span>publication year</span></div>{% endunless %}
           {% if paper.venue_type == "journal" %}<div class="summary-row"><strong>{{ paper.venue }}</strong><span>venue</span></div>{% elsif paper.venue_short %}<div class="summary-row"><strong>{{ paper.venue_short }}</strong><span>venue</span></div>{% endif %}
           {% if topic_label %}<div class="summary-row"><strong>{{ topic_label }}</strong><span>research direction</span></div>{% endif %}
         </div>
@@ -115,8 +115,7 @@
   "description": {{ paper.digest_note | default: paper.selected_summary | jsonify }},
   "creditText": {{ paper.authors | jsonify }},
   "author": [
-    {% assign structured_authors = paper.citation_authors %}
-    {% unless structured_authors %}{% assign structured_authors = paper.authors | split: "," %}{% endunless %}
+    {% assign structured_authors = paper.authors | split: "," %}
     {% for structured_author in structured_authors %}
       {% assign author_name = structured_author | strip %}
       {% if author_name == "Jiandong Ding" %}{

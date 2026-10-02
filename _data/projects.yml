@@ -19,7 +19,7 @@
   program: auditable-retrieval
   title: Semantic-ID auditing
   label: Semantic IDs
-  topic: llm-agents
+  topic: recommender-systems
   summary: Auditing semantic-ID mappings used by generative recommendation systems before expensive downstream training and deployment decisions.
 
 - id: agent-skill-retrieval

@@ -128,7 +128,7 @@ classes: wide
                 <h3><a class="record-title-link" href="{{ paper.digest_url }}">{{ paper.title }}</a></h3>
                 <div class="record-meta meta-lines">
                   <span>{{ paper.authors }}</span>
-                  <span>{% if paper.venue_type == "journal" %}{{ paper.venue }}{% else %}{{ paper.venue_short }} {{ paper.year }}{% endif %}</span>
+                  <span>{% if paper.venue_type == "journal" %}{{ paper.venue }}{% else %}{{ paper.venue_short }} {{ paper.venue_year | default: paper.year }}{% endif %}</span>
                 </div>
               </div>
               <div class="record-actions">

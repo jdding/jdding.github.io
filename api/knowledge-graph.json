@@ -77,7 +77,6 @@ permalink: /api/knowledge-graph.json
       "@id": "{{ site.url }}/#project-{{ project.id }}",
       "@type": "ResearchProject",
       "name": {{ project.title | jsonify }},
-      "url": "{{ site.url }}/#project-{{ project.id }}",
       "description": {{ project.summary | jsonify }},
       "about": { "@id": "{{ site.url }}/topics/{{ project.topic }}/#topic" },
       "isPartOf": { "@id": "{{ site.url }}/#program-{{ project.program }}" },
@@ -89,7 +88,20 @@ permalink: /api/knowledge-graph.json
       "headline": {{ paper.title | jsonify }},
       "name": {{ paper.title | jsonify }},
       "description": {{ paper.digest_note | default: paper.selected_summary | jsonify }},
-      "author": { "@id": "{{ site.url }}/#person" },
+      "author": [
+        {% assign graph_authors = paper.authors | split: "," %}
+        {% for graph_author in graph_authors %}
+          {% assign graph_author_name = graph_author | strip %}
+          {% if graph_author_name == "Jiandong Ding" %}{
+        "@type": "Person",
+        "@id": "{{ site.url }}/#person",
+        "name": "Jiandong Ding"
+      }{% else %}{
+        "@type": "Person",
+        "name": {{ graph_author_name | jsonify }}
+      }{% endif %}{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ],
       "creditText": {{ paper.authors | jsonify }},
       "datePublished": {{ published_date | jsonify }},
       "isPartOf": {
