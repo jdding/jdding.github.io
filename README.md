@@ -18,7 +18,7 @@
 
 - 期刊显示「全称（缩写）」不带年份；会议显示「缩写 + 会议年份」（`venue_year` 优先于 `year`）；Accepted 作为状态单独显示。
 - 作者以 `authors` 字符串为唯一来源（完整姓名、真实顺序）；`citation_*` 标签、JSON-LD、API 图谱都从它派生，不要再维护第二份作者列表。
-- 计数（FAQ / Summary / 主题页 stats）从数据派生；显示子集时说明口径。
+- 计数：FAQ / Summary 的论文计数从 `publications.yml` 派生；主题页 stats 维护在 `_data/topics.yml`，调整论文数据时需同步核对。显示子集时说明口径。
 - 6 篇 Selected papers 由 `selected: true` 控制，成员与数量变动需站主决定。
 - 论文 URL 稳定：改名不迁移既有 permalink。
 
