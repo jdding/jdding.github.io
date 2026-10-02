@@ -60,6 +60,29 @@ description: "Research collaboration, student research internship, invited talk,
     </div>
   </section>
 
+  <section id="research-intern" class="research-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>Research internships</h2>
+        <p>I recruit student research interns into the research directions on this site. Logistics such as location, working mode, and duration are discussed individually during the first conversation.</p>
+      </div>
+      <div class="topic-page-grid">
+        <article class="topic-card">
+          <h3>Research themes</h3>
+          <p>Reliable recommendation under changing users, catalogs, and deployment constraints; auditable AI retrieval, including AI search, agent skill retrieval, and Semantic-ID interface diagnostics; and data-mining methods for weak and noisy evidence.</p>
+        </article>
+        <article class="topic-card">
+          <h3>Background and skills</h3>
+          <p>Solid machine-learning fundamentals and hands-on Python experience. Interest in recommendation, retrieval, or LLM systems matters more than a specific prior topic; published research or engineering work on large-scale systems is a plus.</p>
+        </article>
+        <article class="topic-card">
+          <h3>How to apply</h3>
+          <p>Email dingjiandong2@huawei.com with the subject starting "Research Intern Application". Include your CV, the period you are available, one or two research or code samples (links are fine), and the direction you want to work on.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="research-section">
     <div class="research-shell">
       <div class="section-head">

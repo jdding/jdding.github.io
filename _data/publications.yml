@@ -62,6 +62,8 @@
   level: b
   selected: true
   image: "/assets/images/AI-Search-Optimization-Infographic.png"
+  image_webp: "/assets/images/AI-Search-Optimization-Infographic.webp"
+  card_image: "/assets/images/AI-Search-Optimization-Infographic-card.webp"
   digest_image: true
   selected_label: EMNLP 2026
   selected_summary: Training-free, inventory-grounded policy optimization for reliable AI search under changing catalog conditions.
@@ -289,6 +291,8 @@
   level: c
   selected: true
   image: "/assets/images/Scaling-LLM-Serving-P-D-Serve.png"
+  image_webp: "/assets/images/Scaling-LLM-Serving-P-D-Serve.webp"
+  card_image: "/assets/images/Scaling-LLM-Serving-P-D-Serve-card.webp"
   digest_image: true
   selected_label: arXiv 2024
   selected_summary: Disaggregated LLM serving that scales prefill and decoding across large clusters.
@@ -337,7 +341,7 @@
   topic: data-mining
   level: b
   selected: false
-  paper_url: https://aclanthology.org/2022.naacl-main.349
+  paper_url: https://aclanthology.org/2022.naacl-main.349.pdf
   paper_label: PDF
   digest_url: "/naacl-epida/"
   digest_label: Digest
@@ -384,7 +388,7 @@
   level: a
   selected: false
   paper_url: https://aisel.aisnet.org/icis2021/hci_robot/hci_robot/3/
-  paper_label: PDF
+  paper_label: Publisher
   digest_url: "/ai-assistance-live-streaming/"
   digest_label: Digest
   digest_note: A field-experiment study of AI assistance in live streaming, focusing on how algorithmic support changes creator behavior and platform outcomes.
@@ -398,7 +402,7 @@
   level: a
   selected: false
   paper_url: https://aisel.aisnet.org/icis2021/data_analytics/data_analytics/2/
-  paper_label: PDF
+  paper_label: Publisher
   digest_url: "/sales-data-live-streaming/"
   digest_label: Digest
   digest_note: A live-streaming field study on how real-time sales analytics affects seller behavior and selling performance.
@@ -414,7 +418,7 @@
   level: b
   selected: false
   paper_url: https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-13-S8-S15
-  paper_label: PDF
+  paper_label: Publisher
   digest_url: "/large-scale-mirna-clustering/"
   digest_label: Digest
   doi_url: https://doi.org/10.1186/1471-2164-13-s8-s15
@@ -431,7 +435,7 @@
   level: a
   selected: false
   paper_url: https://academic.oup.com/gpb/article/10/5/264/7221796
-  paper_label: PDF
+  paper_label: Publisher
   digest_url: "/finding-microrna-targets-plants/"
   digest_label: Digest
   doi_url: https://doi.org/10.1016/j.gpb.2012.09.003
@@ -447,8 +451,8 @@
   topic_page: false
   level: b
   selected: false
-  paper_url: https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-13-S3
-  paper_label: PDF
+  paper_url: https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-13-S3-S3
+  paper_label: Publisher
   digest_url: "/genome-wide-mirna-target-interactions/"
   digest_label: Digest
   doi_url: https://doi.org/10.1186/1471-2164-13-s3-s3
@@ -481,7 +485,7 @@
   level: b
   selected: false
   paper_url: https://ieeexplore.ieee.org/document/6120415/
-  paper_label: PDF
+  paper_label: Publisher
   digest_url: "/imirtp/"
   digest_label: Digest
   doi_url: https://doi.org/10.1109/bibm.2011.13

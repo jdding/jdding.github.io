@@ -50,6 +50,76 @@ classes: wide
     </div>
   </section>
 
+  <section id="updates" class="research-section">
+    <div class="research-shell">
+      <div class="section-head section-head-row">
+        <div>
+          <span class="section-label">News</span>
+          <h2>Recent updates</h2>
+        </div>
+        <a class="text-link" href="/publications/">All publications</a>
+      </div>
+      <div class="record-list">
+        <section class="year-block">
+          <div class="year-label">2026</div>
+          <div class="record-stack">
+            <article class="record-item">
+              <div>
+                <h3>DeltaGate published in the RecSys 2026 proceedings</h3>
+                <div class="record-meta meta-lines">
+                  <span>Zero-Observation User Reactivation with Gap-Driven Dimensional Gating</span>
+                  <span>2026-09-27 · proceedings online, DOI 10.1145/3773078.3831771</span>
+                </div>
+              </div>
+              <div class="record-actions">
+                <a class="pill digest" href="/deltagate/">Digest</a>
+                <a class="pill link" href="https://github.com/jdding/DeltaGate">Code</a>
+              </div>
+            </article>
+            <article class="record-item">
+              <div>
+                <h3>Popularity-bias mitigation paper accepted at ACM TOIS</h3>
+                <div class="record-meta meta-lines">
+                  <span>Mitigating Popularity Bias in Recommendation with Global Listwise Learning and Progressive Bi-Weighting</span>
+                  <span>2026-09-22 · accepted, not yet published</span>
+                </div>
+              </div>
+              <div class="record-actions">
+                <a class="pill digest" href="/tois-popularity-bias/">Digest</a>
+              </div>
+            </article>
+            <article class="record-item">
+              <div>
+                <h3>IGPO accepted to the EMNLP 2026 Industry Track; arXiv version available</h3>
+                <div class="record-meta meta-lines">
+                  <span>Inventory-Grounded Policy-Level Optimization for Training-Free AI Search</span>
+                  <span>2026-09-04 · arXiv 2609.04813</span>
+                </div>
+              </div>
+              <div class="record-actions">
+                <a class="pill digest" href="/igpo-ai-search/">Digest</a>
+                <a class="pill link" href="https://arxiv.org/abs/2609.04813">arXiv</a>
+              </div>
+            </article>
+            <article class="record-item">
+              <div>
+                <h3>SIDScope released as an arXiv resource paper with open code</h3>
+                <div class="record-meta meta-lines">
+                  <span>SIDScope: A Diagnostic Resource for Semantic-ID Interfaces in Generative Recommendation</span>
+                  <span>2026-08-19 · arXiv 2608.18779</span>
+                </div>
+              </div>
+              <div class="record-actions">
+                <a class="pill digest" href="/sidscope/">Digest</a>
+                <a class="pill link" href="https://github.com/jdding/sidscope">Code</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
   <section id="research" class="research-section">
     <div class="research-shell">
       <div class="section-head">
@@ -159,7 +229,7 @@ classes: wide
         <article class="paper-card {% if forloop.first %}featured{% endif %}">
           {% if paper.image %}
           <div class="paper-image">
-            <img src="{{ paper.image }}" alt="{{ paper.title }}" loading="lazy">
+            <img src="{% if paper.card_image %}{{ paper.card_image }}{% else %}{{ paper.image }}{% endif %}" alt="{{ paper.title }}" loading="lazy">
           </div>
           {% endif %}
           <div class="paper-body">
@@ -185,7 +255,7 @@ classes: wide
         <div class="contact-intro">
           <span class="section-label">Contact</span>
           <h2>Collaboration and exchange</h2>
-          <p>I welcome focused conversations around recommender systems, LLM agents, data mining, shared benchmarks, and applied research problems. I am also recruiting student research interns; please get in touch if your interests align with these areas.</p>
+          <p>I welcome focused conversations around recommender systems, LLM agents, data mining, shared benchmarks, and applied research problems. I am also recruiting student research interns; see the <a href="/collaborations/#research-intern">Research Intern section</a> for how to apply.</p>
           <a class="text-link" href="/collaborations/">Collaboration record</a>
         </div>
         <div class="contact-links contact-links-primary">

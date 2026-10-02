@@ -70,6 +70,7 @@ description: "Publications by Jiandong Ding (丁建栋) across recommender syste
                 {% unless paper.hide_paper_action %}
                 {% if paper.paper_url %}<a class="pill link" href="{{ paper.paper_url }}">{{ paper.paper_label | default: "Paper" }}</a>{% endif %}
                 {% endunless %}
+                {% unless paper.paper_url %}{% if paper.doi_url %}<a class="pill link" href="{{ paper.doi_url }}">DOI</a>{% endif %}{% endunless %}
                 {% if paper.digest_url %}<a class="pill digest" href="{{ paper.digest_url }}">{{ paper.digest_label | default: "Digest" }}</a>{% endif %}
                 {% if paper.code_url %}<a class="pill link" href="{{ paper.code_url }}">{{ paper.code_label | default: "Code" }}</a>{% endif %}
               </div>

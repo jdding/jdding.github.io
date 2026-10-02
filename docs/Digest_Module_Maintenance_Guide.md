@@ -1,197 +1,49 @@
-# Paper Digest & Highlights Module - Maintenance Guide
+# Publication Data & Digest Module — Maintenance Guide
 
-> Last updated: 2026-03-16 | Maintainer: Jiandong Ding
+> Updated: 2026-10-02 | Maintainer: Jiandong Ding
 
----
+## 1. How the module works
 
-## 1. Overview
+All publication content lives in ONE data file: `_data/publications.yml`. There are no per-paper content pages to edit — each Digest page is a thin shell in the repo root (e.g. `deltagate.md`) whose front matter only sets `permalink`, `publication_id`, and `description`. The shared include `_includes/paper-digest.html` renders everything else.
 
-This module encompasses two core upgrades to the personal academic homepage (jdding.github.io):
+One entry drives every surface:
 
-### a) Paper Digest Pages
-
-Replaced traditional bare PDF links with **rich, four-section deep-dive pages** ("Pain Point - Breakthrough - Impact - Reflection") for 26 publication records. Each page is a standalone `.md` file in the project root with a dedicated permalink (e.g., `/hpgr`, `/rpe4rec`).
-
-**Current coverage (26 papers):**
-
-| File | Venue | Permalink |
-|---|---|---|
-| `sidscope.md` | arXiv 2026 | `/sidscope` |
-| `igpo-ai-search.md` | EMNLP 2026 Industry Track | `/igpo-ai-search` |
-| `deltagate.md` | RecSys 2026 | `/deltagate` |
-| `skillresolve-bench.md` | arXiv 2026 | `/skillresolve-bench` |
-| `sidinspector.md` | CIKM 2026 | `/sidinspector` |
-| `hpgr.md` | WWW 2026 | `/hpgr` |
-| `task-dependency-graphs.md` | CIKM 2026 | `/task-dependency-graphs` |
-| `aaai-difl.md` | AAAI 2026 | `/aaai-difl` |
-| `rpe4rec.md` | WSDM 2026 | `/rpe4rec` |
-| `bis-nl2sql.md` | ICSOC 2024 | `/bis-nl2sql` |
-| `kdd-ctr.md` | KDD 2024 | `/kdd-ctr` |
-| `dygraph.md` | TKDE 2026 | `/dygraph` |
-| `pd-serve.md` | arXiv 2024 | `/pd-serve` |
-| `continual-gcn.md` | AAAI 2023 | `/continual-gcn` |
-| `acl-topic.md` | ACL 2023 | `/acl-topic` |
-| `naacl-epida.md` | NAACL 2022 | `/naacl-epida` |
-| `emnlp-keygraph.md` | EMNLP 2021 | `/emnlp-keygraph` |
-| `neurips-dpssl.md` | NeurIPS 2021 | `/neurips-dpssl` |
-| `ai-assistance-live-streaming.md` | ICIS 2021 | `/ai-assistance-live-streaming` |
-| `sales-data-live-streaming.md` | ICIS 2021 | `/sales-data-live-streaming` |
-| `large-scale-mirna-clustering.md` | BMC Genomics 2012 | `/large-scale-mirna-clustering` |
-| `finding-microrna-targets-plants.md` | GPB 2012 | `/finding-microrna-targets-plants` |
-| `genome-wide-mirna-target-interactions.md` | BMC Genomics 2012 | `/genome-wide-mirna-target-interactions` |
-| `mirfam.md` | BIBM 2011 | `/mirfam` |
-| `imirtp.md` | BIBM 2011 | `/imirtp` |
-| `mirensvm.md` | BIBM 2010 | `/mirensvm` |
-
-### b) Highlights Infographic Upgrade
-
-The `index.md` Research Highlights section's paper thumbnails have been fully replaced with **AI-generated high-resolution infographics** (produced via NotebookLM). These are stored as descriptive-name PNGs under `assets/images/`.
-
-| Paper | Image File |
+| Surface | Rendered from |
 |---|---|
-| WWW 2026 HPGR | `Beyond-the-Flat-Sequence.png` |
-| AAAI 2026 DIFL | `Invariant-Feature-Learning.png` |
-| WSDM 2026 RPE4Rec | `RPE4Rec.png` |
-| KDD 2024 CTR | `Unified-Low-rank-Compression.png` |
-| ICSOC 2024 BIS | `BIS-NL2SQL.png` |
-| NeurIPS 2021 DP-SSL | `DP-SSL.png` |
+| Homepage news, recent list, selected cards | `index.md` (reads `publications.yml`) |
+| Full publications list | `publications.md` |
+| Digest page body | `_includes/paper-digest.html` via the shell page |
+| Topic pages | `_includes/research-topic.html` |
+| `citation_*` meta tags | `_includes/head/custom.html` |
+| Digest JSON-LD | `_includes/paper-digest.html` |
+| `/api/publications.json`, `/api/knowledge-graph.json` | Jekyll data rendering at build time |
 
----
+Derived values you must NOT hardcode anywhere: paper counts (FAQ, Summary), author lists in metadata, date/year displays (`venue_year | default: year`), author arrays in the API graph.
 
-## 2. Architecture & SEO Specifications
+## 2. Field reference (`_data/publications.yml`)
 
-### CSS Component Library
+- `id` — stable entity ID and digest shell filename. Never rename an existing `permalink`.
+- `title`, `authors` — authors are one comma-separated string of FULL names in the published order; every metadata surface derives from it. Do not add a second author list.
+- `year` — grouping year (Full list sections, machine-readable records). `venue_year` — conference year when it differs from the proceedings year (e.g. ICSOC '24 conference, 2025 proceedings).
+- `venue_type: journal` — venue renders as full name (abbreviation), no year; conferences render as `venue_short year`. Accepted is expressed via `selected_label` containing "(Accepted)", never by changing the venue string.
+- `publication_date` — set ONLY when verified: the arXiv posting date for preprints, or the registered proceedings date. Do not use an arXiv date as a formal conference publication date.
+- `paper_url` / `paper_label` — the reading entry. The label must match the target: real PDF → "PDF", arXiv abstract → "arXiv", publisher landing page → "Publisher", DOI → "DOI". Verify what the URL actually serves before labeling.
+- `doi_url` — publisher or DataCite DOI only; add after confirming it resolves. CIKM 2026 proceedings DOIs are NOT yet registered — the TDG DOI (`10.1145/3799682.3839876`) is forthcoming, and the SIDInspector DOI (`10.1145/3799682.3840174`) should be added once it resolves.
+- `digest_blocks` — list of `{title, text}` rendered as the digest body. Ground every claim in public evidence; state data/conditions; never present offline results as verified online gains.
+- `image` / `card_image` / `image_webp` / `digest_image` — homepage card and digest visuals. Use WebP variants for large graphics (`-card.webp` ≈ 800px for cards, `.webp` ≈ 1600px for digest bodies) and keep the original in the repo.
+- `selected: true` — homepage Selected papers. Exactly 6 members; changes require the site owner's decision.
 
-All Digest pages share a common set of atomic CSS classes, currently **inlined** within each `.md` file's `<style>` block:
+## 3. SOP: add or update a paper
 
-| Class | Purpose |
-|---|---|
-| `.page__title` | Hidden via `display: none !important` to suppress Jekyll's default title |
-| `.digest-container` | Root wrapper. `font-size: 0.9rem`, system font stack |
-| `.digest-hero` | Top card with left accent border. Contains title, meta, and TL;DR |
-| `.hero-title` | Paper full title. `font-size: 1.3em`, `font-weight: 800` |
-| `.hero-meta` | Venue tag + author line |
-| `.hero-tldr` | One-line summary block with light background |
-| `.digest-section` | Each of the four content sections |
-| `.section-title` | Section heading with bottom border |
-| `.callout` | Highlighted block base class |
-| `.callout-red` | Red-tinted callout for pain points / problems |
-| `.callout-green` | Green-tinted callout for breakthroughs / gains |
-| `.tag` | Inline badge (e.g., venue). Variants: `.tag-red`, `.tag-blue`, `.tag-gray`, `.tag-arxiv` |
+1. Add or modify the entry in `_data/publications.yml` — full author names, verified links, correct status.
+2. Create the digest shell `[id].md` in the repo root (`permalink`, `publication_id`, `description`); the template does the rest.
+3. Write `digest_blocks`: problem → approach → evidence (with data, baselines, conditions) → takeaway. If there is no public result, say less rather than fill.
+4. `bundle exec jekyll build`, then check the RENDERED HTML — list row, digest page, `citation_*` tags, JSON-LD — not just the YAML diff.
+5. Checklist: title ✓ authors and order ✓ status ✓ reading links and labels ✓ year / `venue_year` ✓ counts ✓ selected members untouched ✓ `/api/knowledge-graph.json` ✓ sitemap contains the page ✓.
+6. Release through the staged process in the README: local build + diff → push → Pages build → live HTTP → Search Console. No step substitutes for the next.
 
-### Responsive Breakpoint
+## 4. Known pending items
 
-All pages include the following media query:
-
-```css
-@media (max-width: 768px) {
-  .digest-hero { padding: 15px; margin-bottom: 25px; }
-  .hero-title { font-size: 1.15em; }
-  .section-title { font-size: 1.05em; }
-  .callout { padding: 12px 15px; }
-}
-```
-
-### GEO (Generative Engine Optimization)
-
-Every Digest page **must** include:
-
-**1. YAML Front Matter** with `description` and `keywords`:
-
-```yaml
----
-layout: single
-author_profile: true
-title: "Paper Digest: [Short Title]"
-permalink: /[slug]
-classes: wide
-description: "[TL;DR plain text, no HTML]"
-keywords: "Jiandong Ding, Recommender Systems, Huawei, [2-3 core technical keywords]"
----
-```
-
-**2. JSON-LD structured data** appended at the very bottom of the file:
-
-```html
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ScholarlyArticle",
-  "headline": "[Full paper title]",
-  "author": [{
-    "@type": "Person",
-    "name": "Jiandong Ding",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "Huawei Technologies Co. Ltd."
-    }
-  }],
-  "description": "[TL;DR plain text]",
-  "about": {
-    "@type": "Thing",
-    "name": "[Research domain, e.g., Recommender Systems and Graph Neural Networks]"
-  }
-}
-</script>
-```
-
----
-
-## 3. SOP: Adding a New Paper Digest
-
-### Step 1 - Create the Markdown file
-
-Create `[slug].md` in the **project root**. Configure YAML Front Matter with all GEO fields (`layout`, `author_profile`, `title`, `permalink`, `classes`, `description`, `keywords`).
-
-### Step 2 - Copy the CSS block
-
-Copy the `<style>...</style>` block from any existing Digest file (e.g., `hpgr.md`). It includes `.page__title` hiding, all component classes, and the `768px` media query. Do not modify it.
-
-### Step 3 - Write the four-section HTML body
-
-Follow the established structure:
-
-```
-<div class="digest-container">
-  <div class="digest-hero">         <!-- Title + Meta + TL;DR -->
-  <div class="digest-section">      <!-- Section 1: Pain Point -->
-  <div class="digest-section">      <!-- Section 2: Breakthrough -->
-  <div class="digest-section">      <!-- Section 3: Impact / Results -->
-  <div class="digest-section">      <!-- Section 4: Reflection / Takeaway -->
-</div>
-```
-
-Append the `<script type="application/ld+json">` block after the closing `</div>`.
-
-### Step 4 - Link from publications.md
-
-Insert the gold Digest button in the corresponding paper's `<div class="pub-meta">`:
-
-```html
-<a href="/[slug]" class="pub-link" style="background:#fefcbf; color:#b7791f; border:1px solid #f6e05e; margin-left:6px;">[Digest]</a>
-```
-
-### Step 5 - (If Highlight paper) Update index.md infographic
-
-1. Generate a NotebookLM infographic for the paper.
-2. Save it as a descriptive-name PNG (e.g., `Paper-Short-Name.png`).
-3. Copy to `assets/images/`.
-4. Update the `<img src="...">` path in the corresponding `<article class="paper-card">` block in `index.md`.
-
----
-
-## 4. TODOs & Future Improvements
-
-### CSS Decoupling (Priority: Medium)
-
-The current `<style>` block is **duplicated across all 12 Digest files**. During a future site refactor, extract the shared CSS into `assets/css/main.scss` (or a dedicated `_sass/_digest.scss` partial) and remove the inline blocks. This will:
-
-- Eliminate ~90 lines of duplicated CSS per file
-- Enable global style updates from a single source
-- Reduce total repository size
-
-### Other Considerations
-
-- **Image optimization**: The 6 Highlight PNGs average ~5.5 MB each. Consider converting to WebP or adding responsive `srcset` attributes for faster page loads.
-- **Automated testing**: Consider a CI script that validates all Digest permalinks resolve correctly and all JSON-LD blocks pass schema.org validation.
-- **Template extraction**: If the number of Digest pages grows beyond 20, consider creating a Jekyll `_layouts/digest.html` layout to further reduce per-file boilerplate.
+- CIKM 2026 proceedings DOIs pending registration (see field reference).
+- `_data/knowledge-graph.json` (manual FOAF copy) is retained until external consumers are confirmed; the live graph is `/api/knowledge-graph.json`.
+- Search Console sitemap status should read "Success" after the resubmission; track the key-URL indexing list separately.

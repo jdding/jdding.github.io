@@ -1,56 +1,52 @@
 # jdding.github.io
 
-个人学术主页，基于 **Jekyll** 与 **Minimal Mistakes**（`remote_theme`）构建，并部署在 **GitHub Pages** 上。
+个人学术主页，基于 **Jekyll** 与 **Minimal Mistakes**（`remote_theme`）构建，部署在 **GitHub Pages**。
 
-## 项目简介
+## 架构
 
-这是丁建栋（Jiandong Ding）的个人学术网站，展示研究成果、论文发表、专利信息以及全球研究合作网络。网站托管在 GitHub Pages 上，使用 Jekyll 静态网站生成器和 Minimal Mistakes 主题，特别强化了GEO（地理/机构曝光优化）功能。
+站点是数据驱动的：文献、主题、项目的唯一数据源在 `_data/`，页面与共享模板只负责渲染。不要在页面里写死能从数据派生的内容。
 
-## 项目结构
+- `_data/publications.yml` — 论文唯一数据源。作者、年份、状态、阅读链接、Digest 正文都在这里。
+- `_includes/paper-digest.html` — 共享 Digest 模板；每个 Digest 页是根目录一个薄壳 `.md`（front matter 带 `publication_id` 与 `permalink`）。
+- `_includes/research-topic.html` + `topics/` — 三个主题页。
+- `index.md` — 首页：近期动态、研究 program、公开代码、近期论文、精选卡片、联系方式。
+- `publications.md` — Full publications（按年分组，计数随数据）。
+- `api/` — 机器可读端点，从 `_data/` 动态生成（`/api/knowledge-graph.json` 等）。
+- `assets/css/research-system.css` — 站点样式（layout 中带版本参数引用）。
 
+## 内容规则速记
+
+- 期刊显示「全称（缩写）」不带年份；会议显示「缩写 + 会议年份」（`venue_year` 优先于 `year`）；Accepted 作为状态单独显示。
+- 作者以 `authors` 字符串为唯一来源（完整姓名、真实顺序）；`citation_*` 标签、JSON-LD、API 图谱都从它派生，不要再维护第二份作者列表。
+- 计数（FAQ / Summary / 主题页 stats）从数据派生；显示子集时说明口径。
+- 6 篇 Selected papers 由 `selected: true` 控制，成员与数量变动需站主决定。
+- 论文 URL 稳定：改名不迁移既有 permalink。
+
+## 本地开发
+
+```bash
+bundle install
+bundle exec jekyll build   # 产物在 _site/
+bundle exec jekyll serve   # 本地预览 http://127.0.0.1:4000
 ```
-jdding.github.io/
-├── _config.yml          # Jekyll 配置文件
-├── _includes/           # 可复用的 HTML 片段
-├── assets/              # 静态资源（图片、CSS、JS）
-│   └── images/          # 论文图片、头像等
-├── index.md             # 主页内容
-├── publications.md      # 论文发表页面
-├── patents.md           # 专利信息页面
-├── collaborations.md    # 研究合作页面（含互动地图）
-└── SEO/                 # SEO 相关文件
-```
 
-## 部署
+## 发布验收（分级，前一步不能替代后一步）
 
-- **方式**：GitHub Pages 自动构建与部署（推送到 `main` 分支后生效）
-- **线上地址**：`https://jdding.github.io`
+1. 本地 `jekyll build` + diff 复验：检查 `_site/` 的实际渲染结果（列表行、Digest 页、`citation_*` 标签、JSON-LD），不只看数据 diff。
+2. commit + push 到 `main`。
+3. GitHub Pages 构建成功（仓库部署状态）。
+4. 线上 HTTP 抽查：关键页面 200 且内容为最新版本。
+5. Search Console 复查抓取/收录状态；新增重点页可请求编入索引。
 
-## 配置说明
+## 文献更新 SOP
 
-主要配置文件为 `_config.yml`，包含（示例）：
-
-- 网站基本信息（标题、描述、URL）
-- 作者信息（姓名、头像、简介、联系方式）
-- 主题设置（`remote_theme: mmistakes/minimal-mistakes`）
-- 插件配置（`jekyll-feed` / `jekyll-seo-tag` / `jekyll-sitemap` 等）
-- Google Analytics 跟踪 ID
-
-## 内容更新
-
-- **主页**：编辑 `index.md`
-- **论文**：编辑 `publications.md`
-- **专利**：编辑 `patents.md`
-- **合作**：编辑 `collaborations.md`（包含互动地图功能）
-- **SEO 校验文件**：放在 `SEO/`（例如 Google/Bing 站点验证）
+新增或修改论文后统一检查：标题 / 完整作者及顺序 / 状态（preprint / accepted / published 不混用）/ 阅读链接与按钮语义一致 / 年份与 `venue_year` / 计数 / 精选成员未动 / API 与图谱输出 / sitemap 包含新页。详见 `docs/Digest_Module_Maintenance_Guide.md`。
 
 ## 版权与许可
 
 除非另有说明，本仓库内容（文本、图片等）版权归作者所有。
 
 ## 联系方式
-
-如有问题或建议，欢迎通过以下方式联系：
 
 - Huawei Email: dingjiandong2 [AT] huawei.com
 - LinkedIn: [Jiandong Ding](https://www.linkedin.com/in/jiandong-ding-60498833/)
