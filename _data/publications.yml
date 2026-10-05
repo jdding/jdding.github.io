@@ -14,16 +14,20 @@
   digest_image: true
   selected_label: TOIS 2026 (Accepted)
   selected_summary: Global listwise learning with progressive bi-weighting to mitigate popularity bias in recommendation.
+  paper_url: https://arxiv.org/abs/2609.35041
+  paper_label: arXiv
   digest_url: "/tois-popularity-bias/"
   digest_label: Digest
   digest_note: An accepted ACM Transactions on Information Systems paper studying popularity-bias mitigation through global listwise learning and progressive bi-weighting.
   digest_blocks:
     - title: Problem
-      text: Listwise recommendation objectives can be sensitive to misspecified propensities, while aggressive rebalancing can adversely affect representation learning.
+      text: User feedback follows a long-tail distribution, and models trained on it disproportionately favor popular items. Inverse propensity scoring reweights interactions, but IPS-based objectives are locally unbiased at best and depend on propensity estimates that are themselves inaccurate.
     - title: Approach
-      text: The paper studies global listwise learning under inverse propensity scoring and introduces bi-weighting that smooths propensity estimates with a collection model. Progressive Bi-Weighting is designed to reduce the adverse effects of aggressive rebalancing on learned representations.
-    - title: Analysis and evaluation
-      text: The work analyzes the collection model used for weighting and evaluates the proposed methods against established and recent debiasing baselines.
+      text: The paper proposes Mult-BiW. Mult-IPS integrates multinomial likelihood with IPS so that the listwise objective captures global, unbiased preference over the entire item set. Bi-Weighting jointly uses propensity scores and a collection model with a smoothing mechanism, supported by an upper bound on empirical bias and a characterization of the optimal collection model. Progressive Bi-Weighting gradually transitions from discriminative representation learning to popularity debiasing, because aggressive reweighting can harm representation learning.
+    - title: Public evidence
+      text: Experiments on real-world datasets report that Mult-BiW consistently outperforms state-of-the-art debiasing baselines. The public abstract does not give numeric metrics, and the article is accepted at ACM TOIS but not yet formally published.
+    - title: Takeaway
+      text: Global listwise objectives plus smoothed, progressive reweighting treat popularity bias as an objective-design problem rather than a post-hoc correction, in line with the adaptive-recommendation line on reliable ranking under changing exposure.
 - id: sidscope
   title: 'SIDScope: A Diagnostic Resource for Semantic-ID Interfaces in Generative Recommendation'
   year: 2026
@@ -146,6 +150,15 @@
   digest_url: "/sidinspector/"
   digest_label: Digest
   digest_note: A CIKM 2026 resource paper for inspecting Semantic-ID tokenizers through their mapping behavior before downstream recommendation training.
+  digest_blocks:
+    - title: Problem
+      text: Exported item-to-code mappings from Semantic-ID tokenizers usually lack a shared inspection interface, so coverage gaps, aliasing, weak prefixes, tail compression, and fan-out problems tend to surface only after downstream recommendation training has already paid for them.
+    - title: Approach
+      text: SIDInspector is mapping-first. An adapter contract covers item mappings, metadata, interactions, and generator traces, and probes report utilization, aliasing, neighborhood alignment, popularity allocation, and structural cost. It inspects the interface itself rather than a trained recommender.
+    - title: Public evidence
+      text: The release evaluates four tokenizer families, including GRID-style RQ-KMeans, ReSID/GAOQ, LETTER, and LC-Rec artifacts. Reported measurements show D2 aliasing dropping substantially under added capacity and reaching zero for ReSID/GAOQ, while D3 stays below a deterministic category-prefix control. These are diagnostic measurements of the mappings, not evidence of recommendation-quality gains.
+    - title: Takeaway
+      text: Capacity, addressability, and prefix alignment are distinct, measurable properties of a Semantic-ID interface. Checking them before method-level evaluation or reuse avoids attributing downstream failures to the wrong layer.
 - id: deltagate
   title: Zero-Observation User Reactivation with Gap-Driven Dimensional Gating
   year: 2026
@@ -189,6 +202,15 @@
   digest_url: "/skillresolve-bench/"
   digest_label: Digest
   digest_note: A study of same-capability risk exposure in agent skill retrieval, measuring when systems surface a risky sibling despite finding the right capability family.
+  digest_blocks:
+    - title: Problem
+      text: In agent skill libraries, many skills expose similar capability descriptions. A retrieval system can pick the correct capability family and still surface a sibling skill that differs on execution-controlling contracts such as resources, preconditions, procedures, or artifacts. The paper names this failure mode same-capability risk-exposure retrieval.
+    - title: Benchmark
+      text: SameCapRisk-Bench contains 940 skill-risk units and 1,327 query cases. Units are either single-query (553, including 69 development units) or paired (387 units contributing 774 queries that exchange helpful and risky roles across queries). Evaluation uses a held-out split of 871 units and 1,258 queries, and the release records provenance and leakage checks.
+    - title: Public evidence
+      text: On the held-out split, neural retrievers reach Recall@3 of 0.723 to 0.936 while exposing a risky sibling at HSR@3 of 0.386 to 0.402 (RRF 0.723/0.387, SkillRouter 0.910/0.386, SkillRet 0.928/0.389, R3-Skill 0.925/0.396, SkillSight 0.936/0.402). Applying a released family selector to their score orders cuts HSR@3 to 0.110 to 0.154 at a Recall@3 cost (0.781 to 0.851), and an auxiliary scorer-plus-selection control reports 0.731 Recall@3 with HSR@3 0.136. Retrieving more items raises exposure further (HSR 0.684 to 0.951 at K=20). These are benchmark measurements, not production deployment results.
+    - title: Takeaway
+      text: Capability matching and same-family risk exposure should be reported together. HSR@K serves as a targeted exposure certificate for a fixed skill library, complementing the auditable-retrieval line on inspecting interfaces before they become production dependencies.
 - id: hpgr
   title: 'Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations'
   year: 2026
@@ -206,6 +228,17 @@
   digest_label: Digest
   doi_url: https://doi.org/10.1145/3774904.3792790
   digest_note: A generative recommendation paper that studies hierarchical structure and preference-aware modeling beyond flat user-history sequences.
+  paper_url: https://arxiv.org/abs/2603.00980
+  paper_label: arXiv
+  digest_blocks:
+    - title: Problem
+      text: Generative recommenders treat user history as a flat sequence of semantically equal items. This ignores the hierarchical structure of behavior, where items are grouped by interaction sessions or contexts, and it treats all historical items as equally reliable even though preference strength and uncertainty vary over time.
+    - title: Approach
+      text: HPGR is a plug-in enhancement for generative recommenders built from two parts. A Session Enhancement Module models user history hierarchically beyond the flat-sequence assumption, and preference-aware weighting estimates the reliability of historical items when conditioning generation.
+    - title: Public evidence
+      text: Experiments on public benchmarks report state-of-the-art performance, with both the hierarchical and preference-aware components contributing in ablations. The public abstract does not give numeric metrics.
+    - title: Takeaway
+      text: Structured intent over time and explicit reliability weighting extend generative recommendation toward the adaptive-recommendation line's concern with changing user evidence.
 - id: invariant-feature-learning
   title: Invariant feature learning for counterfactual watch-time prediction in video recommendation
   year: 2026
@@ -223,6 +256,15 @@
   digest_label: Digest
   doi_url: https://doi.org/10.1609/aaai.v40i17.38518
   digest_note: A video recommendation paper on counterfactual watch-time prediction and feature learning under duration-related bias.
+  digest_blocks:
+    - title: Problem
+      text: Watch-time feedback in video recommendation is confounded by video duration. Longer videos mechanically accumulate more watch time, so prediction models drift toward duration effects instead of true preference. Existing backdoor-adjustment approaches discretize duration into groups and combine group-wise models, which the authors argue is prone to misspecification under feature distribution shift across groups.
+    - title: Approach
+      text: Duration-Invariant Feature Learning (DIFL) reinterprets the debiasing task as invariant learning. A kernel-based regularizer forces learned representations to stay invariant across duration groups, reducing sensitivity to how the groups are drawn and supporting counterfactual watch-time prediction.
+    - title: Public evidence
+      text: Experiments on public benchmarks and a large-scale production dataset report state-of-the-art performance against duration-bias baselines. The public abstract does not give numeric metrics, so treat the claim as benchmark-level evidence rather than measured online lift.
+    - title: Takeaway
+      text: Invariant learning gives the counterfactual watch-time line a way to separate preference signal from duration conditions without committing to one discretization of time.
 - id: rpe4rec
   title: 'RPE4Rec: Enhancing Dynamic Node Retrieval with Efficient Relative Position Encoding for Recommendation Systems'
   year: 2026
@@ -242,6 +284,15 @@
   digest_label: Digest
   doi_url: https://doi.org/10.1145/3773966.3778006
   digest_note: A recommendation retrieval paper on relative position encoding for dynamic node retrieval under changing user and item behavior.
+  digest_blocks:
+    - title: Problem
+      text: Dynamic recommendation retrieval must keep up with evolving user interactions, and a key signal is the short-term co-occurrence pattern that reflects current preference. Existing ways of capturing this signal face scalability and cost constraints.
+    - title: Approach
+      text: RPE4Rec is a lightweight plug-in that applies relative position encoding to dynamic node retrieval. It uses a hashtable-based neighborhood memory to capture short-term co-occurrence signals with low space and time complexity, and attaches to mainstream recommendation models.
+    - title: Public evidence
+      text: Experiments across multiple datasets report consistent retrieval improvements in mainstream models with minimal additional cost. The abstract does not give numeric metrics.
+    - title: Takeaway
+      text: Efficient position-aware retrieval is one mechanism for keeping retrieval aligned with changing user and item behavior, the recurring condition in the adaptive-recommendation line.
 - id: bis-nl2sql
   title: 'BIS: NL2SQL Service Evaluation Benchmark for Business Intelligence Scenarios'
   year: 2025
@@ -302,6 +353,15 @@
   digest_label: Digest
   doi_url: https://doi.org/10.48550/arxiv.2408.08147
   digest_note: A systems paper on disaggregated large language model serving, separating serving stages to support large-scale inference.
+  digest_blocks:
+    - title: Problem
+      text: Serving disaggregated LLMs across tens of thousands of accelerators requires fine-grained organization of prefill and decoding workloads with dynamic P/D ratio adjustment. Inaccurate global workload estimates cause prefill timeouts, and device-to-device KVCache transfer over cluster-level RDMA stays underutilized.
+    - title: Approach
+      text: P/D-Serve is an end-to-end system covering fine-grained P/D mapping over RoCE networks, on-demand forwarding that avoids prefill timeouts under workload-estimate error, and optimized D2D KVCache transfer. It is built on Ascend hardware and MindSpore.
+    - title: Public evidence
+      text: The public abstract states that P/D-Serve has been deployed over tens of thousands of NPUs in commercial use for more than eight months, and reports further improvements of 60% in end-to-end throughput, 42% on the time-to-first-token SLO metric, and 46% in D2D transfer time. The abstract does not name the comparison baseline for these three figures. A 6.7x throughput increase is reported for the optimized end-to-end system compared with aggregated LLM serving; whether that comparison is a production or testbed measurement is not stated. Treat all figures as operator-reported under the conditions above.
+    - title: Takeaway
+      text: The work treats disaggregation as a cluster-level scheduling and transfer problem, complementing the site's line on reliable serving under changing load and hardware conditions.
 - id: acl-topic
   title: Neural Topic Modeling Based on Cycle Adversarial Training and Contrastive Learning
   year: 2023
@@ -361,7 +421,6 @@
   paper_label: PDF
   digest_url: "/neurips-dpssl/"
   digest_label: Digest
-  doi_url: https://doi.org/10.5555/3540261.3541477
   digest_note: A robust semi-supervised learning paper that combines data programming signals with learning from few labeled examples.
 - id: emnlp-keygraph
   title: Weakly-Supervised Text Classification Based on Keyword Graph
