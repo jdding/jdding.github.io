@@ -126,7 +126,8 @@
   topic: recommender-systems
   level: a
   selected: false
-  status: published
+  status: accepted
+  acceptance_date: "2026-08-26"
   paper_url: https://arxiv.org/abs/2512.13120
   paper_label: arXiv
   digest_url: "/dygraph/"
