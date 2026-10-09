@@ -13,7 +13,7 @@ classes: wide
 {% assign programs = site.data.research_programs | sort: "order" %}
 {% assign public_artifacts = site.data.open_source | sort: "order" %}
 {% assign selected_papers = site.data.publications | where: "selected", true %}
-{% assign recent_papers = site.data.publications | slice: 0, 6 %}
+{% assign dated_papers = site.data.publications | sort: "publication_date", "first" | reverse %}
 
 <main id="main" class="research-site">
   <section class="research-hero">
@@ -63,57 +63,26 @@ classes: wide
         <section class="year-block">
           <div class="year-label">2026</div>
           <div class="record-stack">
+            {% assign news_count = 0 %}
+            {% for paper in dated_papers %}
+            {% if paper.publication_date and news_count < 5 %}
             <article class="record-item">
               <div>
-                <h3>DeltaGate published in the RecSys 2026 proceedings</h3>
+                <h3>{% if paper.status == "published" %}Published in {{ paper.venue_short }} {{ paper.venue_year | default: paper.year }}{% elsif paper.status == "accepted" %}Accepted at {% if paper.venue_type == "journal" %}{{ paper.venue }}{% else %}{{ paper.venue_short }} {{ paper.venue_year | default: paper.year }}{% endif %}; arXiv version available{% else %}Released on arXiv{% endif %}</h3>
                 <div class="record-meta meta-lines">
-                  <span>Zero-Observation User Reactivation with Gap-Driven Dimensional Gating</span>
-                  <span>2026-09-27 · proceedings online, DOI 10.1145/3773078.3831771</span>
+                  <span>{{ paper.title }}</span>
+                  <span>{{ paper.publication_date }}</span>
                 </div>
               </div>
               <div class="record-actions">
-                <a class="pill digest" href="/deltagate/">Digest</a>
-                <a class="pill link" href="https://github.com/jdding/DeltaGate">Code</a>
+                {% if paper.digest_url %}<a class="pill digest" href="{{ paper.digest_url }}">Digest</a>{% endif %}
+                {% if paper.paper_url %}<a class="pill link" href="{{ paper.paper_url }}">{{ paper.paper_label | default: "arXiv" }}</a>{% endif %}
+                {% if paper.code_url %}<a class="pill link" href="{{ paper.code_url }}">Code</a>{% endif %}
               </div>
             </article>
-            <article class="record-item">
-              <div>
-                <h3>Popularity-bias mitigation paper accepted at ACM TOIS</h3>
-                <div class="record-meta meta-lines">
-                  <span>Mitigating Popularity Bias in Recommendation with Global Listwise Learning and Progressive Bi-Weighting</span>
-                  <span>2026-09-22 · accepted, not yet published</span>
-                </div>
-              </div>
-              <div class="record-actions">
-                <a class="pill digest" href="/tois-popularity-bias/">Digest</a>
-              </div>
-            </article>
-            <article class="record-item">
-              <div>
-                <h3>IGPO accepted to the EMNLP 2026 Industry Track; arXiv version available</h3>
-                <div class="record-meta meta-lines">
-                  <span>Inventory-Grounded Policy-Level Optimization for Training-Free AI Search</span>
-                  <span>2026-09-04 · arXiv 2609.04813</span>
-                </div>
-              </div>
-              <div class="record-actions">
-                <a class="pill digest" href="/igpo-ai-search/">Digest</a>
-                <a class="pill link" href="https://arxiv.org/abs/2609.04813">arXiv</a>
-              </div>
-            </article>
-            <article class="record-item">
-              <div>
-                <h3>SIDScope released as an arXiv resource paper with open code</h3>
-                <div class="record-meta meta-lines">
-                  <span>SIDScope: A Diagnostic Resource for Semantic-ID Interfaces in Generative Recommendation</span>
-                  <span>2026-08-19 · arXiv 2608.18779</span>
-                </div>
-              </div>
-              <div class="record-actions">
-                <a class="pill digest" href="/sidscope/">Digest</a>
-                <a class="pill link" href="https://github.com/jdding/sidscope">Code</a>
-              </div>
-            </article>
+            {% assign news_count = news_count | plus: 1 %}
+            {% endif %}
+            {% endfor %}
           </div>
         </section>
       </div>
@@ -191,7 +160,9 @@ classes: wide
         <section class="year-block">
           <div class="year-label">Recent</div>
           <div class="record-stack">
-            {% for paper in recent_papers %}
+            {% assign recent_count = 0 %}
+            {% for paper in dated_papers %}
+            {% if paper.status != "preprint" and recent_count < 5 %}
             {% assign topic = topics | where: "slug", paper.topic | first %}
             <article id="recent-{{ paper.id }}" class="record-item">
               <div>
@@ -206,6 +177,8 @@ classes: wide
                 {% if paper.paper_url %}<a class="pill link" href="{{ paper.paper_url }}">{{ paper.paper_label | default: "Paper" }}</a>{% endif %}
               </div>
             </article>
+            {% assign recent_count = recent_count | plus: 1 %}
+            {% endif %}
             {% endfor %}
           </div>
         </section>

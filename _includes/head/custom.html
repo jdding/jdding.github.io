@@ -13,10 +13,10 @@
     {% for citation_author in citation_authors %}
 <meta name="citation_author" content="{{ citation_author | strip | escape }}">
     {% endfor %}
-    {% comment %} Date policy: full publication_date when verified; otherwise the venue year. Accepted-but-unpublished entries (e.g. TOIS) omit the date instead of using the acceptance year. {% endcomment %}
+    {% comment %} Date policy: the date of the linked public version when verified (arXiv posting date for arXiv-first entries, proceedings date once published); venue year otherwise. Accepted entries with no verified date omit it instead of using the acceptance year. {% endcomment %}
     {% if citation_paper.publication_date %}
 <meta name="citation_publication_date" content="{{ citation_paper.publication_date | escape }}">
-    {% elsif citation_paper.selected_label contains "Accepted" %}{% else %}
+    {% elsif citation_paper.status == "accepted" %}{% else %}
 <meta name="citation_publication_date" content="{{ citation_paper.year }}">
     {% endif %}
     {% unless citation_paper.venue_short == "arXiv" %}

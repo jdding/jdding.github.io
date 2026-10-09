@@ -57,7 +57,7 @@ description: "Publications by Jiandong Ding (丁建栋) across recommender syste
                     <meta itemprop="name" content="Jiandong Ding (丁建栋)">
                   </span>
                   <span itemprop="isPartOf">{{ venue_markup }}</span>
-                  {% unless paper.selected_label contains "Accepted" %}<meta itemprop="datePublished" content="{{ paper.year }}">{% endunless %}
+                  {% unless paper.status == "accepted" and paper.publication_date == nil %}<meta itemprop="datePublished" content="{{ paper.publication_date | default: paper.year }}">{% endunless %}
                 </div>
               </div>
               <div class="record-actions">

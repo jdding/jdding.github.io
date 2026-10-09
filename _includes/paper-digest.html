@@ -131,7 +131,7 @@
       }{% endif %}{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ],
-  {% unless paper.selected_label contains "Accepted" %}"datePublished": {{ published_date | jsonify }},{% endunless %}
+  {% unless paper.status == "accepted" and paper.publication_date == nil %}"datePublished": {{ published_date | jsonify }},{% endunless %}
   "isPartOf": {
     "@type": "CreativeWorkSeries",
     "name": {{ paper.venue | jsonify }}

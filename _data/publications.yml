@@ -1,4 +1,30 @@
 ---
+- id: skillcontrast
+  title: 'SkillContrast: Difference-Guided Text Selection for Agent Skill Reranking'
+  year: 2026
+  venue: arXiv preprint arXiv:2610.11650
+  venue_short: arXiv
+  authors: Jiandong Ding, Honglei Ji, Ming Liu, Tao Duan
+  publication_date: "2026-10-08"
+  topic: llm-agents
+  program: auditable-retrieval
+  level: c
+  selected: false
+  status: preprint
+  paper_url: https://arxiv.org/abs/2610.11650
+  paper_label: arXiv
+  digest_url: "/skillcontrast/"
+  digest_label: Digest
+  digest_note: A training-free selector for agent skill reranking that feeds a pretrained reranker the text that differs among retrieved candidate skills, keeping the conditions of use that query-based selection drops.
+  digest_blocks:
+    - title: Problem
+      text: Similar agent skills can share nearly identical instructions while differing in their conditions of use. Standard query-based text selection tends to keep the shared parts and drop these distinguishing details, so the reranker receives text that cannot separate the candidates.
+    - title: Approach
+      text: SkillContrast is a training-free selector. It compares retrieved candidate skills against each other and keeps the differing text together with local context as the input to a pretrained reranker, so the comparison signal comes from the candidates themselves rather than from the query alone.
+    - title: Public evidence
+      text: On 1,235 requests from SameCapRisk-Bench, SkillContrast yields 54 to 72 more clean hits (retrieving a helpful skill without its risky sibling) than TF-IDF query selection at equal input length, across two retrievers and two reranker sizes. Cutting model-input tokens by 51.1 to 58.8 percent versus full skill bodies costs 10 to 18 clean hits at a 0.6B reranker while matching or beating query selection at 4B. These are benchmark measurements, not production deployment results.
+    - title: Takeaway
+      text: Candidate-relative differences complement query relevance when forming compact reranking inputs, extending the skill-retrieval line from measuring same-family risk exposure to reducing it before reranking.
 - id: tois-popularity-bias
   title: Mitigating Popularity Bias in Recommendation with Global Listwise Learning and Progressive Bi-Weighting
   year: 2026
@@ -6,10 +32,12 @@
   venue_short: TOIS
   venue_type: journal
   authors: Tianyu Zhu, Jiandong Ding, Yansong Shi, Guoqing Chen, Jian-Yun Nie
+  publication_date: "2026-09-28"
   topic: recommender-systems
   program: adaptive-recommendation
   level: a
   selected: false
+  status: accepted
   image: "/assets/images/TOIS2026.png"
   digest_image: true
   selected_label: TOIS 2026 (Accepted)
@@ -38,6 +66,7 @@
   topic: recommender-systems
   level: c
   selected: false
+  status: preprint
   paper_url: https://arxiv.org/abs/2608.18779
   paper_label: arXiv
   code_url: https://github.com/jdding/sidscope
@@ -61,10 +90,12 @@
   venue: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing: Industry Track (EMNLP '26)"
   venue_short: EMNLP
   authors: Wei Zhou, Tiandeng Wu, Jiandong Ding, Zhufeng Fan, Yi Cao
+  publication_date: "2026-09-04"
   topic: llm-agents
   program: auditable-retrieval
   level: b
   selected: true
+  status: accepted
   image: "/assets/images/AI-Search-Optimization-Infographic.png"
   image_webp: "/assets/images/AI-Search-Optimization-Infographic.webp"
   card_image: "/assets/images/AI-Search-Optimization-Infographic-card.webp"
@@ -95,6 +126,7 @@
   topic: recommender-systems
   level: a
   selected: false
+  status: published
   paper_url: https://arxiv.org/abs/2512.13120
   paper_label: arXiv
   digest_url: "/dygraph/"
@@ -116,9 +148,11 @@
   venue: Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM '26)
   venue_short: CIKM
   authors: Fuyuan Liu, Tiandeng Wu, Yaqun Fang, Wei Zhou, Zehao Zhou, Wenping Chen, Qishun Mei, Jiaxin Zhou, Heng Chang, Yi Cao, Jiandong Ding
+  publication_date: "2026-09-04"
   topic: recommender-systems
   level: b
   selected: false
+  status: accepted
   paper_url: https://arxiv.org/abs/2609.04862
   paper_label: arXiv
   doi_url: https://doi.org/10.1145/3799682.3839876
@@ -140,9 +174,11 @@
   venue: Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM '26)
   venue_short: CIKM
   authors: Jiandong Ding, Heng Chang, Huijie Qin, Tianying Liu
+  publication_date: "2026-06-09"
   topic: recommender-systems
   level: b
   selected: false
+  status: accepted
   paper_url: https://arxiv.org/abs/2606.10375
   paper_label: arXiv
   code_url: https://github.com/jdding/sidinspector
@@ -170,6 +206,7 @@
   program: adaptive-recommendation
   level: a
   selected: true
+  status: published
   image: "/assets/images/DeltaGate-Resurrecting-Ghost-Users.jpg"
   selected_label: RecSys 2026
   selected_summary: DeltaGate recalibrates frozen sequential recommendation representations for long-gap returning users.
@@ -195,8 +232,10 @@
   venue_short: arXiv
   authors: Jiandong Ding, Honglei Ji, Ming Liu, Tao Duan
   topic: llm-agents
+  program: auditable-retrieval
   level: c
   selected: false
+  status: preprint
   paper_url: https://arxiv.org/abs/2606.10388
   paper_label: arXiv
   digest_url: "/skillresolve-bench/"
@@ -221,6 +260,7 @@
   program: adaptive-recommendation
   level: a
   selected: true
+  status: published
   image: "/assets/images/Beyond-the-Flat-Sequence.webp"
   selected_label: WWW 2026
   selected_summary: Hierarchical and preference-aware generative recommendations move beyond flat user histories and expose structured intent over time.
@@ -249,6 +289,7 @@
   program: adaptive-recommendation
   level: a
   selected: true
+  status: published
   image: "/assets/images/Invariant-Feature-Learning.webp"
   selected_label: AAAI 2026
   selected_summary: Invariant feature learning separates duration effects from true user preference in short-video recommendation.
@@ -275,6 +316,7 @@
   program: adaptive-recommendation
   level: b
   selected: true
+  status: published
   image: "/assets/images/RPE4Rec.webp"
   selected_label: WSDM 2026
   selected_summary: Efficient relative position encoding for dynamic node retrieval in recommendation systems.
@@ -304,6 +346,7 @@
   program: auditable-retrieval
   level: b
   selected: false
+  status: published
   image: "/assets/images/BIS-NL2SQL.webp"
   selected_label: ICSOC 2024
   selected_summary: A benchmark for evaluating service-oriented NL2SQL systems in business intelligence scenarios.
@@ -323,6 +366,7 @@
   program: adaptive-recommendation
   level: a
   selected: false
+  status: published
   image: "/assets/images/Unified-Low-rank-Compression.webp"
   selected_label: KDD 2024
   selected_summary: A unified compression framework for large CTR models and resource-constrained deployment.
@@ -341,6 +385,7 @@
   topic: llm-agents
   level: c
   selected: true
+  status: preprint
   image: "/assets/images/Scaling-LLM-Serving-P-D-Serve.png"
   image_webp: "/assets/images/Scaling-LLM-Serving-P-D-Serve.webp"
   card_image: "/assets/images/Scaling-LLM-Serving-P-D-Serve-card.webp"
@@ -371,6 +416,7 @@
   topic: data-mining
   level: a
   selected: false
+  status: published
   paper_url: https://aclanthology.org/2023.findings-acl.616.pdf
   paper_label: PDF
   digest_url: "/acl-topic/"
@@ -386,6 +432,7 @@
   topic: data-mining
   level: a
   selected: false
+  status: published
   paper_url: https://ojs.aaai.org/index.php/AAAI/article/view/26611/26383
   paper_label: PDF
   digest_url: "/continual-gcn/"
@@ -401,6 +448,7 @@
   topic: data-mining
   level: b
   selected: false
+  status: published
   paper_url: https://aclanthology.org/2022.naacl-main.349.pdf
   paper_label: PDF
   digest_url: "/naacl-epida/"
@@ -417,6 +465,7 @@
   topic: data-mining
   level: a
   selected: false
+  status: published
   paper_url: https://arxiv.org/pdf/2110.13740
   paper_label: PDF
   digest_url: "/neurips-dpssl/"
@@ -431,6 +480,7 @@
   topic: data-mining
   level: b
   selected: false
+  status: published
   paper_url: https://aclanthology.org/2021.emnlp-main.222.pdf
   paper_label: PDF
   digest_url: "/emnlp-keygraph/"
@@ -446,6 +496,7 @@
   topic: data-mining
   level: a
   selected: false
+  status: published
   paper_url: https://aisel.aisnet.org/icis2021/hci_robot/hci_robot/3/
   paper_label: Publisher
   digest_url: "/ai-assistance-live-streaming/"
@@ -460,6 +511,7 @@
   topic: data-mining
   level: a
   selected: false
+  status: published
   paper_url: https://aisel.aisnet.org/icis2021/data_analytics/data_analytics/2/
   paper_label: Publisher
   digest_url: "/sales-data-live-streaming/"
@@ -476,6 +528,7 @@
   topic_page: false
   level: b
   selected: false
+  status: published
   paper_url: https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-13-S8-S15
   paper_label: Publisher
   digest_url: "/large-scale-mirna-clustering/"
@@ -493,6 +546,7 @@
   topic_page: false
   level: a
   selected: false
+  status: published
   paper_url: https://academic.oup.com/gpb/article/10/5/264/7221796
   paper_label: Publisher
   digest_url: "/finding-microrna-targets-plants/"
@@ -510,6 +564,7 @@
   topic_page: false
   level: b
   selected: false
+  status: published
   paper_url: https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-13-S3-S3
   paper_label: Publisher
   digest_url: "/genome-wide-mirna-target-interactions/"
@@ -527,6 +582,7 @@
   topic_page: false
   level: a
   selected: false
+  status: published
   paper_url: https://doi.org/10.1186/1471-2105-12-216
   paper_label: DOI
   digest_url: "/mirfam/"
@@ -543,6 +599,7 @@
   topic_page: false
   level: b
   selected: false
+  status: published
   paper_url: https://ieeexplore.ieee.org/document/6120415/
   paper_label: Publisher
   digest_url: "/imirtp/"
@@ -560,6 +617,7 @@
   topic_page: false
   level: a
   selected: false
+  status: published
   paper_url: https://doi.org/10.1186/1471-2105-11-S11-S11
   paper_label: DOI
   digest_url: "/mirensvm/"

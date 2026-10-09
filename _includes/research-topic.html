@@ -1,6 +1,9 @@
 {% assign topic = site.data.topics | where: "slug", page.topic_slug | first %}
 {% assign topic_publications = site.data.publications | where: "topic", page.topic_slug %}
 {% assign topic_patents = site.data.patents | where: "topic", page.topic_slug %}
+{% assign topic_total = topic_publications.size %}
+{% assign topic_shown = 0 %}
+{% for paper in topic_publications %}{% if paper.topic_page != false %}{% assign topic_shown = topic_shown | plus: 1 %}{% endif %}{% endfor %}
 
 <div class="research-site">
   <section class="research-hero">
@@ -13,6 +16,8 @@
         </div>
       </div>
       <aside class="summary-board" aria-label="Topic summary">
+        <div class="summary-row"><strong>{{ topic_total }}</strong><span>related publications</span></div>
+        {% if topic_shown < topic_total %}<div class="summary-row"><strong>{{ topic_shown }}</strong><span>shown on this page; the rest are in the Full list</span></div>{% endif %}
         {% for stat in topic.stats %}
         <div class="summary-row"><strong>{{ stat.value }}</strong><span>{{ stat.label }}</span></div>
         {% endfor %}
