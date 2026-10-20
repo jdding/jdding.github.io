@@ -11,9 +11,9 @@ classes: wide
 
 {% assign topics = site.data.topics | sort: "order" %}
 {% assign programs = site.data.research_programs | sort: "order" %}
-{% assign public_artifacts = site.data.open_source | sort: "order" %}
-{% assign selected_papers = site.data.publications | where: "selected", true %}
-{% assign dated_papers = site.data.publications | sort: "publication_date", "first" | reverse %}
+{% assign public_artifacts = site.data.open_source | where_exp: "item", "item.hidden != true" | sort: "order" %}
+{% assign selected_papers = site.data.publications | where_exp: "item", "item.hidden != true" | where: "selected", true %}
+{% assign dated_papers = site.data.publications | where_exp: "item", "item.hidden != true" | sort: "publication_date", "first" | reverse %}
 
 <main id="main" class="research-site">
   <section class="research-hero">

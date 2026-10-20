@@ -5,7 +5,7 @@ permalink: /api/research.json
 {% assign topics = site.data.topics | sort: "order" %}
 {% assign programs = site.data.research_programs | sort: "order" %}
 {% assign projects = site.data.projects | sort: "order" %}
-{% assign publications = site.data.publications %}
+{% assign publications = site.data.publications | where_exp: "item", "item.hidden != true" %}
 {% assign patents = site.data.patents %}
 {% assign collaborations = site.data.research.collaborations %}
 {

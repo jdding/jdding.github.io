@@ -2,4 +2,5 @@
 layout: null
 permalink: /api/publications.json
 ---
-{{ site.data.publications | jsonify }}
+{% assign publications = site.data.publications | where_exp: "item", "item.hidden != true" %}
+{{ publications | jsonify }}

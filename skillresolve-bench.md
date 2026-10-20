@@ -1,5 +1,6 @@
 ---
 layout: research
+published: false
 author_profile: false
 title: "Right Family, Wrong Skill: Evaluating Risk Exposure in Agent Skill Retrieval"
 permalink: /skillresolve-bench/

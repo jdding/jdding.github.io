@@ -8,4 +8,4 @@ publication_id: task-dependency-graphs
 description: "A CIKM 2026 paper on personalized task dependency graphs for mitigating signal erosion in multi-task recommendation."
 ---
 
-{% include paper-digest.html exclude_related="sidscope" %}
+{% include paper-digest.html %}

@@ -1,5 +1,5 @@
 {% assign topic = site.data.topics | where: "slug", page.topic_slug | first %}
-{% assign topic_publications = site.data.publications | where: "topic", page.topic_slug %}
+{% assign topic_publications = site.data.publications | where: "topic", page.topic_slug | where_exp: "item", "item.hidden != true" %}
 {% assign topic_patents = site.data.patents | where: "topic", page.topic_slug %}
 {% assign topic_total = topic_publications.size %}
 {% assign topic_shown = 0 %}

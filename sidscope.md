@@ -1,5 +1,6 @@
 ---
 layout: research
+published: false
 author_profile: false
 title: "SIDScope: A Diagnostic Resource for Semantic-ID Interfaces in Generative Recommendation"
 permalink: /sidscope/
