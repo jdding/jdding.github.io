@@ -7,7 +7,7 @@ classes: wide
 description: "Publications by Jiandong Ding (丁建栋) across recommender systems, LLM agents, data mining, AI retrieval, and applied machine learning."
 ---
 
-{% assign publications = site.data.publications %}
+{% assign publications = site.data.publications | where_exp: "item", "item.hidden != true" %}
 {% assign topics = site.data.topics | sort: "order" %}
 {% assign years = publications | map: "year" | uniq %}
 

@@ -80,6 +80,8 @@ kramdown:
 
 exclude:
   - README.md
+  - assets/images/social/sidscope-og.png
+  - assets/images/social/skillresolve-bench-og.png
   - docs/
   - archive/
   - _pages/

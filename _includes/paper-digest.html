@@ -1,7 +1,7 @@
 {% assign paper = site.data.publications | where: "id", page.publication_id | first %}
 {% assign topic = site.data.topics | where: "slug", paper.topic | first %}
 {% assign topic_label = paper.topic_label | default: topic.title %}
-{% assign related_papers = site.data.publications | where: "topic", paper.topic %}
+{% assign related_papers = site.data.publications | where: "topic", paper.topic | where_exp: "item", "item.hidden != true" %}
 {% assign published_date = paper.publication_date | default: paper.year | append: "" %}
 
 <div class="research-site digest-page">

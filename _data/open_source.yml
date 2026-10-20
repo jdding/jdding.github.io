@@ -21,6 +21,7 @@
   publication_id: sidinspector
 
 - id: sidscope
+  hidden: true
   order: 3
   program: auditable-retrieval
   title: SIDScope
