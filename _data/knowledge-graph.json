@@ -14,8 +14,11 @@
       "rdfs:label": "Jiandong Ding",
       "foaf:workplaceHomepage": "https://www.huawei.com/",
       "biro:is-author-of": [
+        "https://jdding.github.io/publication/sidscope",
+        "https://jdding.github.io/publication/skillcontrast",
         "https://jdding.github.io/publication/igpo-ai-search",
         "https://jdding.github.io/publication/deltagate",
+        "https://jdding.github.io/publication/skillresolve-bench",
         "https://jdding.github.io/publication/sidinspector",
         "https://jdding.github.io/publication/task-dependency-graphs",
         "https://jdding.github.io/publication/hpgr",
@@ -51,6 +54,20 @@
       "rdfs:comment": "Weak supervision, robust learning, text mining, analytics, and field experiments."
     },
     {
+      "@id": "https://jdding.github.io/publication/sidscope",
+      "@type": "fabio:Preprint",
+      "rdfs:label": "SIDScope: A Diagnostic Resource for Semantic-ID Interfaces in Generative Recommendation",
+      "fabio:hasPublicationYear": "2026",
+      "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
+    },
+    {
+      "@id": "https://jdding.github.io/publication/skillcontrast",
+      "@type": "fabio:Preprint",
+      "rdfs:label": "SkillContrast: Difference-Guided Text Selection for Agent Skill Reranking",
+      "fabio:hasPublicationYear": "2026",
+      "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
+    },
+    {
       "@id": "https://jdding.github.io/publication/igpo-ai-search",
       "@type": "fabio:ConferenceProceeding",
       "rdfs:label": "Inventory-Grounded Policy-Level Optimization for Training-Free AI Search",
@@ -61,6 +78,13 @@
       "@id": "https://jdding.github.io/publication/deltagate",
       "@type": "fabio:ConferenceProceeding",
       "rdfs:label": "Zero-Observation User Reactivation with Gap-Driven Dimensional Gating",
+      "fabio:hasPublicationYear": "2026",
+      "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
+    },
+    {
+      "@id": "https://jdding.github.io/publication/skillresolve-bench",
+      "@type": "fabio:Preprint",
+      "rdfs:label": "Right Family, Wrong Skill: Evaluating Risk Exposure in Agent Skill Retrieval",
       "fabio:hasPublicationYear": "2026",
       "biro:is-authored-by": "https://jdding.github.io/person/jiandong_ding"
     },

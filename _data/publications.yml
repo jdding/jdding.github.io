@@ -1,6 +1,5 @@
 ---
 - id: skillcontrast
-  hidden: true
   title: 'SkillContrast: Difference-Guided Text Selection for Agent Skill Reranking'
   year: 2026
   venue: arXiv preprint arXiv:2610.11650
@@ -58,7 +57,6 @@
     - title: Takeaway
       text: Global listwise objectives plus smoothed, progressive reweighting treat popularity bias as an objective-design problem rather than a post-hoc correction, in line with the adaptive-recommendation line on reliable ranking under changing exposure.
 - id: sidscope
-  hidden: true
   title: 'SIDScope: A Diagnostic Resource for Semantic-ID Interfaces in Generative Recommendation'
   year: 2026
   venue: arXiv preprint arXiv:2608.18779
@@ -229,7 +227,6 @@
     - title: Deployment boundary
       text: End-to-end retraining can reach higher absolute accuracy, while the frozen DeltaGate plugin preserves zero backbone drift, uses 66K trainable parameters, and keeps the adaptation behavior inspectable.
 - id: skillresolve-bench
-  hidden: true
   title: 'Right Family, Wrong Skill: Evaluating Risk Exposure in Agent Skill Retrieval'
   year: 2026
   venue: arXiv preprint arXiv:2606.10388
