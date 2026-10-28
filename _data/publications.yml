@@ -135,22 +135,32 @@
       text: The paper extends the LLM agents line from skill retrieval and service evaluation into AI search systems where policy, evidence, and inventory state must stay aligned.
 - id: dygraph
   program: adaptive-recommendation
-  title: 'Towards Practical Large-scale Dynamical Heterogeneous Graph Embedding: Cold-start Resilient Recommendation'
+  title: 'Toward Practical Large-Scale Dynamic Heterogeneous Graph Embedding: Cold-Start Resilient Recommendation'
   year: 2026
   venue: IEEE Transactions on Knowledge and Data Engineering (TKDE)
   venue_short: TKDE
   venue_type: journal
-  authors: Mabiao Long, Jiaxi Liu, Yufeng Li, Hao Xiong, Junchi Yan, Kefan Wang, Yi Cao, Jiandong Ding
+  authors: Mabiao Long, Jiaxi Liu, Yufeng Li, Kefan Wang, Yi Cao, Jiandong Ding, Hao Xiong, Junchi Yan
   topic: recommender-systems
   level: a
   selected: false
   status: accepted
+  volume: "38"
+  issue: "11"
+  pages: "7779–7794"
+  issue_date: "2026-11"
+  preprint_date: "2025-12-15"
+  digest_sources:
+    - label: IEEE journal record · DOI, title and authors
+      url: https://doi.org/10.1109/TKDE.2026.3728237
+    - label: arXiv author version · abstract
+      url: https://arxiv.org/abs/2512.13120
   acceptance_date: "2026-08-26"
   paper_url: https://arxiv.org/abs/2512.13120
   paper_label: arXiv
   digest_url: "/dygraph/"
   digest_label: Digest
-  doi_url: https://doi.org/10.48550/arxiv.2512.13120
+  doi_url: https://doi.org/10.1109/TKDE.2026.3728237
   digest_note: An accepted IEEE Transactions on Knowledge and Data Engineering paper on large-scale dynamical heterogeneous graph embedding for cold-start resilient recommendation.
   digest_blocks:
     - title: Problem

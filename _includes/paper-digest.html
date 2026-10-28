@@ -55,6 +55,8 @@
           <dl class="digest-record">
             <div><dt>Authors</dt><dd>{{ paper.authors }}</dd></div>
             <div><dt>Venue</dt><dd>{% include publication-venue.html paper=paper %}</dd></div>
+            {% if paper.volume %}<div><dt>Volume / issue</dt><dd>{{ paper.volume }}{% if paper.issue %}({{ paper.issue }}){% endif %}{% if paper.pages %}, pp. {{ paper.pages }}{% endif %}</dd></div>{% endif %}
+            {% if paper.issue_date %}<div><dt>Issue date</dt><dd>{{ paper.issue_date }} (assigned issue; online publication date not recorded here)</dd></div>{% endif %}
             <div><dt>Status</dt><dd>{% if paper.status == "accepted" %}Accepted; not yet recorded here as formally published{% elsif paper.status == "preprint" %}Preprint{% else %}Published{% endif %}</dd></div>
             {% if paper.preprint_date %}<div><dt>Preprint posted</dt><dd>{{ paper.preprint_date }}</dd></div>{% endif %}
             {% if paper.acceptance_date %}<div><dt>Accepted</dt><dd>{{ paper.acceptance_date }}</dd></div>{% endif %}

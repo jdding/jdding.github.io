@@ -30,6 +30,13 @@
     {% if citation_paper.doi_url %}
 <meta name="citation_doi" content="{{ citation_paper.doi_url | remove: 'https://doi.org/' | escape }}">
     {% endif %}
+    {% if citation_paper.volume %}<meta name="citation_volume" content="{{ citation_paper.volume | escape }}">{% endif %}
+    {% if citation_paper.issue %}<meta name="citation_issue" content="{{ citation_paper.issue | escape }}">{% endif %}
+    {% if citation_paper.pages %}
+      {% assign citation_pages = citation_paper.pages | replace: '–', '-' | split: '-' %}
+<meta name="citation_firstpage" content="{{ citation_pages | first }}">
+<meta name="citation_lastpage" content="{{ citation_pages | last }}">
+    {% endif %}
     {% if citation_paper.paper_url contains "arxiv.org/" %}
 <meta name="citation_arxiv_id" content="{{ citation_paper.paper_url | split: '/' | last | remove: '.pdf' | escape }}">
     {% endif %}

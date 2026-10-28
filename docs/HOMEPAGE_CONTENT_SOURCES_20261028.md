@@ -33,3 +33,9 @@ Local Zotero KB was checked first (MCP, discovery/snapshot, generation 43db57836
 The four research-connection strands and explicit paper relationships are site-level interpretations of public work. They describe complementary questions, not proven causal inheritance, one unified algorithm, or an allocation of individual credit. Personal leadership and contribution roles are not inferred from author order.
 
 The four priority additions bring extended Digests to 17 of 28. The remaining 11 historical records retain their routes and use the honest Paper record label. Expanding every historical paper and adding author-confirmed personal roles are future content work, not claims made in this release.
+
+## TKDE DOI follow-up (2026-10-28)
+
+IEEE's [Crossref deposit](https://api.crossref.org/works/10.1109/TKDE.2026.3728237) and [DOI](https://doi.org/10.1109/TKDE.2026.3728237) identify the journal version of dygraph as **Toward Practical Large-Scale Dynamic Heterogeneous Graph Embedding: Cold-Start Resilient Recommendation**, volume 38, issue 11, pages 7779–7794. The journal author order is Mabiao Long, Jiaxi Liu, Yufeng Li, Kefan Wang, Yi Cao, Jiandong Ding, Hao Xiong, Junchi Yan. The site now follows that record; its route stays `/dygraph/`, and arXiv remains the open reading link.
+
+The deposit reports print/issue month 2026-11 and no online publication date. DOI creation (2026-10-08) and metadata deposit (2026-10-13) are not publication dates. Retained `accepted` pending verified online publication or issue release; no exact `published_date` was invented. Issue metadata is displayed separately. Local KB lookup CW3DU3HY still held only the arXiv DOI (October 26 snapshot); it was a discovery lead, not the authority for journal metadata. IEEE returned an HTTP 202 challenge; the publisher's Crossref deposit supplied the metadata.
