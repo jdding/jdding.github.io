@@ -28,6 +28,8 @@ The root paper Markdown files are stable route shells. Keep their existing perma
 
 Do not use the former ambiguous `publication_date` field. An accepted paper may have a preprint date without a formal publication date.
 
+`published_date` preserves source precision: use `YYYY-MM-DD` when the publisher gives a day, or `YYYY-MM` when only a month is supplied. Never invent the first day of a month. DOI registration dates are not publication dates. Once a formal reading URL is verified, prefer it over arXiv for `paper_url`.
+
 `publication-date.html` supplies one policy to citation tags, Digest JSON-LD, list microdata, and the graph API:
 
 - Published: published_date, falling back to the bibliographic year when no exact date is known.

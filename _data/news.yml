@@ -1,4 +1,7 @@
 # Events describe what happened on this date, independently of today's paper status.
+- publication_id: tois-popularity-bias
+  type: published
+  date: "2026-10-08"
 - publication_id: skillcontrast
   type: preprint
   date: "2026-10-08"

@@ -38,7 +38,11 @@ papers.each do |p|
   %w[preprint_date acceptance_date published_date].each do |key|
     next unless p[key]
     begin
-      Date.iso8601(p[key])
+      if key == 'published_date' && p[key].match?(/\A\d{4}-\d{2}\z/)
+        Date.strptime(p[key], '%Y-%m')
+      else
+        Date.iso8601(p[key])
+      end
     rescue ArgumentError, TypeError
       check.call(false, "#{id}: invalid #{key}")
     end
