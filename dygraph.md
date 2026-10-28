@@ -1,7 +1,7 @@
 ---
 layout: research
 author_profile: false
-title: "Towards Practical Large-scale Dynamical Heterogeneous Graph Embedding: Cold-start Resilient Recommendation"
+title: "Toward Practical Large-Scale Dynamic Heterogeneous Graph Embedding: Cold-Start Resilient Recommendation"
 permalink: /dygraph/
 classes: wide
 publication_id: dygraph
