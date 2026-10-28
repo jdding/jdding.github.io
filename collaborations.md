@@ -44,12 +44,16 @@ description: "Research collaboration, student research internship, invited talk,
         <li><strong>Agent skill retrieval:</strong> how can retrieval distinguish similar skills with different conditions of use? Explore <a href="/skillcontrast/">SkillContrast</a>.</li>
       </ul>
       <h3>Background and availability</h3>
-      <p>Solid machine-learning fundamentals and hands-on Python experience. Relevant research or engineering work is a plus. {{ internship.logistics }}</p>
+      <p>Solid machine-learning fundamentals and hands-on Python experience.</p>
+      <ul>
+        <li>{{ internship.logistics }}</li>
+        <li>{{ internship.preference }}</li>
+      </ul>
       <h3>Apply by email</h3>
       <ol>
         <li>Choose a direction and describe one question you would like to explore.</li>
         <li>Attach your CV and include one or two research or code links.</li>
-        <li>Include your available dates, duration, days per week and location preferences.</li>
+        <li>Include your available dates, duration (at least 6 months), days per week and ability to work onsite.</li>
       </ol>
       <div class="hero-actions">
         <a class="button primary" href="mailto:{{ internship.email }}?subject={{ internship.subject | uri_escape }}&amp;body={{ internship.email_body | uri_escape }}">Draft application</a>

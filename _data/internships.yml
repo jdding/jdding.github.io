@@ -1,7 +1,8 @@
 status: Recruiting student research interns
 email: dingjiandong2@huawei.com
 subject: Research Intern Application — [Name] — [Research direction]
-logistics: Location, working mode and minimum duration are agreed individually. Please include your availability and location preferences in your application.
+logistics: A minimum commitment of 6 months is required. Internships are onsite; remote work is not supported. The work location is confirmed during the initial conversation.
+preference: Applicants with papers in CCF-A conferences or journals are preferred.
 email_body: |
   Hello Jiandong,
   
@@ -9,8 +10,9 @@ email_body: |
   
   Name / university / degree:
   Research direction and a question I would like to explore:
-  Earliest start date / available duration / days per week:
-  Current location / preferred work location / remote or onsite preference:
+  Earliest start date / available duration (at least 6 months) / days per week:
+  Current location / ability to work onsite:
+  CCF-A conference or journal papers, if any (links):
   Relevant research or code links (one or two):
   CV: please attach before sending.
   
