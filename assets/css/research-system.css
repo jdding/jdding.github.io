@@ -1502,3 +1502,8 @@
   background: var(--surface);
 }
 .research-site .quickstart-code code { white-space: inherit; }
+.resource-quickstart .digest-record { margin-bottom: 28px; }
+.resource-quickstart .digest-record div { grid-template-columns: 160px minmax(0, 1fr); gap: 24px; }
+@media (max-width: 600px) {
+  .resource-quickstart .digest-record div { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+}
