@@ -62,12 +62,12 @@
                 <h3>{% if paper.digest_url %}<a class="record-title-link" href="{{ paper.digest_url }}">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}</h3>
                 <div class="record-meta meta-lines">
                   <span>{{ paper.authors }}</span>
-                  <span>{% if paper.venue_type == "journal" %}{{ paper.venue }}{% else %}{{ paper.venue_short }} {{ paper.venue_year | default: paper.year }}{% endif %}</span>
+                  <span>{% include publication-venue.html paper=paper %} {% include publication-status.html paper=paper %}</span>
+                  {% if paper.program %}{% assign paper_program = site.data.research_programs | where: "id", paper.program | first %}<a href="/#program-{{ paper.program }}">{{ paper_program.hero_title }}</a>{% endif %}
                 </div>
               </div>
               <div class="record-actions">
-                <a class="pill link" href="/publications/#publication-{{ paper.id }}">Publication record</a>
-                {% if paper.digest_url %}<a class="pill digest" href="{{ paper.digest_url }}">Digest</a>{% endif %}
+                {% include publication-links.html paper=paper digest=true %}
               </div>
             </article>
             {% endif %}

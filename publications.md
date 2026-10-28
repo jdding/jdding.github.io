@@ -9,12 +9,14 @@ description: "Publications by Jiandong Ding (丁建栋) across recommender syste
 
 {% assign publications = site.data.publications | where_exp: "item", "item.hidden != true" %}
 {% assign topics = site.data.topics | sort: "order" %}
-{% assign years = publications | map: "year" | uniq %}
+{% assign years = publications | map: "year" | uniq | sort | reverse %}
 
 <div class="research-site">
   <section class="research-hero">
     <div class="research-shell">
       <h1>Full publications</h1>
+      <p class="lede">Research papers, accepted articles, and public preprints. Status is shown separately from the venue.</p>
+      <nav class="year-navigation" aria-label="Publication years">{% for year in years %}<a href="#{{ year }}" data-scroll-ignore>{{ year }}</a>{% endfor %}</nav>
     </div>
   </section>
 
@@ -24,28 +26,13 @@ description: "Publications by Jiandong Ding (丁建栋) across recommender syste
         {% for year in years %}
         {% assign year_papers = publications | where: "year", year %}
         <section id="{{ year }}" class="year-block">
-          <div class="year-label">{{ year }}</div>
+          <h2 class="year-label">{{ year }}</h2>
           <div class="record-stack">
             {% for paper in year_papers %}
             {% assign topic = topics | where: "slug", paper.topic | first %}
             {% assign topic_label = paper.topic_label | default: topic.title %}
-            {% assign venue_markup = paper.venue %}
-            {% if paper.venue_type != "journal" %}
-              {% assign display_year = paper.venue_year | default: paper.year %}
-              {% assign venue_markup = paper.venue_short | append: " " | append: display_year %}
-            {% else %}
-              {% assign venue_segments = paper.venue | split: "(" %}
-              {% if venue_segments.size > 1 and paper.venue_short %}
-                {% assign venue_candidate = venue_segments | last | split: ")" | first %}
-                {% if venue_candidate contains paper.venue_short %}
-                  {% assign plain_venue = "(" | append: venue_candidate | append: ")" %}
-                  {% capture bold_venue %}(<strong class="venue-abbr">{{ venue_candidate }}</strong>){% endcapture %}
-                  {% assign venue_markup = paper.venue | replace_first: plain_venue, bold_venue %}
-                {% elsif paper.venue_short != paper.venue %}
-                  {% capture venue_markup %}{{ paper.venue }} (<strong class="venue-abbr">{{ paper.venue_short }}</strong>){% endcapture %}
-                {% endif %}
-              {% endif %}
-            {% endif %}
+            {% capture published_date %}{% include publication-date.html paper=paper %}{% endcapture %}
+            {% assign published_date = published_date | strip %}
             <article id="publication-{{ paper.id }}" class="record-item" itemscope itemtype="https://schema.org/ScholarlyArticle">
               <div>
                 <h3 itemprop="headline">
@@ -56,8 +43,10 @@ description: "Publications by Jiandong Ding (丁建栋) across recommender syste
                   <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="{{ site.url }}/#person">
                     <meta itemprop="name" content="Jiandong Ding (丁建栋)">
                   </span>
-                  <span itemprop="isPartOf">{{ venue_markup }}</span>
-                  {% unless paper.status == "accepted" and paper.publication_date == nil %}<meta itemprop="datePublished" content="{{ paper.publication_date | default: paper.year }}">{% endunless %}
+                  <span><span itemprop="isPartOf">{% include publication-venue.html paper=paper %}</span> {% include publication-status.html paper=paper %}</span>
+                  {% if paper.program %}{% assign paper_program = site.data.research_programs | where: "id", paper.program | first %}<a href="/#program-{{ paper.program }}">{{ paper_program.hero_title }}</a>{% endif %}
+                  {% if published_date != empty %}<meta itemprop="datePublished" content="{{ published_date }}">{% endif %}
+                  <meta itemprop="creativeWorkStatus" content="{{ paper.status }}">
                 </div>
               </div>
               <div class="record-actions">
@@ -67,12 +56,7 @@ description: "Publications by Jiandong Ding (丁建栋) across recommender syste
                 <a class="pill topic" href="{{ link.url }}">{{ link.label }}</a>
                 {% endfor %}
                 {% endif %}
-                {% unless paper.hide_paper_action %}
-                {% if paper.paper_url %}<a class="pill link" href="{{ paper.paper_url }}">{{ paper.paper_label | default: "Paper" }}</a>{% endif %}
-                {% endunless %}
-                {% unless paper.paper_url %}{% if paper.doi_url %}<a class="pill link" href="{{ paper.doi_url }}">DOI</a>{% endif %}{% endunless %}
-                {% if paper.digest_url %}<a class="pill digest" href="{{ paper.digest_url }}">{{ paper.digest_label | default: "Digest" }}</a>{% endif %}
-                {% if paper.code_url %}<a class="pill link" href="{{ paper.code_url }}">{{ paper.code_label | default: "Code" }}</a>{% endif %}
+                {% include publication-links.html paper=paper digest=true %}
               </div>
             </article>
             {% endfor %}

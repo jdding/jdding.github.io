@@ -1,0 +1,16 @@
+- id: foundations
+  title: Learning from limited evidence
+  text: My earlier work spans biological sequence analysis, weak supervision, text classification, and graph learning. DP-SSL learns labeling functions from few labels; ContGCN updates a text graph as new documents arrive. These offer complementary ways to work with incomplete or changing evidence.
+  publication_ids: [mirfam, neurips-dpssl, continual-gcn, naacl-epida]
+- id: recommendation
+  title: Reliable recommendation under practical constraints
+  text: My recommendation work addresses stale user histories, biased feedback, changing task relationships, and deployment cost. Low-rank CTR compression and frozen-backbone adaptation address different parts of the accuracy–cost trade-off; neither removes the need to evaluate the resulting recommender.
+  publication_ids: [unified-low-rank-compression, deltagate, invariant-feature-learning, task-dependency-graphs]
+- id: interfaces
+  title: Inspecting the interfaces that decisions depend on
+  text: BIS evaluates language-to-database interfaces. SIDInspector and SIDScope examine Semantic-ID mappings and their use, while Right Family and SkillContrast study ambiguity in agent skill retrieval. The common question is what an interface exposes or loses before a downstream decision is made.
+  publication_ids: [bis-nl2sql, sidinspector, sidscope, skillresolve-bench, skillcontrast]
+- id: systems
+  title: AI systems in operation
+  text: P/D-Serve addresses scheduling and data transfer in disaggregated LLM serving. Alongside model-level research, this systems work and the public patent record show the range of practical constraints involved in applying AI. System measurements and benchmark improvements answer different questions.
+  publication_ids: [pd-serve]

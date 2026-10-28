@@ -5,6 +5,7 @@
   hero_title: Adaptive recommendation
   hero_short: Recommendation for changing users, catalogs, and operating conditions.
   summary: I study how recommendation systems should adapt when user evidence becomes stale, catalogs evolve, and production constraints limit what can safely change.
+  representative_publication_ids: [deltagate, hpgr]
   themes:
     - Zero-observation user reactivation after long inactivity
     - Generative and sequential recommendation under changing intent
@@ -22,6 +23,7 @@
   hero_title: Auditable AI retrieval
   hero_short: Evidence, interfaces, and risk in AI search and capability retrieval.
   summary: I study whether AI retrieval systems use the right evidence, expose dependable interfaces, and control misleading or unsafe retrieval behavior before deployment.
+  representative_publication_ids: [sidinspector, skillcontrast]
   themes:
     - Search and recommendation interaction and attribution
     - Semantic-ID interface diagnostics for generative recommendation

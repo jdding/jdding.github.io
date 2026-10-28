@@ -1,0 +1,6 @@
+{%- assign link_paper = include.paper -%}
+{%- assign link_class = include.class | default: "pill link" -%}
+{% unless link_paper.hide_paper_action %}{% if link_paper.paper_url %}<a class="{{ link_class }}" href="{{ link_paper.paper_url }}">{{ link_paper.paper_label | default: "Paper" }}</a>{% endif %}{% endunless %}
+{% if link_paper.doi_url and link_paper.doi_url != link_paper.paper_url %}<a class="{{ link_class }}" href="{{ link_paper.doi_url }}">DOI</a>{% endif %}
+{% if include.digest and link_paper.digest_url %}<a class="{{ link_class }}" href="{{ link_paper.digest_url }}">{% if link_paper.digest_blocks %}Digest{% else %}Paper record{% endif %}</a>{% endif %}
+{% if link_paper.code_url %}<a class="{{ link_class }}" href="{{ link_paper.code_url }}">{{ link_paper.code_label | default: "Code" }}</a>{% endif %}

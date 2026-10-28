@@ -1,0 +1,8 @@
+{% assign locale = include.locale | default: site.locale %}
+<nav class="skip-links" aria-label="Skip links">
+  <ul>
+    {% if page.layout == "research" or page.url == "/" %}<li><a href="#research-navigation" class="screen-reader-shortcut" data-scroll-ignore>{{ site.data.ui-text[locale].skip_primary_nav | default: 'Skip to primary navigation' }}</a></li>{% endif %}
+    <li><a href="#main" class="screen-reader-shortcut" data-scroll-ignore>{{ site.data.ui-text[locale].skip_content | default: 'Skip to content' }}</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut" data-scroll-ignore>{{ site.data.ui-text[locale].skip_footer | default: 'Skip to footer' }}</a></li>
+  </ul>
+</nav>

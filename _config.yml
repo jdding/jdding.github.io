@@ -81,6 +81,7 @@ kramdown:
 exclude:
   - README.md
   - docs/
+  - scripts/
   - archive/
   - _pages/
   - convert_new_logos.py

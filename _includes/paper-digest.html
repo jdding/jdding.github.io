@@ -1,31 +1,25 @@
 {% assign paper = site.data.publications | where: "id", page.publication_id | first %}
 {% assign topic = site.data.topics | where: "slug", paper.topic | first %}
+{% if paper.program %}{% assign program = site.data.research_programs | where: "id", paper.program | first %}{% else %}{% assign program = nil %}{% endif %}
 {% assign topic_label = paper.topic_label | default: topic.title %}
-{% assign related_papers = site.data.publications | where: "topic", paper.topic | where_exp: "item", "item.hidden != true" %}
-{% assign published_date = paper.publication_date | default: paper.year | append: "" %}
+{% capture published_date %}{% include publication-date.html paper=paper %}{% endcapture %}
+{% assign published_date = published_date | strip %}
+{% assign public_papers = site.data.publications | where_exp: "item", "item.hidden != true" %}
 
 <div class="research-site digest-page">
   <section class="research-hero">
     <div class="research-shell">
       <nav class="digest-breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a>
-        <span aria-hidden="true">/</span>
-        {% if topic %}
-        <a href="/topics/{{ topic.slug }}/">{{ topic.title }}</a>
-        <span aria-hidden="true">/</span>
-        {% endif %}
-        <span aria-current="page">{{ paper.title }}</span>
+        <a href="/">Home</a><span aria-hidden="true">/</span>
+        <a href="/publications/">Publications</a><span aria-hidden="true">/</span>
+        <span aria-current="page">{% if paper.digest_blocks %}Digest{% else %}Paper record{% endif %}</span>
       </nav>
-      <div class="digest-kicker">
-        {% if paper.venue_type == "journal" %}{{ paper.venue }}{% else %}{% if paper.venue_short %}{{ paper.venue_short }}{% else %}{{ paper.venue }}{% endif %} {{ paper.venue_year | default: paper.year }}{% endif %}{% if topic_label %} / {{ topic_label }}{% endif %}
-      </div>
+      <div class="digest-kicker">{% include publication-venue.html paper=paper %} {% include publication-status.html paper=paper %}</div>
       <h1>{{ paper.title }}</h1>
       <p class="lede">{{ paper.digest_note | default: paper.selected_summary }}</p>
-      <div class="hero-actions" aria-label="Digest actions">
-        {% if paper.paper_url %}<a class="button primary" href="{{ paper.paper_url }}">{{ paper.paper_label | default: "Paper" }}</a>{% endif %}
-        {% if paper.doi_url %}<a class="button secondary" href="{{ paper.doi_url }}">DOI</a>{% endif %}
-        <a class="button secondary" href="/publications/#publication-{{ paper.id }}">Publication record</a>
-        {% if paper.code_url %}<a class="button secondary" href="{{ paper.code_url }}">{{ paper.code_label | default: "Code" }}</a>{% endif %}
+      <div class="hero-actions" aria-label="Paper resources">
+        {% include publication-links.html paper=paper class="button secondary" %}
+        <a class="text-link" href="/publications/#publication-{{ paper.id }}">Full list entry</a>
       </div>
     </div>
   </section>
@@ -33,42 +27,6 @@
   <section class="research-section">
     <div class="research-shell digest-layout">
       <article class="digest-main">
-        {% if paper.digest_image and paper.image %}
-        <figure class="digest-visual">
-          <img src="{% if paper.image_webp %}{{ paper.image_webp }}{% else %}{{ paper.image }}{% endif %}"{% if paper.image_webp %} width="1600" height="894"{% endif %} alt="Infographic for {{ paper.title }}" loading="eager" decoding="async">
-        </figure>
-        {% endif %}
-        {% if topic %}
-        <section class="digest-block">
-          <h2>Research area</h2>
-          <p>{{ topic.scope_text | default: topic.summary }}</p>
-        </section>
-        {% endif %}
-
-        <section class="digest-block">
-          <h2>Publication record</h2>
-          <dl class="digest-record">
-            <div>
-              <dt>Authors</dt>
-              <dd>{{ paper.authors }}</dd>
-            </div>
-            <div>
-              <dt>Venue</dt>
-              <dd>{{ paper.venue }}</dd>
-            </div>
-            {% unless paper.venue_type == "journal" %}<div>
-              <dt>Year</dt>
-              <dd>{{ paper.venue_year | default: paper.year }}</dd>
-            </div>{% endunless %}
-            {% if topic %}
-            <div>
-              <dt>Area</dt>
-              <dd>{{ topic.title }}</dd>
-            </div>
-            {% endif %}
-          </dl>
-        </section>
-
         {% if paper.digest_blocks %}
         {% for block in paper.digest_blocks %}
         <section class="digest-block">
@@ -77,26 +35,48 @@
         </section>
         {% endfor %}
         {% endif %}
+        {% if paper.digest_sources %}
+        <section class="digest-block">
+          <h2>Sources</h2>
+          <ul class="digest-sources">
+            {% for source in paper.digest_sources %}<li><a href="{{ source.url }}">{{ source.label }}</a></li>{% endfor %}
+          </ul>
+        </section>
+        {% endif %}
+        {% if paper.digest_image and paper.image %}
+        <figure class="digest-visual">
+          <a href="{{ paper.image }}" aria-label="View full-size infographic for {{ paper.title | escape }}"><img src="{{ paper.image_webp | default: paper.image }}"{% if paper.image_webp %} width="1600" height="894"{% endif %} alt="Infographic for {{ paper.title | escape }}" loading="lazy" decoding="async"></a>
+        </figure>
+        {% endif %}
+        <section class="digest-block">
+          <h2>Bibliographic details</h2>
+          <dl class="digest-record">
+            <div><dt>Authors</dt><dd>{{ paper.authors }}</dd></div>
+            <div><dt>Venue</dt><dd>{% include publication-venue.html paper=paper %}</dd></div>
+            <div><dt>Status</dt><dd>{% if paper.status == "accepted" %}Accepted; not yet recorded here as formally published{% elsif paper.status == "preprint" %}Preprint{% else %}Published{% endif %}</dd></div>
+            {% if paper.preprint_date %}<div><dt>Preprint posted</dt><dd>{{ paper.preprint_date }}</dd></div>{% endif %}
+            {% if paper.acceptance_date %}<div><dt>Accepted</dt><dd>{{ paper.acceptance_date }}</dd></div>{% endif %}
+            {% if paper.published_date %}<div><dt>First published</dt><dd>{{ paper.published_date }}</dd></div>{% endif %}
+            {% if paper.venue_year and paper.venue_year != paper.year %}<div><dt>Proceedings year</dt><dd>{{ paper.year }}</dd></div>{% endif %}
+          </dl>
+        </section>
       </article>
 
       <aside class="digest-side">
-        <div class="summary-board" aria-label="Digest metadata">
-          {% unless paper.venue_type == "journal" %}<div class="summary-row"><strong>{{ paper.venue_year | default: paper.year }}</strong><span>{% if paper.venue_year %}conference year{% else %}publication year{% endif %}</span></div>{% endunless %}
-          {% if paper.venue_type == "journal" %}<div class="summary-row"><strong>{{ paper.venue }}</strong><span>venue</span></div>{% elsif paper.venue_short %}<div class="summary-row"><strong>{{ paper.venue_short }}</strong><span>venue</span></div>{% endif %}
-          {% if topic_label %}<div class="summary-row"><strong>{{ topic_label }}</strong><span>research direction</span></div>{% endif %}
-        </div>
-        {% if topic %}
-        <a class="text-link" href="/topics/{{ topic.slug }}/">Topic page</a>
+        {% if program %}
+        <div class="digest-research-link"><h2>Research line</h2><a href="/#program-{{ program.id }}">{{ program.title }}</a></div>
+        {% elsif paper.research_context %}
+        <div class="digest-research-link"><h2>Research context</h2><p>{{ paper.research_context }}</p></div>
         {% endif %}
-        {% if related_papers.size > 1 %}
+        {% if topic %}<a class="text-link" href="/topics/{{ topic.slug }}/">{{ topic.title }}</a>{% endif %}
+        {% if paper.related_work %}
         <div class="related-publications">
-          <h2>Related publications</h2>
-          {% assign rendered_related = 0 %}
-          {% for related in related_papers %}
-            {% if related.id != paper.id and related.digest_url and rendered_related < 3 %}
-          <a href="{{ related.digest_url }}">{{ related.title }}</a>
-              {% assign rendered_related = rendered_related | plus: 1 %}
-            {% endif %}
+          <h2>Connected work</h2>
+          {% for relation in paper.related_work %}
+          {% assign related = public_papers | where: "id", relation.publication_id | first %}
+          {% if related %}
+          <div><a href="{{ related.digest_url }}">{{ related.title }}</a><p>{{ relation.relationship }}</p></div>
+          {% endif %}
           {% endfor %}
         </div>
         {% endif %}
@@ -131,7 +111,8 @@
       }{% endif %}{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ],
-  {% unless paper.status == "accepted" and paper.publication_date == nil %}"datePublished": {{ published_date | jsonify }},{% endunless %}
+  {% if published_date != empty %}"datePublished": {{ published_date | jsonify }},{% endif %}
+  "creativeWorkStatus": {{ paper.status | jsonify }},
   "isPartOf": {
     "@type": "CreativeWorkSeries",
     "name": {{ paper.venue | jsonify }}

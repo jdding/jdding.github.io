@@ -1,0 +1,6 @@
+{%- comment -%}Formal publication only; a preprint has its own date. Acceptance never supplies datePublished.{%- endcomment -%}
+{%- if include.paper.status == "published" -%}
+  {{- include.paper.published_date | default: include.paper.year -}}
+{%- elsif include.paper.status == "preprint" -%}
+  {{- include.paper.preprint_date | default: include.paper.year -}}
+{%- endif -%}

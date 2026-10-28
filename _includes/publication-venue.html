@@ -1,0 +1,7 @@
+{%- if include.paper.venue_type == "journal" -%}
+  {{- include.paper.venue -}}
+{%- elsif include.paper.status == "preprint" -%}
+  arXiv {{ include.paper.year }}
+{%- else -%}
+  {{- include.paper.venue_short }} {{ include.paper.venue_year | default: include.paper.year -}}
+{%- endif -%}

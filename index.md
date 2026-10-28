@@ -6,16 +6,17 @@ description: "Jiandong Ding (丁建栋) is a Principal Algorithm Expert at Huawe
 classes: wide
 ---
 
-<link rel="stylesheet" href="/assets/css/research-system.css?v=seo-20260912">
+<link rel="stylesheet" href="/assets/css/research-system.css?v=research-20261028">
 {% include research-nav.html %}
 
 {% assign topics = site.data.topics | sort: "order" %}
 {% assign programs = site.data.research_programs | sort: "order" %}
 {% assign public_artifacts = site.data.open_source | where_exp: "item", "item.hidden != true" | sort: "order" %}
 {% assign selected_papers = site.data.publications | where_exp: "item", "item.hidden != true" | where: "selected", true %}
-{% assign dated_papers = site.data.publications | where_exp: "item", "item.hidden != true" | sort: "publication_date", "first" | reverse %}
+{% assign publications = site.data.publications | where_exp: "item", "item.hidden != true" %}
+{% assign news_events = site.data.news | sort: "date" | reverse %}
 
-<main id="main" class="research-site">
+<main id="main" class="research-site homepage">
   <section class="research-hero">
     <div class="research-shell hero-layout">
       <div class="hero-copy">
@@ -37,8 +38,9 @@ classes: wide
           </div>
         </div>
         <div class="hero-actions" aria-label="Primary actions">
-          <a class="button primary" href="#research">Explore research</a>
-          <a class="text-link" href="#connect">Get in touch</a>
+          <a class="button primary" href="#research" data-scroll-ignore>Explore research</a>
+          <a class="text-link" href="/publications/">Publications</a>
+          <a class="text-link" href="/collaborations/#research-intern">Research internships</a>
         </div>
       </div>
 
@@ -50,138 +52,57 @@ classes: wide
     </div>
   </section>
 
-  <section id="updates" class="research-section">
-    <div class="research-shell">
-      <div class="section-head section-head-row">
-        <div>
-          <span class="section-label">News</span>
-          <h2>Recent updates</h2>
-        </div>
-        <a class="text-link" href="/publications/">All publications</a>
-      </div>
-      <div class="record-list">
-        <section class="year-block">
-          <div class="year-label">2026</div>
-          <div class="record-stack">
-            {% assign news_count = 0 %}
-            {% for paper in dated_papers %}
-            {% if paper.publication_date and news_count < 5 %}
-            <article class="record-item">
-              <div>
-                <h3>{% if paper.status == "published" %}Published in {{ paper.venue_short }} {{ paper.venue_year | default: paper.year }}{% elsif paper.status == "accepted" %}Accepted at {% if paper.venue_type == "journal" %}{{ paper.venue }}{% else %}{{ paper.venue_short }} {{ paper.venue_year | default: paper.year }}{% endif %}; arXiv version available{% else %}Released on arXiv{% endif %}</h3>
-                <div class="record-meta meta-lines">
-                  <span>{{ paper.title }}</span>
-                  <span>{{ paper.publication_date }}</span>
-                </div>
-              </div>
-              <div class="record-actions">
-                {% if paper.digest_url %}<a class="pill digest" href="{{ paper.digest_url }}">Digest</a>{% endif %}
-                {% if paper.paper_url %}<a class="pill link" href="{{ paper.paper_url }}">{{ paper.paper_label | default: "arXiv" }}</a>{% endif %}
-                {% if paper.code_url %}<a class="pill link" href="{{ paper.code_url }}">Code</a>{% endif %}
-              </div>
-            </article>
-            {% assign news_count = news_count | plus: 1 %}
-            {% endif %}
-            {% endfor %}
-          </div>
-        </section>
-      </div>
-    </div>
-  </section>
-
   <section id="research" class="research-section">
     <div class="research-shell">
       <div class="section-head">
-        <span class="section-label">Research</span>
-        <h2>What I study</h2>
-        <p>I study how learning and retrieval systems remain dependable when the evidence they rely on changes.</p>
+        <h2>Two questions guide my research</h2>
+        <p>How should a recommender adapt when its evidence changes? How can we inspect the interfaces on which AI retrieval depends?</p>
       </div>
       <div class="research-program-stack">
         {% for program in programs %}
-        {% assign program_artifacts = public_artifacts | where: "program", program.id %}
         <article id="program-{{ program.id }}" class="research-program-block">
-          <div class="research-program-head">
-            <div class="program-index">{{ program.number }}</div>
-            <div class="program-intro">
+          <div class="program-overview">
+            <span class="program-index">{{ program.number }}</span>
+            <div>
               <h3>{{ program.title }}</h3>
               <p>{{ program.summary }}</p>
             </div>
-            <div class="program-detail">
-              <ul>
-                {% for theme in program.themes %}<li>{{ theme }}</li>{% endfor %}
-              </ul>
-              <div class="program-topics" aria-label="Related topics">
-                {% for topic in program.topics %}
-                <a href="/topics/{{ topic.slug }}/">{{ topic.label }}</a>
-                {% endfor %}
-              </div>
-            </div>
           </div>
-
-          <div class="artifact-group">
-            <div class="artifact-group-label">Public code and resources</div>
-            <div class="artifact-list">
-              {% for artifact in program_artifacts %}
-              {% assign related_paper = site.data.publications | where: "id", artifact.publication_id | first %}
-              <article class="artifact-row">
-                <div class="artifact-kind">
-                  <span>{{ artifact.kind }}</span>
-                  <strong>{{ artifact.record }}</strong>
-                </div>
-                <div class="artifact-copy">
-                  <h4>{{ artifact.title }}</h4>
-                  <p>{{ artifact.summary }}</p>
-                  <span class="artifact-stack">{{ artifact.stack }}</span>
-                </div>
-                <div class="artifact-actions">
-                  <a href="{{ artifact.repository_url }}">Repository</a>
-                  {% if related_paper.digest_url %}<a href="{{ related_paper.digest_url }}">Digest</a>{% endif %}
-                </div>
-              </article>
-              {% endfor %}
-            </div>
-          </div>
-        </article>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <section id="recent-publications" class="research-section">
-    <div class="research-shell">
-      <div class="section-head section-head-row">
-        <div>
-          <span class="section-label">Recent work</span>
-          <h2>Recent publications</h2>
-        </div>
-        <a class="text-link" href="/publications/">Full publication record</a>
-      </div>
-      <div class="record-list">
-        <section class="year-block">
-          <div class="year-label">Recent</div>
-          <div class="record-stack">
-            {% assign recent_count = 0 %}
-            {% for paper in dated_papers %}
-            {% if paper.status != "preprint" and recent_count < 5 %}
-            {% assign topic = topics | where: "slug", paper.topic | first %}
-            <article id="recent-{{ paper.id }}" class="record-item">
-              <div>
-                <h3><a class="record-title-link" href="{{ paper.digest_url }}">{{ paper.title }}</a></h3>
-                <div class="record-meta meta-lines">
-                  <span>{{ paper.authors }}</span>
-                  <span>{% if paper.venue_type == "journal" %}{{ paper.venue }}{% else %}{{ paper.venue_short }} {{ paper.venue_year | default: paper.year }}{% endif %}</span>
-                </div>
-              </div>
-              <div class="record-actions">
-                {% if topic %}<a class="pill topic" href="/topics/{{ topic.slug }}/">{{ topic.title }}</a>{% endif %}
-                {% if paper.paper_url %}<a class="pill link" href="{{ paper.paper_url }}">{{ paper.paper_label | default: "Paper" }}</a>{% endif %}
-              </div>
+          <div class="contribution-list">
+            {% for paper_id in program.representative_publication_ids %}
+            {% assign paper = publications | where: "id", paper_id | first %}
+            {% if paper %}
+            <article class="contribution-item" data-publication-id="{{ paper.id }}">
+              <h4><a href="{{ paper.digest_url }}">{{ paper.contribution.label }}</a></h4>
+              <div class="record-meta">{% include publication-venue.html paper=paper %} {% include publication-status.html paper=paper %}</div>
+              <p>{{ paper.contribution.problem }} {{ paper.contribution.mechanism }}</p>
+              <p class="contribution-evidence"><strong>Evidence.</strong> {{ paper.contribution.evidence }} <span>{{ paper.contribution.boundary }}</span></p>
+              <div class="record-actions">{% include publication-links.html paper=paper digest=true %}</div>
             </article>
-            {% assign recent_count = recent_count | plus: 1 %}
             {% endif %}
             {% endfor %}
           </div>
-        </section>
+          <details class="program-more">
+            <summary>More work and resources</summary>
+            <ul>
+              {% assign program_papers = publications | where: "program", program.id %}
+              {% for paper in program_papers %}
+              {% unless program.representative_publication_ids contains paper.id %}
+              <li><a href="{{ paper.digest_url }}">{{ paper.title }}</a> <span class="record-meta">{% include publication-venue.html paper=paper %} {% include publication-status.html paper=paper %}</span></li>
+              {% endunless %}
+              {% endfor %}
+            </ul>
+            <div class="program-resources">
+              {% for artifact in public_artifacts %}
+              {% assign resource_paper = publications | where: "id", artifact.publication_id | first %}
+              {% if resource_paper.program == program.id %}
+              <a href="{{ artifact.repository_url }}">{{ artifact.title }} · Repository</a>
+              {% endif %}
+              {% endfor %}
+            </div>
+          </details>
+        </article>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -190,7 +111,6 @@ classes: wide
     <div class="research-shell">
       <div class="section-head section-head-row">
         <div>
-          <span class="section-label">Research record</span>
           <h2>Selected papers</h2>
         </div>
         <a class="text-link" href="/publications/">All publications</a>
@@ -207,8 +127,8 @@ classes: wide
           {% endif %}
           <div class="paper-body">
             <div class="paper-meta">
-              <span>{% if paper.venue_type == "journal" %}{{ paper.venue }}{% else %}{{ paper.selected_label | default: paper.venue_short }}{% endif %}</span>
-              <span>{{ program.hero_title | default: topic.title }}</span>
+              <span>{% include publication-venue.html paper=paper %} {% include publication-status.html paper=paper %}</span>
+              <span>{{ program.hero_title | default: paper.research_context | default: topic.title }}</span>
             </div>
             <h3><a class="paper-title-link" href="{{ paper.digest_url }}">{{ paper.title }}</a></h3>
             <p>{{ paper.selected_summary }}</p>
@@ -222,11 +142,60 @@ classes: wide
     </div>
   </section>
 
+  <section id="updates" class="research-section compact-section">
+    <div class="research-shell">
+      <span id="recent-publications" class="anchor-alias" aria-hidden="true"></span>
+      <div class="section-head section-head-row">
+        <h2>Latest updates</h2>
+        <a class="text-link" href="/publications/">Full publication record</a>
+      </div>
+      <ul class="news-list">
+        {% assign rendered_news = 0 %}
+        {% for event in news_events %}
+        {% assign paper = publications | where: "id", event.publication_id | first %}
+        {% if paper and rendered_news < 3 %}
+        <li>
+          <time datetime="{{ event.date }}">{{ event.date }}</time>
+          <div>
+            <span>{% if event.type == "accepted" %}Accepted in {% include publication-venue.html paper=paper %}{% elsif event.type == "published" %}Published in {% include publication-venue.html paper=paper %}{% else %}Preprint released{% endif %}</span>
+            <a href="{{ paper.digest_url }}">{{ paper.title }}</a>
+          </div>
+        </li>
+        {% assign rendered_news = rendered_news | plus: 1 %}
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section id="trajectory" class="research-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>Research foundations and connections</h2>
+        <p>These strands connect my earlier learning methods, current recommendation and retrieval work, and experience with operating AI systems.</p>
+      </div>
+      <div class="research-trajectory">
+        {% for strand in site.data.research_trajectory %}
+        <article>
+          <h3>{{ strand.title }}</h3>
+          <p>{{ strand.text }}</p>
+          <ul>
+            {% for paper_id in strand.publication_ids %}
+            {% assign paper = publications | where: "id", paper_id | first %}
+            {% if paper %}<li><a href="{{ paper.digest_url }}">{{ paper.title }}</a></li>{% endif %}
+            {% endfor %}
+          </ul>
+          {% if strand.id == "systems" %}<a class="text-link" href="/patents/">Public patent record</a>{% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
   <section id="connect" class="research-section">
     <div class="research-shell">
       <div class="contact-closing">
         <div class="contact-intro">
-          <span class="section-label">Contact</span>
           <h2>Collaboration and exchange</h2>
           <p>I welcome focused conversations around recommender systems, LLM agents, data mining, shared benchmarks, and applied research problems. I am also recruiting student research interns; see the <a href="/collaborations/#research-intern">Research Intern section</a> for how to apply.</p>
           <a class="text-link" href="/collaborations/">Collaboration record</a>

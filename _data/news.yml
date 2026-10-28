@@ -1,0 +1,16 @@
+# Events describe what happened on this date, independently of today's paper status.
+- publication_id: skillcontrast
+  type: preprint
+  date: "2026-10-08"
+- publication_id: deltagate
+  type: published
+  date: "2026-09-27"
+- publication_id: tois-popularity-bias
+  type: accepted
+  date: "2026-09-22"
+- publication_id: igpo-ai-search
+  type: preprint
+  date: "2026-09-04"
+- publication_id: dygraph
+  type: accepted
+  date: "2026-08-26"

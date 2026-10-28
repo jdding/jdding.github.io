@@ -1,6 +1,6 @@
 # Homepage Update Specification
 
-Status: Approved for implementation
+Status: Historical implementation specification. The 2026-10-28 five-item review follow-up supersedes its homepage order and content scope; see `Digest_Module_Maintenance_Guide.md` and `HOMEPAGE_CONTENT_SOURCES_20261028.md`.
 
 Scope: Homepage, shared navigation, homepage-facing research data, responsive styling, and homepage structured metadata
 

@@ -25,7 +25,7 @@ sitemap: false
       <div class="topic-page-grid">
         <article class="topic-card">
           <h3>Research mainline</h3>
-          <p>The homepage presents the trajectory from sequence mining and data mining to recommender systems and LLM agent systems.</p>
+          <p>The <a href="/#research">homepage</a> presents adaptive recommendation and auditable AI retrieval through representative contributions. Its <a href="/#trajectory">research connections</a> section relates earlier learning methods, current papers, and industrial systems without treating them as one algorithm.</p>
         </article>
         <article class="topic-card">
           <h3>Full publications</h3>

@@ -81,7 +81,7 @@ permalink: /api/knowledge-graph.json
       "about": { "@id": "{{ site.url }}/topics/{{ project.topic }}/#topic" },
       "isPartOf": { "@id": "{{ site.url }}/#program-{{ project.program }}" },
       "member": { "@id": "{{ site.url }}/#person" }
-    }{% endfor %}{% for paper in publications %}{% assign published_date = paper.publication_date | default: paper.year | append: "" %},
+    }{% endfor %}{% for paper in publications %}{% capture published_date %}{% include publication-date.html paper=paper %}{% endcapture %}{% assign published_date = published_date | strip %},
     {
       "@id": "{{ site.url }}/publication/{{ paper.id }}",
       "@type": "ScholarlyArticle",
@@ -103,7 +103,8 @@ permalink: /api/knowledge-graph.json
         {% endfor %}
       ],
       "creditText": {{ paper.authors | jsonify }},
-      {% unless paper.status == "accepted" and paper.publication_date == nil %}"datePublished": {{ published_date | jsonify }},{% endunless %}
+      {% if published_date != empty %}"datePublished": {{ published_date | jsonify }},{% endif %}
+      "creativeWorkStatus": {{ paper.status | jsonify }},
       "isPartOf": {
         "@type": "CreativeWorkSeries",
         "name": {{ paper.venue | jsonify }}

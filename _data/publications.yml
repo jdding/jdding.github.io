@@ -1,11 +1,23 @@
 ---
 - id: skillcontrast
+  contribution:
+    label: SkillContrast
+    problem: Similar skills can hide different conditions of use behind shared instructions.
+    mechanism: Select text that differs between retrieved candidates, with local context, for a pretrained reranker.
+    evidence: On 1,235 benchmark requests, 54–72 more clean hits than TF-IDF selection at identical input lengths.
+    boundary: This is retrieval evidence; it does not establish safe execution of a skill.
+  digest_sources:
+    - label: arXiv v1 · abstract and experiments
+      url: https://arxiv.org/html/2610.11650v1
+  related_work:
+    - publication_id: skillresolve-bench
+      relationship: Measures the same-family exposure problem that motivates difference-aware reranking.
   title: 'SkillContrast: Difference-Guided Text Selection for Agent Skill Reranking'
   year: 2026
   venue: arXiv preprint arXiv:2610.11650
   venue_short: arXiv
   authors: Jiandong Ding, Honglei Ji, Ming Liu, Tao Duan
-  publication_date: "2026-10-08"
+  preprint_date: "2026-10-08"
   topic: llm-agents
   program: auditable-retrieval
   level: c
@@ -22,7 +34,7 @@
     - title: Approach
       text: SkillContrast is a training-free selector. It compares retrieved candidate skills against each other and keeps the differing text together with local context as the input to a pretrained reranker, so the comparison signal comes from the candidates themselves rather than from the query alone.
     - title: Public evidence
-      text: On 1,235 requests from SameCapRisk-Bench, SkillContrast yields 54 to 72 more clean hits (retrieving a helpful skill without its risky sibling) than TF-IDF query selection at equal input length, across two retrievers and two reranker sizes. Cutting model-input tokens by 51.1 to 58.8 percent versus full skill bodies costs 10 to 18 clean hits at a 0.6B reranker while matching or beating query selection at 4B. These are benchmark measurements, not production deployment results.
+      text: On 1,235 requests from SameCapRisk-Bench, SkillContrast yields 54 to 72 more clean hits (retrieving a helpful skill without its risky sibling) than TF-IDF query selection at equal input length, across two retrievers and two reranker sizes. Compared with full skill bodies, it uses 51.1 to 58.8 percent fewer model-input tokens, with 10 to 18 fewer clean hits at a 0.6B reranker and matching or higher observed clean-hit counts at 4B. These are benchmark measurements, not production deployment results.
     - title: Takeaway
       text: Candidate-relative differences complement query relevance when forming compact reranking inputs, extending the skill-retrieval line from measuring same-family risk exposure to reducing it before reranking.
 - id: tois-popularity-bias
@@ -32,7 +44,8 @@
   venue_short: TOIS
   venue_type: journal
   authors: Tianyu Zhu, Jiandong Ding, Yansong Shi, Guoqing Chen, Jian-Yun Nie
-  publication_date: "2026-09-28"
+  preprint_date: "2026-09-28"
+  acceptance_date: "2026-09-22"
   topic: recommender-systems
   program: adaptive-recommendation
   level: a
@@ -57,12 +70,16 @@
     - title: Takeaway
       text: Global listwise objectives plus smoothed, progressive reweighting treat popularity bias as an objective-design problem rather than a post-hoc correction, in line with the adaptive-recommendation line on reliable ranking under changing exposure.
 - id: sidscope
+  related_work:
+    - publication_id: sidinspector
+      relationship: Mapping diagnostics are complemented here by candidate-retrieval and generated-trace tests.
   title: 'SIDScope: A Diagnostic Resource for Semantic-ID Interfaces in Generative Recommendation'
   year: 2026
   venue: arXiv preprint arXiv:2608.18779
   venue_short: arXiv
   authors: Jiandong Ding, Huijie Qin, Tiandeng Wu, Yi Cao
-  publication_date: "2026-08-19"
+  preprint_date: "2026-08-19"
+  program: auditable-retrieval
   topic: recommender-systems
   level: c
   selected: false
@@ -90,7 +107,7 @@
   venue: "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing: Industry Track (EMNLP '26)"
   venue_short: EMNLP
   authors: Wei Zhou, Tiandeng Wu, Jiandong Ding, Zhufeng Fan, Yi Cao
-  publication_date: "2026-09-04"
+  preprint_date: "2026-09-04"
   topic: llm-agents
   program: auditable-retrieval
   level: b
@@ -101,7 +118,7 @@
   card_image: "/assets/images/AI-Search-Optimization-Infographic-card.webp"
   digest_image: true
   selected_label: EMNLP 2026
-  selected_summary: Training-free, inventory-grounded policy optimization for reliable AI search under changing catalog conditions.
+  selected_summary: Uses catalog evidence to optimize search policies without model training, so query behavior can adapt to the inventory that is actually available.
   paper_url: https://arxiv.org/abs/2609.04813
   paper_label: arXiv
   digest_url: "/igpo-ai-search/"
@@ -117,6 +134,7 @@
     - title: Takeaway
       text: The paper extends the LLM agents line from skill retrieval and service evaluation into AI search systems where policy, evidence, and inventory state must stay aligned.
 - id: dygraph
+  program: adaptive-recommendation
   title: 'Towards Practical Large-scale Dynamical Heterogeneous Graph Embedding: Cold-start Resilient Recommendation'
   year: 2026
   venue: IEEE Transactions on Knowledge and Data Engineering (TKDE)
@@ -133,7 +151,7 @@
   digest_url: "/dygraph/"
   digest_label: Digest
   doi_url: https://doi.org/10.48550/arxiv.2512.13120
-  digest_note: A TKDE paper on practical large-scale dynamical heterogeneous graph embedding for cold-start resilient recommendation.
+  digest_note: An accepted IEEE Transactions on Knowledge and Data Engineering paper on large-scale dynamical heterogeneous graph embedding for cold-start resilient recommendation.
   digest_blocks:
     - title: Problem
       text: Production graph embeddings must balance billion-scale training, data freshness, and cold-start behavior without repeatedly rebuilding the entire representation system.
@@ -144,12 +162,13 @@
     - title: Takeaway
       text: The two-stage design separates expensive global representation learning from targeted incremental refresh, supporting practical cold-start resilience under changing graph data.
 - id: task-dependency-graphs
+  program: adaptive-recommendation
   title: Personalized Task Dependency Graphs for Mitigating Signal Erosion in Multi-Task Recommendation
   year: 2026
   venue: Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM '26)
   venue_short: CIKM
   authors: Fuyuan Liu, Tiandeng Wu, Yaqun Fang, Wei Zhou, Zehao Zhou, Wenping Chen, Qishun Mei, Jiaxin Zhou, Heng Chang, Yi Cao, Jiandong Ding
-  publication_date: "2026-09-04"
+  preprint_date: "2026-09-04"
   topic: recommender-systems
   level: b
   selected: false
@@ -170,12 +189,25 @@
     - title: Takeaway
       text: The work belongs to the recommendation line on reliable multi-objective modeling under changing user, item, and task signals.
 - id: sidinspector
+  contribution:
+    label: SIDInspector
+    problem: A usable code vocabulary does not guarantee that each item remains distinguishable or retrievable.
+    mechanism: Inspect exported item-to-code mappings before training, separating utilization, aliasing, alignment, and structural cost.
+    evidence: Diagnostic comparisons across released tokenizer families expose different capacity and addressability behavior.
+    boundary: Mapping diagnostics alone do not establish a gain in recommendation quality.
+  digest_sources:
+    - label: Public paper · mapping diagnostics
+      url: https://arxiv.org/abs/2606.10375
+  related_work:
+    - publication_id: sidscope
+      relationship: Extends interface inspection to candidate retrieval, generated paths, and model reuse after refresh.
   title: 'SIDInspector: A Mapping-First Diagnostic Resource for Semantic-ID Tokenizers'
   year: 2026
   venue: Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM '26)
   venue_short: CIKM
   authors: Jiandong Ding, Heng Chang, Huijie Qin, Tianying Liu
-  publication_date: "2026-06-09"
+  preprint_date: "2026-06-09"
+  program: auditable-retrieval
   topic: recommender-systems
   level: b
   selected: false
@@ -197,12 +229,23 @@
     - title: Takeaway
       text: Capacity, addressability, and prefix alignment are distinct, measurable properties of a Semantic-ID interface. Checking them before method-level evaluation or reuse avoids attributing downstream failures to the wrong layer.
 - id: deltagate
+  contribution:
+    label: DeltaGate
+    problem: A returning user provides no new behavior with which to update a stale history.
+    mechanism: Gate individual dimensions between personal history and a global prior while keeping the backbone frozen.
+    evidence: Under the Gap-Synthesize evaluation, DG-BERT4Rec improves Hit@10 in the Video Games bucket with gaps over 365 days.
+    boundary: Full retraining can achieve higher accuracy; the plugin trades that ceiling for a small adaptation budget and zero backbone drift.
+  related_work:
+    - publication_id: unified-low-rank-compression
+      relationship: A complementary approach to deployment cost, compressing CTR models rather than adapting a frozen sequential backbone.
+    - publication_id: hpgr
+      relationship: Models structure within an observed history, while DeltaGate addresses return without new observations.
   title: Zero-Observation User Reactivation with Gap-Driven Dimensional Gating
   year: 2026
   venue: Proceedings of the 20th ACM Conference on Recommender Systems (RecSys '26)
   venue_short: RecSys
   authors: Jiandong Ding, Tianying Liu, Fuyuan Liu, Huijie Qin, Tiandeng Wu
-  publication_date: "2026-09-27"
+  published_date: "2026-09-27"
   topic: recommender-systems
   program: adaptive-recommendation
   level: a
@@ -210,7 +253,7 @@
   status: published
   image: "/assets/images/DeltaGate-Resurrecting-Ghost-Users.jpg"
   selected_label: RecSys 2026
-  selected_summary: DeltaGate recalibrates frozen sequential recommendation representations for long-gap returning users.
+  selected_summary: Gates dimensions between stale personal history and a global prior for returning users with no new observations. The sequential backbone stays frozen.
   code_url: https://github.com/jdding/DeltaGate
   code_label: Code
   doi_url: https://doi.org/10.1145/3773078.3831771
@@ -227,6 +270,9 @@
     - title: Deployment boundary
       text: End-to-end retraining can reach higher absolute accuracy, while the frozen DeltaGate plugin preserves zero backbone drift, uses 66K trainable parameters, and keeps the adaptation behavior inspectable.
 - id: skillresolve-bench
+  related_work:
+    - publication_id: skillcontrast
+      relationship: Tests whether retaining candidate differences improves reranking under same-family ambiguity.
   title: 'Right Family, Wrong Skill: Evaluating Risk Exposure in Agent Skill Retrieval'
   year: 2026
   venue: arXiv preprint arXiv:2606.10388
@@ -252,6 +298,18 @@
     - title: Takeaway
       text: Capability matching and same-family risk exposure should be reported together. HSR@K serves as a targeted exposure certificate for a fixed skill library, complementing the auditable-retrieval line on inspecting interfaces before they become production dependencies.
 - id: hpgr
+  contribution:
+    label: HPGR
+    problem: Flat histories obscure session structure and spend attention on irrelevant interactions.
+    mechanism: Combine session-aware masked-item pretraining with preference-guided sparse attention during fine-tuning.
+    evidence: The paper evaluates the method on APPGallery data and in an online A/B test.
+    boundary: The industrial evaluation does not establish the same effect in every catalog or user population.
+  digest_sources:
+    - label: arXiv v1 · abstract and method
+      url: https://arxiv.org/abs/2603.00980v1
+  related_work:
+    - publication_id: deltagate
+      relationship: A complementary treatment of user-history reliability when no new observations are available.
   title: 'Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations'
   year: 2026
   venue: Proceedings of the ACM Web Conference (WWW '26)
@@ -264,7 +322,7 @@
   status: published
   image: "/assets/images/Beyond-the-Flat-Sequence.webp"
   selected_label: WWW 2026
-  selected_summary: Hierarchical and preference-aware generative recommendations move beyond flat user histories and expose structured intent over time.
+  selected_summary: Combines session-aware masked-item pretraining with preference-guided sparse attention, preserving history structure while limiting irrelevant computation.
   digest_url: "/hpgr/"
   digest_label: Digest
   doi_url: https://doi.org/10.1145/3774904.3792790
@@ -273,13 +331,13 @@
   paper_label: arXiv
   digest_blocks:
     - title: Problem
-      text: Generative recommenders treat user history as a flat sequence of semantically equal items. This ignores the hierarchical structure of behavior, where items are grouped by interaction sessions or contexts, and it treats all historical items as equally reliable even though preference strength and uncertainty vary over time.
+      text: Flat interaction sequences hide session structure. Dense attention can also spend computation on irrelevant history, weakening useful preference signals.
     - title: Approach
-      text: HPGR is a plug-in enhancement for generative recommenders built from two parts. A Session Enhancement Module models user history hierarchically beyond the flat-sequence assumption, and preference-aware weighting estimates the reliability of historical items when conditioning generation.
+      text: HPGR first learns hierarchical item representations through session-based masked-item pretraining. Preference-aware fine-tuning then uses sparse attention to focus on relevant historical items.
     - title: Public evidence
-      text: Experiments on public benchmarks report state-of-the-art performance, with both the hierarchical and preference-aware components contributing in ablations. The public abstract does not give numeric metrics.
+      text: The paper reports evaluation on proprietary APPGallery data and an online A/B test, comparing with HSTU and MTGR. These settings support the reported efficiency and recommendation findings; they are not a public-benchmark replication.
     - title: Takeaway
-      text: Structured intent over time and explicit reliability weighting extend generative recommendation toward the adaptive-recommendation line's concern with changing user evidence.
+      text: Session structure and selective attention provide complementary controls over what a generative recommender learns from its history. Generalization beyond the reported industrial setting requires evaluation.
 - id: invariant-feature-learning
   title: Invariant feature learning for counterfactual watch-time prediction in video recommendation
   year: 2026
@@ -293,7 +351,7 @@
   status: published
   image: "/assets/images/Invariant-Feature-Learning.webp"
   selected_label: AAAI 2026
-  selected_summary: Invariant feature learning separates duration effects from true user preference in short-video recommendation.
+  selected_summary: Uses a kernel-based invariance regularizer across video-duration groups to reduce duration confounding in counterfactual watch-time prediction.
   digest_url: "/aaai-difl/"
   digest_label: Digest
   doi_url: https://doi.org/10.1609/aaai.v40i17.38518
@@ -320,7 +378,7 @@
   status: published
   image: "/assets/images/RPE4Rec.webp"
   selected_label: WSDM 2026
-  selected_summary: Efficient relative position encoding for dynamic node retrieval in recommendation systems.
+  selected_summary: Uses a hashtable neighborhood memory to supply short-term co-occurrence and relative-position signals to dynamic retrieval at low additional cost.
   paper_url: https://dl.acm.org/doi/epdf/10.1145/3773966.3778006
   paper_label: PDF
   digest_url: "/rpe4rec/"
@@ -337,6 +395,25 @@
     - title: Takeaway
       text: Efficient position-aware retrieval is one mechanism for keeping retrieval aligned with changing user and item behavior, the recurring condition in the adaptive-recommendation line.
 - id: bis-nl2sql
+  published_date: "2024-12-07"
+  preprint_date: "2024-10-30"
+  digest_sources:
+    - label: arXiv v1 · sections 3–5 and 7
+      url: https://arxiv.org/html/2410.22925v1
+    - label: Publisher · first-online date and proceedings citation
+      url: https://link.springer.com/chapter/10.1007/978-981-96-0808-9_27
+  related_work:
+    - publication_id: igpo-ai-search
+      relationship: Both examine language interfaces against the data or inventory they actually operate on; BIS contributes evaluation, IGPO policy optimization.
+  digest_blocks:
+    - title: Problem
+      text: Business-intelligence questions involve time periods, comparisons, joins, and organization-specific schemas. General NL2SQL benchmarks and exact-match scores can miss these demands and conceal partially correct answers.
+    - title: Approach
+      text: BIS organizes 239 questions into nine categories over two SQLite databases. It evaluates both SQL structure through abstract-syntax-tree comparisons and query results through column matching, giving partial correctness a measurable role.
+    - title: Evidence
+      text: The contribution is a BI-oriented dataset and evaluation procedure. Its examples explain how query similarity and result similarity reveal different errors; they do not establish that one NL2SQL model is universally best.
+    - title: Scope
+      text: The benchmark covers a bounded set of databases and business questions. Partial similarity is useful for diagnosis, but should not be mistaken for permission to execute an incorrect business query.
   title: 'BIS: NL2SQL Service Evaluation Benchmark for Business Intelligence Scenarios'
   year: 2025
   venue: International Conference on Service-Oriented Computing (ICSOC '24), Lecture Notes in Computer Science 15405, 357-372
@@ -358,6 +435,21 @@
   doi_url: https://doi.org/10.1007/978-981-96-0808-9_27
   digest_note: A benchmark and evaluation study for NL2SQL services in business intelligence scenarios, connecting language interfaces with service-oriented data systems.
 - id: unified-low-rank-compression
+  digest_sources:
+    - label: arXiv v2 · abstract and compression framework
+      url: https://arxiv.org/abs/2405.18146v2
+  related_work:
+    - publication_id: deltagate
+      relationship: Both address constrained deployment, but compression changes the CTR model while DeltaGate adapts representations with a frozen backbone.
+  digest_blocks:
+    - title: Problem
+      text: CTR models must serve many predictions under memory and latency constraints. Compressing parameters can reduce storage yet still lose AUC or add computation, so parameter count alone is not enough.
+    - title: Approach
+      text: The framework applies low-rank compression to embedding tables and MLP layers. Instead of only approximating weights, it locally compresses output features to preserve the behavior needed by the prediction model.
+    - title: Evidence
+      text: On two academic datasets and one industrial benchmark, the paper reports 3–5 times smaller models with faster inference and higher AUC than the corresponding uncompressed models. These are results for the evaluated architectures and compression settings.
+    - title: Scope
+      text: The work connects ranking quality to deployment cost. It does not imply that arbitrary low-rank factorization improves accuracy, or that benchmark inference gains translate directly into online business lift.
   title: Unified Low-rank Compression Framework for Click-through Rate Prediction
   year: 2024
   venue: Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)
@@ -378,6 +470,7 @@
   doi_url: https://doi.org/10.1145/3637528.3671520
   digest_note: A CTR prediction paper on low-rank compression for reducing model cost while preserving practical ranking behavior.
 - id: pd-serve
+  research_context: LLM serving systems
   title: 'P/D-Serve: Serving Disaggregated Large Language Model at Scale'
   year: 2024
   venue: arXiv preprint arXiv:2408.08147
@@ -392,7 +485,7 @@
   card_image: "/assets/images/Scaling-LLM-Serving-P-D-Serve-card.webp"
   digest_image: true
   selected_label: arXiv 2024
-  selected_summary: Disaggregated LLM serving that scales prefill and decoding across large clusters.
+  selected_summary: Coordinates prefill/decode placement, on-demand forwarding, and KV-cache transfers across a large NPU cluster. Serving efficiency depends on scheduling and transport as well as model execution.
   paper_url: https://arxiv.org/pdf/2408.08147
   paper_label: PDF
   digest_url: "/pd-serve/"
@@ -421,10 +514,26 @@
   paper_url: https://aclanthology.org/2023.findings-acl.616.pdf
   paper_label: PDF
   digest_url: "/acl-topic/"
-  digest_label: Digest
+  digest_label: Paper record
   doi_url: https://doi.org/10.18653/v1/2023.findings-acl.616
   digest_note: A neural topic modeling paper that combines cycle adversarial training and contrastive learning to improve topic representations.
 - id: continual-gcn
+  published_date: "2023-06-26"
+  digest_sources:
+    - label: AAAI publication · abstract and reported evaluation
+      url: https://ojs.aaai.org/index.php/AAAI/article/view/26611
+  related_work:
+    - publication_id: dygraph
+      relationship: A separate application of graph updates to changing data, moving from streaming text to heterogeneous recommendation graphs.
+  digest_blocks:
+    - title: Problem
+      text: A fixed document–token graph can classify documents seen during construction, yet struggle to incorporate new text. This limits the usefulness of an otherwise strong offline text classifier in a streaming system.
+    - title: Approach
+      text: ContGCN updates the document–token graph for each batch during training and inference. An occurrence memory and a self-supervised contrastive objective support updates without requiring labels for each arriving document.
+    - title: Evidence
+      text: The paper evaluates five public datasets and reports an 8.86% performance gain in a three-month A/B test on Huawei's public-opinion analysis system. This is the paper's task-performance result, not a revenue or conversion-rate claim.
+    - title: Connection
+      text: The method illustrates learning over changing graph evidence. Later recommendation-graph work addresses different data and objectives, so this connection should not be read as a shared algorithm or a direct transfer result.
   title: Continual Graph Convolutional Network for Text Classification
   year: 2023
   venue: Proceedings of the AAAI Conference on Artificial Intelligence (AAAI '23)
@@ -453,10 +562,25 @@
   paper_url: https://aclanthology.org/2022.naacl-main.349.pdf
   paper_label: PDF
   digest_url: "/naacl-epida/"
-  digest_label: Digest
+  digest_label: Paper record
   doi_url: https://doi.org/10.18653/v1/2022.naacl-main.349
   digest_note: A text-classification paper introducing an easy plug-in data augmentation framework for low-resource and high-performance settings.
 - id: neurips-dpssl
+  digest_sources:
+    - label: arXiv v1 · abstract and method
+      url: https://arxiv.org/abs/2110.13740v1
+  related_work:
+    - publication_id: naacl-epida
+      relationship: A different route to learning with limited labels, augmenting examples rather than combining learned labeling functions.
+  digest_blocks:
+    - title: Problem
+      text: With very few labeled examples, semi-supervised learners can produce unreliable pseudo-labels. Training on those labels can reinforce the initial errors.
+    - title: Approach
+      text: DP-SSL learns labeling functions through multiple-choice learning instead of requiring hand-written expert rules. A label model reconciles their noisy, overlapping predictions into probabilistic labels for the unlabeled examples.
+    - title: Evidence
+      text: Experiments cover four standard semi-supervised benchmarks. On CIFAR-10 with 40 labeled samples, the paper reports 93.82% annotation accuracy on unlabeled data and 93.46% test classification accuracy; these are different evaluation targets.
+    - title: Connection
+      text: The work treats the reliability of supervision as a modeling problem. This is a methodological foundation for the site's interest in evidence quality, not a demonstrated recommendation-system result.
   title: 'DP-SSL: Towards Robust Semi-Supervised Learning with a Few Labeled Samples'
   year: 2021
   venue: Advances in Neural Information Processing Systems (NeurIPS '21)
@@ -485,7 +609,7 @@
   paper_url: https://aclanthology.org/2021.emnlp-main.222.pdf
   paper_label: PDF
   digest_url: "/emnlp-keygraph/"
-  digest_label: Digest
+  digest_label: Paper record
   doi_url: https://doi.org/10.18653/v1/2021.emnlp-main.222
   digest_note: A weakly supervised text classification paper that uses keyword graphs to propagate limited supervision into useful classification signals.
 - id: ai-assistance-live-streaming
@@ -501,7 +625,7 @@
   paper_url: https://aisel.aisnet.org/icis2021/hci_robot/hci_robot/3/
   paper_label: Publisher
   digest_url: "/ai-assistance-live-streaming/"
-  digest_label: Digest
+  digest_label: Paper record
   digest_note: A field-experiment study of AI assistance in live streaming, focusing on how algorithmic support changes creator behavior and platform outcomes.
 - id: sales-data-live-streaming
   title: 'The Sales Data Sells: Effects of Real-Time Sales Analytics on Live Streaming Selling'
@@ -516,7 +640,7 @@
   paper_url: https://aisel.aisnet.org/icis2021/data_analytics/data_analytics/2/
   paper_label: Publisher
   digest_url: "/sales-data-live-streaming/"
-  digest_label: Digest
+  digest_label: Paper record
   digest_note: A live-streaming field study on how real-time sales analytics affects seller behavior and selling performance.
 - id: large-scale-mirna-clustering
   title: 'Automatically Clustering Large-Scale miRNA Sequences: Methods and Experiments'
@@ -533,7 +657,7 @@
   paper_url: https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-13-S8-S15
   paper_label: Publisher
   digest_url: "/large-scale-mirna-clustering/"
-  digest_label: Digest
+  digest_label: Paper record
   doi_url: https://doi.org/10.1186/1471-2164-13-s8-s15
   digest_note: An early data-mining paper on clustering large-scale miRNA sequences while balancing scale, similarity, and biological interpretation.
 - id: finding-microrna-targets-plants
@@ -551,7 +675,7 @@
   paper_url: https://academic.oup.com/gpb/article/10/5/264/7221796
   paper_label: Publisher
   digest_url: "/finding-microrna-targets-plants/"
-  digest_label: Digest
+  digest_label: Paper record
   doi_url: https://doi.org/10.1016/j.gpb.2012.09.003
   digest_note: A review paper on computational and experimental approaches for finding microRNA targets in plants.
 - id: genome-wide-mirna-target-interactions
@@ -569,7 +693,7 @@
   paper_url: https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-13-S3-S3
   paper_label: Publisher
   digest_url: "/genome-wide-mirna-target-interactions/"
-  digest_label: Digest
+  digest_label: Paper record
   doi_url: https://doi.org/10.1186/1471-2164-13-s3-s3
   digest_note: A genome-scale bioinformatics paper on identifying miRNA-target interactions in Arabidopsis thaliana through integrated computational evidence.
 - id: mirfam
@@ -587,7 +711,7 @@
   paper_url: https://doi.org/10.1186/1471-2105-12-216
   paper_label: DOI
   digest_url: "/mirfam/"
-  digest_label: Digest
+  digest_label: Paper record
   doi_url: https://doi.org/10.1186/1471-2105-12-216
   digest_note: An early sequence-mining paper that represents miRNA sequences with n-gram features for family classification.
 - id: imirtp
@@ -604,7 +728,7 @@
   paper_url: https://ieeexplore.ieee.org/document/6120415/
   paper_label: Publisher
   digest_url: "/imirtp/"
-  digest_label: Digest
+  digest_label: Paper record
   doi_url: https://doi.org/10.1109/bibm.2011.13
   digest_note: An integrated method for identifying miRNA-target interactions in Arabidopsis thaliana by combining multiple computational signals.
 - id: mirensvm
@@ -622,6 +746,6 @@
   paper_url: https://doi.org/10.1186/1471-2105-11-S11-S11
   paper_label: DOI
   digest_url: "/mirensvm/"
-  digest_label: Digest
+  digest_label: Paper record
   doi_url: https://doi.org/10.1186/1471-2105-11-s11-s11
   digest_note: An early machine-learning paper for microRNA precursor prediction using ensemble SVM models and multi-loop structural features.
