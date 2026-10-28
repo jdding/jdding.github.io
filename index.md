@@ -57,6 +57,7 @@ classes: wide
       <div class="section-head">
         <h2>Two questions guide my research</h2>
         <p>How should a recommender adapt when its evidence changes? How can we inspect the interfaces on which AI retrieval depends?</p>
+        <a class="text-link" href="/resources/">Try the open-source examples →</a>
       </div>
       <div class="research-program-stack">
         {% for program in programs %}
@@ -96,7 +97,7 @@ classes: wide
               {% for artifact in public_artifacts %}
               {% assign resource_paper = publications | where: "id", artifact.publication_id | first %}
               {% if resource_paper.program == program.id %}
-              <a href="{{ artifact.repository_url }}">{{ artifact.title }} · Repository</a>
+              <a href="/resources/#{{ artifact.id }}">{{ artifact.title }} · Quickstart</a>
               {% endif %}
               {% endfor %}
             </div>

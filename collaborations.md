@@ -8,6 +8,7 @@ description: "Research collaboration, student research internship, invited talk,
 ---
 
 {% assign collaborations = site.data.research.collaborations %}
+{% assign internship = site.data.internships %}
 
 <div class="research-site">
   <section class="research-hero">
@@ -16,15 +17,50 @@ description: "Research collaboration, student research internship, invited talk,
         <h1>Collaborations</h1>
         <p class="lede">Research partnerships, industrial research discussions, invited talks, and focused academic exchange.</p>
         <div class="hero-actions">
-          <a class="button primary" href="mailto:dingjiandong2@huawei.com?subject=University%20collaboration">University collaboration</a>
+          <a class="button primary" href="#research-intern" data-scroll-ignore>Research internships</a>
+          <a class="button secondary" href="mailto:dingjiandong2@huawei.com?subject=University%20collaboration">Joint research</a>
           <a class="button secondary" href="/#connect">Contact section</a>
         </div>
       </div>
       <aside class="summary-board" aria-label="Collaboration summary">
         <div class="summary-row"><strong>{{ collaborations.size }}</strong><span>institutional collaborations</span></div>
-        <div class="summary-row"><strong>3</strong><span>current research directions</span></div>
+        <div class="summary-row"><strong>{{ site.data.research_programs.size }}</strong><span>current research programs</span></div>
         <div class="summary-row"><strong>Email</strong><span>use Huawei email for university collaboration</span></div>
       </aside>
+    </div>
+  </section>
+
+  <section id="research-intern" class="research-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>Research internships</h2>
+        <p><strong>{{ internship.status }}.</strong> Work with me on recommendation and auditable AI retrieval at Huawei.</p>
+      </div>
+      <h3>Find a research question</h3>
+      <p>Possible starting points for a conversation; the project scope is agreed together.</p>
+      <ul>
+        <li><strong>Adaptive recommendation:</strong> how should models use stale user histories or adapt under limited computation? Explore <a href="/deltagate/">DeltaGate</a>.</li>
+        <li><strong>Semantic-ID diagnostics:</strong> what do mapping collisions and prefix structure reveal before training a generator? Explore <a href="/sidinspector/">SIDInspector</a> and <a href="/sidscope/">SIDScope</a>.</li>
+        <li><strong>Agent skill retrieval:</strong> how can retrieval distinguish similar skills with different conditions of use? Explore <a href="/skillcontrast/">SkillContrast</a>.</li>
+      </ul>
+      <h3>Background and availability</h3>
+      <p>Solid machine-learning fundamentals and hands-on Python experience. Relevant research or engineering work is a plus. {{ internship.logistics }}</p>
+      <h3>Apply by email</h3>
+      <ol>
+        <li>Choose a direction and describe one question you would like to explore.</li>
+        <li>Attach your CV and include one or two research or code links.</li>
+        <li>Include your available dates, duration, days per week and location preferences.</li>
+      </ol>
+      <div class="hero-actions">
+        <a class="button primary" href="mailto:{{ internship.email }}?subject={{ internship.subject | uri_escape }}&amp;body={{ internship.email_body | uri_escape }}">Draft application</a>
+        <a class="button secondary" href="/resources/">Explore the code</a>
+      </div>
+      <p>The button opens an editable draft in your email app. Attach your CV before sending. You can also email <a href="mailto:{{ internship.email }}">{{ internship.email }}</a> directly.</p>
+      <details class="program-more">
+        <summary>Application email template</summary>
+        <p><strong>Subject:</strong> {{ internship.subject }}</p>
+        <pre class="application-template">{{ internship.email_body | escape }}</pre>
+      </details>
     </div>
   </section>
 
@@ -55,29 +91,6 @@ description: "Research collaboration, student research internship, invited talk,
             <h3>Invited talks and professional events</h3>
             <p>Focused talks on recommender systems, LLM agents, data mining, and applied AI systems.</p>
           </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="research-intern" class="research-section">
-    <div class="research-shell">
-      <div class="section-head">
-        <h2>Research internships</h2>
-        <p>I recruit student research interns into the research directions on this site. Logistics such as location, working mode, and duration are discussed individually during the first conversation.</p>
-      </div>
-      <div class="topic-page-grid">
-        <article class="topic-card">
-          <h3>Research themes</h3>
-          <p>Reliable recommendation under changing users, catalogs, and deployment constraints; auditable AI retrieval, including AI search, agent skill retrieval, and Semantic-ID interface diagnostics; and data-mining methods for weak and noisy evidence.</p>
-        </article>
-        <article class="topic-card">
-          <h3>Background and skills</h3>
-          <p>Solid machine-learning fundamentals and hands-on Python experience. Interest in recommendation, retrieval, or LLM systems matters more than a specific prior topic; published research or engineering work on large-scale systems is a plus.</p>
-        </article>
-        <article class="topic-card">
-          <h3>How to apply</h3>
-          <p>Email dingjiandong2@huawei.com with the subject starting "Research Intern Application". Include your CV, the period you are available, one or two research or code samples (links are fine), and the direction you want to work on.</p>
         </article>
       </div>
     </div>

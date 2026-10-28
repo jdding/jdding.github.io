@@ -13,6 +13,8 @@
 - `_data/research_programs.yml` — 主线及代表论文 ID；具体贡献仍来自论文数据。
 - `_data/news.yml` — 有类型的日期事件（预印本 / 录用 / 出版），不根据当前状态反推历史事件。
 - `_data/research_trajectory.yml` — 研究基础与联系，只引用公开论文 ID。
+- `_data/internships.yml` — 招聘状态、联系邮箱、待沟通条件和申请邮件模板；`collaborations.md` 渲染可编辑的邮件草稿入口。
+- `_data/open_source.yml` → `/resources/` — 三个资源的环境要求、输入、预期输出、固定版本命令和后续指南；更新时核对公开仓库，不能把文档核对称作实验复现。
 - `publications.md` — Full publications（按年分组，计数随数据）。
 - `api/` — 机器可读端点，从 `_data/` 动态生成（`/api/knowledge-graph.json` 等）。
 - `assets/css/research-system.css` — 站点样式（layout 中带版本参数引用）。

@@ -8,6 +8,24 @@
   stack: Python · PyTorch · MIT License
   repository_url: https://github.com/jdding/DeltaGate
   publication_id: deltagate
+  onboarding:
+    reviewed_on: "2026-10-28"
+    revision: f445204f080bebd62ed70254375aa6724acf41c9
+    requirements: Python 3.9+ and PyTorch 2.x; CPU for this smoke test.
+    input: Generated toy sequences; no review dataset or pretrained checkpoint needed for this check.
+    output: Smoke test passed.
+    interpretation: Checks imports, forward-pass shapes and frozen-backbone parameters. Full training needs processed data and compatible checkpoints, neither bundled in the repository.
+    source_url: https://github.com/jdding/DeltaGate/blob/f445204f080bebd62ed70254375aa6724acf41c9/tests/smoke_imports.py
+    guide_url: https://github.com/jdding/DeltaGate/blob/f445204f080bebd62ed70254375aa6724acf41c9/data/README.md
+    commands: |
+      git clone https://github.com/jdding/DeltaGate.git
+      cd DeltaGate
+      git checkout f445204f080bebd62ed70254375aa6724acf41c9
+      python3 -m venv .venv
+      source .venv/bin/activate
+      python -m pip install --upgrade pip
+      python -m pip install -r requirements.txt
+      python tests/smoke_imports.py
 
 - id: sidinspector
   order: 2
@@ -19,6 +37,24 @@
   stack: Python · CPU-ready · MIT License
   repository_url: https://github.com/jdding/sidinspector
   publication_id: sidinspector
+  onboarding:
+    reviewed_on: "2026-10-28"
+    revision: 5a55f8c9002b62663ace07b72334f08225eadb03
+    requirements: Python 3.9+; CPU only.
+    input: Bundled music-like item codes, item metadata and interactions.
+    output: examples/reviewer_quickstart_output/preflight_summary.json and diagnostics/d1–d5 CSV reports.
+    interpretation: Start with preflight, then inspect full-code collisions and prefix alignment. This small example checks usability; it does not reproduce the paper tables.
+    source_url: https://github.com/jdding/sidinspector/blob/5a55f8c9002b62663ace07b72334f08225eadb03/examples/run_reviewer_quickstart.py
+    guide_url: https://github.com/jdding/sidinspector/blob/5a55f8c9002b62663ace07b72334f08225eadb03/docs/ADAPTER_TEMPLATE.md
+    commands: |
+      git clone https://github.com/jdding/sidinspector.git
+      cd sidinspector
+      git checkout 5a55f8c9002b62663ace07b72334f08225eadb03
+      python3 -m venv .venv
+      source .venv/bin/activate
+      python -m pip install --upgrade pip
+      python -m pip install -e .
+      python examples/run_reviewer_quickstart.py
 
 - id: sidscope
   order: 3
@@ -30,3 +66,21 @@
   stack: Python · Reproducibility package · MIT License
   repository_url: https://github.com/jdding/SIDscope
   publication_id: sidscope
+  onboarding:
+    reviewed_on: "2026-10-28"
+    revision: 1876e0072eca49d1f4c7b160fa98826d9b206b60
+    requirements: Python 3.9+ and pip 21.3+; CPU only.
+    input: Bundled toy item-to-code mapping, metadata and interactions.
+    output: Normalized Parquet inputs and D1–D5 CSV reports in examples/toy_output/.
+    interpretation: Inspect coverage_report.csv before comparing collision and alignment reports. This first example covers mapping diagnostics; generator trace audits require additional inputs.
+    source_url: https://github.com/jdding/SIDscope/blob/1876e0072eca49d1f4c7b160fa98826d9b206b60/examples/run_toy_diagnostic.py
+    guide_url: https://github.com/jdding/SIDscope/blob/1876e0072eca49d1f4c7b160fa98826d9b206b60/docs/ADAPTER_TEMPLATE.md
+    commands: |
+      git clone https://github.com/jdding/SIDscope.git
+      cd SIDscope
+      git checkout 1876e0072eca49d1f4c7b160fa98826d9b206b60
+      python3 -m venv .venv
+      source .venv/bin/activate
+      python -m pip install --upgrade pip
+      python -m pip install -e .
+      python examples/run_toy_diagnostic.py

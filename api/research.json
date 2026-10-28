@@ -32,6 +32,7 @@ permalink: /api/research.json
   },
   "profile": {{ site.data.research.profile | jsonify }},
   "researchPrograms": {{ programs | jsonify }},
+  "openSource": {{ site.data.open_source | jsonify }},
   "researchTrajectory": {{ site.data.research_trajectory | jsonify }},
   "newsEvents": {{ site.data.news | jsonify }},
   "topics": {{ topics | jsonify }},

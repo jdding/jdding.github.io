@@ -132,6 +132,23 @@ Dir.glob(File.join(SITE, '**/*.html')).each do |path|
     end
   end
 end
+recruitment = data.call('internships')
+collab = html.call('/collaborations/')
+apply_link = collab.at_css('#research-intern a[href*="?subject="]')
+mail = URI.parse(apply_link['href'])
+fields = URI.decode_www_form(mail.opaque.split('?', 2).last).to_h
+check.call(mail.scheme == 'mailto' && mail.opaque.split('?').first == recruitment['email'], 'application recipient mismatch')
+check.call(fields['subject'] == recruitment['subject'] && fields['body'] == recruitment['email_body'], 'application template encoding mismatch')
+resources = html.call('/resources/')
+data.call('open_source').each do |resource|
+  start = resource.fetch('onboarding')
+  block = resources.at_css("##{resource['id']}")
+  check.call(start['revision'].match?(/\A[0-9a-f]{40}\z/) && start['commands'].include?(start['revision']), 'quickstart revision not pinned')
+  check.call(block.at_css('pre code').text == start['commands'], 'quickstart commands altered by rendering')
+  paper = by_id.fetch(resource['publication_id'])
+  check.call(html.call(paper['digest_url']).at_css("a[href='/resources/##{resource['id']}']"), 'digest quickstart entry absent')
+end
+check.call(JSON.parse(File.read(File.join(SITE, 'api/research.json')))['openSource'] == data.call('open_source'), 'resource API drift')
 if failures.empty?
   puts "PASS: #{checks} assertions; #{papers.size} papers; 6 selected; status/date, relationships, content order, JSON and internal links."
 else

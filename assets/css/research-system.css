@@ -1490,3 +1490,15 @@
     justify-content: flex-start;
   }
 }
+/* Guided actions reuse the site's typography and color tokens. */
+.research-site .quickstart-code,
+.research-site .application-template {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  max-width: 100%;
+  padding: 20px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.research-site .quickstart-code code { white-space: inherit; }
