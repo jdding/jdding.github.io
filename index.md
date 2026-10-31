@@ -151,7 +151,14 @@ classes: wide
         <a class="text-link" href="/publications/">Full publication record</a>
       </div>
       <ul class="news-list">
-        {% assign rendered_news = 0 %}
+        <li>
+          <time datetime="2026-10-31">2026-10-31</time>
+          <div>
+            <span>Project launched</span>
+            <a href="https://jdding.github.io/recarch/">RecArch: The atlas of recommender system architecture</a>
+          </div>
+        </li>
+        {% assign rendered_news = 1 %}
         {% for event in news_events %}
         {% assign paper = publications | where: "id", event.publication_id | first %}
         {% if paper and rendered_news < 3 %}
@@ -217,6 +224,10 @@ classes: wide
           <a rel="me" href="https://www.linkedin.com/in/jiandong-ding-60498833/">
             <span>Professional profile</span>
             <strong>LinkedIn</strong>
+          </a>
+          <a href="https://jdding.github.io/recarch/">
+            <span>Recommender architecture atlas</span>
+            <strong>RecArch</strong>
           </a>
         </div>
       </div>
