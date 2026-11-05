@@ -3,6 +3,10 @@
   type: accepted_reported
   date: "2026-11-03"
   additional_title: GridBD-Rec
+- type: project
+  date: "2026-10-31"
+  title: 'RecArch: The atlas of recommender system architecture'
+  url: https://jdding.github.io/recarch/
 - publication_id: tois-popularity-bias
   type: published
   date: "2026-10-08"

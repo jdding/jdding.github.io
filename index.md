@@ -151,26 +151,26 @@ classes: wide
         <a class="text-link" href="/publications/">Full publication record</a>
       </div>
       <ul class="news-list">
-        <li>
-          <time datetime="2026-10-31">2026-10-31</time>
-          <div>
-            <span>Project launched</span>
-            <a href="https://jdding.github.io/recarch/">RecArch: The atlas of recommender system architecture</a>
-          </div>
-        </li>
-        {% assign rendered_news = 1 %}
+        {% assign rendered_news = 0 %}
         {% for event in news_events %}
         {% assign paper = publications | where: "id", event.publication_id | first %}
-        {% if paper and rendered_news < 3 %}
+        {% if event.type == "project" or paper %}
+        {% if rendered_news < 3 %}
         <li>
           <time datetime="{{ event.date }}">{{ event.date }}</time>
           <div>
+            {% if event.type == "project" %}
+            <span>Project launched</span>
+            <a href="{{ event.url }}">{{ event.title }}</a>
+            {% else %}
             <span>{% if event.type == "accepted_reported" %}Two full papers accepted at WSDM 2027 Main Track · reported{% elsif event.type == "accepted" %}Accepted in {% include publication-venue.html paper=paper %}{% elsif event.type == "published" %}Published in {% include publication-venue.html paper=paper %}{% else %}Preprint released{% endif %}</span>
             <a href="{{ paper.digest_url }}">{{ paper.title }}</a>
             {% if event.additional_title %} and {{ event.additional_title }}{% endif %}
+            {% endif %}
           </div>
         </li>
         {% assign rendered_news = rendered_news | plus: 1 %}
+        {% endif %}
         {% endif %}
         {% endfor %}
       </ul>

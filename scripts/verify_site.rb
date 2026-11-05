@@ -69,6 +69,10 @@ data.call('research_trajectory').each do |strand|
   check.call(strand['publication_ids'].all? { |id| by_id.key?(id) }, "#{strand['id']}: invalid trajectory references")
 end
 data.call('news').each do |event|
+  if event['type'] == 'project'
+    check.call(!event['title'].to_s.empty? && event['url'].to_s.start_with?('https://') && event['date'].to_s.match?(/\A\d{4}-\d{2}-\d{2}\z/), 'invalid project news event')
+    next
+  end
   p = by_id[event['publication_id']]
   field = { 'accepted' => 'acceptance_date', 'accepted_reported' => 'acceptance_reported_date', 'preprint' => 'preprint_date', 'published' => 'published_date' }[event['type']]
   check.call(p && field && p[field] == event['date'], "#{event['publication_id']}: event/date mismatch")
