@@ -1,4 +1,8 @@
 # Events describe what happened on this date, independently of today's paper status.
+- publication_id: focalswap
+  type: accepted_reported
+  date: "2026-11-03"
+  additional_title: GridBD-Rec
 - publication_id: tois-popularity-bias
   type: published
   date: "2026-10-08"

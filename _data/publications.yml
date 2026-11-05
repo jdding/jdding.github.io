@@ -1,4 +1,37 @@
 ---
+- id: focalswap
+  title: Do Search-Augmented Recommenders Use the Latest Search Episode?
+  year: 2027
+  venue: Proceedings of the ACM International Conference on Web Search and Data Mining (WSDM '27)
+  venue_short: WSDM
+  venue_type: conference
+  authors: Jiandong Ding
+  topic: recommender-systems
+  program: auditable-retrieval
+  level: a
+  selected: false
+  status: accepted
+  acceptance_reported_date: "2026-11-03"
+  preprint_date: "2026-11-04"
+  paper_url: https://arxiv.org/abs/2611.06044
+  paper_label: arXiv
+  code_url: https://github.com/jdding/focalswap
+  code_label: Code
+  digest_url: "/focalswap/"
+  digest_label: Digest
+  digest_note: A WSDM 2027 Main Track paper introducing FocalSwap to audit how search inputs contribute to recommendation rankings.
+  digest_sources:
+    - label: arXiv v1 · abstract and reported results
+      url: https://arxiv.org/abs/2611.06044
+  digest_blocks:
+    - title: Problem
+      text: Aggregate gains from search-augmented recommendation do not establish whether the latest search episode, earlier searches, or a change in the model input explains the result.
+    - title: Approach
+      text: FocalSwap holds the recommendation target, candidates, pre-search history, and scorer fixed while changing the latest search slot or all search inputs. It compares neutral masking with matched observed-search replacements and measures ranking changes and reciprocal-rank differences.
+    - title: Public evidence
+      text: Across three UniSAR checkpoints, estimates for all-search contribution depended on the control used. The primary neutral-mask and category-matched tests did not establish a positive contribution from the latest search slot for SESRec or UniSAR. These results concern the evaluated checkpoints and controls.
+    - title: Takeaway
+      text: Comparing masking with matched observed-search replacements helps distinguish sensitivity to the intervention from evidence that a specific search episode contributes to a recommendation.
 - id: skillcontrast
   contribution:
     label: SkillContrast

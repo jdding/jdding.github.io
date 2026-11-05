@@ -70,7 +70,7 @@ data.call('research_trajectory').each do |strand|
 end
 data.call('news').each do |event|
   p = by_id[event['publication_id']]
-  field = { 'accepted' => 'acceptance_date', 'preprint' => 'preprint_date', 'published' => 'published_date' }[event['type']]
+  field = { 'accepted' => 'acceptance_date', 'accepted_reported' => 'acceptance_reported_date', 'preprint' => 'preprint_date', 'published' => 'published_date' }[event['type']]
   check.call(p && field && p[field] == event['date'], "#{event['publication_id']}: event/date mismatch")
 end
 

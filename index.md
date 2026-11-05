@@ -158,8 +158,9 @@ classes: wide
         <li>
           <time datetime="{{ event.date }}">{{ event.date }}</time>
           <div>
-            <span>{% if event.type == "accepted" %}Accepted in {% include publication-venue.html paper=paper %}{% elsif event.type == "published" %}Published in {% include publication-venue.html paper=paper %}{% else %}Preprint released{% endif %}</span>
+            <span>{% if event.type == "accepted_reported" %}Two full papers accepted at WSDM 2027 Main Track · reported{% elsif event.type == "accepted" %}Accepted in {% include publication-venue.html paper=paper %}{% elsif event.type == "published" %}Published in {% include publication-venue.html paper=paper %}{% else %}Preprint released{% endif %}</span>
             <a href="{{ paper.digest_url }}">{{ paper.title }}</a>
+            {% if event.additional_title %} and {{ event.additional_title }}{% endif %}
           </div>
         </li>
         {% assign rendered_news = rendered_news | plus: 1 %}
