@@ -250,6 +250,8 @@
     evidence: Diagnostic comparisons across released tokenizer families expose different capacity and addressability behavior.
     boundary: Mapping diagnostics alone do not establish a gain in recommendation quality.
   digest_sources:
+    - label: ACM proceedings · published record
+      url: https://doi.org/10.1145/3799682.3840174
     - label: Public paper · mapping diagnostics
       url: https://arxiv.org/abs/2606.10375
   related_work:
@@ -257,7 +259,7 @@
       relationship: Extends interface inspection to candidate retrieval, generated paths, and model reuse after refresh.
   title: 'SIDInspector: A Mapping-First Diagnostic Resource for Semantic-ID Tokenizers'
   year: 2026
-  venue: Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM '26)
+  venue: Proceedings of the 35th ACM International Conference on Information and Knowledge Management (CIKM '26)
   venue_short: CIKM
   authors: Jiandong Ding, Heng Chang, Huijie Qin, Tianying Liu
   preprint_date: "2026-06-09"
@@ -265,9 +267,12 @@
   topic: recommender-systems
   level: b
   selected: false
-  status: accepted
-  paper_url: https://arxiv.org/abs/2606.10375
-  paper_label: arXiv
+  status: published
+  published_date: "2026-11-06"
+  pages: "8890–8894"
+  paper_url: https://doi.org/10.1145/3799682.3840174
+  paper_label: DOI
+  doi_url: https://doi.org/10.1145/3799682.3840174
   code_url: https://github.com/jdding/sidinspector
   code_label: Code
   digest_url: "/sidinspector/"

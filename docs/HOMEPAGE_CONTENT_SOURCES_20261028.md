@@ -46,3 +46,7 @@ The deposit reports print/issue month 2026-11 and no online publication date. DO
 - The [ACL Anthology record](https://aclanthology.org/2026.emnlp-industry.7/) lists IGPO in the published EMNLP 2026 Industry Track proceedings, pages **79–99**, October 2026. Updated to `published` with month precision `2026-10`; the official record does not list a DOI. The primary reading link is ACL Anthology.
 - TKDE's primary reading link now also uses its publisher DOI. Its separately assigned November issue date still does not establish an online publication date. Identity remains Huawei; source affiliations are not copied into the website profile.
 - Current status after these two updates is 21 published / 3 accepted / 4 preprint. Earlier counts in this dated report describe the previous audit snapshot.
+
+## SIDInspector CIKM publication follow-up (2026-11-09)
+
+The [ACM Crossref record](https://api.crossref.org/works/10.1145/3799682.3840174) confirms SIDInspector's title and author order, DOI `10.1145/3799682.3840174`, online publication on 2026-11-06, and pages 8890–8894. Its print date is 2026-11-07. The site uses the DOI as the primary publication link, retains the arXiv author version as a source for its research summary, and records the publication date separately from the 2026-06-09 preprint date. The arXiv record also identifies the ACM DOI as a related publication.
