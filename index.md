@@ -6,7 +6,7 @@ description: "Jiandong Ding (丁建栋) is a Principal Algorithm Expert at Huawe
 classes: wide
 ---
 
-<link rel="stylesheet" href="/assets/css/research-system.css?v=research-20261028">
+<link rel="stylesheet" href="/assets/css/research-system.css?v=mobile-20261114">
 {% include research-nav.html %}
 
 {% assign topics = site.data.topics | sort: "order" %}
@@ -22,6 +22,7 @@ classes: wide
       <div class="hero-copy">
         <h1>Jiandong Ding <span class="identity-native-name">(丁建栋)</span></h1>
         <p class="hero-role">Principal Algorithm Expert · Huawei</p>
+        <a class="mobile-selected-link" href="#selected" data-scroll-ignore>Selected papers →</a>
         <p class="lede">Since 2012, I have worked on applied AI and data systems across IBM, Bosch, Alibaba DAMO Academy, and Huawei. My current research asks how recommendation and AI retrieval systems can remain reliable as users, catalogs, tasks, and interfaces change.</p>
         <div class="identity-facts" aria-label="Professional profile">
           <div>
