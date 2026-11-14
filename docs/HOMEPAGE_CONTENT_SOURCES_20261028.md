@@ -50,3 +50,8 @@ The deposit reports print/issue month 2026-11 and no online publication date. DO
 ## SIDInspector CIKM publication follow-up (2026-11-09)
 
 The [ACM Crossref record](https://api.crossref.org/works/10.1145/3799682.3840174) confirms SIDInspector's title and author order, DOI `10.1145/3799682.3840174`, online publication on 2026-11-06, and pages 8890–8894. Its print date is 2026-11-07. The site uses the DOI as the primary publication link, retains the arXiv author version as a source for its research summary, and records the publication date separately from the 2026-06-09 preprint date. The arXiv record also identifies the ACM DOI as a related publication.
+
+## Publication metadata follow-up (2026-11-14)
+
+- The current [ACM Crossref record for TOIS](https://api.crossref.org/works/10.1145/3856798), updated on 2026-11-13, now identifies 2026-11-13 as the online publication date and supplies volume 44, issue 8, pages 1–27. The earlier 2026-10-08 date in this historical note is not the publication date in the current record. The DOI remains the primary reading link.
+- The [ACM Crossref record for Personalized Task Dependency Graphs](https://api.crossref.org/works/10.1145/3799682.3839876) reports online publication on 2026-11-06 and pages 7528–7532. The site marks it published and keeps the arXiv version as a source.
