@@ -89,10 +89,14 @@ check.call(home.at_css('.hero-actions a[href="#research"]')['data-scroll-ignore'
 shortcut = home.at_css('.hero-copy a.mobile-selected-link[href="#selected"]')
 check.call(shortcut && shortcut['data-scroll-ignore'] != nil, 'mobile selected-papers shortcut missing')
 check.call(home.css('.paper-card').size == 6, 'rendered selected cards changed')
-check.call(home.css('.news-list li').size == 3, 'news should be compact')
+check.call(home.css('#updates .news-list li').size == 3, 'news should be compact')
 check.call(home.css('.record-item').empty?, 'duplicated recent publication list returned')
 section_ids = home.css('.homepage > section').map { |s| s['id'] }.compact
-check.call(section_ids == %w[research selected updates trajectory connect], 'homepage reading order changed')
+check.call(section_ids == %w[research selected updates trajectory service connect], 'homepage reading order changed')
+service = home.at_css('#service')
+service_text = service ? service.text.gsub(/\s+/, ' ') : ''
+check.call(service_text.include?('Reviewer, so far WSDM, WWW, AAAI'), '2027 reviewer line missing')
+check.call(service_text.include?('Reviewer ACL, EMNLP, CIKM, NeurIPS'), '2026 reviewer line missing')
 check.call(home.at_css('#recent-publications'), 'legacy recent-publications anchor missing')
 check.call(list.css('[id^="publication-"]').size == papers.size, 'full list count mismatch')
 check.call(list.css('.year-block > h2').size > 0, 'year headings missing')

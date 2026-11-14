@@ -202,6 +202,30 @@ classes: wide
     </div>
   </section>
 
+  <section id="service" class="research-section compact-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>Academic service</h2>
+      </div>
+      <ul class="news-list">
+        <li>
+          <time datetime="2027">2027</time>
+          <div>
+            <span>Reviewer, so far</span>
+            WSDM, WWW, AAAI
+          </div>
+        </li>
+        <li>
+          <time datetime="2026">2026</time>
+          <div>
+            <span>Reviewer</span>
+            ACL, EMNLP, CIKM, NeurIPS
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <section id="connect" class="research-section">
     <div class="research-shell">
       <div class="contact-closing">
