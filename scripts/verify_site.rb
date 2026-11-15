@@ -28,7 +28,7 @@ expected_date = lambda do |p|
 end
 html = lambda { |url| Nokogiri::HTML(File.read(File.join(SITE, url.sub(%r{^/}, ''), 'index.html'))) }
 check.call(papers.map { |p| p['id'] }.uniq.size == papers.size, 'duplicate publication IDs')
-check.call(papers.select { |p| p['selected'] }.map { |p| p['id'] }.sort == selected.sort, 'selected membership changed')
+check.call(papers.select { |p| p['selected'] }.map { |p| p['id'] } == selected, 'selected membership or order changed')
 papers.each do |p|
   id = p['id']
   check.call(%w[accepted published preprint].include?(p['status']), "#{id}: invalid status")
@@ -89,11 +89,28 @@ check.call(home.at_css('.hero-actions a[href="#research"]')['data-scroll-ignore'
 shortcut = home.at_css('.hero-copy a.mobile-selected-link[href="#selected"]')
 check.call(shortcut && shortcut['data-scroll-ignore'] != nil, 'mobile selected-papers shortcut missing')
 check.call(home.css('.paper-card').size == 6, 'rendered selected cards changed')
-check.call(home.css('.news-list li').size == 3, 'news should be compact')
+check.call(home.css('.news-list, .research-trajectory, .contribution-list').empty?, 'removed homepage lists returned')
+check.call(home.css('.paper-card h3 a').map { |a| a['href'] } == selected.map { |id| by_id.fetch(id)['digest_url'] }, 'rendered selected order changed')
 check.call(home.css('.record-item').empty?, 'duplicated recent publication list returned')
 section_ids = home.css('.homepage > section').map { |s| s['id'] }.compact
-check.call(section_ids == %w[research selected updates trajectory connect], 'homepage reading order changed')
-check.call(home.at_css('#recent-publications'), 'legacy recent-publications anchor missing')
+check.call(section_ids == %w[research selected connect], 'homepage reading order changed')
+%w[recent-publications updates trajectory].each do |id|
+  check.call(home.at_css("##{id}"), "legacy #{id} anchor missing")
+end
+programs.each do |program|
+  block = home.at_css("#program-#{program['id']}")
+  check.call(block && block.css('[data-publication-id]').map { |el| el['data-publication-id'] } == program['representative_publication_ids'], 'representative works missing from homepage')
+  program['representative_publication_ids'].each do |id|
+    paper = by_id.fetch(id)
+    entry = block&.at_css("[data-publication-id='#{id}']")
+    check.call(entry && entry.at_css('a')['href'] == paper['digest_url'] && %w[mechanism evidence].all? { |key| entry.text.include?(paper['contribution'][key]) }, "#{id}: compact contribution lost its evidence or digest link")
+    check.call(entry && entry.css('.publication-status').text.include?(paper['status'].capitalize), "#{id}: representative status missing") unless paper['status'] == 'published'
+  end
+end
+data.call('news').select { |event| event['type'] == 'accepted_reported' && event['additional_title'] }.each do |event|
+  note = list.at_css("#publication-#{event['publication_id']} .acceptance-note")&.text.to_s
+  check.call(note.include?(event['additional_title']) && note.include?(event['date']), 'joint acceptance announcement lost from full list')
+end
 check.call(list.css('[id^="publication-"]').size == papers.size, 'full list count mismatch')
 check.call(list.css('.year-block > h2').size > 0, 'year headings missing')
 papers.each do |p|
@@ -149,7 +166,10 @@ mail = URI.parse(apply_link['href'])
 fields = URI.decode_www_form(mail.opaque.split('?', 2).last).to_h
 check.call(mail.scheme == 'mailto' && mail.opaque.split('?').first == recruitment['email'], 'application recipient mismatch')
 check.call(fields['subject'] == recruitment['subject'] && fields['body'] == recruitment['email_body'], 'application template encoding mismatch')
+check.call(%w[logistics preference].all? { |key| collab.at_css('#research-intern').text.include?(recruitment[key]) }, 'internship requirements missing')
+check.call(collab.css('#research-intern h3').map(&:text) == ['Background and availability', 'Apply by email', 'Find a research question'], 'internship application no longer precedes research examples')
 resources = html.call('/resources/')
+check.call(resources.at_css('a[href="https://jdding.github.io/recarch/"]'), 'RecArch resource entry missing')
 data.call('open_source').each do |resource|
   start = resource.fetch('onboarding')
   block = resources.at_css("##{resource['id']}")

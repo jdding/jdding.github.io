@@ -1,16 +1,16 @@
 # Publication Data & Digest Module — Maintenance Guide
 
-Updated: 2026-10-28
+Updated: 2026-11-15
 
 ## Data ownership
 
 - `_data/publications.yml` owns paper facts, status, version dates, ordered author text, contribution summaries, resources, Digest bodies, sources, and explicit connected-work links.
-- `_data/research_programs.yml` owns the two research questions and representative paper IDs. The homepage reads the representative contributions from the paper records.
-- `_data/research_trajectory.yml` connects public work into research strands. It is an editorial interpretation, not a claim that every paper is a descendant of one algorithm.
-- `_data/news.yml` owns dated events, each with a paper ID and a type. Paper status today must not rewrite the meaning of a historical event.
-- `_data/open_source.yml` owns resource-specific descriptions. The homepage resolves its program through publication_id; the validator checks the retained program field for consistency.
+- `_data/research_programs.yml` owns the two research questions and representative paper IDs. The homepage reads each representative's mechanism and scoped evidence from the paper record; full explanations and limits remain in the Digest.
+- `_data/research_trajectory.yml` connects public work into research strands and remains in `/api/research.json`. It is an editorial interpretation, not a claim that every paper is a descendant of one algorithm. The homepage uses a short narrative instead of repeating the paper lists.
+- `_data/news.yml` owns dated events, with a paper ID and type or a project title and URL. Events remain in `/api/research.json`; joint acceptance announcements appear with the corresponding Full publications entry. Paper status today must not rewrite a historical event.
+- `_data/open_source.yml` owns resource-specific descriptions and quickstarts. The validator checks its program against the associated publication. RecArch has a separate link on `/resources/`, without being forced into a paper quickstart record.
 
-The homepage order is identity → research questions/contributions → six selected papers → three compact updates → research connections → contact. More papers and repositories are available inside each program's disclosure. The old `/#recent-publications` anchor still reaches updates.
+The homepage order is identity → research questions/contributions → six selected papers → recruitment/contact. More papers and examples are reached through Full publications and Resources. `/#updates` and `/#recent-publications` reach Selected papers and its Full publications link; `/#trajectory` reaches the short research-history paragraph. Keep both research-program anchors stable.
 
 The root paper Markdown files are stable route shells. Keep their existing permalinks.
 
@@ -56,7 +56,7 @@ Do not infer personal leadership or contribution allocation from author order. N
 
 `publication-links.html` keeps action labels consistent and avoids an identical Paper/DOI URL appearing twice. Actual PDF URLs use PDF; arXiv abstract pages use arXiv; publisher pages use Publisher or DOI.
 
-Preserve the six selected IDs: igpo-ai-search, deltagate, hpgr, invariant-feature-learning, rpe4rec, pd-serve. Membership changes require the owner's decision.
+Preserve the six selected IDs and their order: igpo-ai-search, deltagate, hpgr, invariant-feature-learning, rpe4rec, pd-serve. Changes require the owner's decision.
 
 Keep the existing chosen graphics. Large images use their WebP variants; Digest figures link to the full-size original. Images supplement text rather than carry the only explanation.
 
@@ -67,7 +67,7 @@ Keep the existing chosen graphics. Large images use their WebP variants; Digest 
 3. Add a news event only for a verified date and event type.
 4. Build with `bundle exec jekyll build`.
 5. Run `bundle exec ruby scripts/verify_site.rb _site`. It checks source and rendered status/date consistency, representative associations, the selected set, content ordering, JSON, canonical, and internal links/fragments.
-6. Inspect desktop plus 320/375/414/768px. Check menu, program disclosures, long titles, and a representative Digest.
+6. Inspect desktop plus 320/375/414/768px. Check menu, compact research entries, selected-paper shortcut, contact links, long titles, and a representative Digest. If browser access is unavailable, report that limitation separately from static checks.
 7. Inspect the diff, commit, push, verify the Pages workflow, and read back changed online pages. Local success does not replace deployed verification.
 8. Search Console indexing is a separate check; a successful build does not prove indexing.
 

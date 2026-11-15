@@ -44,6 +44,8 @@ description: "Publications by Jiandong Ding (丁建栋) across recommender syste
                     <meta itemprop="name" content="Jiandong Ding (丁建栋)">
                   </span>
                   <span><span itemprop="isPartOf">{% include publication-venue.html paper=paper %}</span> {% include publication-status.html paper=paper %}</span>
+                  {% assign announcement = site.data.news | where: "publication_id", paper.id | where: "type", "accepted_reported" | first %}
+                  {% if announcement.additional_title %}<span class="acceptance-note">Two full papers accepted at {% include publication-venue.html paper=paper %} Main Track (reported {{ announcement.date }}): this paper and {{ announcement.additional_title }}.</span>{% endif %}
                   {% if paper.program %}{% assign paper_program = site.data.research_programs | where: "id", paper.program | first %}<a href="/#program-{{ paper.program }}">{{ paper_program.hero_title }}</a>{% endif %}
                   {% if published_date != empty %}<meta itemprop="datePublished" content="{{ published_date }}">{% endif %}
                   <meta itemprop="creativeWorkStatus" content="{{ paper.status }}">
