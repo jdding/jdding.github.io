@@ -84,8 +84,10 @@
   level: a
   selected: false
   status: published
-  published_date: "2026-10-08"
-  article_number: "3856798"
+  published_date: "2026-11-13"
+  volume: "44"
+  issue: "8"
+  pages: "1–27"
   doi_url: https://doi.org/10.1145/3856798
   digest_sources:
     - label: ACM journal publication · formal record and abstract
@@ -219,17 +221,24 @@
   program: adaptive-recommendation
   title: Personalized Task Dependency Graphs for Mitigating Signal Erosion in Multi-Task Recommendation
   year: 2026
-  venue: Proceedings of the ACM International Conference on Information and Knowledge Management (CIKM '26)
+  venue: Proceedings of the 35th ACM International Conference on Information and Knowledge Management (CIKM '26)
   venue_short: CIKM
   authors: Fuyuan Liu, Tiandeng Wu, Yaqun Fang, Wei Zhou, Zehao Zhou, Wenping Chen, Qishun Mei, Jiaxin Zhou, Heng Chang, Yi Cao, Jiandong Ding
   preprint_date: "2026-09-04"
   topic: recommender-systems
   level: b
   selected: false
-  status: accepted
-  paper_url: https://arxiv.org/abs/2609.04862
-  paper_label: arXiv
+  status: published
+  published_date: "2026-11-06"
+  pages: "7528–7532"
+  paper_url: https://doi.org/10.1145/3799682.3839876
+  paper_label: DOI
   doi_url: https://doi.org/10.1145/3799682.3839876
+  digest_sources:
+    - label: ACM proceedings · published record
+      url: https://doi.org/10.1145/3799682.3839876
+    - label: arXiv author version · abstract and experiments
+      url: https://arxiv.org/abs/2609.04862
   digest_url: "/task-dependency-graphs/"
   digest_label: Digest
   digest_note: A CIKM 2026 paper on personalized task dependency graphs for mitigating signal erosion in multi-task recommendation.
@@ -802,7 +811,7 @@
   level: a
   selected: false
   status: published
-  paper_url: https://doi.org/10.1186/1471-2105-11-S11-S11
+  paper_url: https://doi.org/10.1186/1471-2105-11-s11-s11
   paper_label: DOI
   digest_url: "/mirensvm/"
   digest_label: Paper record

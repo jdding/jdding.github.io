@@ -14,6 +14,7 @@ description: "Choose and run a small CPU example for DeltaGate, SIDInspector or 
         {% for artifact in site.data.open_source %}<a class="button secondary" href="#{{ artifact.id }}" data-scroll-ignore>{{ artifact.title }}</a>{% endfor %}
       </nav>
       <p>Commands below use macOS/Linux shells and a separate virtual environment for each repository. SIDInspector and SIDScope share a Python import name, so keep their environments separate. On Windows, activate with <code>.venv\Scripts\activate</code> instead.</p>
+      <p>For an architecture overview, explore <a href="https://jdding.github.io/recarch/">RecArch, the recommender system architecture atlas</a>.</p>
     </div>
   </section>
   {% for artifact in site.data.open_source %}
