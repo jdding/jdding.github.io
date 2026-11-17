@@ -95,7 +95,7 @@ check.call(home.css('.record-item').empty?, 'duplicated recent publication list 
 section_ids = home.css('.homepage > section').map { |s| s['id'] }.compact
 check.call(section_ids == %w[research selected connect], 'homepage reading order changed')
 service_text = home.at_css('#connect #service')&.text.to_s.gsub(/\s+/, ' ').strip
-check.call(service_text == 'Reviewer for ACL, EMNLP, CIKM, and NeurIPS in 2026. Reviewer for WSDM, WWW, and AAAI in 2027, so far.', 'reviewer line missing')
+check.call(service_text == 'Reviewer for ACL, EMNLP, CIKM, and SIGIR in 2026. Reviewer for WSDM, WWW, and AAAI in 2027, so far.', 'reviewer line missing')
 check.call(home.css('#service').size == 1, 'reviewer line duplicated')
 %w[recent-publications updates trajectory].each do |id|
   check.call(home.at_css("##{id}"), "legacy #{id} anchor missing")
