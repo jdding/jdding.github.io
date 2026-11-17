@@ -118,6 +118,7 @@ classes: wide
           <h2>Collaboration and internships</h2>
           <p>{{ site.data.internships.status }} at Huawei.</p>
           <a class="text-link" href="/collaborations/#research-intern">Requirements and application →</a>
+          <p id="service">Reviewer for ACL, EMNLP, CIKM, and SIGIR in 2026. Reviewer for WSDM, WWW, and AAAI in 2027, so far.</p>
         </div>
         <div class="contact-actions">
           <a href="mailto:dingjiandong2@huawei.com?subject=Research%20collaboration%20or%20internship">dingjiandong2@huawei.com</a>
