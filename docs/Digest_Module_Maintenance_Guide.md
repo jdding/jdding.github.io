@@ -1,6 +1,6 @@
 # Publication Data & Digest Module — Maintenance Guide
 
-Updated: 2026-11-15
+Updated: 2026-11-18
 
 ## Data ownership
 
@@ -12,7 +12,7 @@ Updated: 2026-11-15
 
 The homepage order is identity → research questions/contributions → six selected papers → recruitment/contact. More papers and examples are reached through Full publications and Resources. `/#updates` and `/#recent-publications` reach Selected papers and its Full publications link; `/#trajectory` reaches the short research-history paragraph. Keep both research-program anchors stable.
 
-The root paper Markdown files are stable route shells. Keep their existing permalinks.
+Per-paper route shells live in `papers/<slug>.md`. Each shell binds a `publication_id` to an explicit `permalink`; keep existing permalinks stable when moving or renaming source files.
 
 ## Status and date contract
 

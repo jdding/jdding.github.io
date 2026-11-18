@@ -1,65 +1,76 @@
-# jdding.github.io
+# Jiandong Ding — 个人学术主页
 
-个人学术主页，基于 **Jekyll** 与 **Minimal Mistakes**（`remote_theme`）构建，部署在 **GitHub Pages**。
+[访问主页](https://jdding.github.io/) · [论文列表](https://jdding.github.io/publications/) · [研究资源](https://jdding.github.io/resources/) · [合作与实习](https://jdding.github.io/collaborations/)
 
-## 架构
+本仓库维护 Jiandong Ding（丁建栋）的个人学术主页。网站采用 Jekyll 构建，并通过 GitHub Pages 发布，介绍其在 Huawei 的研究工作与学术成果。
 
-站点是数据驱动的：文献、主题、项目的唯一数据源在 `_data/`，页面与共享模板只负责渲染。不要在页面里写死能从数据派生的内容。
+当前研究主要围绕两条主线展开：**变化条件下的自适应推荐**，以及**可审计的 AI 检索与交互接口**。网站同时整理论文、研究主题、公开资源、专利、学术合作与实习信息。
 
-- `_data/publications.yml` — 论文唯一数据源。作者、年份、状态、阅读链接、Digest 正文都在这里。
-- `_includes/paper-digest.html` — 共享 Digest 模板；每个 Digest 页是根目录一个薄壳 `.md`（front matter 带 `publication_id` 与 `permalink`）。
-- `_includes/research-topic.html` + `topics/` — 三个主题页。
-- `index.md` — 首页：身份与定位、两条研究主线及简短贡献、原六篇精选、招聘与联系。研究演进浓缩在主线末尾，不再重复列论文。
-- `_data/research_programs.yml` — 主线及代表论文 ID；具体贡献仍来自论文数据。
-- `_data/news.yml` — 有类型的日期事件（预印本 / 录用 / 出版），保留在 API 中；联合录用信息随对应论文进入 Full publications。首页不展示独立动态板块。
-- `_data/research_trajectory.yml` — 研究基础与联系，只引用公开论文 ID，完整解释保留在 API 中。
-- `_data/internships.yml` — 招聘状态、联系邮箱、待沟通条件和申请邮件模板；`collaborations.md` 渲染可编辑的邮件草稿入口。
-- `_data/open_source.yml` → `/resources/` — 三个资源的环境要求、输入、预期输出、固定版本命令和后续指南；更新时核对公开仓库，不能把文档核对称作实验复现。
-- `publications.md` — Full publications（按年分组，计数随数据）。
-- `collaborations.md` — 招聘条件与申请入口优先，随后是研究方向和合作机构记录；`/resources/` 同时提供 RecArch 入口。
-- `api/` — 机器可读端点，从 `_data/` 动态生成（`/api/knowledge-graph.json` 等）。
-- `assets/css/research-system.css` — 站点样式（layout 中带版本参数引用）。
+## 网站内容
 
-## 内容规则速记
+| 页面 | 内容 |
+| --- | --- |
+| [首页](https://jdding.github.io/) | 研究主线、代表性贡献、精选论文及合作入口 |
+| [论文列表](https://jdding.github.io/publications/) | 按年份整理的已发表、已录用及预印本记录 |
+| 研究主题 | [LLM Agents](https://jdding.github.io/topics/llm-agents/) · [推荐系统](https://jdding.github.io/topics/recommender-systems/) · [数据挖掘](https://jdding.github.io/topics/data-mining/) |
+| [论文详情](https://jdding.github.io/sidinspector/) | 单篇论文的书目信息、来源链接及研究摘要 |
+| [研究资源](https://jdding.github.io/resources/) | 公开代码、资源说明与快速上手指南 |
+| [合作与实习](https://jdding.github.io/collaborations/) | 研究实习要求、申请方式与合作信息 |
+| [专利](https://jdding.github.io/patents/) | 已公开的专利记录 |
+| [机器可读数据](https://jdding.github.io/api/) | 论文、研究主题、项目及知识图谱等 JSON 数据 |
 
-- 期刊显示「全称（缩写）」不带年份；会议显示「缩写 + 会议年份」（`venue_year` 优先于 `year`）；Accepted 作为状态单独显示。
-- 作者以 `authors` 字符串为唯一来源（完整姓名、真实顺序）；`citation_*` 标签、JSON-LD、API 图谱都从它派生，不要再维护第二份作者列表。
-- 计数：FAQ / Summary 的论文计数从 `publications.yml` 派生；主题页 stats 维护在 `_data/topics.yml`，调整论文数据时需同步核对。显示子集时说明口径。
-- 6 篇 Selected papers 由 `selected: true` 控制，成员与数量变动需站主决定。
-- 论文 URL 稳定：改名不迁移既有 permalink。
-- 日期分为 `preprint_date`、`acceptance_date`、`published_date`。Accepted 的 citation、JSON-LD 和 microdata 省略出版日期，即使已经有预印本；详见维护指南。
-- 重点 Digest 标出原始来源；没有正文的页面入口显示 Paper record。本人作用不得由作者顺序推断。
+## 仓库结构
 
-## 本地开发
+| 路径 | 用途 |
+| --- | --- |
+| `papers/` | 单篇论文的 Jekyll 路由文件；通过显式 `permalink` 保持现有公开 URL |
+| `_data/publications.yml` | 论文元数据、发表状态、日期、阅读链接及 Digest 正文的主要数据源 |
+| `_data/research_programs.yml`、`_data/topics.yml` | 研究主线与主题页内容；主题页展示统计在 `topics.yml` 中维护 |
+| `_data/open_source.yml`、`_data/internships.yml` | 公开资源说明及实习信息 |
+| `_data/research.json`、`_data/news.yml`、`_data/projects.yml`、`_data/patents.yml` | 个人资料、合作与动态、项目和专利数据 |
+| `_includes/`、`_layouts/` | 共享 Liquid 组件与页面布局 |
+| `topics/`、`api/` | 研究主题页面及构建时生成的机器可读 JSON 端点 |
+| `assets/` | 样式表与网站图片 |
+| `docs/`、`scripts/` | 维护文档、站点检查脚本与辅助资源工具 |
+| `_config.yml`、`Gemfile` | Jekyll 配置与 Ruby 依赖声明 |
+| `archive/` | 历史文件；不参与网站构建 |
+
+首页及论文列表、论文详情页和 API 端点尽可能从 `_data/` 的结构化数据渲染，避免重复维护同一项论文事实。`papers/` 中的文件负责将论文 ID 连接到稳定页面地址；修改标题时应保留原有 `permalink`。
+
+Jekyll 首页及搜索引擎验证、站点地图等需要发布到根路径的文件仍保留在仓库根目录，以维持现有线上地址。
+
+## 本地预览与构建
+
+需要可运行 Bundler 的 Ruby 环境。依赖在 `Gemfile` 中声明，其中 `github-pages` 用于保持本地构建与 GitHub Pages 环境接近。
 
 ```bash
 bundle install
-bundle exec jekyll build   # 产物在 _site/
-bundle exec ruby scripts/verify_site.rb _site
-bundle exec jekyll serve   # 本地预览 http://127.0.0.1:4000
+bundle exec jekyll serve
 ```
 
-## 发布验收（分级，前一步不能替代后一步）
+本地预览地址为 `http://127.0.0.1:4000/`。生成生产构建并运行站点检查：
 
-1. 本地 `jekyll build` + `scripts/verify_site.rb` + diff 复验：检查实际渲染的状态、版本日期、关系、内容顺序、精选成员、JSON、canonical 和内部链接；再检查桌面及 320/375/414/768px 视觉。
-2. commit + push 到 `main`。
-3. GitHub Pages 构建成功（仓库部署状态）。
-4. 线上 HTTP 抽查：关键页面 200 且内容为最新版本。
-5. Search Console 复查抓取/收录状态；新增重点页可请求编入索引。
+```bash
+bundle exec jekyll build
+bundle exec ruby scripts/verify_site.rb _site
+```
 
-## 文献更新 SOP
+## 内容维护
 
-新增或修改论文后统一检查：标题 / 完整作者及顺序 / 状态（preprint / accepted / published 不混用）/ 阅读链接与按钮语义一致 / 年份与 `venue_year` / 计数 / 精选成员未动 / API 与图谱输出 / sitemap 包含新页。详见 `docs/Digest_Module_Maintenance_Guide.md`。
+- 论文事实以 `_data/publications.yml` 为准；修改论文时核对作者顺序、发表状态、日期、DOI 与阅读链接，并同步维护对应的 `papers/<slug>.md` 路由文件。
+- 区分预印本、已录用和正式发表；日期、指标与研究结论应有可核查的公开来源支持。Digest 的来源记录维护在 `digest_sources`。
+- 主题页文字和展示统计维护在 `_data/topics.yml`。论文数量变化后，应核对该文件中的统计口径。
+- 保持既有论文 URL 稳定。作者个人贡献应依据明确材料表述，不从作者顺序推断。
+- 修改后先在本地构建并运行站点检查，再审阅变更并发布。发布后确认 GitHub Pages 部署结果和关键线上页面；搜索引擎收录状态需另行检查。
 
-## 版权与许可
-
-除非另有说明，本仓库内容（文本、图片等）版权归作者所有。
+更完整的字段约定与论文页面维护流程见 [`docs/Digest_Module_Maintenance_Guide.md`](docs/Digest_Module_Maintenance_Guide.md)。
 
 ## 联系方式
 
-- Huawei Email: dingjiandong2 [AT] huawei.com
-- LinkedIn: [Jiandong Ding](https://www.linkedin.com/in/jiandong-ding-60498833/)
+- Email: [dingjiandong2@huawei.com](mailto:dingjiandong2@huawei.com)
+- [Google Scholar](https://scholar.google.com/citations?user=5-e7wi4AAAAJ)
+- [LinkedIn](https://www.linkedin.com/in/jiandong-ding-60498833/)
 
-## 致谢
+## 许可说明
 
-感谢 [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) 主题的开发者。
+本仓库当前未提供统一许可证文件。[Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) 主题及依赖按各自上游许可使用；个人资料、论文说明与图片的使用应遵循相应来源或权利人声明。

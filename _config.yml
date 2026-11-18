@@ -84,8 +84,6 @@ exclude:
   - scripts/
   - archive/
   - _pages/
-  - convert_new_logos.py
-  - create_better_logos.py
   - vendor/
   - Gemfile
   - Gemfile.lock
