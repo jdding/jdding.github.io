@@ -55,3 +55,9 @@ The [ACM Crossref record](https://api.crossref.org/works/10.1145/3799682.3840174
 
 - The current [ACM Crossref record for TOIS](https://api.crossref.org/works/10.1145/3856798), updated on 2026-11-13, now identifies 2026-11-13 as the online publication date and supplies volume 44, issue 8, pages 1–27. The earlier 2026-10-08 date in this historical note is not the publication date in the current record. The DOI remains the primary reading link.
 - The [ACM Crossref record for Personalized Task Dependency Graphs](https://api.crossref.org/works/10.1145/3799682.3839876) reports online publication on 2026-11-06 and pages 7528–7532. The site marks it published and keeps the arXiv version as a source.
+
+## Homepage and resources follow-up (2026-11-22)
+
+- The [IEEE November issue record](https://www.computer.org/csdl/journal/tk/2026/11/11727092/2kq9pJXkSgo) confirms the released TKDE issue, so dygraph is now `published`. Structured metadata uses the verified issue month, not an inferred first-online date. The published abstract defines the 83.2% figure as a reduction in the embedding refresh interval.
+- Selected-card evidence comes from the [IGPO proceedings](https://aclanthology.org/2026.emnlp-industry.7/), [DeltaGate §4.5](https://arxiv.org/html/2607.19802v1#S4.SS5), [HPGR §4.3](https://arxiv.org/html/2603.00980v1#S4.SS3), and the [P/D-Serve abstract](https://arxiv.org/abs/2408.08147). ACL Anthology now lists IGPO DOI `10.18653/2026.emnlp-industry.7`; the ACL page remains the reading link. Card membership and order are unchanged.
+- The FocalSwap quickstart uses the pinned public example and eight synthetic rows. Both scopes produce masking comparisons for all eight rows and matched replacements for four. Replaying the saved scores through the CLI matches the example report apart from the CLI's added input hash. This verifies the quickstart, not the paper's experiments.

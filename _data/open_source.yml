@@ -84,3 +84,31 @@
       python -m pip install --upgrade pip
       python -m pip install -e .
       python examples/run_toy_diagnostic.py
+
+- id: focalswap
+  order: 4
+  program: auditable-retrieval
+  title: FocalSwap
+  kind: Code artifact
+  record: WSDM 2027
+  summary: Test how the latest search episode and the full search history affect a recommendation while holding the scorer and candidates fixed.
+  stack: Python · NumPy · CPU-ready
+  repository_url: https://github.com/jdding/focalswap
+  publication_id: focalswap
+  onboarding:
+    reviewed_on: "2026-11-22"
+    revision: cd2a740902f1b5b1e528bf72efe8c2dedb2f6194
+    requirements: Python 3.10 or newer and a CPU. The install command brings in NumPy.
+    input: Eight bundled synthetic recommendation rows and a toy scorer. No GPU, checkpoint, or external dataset is needed.
+    output: Per-row scores (readouts.jsonl), matched donors (donors.json), and a summary (audit.json) under outputs/custom_model/.
+    interpretation: Start with coverage in audit.json. The toy example has masking results for 8 of 8 rows and matched replacements for 4 of 8. Rank response counts how often the target rank changes; the reciprocal-rank difference compares the original input with the control. For your own model, keep the scorer and candidate slate fixed, then compare masking and matched replacements before drawing conclusions.
+    source_url: https://github.com/jdding/focalswap/blob/cd2a740902f1b5b1e528bf72efe8c2dedb2f6194/examples/custom_model.py
+    guide_url: https://github.com/jdding/focalswap/blob/cd2a740902f1b5b1e528bf72efe8c2dedb2f6194/docs/integration.md
+    commands: |
+      git clone https://github.com/jdding/focalswap.git
+      cd focalswap
+      git checkout cd2a740902f1b5b1e528bf72efe8c2dedb2f6194
+      python3 -m venv .venv
+      source .venv/bin/activate
+      python -m pip install .
+      python examples/custom_model.py

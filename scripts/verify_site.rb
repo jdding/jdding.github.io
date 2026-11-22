@@ -22,24 +22,28 @@ program_ids = programs.map { |p| p['id'] }
 selected = %w[igpo-ai-search deltagate hpgr invariant-feature-learning rpe4rec pd-serve]
 expected_date = lambda do |p|
   case p['status']
-  when 'published' then (p['published_date'] || p['year']).to_s
+  when 'published' then (p['published_date'] || p['issue_date'] || p['year']).to_s
   when 'preprint' then (p['preprint_date'] || p['year']).to_s
   end
 end
 html = lambda { |url| Nokogiri::HTML(File.read(File.join(SITE, url.sub(%r{^/}, ''), 'index.html'))) }
 check.call(papers.map { |p| p['id'] }.uniq.size == papers.size, 'duplicate publication IDs')
 check.call(papers.select { |p| p['selected'] }.map { |p| p['id'] } == selected, 'selected membership or order changed')
+tkde = by_id.fetch('dygraph')
+check.call(tkde['status'] == 'published' && tkde['issue_date'] == '2026-11', 'TKDE must reflect its released November issue')
 papers.each do |p|
   id = p['id']
   check.call(%w[accepted published preprint].include?(p['status']), "#{id}: invalid status")
   check.call(!p.key?('publication_date'), "#{id}: ambiguous legacy date")
   check.call(p['status'] == 'published' || !p['published_date'], "#{id}: unpublished work has a formal date")
   check.call(!p['program'] || program_ids.include?(p['program']), "#{id}: unknown program")
-  %w[preprint_date acceptance_date published_date].each do |key|
+  %w[preprint_date acceptance_date published_date issue_date].each do |key|
     next unless p[key]
     begin
-      if key == 'published_date' && p[key].match?(/\A\d{4}-\d{2}\z/)
+      if %w[published_date issue_date].include?(key) && p[key].match?(/\A\d{4}-\d{2}\z/)
         Date.strptime(p[key], '%Y-%m')
+      elsif key == 'issue_date'
+        check.call(false, "#{id}: issue_date must use YYYY-MM")
       else
         Date.iso8601(p[key])
       end
@@ -91,6 +95,7 @@ check.call(shortcut && shortcut['data-scroll-ignore'] != nil, 'mobile selected-p
 check.call(home.css('.paper-card').size == 6, 'rendered selected cards changed')
 check.call(home.css('.news-list, .research-trajectory, .contribution-list').empty?, 'removed homepage lists returned')
 check.call(home.css('.paper-card h3 a').map { |a| a['href'] } == selected.map { |id| by_id.fetch(id)['digest_url'] }, 'rendered selected order changed')
+check.call(home.css('.paper-card .paper-evidence').map(&:text) == selected.map { |id| by_id.fetch(id)['selected_evidence'] }.compact, 'selected evidence differs from source')
 check.call(home.css('.paper-card img').empty?, 'selected papers should not load digest illustrations')
 check.call(home.css('.hero-copy .profile-links a').size == 4, 'homepage profile links missing')
 check.call(list.at_css('.research-nav a[href="/publications/"][aria-current="page"]'), 'publications navigation current state missing')
@@ -122,6 +127,7 @@ papers.each do |p|
   doc = html.call(p['digest_url'])
   row = list.at_css("#publication-#{id}")
   check.call(row['data-topic'] == p['topic'] && row.key?('data-with-code') == !!p['code_url'], "#{id}: filter data differs from source")
+  check.call(row.at_css('[itemprop="isPartOf"]')['data-venue-name'] == p['venue'], "#{id}: searchable venue differs from source")
   if p['authors'].split(',').map(&:strip).include?('Jiandong Ding')
     check.call(row.at_css('[itemprop="creditText"] strong')&.text == 'Jiandong Ding', "#{id}: owner not highlighted in author list")
   end
@@ -136,6 +142,11 @@ papers.each do |p|
   dates = [article['datePublished'], graph_paper['datePublished'], citation, micro]
   check.call(dates.all? { |date| date == expected_date.call(p) }, "#{id}: machine date disagreement #{dates.inspect}")
   check.call(article['creativeWorkStatus'] == p['status'] && graph_paper['creativeWorkStatus'] == p['status'], "#{id}: machine status mismatch")
+  (p['related_work'] || []).each do |relation|
+    url = by_id.fetch(relation['publication_id'])['digest_url']
+    link = doc.at_css(".related-publications a[href='#{url}']")
+    check.call(link && link.parent.at_css('p').text == relation['relationship'], "#{id}: connected work missing or changed")
+  end
   if p['status'] != 'published'
     status = p['status'] == 'accepted' ? 'Accepted' : 'Preprint'
     check.call(row.css('.publication-status').text.include?(status), "#{id}: list status absent")
@@ -187,6 +198,7 @@ data.call('open_source').each do |resource|
   block = resources.at_css("##{resource['id']}")
   check.call(start['revision'].match?(/\A[0-9a-f]{40}\z/) && start['commands'].include?(start['revision']), 'quickstart revision not pinned')
   check.call(block.at_css('pre code').text == start['commands'], 'quickstart commands altered by rendering')
+  check.call(block.text.include?(start['interpretation']), "#{resource['id']}: quickstart output explanation missing")
   paper = by_id.fetch(resource['publication_id'])
   check.call(html.call(paper['digest_url']).at_css("a[href='/resources/##{resource['id']}']"), 'digest quickstart entry absent')
 end

@@ -3,10 +3,13 @@ const { query, topic, code } = filters.elements;
 const years = [...document.querySelectorAll('.year-block')].map(section => ({
   section,
   link: document.querySelector(`.year-navigation a[href="#${section.id}"]`),
-  papers: [...section.querySelectorAll('.record-item')].map(row => ({
-    row,
-    text: `${row.querySelector('h3').textContent} ${row.querySelector('[itemprop="creditText"]').textContent}`.toLowerCase()
-  }))
+  papers: [...section.querySelectorAll('.record-item')].map(row => {
+    const venue = row.querySelector('[itemprop="isPartOf"]');
+    return {
+      row,
+      text: `${row.querySelector('h3').textContent} ${row.querySelector('[itemprop="creditText"]').textContent} ${venue.textContent} ${venue.dataset.venueName}`.toLowerCase()
+    };
+  })
 }));
 
 function filterPublications() {

@@ -2,14 +2,14 @@
 layout: research
 title: "Open-source quickstarts"
 permalink: /resources/
-description: "Choose and run a small CPU example for DeltaGate, SIDInspector or SIDScope, with inputs, expected outputs and next steps."
+description: "Run a small CPU example for DeltaGate, SIDInspector, SIDScope, or FocalSwap, with inputs, expected outputs, and next steps."
 ---
 <!-- Hallmark · pre-emit critique: P5 H4 E4 S5 R5 V4; existing research-site tokens retained. -->
 <div class="research-site">
   <section class="research-hero">
     <div class="research-shell">
       <h1>Start with a small example</h1>
-      <p class="lede">Try frozen-backbone recommendation or inspect Semantic-ID mappings. Each entry explains what you need, what the example produces, and where to go next.</p>
+      <p class="lede">Adapt a frozen recommender, inspect Semantic-ID mappings, or test how search episodes affect rankings. Each quickstart explains what you need, what the example produces, and how to use it with your own data.</p>
       <nav class="hero-actions" aria-label="Choose a resource">
         {% for artifact in site.data.open_source %}<a class="button secondary" href="#{{ artifact.id }}" data-scroll-ignore>{{ artifact.title }}</a>{% endfor %}
       </nav>

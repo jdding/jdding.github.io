@@ -19,7 +19,7 @@
   code_label: Code
   digest_url: "/focalswap/"
   digest_label: Digest
-  digest_note: A WSDM 2027 Main Track paper introducing FocalSwap to audit how search inputs contribute to recommendation rankings.
+  digest_note: A sole-authored WSDM 2027 Main Track paper introducing FocalSwap to test whether the latest search episode contributes to a recommendation.
   digest_sources:
     - label: arXiv v1 · abstract and reported results
       url: https://arxiv.org/abs/2611.06044
@@ -113,7 +113,7 @@
 - id: sidscope
   related_work:
     - publication_id: sidinspector
-      relationship: Mapping diagnostics are complemented here by candidate-retrieval and generated-trace tests.
+      relationship: Start with SIDInspector to check capacity, full-code collisions, and prefix alignment in an exported mapping. These checks do not measure recommendation quality.
   title: 'SIDScope: A Diagnostic Resource for Semantic-ID Interfaces in Generative Recommendation'
   year: 2026
   venue: arXiv preprint arXiv:2608.18779
@@ -166,8 +166,10 @@
   digest_image: true
   selected_label: EMNLP 2026
   selected_summary: Uses catalog evidence to optimize search policies without model training, so query behavior can adapt to the inventory that is actually available.
+  selected_evidence: '14-day online A/B test of the full system: 3.17% relative CTR lift and 38.9% fewer audited bad cases.'
   paper_url: https://aclanthology.org/2026.emnlp-industry.7/
   paper_label: ACL Anthology
+  doi_url: https://doi.org/10.18653/2026.emnlp-industry.7
   digest_url: "/igpo-ai-search/"
   digest_label: Digest
   digest_note: An EMNLP 2026 Industry Track paper on training-free AI search, using inventory-grounded policy-level optimization to keep search behavior aligned with changing catalog and inventory conditions.
@@ -191,15 +193,15 @@
   topic: recommender-systems
   level: a
   selected: false
-  status: accepted
+  status: published
   volume: "38"
   issue: "11"
   pages: "7779–7794"
   issue_date: "2026-11"
   preprint_date: "2025-12-15"
   digest_sources:
-    - label: IEEE journal record · DOI, title and authors
-      url: https://doi.org/10.1109/TKDE.2026.3728237
+    - label: IEEE journal record · volume, issue and published abstract
+      url: https://www.computer.org/csdl/journal/tk/2026/11/11727092/2kq9pJXkSgo
     - label: arXiv author version · abstract
       url: https://arxiv.org/abs/2512.13120
   acceptance_date: "2026-08-26"
@@ -208,14 +210,14 @@
   digest_url: "/dygraph/"
   digest_label: Digest
   doi_url: https://doi.org/10.1109/TKDE.2026.3728237
-  digest_note: An accepted IEEE Transactions on Knowledge and Data Engineering paper on large-scale dynamical heterogeneous graph embedding for cold-start resilient recommendation.
+  digest_note: A TKDE paper that combines global graph learning with incremental embedding updates for cold-start recommendation.
   digest_blocks:
     - title: Problem
       text: Production graph embeddings must balance billion-scale training, data freshness, and cold-start behavior without repeatedly rebuilding the entire representation system.
     - title: Approach
       text: The paper combines HetSGFormer for scalable global graph learning with Incremental Locally Linear Embedding for lightweight CPU-based updates when new graph data arrives.
     - title: Public evidence
-      text: The public abstract reports an advertiser-value lift of up to 6.11% for HetSGFormer, a further 3.22% lift from the incremental module, and an 83.2% improvement in embedding refresh timeliness.
+      text: In online A/B tests on billion-scale graphs, IEEE reports that HetSGFormer lifted Advertiser Value by up to 6.11%. The incremental module added a further 3.22% lift and shortened the embedding refresh interval by 83.2%.
     - title: Takeaway
       text: The two-stage design separates expensive global representation learning from targeted incremental refresh, supporting practical cold-start resilience under changing graph data.
 - id: task-dependency-graphs
@@ -266,7 +268,7 @@
       url: https://arxiv.org/abs/2606.10375
   related_work:
     - publication_id: sidscope
-      relationship: Extends interface inspection to candidate retrieval, generated paths, and model reuse after refresh.
+      relationship: After inspecting the mapping, use SIDScope to check which candidates the prefixes expose and account for the codes the generator actually emits.
   title: 'SIDInspector: A Mapping-First Diagnostic Resource for Semantic-ID Tokenizers'
   year: 2026
   venue: Proceedings of the 35th ACM International Conference on Information and Knowledge Management (CIKM '26)
@@ -327,6 +329,7 @@
   digest_image: true
   selected_label: RecSys 2026
   selected_summary: Gates dimensions between stale personal history and a global prior for returning users with no new observations. The sequential backbone stays frozen.
+  selected_evidence: At embedding dimension 128, the gate and prior add 66,304 trainable parameters, or 2–4% of the tested backbone sizes.
   code_url: https://github.com/jdding/DeltaGate
   code_label: Code
   doi_url: https://doi.org/10.1145/3773078.3831771
@@ -399,6 +402,7 @@
   digest_image: true
   selected_label: WWW 2026
   selected_summary: Combines session-aware masked-item pretraining with preference-guided sparse attention, preserving history structure while limiting irrelevant computation.
+  selected_evidence: On the full APPGallery offline test set, HPGR reached 0.89288 AUC, 0.01139 higher than MTGR.
   digest_url: "/hpgr/"
   digest_label: Digest
   doi_url: https://doi.org/10.1145/3774904.3792790
@@ -411,7 +415,7 @@
     - title: Approach
       text: HPGR first learns hierarchical item representations through session-based masked-item pretraining. Preference-aware fine-tuning then uses sparse attention to focus on relevant historical items.
     - title: Public evidence
-      text: The paper reports evaluation on proprietary APPGallery data and an online A/B test, comparing with HSTU and MTGR. These settings support the reported efficiency and recommendation findings; they are not a public-benchmark replication.
+      text: Offline comparisons on proprietary APPGallery data include HSTU and MTGR. A separate seven-day online A/B test reports a 1.99% eCPM lift against the production DLRM. The two evaluations use different baselines.
     - title: Takeaway
       text: Session structure and selective attention provide complementary controls over what a generative recommender learns from its history. Generalization beyond the reported industrial setting requires evaluation.
 - id: invariant-feature-learning
@@ -569,6 +573,7 @@
   digest_image: true
   selected_label: arXiv 2024
   selected_summary: Coordinates prefill/decode placement, on-demand forwarding, and KV-cache transfers across a large NPU cluster. Serving efficiency depends on scheduling and transport as well as model execution.
+  selected_evidence: The authors report more than eight months of commercial deployment across tens of thousands of NPUs.
   paper_url: https://arxiv.org/pdf/2408.08147
   paper_label: PDF
   digest_url: "/pd-serve/"

@@ -106,7 +106,7 @@ classes: wide
             <h3><a class="paper-title-link" href="{{ paper.digest_url }}">{{ paper.title }}</a></h3>
             <div class="paper-description">
               <p>{{ paper.selected_summary }}</p>
-              {% if paper.contribution.evidence %}<p class="paper-evidence">{{ paper.contribution.evidence }}</p>{% endif %}
+              {% if paper.selected_evidence %}<p class="paper-evidence">{{ paper.selected_evidence | escape }}</p>{% endif %}
             </div>
             <div class="record-actions">
               {% if paper.digest_url %}<a class="pill digest" href="{{ paper.digest_url }}">Digest</a>{% endif %}

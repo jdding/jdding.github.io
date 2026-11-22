@@ -24,6 +24,7 @@ Per-paper route shells live in `papers/<slug>.md`. Each shell binds a `publicati
 | preprint_date | First public preprint date |
 | acceptance_date | Verified acceptance date; independent of public availability |
 | published_date | Verified formal/first-online publication date |
+| issue_date | Journal issue month (YYYY-MM); not a first-online date or evidence of publication on its own |
 | news.type + news.date | A specific event matching the corresponding date field |
 
 Do not use the former ambiguous `publication_date` field. An accepted paper may have a preprint date without a formal publication date.
@@ -32,7 +33,7 @@ Do not use the former ambiguous `publication_date` field. An accepted paper may 
 
 `publication-date.html` supplies one policy to citation tags, Digest JSON-LD, list microdata, and the graph API:
 
-- Published: published_date, falling back to the bibliographic year when no exact date is known.
+- Published: published_date, then the verified issue_date, then the bibliographic year.
 - Preprint: preprint_date, falling back to its year.
 - Accepted: omit datePublished/citation_publication_date, even when a preprint exists. The human page and raw JSON still expose its explicitly labeled preprint/acceptance dates.
 

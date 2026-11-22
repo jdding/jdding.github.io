@@ -17,7 +17,7 @@ description: "Publications by Jiandong Ding (丁建栋) across recommender syste
       <h1>Full publications</h1>
       <p class="lede">Research papers, accepted articles, and public preprints. Status is shown separately from the venue.</p>
       <form class="publication-filters" role="search" aria-label="Filter publications" hidden>
-        <label>Search papers <input type="search" name="query" placeholder="Title or author" aria-controls="all-publications"></label>
+        <label>Search papers <input type="search" name="query" placeholder="Title, author, or venue" aria-controls="all-publications"></label>
         <label>Topic <select name="topic" aria-controls="all-publications">
           <option value="">All topics</option>
           {% for topic in topics %}<option value="{{ topic.slug }}">{{ topic.title }}</option>{% endfor %}
@@ -58,7 +58,7 @@ description: "Publications by Jiandong Ding (丁建栋) across recommender syste
                   <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="{{ site.url }}/#person">
                     <meta itemprop="name" content="Jiandong Ding (丁建栋)">
                   </span>
-                  <span class="record-venue"><span itemprop="isPartOf">{% include publication-venue.html paper=paper %}</span> {% include publication-status.html paper=paper published=true %}</span>
+                  <span class="record-venue"><span itemprop="isPartOf" data-venue-name="{{ paper.venue | escape }}">{% include publication-venue.html paper=paper %}</span> {% include publication-status.html paper=paper published=true %}</span>
                   {% assign announcement = site.data.news | where: "publication_id", paper.id | where: "type", "accepted_reported" | first %}
                   {% if announcement.additional_title %}<span class="acceptance-note">Two full papers accepted at {% include publication-venue.html paper=paper %} Main Track (reported {{ announcement.date }}): this paper and {{ announcement.additional_title }}.</span>{% endif %}
                   {% if paper.program %}{% assign paper_program = site.data.research_programs | where: "id", paper.program | first %}<a href="/#program-{{ paper.program }}">{{ paper_program.hero_title }}</a>{% endif %}
