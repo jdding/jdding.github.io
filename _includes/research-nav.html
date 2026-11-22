@@ -1,3 +1,12 @@
+{% capture research_nav_links %}
+  <a href="/#research" data-scroll-ignore>Research</a>
+  {% assign nav_labels = 'Publications,Resources,Patents,Collaborations' | split: ',' %}
+  {% for label in nav_labels %}
+    {% assign path = label | downcase | prepend: '/' | append: '/' %}
+    <a href="{{ path }}"{% if page.url == path %} aria-current="page"{% endif %}>{{ label }}</a>
+  {% endfor %}
+  <a href="/#connect" data-scroll-ignore>Contact</a>
+{% endcapture %}
 <nav id="research-navigation" class="research-nav" aria-label="Primary navigation" tabindex="-1">
   <div class="research-nav-inner">
     <a class="research-brand" href="/" aria-label="Jiandong Ding (丁建栋) homepage">
@@ -8,21 +17,13 @@
       </span>
     </a>
     <div class="research-nav-links research-nav-links-desktop">
-      <a href="/#research" data-scroll-ignore>Research</a>
-      <a href="/publications/">Publications</a>
-      <a href="/patents/">Patents</a>
-      <a href="/collaborations/">Collaborations</a>
-      <a href="/#connect" data-scroll-ignore>Contact</a>
+      {{ research_nav_links }}
     </div>
     <details class="research-menu">
       <summary>Menu</summary>
       <div class="research-menu-panel">
-        <a href="/">Home</a>
-        <a href="/#research" data-scroll-ignore>Research</a>
-        <a href="/publications/">Publications</a>
-        <a href="/patents/">Patents</a>
-        <a href="/collaborations/">Collaborations</a>
-        <a href="/#connect" data-scroll-ignore>Contact</a>
+        <a href="/"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+        {{ research_nav_links }}
       </div>
     </details>
   </div>

@@ -161,7 +161,8 @@
       url: https://aclanthology.org/2026.emnlp-industry.7/
   image: "/assets/images/AI-Search-Optimization-Infographic.png"
   image_webp: "/assets/images/AI-Search-Optimization-Infographic.webp"
-  card_image: "/assets/images/AI-Search-Optimization-Infographic-card.webp"
+  image_width: 1600
+  image_height: 894
   digest_image: true
   selected_label: EMNLP 2026
   selected_summary: Uses catalog evidence to optimize search policies without model training, so query behavior can adapt to the inventory that is actually available.
@@ -320,6 +321,10 @@
   selected: true
   status: published
   image: "/assets/images/DeltaGate-Resurrecting-Ghost-Users.jpg"
+  image_webp: "/assets/images/DeltaGate-Resurrecting-Ghost-Users.webp"
+  image_width: 1120
+  image_height: 626
+  digest_image: true
   selected_label: RecSys 2026
   selected_summary: Gates dimensions between stale personal history and a global prior for returning users with no new observations. The sequential backbone stays frozen.
   code_url: https://github.com/jdding/DeltaGate
@@ -389,6 +394,9 @@
   selected: true
   status: published
   image: "/assets/images/Beyond-the-Flat-Sequence.webp"
+  image_width: 800
+  image_height: 446
+  digest_image: true
   selected_label: WWW 2026
   selected_summary: Combines session-aware masked-item pretraining with preference-guided sparse attention, preserving history structure while limiting irrelevant computation.
   digest_url: "/hpgr/"
@@ -418,6 +426,9 @@
   selected: true
   status: published
   image: "/assets/images/Invariant-Feature-Learning.webp"
+  image_width: 800
+  image_height: 446
+  digest_image: true
   selected_label: AAAI 2026
   selected_summary: Uses a kernel-based invariance regularizer across video-duration groups to reduce duration confounding in counterfactual watch-time prediction.
   digest_url: "/aaai-difl/"
@@ -445,6 +456,9 @@
   selected: true
   status: published
   image: "/assets/images/RPE4Rec.webp"
+  image_width: 800
+  image_height: 446
+  digest_image: true
   selected_label: WSDM 2026
   selected_summary: Uses a hashtable neighborhood memory to supply short-term co-occurrence and relative-position signals to dynamic retrieval at low additional cost.
   paper_url: https://dl.acm.org/doi/epdf/10.1145/3773966.3778006
@@ -550,7 +564,8 @@
   status: preprint
   image: "/assets/images/Scaling-LLM-Serving-P-D-Serve.png"
   image_webp: "/assets/images/Scaling-LLM-Serving-P-D-Serve.webp"
-  card_image: "/assets/images/Scaling-LLM-Serving-P-D-Serve-card.webp"
+  image_width: 1600
+  image_height: 894
   digest_image: true
   selected_label: arXiv 2024
   selected_summary: Coordinates prefill/decode placement, on-demand forwarding, and KV-cache transfers across a large NPU cluster. Serving efficiency depends on scheduling and transport as well as model execution.

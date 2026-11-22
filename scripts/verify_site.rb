@@ -91,6 +91,10 @@ check.call(shortcut && shortcut['data-scroll-ignore'] != nil, 'mobile selected-p
 check.call(home.css('.paper-card').size == 6, 'rendered selected cards changed')
 check.call(home.css('.news-list, .research-trajectory, .contribution-list').empty?, 'removed homepage lists returned')
 check.call(home.css('.paper-card h3 a').map { |a| a['href'] } == selected.map { |id| by_id.fetch(id)['digest_url'] }, 'rendered selected order changed')
+check.call(home.css('.paper-card img').empty?, 'selected papers should not load digest illustrations')
+check.call(home.css('.hero-copy .profile-links a').size == 4, 'homepage profile links missing')
+check.call(list.at_css('.research-nav a[href="/publications/"][aria-current="page"]'), 'publications navigation current state missing')
+check.call(list.at_css('.publication-filters[hidden]') && list.at_css('script[src="/assets/js/publication-filters.js"][defer]'), 'publication filters must progressively enhance the full list')
 check.call(home.css('.record-item').empty?, 'duplicated recent publication list returned')
 section_ids = home.css('.homepage > section').map { |s| s['id'] }.compact
 check.call(section_ids == %w[research selected connect], 'homepage reading order changed')
@@ -117,6 +121,14 @@ papers.each do |p|
   id = p['id']
   doc = html.call(p['digest_url'])
   row = list.at_css("#publication-#{id}")
+  check.call(row['data-topic'] == p['topic'] && row.key?('data-with-code') == !!p['code_url'], "#{id}: filter data differs from source")
+  if p['authors'].split(',').map(&:strip).include?('Jiandong Ding')
+    check.call(row.at_css('[itemprop="creditText"] strong')&.text == 'Jiandong Ding', "#{id}: owner not highlighted in author list")
+  end
+  if selected.include?(id)
+    illustration = doc.at_css('.digest-visual a img')
+    check.call(illustration && illustration['src'] == (p['image_webp'] || p['image']) && illustration['width'].to_i == p['image_width'] && illustration['height'].to_i == p['image_height'], "#{id}: digest illustration missing or incorrectly sized")
+  end
   article = doc.css('script[type="application/ld+json"]').map { |el| JSON.parse(el.text) }.find { |o| o['@type'] == 'ScholarlyArticle' }
   graph_paper = graph.find { |n| n['@id'] == "https://jdding.github.io/publication/#{id}" }
   citation = doc.at_css('meta[name="citation_publication_date"]')&.[]('content')

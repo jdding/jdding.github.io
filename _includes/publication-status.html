@@ -1,5 +1,7 @@
 {%- if include.paper.status == "accepted" -%}
-<span class="publication-status">Accepted</span>
+<span class="publication-status status-accepted">Accepted</span>
 {%- elsif include.paper.status == "preprint" -%}
-<span class="publication-status">Preprint</span>
+<span class="publication-status status-preprint">Preprint</span>
+{%- elsif include.published and include.paper.status == "published" -%}
+<span class="publication-status status-published">Published</span>
 {%- endif -%}

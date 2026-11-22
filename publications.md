@@ -16,6 +16,16 @@ description: "Publications by Jiandong Ding (丁建栋) across recommender syste
     <div class="research-shell">
       <h1>Full publications</h1>
       <p class="lede">Research papers, accepted articles, and public preprints. Status is shown separately from the venue.</p>
+      <form class="publication-filters" role="search" aria-label="Filter publications" hidden>
+        <label>Search papers <input type="search" name="query" placeholder="Title or author" aria-controls="all-publications"></label>
+        <label>Topic <select name="topic" aria-controls="all-publications">
+          <option value="">All topics</option>
+          {% for topic in topics %}<option value="{{ topic.slug }}">{{ topic.title }}</option>{% endfor %}
+        </select></label>
+        <label class="publication-code-filter"><input type="checkbox" name="code" aria-controls="all-publications"> With code</label>
+        <button type="reset">Clear filters</button>
+        <p class="publication-match" role="status"></p>
+      </form>
       <nav class="year-navigation" aria-label="Publication years">{% for year in years %}<a href="#{{ year }}" data-scroll-ignore>{{ year }}</a>{% endfor %}</nav>
     </div>
   </section>
@@ -33,17 +43,22 @@ description: "Publications by Jiandong Ding (丁建栋) across recommender syste
             {% assign topic_label = paper.topic_label | default: topic.title %}
             {% capture published_date %}{% include publication-date.html paper=paper %}{% endcapture %}
             {% assign published_date = published_date | strip %}
-            <article id="publication-{{ paper.id }}" class="record-item" itemscope itemtype="https://schema.org/ScholarlyArticle">
+            <article id="publication-{{ paper.id }}" class="record-item" data-topic="{{ paper.topic }}"{% if paper.code_url %} data-with-code{% endif %} itemscope itemtype="https://schema.org/ScholarlyArticle">
               <div>
                 <h3 itemprop="headline">
                   {% if paper.digest_url %}<a class="record-title-link" href="{{ paper.digest_url }}" itemprop="url">{{ paper.title }}</a>{% else %}{{ paper.title }}{% endif %}
                 </h3>
                 <div class="record-meta meta-lines">
-                  <span itemprop="creditText">{{ paper.authors }}</span>
+                  <span itemprop="creditText">{%- assign authors = paper.authors | split: ',' -%}
+                  {%- for name in authors -%}
+                    {%- assign author_name = name | strip -%}
+                    {%- if author_name == 'Jiandong Ding' -%}<strong>{{ author_name }}</strong>{%- else -%}{{ author_name | escape }}{%- endif -%}
+                    {%- unless forloop.last -%}{{ ', ' }}{%- endunless -%}
+                  {%- endfor -%}</span>
                   <span itemprop="author" itemscope itemtype="https://schema.org/Person" itemid="{{ site.url }}/#person">
                     <meta itemprop="name" content="Jiandong Ding (丁建栋)">
                   </span>
-                  <span><span itemprop="isPartOf">{% include publication-venue.html paper=paper %}</span> {% include publication-status.html paper=paper %}</span>
+                  <span class="record-venue"><span itemprop="isPartOf">{% include publication-venue.html paper=paper %}</span> {% include publication-status.html paper=paper published=true %}</span>
                   {% assign announcement = site.data.news | where: "publication_id", paper.id | where: "type", "accepted_reported" | first %}
                   {% if announcement.additional_title %}<span class="acceptance-note">Two full papers accepted at {% include publication-venue.html paper=paper %} Main Track (reported {{ announcement.date }}): this paper and {{ announcement.additional_title }}.</span>{% endif %}
                   {% if paper.program %}{% assign paper_program = site.data.research_programs | where: "id", paper.program | first %}<a href="/#program-{{ paper.program }}">{{ paper_program.hero_title }}</a>{% endif %}
@@ -70,6 +85,7 @@ description: "Publications by Jiandong Ding (丁建栋) across recommender syste
   </section>
 </div>
 
+<script src="/assets/js/publication-filters.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

@@ -6,7 +6,6 @@ description: "Jiandong Ding (丁建栋) is a Principal Algorithm Expert at Huawe
 classes: wide
 ---
 
-<link rel="stylesheet" href="/assets/css/research-system.css?v=simplify-20261115">
 {% include research-nav.html %}
 
 {% assign topics = site.data.topics | sort: "order" %}
@@ -16,11 +15,21 @@ classes: wide
 
 <main id="main" class="research-site homepage">
   <section class="research-hero">
-    <div class="research-shell hero-layout">
-      <div class="hero-copy">
+    <div class="research-shell hero-layout hero-copy">
+      <header class="hero-identity">
         <h1>Jiandong Ding <span class="identity-native-name">(丁建栋)</span></h1>
         <p class="hero-role">Principal Algorithm Expert · Huawei</p>
-        <a class="mobile-selected-link" href="#selected" data-scroll-ignore>Selected papers →</a>
+      </header>
+      <img class="identity-portrait" src="/assets/images/Profile.webp" width="500" height="494" alt="Portrait of Jiandong Ding" fetchpriority="high">
+      <div class="hero-details">
+        <nav class="profile-links" aria-label="Contact and professional profiles">
+          <a href="mailto:{{ site.data.internships.email }}">Email</a>
+          {% assign profile_names = 'Google Scholar,GitHub,LinkedIn' | split: ',' %}
+          {% for profile_name in profile_names %}
+            {% assign profile = site.social_media | where: 'name', profile_name | first %}
+            {% if profile %}<a rel="me" href="{{ profile.url }}">{{ profile.name }}</a>{% endif %}
+          {% endfor %}
+        </nav>
         <p class="lede">Since 2012, I have worked on applied AI and data systems across IBM, Bosch, Alibaba DAMO Academy, and Huawei. My current research asks how recommendation and AI retrieval systems can remain reliable as users, catalogs, tasks, and interfaces change.</p>
         <div class="identity-facts" aria-label="Professional profile">
           <div>
@@ -32,14 +41,9 @@ classes: wide
           <a class="button primary" href="#research" data-scroll-ignore>Explore research</a>
           <a class="text-link" href="/publications/">Publications</a>
           <a class="text-link" href="/collaborations/#research-intern">Research internships</a>
+          <a class="mobile-selected-link" href="#selected" data-scroll-ignore>Selected papers →</a>
         </div>
       </div>
-
-      <figure class="identity-card" aria-label="Portrait of Jiandong Ding">
-        <div class="identity-portrait">
-          <img src="/assets/images/Profile.png" alt="Jiandong Ding portrait">
-        </div>
-      </figure>
     </div>
   </section>
 
@@ -61,7 +65,11 @@ classes: wide
             {% assign paper = publications | where: "id", paper_id | first %}
             {% if paper %}
             <li data-publication-id="{{ paper.id }}">
-              <a class="program-paper-link" href="{{ paper.digest_url }}">{{ paper.contribution.label }}</a> {% include publication-status.html paper=paper %}
+              <div class="program-paper-meta">
+                <a class="program-paper-link" href="{{ paper.digest_url }}">{{ paper.contribution.label }}</a>
+                <span class="paper-venue">{% include publication-venue.html paper=paper %}</span>
+                {% include publication-status.html paper=paper %}
+              </div>
               <p>{{ paper.contribution.mechanism }} <span class="program-evidence">{{ paper.contribution.evidence }}</span></p>
             </li>
             {% endif %}
@@ -88,21 +96,21 @@ classes: wide
         {% for paper in selected_papers %}
         {% assign topic = topics | where: "slug", paper.topic | first %}
         {% if paper.program %}{% assign program = programs | where: "id", paper.program | first %}{% else %}{% assign program = nil %}{% endif %}
-        <article class="paper-card {% if forloop.first %}featured{% endif %}">
-          {% if paper.image %}
-          <div class="paper-image">
-            <img src="{% if paper.card_image %}{{ paper.card_image }}{% else %}{{ paper.image }}{% endif %}" alt="{{ paper.title }}" loading="lazy">
-          </div>
-          {% endif %}
+        <article class="paper-card">
           <div class="paper-body">
             <div class="paper-meta">
-              <span>{% include publication-venue.html paper=paper %} {% include publication-status.html paper=paper %}</span>
-              <span>{{ program.hero_title | default: paper.research_context | default: topic.title }}</span>
+              <span class="paper-venue">{% include publication-venue.html paper=paper %}</span>
+              {% include publication-status.html paper=paper %}
+              <span class="paper-context">{{ program.hero_title | default: paper.research_context | default: topic.title }}</span>
             </div>
             <h3><a class="paper-title-link" href="{{ paper.digest_url }}">{{ paper.title }}</a></h3>
-            <p>{{ paper.selected_summary }}</p>
+            <div class="paper-description">
+              <p>{{ paper.selected_summary }}</p>
+              {% if paper.contribution.evidence %}<p class="paper-evidence">{{ paper.contribution.evidence }}</p>{% endif %}
+            </div>
             <div class="record-actions">
               {% if paper.digest_url %}<a class="pill digest" href="{{ paper.digest_url }}">Digest</a>{% endif %}
+              {% include publication-links.html paper=paper prefer_paper=true %}
             </div>
           </div>
         </article>
@@ -120,12 +128,7 @@ classes: wide
           <a class="text-link" href="/collaborations/#research-intern">Requirements and application →</a>
         </div>
         <div class="contact-actions">
-          <a href="mailto:dingjiandong2@huawei.com?subject=Research%20collaboration%20or%20internship">dingjiandong2@huawei.com</a>
-          <nav class="profile-links" aria-label="Professional profiles">
-            <a rel="me" href="https://scholar.google.com/citations?user=5-e7wi4AAAAJ">Google Scholar</a>
-            <a rel="me" href="https://github.com/jdding">GitHub</a>
-            <a rel="me" href="https://www.linkedin.com/in/jiandong-ding-60498833/">LinkedIn</a>
-          </nav>
+          <a href="mailto:{{ site.data.internships.email }}?subject=Research%20collaboration%20or%20internship">{{ site.data.internships.email }}</a>
         </div>
       </div>
     </div>

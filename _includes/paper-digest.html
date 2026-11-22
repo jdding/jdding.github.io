@@ -47,7 +47,7 @@
         {% endif %}
         {% if paper.digest_image and paper.image %}
         <figure class="digest-visual">
-          <a href="{{ paper.image }}" aria-label="View full-size infographic for {{ paper.title | escape }}"><img src="{{ paper.image_webp | default: paper.image }}"{% if paper.image_webp %} width="1600" height="894"{% endif %} alt="Infographic for {{ paper.title | escape }}" loading="lazy" decoding="async"></a>
+          <a href="{{ paper.image }}" aria-label="View full-size infographic for {{ paper.title | escape }}"><img src="{{ paper.image_webp | default: paper.image }}"{% if paper.image_width and paper.image_height %} width="{{ paper.image_width }}" height="{{ paper.image_height }}"{% endif %} alt="Infographic for {{ paper.title | escape }}" loading="lazy" decoding="async"></a>
         </figure>
         {% endif %}
         <section class="digest-block">
