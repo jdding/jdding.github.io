@@ -77,6 +77,9 @@
       reading_order: Read SameCapRisk-Bench to see the same-family risk-exposure failure mode, then SkillContrast for difference-guided reranking input selection; see IGPO for inventory-grounded AI search and BIS for NL2SQL service evaluation.
       publication_ids: [skillresolve-bench, skillcontrast, igpo-ai-search, bis-nl2sql]
   recarch_links:
+    - title: Semantic IDs and Item Tokenization
+      url: https://jdding.github.io/recarch/en/topics/semantic-id-tokenization/
+      note: Comparison of 16 industrial Semantic-ID tokenizers across hierarchy, collision handling, codebook health, and ranking reuse in RecArch.
     - title: Generative Retrieval (Semantic-ID systems)
       url: https://jdding.github.io/recarch/en/topics/generative-retrieval/
       note: Production Semantic-ID and generative retrieval architectures whose tokenizer interfaces motivate pre-training diagnostics.
