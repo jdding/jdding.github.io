@@ -16,8 +16,15 @@ permalink: /api/research.json
     "lastModified": {{ site.time | date_to_xmlschema | jsonify }},
     "entryPoints": {
       "home": "{{ site.url }}/",
+      "researchLines": {
+        "adaptiveRecommendation": "{{ site.url }}/research/adaptive-recommendation/",
+        "auditableRetrieval": "{{ site.url }}/research/auditable-retrieval/"
+      },
       "publications": "{{ site.url }}/publications/",
+      "resources": "{{ site.url }}/resources/",
+      "collaborations": "{{ site.url }}/collaborations/",
       "patents": "{{ site.url }}/patents/",
+      "recarch": "https://jdding.github.io/recarch/",
       "llms": "{{ site.url }}/llms.txt",
       "knowledgeGraph": "{{ site.url }}/api/knowledge-graph.json"
     }

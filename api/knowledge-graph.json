@@ -69,7 +69,7 @@ permalink: /api/knowledge-graph.json
       "@id": "{{ site.url }}/#program-{{ program.id }}",
       "@type": "ResearchProject",
       "name": {{ program.title | jsonify }},
-      "url": "{{ site.url }}/#program-{{ program.id }}",
+      "url": "{{ site.url }}{{ program.url }}",
       "description": {{ program.summary | jsonify }},
       "member": { "@id": "{{ site.url }}/#person" }
     }{% endfor %}{% for project in projects %},

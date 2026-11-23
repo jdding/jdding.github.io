@@ -1,0 +1,314 @@
+{% assign programs = site.data.research_programs | sort: "order" %}
+{% assign program = programs | where: "id", page.program_id | first %}
+{% assign public_papers = site.data.publications | where_exp: "item", "item.hidden != true" %}
+{% assign program_papers = public_papers | where: "program", program.id %}
+{% assign program_resources = site.data.open_source | where: "program", program.id | sort: "order" %}
+{% assign sibling_program = nil %}
+{% for item in programs %}
+  {% if item.id != program.id %}{% assign sibling_program = item %}{% endif %}
+{% endfor %}
+{% assign code_papers = program_papers | where_exp: "item", "item.code_url" %}
+
+<div class="research-site program-page">
+  <section class="research-hero">
+    <div class="research-shell hero-layout">
+      <div>
+        <nav class="digest-breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a><span aria-hidden="true">/</span>
+          <a href="/#research">Research</a><span aria-hidden="true">/</span>
+          <span aria-current="page">{{ program.hero_title }}</span>
+        </nav>
+        <div class="digest-kicker">Research line {{ program.number }}</div>
+        <h1>{{ program.title }}</h1>
+        <p class="lede">{{ program.summary }}</p>
+        <div class="hero-actions" aria-label="Research line navigation">
+          <a class="button primary" href="#papers">Sub-tracks &amp; papers</a>
+          <a class="button secondary" href="#evidence">Evidence &amp; boundaries</a>
+          <a class="button secondary" href="#artifacts">Tools &amp; RecArch</a>
+          {% if sibling_program %}<a class="text-link" href="{{ sibling_program.url }}">Line {{ sibling_program.number }}: {{ sibling_program.hero_title }} →</a>{% endif %}
+        </div>
+      </div>
+      <aside class="summary-board" aria-label="Research line summary">
+        <div class="summary-row"><strong>{{ program_papers.size }}</strong><span>public papers in this line</span></div>
+        <div class="summary-row"><strong>{{ program.subtracks.size }}</strong><span>structured sub-tracks</span></div>
+        <div class="summary-row"><strong>{{ code_papers.size }}</strong><span>public code or benchmark repos</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="framing" class="research-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>Core question and framing</h2>
+        <p>{{ program.question }}</p>
+      </div>
+      <div class="program-thesis-panel">
+        <p>{{ program.thesis }}</p>
+        <div class="program-subtrack-pills" aria-label="Jump to sub-tracks">
+          {% for track in program.subtracks %}
+          <a class="pill link" href="#track-{{ track.id }}">{{ track.title }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="evidence" class="research-section">
+    <div class="research-shell">
+      <div class="section-head">
+        <h2>Representative mechanisms, evidence, and boundaries</h2>
+        <p>Compact claim cards for anchor works in this line, stating what each method changes, what public evidence supports it, and where the evidence stops.</p>
+      </div>
+      <div class="program-evidence-grid">
+        {% for paper_id in program.representative_publication_ids %}
+        {% assign paper = public_papers | where: "id", paper_id | first %}
+        {% if paper and paper.contribution %}
+        <article class="program-evidence-card" data-publication-id="{{ paper.id }}">
+          <div class="paper-meta">
+            <span class="paper-venue">{% include publication-venue.html paper=paper %}</span>
+            {% include publication-status.html paper=paper %}
+            {% if paper.contribution.author_role %}<span class="paper-context">{{ paper.contribution.author_role | escape }}</span>{% endif %}
+          </div>
+          {% assign label_prefix = paper.contribution.label | append: ":" %}
+          <h3><a class="paper-title-link" href="{{ paper.digest_url }}">{% if paper.title contains label_prefix %}{{ paper.title }}{% else %}{{ paper.contribution.label }}: {{ paper.title }}{% endif %}</a></h3>
+          <dl class="digest-record program-claim-list">
+            <div><dt>Problem</dt><dd>{{ paper.contribution.problem }}</dd></div>
+            <div><dt>Mechanism</dt><dd>{{ paper.contribution.mechanism }}</dd></div>
+            <div><dt>Evidence</dt><dd>{{ paper.contribution.evidence }}</dd></div>
+            <div><dt>Boundary</dt><dd>{{ paper.contribution.boundary }}</dd></div>
+          </dl>
+          <div class="record-actions">
+            <a class="pill digest" href="{{ paper.digest_url }}">Digest</a>
+            {% include publication-links.html paper=paper prefer_paper=true %}
+            {% assign rep_artifact = site.data.open_source | where: "publication_id", paper.id | first %}
+            {% if rep_artifact %}<a class="pill link" href="/resources/#{{ rep_artifact.id }}">Quickstart</a>{% endif %}
+          </div>
+        </article>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="papers" class="research-section">
+    <div class="research-shell">
+      <div class="section-head section-head-row">
+        <div>
+          <h2>Sub-tracks and reading order</h2>
+          <p>All {{ program_papers.size }} public papers assigned to this research line, grouped by technical sub-problem.</p>
+        </div>
+        <a class="text-link" href="/publications/">All {{ public_papers.size }} publications</a>
+      </div>
+
+      {% assign assigned_ids = "" %}
+      <div class="program-subtrack-stack">
+        {% for track in program.subtracks %}
+        <section id="track-{{ track.id }}" class="program-subtrack-block">
+          <div class="program-subtrack-head">
+            <h3>{{ track.title }}</h3>
+            <p>{{ track.summary }}</p>
+            {% if track.reading_order %}<p class="program-reading-order"><strong>Reading order:</strong> {{ track.reading_order }}</p>{% endif %}
+          </div>
+          <div class="record-list">
+            <div class="record-stack">
+              {% for paper_id in track.publication_ids %}
+              {% assign assigned_ids = assigned_ids | append: "|" | append: paper_id | append: "|" %}
+              {% assign paper = public_papers | where: "id", paper_id | first %}
+              {% if paper %}
+              {% assign artifact = site.data.open_source | where: "publication_id", paper.id | first %}
+              <article class="record-item" data-program-paper-id="{{ paper.id }}">
+                <div>
+                  <h3><a class="record-title-link" href="{{ paper.digest_url }}">{{ paper.title }}</a></h3>
+                  <div class="record-meta meta-lines">
+                    <span>{{ paper.authors | replace: "Jiandong Ding", "<strong>Jiandong Ding</strong>" }}</span>
+                    <span class="record-venue">
+                      <span>{% include publication-venue.html paper=paper %}</span>
+                      {% include publication-status.html paper=paper %}
+                    </span>
+                    {% if paper.digest_note %}<span>{{ paper.digest_note }}</span>{% endif %}
+                  </div>
+                </div>
+                <div class="record-actions">
+                  {% include publication-links.html paper=paper digest=true %}
+                  {% if artifact %}<a class="pill link" href="/resources/#{{ artifact.id }}">Quickstart</a>{% endif %}
+                </div>
+              </article>
+              {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </section>
+        {% endfor %}
+
+        {% assign unassigned_count = 0 %}
+        {% for paper in program_papers %}
+          {% assign token = "|" | append: paper.id | append: "|" %}
+          {% unless assigned_ids contains token %}{% assign unassigned_count = unassigned_count | plus: 1 %}{% endunless %}
+        {% endfor %}
+        {% if unassigned_count > 0 %}
+        <section id="track-additional" class="program-subtrack-block">
+          <div class="program-subtrack-head">
+            <h3>Additional work in this line</h3>
+            <p>Public papers assigned to this research line outside the sub-tracks above.</p>
+          </div>
+          <div class="record-list">
+            <div class="record-stack">
+              {% for paper in program_papers %}
+              {% assign token = "|" | append: paper.id | append: "|" %}
+              {% unless assigned_ids contains token %}
+              {% assign artifact = site.data.open_source | where: "publication_id", paper.id | first %}
+              <article class="record-item" data-program-paper-id="{{ paper.id }}">
+                <div>
+                  <h3><a class="record-title-link" href="{{ paper.digest_url }}">{{ paper.title }}</a></h3>
+                  <div class="record-meta meta-lines">
+                    <span>{{ paper.authors | replace: "Jiandong Ding", "<strong>Jiandong Ding</strong>" }}</span>
+                    <span class="record-venue">
+                      <span>{% include publication-venue.html paper=paper %}</span>
+                      {% include publication-status.html paper=paper %}
+                    </span>
+                    {% if paper.digest_note %}<span>{{ paper.digest_note }}</span>{% endif %}
+                  </div>
+                </div>
+                <div class="record-actions">
+                  {% include publication-links.html paper=paper digest=true %}
+                  {% if artifact %}<a class="pill link" href="/resources/#{{ artifact.id }}">Quickstart</a>{% endif %}
+                </div>
+              </article>
+              {% endunless %}
+              {% endfor %}
+            </div>
+          </div>
+        </section>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <section id="artifacts" class="research-section">
+    <div class="research-shell">
+      <div class="section-head section-head-row">
+        <div>
+          <h2>Public tools and RecArch context</h2>
+          <p>Runnable CPU quickstarts, benchmark repositories, and related industrial architecture cards in RecArch.</p>
+        </div>
+        <a class="text-link" href="/resources/">All open-source quickstarts</a>
+      </div>
+
+      <div class="program-links-grid">
+        <div class="program-panel">
+          <h3>Code and benchmark artifacts</h3>
+          <ul class="program-artifact-list">
+            {% for artifact in program_resources %}
+            {% assign paper = public_papers | where: "id", artifact.publication_id | first %}
+            <li>
+              <div class="program-paper-meta">
+                <a class="program-paper-link" href="/resources/#{{ artifact.id }}">{{ artifact.title }}</a>
+                <span class="paper-venue">{{ artifact.record }}</span>
+                <span class="paper-context">{{ artifact.kind }}</span>
+              </div>
+              <p>{{ artifact.summary }}</p>
+              <div class="record-actions">
+                <a class="pill link" href="/resources/#{{ artifact.id }}">Quickstart</a>
+                <a class="pill link" href="{{ artifact.repository_url }}">Repository</a>
+                {% if paper %}<a class="pill digest" href="{{ paper.digest_url }}">Digest</a>{% endif %}
+              </div>
+            </li>
+            {% endfor %}
+            {% for paper in code_papers %}
+              {% assign has_quickstart = program_resources | where: "publication_id", paper.id | first %}
+              {% unless has_quickstart %}
+            <li>
+              <div class="program-paper-meta">
+                <a class="program-paper-link" href="{{ paper.digest_url }}">{{ paper.title }}</a>
+                <span class="paper-venue">{% include publication-venue.html paper=paper %}</span>
+                {% include publication-status.html paper=paper %}
+              </div>
+              {% if paper.digest_note %}<p>{{ paper.digest_note }}</p>{% endif %}
+              <div class="record-actions">
+                <a class="pill link" href="{{ paper.code_url }}">{{ paper.code_label | default: "Code" }}</a>
+                <a class="pill digest" href="{{ paper.digest_url }}">Digest</a>
+              </div>
+            </li>
+              {% endunless %}
+            {% endfor %}
+          </ul>
+        </div>
+
+        {% if program.recarch_links %}
+        <div class="program-panel">
+          <h3>Industrial context in RecArch</h3>
+          <p class="program-panel-intro">Companion pages from <a class="text-link" href="https://jdding.github.io/recarch/">RecArch</a>, my bilingual atlas of production recommender, search, and ranking architectures (for human readers and AI agents).</p>
+          <ul class="program-artifact-list">
+            {% for item in program.recarch_links %}
+            <li>
+              <a class="program-paper-link" href="{{ item.url }}">{{ item.title }}</a>
+              <p>{{ item.note }}</p>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <section id="open-questions" class="research-section">
+    <div class="research-shell contact-closing">
+      <div class="contact-intro">
+        <h2>Open questions and collaborations</h2>
+        <p>Representative questions for ongoing research collaboration and onsite student research internships at Huawei.</p>
+        <ul class="program-questions">
+          {% for q in program.open_questions %}
+          <li>{{ q }}</li>
+          {% endfor %}
+        </ul>
+        <a class="text-link" href="/collaborations/#research-intern">Internship requirements and application →</a>
+      </div>
+      <div class="contact-actions">
+        <a href="mailto:{{ site.data.internships.email }}?subject={{ program.title | uri_escape }}">Discuss this research line</a>
+        {% if sibling_program %}<a href="{{ sibling_program.url }}">Explore line {{ sibling_program.number }}: {{ sibling_program.title }}</a>{% endif %}
+        <a href="/resources/">Open-source quickstarts</a>
+        <a href="https://jdding.github.io/recarch/">RecArch Architecture Atlas</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ResearchProject",
+  "@id": "{{ site.url }}/#program-{{ program.id }}",
+  "name": {{ program.title | jsonify }},
+  "description": {{ program.summary | jsonify }},
+  "url": "{{ site.url }}{{ program.url }}",
+  "member": { "@id": "{{ site.url }}/#person" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ site.url }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Research",
+      "item": "{{ site.url }}/#research"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ program.title | jsonify }},
+      "item": "{{ site.url }}{{ program.url }}"
+    }
+  ]
+}
+</script>

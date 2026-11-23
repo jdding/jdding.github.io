@@ -2,7 +2,7 @@
 
 This is the personal research site of Jiandong Ding, Principal Algorithm Expert at Huawei Technologies Co. Ltd., Shanghai, China.
 
-The site is organized around two research lines: Adaptive Recommendation under Change, and Auditable AI Retrieval and Interfaces. The homepage connects each line to representative mechanisms, evidence, limitations, and public resources. Earlier learning methods and industrial systems are described in a separate research-connections section.
+The site is organized around two research lines: Adaptive Recommendation under Change, and Auditable AI Retrieval and Interfaces. The homepage connects each line to representative mechanisms, evidence, and public resources, and briefly describes earlier learning methods and industrial systems below the research examples.
 
 The publication record is also browsable by three broad topics:
 
@@ -13,11 +13,16 @@ The publication record is also browsable by three broad topics:
 Primary human-readable pages:
 
 - Home: https://jdding.github.io/
+- Research line 01 — Adaptive Recommendation under Change: https://jdding.github.io/research/adaptive-recommendation/
+- Research line 02 — Auditable AI Retrieval and Interfaces: https://jdding.github.io/research/auditable-retrieval/
 - Full publications: https://jdding.github.io/publications/
+- Open-source quickstarts: https://jdding.github.io/resources/
+- Collaborations and research internships: https://jdding.github.io/collaborations/
 - Patents: https://jdding.github.io/patents/
-- LLM Agents topic: https://jdding.github.io/topics/llm-agents/
-- Recommender Systems topic: https://jdding.github.io/topics/recommender-systems/
-- Data Mining topic: https://jdding.github.io/topics/data-mining/
+- Companion industrial architecture atlas (RecArch): https://jdding.github.io/recarch/ (LLM index: https://jdding.github.io/recarch/llms.txt)
+- LLM Agents topic (discipline archive): https://jdding.github.io/topics/llm-agents/
+- Recommender Systems topic (discipline archive): https://jdding.github.io/topics/recommender-systems/
+- Data Mining topic (discipline archive): https://jdding.github.io/topics/data-mining/
 
 Machine-readable resources:
 

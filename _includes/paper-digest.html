@@ -70,7 +70,7 @@
 
       <aside class="digest-side">
         {% if program %}
-        <div class="digest-research-link"><h2>Research line</h2><a href="/#program-{{ program.id }}">{{ program.title }}</a></div>
+        <div class="digest-research-link"><h2>Research line</h2><a href="{{ program.url }}">{{ program.title }}</a></div>
         {% elsif paper.research_context %}
         <div class="digest-research-link"><h2>Research context</h2><p>{{ paper.research_context }}</p></div>
         {% endif %}

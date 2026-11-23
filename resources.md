@@ -10,11 +10,26 @@ description: "Run a small CPU example for DeltaGate, SIDInspector, SIDScope, or 
     <div class="research-shell">
       <h1>Start with a small example</h1>
       <p class="lede">Adapt a frozen recommender, inspect Semantic-ID mappings, or test how search episodes affect rankings. Each quickstart explains what you need, what the example produces, and how to use it with your own data.</p>
-      <nav class="hero-actions" aria-label="Choose a resource">
-        {% for artifact in site.data.open_source %}<a class="button secondary" href="#{{ artifact.id }}" data-scroll-ignore>{{ artifact.title }}</a>{% endfor %}
-      </nav>
+      <h2 id="choose-a-resource">Choose a resource</h2>
+      <table class="resource-picker" aria-labelledby="choose-a-resource">
+        <thead><tr><th scope="col">Resource</th><th scope="col">Use it to</th><th scope="col">When</th></tr></thead>
+        <tbody>
+          {% for artifact in site.data.open_source %}
+          <tr>
+            <th scope="row"><a class="text-link" href="#{{ artifact.id }}" data-scroll-ignore>{{ artifact.title }}</a></th>
+            {% case artifact.id %}
+            {% when 'deltagate' %}<td>Adapt a frozen recommender for users returning without new activity.</td><td>After training the backbone</td>
+            {% when 'sidinspector' %}<td>Check exported Semantic-ID mappings for collisions, code usage, and alignment.</td><td>Before training a recommender</td>
+            {% when 'sidscope' %}<td>Check what a mapping exposes to retrieval or generation, including after a refresh.</td><td>When testing or refreshing an interface</td>
+            {% when 'focalswap' %}<td>Compare the latest search episode against controls with the same scorer and candidates.</td><td>During ranking evaluation</td>
+            {% else %}<td>{{ artifact.summary }}</td><td>See quickstart</td>
+            {% endcase %}
+          </tr>
+          {% endfor %}
+          <tr><th scope="row"><a class="text-link" href="https://jdding.github.io/recarch/">RecArch</a></th><td>Explore a reference architecture for recommender systems.</td><td>During system design</td></tr>
+        </tbody>
+      </table>
       <p>Commands below use macOS/Linux shells and a separate virtual environment for each repository. SIDInspector and SIDScope share a Python import name, so keep their environments separate. On Windows, activate with <code>.venv\Scripts\activate</code> instead.</p>
-      <p>For an architecture overview, explore <a href="https://jdding.github.io/recarch/">RecArch, the recommender system architecture atlas</a>.</p>
     </div>
   </section>
   {% for artifact in site.data.open_source %}
@@ -36,7 +51,7 @@ description: "Run a small CPU example for DeltaGate, SIDInspector, SIDScope, or 
         <a class="button secondary" href="{{ artifact.repository_url }}">Repository</a>
         <a class="button secondary" href="{{ paper.digest_url }}">Paper digest</a>
       </div>
-      <p class="record-meta">Instructions checked against the <a href="{{ start.source_url }}">example source</a> on {{ start.reviewed_on }}. Commands pin that revision; expected outputs describe the bundled example, not a fresh reproduction of paper results.</p>
+      <p class="record-meta">Instructions checked against the <a class="text-link" href="{{ start.source_url }}">example source</a> on {{ start.reviewed_on }}. Commands pin that revision; expected outputs describe the bundled example, not a fresh reproduction of paper results.</p>
     </div>
   </section>
   {% endfor %}

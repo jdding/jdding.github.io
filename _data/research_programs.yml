@@ -1,11 +1,44 @@
 - id: adaptive-recommendation
   order: 1
   number: "01"
+  url: /research/adaptive-recommendation/
   title: Adaptive Recommendation under Change
   hero_title: Adaptive recommendation
   hero_short: Recommendation for changing users, catalogs, and operating conditions.
   summary: I study how recommendation systems should adapt when user evidence becomes stale, catalogs evolve, and production constraints limit what can safely change.
+  question: How can recommendation models adapt to stale user histories, evolving catalogs, exposure bias, and strict serving budgets without destabilizing production backbones?
+  thesis: Production recommenders rarely operate in stationary settings. Users return after months of silence, interaction histories span heterogeneous sessions, popularity and duration confound feedback, and serving budgets restrict retraining. This research line develops targeted adaptation plugins, hierarchical sequence models, incremental graph updates, and debiased objectives that stay inspectable under real deployment constraints.
   representative_publication_ids: [deltagate, hpgr]
+  subtracks:
+    - id: reactivation-and-sequences
+      title: User reactivation and structured sequence modeling
+      summary: Adapting to returning users with stale histories and modeling hierarchical preference structure beyond flat interaction logs.
+      reading_order: Start with DeltaGate for zero-observation reactivation on a frozen backbone, then read HPGR for session-aware generative ranking.
+      publication_ids: [deltagate, hpgr]
+    - id: dynamic-retrieval-and-graphs
+      title: Dynamic retrieval and incremental graph refresh
+      summary: Keeping short-term co-occurrence signals and billion-scale heterogeneous graphs fresh under cold-start and evolving interactions.
+      reading_order: Read RPE4Rec for lightweight short-term position encoding, and DyGraph (HetSGFormer + incremental updates) for scalable graph refresh.
+      publication_ids: [rpe4rec, dygraph]
+    - id: debiasing-multitask-and-efficiency
+      title: Debiasing, multi-task modeling, and serving efficiency
+      summary: Separating preference signal from duration and popularity confounding, reducing multi-task signal erosion, and compressing CTR models for serving budgets.
+      reading_order: Read DIFL and Mult-BiW for duration and popularity debiasing, Personalized Task Dependency Graphs for sparse conversion tasks, and Unified Low-Rank Compression for model efficiency.
+      publication_ids: [invariant-feature-learning, tois-popularity-bias, task-dependency-graphs, unified-low-rank-compression]
+  recarch_links:
+    - title: Long User Sequence Modeling
+      url: https://jdding.github.io/recarch/en/topics/long-user-sequence-modeling/
+      note: Side-by-side comparison of 12 production systems on sequence length, serving latency, and reported online results in RecArch.
+    - title: Generative Retrieval
+      url: https://jdding.github.io/recarch/en/topics/generative-retrieval/
+      note: Comparison of 19 production generative retrieval and ranking architectures in RecArch.
+    - title: HPGR system card
+      url: https://jdding.github.io/recarch/en/systems/huawei-hpgr-2026/
+      note: Structured deployment summary of HPGR alongside peer industrial recommenders.
+  open_questions:
+    - How should reactivation modules combine elapsed-gap signals with partial contextual cues while preserving zero backbone drift?
+    - When catalogs and user interests drift together, how can hierarchical generative recommenders decide which history segments to retain or refresh?
+    - Which lightweight debiasing and compression constraints remain stable across multi-objective production rerankers?
   themes:
     - Zero-observation user reactivation after long inactivity
     - Generative and sequential recommendation under changing intent
@@ -19,11 +52,41 @@
 - id: auditable-retrieval
   order: 2
   number: "02"
+  url: /research/auditable-retrieval/
   title: Auditable AI Retrieval and Interfaces
   hero_title: Auditable AI retrieval
   hero_short: Evidence, interfaces, and risk in AI search and capability retrieval.
   summary: I study whether AI retrieval systems use the right evidence, expose dependable interfaces, and control misleading or unsafe retrieval behavior before deployment.
+  question: How can we inspect, attribute, and verify retrieval interfaces—across search-augmented recommendation, Semantic IDs, and agent skill libraries—before they become production dependencies?
+  thesis: Modern AI systems increasingly rely on learned intermediate interfaces—such as search-episode inputs, Semantic-ID vocabularies, agent skill catalogs, and grounded search policies—whose failures are easy to miss in aggregate offline metrics. This line builds controlled attribution tests, mapping-first diagnostic toolkits, paired risk-exposure benchmarks, and difference-aware selectors that expose failure modes before downstream training or deployment.
   representative_publication_ids: [sidinspector, skillcontrast]
+  subtracks:
+    - id: search-rec-attribution
+      title: Search–recommendation interaction and attribution
+      summary: Testing whether search-augmented recommenders actually rely on the latest search episode rather than earlier history or input perturbations.
+      reading_order: Start with FocalSwap to see how neutral masking and matched observed-search replacements separate real attribution from intervention sensitivity.
+      publication_ids: [focalswap]
+    - id: semantic-id-diagnostics
+      title: Semantic-ID interface diagnostics
+      summary: Auditing exported item-to-code mappings for capacity, aliasing, prefix alignment, candidate exposure, and generator reuse after mapping refresh.
+      reading_order: Start with SIDInspector for static mapping diagnostics before training, then read SIDScope for candidate exposure, path resolution, and refresh reuse checks.
+      publication_ids: [sidinspector, sidscope]
+    - id: agent-skill-and-ai-search
+      title: Agent skill retrieval, AI search, and service benchmarks
+      summary: Measuring same-capability sibling risk in agent skill retrieval, preserving distinguishing passages for frozen rerankers, grounding AI search policies in live inventory, and evaluating NL2SQL services.
+      reading_order: Read SameCapRisk-Bench to see the same-family risk-exposure failure mode, then SkillContrast for difference-guided reranking input selection; see IGPO for inventory-grounded AI search and BIS for NL2SQL service evaluation.
+      publication_ids: [skillresolve-bench, skillcontrast, igpo-ai-search, bis-nl2sql]
+  recarch_links:
+    - title: Generative Retrieval (Semantic-ID systems)
+      url: https://jdding.github.io/recarch/en/topics/generative-retrieval/
+      note: Production Semantic-ID and generative retrieval architectures whose tokenizer interfaces motivate pre-training diagnostics.
+    - title: RecArch for AI Agents
+      url: https://jdding.github.io/recarch/en/ai/
+      note: Bilingual architecture library with llms.txt, structured JSON cards, and an Agent Skill built under strict reported-vs-unreported evidence rules.
+  open_questions:
+    - What minimal pre-training checks predict whether a Semantic-ID refresh will break an inherited generative recommendation checkpoint?
+    - How can retrieval interfaces distinguish near-duplicate agent skills whose execution contracts, preconditions, or side effects conflict?
+    - How should attribution protocols evaluate multi-turn search and recommendation feedback loops without conflating model sensitivity with true evidence use?
   themes:
     - Search and recommendation interaction and attribution
     - Semantic-ID interface diagnostics for generative recommendation

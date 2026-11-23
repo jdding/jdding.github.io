@@ -58,11 +58,19 @@ papers.each do |p|
     check.call(source['url'].start_with?('https://') && !source['label'].to_s.empty?, "#{id}: invalid source")
   end
 end
+programs_by_id = programs.to_h { |p| [p['id'], p] }
 programs.each do |program|
+  check.call(program['url'] == "/research/#{program['id']}/", "#{program['id']}: invalid research line url")
   program['representative_publication_ids'].each do |id|
     p = by_id[id]
     check.call(p && p['program'] == program['id'], "#{id}: representative program mismatch")
     check.call(p && %w[problem mechanism evidence boundary].all? { |key| !p.dig('contribution', key).to_s.empty? }, "#{id}: incomplete contribution")
+  end
+  track_ids = (program['subtracks'] || []).flat_map { |t| t['publication_ids'] || [] }
+  check.call(track_ids.uniq == track_ids, "#{program['id']}: duplicate subtrack publication IDs")
+  track_ids.each do |id|
+    p = by_id[id]
+    check.call(p && p['program'] == program['id'], "#{id}: subtrack program mismatch")
   end
 end
 data.call('open_source').each do |resource|
@@ -108,12 +116,29 @@ check.call(section_ids == %w[research selected connect], 'homepage reading order
 end
 programs.each do |program|
   block = home.at_css("#program-#{program['id']}")
+  check.call(block && block.at_css("a[href='#{program['url']}']"), "#{program['id']}: homepage missing link to research line page")
   check.call(block && block.css('[data-publication-id]').map { |el| el['data-publication-id'] } == program['representative_publication_ids'], 'representative works missing from homepage')
   program['representative_publication_ids'].each do |id|
     paper = by_id.fetch(id)
     entry = block&.at_css("[data-publication-id='#{id}']")
     check.call(entry && entry.at_css('a')['href'] == paper['digest_url'] && %w[mechanism evidence].all? { |key| entry.text.include?(paper['contribution'][key]) }, "#{id}: compact contribution lost its evidence or digest link")
+    role = paper.dig('contribution', 'author_role')
+    check.call(entry&.at_css('.program-paper-meta .paper-context')&.text == role, "#{id}: representative author role must appear in metadata")
     check.call(entry && entry.css('.publication-status').text.include?(paper['status'].capitalize), "#{id}: representative status missing") unless paper['status'] == 'published'
+  end
+  page_doc = html.call(program['url'])
+  check.call(page_doc.at_css('.research-nav a[href="/#research"][aria-current="page"]'), "#{program['id']}: research nav current state missing")
+  check.call(page_doc.at_css('link[rel="canonical"]')['href'] == "https://jdding.github.io#{program['url']}", "#{program['id']}: research line canonical mismatch")
+  expected_ids = papers.select { |p| p['program'] == program['id'] }.map { |p| p['id'] }.sort
+  rendered_ids = page_doc.css('[data-program-paper-id]').map { |el| el['data-program-paper-id'] }.sort
+  check.call(rendered_ids == expected_ids, "#{program['id']}: research line page paper set mismatch")
+  program['representative_publication_ids'].each do |id|
+    paper = by_id.fetch(id)
+    card = page_doc.at_css(".program-evidence-card[data-publication-id='#{id}']")
+    check.call(card && card.text.include?(paper['contribution']['boundary']), "#{id}: representative boundary missing from research line page")
+  end
+  data.call('open_source').select { |r| r['program'] == program['id'] }.each do |resource|
+    check.call(page_doc.at_css("a[href='/resources/##{resource['id']}']"), "#{program['id']}: missing quickstart link for #{resource['id']}")
   end
 end
 data.call('news').select { |event| event['type'] == 'accepted_reported' && event['additional_title'] }.each do |event|
@@ -122,6 +147,8 @@ data.call('news').select { |event| event['type'] == 'accepted_reported' && event
 end
 check.call(list.css('[id^="publication-"]').size == papers.size, 'full list count mismatch')
 check.call(list.css('.year-block > h2').size > 0, 'year headings missing')
+benchmark_link = list.at_css('#publication-skillresolve-bench[data-with-code] a[href="https://github.com/jdding/SameCapRisk"]')
+check.call(benchmark_link&.text == 'Benchmark', 'SameCapRisk benchmark missing from With code results')
 papers.each do |p|
   id = p['id']
   doc = html.call(p['digest_url'])
@@ -156,7 +183,8 @@ papers.each do |p|
     check.call(topic_row && topic_row.css('.publication-status').text.include?(status), "#{id}: topic status absent") unless p['topic_page'] == false
   end
   if p['program']
-    check.call(doc.at_css(".digest-research-link a[href='/#program-#{p['program']}']"), "#{id}: digest program absent")
+    program_url = programs_by_id.fetch(p['program']).fetch('url')
+    check.call(doc.at_css(".digest-research-link a[href='#{program_url}']"), "#{id}: digest program absent")
     check.call(graph_paper['about'].any? { |a| a['@id'].end_with?("#program-#{p['program']}") }, "#{id}: graph program absent")
   end
   first_heading = doc.at_css('.digest-main h2')&.text
@@ -192,8 +220,12 @@ check.call(fields['subject'] == recruitment['subject'] && fields['body'] == recr
 check.call(%w[logistics preference].all? { |key| collab.at_css('#research-intern').text.include?(recruitment[key]) }, 'internship requirements missing')
 check.call(collab.css('#research-intern h3').map(&:text) == ['Background and availability', 'Apply by email', 'Find a research question'], 'internship application no longer precedes research examples')
 resources = html.call('/resources/')
-check.call(resources.at_css('a[href="https://jdding.github.io/recarch/"]'), 'RecArch resource entry missing')
-data.call('open_source').each do |resource|
+open_source = data.call('open_source')
+picker = resources.css('.resource-picker tbody tr')
+picker_links = picker.map { |row| row.at_css('th[scope="row"] a')&.[]('href') }
+check.call(picker_links == open_source.map { |resource| "##{resource['id']}" } + ['https://jdding.github.io/recarch/'], 'resource picker links out of sync')
+check.call(picker.all? { |row| row.css('td').size == 2 && row.css('td').none? { |cell| cell.text.strip.empty? } }, 'resource picker needs a use and stage per row')
+open_source.each do |resource|
   start = resource.fetch('onboarding')
   block = resources.at_css("##{resource['id']}")
   check.call(start['revision'].match?(/\A[0-9a-f]{40}\z/) && start['commands'].include?(start['revision']), 'quickstart revision not pinned')

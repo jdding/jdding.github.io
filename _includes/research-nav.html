@@ -1,5 +1,5 @@
 {% capture research_nav_links %}
-  <a href="/#research" data-scroll-ignore>Research</a>
+  <a href="/#research"{% if page.url contains '/research/' %} aria-current="page"{% endif %} data-scroll-ignore>Research</a>
   {% assign nav_labels = 'Publications,Resources,Patents,Collaborations' | split: ',' %}
   {% for label in nav_labels %}
     {% assign path = label | downcase | prepend: '/' | append: '/' %}

@@ -36,7 +36,7 @@
   contribution:
     label: SkillContrast
     problem: Similar skills can hide different conditions of use behind shared instructions.
-    mechanism: Select text that differs between retrieved candidates, with local context, for a pretrained reranker.
+    mechanism: Compare candidate skills with one another and feed the passages that distinguish them to a frozen reranker.
     evidence: On 1,235 benchmark requests, 54–72 more clean hits than TF-IDF selection at identical input lengths.
     boundary: This is retrieval evidence; it does not establish safe execution of a skill.
   digest_sources:
@@ -44,7 +44,7 @@
       url: https://arxiv.org/html/2610.11650v1
   related_work:
     - publication_id: skillresolve-bench
-      relationship: Measures the same-family exposure problem that motivates difference-aware reranking.
+      relationship: Defines and measures the conflicting-sibling retrieval errors that SkillContrast tries to reduce.
   title: 'SkillContrast: Difference-Guided Text Selection for Agent Skill Reranking'
   year: 2026
   venue: arXiv preprint arXiv:2610.11650
@@ -64,12 +64,12 @@
   digest_blocks:
     - title: Problem
       text: Similar agent skills can share nearly identical instructions while differing in their conditions of use. Standard query-based text selection tends to keep the shared parts and drop these distinguishing details, so the reranker receives text that cannot separate the candidates.
-    - title: Approach
-      text: SkillContrast is a training-free selector. It compares retrieved candidate skills against each other and keeps the differing text together with local context as the input to a pretrained reranker, so the comparison signal comes from the candidates themselves rather than from the query alone.
+    - title: Research contribution
+      text: Instead of selecting passages by query relevance alone, SkillContrast compares retrieved skill descriptions and preserves the text that distinguishes one candidate from another. It sends those passages and their local context to a frozen reranker without additional training.
     - title: Public evidence
-      text: On 1,235 requests from SameCapRisk-Bench, SkillContrast yields 54 to 72 more clean hits (retrieving a helpful skill without its risky sibling) than TF-IDF query selection at equal input length, across two retrievers and two reranker sizes. Compared with full skill bodies, it uses 51.1 to 58.8 percent fewer model-input tokens, with 10 to 18 fewer clean hits at a 0.6B reranker and matching or higher observed clean-hit counts at 4B. These are benchmark measurements, not production deployment results.
+      text: On 1,235 SameCapRisk-Bench requests, SkillContrast yields 54 to 72 more clean hits than TF-IDF selection at equal input length across two candidate retrievers and two reranker sizes. In the SkillSight and 0.6B setting, replacing only the distinguishing passages with equally long query-relevant text drops clean hits from 1,034 to 956. A clean hit retrieves the helpful skill without its conflicting sibling in the top three.
     - title: Takeaway
-      text: Candidate-relative differences complement query relevance when forming compact reranking inputs, extending the skill-retrieval line from measuring same-family risk exposure to reducing it before reranking.
+      text: At the same input length, the choice of passages affects whether the reranker can distinguish close candidates. The experiments measure retrieval, not execution safety or production latency.
 - id: tois-popularity-bias
   title: Mitigating Popularity Bias in Recommendation with Global Listwise Learning and Progressive Bi-Weighting
   year: 2026
@@ -111,9 +111,12 @@
     - title: Takeaway
       text: Global listwise objectives plus smoothed, progressive reweighting treat popularity bias as an objective-design problem rather than a post-hoc correction, in line with the adaptive-recommendation line on reliable ranking under changing exposure.
 - id: sidscope
+  digest_sources:
+    - label: arXiv v2 · interface tests and mapping refresh
+      url: https://arxiv.org/html/2608.18779v2
   related_work:
     - publication_id: sidinspector
-      relationship: Start with SIDInspector to check capacity, full-code collisions, and prefix alignment in an exported mapping. These checks do not measure recommendation quality.
+      relationship: Extends SIDInspector's static mapping checks to the behavior of systems that use those codes.
   title: 'SIDScope: A Diagnostic Resource for Semantic-ID Interfaces in Generative Recommendation'
   year: 2026
   venue: arXiv preprint arXiv:2608.18779
@@ -136,12 +139,12 @@
   digest_blocks:
     - title: Problem
       text: Semantic-ID mappings are reusable interfaces between item tokenizers and generative recommenders, but released mappings often omit whether they are coherent, traceable, or safe to reuse after refresh.
-    - title: Approach
-      text: SIDScope normalizes item-to-code artifacts, verifies provenance and joins, profiles mapping structure, compares paired revisions, and accounts for generated path-to-item outcomes.
-    - title: Findings
-      text: The resource shows that interface health is multi-signal rather than scalar; prefix alignment matters when retrieval consumes prefixes, and mapping repair does not automatically validate reuse of an inherited generator.
+    - title: Research contribution
+      text: SIDScope extends mapping inspection to three downstream decisions. It tests which items prefixes expose at a fixed candidate budget, checks how identical generated codes turn into item predictions under different resolution rules, and tests whether an existing checkpoint still works after a mapping refresh.
+    - title: Public evidence
+      text: In the released DACT Tools case, the refreshed mapping gave codes to 275 previously unmapped items. On 584 new-item test targets, Recall@20 was still zero with the old checkpoint and reached 12.0–12.7% after fine-tuning across three seeds.
     - title: Takeaway
-      text: The work turns Semantic-ID artifacts into auditable interfaces, supporting decisions about readiness, interface risk, and revalidation before model reuse.
+      text: Fixing mapping coverage and validating model reuse are separate checks. The DACT result comes from one offline reuse case and does not isolate the effect of code changes from the benefit of additional training.
 - id: igpo-ai-search
   title: Inventory-Grounded Policy-Level Optimization for Training-Free AI Search
   year: 2026
@@ -257,18 +260,19 @@
 - id: sidinspector
   contribution:
     label: SIDInspector
+    author_role: First and corresponding author
     problem: A usable code vocabulary does not guarantee that each item remains distinguishable or retrievable.
     mechanism: Inspect exported item-to-code mappings before training, separating utilization, aliasing, alignment, and structural cost.
-    evidence: Diagnostic comparisons across released tokenizer families expose different capacity and addressability behavior.
+    evidence: On the same catalog, two collision-free mappings group behaviorally related items differently.
     boundary: Mapping diagnostics alone do not establish a gain in recommendation quality.
   digest_sources:
     - label: ACM proceedings · published record
       url: https://doi.org/10.1145/3799682.3840174
-    - label: Public paper · mapping diagnostics
-      url: https://arxiv.org/abs/2606.10375
+    - label: arXiv v2 · mapping diagnostics
+      url: https://arxiv.org/html/2606.10375v2
   related_work:
     - publication_id: sidscope
-      relationship: After inspecting the mapping, use SIDScope to check which candidates the prefixes expose and account for the codes the generator actually emits.
+      relationship: SIDScope takes the next step by testing candidate exposure, resolving generated codes to items, and checking model reuse after a mapping refresh.
   title: 'SIDInspector: A Mapping-First Diagnostic Resource for Semantic-ID Tokenizers'
   year: 2026
   venue: Proceedings of the 35th ACM International Conference on Information and Knowledge Management (CIKM '26)
@@ -293,19 +297,23 @@
   digest_blocks:
     - title: Problem
       text: Exported item-to-code mappings from Semantic-ID tokenizers usually lack a shared inspection interface, so coverage gaps, aliasing, weak prefixes, tail compression, and fan-out problems tend to surface only after downstream recommendation training has already paid for them.
-    - title: Approach
-      text: SIDInspector is mapping-first. An adapter contract covers item mappings, metadata, interactions, and generator traces, and probes report utilization, aliasing, neighborhood alignment, popularity allocation, and structural cost. It inspects the interface itself rather than a trained recommender.
+    - title: Research contribution
+      text: SIDInspector makes the exported mapping, rather than a trained recommender, the unit of comparison. A shared adapter contract lets the same probes distinguish code capacity, shared item addresses, and how well code prefixes group items with similar interaction histories.
     - title: Public evidence
-      text: The release evaluates four tokenizer families, including GRID-style RQ-KMeans, ReSID/GAOQ, LETTER, and LC-Rec artifacts. Reported measurements show D2 aliasing dropping substantially under added capacity and reaching zero for ReSID/GAOQ, while D3 stays below a deterministic category-prefix control. These are diagnostic measurements of the mappings, not evidence of recommendation-quality gains.
+      text: On the same 23,742-item Musical catalog, the ReSID/GAOQ export and the deterministic category-prefix control both have zero full-code collisions, but their prefix-based behavioral-neighbor recovery scores are 0.154 and 0.447, respectively. This contrast calibrates the diagnostic; it does not compare end-to-end recommendation quality.
     - title: Takeaway
       text: Capacity, addressability, and prefix alignment are distinct, measurable properties of a Semantic-ID interface. Checking them before method-level evaluation or reuse avoids attributing downstream failures to the wrong layer.
 - id: deltagate
   contribution:
     label: DeltaGate
+    author_role: First and corresponding author
     problem: A returning user provides no new behavior with which to update a stale history.
-    mechanism: Gate individual dimensions between personal history and a global prior while keeping the backbone frozen.
-    evidence: Under the Gap-Synthesize evaluation, DG-BERT4Rec improves Hit@10 in the Video Games bucket with gaps over 365 days.
+    mechanism: Use the inactivity gap to gate each dimension between personal history and a global prior while keeping the backbone frozen.
+    evidence: In offline Amazon Video Games tests for gaps over 365 days, Hit@10 rises from 0.025 to 0.046 on BERT4Rec.
     boundary: Full retraining can achieve higher accuracy; the plugin trades that ceiling for a small adaptation budget and zero backbone drift.
+  digest_sources:
+    - label: arXiv v1 · evaluation protocol and experiments
+      url: https://arxiv.org/html/2607.19802v1
   related_work:
     - publication_id: unified-low-rank-compression
       relationship: A complementary approach to deployment cost, compressing CTR models rather than adapting a frozen sequential backbone.
@@ -339,16 +347,21 @@
   digest_blocks:
     - title: Problem
       text: Returning users may have months or years without observed behavior, so a model's last user representation can become unreliable even when pre-gap history exists.
-    - title: Method
-      text: DeltaGate keeps the sequential recommendation backbone frozen and learns a dimension-wise gate that routes each representation dimension between personalized history and a learned global prior.
+    - title: Research contribution
+      text: The paper separates returning users with stale histories from new users with no history. Gap-Synthesize evaluates the first prediction after a period with no observed interactions. DeltaGate then adapts the frozen backbone's output, blending each dimension of the user's history with a learned global prior based on the elapsed gap and the user representation.
     - title: Findings
-      text: Under the Gap-Synthesize Protocol on Amazon datasets, standard sequential recommenders decline as inactivity gaps widen; in the >365d Video Games bucket, DG-BERT4Rec reaches 0.046 Hit@10 versus 0.025 for BERT4Rec.
+      text: In Gap-Synthesize experiments on Amazon Video Games, DG-BERT4Rec reaches 0.046 Hit@10 versus 0.025 for the matched backbone on gaps longer than 365 days. A separate diagnostic varies the gap while holding the user representation fixed to show how the gate responds.
     - title: Deployment boundary
-      text: End-to-end retraining can reach higher absolute accuracy, while the frozen DeltaGate plugin preserves zero backbone drift, uses 66K trainable parameters, and keeps the adaptation behavior inspectable.
+      text: Full retraining can achieve higher accuracy. DeltaGate leaves the backbone unchanged and adds about 66,000 trainable parameters at embedding dimension 128. The reported ranking scores are descriptive offline estimates under the paper's checkpoint selection protocol.
 - id: skillresolve-bench
+  digest_sources:
+    - label: arXiv v4 · benchmark and evaluation protocols
+      url: https://arxiv.org/html/2606.10388v4
+    - label: SameCapRisk-Bench · public data and evaluator
+      url: https://github.com/jdding/SameCapRisk
   related_work:
     - publication_id: skillcontrast
-      relationship: Tests whether retaining candidate differences improves reranking under same-family ambiguity.
+      relationship: Tests whether preserving the passages that distinguish these skills helps a frozen reranker keep conflicting siblings out of its results.
   title: 'Right Family, Wrong Skill: Evaluating Risk Exposure in Agent Skill Retrieval'
   year: 2026
   venue: arXiv preprint arXiv:2606.10388
@@ -361,18 +374,20 @@
   status: preprint
   paper_url: https://arxiv.org/abs/2606.10388
   paper_label: arXiv
+  code_url: https://github.com/jdding/SameCapRisk
+  code_label: Benchmark
   digest_url: "/skillresolve-bench/"
   digest_label: Digest
   digest_note: A study of same-capability risk exposure in agent skill retrieval, measuring when systems surface a risky sibling despite finding the right capability family.
   digest_blocks:
     - title: Problem
       text: In agent skill libraries, many skills expose similar capability descriptions. A retrieval system can pick the correct capability family and still surface a sibling skill that differs on execution-controlling contracts such as resources, preconditions, procedures, or artifacts. The paper names this failure mode same-capability risk-exposure retrieval.
-    - title: Benchmark
-      text: SameCapRisk-Bench contains 940 skill-risk units and 1,327 query cases. Units are either single-query (553, including 69 development units) or paired (387 units contributing 774 queries that exchange helpful and risky roles across queries). Evaluation uses a held-out split of 871 units and 1,258 queries, and the release records provenance and leakage checks.
+    - title: Research contribution
+      text: SameCapRisk-Bench tests whether a retriever can find the right capability without also surfacing a skill that violates a specific query requirement. Its paired tests keep the skills fixed and vary the requested evidence role or exact output interface, reversing which skill fits. Version 4 contains 890 units and 1,314 queries, including 823 units and 1,235 queries for held-out evaluation.
     - title: Public evidence
-      text: On the held-out split, neural retrievers reach Recall@3 of 0.723 to 0.936 while exposing a risky sibling at HSR@3 of 0.386 to 0.402 (RRF 0.723/0.387, SkillRouter 0.910/0.386, SkillRet 0.928/0.389, R3-Skill 0.925/0.396, SkillSight 0.936/0.402). Applying a released family selector to their score orders cuts HSR@3 to 0.110 to 0.154 at a Recall@3 cost (0.781 to 0.851), and an auxiliary scorer-plus-selection control reports 0.731 Recall@3 with HSR@3 0.136. Retrieving more items raises exposure further (HSR 0.684 to 0.951 at K=20). These are benchmark measurements, not production deployment results.
+      text: On the held-out v4 queries, four public skill retrievers achieve Recall@3 of 90.3–94.4%, yet still return the marked conflicting skill in 34.4–39.3% of top-three lists. Those pooled rates depend on the benchmark's mixture of queries and candidate pools.
     - title: Takeaway
-      text: Capability matching and same-family risk exposure should be reported together. HSR@K serves as a targeted exposure certificate for a fixed skill library, complementing the auditable-retrieval line on inspecting interfaces before they become production dependencies.
+      text: Recall alone does not tell a user whether the list is free of conflicting alternatives. The benchmark reports both outcomes and counts clean hits separately. It measures what is retrieved, not harm from executing a skill.
 - id: hpgr
   contribution:
     label: HPGR

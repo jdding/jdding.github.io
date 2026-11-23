@@ -11,6 +11,7 @@
       <div>
         <h1>{{ topic.title }}</h1>
         <p class="lede">{{ topic.summary }}</p>
+        <p class="topic-program-note">Looking for active research lines? See <a class="text-link" href="/research/adaptive-recommendation/">Adaptive Recommendation under Change</a> and <a class="text-link" href="/research/auditable-retrieval/">Auditable AI Retrieval and Interfaces</a>.</p>
         <div class="hero-actions">
           <a class="button primary" href="#papers">Papers</a>
         </div>
@@ -63,7 +64,7 @@
                 <div class="record-meta meta-lines">
                   <span>{{ paper.authors }}</span>
                   <span>{% include publication-venue.html paper=paper %} {% include publication-status.html paper=paper %}</span>
-                  {% if paper.program %}{% assign paper_program = site.data.research_programs | where: "id", paper.program | first %}<a href="/#program-{{ paper.program }}">{{ paper_program.hero_title }}</a>{% endif %}
+                  {% if paper.program %}{% assign paper_program = site.data.research_programs | where: "id", paper.program | first %}<a class="text-link" href="{{ paper_program.url }}">{{ paper_program.hero_title }}</a>{% endif %}
                 </div>
               </div>
               <div class="record-actions">

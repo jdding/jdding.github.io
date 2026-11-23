@@ -57,8 +57,9 @@ classes: wide
         {% for program in programs %}
         <article id="program-{{ program.id }}" class="research-program-block">
           <div class="program-overview">
-            <h3>{{ program.title }}</h3>
+            <h3><a class="paper-title-link" href="{{ program.url }}">{{ program.title }}</a></h3>
             <p>{{ program.summary }}</p>
+            <a class="text-link program-detail-link" href="{{ program.url }}">Research line &amp; papers →</a>
           </div>
           <ul class="program-examples">
             {% for paper_id in program.representative_publication_ids %}
@@ -69,6 +70,7 @@ classes: wide
                 <a class="program-paper-link" href="{{ paper.digest_url }}">{{ paper.contribution.label }}</a>
                 <span class="paper-venue">{% include publication-venue.html paper=paper %}</span>
                 {% include publication-status.html paper=paper %}
+                {% if paper.contribution.author_role %}<span class="paper-context">{{ paper.contribution.author_role | escape }}</span>{% endif %}
               </div>
               <p>{{ paper.contribution.mechanism }} <span class="program-evidence">{{ paper.contribution.evidence }}</span></p>
             </li>
@@ -78,7 +80,7 @@ classes: wide
         </article>
         {% endfor %}
       </div>
-      <p id="trajectory" class="research-history">My earlier work spans biological sequence analysis, weak supervision, text classification, and graph learning. Alongside recommendation and retrieval, I also study AI systems in operation, including disaggregated LLM serving.</p>
+      <p id="trajectory" class="research-history">My earlier work spans biological sequence analysis, weak supervision, text classification, and graph learning. Alongside recommendation and retrieval, I also study AI systems in operation, including disaggregated LLM serving, and maintain <a class="text-link" href="https://jdding.github.io/recarch/">RecArch</a>, a bilingual atlas of production recommender architectures for humans and AI agents.</p>
     </div>
   </section>
 
