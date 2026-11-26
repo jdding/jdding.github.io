@@ -35,6 +35,9 @@
     - title: HPGR system card
       url: https://jdding.github.io/recarch/en/systems/huawei-hpgr-2026/
       note: Structured deployment summary of HPGR alongside peer industrial recommenders.
+    - title: Recursive Self-Improvement for Recommenders
+      url: https://jdding.github.io/recarch/en/topics/recommendation-rsi/
+      note: Industrial cases on how agents propose model changes, allocate trial budgets, and decide which candidates warrant full training or an online test.
   open_questions:
     - How should reactivation modules combine elapsed-gap signals with partial contextual cues while preserving zero backbone drift?
     - When catalogs and user interests drift together, how can hierarchical generative recommenders decide which history segments to retain or refresh?
@@ -83,6 +86,9 @@
     - title: Generative Retrieval (Semantic-ID systems)
       url: https://jdding.github.io/recarch/en/topics/generative-retrieval/
       note: Production Semantic-ID and generative retrieval architectures whose tokenizer interfaces motivate pre-training diagnostics.
+    - title: How Agents Use Recommendation
+      url: https://jdding.github.io/recarch/en/topics/agentic-recommendation/
+      note: Industrial cases on how agents pass user constraints and preferences to retrieval and ranking, and what each online evaluation tested.
     - title: RecArch for AI Agents
       url: https://jdding.github.io/recarch/en/ai/
       note: Bilingual architecture library with llms.txt, structured JSON cards, and an Agent Skill built under strict reported-vs-unreported evidence rules.

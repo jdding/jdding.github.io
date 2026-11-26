@@ -31,7 +31,7 @@ description: "Run a small CPU example for DeltaGate, SIDInspector, SIDScope, or 
       </table>
       <h2 id="project-updates">Project updates</h2>
       <ul aria-labelledby="project-updates">
-        <li><time datetime="2026-11-23">Nov 23, 2026</time> · <strong>RecArch</strong> — Added a bilingual <a class="text-link" href="https://jdding.github.io/recarch/en/topics/semantic-id-tokenization/">Semantic IDs and item tokenization comparison</a> covering 16 systems.</li>
+        <li><time datetime="2026-11-26">Nov 26, 2026</time> · <strong>RecArch</strong> — Published two bilingual topics: <a class="text-link" href="https://jdding.github.io/recarch/en/topics/recommendation-rsi/">Recursive self-improvement for recommenders</a> and <a class="text-link" href="https://jdding.github.io/recarch/en/topics/agentic-recommendation/">How agents use recommendation</a>.</li>
         <li><time datetime="2026-11-09">Nov 9, 2026</time> · <strong>SIDInspector</strong> — Clarified the README and citation guidance. The pinned Quickstart is unchanged. <a class="text-link" href="https://github.com/jdding/sidinspector/compare/5a55f8c9002b62663ace07b72334f08225eadb03...cc1de55b9cb78bf69407a0a6112c113b10c1c6b3">See changes on GitHub</a>.</li>
       </ul>
       <p>Commands below use macOS/Linux shells and a separate virtual environment for each repository. SIDInspector and SIDScope share a Python import name, so keep their environments separate. On Windows, activate with <code>.venv\Scripts\activate</code> instead.</p>
