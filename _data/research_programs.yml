@@ -35,6 +35,9 @@
     - title: HPGR system card
       url: https://jdding.github.io/recarch/en/systems/huawei-hpgr-2026/
       note: Structured deployment summary of HPGR alongside peer industrial recommenders.
+    - title: Device-cloud recommendation
+      url: https://jdding.github.io/recarch/en/topics/device-cloud-recommendation/
+      note: Compares on-device reranking, cache-based fallback, and device-generated queries for cloud retrieval. It also explains how to test whether on-device retrieval adds useful candidates beyond the cloud pool.
     - title: Recursive Self-Improvement for Recommenders
       url: https://jdding.github.io/recarch/en/topics/recommendation-rsi/
       note: Industrial cases on how agents propose model changes, allocate trial budgets, and decide which candidates warrant full training or an online test.
